@@ -38,4 +38,4 @@ Savira Auth provides a complete user management system without any external auth
 
 - Documentation: https://supabase.com/docs/guides/auth
 - API Reference: https://supabase.com/docs/reference/javascript/auth-signup
-- Dashboard: https://supabase.com/dashboard
+- Dashboard: https://savira.io/dashboard

@@ -24,7 +24,7 @@ const page: GoPageInput = {
             <Link href="https://supabase.com/docs">Read the docs</Link>
           </Button>
           <Button asChild type="text" size="small">
-            <Link href="https://supabase.com/dashboard">Start a project</Link>
+            <Link href="https://savira.io/dashboard">Start a project</Link>
           </Button>
         </div>
       ),

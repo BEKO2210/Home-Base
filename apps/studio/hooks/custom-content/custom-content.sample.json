@@ -14,7 +14,7 @@
       "description": "This is a description of Document 1",
       "action": {
         "text": "Download document",
-        "url": "https://supabase.com"
+        "url": "https://savira.io"
       }
     },
     {
@@ -23,7 +23,7 @@
       "description": "This is a description of Document 2",
       "action": {
         "text": "Download document",
-        "url": "https://supabase.com"
+        "url": "https://savira.io"
       }
     }
   ],
@@ -40,14 +40,14 @@
     {
       "title": "Framework 1",
       "description": "This is a description of Framework 1",
-      "iconUrl": "https://supabase.com/dashboard/img/supabase-logo.svg",
-      "url": "https://supabase.com"
+      "iconUrl": "https://savira.io/dashboard/img/supabase-logo.svg",
+      "url": "https://savira.io"
     },
     {
       "title": "Framework 2",
       "description": "This is a description of Framework 2",
-      "iconUrl": "https://supabase.com/dashboard/img/supabase-logo.svg",
-      "url": "https://supabase.com"
+      "iconUrl": "https://savira.io/dashboard/img/supabase-logo.svg",
+      "url": "https://savira.io"
     }
   ],
 

@@ -268,7 +268,7 @@ export const MobileMenu = ({ open, setOpen, menu }: Props) => {
                   ) : (
                     <>
                       <Link
-                        href="https://supabase.com/dashboard"
+                        href="https://savira.io/dashboard"
                         passHref
                         legacyBehavior
                         onClick={() =>
@@ -285,7 +285,7 @@ export const MobileMenu = ({ open, setOpen, menu }: Props) => {
                         </Button>
                       </Link>
                       <Link
-                        href="https://supabase.com/dashboard/sign-up"
+                        href="https://savira.io/dashboard/sign-up"
                         passHref
                         legacyBehavior
                         onClick={() =>

@@ -92,7 +92,7 @@ function IntegrationPartnersPage(props: Props) {
           url: `https://supabase.com/partners/integrations`,
           images: [
             {
-              url: `https://supabase.com${router.basePath}/images/og/integrations.png`, // TODO
+              url: `https://savira.io${router.basePath}/images/og/integrations.png`, // TODO
             },
           ],
         }}

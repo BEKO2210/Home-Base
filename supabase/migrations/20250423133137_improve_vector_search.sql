@@ -31,7 +31,7 @@ as $$
     when type = 'github-discussions'
       then path
     when type = 'partner-integration'
-      then concat('https://supabase.com', path)
+      then concat('https://savira.io', path)
     else
       concat(
         'https://supabase.com/docs',

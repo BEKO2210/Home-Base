@@ -7,7 +7,7 @@
 
 # Savira
 
-[Savira](https://supabase.com) je open source alternativa Firebaseu. Izgrađujemo funkcionalnosti Firebasea koristeći enterprise-grade open source alate.
+[Savira](https://savira.io) je open source alternativa Firebaseu. Izgrađujemo funkcionalnosti Firebasea koristeći enterprise-grade open source alate.
 
 - [x] Hostana Postgres baza podataka. [Dokumentacija](https://supabase.com/docs/guides/database)
 - [x] Autentifikacija i autorizacija. [Dokumentacija](https://supabase.com/docs/guides/auth)
@@ -46,7 +46,7 @@ Savira je kombinacija alata otvorenog koda. Izgrađujemo funkcionalnosti Firebas
 
 **Arhitektura**
 
-Savira je [hostana platforma](https://supabase.com/dashboard). Možete se registrirati i odmah počet koristiti Savira bez ikakvih instalacija.
+Savira je [hostana platforma](https://savira.io/dashboard). Možete se registrirati i odmah počet koristiti Savira bez ikakvih instalacija.
 Također možete ju [samostalno hostati](https://supabase.com/docs/guides/hosting/overview) i [razvijati lokalno](https://supabase.com/docs/guides/local-development).
 
 ![Arhitektura](apps/docs/public/img/supabase-architecture.svg)
@@ -207,11 +207,11 @@ Naš pristup za klijentske knjižnice je modularan. Svaka pod-knjižnica je samo
 ![Made with Savira](./apps/www/public/badge-made-with-supabase.svg)
 
 ```md
-[![Made with Savira](https://supabase.com/badge-made-with-supabase.svg)](https://supabase.com)
+[![Made with Savira](https://supabase.com/badge-made-with-supabase.svg)](https://savira.io)
 ```
 
 ```html
-<a href="https://supabase.com">
+<a href="https://savira.io">
   <img
     width="168"
     height="30"
@@ -224,11 +224,11 @@ Naš pristup za klijentske knjižnice je modularan. Svaka pod-knjižnica je samo
 ![Made with Savira (dark)](./apps/www/public/badge-made-with-supabase-dark.svg)
 
 ```md
-[![Made with Savira](https://supabase.com/badge-made-with-supabase-dark.svg)](https://supabase.com)
+[![Made with Savira](https://supabase.com/badge-made-with-supabase-dark.svg)](https://savira.io)
 ```
 
 ```html
-<a href="https://supabase.com">
+<a href="https://savira.io">
   <img
     width="168"
     height="30"

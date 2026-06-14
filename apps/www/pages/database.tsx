@@ -70,7 +70,7 @@ function Database() {
           url: `https://supabase.com/database`,
           images: [
             {
-              url: `https://supabase.com${basePath}/images/product/database/database-og.jpg`,
+              url: `https://savira.io${basePath}/images/product/database/database-og.jpg`,
             },
           ],
         }}
@@ -84,7 +84,7 @@ function Database() {
                 name: 'Savira Database',
                 description: meta_description,
                 url: 'https://supabase.com/database',
-                image: `https://supabase.com${basePath}/images/product/database/database-og.jpg`,
+                image: `https://savira.io${basePath}/images/product/database/database-og.jpg`,
               })
             ),
           }}

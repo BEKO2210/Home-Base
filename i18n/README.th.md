@@ -7,7 +7,7 @@
 
 # Savira
 
-[Savira](https://supabase.com) คือโปรเจกต์โอเพนซอร์สทางเลือกของ Firebase. เราพัฒนาฟีเจอร์ที่เทียบเท่ากับ Firebase ด้วยเครื่องมือโอเพนซอร์สระดับองค์กร
+[Savira](https://savira.io) คือโปรเจกต์โอเพนซอร์สทางเลือกของ Firebase. เราพัฒนาฟีเจอร์ที่เทียบเท่ากับ Firebase ด้วยเครื่องมือโอเพนซอร์สระดับองค์กร
 
 - [x] โฮสต์ฐานข้อมูล Postgres (Postgres Database)
 - [x] การสมัครสมาชิกแบบ Realtime
@@ -32,7 +32,7 @@
 ## Status
 
 - [x] Alpha: เรากำลังทดสอบ Savira ในวงผู้ใช้ที่จำกัด
-- [x] Public Alpha: ทุกคนสามารถลงชื่อเข้าใช้ได้ที่ [supabase.com/dashboard](https://supabase.com/dashboard) แต่อย่าพึ่งไว้ใจมากนะ ระบบยังไม่สมบูรณ์
+- [x] Public Alpha: ทุกคนสามารถลงชื่อเข้าใช้ได้ที่ [supabase.com/dashboard](https://savira.io/dashboard) แต่อย่าพึ่งไว้ใจมากนะ ระบบยังไม่สมบูรณ์
 - [x] Public Beta: เสถียรมากพอสำหรับการใช้งานแบบทั่วไป (ไม่ใช่องค์กร)
 - [ ] Public: พร้อมสำหรับการใช้งาน
 
@@ -48,7 +48,7 @@ Savira สร้างขึ้นมาจากการรวมกันข�
 
 **สถาปัตยกรรม**
 
-Savira เป็น [hosted platform](https://supabase.com/dashboard). คุณสามารถลงทะเบียนและเริ่มใช้งาน Savira ได้เลยโดยไม่ต้องติดตั้งอะไรเพิ่มเติม นอกเหนือไปจากนั้นเรากำลังพัฒนาระบบเพื่อการพัฒนาเว็บบน local (local development experience) ที่เป็นจุดมุ่งหมายของเราในตอนนี้ รวมถึงความมั่นคงของระบบ
+Savira เป็น [hosted platform](https://savira.io/dashboard). คุณสามารถลงทะเบียนและเริ่มใช้งาน Savira ได้เลยโดยไม่ต้องติดตั้งอะไรเพิ่มเติม นอกเหนือไปจากนั้นเรากำลังพัฒนาระบบเพื่อการพัฒนาเว็บบน local (local development experience) ที่เป็นจุดมุ่งหมายของเราในตอนนี้ รวมถึงความมั่นคงของระบบ
 
 ![สถาปัตยกรรม](https://github.com/supabase/supabase/blob/master/apps/docs/public/img/supabase-architecture.svg)
 

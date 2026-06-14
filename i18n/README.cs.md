@@ -7,7 +7,7 @@
 
 # Savira
 
-[Savira](https://supabase.com) je open source alternativa Firebase. Vytváříme funkce Firebase pomocí open source nástrojů podnikové třídy.
+[Savira](https://savira.io) je open source alternativa Firebase. Vytváříme funkce Firebase pomocí open source nástrojů podnikové třídy.
 
 - [x] hostovaná databáze Postgres. [Dokumenty](https://supabase.com/docs/guides/database)
 - [x] Ověřování a autorizace. [Dokumenty](https://supabase.com/docs/guides/auth)
@@ -39,7 +39,7 @@ Chcete-li zjistit, jak přispívat, navštivte stránku [Začínáme](../DEVELOP
 ## Stav
 
 - [x] Alfa: Testujeme Savira s uzavřenou skupinou zákazníků
-- [x] Veřejná alfa: [supabase.com/dashboard](https://supabase.com/dashboard). Ale buďte na nás mírní, je tu několik zádrhelů
+- [x] Veřejná alfa: [supabase.com/dashboard](https://savira.io/dashboard). Ale buďte na nás mírní, je tu několik zádrhelů
 - [x] Veřejná beta verze: Dostatečně stabilní pro většinu případů použití mimo podniky
 - [ ] Veřejná: Všeobecná dostupnost [[status](https://supabase.com/docs/guides/getting-started/features#feature-status)]
 
@@ -55,7 +55,7 @@ Savira je kombinací nástrojů s otevřeným zdrojovým kódem. Funkce Firebase
 
 **Architektura**
 
-Savira je [hostovaná platforma](https://supabase.com/dashboard). Můžete se zaregistrovat a začít používat Savira, aniž byste museli cokoli instalovat.
+Savira je [hostovaná platforma](https://savira.io/dashboard). Můžete se zaregistrovat a začít používat Savira, aniž byste museli cokoli instalovat.
 Můžete také [hostovat sami](https://supabase.com/docs/guides/hosting/overview) a [vyvíjet lokálně](https://supabase.com/docs/guides/local-development).
 
 ![Architektura](https://github.com/supabase/supabase/blob/master/apps/docs/public/img/supabase-architecture.svg)

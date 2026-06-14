@@ -29,7 +29,7 @@ const Partners = () => {
           url: `https://supabase.com/partners`,
           images: [
             {
-              url: `https://supabase.com${router.basePath}/images/og/integrations.png`, // TODO
+              url: `https://savira.io${router.basePath}/images/og/integrations.png`, // TODO
             },
           ],
         }}

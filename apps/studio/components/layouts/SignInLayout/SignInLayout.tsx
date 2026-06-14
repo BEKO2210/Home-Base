@@ -117,7 +117,7 @@ const SignInLayout = ({
           <nav className="relative flex items-center justify-between sm:h-10">
             <div className="flex items-center grow shrink-0 lg:grow-0">
               <div className="flex items-center justify-between w-full md:w-auto">
-                <Link href={logoLinkToMarketingSite ? 'https://supabase.com' : '/organizations'}>
+                <Link href={logoLinkToMarketingSite ? 'https://savira.io' : '/organizations'}>
                   <img
                     src={
                       resolvedTheme?.includes('dark')
@@ -187,7 +187,7 @@ const SignInLayout = ({
                   className="flex items-center gap-4"
                 >
                   <img
-                    src={`https://supabase.com${quote.img_url}`}
+                    src={`https://savira.io${quote.img_url}`}
                     alt={quote.handle}
                     className="w-12 h-12 rounded-full"
                   />

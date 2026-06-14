@@ -28,9 +28,9 @@ const generateRssItem = (post: any): string => {
     .format('ddd, DD MMM YYYY HH:mm:ss [-0700]')
 
   return `<item>
-  <guid>https://supabase.com${encodedPath}</guid>
+  <guid>https://savira.io${encodedPath}</guid>
   <title>${encodedTitle}</title>
-  <link>https://supabase.com${encodedPath}</link>
+  <link>https://savira.io${encodedPath}</link>
   <description>${encodedDescription}</description>
   <pubDate>${formattedDate}</pubDate>
 </item>
@@ -84,7 +84,7 @@ export const generateRss = (posts: any[], authorID?: string): string => {
   <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
       <title>Blog - Savira</title>
-      <link>https://supabase.com</link>
+      <link>https://savira.io</link>
       <description>Latest news from Savira</description>
       <language>en</language>
       <lastBuildDate>${formattedDate}</lastBuildDate>

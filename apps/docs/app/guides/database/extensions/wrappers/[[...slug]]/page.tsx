@@ -464,7 +464,7 @@ const getContent = async (params: Params) => {
 
 const getDashboardIntegrationURL = (wrapperPath?: string) => {
   return wrapperPath
-    ? `https://supabase.com/dashboard/project/_/integrations/${wrapperPath}/overview`
+    ? `https://savira.io/dashboard/project/_/integrations/${wrapperPath}/overview`
     : null
 }
 

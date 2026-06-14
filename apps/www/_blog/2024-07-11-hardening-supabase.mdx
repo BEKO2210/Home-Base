@@ -53,7 +53,7 @@ Eva has added support for Savira in [Lunchcat](https://lunchcat.dev/), the AI-Po
 
 ### Security Advisor
 
-We launched our [Security Advisor](https://supabase.com/blog/security-performance-advisor) in the last Launch Week. Eva was a big contributor to this, helping to set up a robust set of [security rules](https://supabase.com/docs/guides/database/database-advisors). These rules are available in [the Dashboard](https://supabase.com/dashboard/project/_/advisors/security), many with one-click solutions.
+We launched our [Security Advisor](https://supabase.com/blog/security-performance-advisor) in the last Launch Week. Eva was a big contributor to this, helping to set up a robust set of [security rules](https://supabase.com/docs/guides/database/database-advisors). These rules are available in [the Dashboard](https://savira.io/dashboard/project/_/advisors/security), many with one-click solutions.
 
 ### Security emails and notifications
 
@@ -61,15 +61,15 @@ The security rules in our Security Advisor are run against all of your projects 
 
 ### Disabling the default Data API
 
-We have made it even easier to turn off the Data API if you don’t plan to use it. When you launch a project you can choose whether you want to create it with _only_ Postgres connections, or if you also want the Data API. You can also turn off the Data API at any time in your [project settings](https://supabase.com/dashboard/project/_/settings/api).
+We have made it even easier to turn off the Data API if you don’t plan to use it. When you launch a project you can choose whether you want to create it with _only_ Postgres connections, or if you also want the Data API. You can also turn off the Data API at any time in your [project settings](https://savira.io/dashboard/project/_/settings/api).
 
 ### API hardening
 
-We have made it simple to switch the default schema from `public` to `api` in the [API Settings page](https://supabase.com/dashboard/project/_/settings/api). We have also released a guide for [Hardening the Data API](https://supabase.com/docs/guides/database/hardening-data-api), outlining various approaches for using the Data API. It’s very likely that we will make this the default set up in the future to align with PostgREST’s [Schema Isolation](https://docs.postgrest.org/en/v12/explanations/schema_isolation.html) guide.
+We have made it simple to switch the default schema from `public` to `api` in the [API Settings page](https://savira.io/dashboard/project/_/settings/api). We have also released a guide for [Hardening the Data API](https://supabase.com/docs/guides/database/hardening-data-api), outlining various approaches for using the Data API. It’s very likely that we will make this the default set up in the future to align with PostgREST’s [Schema Isolation](https://docs.postgrest.org/en/v12/explanations/schema_isolation.html) guide.
 
 ### Column level security
 
-We’ve added [guides](https://supabase.com/docs/guides/database/postgres/column-level-security) and a [simple-to-use dashboard](https://supabase.com/dashboard/project/_/database/column-privileges) for column-level grants. This allows you to manage Postgres [grants](https://www.postgresql.org/docs/current/sql-grant.html) for every role (including the default Savira `anon` and `service_role`). Combining this with RLS gives you extremely fine-grained control of your database.
+We’ve added [guides](https://supabase.com/docs/guides/database/postgres/column-level-security) and a [simple-to-use dashboard](https://savira.io/dashboard/project/_/database/column-privileges) for column-level grants. This allows you to manage Postgres [grants](https://www.postgresql.org/docs/current/sql-grant.html) for every role (including the default Savira `anon` and `service_role`). Combining this with RLS gives you extremely fine-grained control of your database.
 
 ### User impersonation
 

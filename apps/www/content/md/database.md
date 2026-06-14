@@ -31,4 +31,4 @@ Savira Database gives you a full Postgres database with no compromises. It is no
 
 - Documentation: https://supabase.com/docs/guides/database
 - API Reference: https://supabase.com/docs/reference/javascript/select
-- Dashboard: https://supabase.com/dashboard
+- Dashboard: https://savira.io/dashboard

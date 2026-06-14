@@ -345,7 +345,7 @@ functions:
     notes: |
       - In order to use the `updateUser()` method, the user needs to be signed in first.
       - By default, email updates sends a confirmation link to both the user's current and new email.
-      To only send a confirmation link to the user's new email, disable **Secure email change** in your project's [email auth provider settings](https://supabase.com/dashboard/project/_/auth/providers).
+      To only send a confirmation link to the user's new email, disable **Secure email change** in your project's [email auth provider settings](https://savira.io/dashboard/project/_/auth/providers).
     examples:
       - id: update-the-email-for-an-authenticated-user
         name: Update the email for an authenticated user
@@ -3333,7 +3333,7 @@ functions:
   - id: from-get-public-url
     title: from.getPublicUrl()
     notes: |
-      - The bucket needs to be set to public, either via [updateBucket()](/docs/reference/javascript/storage-updatebucket) or by going to Storage on [supabase.com/dashboard](https://supabase.com/dashboard), clicking the overflow menu on a bucket and choosing "Make public"
+      - The bucket needs to be set to public, either via [updateBucket()](/docs/reference/javascript/storage-updatebucket) or by going to Storage on [supabase.com/dashboard](https://savira.io/dashboard), clicking the overflow menu on a bucket and choosing "Make public"
       - RLS policy permissions required:
         - `buckets` table permissions: none
         - `objects` table permissions: none

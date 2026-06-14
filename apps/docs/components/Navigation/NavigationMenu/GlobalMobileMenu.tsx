@@ -158,15 +158,15 @@ const GlobalMobileMenu = ({ open, setOpen }: Props) => {
                 <>
                   {isLoggedIn ? (
                     <Button block size="medium" asChild>
-                      <Link href="https://supabase.com/dashboard/projects">Dashboard</Link>
+                      <Link href="https://savira.io/dashboard/projects">Dashboard</Link>
                     </Button>
                   ) : (
                     <>
                       <Button block size="medium" type="default" asChild>
-                        <Link href="https://supabase.com/dashboard/sign-in">Sign in</Link>
+                        <Link href="https://savira.io/dashboard/sign-in">Sign in</Link>
                       </Button>
                       <Button block size="medium" asChild>
-                        <Link href="https://supabase.com/dashboard/new">Start your project</Link>
+                        <Link href="https://savira.io/dashboard/new">Start your project</Link>
                       </Button>
                     </>
                   )}

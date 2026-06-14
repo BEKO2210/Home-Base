@@ -52,7 +52,7 @@ function AuthPage() {
           url: `https://supabase.com/auth`,
           images: [
             {
-              url: `https://supabase.com${basePath}/images/product/auth/auth-og.jpg`,
+              url: `https://savira.io${basePath}/images/product/auth/auth-og.jpg`,
             },
           ],
         }}
@@ -66,7 +66,7 @@ function AuthPage() {
                 name: 'Savira Auth',
                 description: meta_description,
                 url: 'https://supabase.com/auth',
-                image: `https://supabase.com${basePath}/images/product/auth/auth-og.jpg`,
+                image: `https://savira.io${basePath}/images/product/auth/auth-og.jpg`,
               })
             ),
           }}

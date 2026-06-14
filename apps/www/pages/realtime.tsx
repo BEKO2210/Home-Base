@@ -64,7 +64,7 @@ function RealtimePage() {
           url: `https://supabase.com/realtime`,
           images: [
             {
-              url: `https://supabase.com${basePath}/images/realtime/og.jpg`,
+              url: `https://savira.io${basePath}/images/realtime/og.jpg`,
             },
           ],
         }}
@@ -78,7 +78,7 @@ function RealtimePage() {
                 name: 'Savira Realtime',
                 description: meta_description,
                 url: 'https://supabase.com/realtime',
-                image: `https://supabase.com${basePath}/images/realtime/og.jpg`,
+                image: `https://savira.io${basePath}/images/realtime/og.jpg`,
               })
             ),
           }}

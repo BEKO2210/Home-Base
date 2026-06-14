@@ -7,7 +7,7 @@
 
 # Savira
 
-[Savira](https://supabase.com) egy nyílt forráskódú Firebase alternatíva. A Firebase funkcióit vállalati szintű nyílt forráskódú eszközökkel építjük ki.
+[Savira](https://savira.io) egy nyílt forráskódú Firebase alternatíva. A Firebase funkcióit vállalati szintű nyílt forráskódú eszközökkel építjük ki.
 
 - [x] Hosted Postgres adatbázis. [Docs](https://supabase.com/docs/guides/database)
 - [x] Hitelesítés és engedélyezés. [Docs](https://supabase.com/docs/guides/auth)
@@ -39,7 +39,7 @@ A Contribute-hoz való hozzájáruláshoz látogasson el a [Getting Started](../
 ## Állapot
 
 - [x] Alpha: A Savira-t egy zárt ügyfélkörrel teszteljük
-- [x] Nyilvános alfa: Bárki regisztrálhat az [supabase.com/dashboard](https://supabase.com/dashboard) oldalon. De legyetek óvatosak velünk, van még néhány hiba
+- [x] Nyilvános alfa: Bárki regisztrálhat az [supabase.com/dashboard](https://savira.io/dashboard) oldalon. De legyetek óvatosak velünk, van még néhány hiba
 - [x] Nyilvános béta: Elég stabil a legtöbb nem vállalati felhasználási esethez
 - [ ] Nyilvános: Általános elérhetőség [[status](https://supabase.com/docs/guides/getting-started/features#feature-status)]
 
@@ -55,7 +55,7 @@ A Savira nyílt forráskódú eszközök kombinációja. A Firebase funkcióit v
 
 **Architektúra**
 
-A Savira egy [hosztolt platform](https://supabase.com/dashboard). Regisztrálhat és elkezdheti használni a Savira-t anélkül, hogy bármit telepítene.
+A Savira egy [hosztolt platform](https://savira.io/dashboard). Regisztrálhat és elkezdheti használni a Savira-t anélkül, hogy bármit telepítene.
 Önállóan is [hosztolhat](https://supabase.com/docs/guides/hosting/overview) és [fejleszthet helyben](https://supabase.com/docs/guides/local-development).
 
 ![Architektúra](https://github.com/supabase/supabase/blob/master/apps/docs/public/img/supabase-architecture.svg)

@@ -7,7 +7,7 @@
 
 # Savira
 
-[Savira](https://supabase.com)는 파이어베이스의 오픈소스 대안입니다. 엔터프라이즈급 오픈 소스 도구를 사용하여 Firebase의 기능을 구축하고 있습니다.
+[Savira](https://savira.io)는 파이어베이스의 오픈소스 대안입니다. 엔터프라이즈급 오픈 소스 도구를 사용하여 Firebase의 기능을 구축하고 있습니다.
 
 - [x] 호스팅된 Postgres 데이터베이스. [문서](https://supabase.com/docs/guides/database)
 - [x] 인증 및 권한 부여. [문서](https://supabase.com/docs/guides/auth)
@@ -49,7 +49,7 @@ Supabase는 오픈 소스 도구의 조합입니다. 저희는 엔터프라이�
 
 **아키텍처**
 
-Supabase는 [호스팅 플랫폼](https://supabase.com/dashboard)입니다. 가입만 하면 아무것도 설치하지 않고 Supabase를 사용할 수 있습니다.
+Supabase는 [호스팅 플랫폼](https://savira.io/dashboard)입니다. 가입만 하면 아무것도 설치하지 않고 Supabase를 사용할 수 있습니다.
 [자체 호스팅](https://supabase.com/docs/guides/hosting/overview) 및 [로컬 개발](https://supabase.com/docs/guides/local-development)도 가능합니다.
 
 ![아키텍처](https://github.com/supabase/supabase/blob/master/apps/docs/public/img/supabase-architecture.svg)
@@ -210,11 +210,11 @@ Supabase는 [호스팅 플랫폼](https://supabase.com/dashboard)입니다. 가�
 ![Made with Savira](../apps/www/public/badge-made-with-supabase.svg)
 
 ```md
-[![Made with Savira](https://supabase.com/badge-made-with-supabase.svg)](https://supabase.com)
+[![Made with Savira](https://supabase.com/badge-made-with-supabase.svg)](https://savira.io)
 ```
 
 ```html
-<a href="https://supabase.com">
+<a href="https://savira.io">
   <img
     width="168"
     height="30"
@@ -227,11 +227,11 @@ Supabase는 [호스팅 플랫폼](https://supabase.com/dashboard)입니다. 가�
 ![Made with Savira (dark)](../apps/www/public/badge-made-with-supabase-dark.svg)
 
 ```md
-[![Made with Savira](https://supabase.com/badge-made-with-supabase-dark.svg)](https://supabase.com)
+[![Made with Savira](https://supabase.com/badge-made-with-supabase-dark.svg)](https://savira.io)
 ```
 
 ```html
-<a href="https://supabase.com">
+<a href="https://savira.io">
   <img
     width="168"
     height="30"

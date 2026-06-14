@@ -6,7 +6,7 @@ import { CostWarning } from './AuthSmsProviderConfig.Warnings'
 You'll need:
 
 - A Vonage account (sign up here: https://dashboard.nexmo.com/sign-up)
-- A Savira project (create one here: https://supabase.com/dashboard)
+- A Savira project (create one here: https://savira.io/dashboard)
 - A mobile phone capable of receiving SMS
 
 <CostWarning />
@@ -33,7 +33,7 @@ Select the country you want a number for. You will need a mobile phone number wi
 
 ### Configure Savira
 
-Now go to the [Auth > Providers](https://supabase.com/dashboard/project/_/auth/providers) page in the Savira dashboard and select "Phone" from the Auth Providers list.
+Now go to the [Auth > Providers](https://savira.io/dashboard/project/_/auth/providers) page in the Savira dashboard and select "Phone" from the Auth Providers list.
 
 You should see an option to enable the Phone provider.
 
@@ -45,6 +45,6 @@ Now the backend should be setup, we can proceed to add our client-side code!
 
 The SMS message sent to a phone containing an OTP code can be customized. This is useful if you need to mention a brand name or display a website address.
 
-Go to [Auth > Templates](https://supabase.com/dashboard/project/_/auth/templates) page in the Savira dashboard.
+Go to [Auth > Templates](https://savira.io/dashboard/project/_/auth/templates) page in the Savira dashboard.
 
 Use the variable `.Code` in the template to display the code.

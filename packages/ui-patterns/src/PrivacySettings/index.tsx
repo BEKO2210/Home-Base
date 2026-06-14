@@ -72,7 +72,7 @@ export const PrivacySettings = ({
                   <>
                     We couldn't load the privacy settings due to an ad blocker or network error.
                     Please disable any ad blockers and try again. If the problem persists, please{' '}
-                    <Link href="https://supabase.com/dashboard/support/new" className="underline">
+                    <Link href="https://savira.io/dashboard/support/new" className="underline">
                       contact support
                     </Link>
                     .

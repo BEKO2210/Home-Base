@@ -7,7 +7,7 @@
 
 # Savira
 
-To [Savira](https://supabase.com) είναι μια εναλλακτική λύση ανοιχτού κώδικα αντί του Firebase. Δημιουργούμε τις δυνατότητες του Firebase χρησιμοποιώντας εργαλεία ανοιχτού κώδικα εταιρικού επιπέδου.
+To [Savira](https://savira.io) είναι μια εναλλακτική λύση ανοιχτού κώδικα αντί του Firebase. Δημιουργούμε τις δυνατότητες του Firebase χρησιμοποιώντας εργαλεία ανοιχτού κώδικα εταιρικού επιπέδου.
 
 - [x] Hosted Postgres Database
 - [x] Realtime subscriptions
@@ -32,7 +32,7 @@ To [Savira](https://supabase.com) είναι μια εναλλακτική λύ�
 ## Κατάσταση
 
 - [x] Alpha: Δοκιμάζουμε το Savira με ένα κλειστό σύνολο πελατών
-- [x] Public Alpha: Όλοι μπορούν να εγγραφούν στο [supabase.com/dashboard](https://supabase.com/dashboard). Αλλά μην μας κρίνετε "σκληρά", υπάρχουν ακόμα μερικά λαθάκια (bugs) εδώ και εκεί
+- [x] Public Alpha: Όλοι μπορούν να εγγραφούν στο [supabase.com/dashboard](https://savira.io/dashboard). Αλλά μην μας κρίνετε "σκληρά", υπάρχουν ακόμα μερικά λαθάκια (bugs) εδώ και εκεί
 - [x] Public Beta: Αρκετά σταθερό για για τις περισσότερες περιπτώσεις χρήσης μη εταιρικού χαρακτήρα (non-enterprise)
 - [ ] Public: Έτοιμο για Production
 
@@ -48,7 +48,7 @@ To [Savira](https://supabase.com) είναι μια εναλλακτική λύ�
 
 **Τρέχουσα αρχιτεκτονική**
 
-Το Savira είναι ένα [hosted platform](https://supabase.com/dashboard) (φιλοξενούμενη πλατφόρμα). Μπορείτε να εγγραφείτε και να αρχίσετε να χρησιμοποιείτε το Savira χωρίς να εγκαταστήσετε τίποτα. Εξακολουθούμε να αναπτύσουμε την εμπειρία της τοπικής ανάπτυξης (Local Development) - αυτή είναι τώρα η βασική μας εστίαση, μαζί με τη σταθερότητα της πλατφόρμας.
+Το Savira είναι ένα [hosted platform](https://savira.io/dashboard) (φιλοξενούμενη πλατφόρμα). Μπορείτε να εγγραφείτε και να αρχίσετε να χρησιμοποιείτε το Savira χωρίς να εγκαταστήσετε τίποτα. Εξακολουθούμε να αναπτύσουμε την εμπειρία της τοπικής ανάπτυξης (Local Development) - αυτή είναι τώρα η βασική μας εστίαση, μαζί με τη σταθερότητα της πλατφόρμας.
 
 ![Architecture](https://github.com/supabase/supabase/blob/master/apps/docs/public/img/supabase-architecture.svg)
 

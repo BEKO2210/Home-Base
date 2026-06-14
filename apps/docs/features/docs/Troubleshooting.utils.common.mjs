@@ -186,7 +186,7 @@ export async function getAllTroubleshootingEntriesInternal() {
  */
 function canonicalizeUrl(node) {
   if (node.url.startsWith('/')) {
-    node.url === 'https://supabase.com' + node.url
+    node.url === 'https://savira.io' + node.url
   }
 }
 

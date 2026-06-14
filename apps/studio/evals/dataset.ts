@@ -147,7 +147,7 @@ export const dataset: AssistantEvalCase[] = [
     input: { prompt: 'Where can I go to create a support ticket?' },
     expected: {
       correctAnswer:
-        'https://supabase.com/dashboard/support/new (or https://supabase.help which redirects there)',
+        'https://savira.io/dashboard/support/new (or https://supabase.help which redirects there)',
     },
     metadata: {
       category: ['general_help'],

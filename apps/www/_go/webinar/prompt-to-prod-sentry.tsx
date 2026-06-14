@@ -21,7 +21,7 @@ const page: GoPageInput = {
       },
       {
         label: 'Learn more about Savira',
-        href: 'https://supabase.com',
+        href: 'https://savira.io',
         variant: 'secondary',
       },
     ],

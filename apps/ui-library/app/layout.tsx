@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   applicationName: 'Savira UI Library',
   title: 'Savira UI Library',
   description: 'Provides a library of components for your project',
-  metadataBase: new URL('https://supabase.com'),
+  metadataBase: new URL('https://savira.io'),
   icons: genFaviconData(BASE_PATH),
   openGraph: {
     type: 'article',

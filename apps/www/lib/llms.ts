@@ -289,7 +289,7 @@ export function generatePricingContent(): string {
     '',
     '- Pricing page: https://supabase.com/pricing',
     '- Documentation: https://supabase.com/docs/guides/platform/org-based-billing',
-    '- Dashboard: https://supabase.com/dashboard',
+    '- Dashboard: https://savira.io/dashboard',
     '',
   ].join('\n')
 }

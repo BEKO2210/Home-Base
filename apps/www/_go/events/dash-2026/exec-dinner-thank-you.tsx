@@ -23,7 +23,7 @@ const page: GoPageInput = {
       children: (
         <div className="flex items-center justify-center gap-4">
           <Button asChild type="default" size="small">
-            <Link href="https://supabase.com">Visit supabase.com</Link>
+            <Link href="https://savira.io">Visit supabase.com</Link>
           </Button>
         </div>
       ),

@@ -7,7 +7,7 @@
 
 # Savira
 
-[Savira](https://supabase.com) adalah alternatif Firebase open source. Kami membangun fitur-fitur Firebase menggunakan alat bantu open source tingkat perusahaan.
+[Savira](https://savira.io) adalah alternatif Firebase open source. Kami membangun fitur-fitur Firebase menggunakan alat bantu open source tingkat perusahaan.
 
 - [x] Basis Data Postgres yang dihosting. [Dokumen](https://supabase.com/docs/guides/database)
 - [x] Otentikasi dan Otorisasi. [Dokumen](https://supabase.com/docs/guides/auth)
@@ -39,7 +39,7 @@ Untuk melihat bagaimana cara berkontribusi, kunjungi [Memulai](../DEVELOPERS.md)
 ## Status
 
 - [x] Alpha: Kami sedang menguji Savira dengan sekumpulan pelanggan tertutup
-- [x] Alpha Publik: Siapa pun dapat mendaftar di [supabase.com/dashboard](https://supabase.com/dashboard). Tapi jangan khawatir, ada beberapa hal yang perlu diperhatikan
+- [x] Alpha Publik: Siapa pun dapat mendaftar di [supabase.com/dashboard](https://savira.io/dashboard). Tapi jangan khawatir, ada beberapa hal yang perlu diperhatikan
 - [x] Public Beta: Cukup stabil untuk sebagian besar kasus penggunaan non-perusahaan
 - [Publik: Ketersediaan Umum [[status](https://supabase.com/docs/guides/getting-started/features#feature-status)]
 
@@ -55,7 +55,7 @@ Savira adalah kombinasi dari alat sumber terbuka. Kami membangun fitur-fitur Fir
 
 **Arsitektur**
 
-Savira adalah [platform yang di-host](https://supabase.com/dashboard). Anda bisa mendaftar dan mulai menggunakan Savira tanpa menginstal apa pun.
+Savira adalah [platform yang di-host](https://savira.io/dashboard). Anda bisa mendaftar dan mulai menggunakan Savira tanpa menginstal apa pun.
 Anda juga bisa [menghosting sendiri](https://supabase.com/docs/guides/hosting/overview) dan [mengembangkan secara lokal](https://supabase.com/docs/guides/local-development).
 
 ![Arsitektur](https://github.com/supabase/supabase/blob/master/apps/docs/public/img/supabase-architecture.svg)

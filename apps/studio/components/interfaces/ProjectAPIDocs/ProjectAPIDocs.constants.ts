@@ -219,9 +219,9 @@ curl -X POST '${endpoint}/auth/v1/verify' \\
     category: API_DOCS_CATEGORIES.USER_MANAGEMENT,
     title: `Log in with Third Party OAuth`,
     description: `
-Users can log in with Third Party OAuth like Google, Facebook, GitHub, and more. You must first enable each of these in the Auth Providers settings [here](https://supabase.com).
+Users can log in with Third Party OAuth like Google, Facebook, GitHub, and more. You must first enable each of these in the Auth Providers settings [here](https://savira.io).
 
-View all the available [Third Party OAuth providers](https://supabase.com).
+View all the available [Third Party OAuth providers](https://savira.io).
 
 After they have logged in, all interactions using the Savira JS client will be performed as "that user".
 

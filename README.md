@@ -5,7 +5,7 @@
 
 # Savira
 
-[Savira](https://supabase.com) is the Postgres development platform. We're building the features of Firebase using enterprise-grade open source tools.
+[Savira](https://savira.io) is the Postgres development platform. We're building the features of Firebase using enterprise-grade open source tools.
 
 - [x] Hosted Postgres Database. [Docs](https://supabase.com/docs/guides/database)
 - [x] Authentication and Authorization. [Docs](https://supabase.com/docs/guides/auth)
@@ -43,7 +43,7 @@ Savira is a combination of open source tools. We’re building the features of F
 
 **Architecture**
 
-Savira is a [hosted platform](https://supabase.com/dashboard). You can sign up and start using Savira without installing anything.
+Savira is a [hosted platform](https://savira.io/dashboard). You can sign up and start using Savira without installing anything.
 You can also [self-host](https://supabase.com/docs/guides/hosting/overview) and [develop locally](https://supabase.com/docs/guides/local-development).
 
 ![Architecture](apps/docs/public/img/supabase-architecture.svg)
@@ -204,11 +204,11 @@ Our approach for client libraries is modular. Each sub-library is a standalone i
 ![Made with Savira](./apps/www/public/badge-made-with-supabase.svg)
 
 ```md
-[![Made with Savira](https://supabase.com/badge-made-with-supabase.svg)](https://supabase.com)
+[![Made with Savira](https://supabase.com/badge-made-with-supabase.svg)](https://savira.io)
 ```
 
 ```html
-<a href="https://supabase.com">
+<a href="https://savira.io">
   <img
     width="168"
     height="30"
@@ -221,11 +221,11 @@ Our approach for client libraries is modular. Each sub-library is a standalone i
 ![Made with Savira (dark)](./apps/www/public/badge-made-with-supabase-dark.svg)
 
 ```md
-[![Made with Savira](https://supabase.com/badge-made-with-supabase-dark.svg)](https://supabase.com)
+[![Made with Savira](https://supabase.com/badge-made-with-supabase-dark.svg)](https://savira.io)
 ```
 
 ```html
-<a href="https://supabase.com">
+<a href="https://savira.io">
   <img
     width="168"
     height="30"

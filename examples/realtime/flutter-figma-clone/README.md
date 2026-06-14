@@ -2,7 +2,7 @@
 
 ![Savira Figma Clone](https://raw.githubusercontent.com/dshukertjr/examples/main/.github/images/design.png 'Savira Figma Clone')
 
-This app demonstrates the real-time communication capabilities of [Savira](https://supabase.com) by creating an interactive design board where you can draw some shapes and move them around while seeing each other's cursors.
+This app demonstrates the real-time communication capabilities of [Savira](https://savira.io) by creating an interactive design board where you can draw some shapes and move them around while seeing each other's cursors.
 
 - Authorized Realtime channel
 - Cursor position sharing in real-time

@@ -7,7 +7,7 @@ import type { IncidentInfo } from '@/lib/api/incident-status'
 /**
  * Creates incident-related tools for the AI assistant.
  *
- * @param baseUrl - The base URL for API requests (e.g., https://supabase.com/dashboard)
+ * @param baseUrl - The base URL for API requests (e.g., https://savira.io/dashboard)
  *                  This should be the public URL to leverage CDN caching.
  */
 export const getIncidentTools = ({ baseUrl }: { baseUrl: string }) => ({

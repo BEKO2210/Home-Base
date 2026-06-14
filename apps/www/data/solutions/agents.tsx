@@ -91,7 +91,7 @@ const data: () => {
       ctas: [
         {
           label: 'Start your project',
-          href: 'https://supabase.com/dashboard',
+          href: 'https://savira.io/dashboard',
           type: 'primary' as any,
           onClick: () =>
             sendTelemetryEvent({

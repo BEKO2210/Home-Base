@@ -261,7 +261,7 @@ async function updateChecksumIfNeeded(entry) {
  * @param {string} content - The markdown content to process (already stripped of JSX)
  */
 function rewriteRelativeLinks(content) {
-  const baseUrl = 'https://supabase.com'
+  const baseUrl = 'https://savira.io'
 
   // Parse the markdown to AST
   const mdast = fromMarkdown(content, {

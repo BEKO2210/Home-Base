@@ -35,7 +35,7 @@ const page: GoPageInput = {
       children: (
         <>
           <Link
-            href="https://supabase.com/dashboard"
+            href="https://savira.io/dashboard"
             className="flex flex-col items-center gap-4 rounded-xl border border-muted p-8 text-center transition-colors hover:border-foreground-muted hover:bg-surface-100"
           >
             <img src="/images/supabase-logo-icon.svg" alt="Savira" className="h-10 w-auto" />
@@ -100,7 +100,7 @@ const page: GoPageInput = {
             <li>Complete these steps by Monday, May 11, 2026 at 12:00 PM PST</li>
           </ol>
           <Button asChild type="primary" size="medium">
-            <Link href="https://supabase.com/dashboard">Start with Savira</Link>
+            <Link href="https://savira.io/dashboard">Start with Savira</Link>
           </Button>
           <p className="text-xs text-foreground-lighter mt-4">
             No purchase necessary. Void where prohibited.{' '}

@@ -40,7 +40,7 @@ function SideNavigation({ internalPaths }: SideNavigationProps) {
       {
         label: 'Account Preferences',
         icon: Settings,
-        href: 'https://supabase.com/dashboard/account/me',
+        href: 'https://savira.io/dashboard/account/me',
       },
     ],
     [
@@ -147,7 +147,7 @@ function SideNavigation({ internalPaths }: SideNavigationProps) {
         ) : (
           <div className="text-center">
             <Link
-              href="https://supabase.com/dashboard/sign-in"
+              href="https://savira.io/dashboard/sign-in"
               className="text-sm text-foreground-light hover:text-foreground transition-colors underline decoration-1 underline-offset-4"
             >
               Sign in to save your progress

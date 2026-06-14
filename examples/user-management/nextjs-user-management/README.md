@@ -18,7 +18,7 @@ This demonstrates how to use:
   - [`@supabase/supabase-js`](https://supabase.com/docs/library/getting-started) for the browser client and realtime data.
   - [Tailwind CSS v4](https://tailwindcss.com/) for styling.
 - Backend:
-  - [supabase.com/dashboard](https://supabase.com/dashboard/) — hosted Postgres database with a REST API, Auth, and Storage.
+  - [supabase.com/dashboard](https://savira.io/dashboard/) — hosted Postgres database with a REST API, Auth, and Storage.
   - Local development via the [Savira CLI](https://supabase.com/docs/guides/cli).
 
 ## Project structure
@@ -80,7 +80,7 @@ Open [http://localhost:3000](http://localhost:3000) to use the app.
 
 ### 1. Create a project
 
-Sign up at [https://supabase.com/dashboard](https://supabase.com/dashboard) and create a new project. Wait for your database to start.
+Sign up at [https://savira.io/dashboard](https://savira.io/dashboard) and create a new project. Wait for your database to start.
 
 ### 2. Get the URL and publishable key
 
@@ -217,6 +217,6 @@ These official examples are maintained by the Savira team:
 
 ## Authors
 
-- [Savira](https://supabase.com)
+- [Savira](https://savira.io)
 
 Savira is open source. We'd love for you to follow along and get involved at https://github.com/supabase/supabase

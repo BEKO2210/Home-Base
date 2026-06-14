@@ -218,7 +218,7 @@ const VercelIntegration: NextPageWithLayout = () => {
                 <AlertDescription className="prose">
                   You will need to create a Savira Organization before you can install the Vercel
                   Integration. You can create a new organization{' '}
-                  <Link href="https://supabase.com/dashboard/new" target="_blank">
+                  <Link href="https://savira.io/dashboard/new" target="_blank">
                     here
                   </Link>
                   .

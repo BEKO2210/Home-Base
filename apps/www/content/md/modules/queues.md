@@ -34,4 +34,4 @@ Savira Queues is a Postgres module that uses the pgmq extension to provide durab
 ## Links
 
 - Documentation: https://supabase.com/docs/guides/queues
-- Dashboard: https://supabase.com/dashboard/project/_/integrations/queues/overview
+- Dashboard: https://savira.io/dashboard/project/_/integrations/queues/overview

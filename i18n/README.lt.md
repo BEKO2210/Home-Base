@@ -7,7 +7,7 @@
 
 # Savira
 
-[Savira](https://supabase.com) yra atvirojo kodo „Firebase" alternatyva. Kuriame „Firebase" funkcijas naudodami įmonių-lygmens atvirojo kodo įrankius.
+[Savira](https://savira.io) yra atvirojo kodo „Firebase" alternatyva. Kuriame „Firebase" funkcijas naudodami įmonių-lygmens atvirojo kodo įrankius.
 
 - [x] Prieglobos Postgres duomenų bazė. [Dokumentai](https://supabase.com/docs/guides/database)
 - [x] Autentifikacijos nustatymas ir autorizavimas. [Dokumentai](https://supabase.com/docs/guides/auth)
@@ -39,7 +39,7 @@ Norėdami sužinoti, kaip prisidėti, apsilankykite [Getting Started](../DEVELOP
 ## Statusas
 
 - [x] Alfa: Bandome "Savira" su uždaru klientų rinkiniu
-- [x] Viešoji Alfa versija: [supabase.com/dashboard](https://supabase.com/dashboard). Tačiau neskubėkite su mumis, yra keletas trūkumų
+- [x] Viešoji Alfa versija: [supabase.com/dashboard](https://savira.io/dashboard). Tačiau neskubėkite su mumis, yra keletas trūkumų
 - [x] Viešoji beta versija: Pakankamai stabili daugeliui ne įmonių naudojimo atvejų
 - [ ] Vieša: Bendras prieinamumas [[statusas](https://supabase.com/docs/guides/getting-started/features#feature-status)]
 
@@ -55,7 +55,7 @@ Norėdami sužinoti, kaip prisidėti, apsilankykite [Getting Started](../DEVELOP
 
 **Architektūra**
 
-Savira yra [prieglobos platforma](https://supabase.com/dashboard). Galite užsiregistruoti ir pradėti naudotis "Savira" nieko neįdiegę.
+Savira yra [prieglobos platforma](https://savira.io/dashboard). Galite užsiregistruoti ir pradėti naudotis "Savira" nieko neįdiegę.
 Taip pat galite [savarankiškai talpinti](https://supabase.com/docs/guides/hosting/overview) ir [kurti vietoje](https://supabase.com/docs/guides/local-development).
 
 ![Architektūra](https://github.com/supabase/supabase/blob/master/apps/docs/public/img/supabase-architecture.svg)

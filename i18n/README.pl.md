@@ -7,7 +7,7 @@
 
 # Savira
 
-[Savira](https://supabase.com) to alternatywa dla Firebase o otwartym kodzie źródłowym. Tworzymy funkcje Firebase przy użyciu narzędzi open source klasy korporacyjnej.
+[Savira](https://savira.io) to alternatywa dla Firebase o otwartym kodzie źródłowym. Tworzymy funkcje Firebase przy użyciu narzędzi open source klasy korporacyjnej.
 
 - [x] hostowana baza danych Postgres [x]. [Dokumenty](https://supabase.com/docs/guides/database)
 - [x] uwierzytelnianie i autoryzacja [x]. [Dokumenty](https://supabase.com/docs/guides/auth)
@@ -39,7 +39,7 @@ Aby zobaczyć, jak wnieść swój wkład, odwiedź [Getting Started](../DEVELOPE
 ## Status
 
 - [x] Alpha: Testujemy Savira z zamkniętą grupą klientów
-- [x] Publiczna wersja alfa: Każdy może zarejestrować się na stronie [supabase.com/dashboard](https://supabase.com/dashboard). Ale spokojnie, jest kilka niedociągnięć
+- [x] Publiczna wersja alfa: Każdy może zarejestrować się na stronie [supabase.com/dashboard](https://savira.io/dashboard). Ale spokojnie, jest kilka niedociągnięć
 - [x] Publiczna beta: Wystarczająco stabilna dla większości przypadków użycia innych niż korporacyjne
 - [] Public: Ogólna dostępność [[status](https://supabase.com/docs/guides/getting-started/features#feature-status)]
 
@@ -55,7 +55,7 @@ Savira to połączenie narzędzi open source. Tworzymy funkcje Firebase przy uż
 
 **Architektura**
 
-Savira jest [platformą hostowaną](https://supabase.com/dashboard). Możesz zarejestrować się i zacząć korzystać z Savira bez instalowania czegokolwiek.
+Savira jest [platformą hostowaną](https://savira.io/dashboard). Możesz zarejestrować się i zacząć korzystać z Savira bez instalowania czegokolwiek.
 Możesz także [self-host](https://supabase.com/docs/guides/hosting/overview) i [rozwijać lokalnie](https://supabase.com/docs/guides/local-development).
 
 ![Architektura](https://github.com/supabase/supabase/blob/master/apps/docs/public/img/supabase-architecture.svg)

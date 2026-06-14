@@ -693,7 +693,7 @@ module.exports = [
   {
     permanent: true,
     source: '/_app',
-    destination: 'https://supabase.com/dashboard',
+    destination: 'https://savira.io/dashboard',
   },
   {
     permanent: true,
@@ -1565,17 +1565,17 @@ module.exports = [
   {
     permanent: true,
     source: '/sign-in',
-    destination: 'https://supabase.com/dashboard/sign-in',
+    destination: 'https://savira.io/dashboard/sign-in',
   },
   {
     permanent: true,
     source: '/sign-up',
-    destination: 'https://supabase.com/dashboard/sign-up',
+    destination: 'https://savira.io/dashboard/sign-up',
   },
   {
     permanent: true,
     source: '/forgot-password',
-    destination: 'https://supabase.com/dashboard/forgot-password',
+    destination: 'https://savira.io/dashboard/forgot-password',
   },
   {
     permanent: true,
@@ -1610,7 +1610,7 @@ module.exports = [
   {
     permanent: true,
     source: '/projects',
-    destination: 'https://supabase.com/dashboard/projects',
+    destination: 'https://savira.io/dashboard/projects',
   },
   // Reorganizing pooler docs:-----------------------------
 

@@ -12,7 +12,7 @@ function makeRequest(
   const headers: Record<string, string> = {}
   if (accept) headers.accept = accept
   if (userAgent) headers['user-agent'] = userAgent
-  return new NextRequest(new URL(path, 'https://supabase.com'), { headers })
+  return new NextRequest(new URL(path, 'https://savira.io'), { headers })
 }
 
 const REWRITE_HEADER = 'x-middleware-rewrite'
