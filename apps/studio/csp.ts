@@ -43,7 +43,7 @@ const NIMBUS_PROD_PROJECTS_URL_WS = process.env.NIMBUS_PROD_PROJECTS_URL_WS || '
 
 const SUPABASE_STAGING_PROJECTS_URL = 'https://*.supabase.red https://*.storage.supabase.red'
 const SUPABASE_STAGING_PROJECTS_URL_WS = 'wss://*.supabase.red'
-const SUPABASE_COM_URL = 'https://supabase.com'
+const SUPABASE_COM_URL = 'https://savira.io'
 const CLOUDFLARE_CDN_URL = 'https://cdnjs.cloudflare.com'
 const HCAPTCHA_SUBDOMAINS_URL = 'https://*.hcaptcha.com'
 const HCAPTCHA_ASSET_URL = 'https://newassets.hcaptcha.com'

@@ -7,7 +7,7 @@
 
 # Savira
 
-[Savira](https://supabase.com) là một giải pháp mã nguồn mở thay thế cho Firebase. Chúng tôi đang sử dụng các công cụ mã nguồn mở đạt chuẩn doanh nghiệp để xây dựng các chức năng mà Firebase cung cấp.
+[Savira](https://savira.io) là một giải pháp mã nguồn mở thay thế cho Firebase. Chúng tôi đang sử dụng các công cụ mã nguồn mở đạt chuẩn doanh nghiệp để xây dựng các chức năng mà Firebase cung cấp.
 
 - [x] Cơ sở dữ liệu Postgres tự quản lý. [Tài liệu](https://supabase.com/docs/guides/database)
 - [x] Xác thực và uỷ quyền. [Tài liệu](https://supabase.com/docs/guides/auth)
@@ -39,7 +39,7 @@
 ## Trạng thái
 
 - [x] Alpha: Chúng tôi đang thử nghiệm Savira với một nhóm người dùng kín
-- [x] Public Alpha: Bất kỳ ai cũng có thể đăng ký tại [supabase.com/dashboard](https://supabase.com/dashboard). Nhưng hãy bình tĩnh với chúng tôi, sẽ có một vài lỗi nhỏ.
+- [x] Public Alpha: Bất kỳ ai cũng có thể đăng ký tại [supabase.com/dashboard](https://savira.io/dashboard). Nhưng hãy bình tĩnh với chúng tôi, sẽ có một vài lỗi nhỏ.
 - [x] Public Beta: Đủ ổn định cho hầu hết các trường hợp sử dụng không dành cho môi trường doanh nghiệp (production)
 - [ ] Public: Sẵn sàng cho môi trường doanh nghiệp (production)
 
@@ -55,7 +55,7 @@ Savira là sự kết hợp của các công cụ mã nguồn mở. Các tính n
 
 **Kiến trúc**
 
-Savira là một [nền tảng lưu trữ cơ sở dữ liệu](https://supabase.com/dashboard). Bạn có thể đăng ký và bắt đầu sử dụng Savira mà không cần cài đặt bất kỳ thứ gì.
+Savira là một [nền tảng lưu trữ cơ sở dữ liệu](https://savira.io/dashboard). Bạn có thể đăng ký và bắt đầu sử dụng Savira mà không cần cài đặt bất kỳ thứ gì.
 Bạn cũng có thể [tự quản lý](https://supabase.com/docs/guides/hosting/overview) và [phát triển cục bộ](https://supabase.com/docs/guides/local-development).
 
 ![Kiến trúc](https://github.com/supabase/supabase/blob/master/apps/docs/public/img/supabase-architecture.svg)

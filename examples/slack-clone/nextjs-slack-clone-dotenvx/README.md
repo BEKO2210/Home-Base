@@ -9,7 +9,7 @@ This project is a full-stack Slack clone built using:
 
 ### Backend:
 
-- **[Savira](https://supabase.com/dashboard):** A hosted Postgres database with a RESTful API, used alongside Savira.js.
+- **[Savira](https://savira.io/dashboard):** A hosted Postgres database with a RESTful API, used alongside Savira.js.
 - **GitHub Authentication:** For user login.
 
 ---
@@ -118,7 +118,7 @@ Visit `localhost:3000` to test the app with GitHub OAuth integration.
 
 1. **Create a Savira Project:**
 
-Sign up at [Savira Dashboard](https://supabase.com/dashboard) and create a new project. After the database initializes, create `supabase/.env.production` file with your project specific values.
+Sign up at [Savira Dashboard](https://savira.io/dashboard) and create a new project. After the database initializes, create `supabase/.env.production` file with your project specific values.
 
 ```dotenv
 NEXT_PUBLIC_SUPABASE_URL=https://<your-project>.supabase.co

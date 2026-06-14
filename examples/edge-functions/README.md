@@ -31,7 +31,7 @@ Note: when testing locally, the select dropdown doesn't have any effect, and inv
 ## Deploy
 
 - Generate access token and log in to CLI
-  - Navigate to https://supabase.com/dashboard/account/tokens
+  - Navigate to https://savira.io/dashboard/account/tokens
   - Click "Generate New Token"
   - Copy newly created token
   - Run `supabase login`
@@ -54,7 +54,7 @@ This example includes a create-react-app in the [`./app/`](./app/) directory whi
 
 - `cd app`
 - `cp .env.example .env`
-- Fill in your env vars from https://supabase.com/dashboard/project/_/settings/api
+- Fill in your env vars from https://savira.io/dashboard/project/_/settings/api
 - `npm install`
 - `npm start`
 

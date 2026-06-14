@@ -75,7 +75,7 @@ const LayoutComparison = ({ components, props }: Props) => {
             }),
           },
           images: (() => {
-            const url = getAbsoluteBlogSocialImage(props.blog, 'https://supabase.com')
+            const url = getAbsoluteBlogSocialImage(props.blog, 'https://savira.io')
             if (!url) return []
             return [{ url }]
           })(),

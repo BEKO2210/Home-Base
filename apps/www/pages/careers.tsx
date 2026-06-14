@@ -107,7 +107,7 @@ const CareerPage = ({ jobs, placeholderJob, contributors }: CareersPageProps) =>
           url: `https://supabase.com/careers`,
           images: [
             {
-              url: `https://supabase.com${basePath}/images/career/careers_og.jpg`,
+              url: `https://savira.io${basePath}/images/career/careers_og.jpg`,
             },
           ],
         }}

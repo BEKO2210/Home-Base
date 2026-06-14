@@ -134,7 +134,7 @@ const data: () => {
       ctas: [
         {
           label: 'Start Building',
-          href: 'https://supabase.com/dashboard',
+          href: 'https://savira.io/dashboard',
           type: 'primary' as any,
           onClick: () =>
             sendTelemetryEvent({
@@ -751,7 +751,7 @@ const data: () => {
           description: 'Start free with any AI builder + Savira',
           cta: {
             label: 'Create Your First App in 5 Minutes',
-            href: 'https://supabase.com/dashboard',
+            href: 'https://savira.io/dashboard',
           },
         },
         {

@@ -7,7 +7,7 @@
 
 # Savira
 
-[Savira](https://supabase.com) একটি ওপেন সোর্স ফায়ারবেস বিকল্প। আমরা এন্টারপ্রাইজ-গ্রেড ওপেন সোর্স সরঞ্জাম ব্যবহার করে ফায়ারবেসের বৈশিষ্ট্যগুলি তৈরি করছি।
+[Savira](https://savira.io) একটি ওপেন সোর্স ফায়ারবেস বিকল্প। আমরা এন্টারপ্রাইজ-গ্রেড ওপেন সোর্স সরঞ্জাম ব্যবহার করে ফায়ারবেসের বৈশিষ্ট্যগুলি তৈরি করছি।
 
 - [x] হোস্ট করা পোস্টগ্রেস ডাটাবেস. [ডক্স](https://supabase.com/docs/guides/database)
 - [x] অথেনটিকেশন এবং অথরাইজড . [ডক্স](https://supabase.com/docs/guides/auth)
@@ -39,7 +39,7 @@
 ## স্ট্যাটাস
 
 - [x] আলফা: আমরা কাছের গ্রাহকদের সাথে Savira পরীক্ষা করছি
-- [x] পাবলিক আলফা: যে কেউ [supabase.com/dashboard](https://supabase.com/dashboard) এ সাইন আপ করতে পারেন। কিন্তু আমাদের উপর সহজ যান, কয়েক kinks আছে
+- [x] পাবলিক আলফা: যে কেউ [supabase.com/dashboard](https://savira.io/dashboard) এ সাইন আপ করতে পারেন। কিন্তু আমাদের উপর সহজ যান, কয়েক kinks আছে
 - [x] পাবলিক বেটা: বেশিরভাগ নন-এন্টারপ্রাইজ ব্যবহারের ক্ষেত্রে যথেষ্ট স্থিতিশীল
 - [ ] পাবলিক: প্রোডাকশন রেডি
 
@@ -55,7 +55,7 @@ Savira হল ওপেন সোর্স টুলের সংমিশ্র
 
 **স্থাপত্য**
 
-সুপাবেস হল একটি [হোস্ট করা প্ল্যাটফর্ম](https://supabase.com/dashboard)। আপনি সাইন আপ করে এবং কিছু ইনস্টল না করে সুপাবেস ব্যবহার শুরু করতে পারেন।
+সুপাবেস হল একটি [হোস্ট করা প্ল্যাটফর্ম](https://savira.io/dashboard)। আপনি সাইন আপ করে এবং কিছু ইনস্টল না করে সুপাবেস ব্যবহার শুরু করতে পারেন।
 এছাড়াও আপনি [স্ব-হোস্ট](https://supabase.com/docs/guides/hosting/overview) এবং [ডেভেলপ লোকালি](https://supabase.com/docs/guides/local-development) করতে পারেন।
 
 ![আর্কিটেকচার](https://github.com/supabase/supabase/blob/master/apps/docs/public/img/supabase-architecture.svg)

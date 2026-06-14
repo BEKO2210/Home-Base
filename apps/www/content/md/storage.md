@@ -38,4 +38,4 @@ For AI/ML workloads. Store and index vector embeddings with multiple distance me
 
 - Documentation: https://supabase.com/docs/guides/storage
 - API Reference: https://supabase.com/docs/reference/javascript/storage-from-upload
-- Dashboard: https://supabase.com/dashboard
+- Dashboard: https://savira.io/dashboard

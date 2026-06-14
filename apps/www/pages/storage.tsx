@@ -51,7 +51,7 @@ function StoragePage() {
           url: `https://supabase.com/storage`,
           images: [
             {
-              url: `https://supabase.com${basePath}/images/product/storage/storage-og.jpg`,
+              url: `https://savira.io${basePath}/images/product/storage/storage-og.jpg`,
             },
           ],
         }}
@@ -65,7 +65,7 @@ function StoragePage() {
                 name: 'Savira Storage',
                 description: meta_description,
                 url: 'https://supabase.com/storage',
-                image: `https://supabase.com${basePath}/images/product/storage/storage-og.jpg`,
+                image: `https://savira.io${basePath}/images/product/storage/storage-og.jpg`,
               })
             ),
           }}

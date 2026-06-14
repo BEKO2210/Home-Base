@@ -85,7 +85,7 @@ const page: GoPageInput = {
             <li>Complete these steps by the deadline in your post-event note</li>
           </ol>
           <Button asChild type="default" size="medium">
-            <Link href="https://supabase.com/dashboard">Create your account</Link>
+            <Link href="https://savira.io/dashboard">Create your account</Link>
           </Button>
           <p className="text-xs text-foreground-lighter mt-4">
             No purchase necessary. Void where prohibited.{' '}

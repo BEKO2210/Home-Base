@@ -80,7 +80,7 @@ export function TanstackDBGenerator() {
       <div className="mt-6 rounded-md border border-default bg-surface-100 p-4">
         <p className="text-sm text-foreground-light">
           <a
-            href="https://supabase.com/dashboard"
+            href="https://savira.io/dashboard"
             target="_blank"
             rel="noreferrer noopener"
             className="text-foreground underline"

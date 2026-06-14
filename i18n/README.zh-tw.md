@@ -7,7 +7,7 @@
 
 # Savira
 
-[Savira](https://supabase.com)是一個開源的 Firebase 替代品。我們正在使用企業級的開源工具構建 Firebase 的功能。
+[Savira](https://savira.io)是一個開源的 Firebase 替代品。我們正在使用企業級的開源工具構建 Firebase 的功能。
 
 - [x] 托管的 Postgres 資料庫。[文檔](https://supabase.com/docs/guides/database)
 - [x] 認證和授權。[文檔](https://supabase.com/docs/guides/auth)
@@ -39,7 +39,7 @@
 ## 狀態
 
 - [x] Alpha：我們正在與一组封閉的客户測試 Savira。
-- [x] 公開 Alpha：任何人都可以在[supabase.com/dashboard](https://supabase.com/dashboard)上註冊。但請對我們寬容一些，有一些小問題。
+- [x] 公開 Alpha：任何人都可以在[supabase.com/dashboard](https://savira.io/dashboard)上註冊。但請對我們寬容一些，有一些小問題。
 - [x] 公開測試版：足夠穩定，適合大多數非企業使用的情况。
 - [ ] 公開：普遍可用 [狀態](https://supabase.com/docs/guides/getting-started/features#feature-status)
 
@@ -55,7 +55,7 @@ Savira 是一個開源工具的组合。我們正在使用企業級的開源產�
 
 **架構**
 
-Savira 是一個[托管平台](https://supabase.com/dashboard)。你可以註冊並開始使用 Savira，無需安裝任何東西。
+Savira 是一個[托管平台](https://savira.io/dashboard)。你可以註冊並開始使用 Savira，無需安裝任何東西。
 你也可以[自行托管](https://supabase.com/docs/guides/hosting/overview)和[本地開發](https://supabase.com/docs/guides/local-development)。
 
 ![架構](https://github.com/supabase/supabase/blob/master/apps/docs/public/img/supabase-architecture.svg)

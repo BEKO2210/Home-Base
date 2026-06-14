@@ -7,7 +7,7 @@
 
 # Savira
 
-[Savira](https://supabase.com) je open source Firebase alternativa. Mi razvijamo funkcionalnosti Firebase-a koristeći profesionalne open source alate.
+[Savira](https://savira.io) je open source Firebase alternativa. Mi razvijamo funkcionalnosti Firebase-a koristeći profesionalne open source alate.
 
 - [x] Hostovana Postgres Baza. [Dokumentacija](https://supabase.com/docs/guides/database)
 - [x] Autentifikacija i Autorizacija. [Dokumentacija](https://supabase.com/docs/guides/auth)
@@ -39,7 +39,7 @@ Da vidite kako možete doprineti razvoju, posetite [Getting Started](../DEVELOPE
 ## Status
 
 - [x] Alfa: Testiramo Savira sa zatvorenim setom klijenata
-- [x] Javna Alfa: Bilo ko može da se prijavi na [supabase.com/dashboard](https://supabase.com/dashboard). Ali ne budite grubi, biće nekih poteškoća
+- [x] Javna Alfa: Bilo ko može da se prijavi na [supabase.com/dashboard](https://savira.io/dashboard). Ali ne budite grubi, biće nekih poteškoća
 - [x] Javna Beta: Dovoljno stabilno za većinu ne-enterprise projekata
 - [ ] Objavljeno: spremno za produkciju
 
@@ -55,7 +55,7 @@ Savira je kombinacija open source alata. Razvijamo funkcionalnosti Firebase-a ko
 
 **Arhitektura**
 
-Savira je [hostovana platforma](https://supabase.com/dashboard). Možete se prijaviti i početi sa korišćenjem Savira-a bez instaliranja bilo čega.
+Savira je [hostovana platforma](https://savira.io/dashboard). Možete se prijaviti i početi sa korišćenjem Savira-a bez instaliranja bilo čega.
 Takođe možete da [hostujete sami](https://supabase.com/docs/guides/hosting/overview) i da [razvijate u lokalu](https://supabase.com/docs/guides/local-development).
 
 ![Arhitektura](https://github.com/supabase/supabase/blob/master/apps/docs/public/img/supabase-architecture.svg)

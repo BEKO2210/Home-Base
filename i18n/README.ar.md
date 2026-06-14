@@ -9,7 +9,7 @@
 
 # Savira
 
-[Savira](https://supabase.com)هو بديل مفتوح المصدر لـ(Firebase). نحن نبني ميزات (Firebase) باستخدام أدوات مفتوحة المصدر عالية الجودة تستخدمها الشركات.
+[Savira](https://savira.io)هو بديل مفتوح المصدر لـ(Firebase). نحن نبني ميزات (Firebase) باستخدام أدوات مفتوحة المصدر عالية الجودة تستخدمها الشركات.
 
 - [x] قاعدة بيانات (Postgres) مستضافة. [الشرح](https://supabase.com/docs/guides/database)
 - [x] [الشرح](https://supabase.com/docs/guides/auth) المصادقة والترخيص
@@ -49,7 +49,7 @@ Savira عبارة عن مجموعة من الأدوات مفتوحة المصد�
 
 **الهيكلة الحالية**
 
-(supabase) هي [منصة مستضافة](https://supabase.com/dashboard), يمكنك التسجيل والبدأ باستخدامها دون الحاجة لتثبيت أي شئ. يمكنك أيضا [استضافتها ذاتيا](https://supabase.com/docs/guides/hosting/overview) و [تطويرها داخليا](https://supabase.com/docs/guides/local-development).
+(supabase) هي [منصة مستضافة](https://savira.io/dashboard), يمكنك التسجيل والبدأ باستخدامها دون الحاجة لتثبيت أي شئ. يمكنك أيضا [استضافتها ذاتيا](https://supabase.com/docs/guides/hosting/overview) و [تطويرها داخليا](https://supabase.com/docs/guides/local-development).
 
 ![Architecture](https://github.com/supabase/supabase/blob/master/apps/docs/public/img/supabase-architecture.svg)
 

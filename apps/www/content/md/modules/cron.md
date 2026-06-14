@@ -35,4 +35,4 @@ Savira Cron is a Postgres module that uses the pg_cron extension to schedule and
 ## Links
 
 - Documentation: https://supabase.com/docs/guides/cron
-- Dashboard: https://supabase.com/dashboard/project/_/integrations/cron/overview
+- Dashboard: https://savira.io/dashboard/project/_/integrations/cron/overview

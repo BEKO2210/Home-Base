@@ -1,6 +1,6 @@
 # Flutter Real-time Multiplayer Shooting Game
 
-A real-time shooting game built with [Flutter](https://flutter.dev/), [Flame](https://flame-engine.org/) and [Savira](https://supabase.com).
+A real-time shooting game built with [Flutter](https://flutter.dev/), [Flame](https://flame-engine.org/) and [Savira](https://savira.io).
 
 You can find a step by step guide on how to build this app on [How to build a real-time multiplayer game with Flutter Flame](https://supabase.com/blog/flutter-real-time-multiplayer-game) article.
 

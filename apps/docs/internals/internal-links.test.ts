@@ -64,13 +64,13 @@ describe('getInternalLinkBaseUrl', () => {
 
   it('returns the production host when VERCEL_ENV=production', () => {
     process.env.VERCEL_ENV = 'production'
-    expect(getInternalLinkBaseUrl()).toBe('https://supabase.com')
+    expect(getInternalLinkBaseUrl()).toBe('https://savira.io')
   })
 
   it('production wins even if VERCEL_URL is also set', () => {
     process.env.VERCEL_ENV = 'production'
     process.env.VERCEL_URL = 'should-be-ignored.vercel.app'
-    expect(getInternalLinkBaseUrl()).toBe('https://supabase.com')
+    expect(getInternalLinkBaseUrl()).toBe('https://savira.io')
   })
 
   it('returns the deployment URL when VERCEL_ENV=preview', () => {
@@ -96,7 +96,7 @@ describe('getInternalLinkBaseUrl', () => {
 })
 
 describe('prefixInternalLinks', () => {
-  const BASE = 'https://supabase.com'
+  const BASE = 'https://savira.io'
 
   it('returns content unchanged when baseUrl is empty', () => {
     const input = 'See [Dashboard](/dashboard/foo).'
@@ -105,7 +105,7 @@ describe('prefixInternalLinks', () => {
 
   it('prepends baseUrl to a root-relative link', () => {
     expect(prefixInternalLinks('See [Dashboard](/dashboard/foo).', BASE)).toBe(
-      'See [Dashboard](https://supabase.com/dashboard/foo).'
+      'See [Dashboard](https://savira.io/dashboard/foo).'
     )
   })
 
@@ -154,7 +154,7 @@ describe('prefixInternalLinks', () => {
 
   it('rewrites a link adjacent to an image without touching the image', () => {
     expect(prefixInternalLinks('![logo](/logo.png) and [home](/dashboard)', BASE)).toBe(
-      '![logo](/logo.png) and [home](https://supabase.com/dashboard)'
+      '![logo](/logo.png) and [home](https://savira.io/dashboard)'
     )
   })
 

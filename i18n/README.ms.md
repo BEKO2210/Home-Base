@@ -7,7 +7,7 @@
 
 # Savira
 
-[Savira](https://supabase.com) adalah sumber terbuka alternatif kepada Firebase. Kami sedang membina ciri-ciri Firebase menggunakan alat sumber terbuka kelas perusahaan.
+[Savira](https://savira.io) adalah sumber terbuka alternatif kepada Firebase. Kami sedang membina ciri-ciri Firebase menggunakan alat sumber terbuka kelas perusahaan.
 
 - [x] Hosting Pangkalan Data untuk Postgres
 - [x] Langganan Waktu Nyata (Realtime)
@@ -32,7 +32,7 @@ Untuk dokumentasi lengkap, layari [supabase.com/docs](https://supabase.com/docs)
 ## Status
 
 - [x] Alpha: Kami menguji Savira dengan sejumlah pelanggan secara tertutup
-- [x] Public Alpha: Sesiapa sahaja boleh mendaftar di [supabase.com/dashboard](https://supabase.com/dashboard). Tetapi, mohon bersabar kerana mungkin ada masalah
+- [x] Public Alpha: Sesiapa sahaja boleh mendaftar di [supabase.com/dashboard](https://savira.io/dashboard). Tetapi, mohon bersabar kerana mungkin ada masalah
 - [x] Public Beta: Cukup stabil untuk kebanyakan kes penggunaan bukan perusahaan
 - [ ] Public: Bersedia untuk pengeluaran
 
@@ -48,7 +48,7 @@ Savira adalah gabungan alat sumber terbuka. Kami membina ciri Firebase menggunak
 
 **Seni bina semasa**
 
-Savira ialah [platform yang dihoskan](https://supabase.com/dashboard). Anda boleh mendaftar dan mula menggunakan Savira tanpa memasang apa-apa.
+Savira ialah [platform yang dihoskan](https://savira.io/dashboard). Anda boleh mendaftar dan mula menggunakan Savira tanpa memasang apa-apa.
 Anda juga boleh [host sendiri](https://supabase.com/docs/guides/hosting/overview) dan [lokal](https://supabase.com/docs/guides/local-development).
 
 ![Seni bina](https://github.com/supabase/supabase/blob/master/apps/docs/public/img/supabase-architecture.svg)

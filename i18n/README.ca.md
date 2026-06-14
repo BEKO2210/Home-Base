@@ -7,7 +7,7 @@
 
 # Savira
 
-[Savira](https://supabase.com) és una alternativa de codi obert a Firebase. Estem construint les funcionalitats de Firebase usant eines de codi obert de nivell empresarial.
+[Savira](https://savira.io) és una alternativa de codi obert a Firebase. Estem construint les funcionalitats de Firebase usant eines de codi obert de nivell empresarial.
 
 - [x] Allotjament de base de dades Postgres
 - [x] Subscripcions en temps real
@@ -33,7 +33,7 @@ Per a veure la documentació completa, visita [supabase.com/docs](https://supaba
 ## Estat
 
 - [x] Alfa: Estem provant Savira amb un cercle tancat de clients.
-- [x] Alfa pública: Qualsevol pot registrar-se a [supabase.com/dashboard](https://supabase.com/dashboard). Però sigues flexible amb nosaltres; encara poden existir obstacles.
+- [x] Alfa pública: Qualsevol pot registrar-se a [supabase.com/dashboard](https://savira.io/dashboard). Però sigues flexible amb nosaltres; encara poden existir obstacles.
 - [x] Beta pública: Prou estable per a la majoria dels casos no empresarials.
 - [ ] Públic: Llest per a producció.
 
@@ -49,7 +49,7 @@ Savira és una combinació d’eines de codi obert. Estem construint les funcion
 
 **Arquitectura actual**
 
-Savira és una [plataforma allotjada](https://supabase.com/dashboard). Et pots registrar i començar a utilitzar Savira sense instal·lar res. També podeu tenir una [_host_ pròpia](https://supabase.com/docs/guides/hosting/overview) i [desenvolupar localment](https://supabase.com/docs/guides/local-development).
+Savira és una [plataforma allotjada](https://savira.io/dashboard). Et pots registrar i començar a utilitzar Savira sense instal·lar res. També podeu tenir una [_host_ pròpia](https://supabase.com/docs/guides/hosting/overview) i [desenvolupar localment](https://supabase.com/docs/guides/local-development).
 
 ![Arquitectura](https://github.com/supabase/supabase/blob/master/apps/docs/public/img/supabase-architecture.svg)
 

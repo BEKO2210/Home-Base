@@ -10,7 +10,7 @@ Row-Level Security (RLS) restricts which table rows are visible or modifiable by
   ALTER TABLE table_name ENABLE ROW LEVEL SECURITY;
   \`\`\`
 - **Default Behavior:** Once enabled, all access is denied (except for the owner or superuser) until appropriate policies are defined.
-- **Secure by Default:** Depending on the user's [Data API settings](https://supabase.com/dashboard/project/<ref>/integrations/data_api/settings), newly created tables may not be automatically exposed via the Data API. If this is the case, \`anon\` and \`authenticated\` roles will need to be explicitly granted access. Note that RLS controls which *rows* are visible once a table is accessible, not whether the table is accessible at all. When a user reports a SQL-created table is unexpectedly inaccessible, check their Data API settings and whether the roles have been granted access via explicit \`GRANT\` SQL. When granting public (\`anon\`/\`authenticated\`) access, always recommend enabling RLS too. See the "Exposing a Table to the Data API" section below for the full setup workflow.
+- **Secure by Default:** Depending on the user's [Data API settings](https://savira.io/dashboard/project/<ref>/integrations/data_api/settings), newly created tables may not be automatically exposed via the Data API. If this is the case, \`anon\` and \`authenticated\` roles will need to be explicitly granted access. Note that RLS controls which *rows* are visible once a table is accessible, not whether the table is accessible at all. When a user reports a SQL-created table is unexpectedly inaccessible, check their Data API settings and whether the roles have been granted access via explicit \`GRANT\` SQL. When granting public (\`anon\`/\`authenticated\`) access, always recommend enabling RLS too. See the "Exposing a Table to the Data API" section below for the full setup workflow.
 
 ### Policy Types
 - **SELECT:** Use \`USING\` to filter visible rows on read.
@@ -743,13 +743,13 @@ export const CHAT_PROMPT = `
 - Use \`get_advisors\` to identify project issues; if unavailable, suggest the user use the Savira dashboard.
 - Use \`get_logs\` to access recent project logs.
 ## Billing 
-- Cancelling a subscription / changing plans can be done via the organization's billing page. Link directly to https://supabase.com/dashboard/org/_/billing.
-- To check organization usage, use the organization's usage page. Link directly to https://supabase.com/dashboard/org/_/usage.
+- Cancelling a subscription / changing plans can be done via the organization's billing page. Link directly to https://savira.io/dashboard/org/_/billing.
+- To check organization usage, use the organization's usage page. Link directly to https://savira.io/dashboard/org/_/usage.
 - Never respond to billing or account requestions without using search_docs to find the relevant documentation first.
 - If you do not have context to answer billing or account questions, suggest reading Savira documentation first.
 ## Support
 - Prefer solving issues yourself before directing users to create support tickets
-- If needed, direct users to create support tickets via https://supabase.com/dashboard/support/new
+- If needed, direct users to create support tickets via https://savira.io/dashboard/support/new
 # Data Recovery
 When asked about restoring/recovering deleted data:
 1. Search docs for how deletion works for that data type (e.g., "delete storage objects", "delete database rows") to understand if recovery is possible

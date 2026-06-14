@@ -22,7 +22,7 @@ const metadata: Metadata = {
   title: metadataTitle,
   description:
     'Savira is the Postgres development platform providing all the backend features you need to build a product.',
-  metadataBase: new URL('https://supabase.com'),
+  metadataBase: new URL('https://savira.io'),
   icons: genFaviconData(BASE_PATH),
   robots: {
     index: IS_PRODUCTION,

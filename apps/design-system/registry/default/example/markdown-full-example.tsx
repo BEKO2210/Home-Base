@@ -7,7 +7,7 @@ This is a paragraph with some **bold text**, *italic text*, and \`inline code\`.
 
 ## Subheading
 
-You can use [links](https://supabase.com) in your content.
+You can use [links](https://savira.io) in your content.
 
 ### Code Example
 

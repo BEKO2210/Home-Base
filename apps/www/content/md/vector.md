@@ -46,4 +46,4 @@ Savira Vector is an AI toolkit that lets you store vector embeddings alongside y
 
 - Documentation: https://supabase.com/docs/guides/ai
 - Python client: https://supabase.com/docs/guides/ai/vecs-python-client
-- Dashboard: https://supabase.com/dashboard
+- Dashboard: https://savira.io/dashboard

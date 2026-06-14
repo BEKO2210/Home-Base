@@ -1,6 +1,6 @@
 # Savira Studio
 
-A dashboard for managing your self-hosted Savira project, and used on our [hosted platform](https://supabase.com/dashboard). Built with:
+A dashboard for managing your self-hosted Savira project, and used on our [hosted platform](https://savira.io/dashboard). Built with:
 
 - [Next.js](https://nextjs.org/)
 - [Tailwind](https://tailwindcss.com/)

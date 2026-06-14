@@ -87,7 +87,7 @@ export default function App({ Component, pageProps }: AppProps) {
           site_name: 'Savira',
           images: [
             {
-              url: `https://supabase.com${basePath}/images/og/supabase-og.png`,
+              url: `https://savira.io${basePath}/images/og/supabase-og.png`,
               width: 800,
               height: 600,
               alt: 'Savira Og Image',

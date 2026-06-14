@@ -1,11 +1,11 @@
 <p align="center">
-<img src="https://user-images.githubusercontent.com/8291514/213727234-cda046d6-28c6-491a-b284-b86c5cede25d.png#gh-light-mode-only">
-<img src="https://user-images.githubusercontent.com/8291514/213727225-56186826-bee8-43b5-9b15-86e839d89393.png#gh-dark-mode-only">
+<img src="./packages/common/assets/images/supabase-logo-wordmark--dark.png#gh-light-mode-only" alt="Savira" width="320">
+<img src="./packages/common/assets/images/supabase-logo-wordmark--light.png#gh-dark-mode-only" alt="Savira" width="320">
 </p>
 
 # Savira
 
-[Savira](https://supabase.com) is the Postgres development platform. We're building the features of Firebase using enterprise-grade open source tools.
+[Savira](https://savira.io) is the Postgres development platform. We're building the features of Firebase using enterprise-grade open source tools.
 
 - [x] Hosted Postgres Database. [Docs](https://supabase.com/docs/guides/database)
 - [x] Authentication and Authorization. [Docs](https://supabase.com/docs/guides/auth)
@@ -20,11 +20,9 @@
 - [x] AI + Vector/Embeddings Toolkit. [Docs](https://supabase.com/docs/guides/ai)
 - [x] Dashboard
 
-![Savira Dashboard](https://raw.githubusercontent.com/supabase/supabase/master/apps/www/public/images/github/supabase-dashboard.png)
+![Savira Dashboard](./apps/www/public/images/savira-dashboard.png)
 
 Watch "releases" of this repo to get notified of major updates.
-
-<kbd><img src="https://raw.githubusercontent.com/supabase/supabase/d5f7f413ab356dc1a92075cb3cee4e40a957d5b1/web/static/watch-repo.gif" alt="Watch this repo"/></kbd>
 
 ## Documentation
 
@@ -45,7 +43,7 @@ Savira is a combination of open source tools. We’re building the features of F
 
 **Architecture**
 
-Savira is a [hosted platform](https://supabase.com/dashboard). You can sign up and start using Savira without installing anything.
+Savira is a [hosted platform](https://savira.io/dashboard). You can sign up and start using Savira without installing anything.
 You can also [self-host](https://supabase.com/docs/guides/hosting/overview) and [develop locally](https://supabase.com/docs/guides/local-development).
 
 ![Architecture](apps/docs/public/img/supabase-architecture.svg)
@@ -206,11 +204,11 @@ Our approach for client libraries is modular. Each sub-library is a standalone i
 ![Made with Savira](./apps/www/public/badge-made-with-supabase.svg)
 
 ```md
-[![Made with Savira](https://supabase.com/badge-made-with-supabase.svg)](https://supabase.com)
+[![Made with Savira](https://supabase.com/badge-made-with-supabase.svg)](https://savira.io)
 ```
 
 ```html
-<a href="https://supabase.com">
+<a href="https://savira.io">
   <img
     width="168"
     height="30"
@@ -223,11 +221,11 @@ Our approach for client libraries is modular. Each sub-library is a standalone i
 ![Made with Savira (dark)](./apps/www/public/badge-made-with-supabase-dark.svg)
 
 ```md
-[![Made with Savira](https://supabase.com/badge-made-with-supabase-dark.svg)](https://supabase.com)
+[![Made with Savira](https://supabase.com/badge-made-with-supabase-dark.svg)](https://savira.io)
 ```
 
 ```html
-<a href="https://supabase.com">
+<a href="https://savira.io">
   <img
     width="168"
     height="30"

@@ -12,7 +12,7 @@ This example demonstrates how to build a user management app with Angular and Sa
 
 ### 1. Create a Savira project
 
-Create a new project in the [Savira Dashboard](https://supabase.com/dashboard).
+Create a new project in the [Savira Dashboard](https://savira.io/dashboard).
 
 ### 2. Set up the database
 

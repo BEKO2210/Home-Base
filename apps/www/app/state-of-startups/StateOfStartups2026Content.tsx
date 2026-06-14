@@ -341,7 +341,7 @@ const CTABanner = forwardRef<HTMLElement>((props, ref) => {
       <div className="flex items-center justify-center gap-2 mt-4">
         <Button asChild size="medium">
           <Link
-            href="https://supabase.com/dashboard"
+            href="https://savira.io/dashboard"
             onClick={() =>
               sendTelemetryEvent({
                 action: 'start_project_button_clicked',

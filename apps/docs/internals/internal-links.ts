@@ -23,13 +23,13 @@ export function withDocsBasePath(href: string): string {
  * whatever host the dev server is on.
  *
  * Resolution order:
- *  - `VERCEL_ENV=production` → `https://supabase.com`
+ *  - `VERCEL_ENV=production` → `https://savira.io`
  *  - `VERCEL_ENV=preview`    → `https://${VERCEL_URL}`
  *  - anything else           → ''
  */
 export function getInternalLinkBaseUrl(): string {
   const env = process.env.VERCEL_ENV
-  if (env === 'production') return 'https://supabase.com'
+  if (env === 'production') return 'https://savira.io'
   if (env === 'preview' && process.env.VERCEL_URL) return `https://${process.env.VERCEL_URL}`
   return ''
 }

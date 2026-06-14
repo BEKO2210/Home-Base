@@ -28,7 +28,7 @@ const menu = [
       ? {
           label: 'Savira.com',
           icon: 'home',
-          href: 'https://supabase.com',
+          href: 'https://savira.io',
           otherProps: {
             target: '_blank',
             rel: 'noreferrer noopener',

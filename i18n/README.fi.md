@@ -7,7 +7,7 @@
 
 # Savira
 
-[Savira](https://supabase.com) on avoimen lähdekoodin Firebase-vaihtoehto. Rakennamme Firebasen ominaisuuksia käyttäen yritystason avoimen lähdekoodin työkaluja.
+[Savira](https://savira.io) on avoimen lähdekoodin Firebase-vaihtoehto. Rakennamme Firebasen ominaisuuksia käyttäen yritystason avoimen lähdekoodin työkaluja.
 
 - [x] Hosted Postgres Database. [Docs](https://supabase.com/docs/guides/database)
 - [x] Tunnistus ja valtuutus. [Docs](https://supabase.com/docs/guides/auth)
@@ -39,7 +39,7 @@ Jos haluat nähdä, miten osallistuminen tapahtuu, käy osoitteessa [Getting Sta
 ## Status
 
 - [x] Alpha: Testaamme Supabasea suljetulla asiakasjoukolla
-- [x] Julkinen Alpha: Kuka tahansa voi rekisteröityä osoitteessa [supabase.com/dashboard](https://supabase.com/dashboard). Mutta olkaa varovaisia, sillä on vielä muutamia ongelmia
+- [x] Julkinen Alpha: Kuka tahansa voi rekisteröityä osoitteessa [supabase.com/dashboard](https://savira.io/dashboard). Mutta olkaa varovaisia, sillä on vielä muutamia ongelmia
 - [x] Julkinen beta: Tarpeeksi vakaa useimpiin ei-yrityskäyttötapauksiin
 - [ ] Julkinen: Yleinen saatavuus [[status](https://supabase.com/docs/guides/getting-started/features#feature-status)]
 
@@ -55,7 +55,7 @@ Savira on yhdistelmä avoimen lähdekoodin työkaluja. Rakennamme Firebasen omin
 
 **Arkkitehtuuri**
 
-Savira on [hosted platform](https://supabase.com/dashboard). Voit rekisteröityä ja aloittaa Supabasen käytön asentamatta mitään.
+Savira on [hosted platform](https://savira.io/dashboard). Voit rekisteröityä ja aloittaa Supabasen käytön asentamatta mitään.
 Voit myös [itse isännöidä](https://supabase.com/docs/guides/hosting/overview) ja [kehittää paikallisesti](https://supabase.com/docs/guides/local-development).
 
 ![Arkkitehtuuri](https://github.com/supabase/supabase/blob/master/apps/docs/public/img/supabase-architecture.svg)

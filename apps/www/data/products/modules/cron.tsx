@@ -9,7 +9,7 @@ export default () => ({
   metaDescription:
     'Savira Cron is a Postgres Module that uses the pg_cron database extension to manage recurring tasks. Manage your Cron Jobs using any Postgres tooling.',
   metaImage: '/images/modules/cron/og.png',
-  url: 'https://supabase.com/dashboard/project/_/integrations/cron/overview',
+  url: 'https://savira.io/dashboard/project/_/integrations/cron/overview',
   docsUrl: '/docs/guides/cron',
   heroSection: {
     title: 'Savira Cron',
@@ -23,7 +23,7 @@ export default () => ({
     icon: PRODUCT_MODULES['cron'].icon[24],
     cta: {
       label: 'Schedule your first Job',
-      link: 'https://supabase.com/dashboard/project/_/integrations/cron/overview',
+      link: 'https://savira.io/dashboard/project/_/integrations/cron/overview',
     },
     secondaryCta: {
       label: 'Explore documentation',
@@ -189,7 +189,7 @@ export default () => ({
       'Create and manage Jobs using simple SQL commands for ease of use. Track changes to your recurring Jobs using Postgres migrations stored in source control.',
     cta: {
       label: 'Start scheduling',
-      url: 'https://supabase.com/dashboard/project/_/integrations/cron/overview',
+      url: 'https://savira.io/dashboard/project/_/integrations/cron/overview',
     },
     reverse: true,
   },
@@ -215,7 +215,7 @@ export default () => ({
     ),
     cta: {
       label: 'Start scheduling',
-      url: 'https://supabase.com/dashboard/project/_/integrations/cron/overview',
+      url: 'https://savira.io/dashboard/project/_/integrations/cron/overview',
     },
     className: 'md:py-0!',
   },

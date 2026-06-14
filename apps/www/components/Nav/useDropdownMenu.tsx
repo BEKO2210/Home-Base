@@ -22,12 +22,12 @@ const useDropdownMenu = (user: User | null) => {
       {
         label: 'Account Preferences',
         icon: Settings,
-        href: 'https://supabase.com/dashboard/account/me',
+        href: 'https://savira.io/dashboard/account/me',
       },
       {
         label: 'All Projects',
         icon: Database,
-        href: 'https://supabase.com/dashboard/projects',
+        href: 'https://savira.io/dashboard/projects',
       },
       {
         label: 'Command Menu',

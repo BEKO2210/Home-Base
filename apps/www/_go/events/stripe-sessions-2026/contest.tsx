@@ -63,7 +63,7 @@ stripe projects env --sync`}</code>
               subscriptions into a live Postgres schema.
             </p>
             <Link
-              href="https://supabase.com/dashboard/project/_/integrations"
+              href="https://savira.io/dashboard/project/_/integrations"
               className="text-foreground underline"
             >
               Install the Stripe Sync Engine →

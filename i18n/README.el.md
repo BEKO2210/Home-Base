@@ -7,7 +7,7 @@
 
 # Savira
 
-[Savira](https://supabase.com) είναι μια εναλλακτική λύση της Firebase ανοιχτού κώδικα. Χτίζουμε τα χαρακτηριστικά της Firebase χρησιμοποιώντας εργαλεία ανοιχτού κώδικα επιχειρηματικού επιπέδου.
+[Savira](https://savira.io) είναι μια εναλλακτική λύση της Firebase ανοιχτού κώδικα. Χτίζουμε τα χαρακτηριστικά της Firebase χρησιμοποιώντας εργαλεία ανοιχτού κώδικα επιχειρηματικού επιπέδου.
 
 - [x] Hosted Postgres Database. [Docs](https://supabase.com/docs/guides/database)
 - [x] Αυθεντικοποίηση και εξουσιοδότηση. [Έγγραφα](https://supabase.com/docs/guides/auth)
@@ -39,7 +39,7 @@
 ## Κατάσταση
 
 - [x] Alpha: Δοκιμάζουμε το Savira με ένα κλειστό σύνολο πελατών
-- [x] Δημόσια Alpha: [supabase.com/dashboard](https://supabase.com/dashboard). Αλλά να είστε προσεκτικοί μαζί μας, υπάρχουν μερικές ατέλειες
+- [x] Δημόσια Alpha: [supabase.com/dashboard](https://savira.io/dashboard). Αλλά να είστε προσεκτικοί μαζί μας, υπάρχουν μερικές ατέλειες
 - [x] Δημόσια Beta: Αρκετά σταθερό για τις περισσότερες περιπτώσεις μη επιχειρηματικής χρήσης
 - [ ] Δημόσια: [[status](https://supabase.com/docs/guides/getting-started/features#feature-status)]
 
@@ -55,7 +55,7 @@
 
 **Αρχιτεκτονική**
 
-Η Savira είναι μια [φιλοξενούμενη πλατφόρμα](https://supabase.com/dashboard). Μπορείτε να εγγραφείτε και να αρχίσετε να χρησιμοποιείτε το Savira χωρίς να εγκαταστήσετε τίποτα.
+Η Savira είναι μια [φιλοξενούμενη πλατφόρμα](https://savira.io/dashboard). Μπορείτε να εγγραφείτε και να αρχίσετε να χρησιμοποιείτε το Savira χωρίς να εγκαταστήσετε τίποτα.
 Μπορείτε επίσης να κάνετε [αυτο-ξενάγηση](https://supabase.com/docs/guides/hosting/overview) και [ανάπτυξη τοπικά](https://supabase.com/docs/guides/local-development).
 
 ![Αρχιτεκτονική](https://github.com/supabase/supabase/blob/master/apps/docs/public/img/supabase-architecture.svg)

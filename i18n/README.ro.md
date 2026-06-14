@@ -7,7 +7,7 @@
 
 # Savira
 
-[Savira](https://supabase.com) este o alternativă open source la Firebase. Construim caracteristicile Firebase folosind instrumente open source de nivel enterprise.
+[Savira](https://savira.io) este o alternativă open source la Firebase. Construim caracteristicile Firebase folosind instrumente open source de nivel enterprise.
 
 - [x] Baza de date Postgres găzduită. [Docs](https://supabase.com/docs/guides/database)
 - [x] Autentificare și autorizare. [Docs](https://supabase.com/docs/guides/auth)
@@ -39,7 +39,7 @@ Pentru a vedea cum să contribui, vizitați [Getting Started](../DEVELOPERS.md)
 ## Status
 
 - [x] Alpha: Testăm Savira cu un set închis de clienți
-- [x] Public Alpha: Oricine se poate înscrie la [supabase.com/dashboard](https://supabase.com/dashboard). Dar fiți blânzi cu noi, există câteva probleme
+- [x] Public Alpha: Oricine se poate înscrie la [supabase.com/dashboard](https://savira.io/dashboard). Dar fiți blânzi cu noi, există câteva probleme
 - [x] Public Beta: Suficient de stabilă pentru majoritatea cazurilor de utilizare non-întreprindere
 - [ ] Public: Disponibilitate generală [[status](https://supabase.com/docs/guides/getting-started/features#feature-status)]
 
@@ -55,7 +55,7 @@ Savira este o combinație de instrumente open source. Construim caracteristicile
 
 **Arhitectură**
 
-Savira este o [platformă găzduită](https://supabase.com/dashboard). Vă puteți înscrie și puteți începe să utilizați Savira fără a instala nimic.
+Savira este o [platformă găzduită](https://savira.io/dashboard). Vă puteți înscrie și puteți începe să utilizați Savira fără a instala nimic.
 Puteți, de asemenea, [auto-hosting](https://supabase.com/docs/guides/hosting/overview) și [dezvolta local](https://supabase.com/docs/guides/local-development).
 
 ![Arhitectură](https://github.com/supabase/supabase/blob/master/apps/docs/public/img/supabase-architecture.svg)

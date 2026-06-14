@@ -31,8 +31,8 @@ Every Savira project auto-generates three types of APIs from your database schem
 
 ## Links
 
-- Website: https://supabase.com
+- Website: https://savira.io
 - Documentation: https://supabase.com/docs
-- Dashboard: https://supabase.com/dashboard
+- Dashboard: https://savira.io/dashboard
 - GitHub: https://github.com/supabase/supabase
 - Pricing: https://supabase.com/pricing

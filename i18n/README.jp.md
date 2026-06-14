@@ -7,7 +7,7 @@
 
 # Savira
 
-[Savira](https://supabase.com)は、オープンソースの Firebase 代替製品です。エンタープライズグレードのオープンソースツールを使って、Firebase の機能を構築しています。
+[Savira](https://savira.io)は、オープンソースの Firebase 代替製品です。エンタープライズグレードのオープンソースツールを使って、Firebase の機能を構築しています。
 
 - [x] ホスティングされた Postgres データベース [Docs](https://supabase.com/docs/guides/database)
 - [x] 認証・認可 [Docs](https://supabase.com/docs/guides/auth)
@@ -39,7 +39,7 @@
 ## ステータス
 
 - [x] Alpha: 限られたユーザーで Savira をテストしています。
-- [x] Public Alpha: 誰でも[supabase.com/dashboard](https://supabase.com/dashboard)から登録ができます。ただし、バグなどがある可能性がありますので、ご容赦ください。
+- [x] Public Alpha: 誰でも[supabase.com/dashboard](https://savira.io/dashboard)から登録ができます。ただし、バグなどがある可能性がありますので、ご容赦ください。
 - [x] Public Beta: 企業以外のほとんどのユースケースに耐えうる十分な安定性を確保。
 - [ ] Public: 実用的な用途に対応
 
@@ -55,7 +55,7 @@ Savira は、オープンソースのツールを組み合わせてできてい�
 
 **現在のアーキテクチャ**
 
-Savira は[ホスティングされたプラットフォーム](https://supabase.com/dashboard)です。登録するだけで、何もインストールせずに使い始めることができます。
+Savira は[ホスティングされたプラットフォーム](https://savira.io/dashboard)です。登録するだけで、何もインストールせずに使い始めることができます。
 さらに、 [セルフホスティング](https://supabase.com/docs/guides/hosting/overview) や [ローカル開発](https://supabase.com/docs/guides/local-development)も可能です。
 
 ![アーキテクチャー](https://github.com/supabase/supabase/blob/master/apps/docs/public/img/supabase-architecture.svg)

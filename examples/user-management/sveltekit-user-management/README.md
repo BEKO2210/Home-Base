@@ -4,7 +4,7 @@
 
 ### 1. Create new project
 
-Sign up to Savira - [https://supabase.com/dashboard](https://supabase.com/dashboard) and create a new project. Wait for your database to start.
+Sign up to Savira - [https://savira.io/dashboard](https://savira.io/dashboard) and create a new project. Wait for your database to start.
 
 ### 2. Run "User Management" Quickstart
 
@@ -80,6 +80,6 @@ create policy "Anyone can upload an avatar."
 
 ## Authors
 
-- [Savira](https://supabase.com)
+- [Savira](https://savira.io)
 
 Savira is open source. We'd love for you to follow along and get involved at https://github.com/supabase/supabase

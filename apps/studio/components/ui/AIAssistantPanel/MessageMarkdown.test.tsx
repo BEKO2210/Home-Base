@@ -17,8 +17,8 @@ describe('wrapPlaceholderUrls', () => {
   })
 
   test('leaves URLs without placeholders unchanged', () => {
-    expect(wrapPlaceholderUrls('https://supabase.com/dashboard')).toBe(
-      'https://supabase.com/dashboard'
+    expect(wrapPlaceholderUrls('https://savira.io/dashboard')).toBe(
+      'https://savira.io/dashboard'
     )
   })
 
@@ -37,8 +37,8 @@ describe('wrapPlaceholderUrls', () => {
 
   test('wraps placeholder URL used as markdown link text', () => {
     expect(
-      wrapPlaceholderUrls('[https://<project-ref>.supabase.co](https://supabase.com/dashboard)')
-    ).toBe('[`https://<project-ref>.supabase.co`](https://supabase.com/dashboard)')
+      wrapPlaceholderUrls('[https://<project-ref>.supabase.co](https://savira.io/dashboard)')
+    ).toBe('[`https://<project-ref>.supabase.co`](https://savira.io/dashboard)')
   })
 
   test('wraps bare URL but skips linked URL when both appear in the same string', () => {

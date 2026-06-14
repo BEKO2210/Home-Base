@@ -39,7 +39,7 @@ const DPA = () => {
                   To make the DPA legally binding, you need to sign and complete the details through
                   a PandaDoc document that we prepare. To get this version of the DPA,{' '}
                   <a
-                    href="https://supabase.com/dashboard/org/_/documents"
+                    href="https://savira.io/dashboard/org/_/documents"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-brand-link hover:underline"

@@ -40,4 +40,4 @@ Send arbitrary messages to all clients subscribed to the same Channel. Useful fo
 
 - Documentation: https://supabase.com/docs/guides/realtime
 - API Reference: https://supabase.com/docs/reference/javascript/subscribe
-- Dashboard: https://supabase.com/dashboard
+- Dashboard: https://savira.io/dashboard

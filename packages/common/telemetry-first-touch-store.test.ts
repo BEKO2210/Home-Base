@@ -8,7 +8,7 @@ import {
 
 const makeFakeData = (pathname: string) =>
   ({
-    page_url: `https://supabase.com${pathname}`,
+    page_url: `https://savira.io${pathname}`,
     pathname,
     page_title: 'Test',
     session_id: 'test-session',

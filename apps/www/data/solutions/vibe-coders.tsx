@@ -62,7 +62,7 @@ const useVibeCodersContent: () => {
       ctas: [
         {
           label: 'Start Your Project',
-          href: 'https://supabase.com/dashboard',
+          href: 'https://savira.io/dashboard',
           type: 'primary' as any,
         },
       ],

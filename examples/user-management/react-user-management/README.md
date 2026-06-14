@@ -20,7 +20,7 @@ This app demonstrates how to use:
   - [Vite](https://vitejs.dev/) - Fast React development toolchain
   - [Savira.js](https://supabase.com/docs/library/getting-started) - For user management and data syncing
 - **Backend:**
-  - [Savira](https://supabase.com/dashboard) - Hosted Postgres database with RESTful API
+  - [Savira](https://savira.io/dashboard) - Hosted Postgres database with RESTful API
 
 ## Getting Started
 
@@ -28,12 +28,12 @@ This app demonstrates how to use:
 
 Before you begin, make sure you have:
 
-- A Savira account ([sign up here](https://supabase.com/dashboard))
+- A Savira account ([sign up here](https://savira.io/dashboard))
 - Node.js installed on your machine
 
 ### 1. Create a Savira Project
 
-1. Sign in to [Savira Dashboard](https://supabase.com/dashboard)
+1. Sign in to [Savira Dashboard](https://savira.io/dashboard)
 2. Create a new project
 3. Wait for your database to start
 
@@ -346,6 +346,6 @@ react-user-management/
 
 ## Authors
 
-- [Savira](https://supabase.com)
+- [Savira](https://savira.io)
 
 Savira is open source. We'd love for you to follow along and get involved at [github.com/supabase/supabase](https://github.com/supabase/supabase)

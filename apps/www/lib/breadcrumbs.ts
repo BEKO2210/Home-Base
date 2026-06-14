@@ -1,6 +1,6 @@
 import type { BreadcrumbItem } from './json-ld'
 
-const SITE = 'https://supabase.com'
+const SITE = 'https://savira.io'
 
 const home: BreadcrumbItem = { name: 'Home', url: SITE }
 

@@ -7,7 +7,7 @@
 
 # Savira
 
-[Savira](https://supabase.com) ir atvērtā koda Firebase alternatīva. Mēs veidojam Firebase funkcijas, izmantojot uzņēmumu klases atvērtā pirmkoda rīkus.
+[Savira](https://savira.io) ir atvērtā koda Firebase alternatīva. Mēs veidojam Firebase funkcijas, izmantojot uzņēmumu klases atvērtā pirmkoda rīkus.
 
 - [x] Hosted Postgres datubāze. [Dokumenti](https://supabase.com/docs/guides/database)
 - [x] Autentifikācija un autorizācija. [Dokumenti](https://supabase.com/docs/guides/auth)
@@ -39,7 +39,7 @@ Lai uzzinātu, kā veikt iemaksas, apmeklējiet [Getting Started](../DEVELOPERS.
 ## Statuss
 
 - [x] Alfa: Mēs testējam Savira ar slēgtu klientu kopu
-- [x] Publiskā alfa versija: [supabase.com/dashboard](https://supabase.com/dashboard). Bet nesteidzieties, ir dažas nepilnības
+- [x] Publiskā alfa versija: [supabase.com/dashboard](https://savira.io/dashboard). Bet nesteidzieties, ir dažas nepilnības
 - [x] Publiskā beta versija: Pietiekami stabila lielākajai daļai ar uzņēmumu nesaistītu lietošanas gadījumu
 - [ ] Publisks: Vispārēja pieejamība [[statuss](https://supabase.com/docs/guides/getting-started/features#feature-status)]]
 
@@ -55,7 +55,7 @@ Savira ir atvērtā koda rīku kombinācija. Mēs veidojam Firebase funkcijas, i
 
 **Arhitektūra**
 
-Savira ir [izvietota platforma](https://supabase.com/dashboard). Jūs varat reģistrēties un sākt izmantot Savira, neko neinstalējot.
+Savira ir [izvietota platforma](https://savira.io/dashboard). Jūs varat reģistrēties un sākt izmantot Savira, neko neinstalējot.
 Jūs varat arī [pašmāju resursus](https://supabase.com/docs/guides/hosting/overview) un [izstrādāt lokāli](https://supabase.com/docs/guides/local-development).
 
 ![Arhitektūra](https://github.com/supabase/supabase/blob/master/apps/docs/public/img/supabase-architecture.svg)

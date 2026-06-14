@@ -16,7 +16,7 @@ import {
 describe('first-referrer-cookie', () => {
   describe('isExternalReferrer', () => {
     it('returns false for supabase domains', () => {
-      expect(isExternalReferrer('https://supabase.com')).toBe(false)
+      expect(isExternalReferrer('https://savira.io')).toBe(false)
       expect(isExternalReferrer('https://www.supabase.com')).toBe(false)
       expect(isExternalReferrer('https://docs.supabase.com')).toBe(false)
     })
@@ -359,7 +359,7 @@ describe('first-referrer-cookie', () => {
       expect(
         shouldRefreshCookie(false, {
           referrer: 'https://supabase.com/docs',
-          url: 'https://supabase.com/dashboard',
+          url: 'https://savira.io/dashboard',
         })
       ).toEqual({ stamp: false })
     })
@@ -407,7 +407,7 @@ describe('first-referrer-cookie', () => {
     it('does not stamp for GitHub OAuth redirect (bare domain)', () => {
       const result = shouldRefreshCookie(false, {
         referrer: 'https://github.com/',
-        url: 'https://supabase.com/dashboard',
+        url: 'https://savira.io/dashboard',
       })
       expect(result.stamp).toBe(false)
     })
@@ -415,7 +415,7 @@ describe('first-referrer-cookie', () => {
     it('does not stamp for Google SSO redirect', () => {
       const result = shouldRefreshCookie(false, {
         referrer: 'https://accounts.google.com/',
-        url: 'https://supabase.com/dashboard',
+        url: 'https://savira.io/dashboard',
       })
       expect(result.stamp).toBe(false)
     })

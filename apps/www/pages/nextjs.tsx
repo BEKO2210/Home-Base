@@ -28,7 +28,7 @@ function Nextjs() {
           url: `https://supabase.com/nextjs`,
           images: [
             {
-              url: `https://supabase.com${basePath}/images/product/database/database-og.jpg`,
+              url: `https://savira.io${basePath}/images/product/database/database-og.jpg`,
             },
           ],
         }}

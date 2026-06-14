@@ -6,13 +6,13 @@ This example demonstrates how to use Savira Auth with React Native and Expo.
 
 ### 1. Create a Savira project
 
-[Launch a new project](https://supabase.com/dashboard) in the Savira Dashboard.
+[Launch a new project](https://savira.io/dashboard) in the Savira Dashboard.
 
 ### 2. Configure environment variables
 
 Create a `.env` file and populate with your Savira connection variables:
 
-You can find these in your [Savira Dashboard](https://supabase.com/dashboard/project/_/settings/api) under Settings > API.
+You can find these in your [Savira Dashboard](https://savira.io/dashboard/project/_/settings/api) under Settings > API.
 
 ### 3. Install dependencies
 

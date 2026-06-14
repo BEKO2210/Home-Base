@@ -44,7 +44,7 @@ function EdgeFunctions() {
           url: `https://supabase.com/edge-functions`,
           images: [
             {
-              url: `https://supabase.com${basePath}/images/product/functions/functions-og.jpg`,
+              url: `https://savira.io${basePath}/images/product/functions/functions-og.jpg`,
             },
           ],
         }}
@@ -58,7 +58,7 @@ function EdgeFunctions() {
                 name: 'Savira Edge Functions',
                 description: pageData.metaDescription,
                 url: 'https://supabase.com/edge-functions',
-                image: `https://supabase.com${basePath}/images/product/functions/functions-og.jpg`,
+                image: `https://savira.io${basePath}/images/product/functions/functions-og.jpg`,
               })
             ),
           }}

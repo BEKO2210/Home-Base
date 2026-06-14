@@ -72,7 +72,7 @@ const data = {
       },
       {
         label: 'Open support ticket',
-        link: 'https://supabase.com/dashboard/support/new',
+        link: 'https://savira.io/dashboard/support/new',
         target: '_blank',
         icon: <ArrowUpRight />,
         className: 'text-foreground-light! hover:text-foreground!',

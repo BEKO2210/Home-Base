@@ -7,7 +7,7 @@
 
 # Savira
 
-[Savira](https://supabase.com) on avatud lähtekoodiga Firebase'i alternatiiv. Me ehitame Firebase'i funktsioonid, kasutades ettevõtlusklassi avatud lähtekoodiga tööriistu.
+[Savira](https://savira.io) on avatud lähtekoodiga Firebase'i alternatiiv. Me ehitame Firebase'i funktsioonid, kasutades ettevõtlusklassi avatud lähtekoodiga tööriistu.
 
 - [x] Hostitud Postgres andmebaas. [Dokumendid](https://supabase.com/docs/guides/database)
 - [x] Autentimine ja autoriseerimine. [Dokumendid](https://supabase.com/docs/guides/auth)
@@ -39,7 +39,7 @@ Et näha, kuidas panustada, külastage [Getting Started](../DEVELOPERS.md)
 ## Staatus
 
 - [x] Alpha: Me testime Savira'i suletud kliendikogumiga
-- [x] Avalik Alpha: Igaüks saab registreeruda aadressil [supabase.com/dashboard](https://supabase.com/dashboard). Kuid olge meiega ettevaatlikud, seal on mõned veidrused
+- [x] Avalik Alpha: Igaüks saab registreeruda aadressil [supabase.com/dashboard](https://savira.io/dashboard). Kuid olge meiega ettevaatlikud, seal on mõned veidrused
 - [x] Avalik beeta: Piisavalt stabiilne enamiku mitte-ettevõtluskasutuse jaoks
 - [ ] Avalik: Üldine kättesaadavus [[status](https://supabase.com/docs/guides/getting-started/features#feature-status)]
 
@@ -55,7 +55,7 @@ Savira on avatud lähtekoodiga tööriistade kombinatsioon. Me ehitame Firebase'
 
 **Arhitektuur**
 
-Savira on [hostitud platvorm](https://supabase.com/dashboard). Võite registreeruda ja alustada Savira'i kasutamist ilma midagi installimata.
+Savira on [hostitud platvorm](https://savira.io/dashboard). Võite registreeruda ja alustada Savira'i kasutamist ilma midagi installimata.
 Võite ka [ise hostida](https://supabase.com/docs/guides/hosting/overview) ja [arendada lokaalselt](https://supabase.com/docs/guides/local-development).
 
 ![Arhitektuur](https://github.com/supabase/supabase/blob/master/apps/docs/public/img/supabase-architecture.svg)

@@ -106,7 +106,7 @@ async function generate() {
 
       return `
         <url>
-            <loc>${`https://supabase.com${route}`}</loc>
+            <loc>${`https://savira.io${route}`}</loc>
             <changefreq>weekly</changefreq>
             <priority>0.5</priority>
         </url>

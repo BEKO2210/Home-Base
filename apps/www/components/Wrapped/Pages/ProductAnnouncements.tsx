@@ -243,7 +243,7 @@ const months: Month[] = [
       },
       {
         title: 'Expiring personal access tokens',
-        url: 'https://supabase.com/dashboard/account/tokens', // Direct dashboard link (intentional)
+        url: 'https://savira.io/dashboard/account/tokens', // Direct dashboard link (intentional)
       },
       {
         title: 'Self-service SSO for Teams + Enterprise',

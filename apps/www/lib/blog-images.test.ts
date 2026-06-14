@@ -48,7 +48,7 @@ describe('blog image helpers', () => {
         {
           imgSocial: 'example/og.png',
         },
-        'https://supabase.com'
+        'https://savira.io'
       )
     ).toBe('https://supabase.com/images/blog/example/og.png')
   })
@@ -59,7 +59,7 @@ describe('blog image helpers', () => {
         imgSocial:
           'https://zhfonblqamxferhoguzj.supabase.co/functions/v1/generate-og?template=announcement',
       },
-      'https://supabase.com'
+      'https://savira.io'
     )
     expect(url).toMatch(
       /^https:\/\/zhfonblqamxferhoguzj\.supabase\.co\/functions\/v1\/generate-og\?template=announcement&v=.+$/
@@ -68,7 +68,7 @@ describe('blog image helpers', () => {
 
   it('does not append a cache-busting param to static image URLs', () => {
     expect(
-      getAbsoluteBlogSocialImage({ imgSocial: 'example/og.png' }, 'https://supabase.com')
+      getAbsoluteBlogSocialImage({ imgSocial: 'example/og.png' }, 'https://savira.io')
     ).toBe('https://supabase.com/images/blog/example/og.png')
   })
 

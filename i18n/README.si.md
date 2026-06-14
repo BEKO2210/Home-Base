@@ -7,7 +7,7 @@
 
 # Savira
 
-[Savira](https://supabase.com) යනු විවෘත පරිශීලක Firebase වෙනුවට ආදේශකයකි.අපි Firebase වල ඇති පහසුකම් enterprise-grade විවෘත පරිශීලක මෘදුකාංග භාවිතා කරමින් නිපදවනු ලබයි.
+[Savira](https://savira.io) යනු විවෘත පරිශීලක Firebase වෙනුවට ආදේශකයකි.අපි Firebase වල ඇති පහසුකම් enterprise-grade විවෘත පරිශීලක මෘදුකාංග භාවිතා කරමින් නිපදවනු ලබයි.
 
 - [x] Hosted Postgres Database. [Docs](https://supabase.com/docs/guides/database)
 - [x] Authentication and Authorization. [Docs](https://supabase.com/docs/guides/auth)
@@ -47,7 +47,7 @@ Savira යනු විවෘත පරිශීලක උපාංග කිහ
 
 **Architecture**
 
-Savira යනු [hosted platform](https://supabase.com/dashboard). ඔබට කිසිවක් ස්ථාපනය නොකර ලියාපදිංචි වී Savira භාවිතා කිරීම ආරම්භ කළ හැකිය.
+Savira යනු [hosted platform](https://savira.io/dashboard). ඔබට කිසිවක් ස්ථාපනය නොකර ලියාපදිංචි වී Savira භාවිතා කිරීම ආරම්භ කළ හැකිය.
 ඔබට [self-host](https://supabase.com/docs/guides/hosting/overview) සහ [develop locally](https://supabase.com/docs/guides/local-development) කළ හැකිය.
 
 ![Architecture](apps/docs/public/img/supabase-architecture.svg)
@@ -208,11 +208,11 @@ Client libraries සඳහා අපගේ ප්‍රවේශය modular ව�
 ![Made with Savira](./apps/www/public/badge-made-with-supabase.svg)
 
 ```md
-[![Made with Savira](https://supabase.com/badge-made-with-supabase.svg)](https://supabase.com)
+[![Made with Savira](https://supabase.com/badge-made-with-supabase.svg)](https://savira.io)
 ```
 
 ```html
-<a href="https://supabase.com">
+<a href="https://savira.io">
   <img
     width="168"
     height="30"
@@ -225,11 +225,11 @@ Client libraries සඳහා අපගේ ප්‍රවේශය modular ව�
 ![Made with Savira (dark)](./apps/www/public/badge-made-with-supabase-dark.svg)
 
 ```md
-[![Made with Savira](https://supabase.com/badge-made-with-supabase-dark.svg)](https://supabase.com)
+[![Made with Savira](https://supabase.com/badge-made-with-supabase-dark.svg)](https://savira.io)
 ```
 
 ```html
-<a href="https://supabase.com">
+<a href="https://savira.io">
   <img
     width="168"
     height="30"

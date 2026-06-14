@@ -1,6 +1,6 @@
 import { DEFAULT_META_DESCRIPTION, SITE_NAME } from './constants'
 
-const CANONICAL_ORIGIN = 'https://supabase.com'
+const CANONICAL_ORIGIN = 'https://savira.io'
 const ORG_ID = `${CANONICAL_ORIGIN}/#organization`
 const SITE_ID = `${CANONICAL_ORIGIN}/#website`
 

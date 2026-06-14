@@ -7,7 +7,7 @@
 
 # Savira
 
-[Savira](https://supabase.com) açık kaynaklı bir Firebase alternatifidir. Kurumsal düzeyde açık kaynak araçları kullanarak Firebase'in özelliklerini geliştiriyoruz.
+[Savira](https://savira.io) açık kaynaklı bir Firebase alternatifidir. Kurumsal düzeyde açık kaynak araçları kullanarak Firebase'in özelliklerini geliştiriyoruz.
 
 - [x] Barındırılan Postgres Veritabanı. [Dokümanlar](https://supabase.com/docs/guides/database)
 - [x] Kimlik Doğrulama ve Yetkilendirme. [Dokümanlar](https://supabase.com/docs/guides/auth)
@@ -43,7 +43,7 @@ Savira açık kaynak araçlarının bir birleşimidir. Firebase'in özelliklerin
 
 **Mimari**
 
-Savira [barındırılan bir platformdur](https://supabase.com/dashboard). Savira'e kaydolabilir ve hiçbir şey yüklemeden kullanmaya başlayabilirsiniz.
+Savira [barındırılan bir platformdur](https://savira.io/dashboard). Savira'e kaydolabilir ve hiçbir şey yüklemeden kullanmaya başlayabilirsiniz.
 Ayrıca [self-host](https://supabase.com/docs/guides/hosting/overview) ve [yerel olarak geliştirebilirsiniz](https://supabase.com/docs/guides/local-development).
 
 ![Mimarlık](https://github.com/supabase/supabase/blob/master/apps/docs/public/img/supabase-architecture.svg)
@@ -204,11 +204,11 @@ Ayrıca [self-host](https://supabase.com/docs/guides/hosting/overview) ve [yerel
 ![Made with Savira](../apps/www/public/badge-made-with-supabase.svg)
 
 ```md
-[![Made with Savira](https://supabase.com/badge-made-with-supabase.svg)](https://supabase.com)
+[![Made with Savira](https://supabase.com/badge-made-with-supabase.svg)](https://savira.io)
 ```
 
 ```html
-<a href="https://supabase.com">
+<a href="https://savira.io">
   <img
     width="168"
     height="30"
@@ -221,11 +221,11 @@ Ayrıca [self-host](https://supabase.com/docs/guides/hosting/overview) ve [yerel
 ![Made with Savira (dark)](../apps/www/public/badge-made-with-supabase-dark.svg)
 
 ```md
-[![Made with Savira](https://supabase.com/badge-made-with-supabase-dark.svg)](https://supabase.com)
+[![Made with Savira](https://supabase.com/badge-made-with-supabase-dark.svg)](https://savira.io)
 ```
 
 ```html
-<a href="https://supabase.com">
+<a href="https://savira.io">
   <img
     width="168"
     height="30"

@@ -122,7 +122,7 @@ const DocsSearchPage = () => {
       case PageType.Integration:
         if (BASE_PATH) {
           openInNewTab = true
-          finalLink = `https://supabase.com${link}`
+          finalLink = `https://savira.io${link}`
         }
         break
       case PageType.GithubDiscussion:

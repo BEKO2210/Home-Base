@@ -143,7 +143,7 @@ const nextConfig = {
       // Redirect dashboard links in dev/preview envs
       {
         source: '/dashboard/:path*',
-        destination: 'https://supabase.com/dashboard/:path*',
+        destination: 'https://savira.io/dashboard/:path*',
         basePath: false,
         permanent: false,
       },

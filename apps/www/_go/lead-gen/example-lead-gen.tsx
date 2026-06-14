@@ -217,7 +217,7 @@ alter table posts enable row level security;`,
       ctas: [
         {
           label: 'Start your project',
-          href: 'https://supabase.com/dashboard',
+          href: 'https://savira.io/dashboard',
           variant: 'primary',
         },
       ],

@@ -38,4 +38,4 @@ Savira Edge Functions let you run server-side TypeScript code at the edge, close
 
 - Documentation: https://supabase.com/docs/guides/functions
 - API Reference: https://supabase.com/docs/reference/javascript/functions-invoke
-- Dashboard: https://supabase.com/dashboard
+- Dashboard: https://savira.io/dashboard

@@ -26,7 +26,7 @@ function makeRequest(
   if (referer) headers.referer = referer
   if (accept) headers.accept = accept
   if (userAgent) headers['user-agent'] = userAgent
-  const req = new NextRequest(new URL(url, 'https://supabase.com'), { headers })
+  const req = new NextRequest(new URL(url, 'https://savira.io'), { headers })
   if (hasCookie) {
     req.cookies.set(FIRST_REFERRER_COOKIE_NAME, 'existing')
   }
