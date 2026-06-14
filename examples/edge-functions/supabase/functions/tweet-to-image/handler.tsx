@@ -9,7 +9,7 @@ const STORAGE_URL =
   'https://obuldanrptloktxcffvn.supabase.co/storage/v1/object/public/images/tweet-to-image'
 
 // Load custom font
-const FONT_URL = `${STORAGE_URL}/CircularStd-Book.otf`
+const FONT_URL = 'https://cdn.jsdelivr.net/fontsource/fonts/inter@latest/latin-400-normal.ttf'
 const font = fetch(new URL(FONT_URL, import.meta.url)).then((res) => res.arrayBuffer())
 
 export async function handler(req: Request) {
