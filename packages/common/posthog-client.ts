@@ -6,6 +6,11 @@ import { safeSessionStorage } from './safe-storage'
 // (e.g. if a user navigates around a lot before accepting consent)
 const MAX_PENDING_EVENTS = 20
 
+// Master kill-switch: when true, telemetry/analytics are fully disabled and
+// PostHog is never initialized. Flip to false (and configure your own PostHog
+// host/key) if you want to collect product analytics.
+const TELEMETRY_DISABLED: boolean = true
+
 export interface ClientTelemetryEvent {
   id: string
   timestamp: number
@@ -51,6 +56,8 @@ class PostHogClient {
   }
 
   init(hasConsent: boolean = true) {
+    // Telemetry disabled for Savira: never initialize PostHog (no egress).
+    if (TELEMETRY_DISABLED) return
     if (this.initStarted || typeof window === 'undefined' || !hasConsent) return
 
     if (!this.config.apiKey) {
