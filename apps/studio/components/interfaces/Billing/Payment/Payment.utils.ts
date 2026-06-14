@@ -1,20 +1,14 @@
-import type { Appearance, CustomFontSource } from '@stripe/stripe-js'
-
-import { CUSTOM_FONT_BOOK_DATA_URL } from '@/fonts/stripe-fonts'
+import type { Appearance, CssFontSource } from '@stripe/stripe-js'
 
 /**
- * Custom font for Stripe Elements iframes.
+ * Font for Stripe Elements iframes.
  * Stripe renders inside an iframe that can't access the parent page's CSS variables or fonts,
- * so we pass the font explicitly (Stripe requires https:// or data:// sources).
- * Keep using the data URL in all environments for now, since the CDN-hosted font still has
- * CORS issues when Stripe loads it from inside its iframe.
+ * so we load an open-source font (Inter, SIL OFL) from Google Fonts. This replaces the
+ * previously embedded proprietary font to keep the project license-safe.
  */
-const fontSrc = `url(${CUSTOM_FONT_BOOK_DATA_URL})`
-
-export const STRIPE_ELEMENT_FONTS: CustomFontSource[] = [
+export const STRIPE_ELEMENT_FONTS: CssFontSource[] = [
   {
-    family: 'CustomFont',
-    src: fontSrc,
+    cssSrc: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap',
   },
 ]
 
@@ -29,7 +23,7 @@ export const getStripeElementsAppearanceOptions = (
       colorBackground: resolvedTheme?.includes('dark')
         ? 'hsl(0deg 0% 14.1%)'
         : 'hsl(0deg 0% 95.3%)',
-      fontFamily: 'CustomFont, Helvetica Neue, Helvetica, Arial, sans-serif',
+      fontFamily: 'Inter, Helvetica Neue, Helvetica, Arial, sans-serif',
     },
     rules: {
       '.TermsText': {
@@ -69,7 +63,7 @@ export const getAddressElementAppearanceOptions = (
       colorPrimary: isDark ? 'hsl(0deg 0% 32%)' : 'hsl(0deg 0% 55%)',
       colorBackground: isDark ? 'hsl(0deg 0% 14.1%)' : 'hsl(0deg 0% 95.3%)',
       borderRadius: '4px',
-      fontFamily: 'CustomFont, Helvetica Neue, Helvetica, Arial, sans-serif',
+      fontFamily: 'Inter, Helvetica Neue, Helvetica, Arial, sans-serif',
     },
     rules: {
       '.Input': {

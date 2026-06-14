@@ -32,6 +32,11 @@ import { getSharedTelemetryData, getTelemetryCookieOptions } from './telemetry-u
 
 export { posthogClient, type ClientTelemetryEvent }
 
+// Master kill-switch: when true, no telemetry (page views, events, identify,
+// reset) is sent to any external host. Flip to false and point the platform
+// API / PostHog at your own infrastructure to re-enable analytics.
+export const TELEMETRY_DISABLED: boolean = true
+
 export const TelemetryTagManager = () => {
   const { hasAccepted } = useConsentState()
 
@@ -117,6 +122,7 @@ function handlePageTelemetry({
   firstReferrerData,
   mwDiagData,
 }: HandlePageTelemetryOptions) {
+  if (TELEMETRY_DISABLED) return Promise.resolve()
   if (typeof window !== 'undefined') {
     const livePageData = getSharedTelemetryData(pathname)
     const liveReferrer = livePageData.ph.referrer
@@ -236,6 +242,7 @@ export function handlePageLeaveTelemetry(
   _slug?: string,
   _ref?: string
 ) {
+  if (TELEMETRY_DISABLED) return Promise.resolve()
   if (typeof window !== 'undefined') {
     const pageData = getSharedTelemetryData(pathname)
     posthogClient.capturePageLeave({
@@ -396,6 +403,7 @@ export const PageTelemetry = ({
 type EventBody = components['schemas']['TelemetryEventBodyV2']
 
 export function sendTelemetryEvent(API_URL: string, event: TelemetryEvent, pathname?: string) {
+  if (TELEMETRY_DISABLED) return
   const consent = hasConsented()
   if (!consent) return
 
@@ -425,6 +433,7 @@ export function sendTelemetryEvent(API_URL: string, event: TelemetryEvent, pathn
 type IdentifyBody = components['schemas']['TelemetryIdentifyBodyV2']
 
 export function sendTelemetryIdentify(API_URL: string, body: IdentifyBody) {
+  if (TELEMETRY_DISABLED) return Promise.resolve()
   const consent = hasConsented()
 
   if (!consent) return Promise.resolve()
@@ -462,5 +471,6 @@ export function useTelemetryIdentify(API_URL: string) {
 //---
 
 export function handleResetTelemetry(API_URL: string) {
+  if (TELEMETRY_DISABLED) return Promise.resolve()
   return post(`${API_URL}/telemetry/reset`, {})
 }

@@ -1,28 +1,9 @@
-import localFont from 'next/font/local'
+import { Inter } from 'next/font/google'
 
-const suisseIntl = localFont({
-  src: [
-    {
-      path: '../../public/fonts/state-of-startups/SuisseIntl-Book.otf',
-      weight: '450',
-      style: 'normal',
-    },
-    {
-      path: '../../public/fonts/state-of-startups/SuisseIntl-Regular.otf',
-      weight: '400',
-      style: 'normal',
-    },
-    {
-      path: '../../public/fonts/state-of-startups/SuisseIntl-Medium.otf',
-      weight: '500',
-      style: 'normal',
-    },
-    {
-      path: '../../public/fonts/state-of-startups/SuisseIntl-Bold.otf',
-      weight: '700',
-      style: 'normal',
-    },
-  ],
+// Open-source font (Inter, SIL OFL) — replaces the proprietary Suisse Int'l.
+const suisseIntl = Inter({
+  subsets: ['latin'],
+  weight: ['400', '500', '700'],
   variable: '--font-suisse-intl',
   display: 'swap',
 })

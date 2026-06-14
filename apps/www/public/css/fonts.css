@@ -2,70 +2,16 @@
 
 /* header and body font */
 
-@font-face {
-  font-family: 'circular';
-  src:
-    url(/fonts/custom/CustomFont-Book.woff2) format('woff2'),
-    url(/fonts/custom/CustomFont-Book.woff) format('woff');
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'circular';
-  src:
-    url(/fonts/custom/CustomFont-BookItalic.woff2) format('woff2'),
-    url(/fonts/custom/CustomFont-BookItalic.woff) format('woff');
-  font-weight: 400;
-  font-style: italic;
-}
-@font-face {
-  font-family: 'circular';
-  src:
-    url(/fonts/custom/CustomFont-Medium.woff2) format('woff2'),
-    url(/fonts/custom/CustomFont-Medium.woff) format('woff');
-  font-weight: 500;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'circular';
-  src:
-    url(/fonts/custom/CustomFont-MediumItalic.woff2) format('woff2'),
-    url(/fonts/custom/CustomFont-MediumItalic.woff) format('woff');
-  font-weight: 500;
-  font-style: italic;
-}
-@font-face {
-  font-family: 'circular';
-  src:
-    url(/fonts/custom/CustomFont-Bold.woff2) format('woff2'),
-    url(/fonts/custom/CustomFont-Bold.woff) format('woff');
-  font-weight: 700;
-  font-style: 600;
-}
-@font-face {
-  font-family: 'circular';
-  src:
-    url(/fonts/custom/CustomFont-BoldItalic.woff2) format('woff2'),
-    url(/fonts/custom/CustomFont-BoldItalic.woff) format('woff');
-  font-style: 600;
-  font-style: italic;
-}
-@font-face {
-  font-family: 'circular';
-  src:
-    url(/fonts/custom/CustomFont-Black.woff2) format('woff2'),
-    url(/fonts/custom/CustomFont-Black.woff) format('woff');
-  font-weight: 800;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'circular';
-  src:
-    url(/fonts/custom/CustomFont-BlackItalic.woff2) format('woff2'),
-    url(/fonts/custom/CustomFont-BlackItalic.woff) format('woff');
-  font-weight: 800;
-  font-style: italic;
-}
+/* Open-source font (Inter, SIL OFL) from the Fontsource CDN. Replaces the
+   proprietary Circular/CustomFont. Family name 'circular' kept for compatibility. */
+@font-face { font-family: 'circular'; src: url(https://cdn.jsdelivr.net/fontsource/fonts/inter@latest/latin-400-normal.woff2) format('woff2'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: 'circular'; src: url(https://cdn.jsdelivr.net/fontsource/fonts/inter@latest/latin-400-italic.woff2) format('woff2'); font-weight: 400; font-style: italic; font-display: swap; }
+@font-face { font-family: 'circular'; src: url(https://cdn.jsdelivr.net/fontsource/fonts/inter@latest/latin-500-normal.woff2) format('woff2'); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: 'circular'; src: url(https://cdn.jsdelivr.net/fontsource/fonts/inter@latest/latin-500-italic.woff2) format('woff2'); font-weight: 500; font-style: italic; font-display: swap; }
+@font-face { font-family: 'circular'; src: url(https://cdn.jsdelivr.net/fontsource/fonts/inter@latest/latin-700-normal.woff2) format('woff2'); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: 'circular'; src: url(https://cdn.jsdelivr.net/fontsource/fonts/inter@latest/latin-700-italic.woff2) format('woff2'); font-weight: 700; font-style: italic; font-display: swap; }
+@font-face { font-family: 'circular'; src: url(https://cdn.jsdelivr.net/fontsource/fonts/inter@latest/latin-800-normal.woff2) format('woff2'); font-weight: 800; font-style: normal; font-display: swap; }
+@font-face { font-family: 'circular'; src: url(https://cdn.jsdelivr.net/fontsource/fonts/inter@latest/latin-800-italic.woff2) format('woff2'); font-weight: 800; font-style: italic; font-display: swap; }
 
 /* mono font */
 

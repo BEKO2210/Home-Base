@@ -27,11 +27,13 @@
   }
 }
 
+/* Open-source font (Inter, SIL OFL) from the Fontsource CDN. Replaces the
+   previously bundled proprietary 'CustomFont' (Circular/Suisse Int'l). The
+   'custom-font' family name is kept so existing styles need no changes. */
 @font-face {
   font-family: 'custom-font';
-  src:
-    url(../../../packages/common/assets/fonts/CustomFont-Book.woff2) format('woff2'),
-    url(../../../packages/common/assets/fonts/CustomFont-Book.woff) format('woff');
+  src: url(https://cdn.jsdelivr.net/fontsource/fonts/inter@latest/latin-400-normal.woff2)
+    format('woff2');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -39,9 +41,8 @@
 
 @font-face {
   font-family: 'custom-font';
-  src:
-    url(../../../packages/common/assets/fonts/CustomFont-Medium.woff2) format('woff2'),
-    url(../../../packages/common/assets/fonts/CustomFont-Medium.woff) format('woff');
+  src: url(https://cdn.jsdelivr.net/fontsource/fonts/inter@latest/latin-500-normal.woff2)
+    format('woff2');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
