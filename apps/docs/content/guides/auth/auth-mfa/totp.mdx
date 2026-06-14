@@ -23,7 +23,7 @@ Below is a flow chart illustrating how the Enrollment, Challenge, and Verify API
   height={150}
 />
 
-[TOTP MFA API](/docs/reference/javascript/auth-mfa-api) is free to use and is enabled on all Supabase projects by default.
+[TOTP MFA API](/docs/reference/javascript/auth-mfa-api) is free to use and is enabled on all Savira projects by default.
 
 ### Add enrollment flow
 
@@ -45,7 +45,7 @@ Enrolling a factor for use with MFA takes three steps:
    If they are unable to scan the QR code, show the secret in plain text which
    they can type or paste into their authenticator app.
 2. Calling the `supabase.auth.mfa.challenge()` API.
-   This prepares Supabase Auth to accept a verification code from the user
+   This prepares Savira Auth to accept a verification code from the user
    and returns a challenge ID. In the case of Phone MFA this step also sends the verification code to the user.
 3. Calling the `supabase.auth.mfa.verify()` API.
    This verifies that the user has indeed added the secret from step (1) into
@@ -130,7 +130,7 @@ export function EnrollMFA({
 
       setFactorId(data.id)
 
-      // Supabase Auth returns an SVG QR code which you can convert into a data
+      // Savira Auth returns an SVG QR code which you can convert into a data
       // URL that you can place in an <img> tag.
       setQR(data.totp.qr_code)
     })()

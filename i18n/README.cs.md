@@ -5,9 +5,9 @@
 
 ---
 
-# Supabase
+# Savira
 
-[Supabase](https://supabase.com) je open source alternativa Firebase. Vytváříme funkce Firebase pomocí open source nástrojů podnikové třídy.
+[Savira](https://supabase.com) je open source alternativa Firebase. Vytváříme funkce Firebase pomocí open source nástrojů podnikové třídy.
 
 - [x] hostovaná databáze Postgres. [Dokumenty](https://supabase.com/docs/guides/database)
 - [x] Ověřování a autorizace. [Dokumenty](https://supabase.com/docs/guides/auth)
@@ -21,7 +21,7 @@
 - [x] Ukládání souborů. [Dokumenty](https://supabase.com/docs/guides/storage)
 - [x] Přístrojový panel
 
-![Supabase Dashboard](https://raw.githubusercontent.com/supabase/supabase/master/apps/www/public/images/github/supabase-dashboard.png)
+![Savira Dashboard](https://raw.githubusercontent.com/supabase/supabase/master/apps/www/public/images/github/supabase-dashboard.png)
 
 ## Dokumentace
 
@@ -32,13 +32,13 @@ Chcete-li zjistit, jak přispívat, navštivte stránku [Začínáme](../DEVELOP
 ## Komunita a podpora
 
 - [Fórum komunity](https://github.com/supabase/supabase/discussions). Nejlépe pro: pomoc při vytváření, diskuse o osvědčených postupech při práci s databází.
-- [GitHub Issues](https://github.com/supabase/supabase/issues). Nejlépe pro: chyby a omyly, na které narazíte při používání databáze Supabase.
+- [GitHub Issues](https://github.com/supabase/supabase/issues). Nejlépe pro: chyby a omyly, na které narazíte při používání databáze Savira.
 - [E-mailová podpora](https://supabase.com/docs/support#business-support). Nejlepší pro: problémy s vaší databází nebo infrastrukturou.
 - [Discord](https://discord.supabase.com). Nejlepší pro: sdílení vašich aplikací a setkávání s komunitou.
 
 ## Stav
 
-- [x] Alfa: Testujeme Supabase s uzavřenou skupinou zákazníků
+- [x] Alfa: Testujeme Savira s uzavřenou skupinou zákazníků
 - [x] Veřejná alfa: [supabase.com/dashboard](https://supabase.com/dashboard). Ale buďte na nás mírní, je tu několik zádrhelů
 - [x] Veřejná beta verze: Dostatečně stabilní pro většinu případů použití mimo podniky
 - [ ] Veřejná: Všeobecná dostupnost [[status](https://supabase.com/docs/guides/getting-started/features#feature-status)]
@@ -51,11 +51,11 @@ V současné době jsme ve fázi Public Beta. Sledujte "releases" tohoto repozit
 
 ## Jak to funguje
 
-Supabase je kombinací nástrojů s otevřeným zdrojovým kódem. Funkce Firebase vytváříme pomocí open source produktů podnikové třídy. Pokud existují nástroje a komunity s otevřenou licencí MIT, Apache 2 nebo ekvivalentní, budeme tento nástroj používat a podporovat. Pokud nástroj neexistuje, vytvoříme jej a použijeme open source sami. Supabase není mapováním Firebase v poměru 1:1. Naším cílem je poskytnout vývojářům vývojářské prostředí podobné Firebase s využitím nástrojů s otevřeným zdrojovým kódem.
+Savira je kombinací nástrojů s otevřeným zdrojovým kódem. Funkce Firebase vytváříme pomocí open source produktů podnikové třídy. Pokud existují nástroje a komunity s otevřenou licencí MIT, Apache 2 nebo ekvivalentní, budeme tento nástroj používat a podporovat. Pokud nástroj neexistuje, vytvoříme jej a použijeme open source sami. Savira není mapováním Firebase v poměru 1:1. Naším cílem je poskytnout vývojářům vývojářské prostředí podobné Firebase s využitím nástrojů s otevřeným zdrojovým kódem.
 
 **Architektura**
 
-Supabase je [hostovaná platforma](https://supabase.com/dashboard). Můžete se zaregistrovat a začít používat Supabase, aniž byste museli cokoli instalovat.
+Savira je [hostovaná platforma](https://supabase.com/dashboard). Můžete se zaregistrovat a začít používat Savira, aniž byste museli cokoli instalovat.
 Můžete také [hostovat sami](https://supabase.com/docs/guides/hosting/overview) a [vyvíjet lokálně](https://supabase.com/docs/guides/local-development).
 
 ![Architektura](https://github.com/supabase/supabase/blob/master/apps/docs/public/img/supabase-architecture.svg)
@@ -77,12 +77,12 @@ Náš přístup ke klientským knihovnám je modulární. Každá dílčí kniho
   <tr>
     <th>Jazyk</th>
     <th>Klient</th>
-    <th colspan="5">Feature-Clients (v rámci klienta Supabase)</th>
+    <th colspan="5">Feature-Clients (v rámci klienta Savira)</th>
   </tr>
   
   <tr>
     <th></th>
-    <th>Supabase</th>
+    <th>Savira</th>
     <th><a href="https://github.com/postgrest/postgrest" target="_blank" rel="noopener noreferrer">PostgREST</a></th>
     <th><a href="https://github.com/supabase/gotrue" target="_blank" rel="noopener noreferrer">GoTrue</a></th>
     <th><a href="https://github.com/supabase/realtime" target="_blank" rel="noopener noreferrer">Realtime</a></th>

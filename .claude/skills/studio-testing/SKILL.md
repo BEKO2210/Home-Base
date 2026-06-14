@@ -1,6 +1,6 @@
 ---
 name: studio-testing
-description: Testing strategy for Supabase Studio. Use when writing tests, deciding what
+description: Testing strategy for Savira Studio. Use when writing tests, deciding what
   type of test to write, extracting logic from components into testable utility
   functions, or reviewing test coverage. Covers unit tests, component tests,
   and E2E test selection criteria.

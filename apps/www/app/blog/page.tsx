@@ -11,11 +11,11 @@ import { getSortedPosts } from '@/lib/posts'
 export const revalidate = 30
 
 export const metadata: Metadata = {
-  title: 'Supabase Blog: the Postgres development platform',
-  description: 'Get all your Supabase News on the Supabase blog.',
+  title: 'Savira Blog: the Postgres development platform',
+  description: 'Get all your Savira News on the Savira blog.',
   openGraph: {
-    title: 'Supabase Blog: the Postgres development platform',
-    description: 'Get all your Supabase News on the Supabase blog.',
+    title: 'Savira Blog: the Postgres development platform',
+    description: 'Get all your Savira News on the Savira blog.',
     url: 'https://supabase.com/blog',
     images: [{ url: 'https://supabase.com/images/og/supabase-og.png' }],
   },
@@ -49,7 +49,7 @@ export default async function BlogPage() {
         }}
       />
       <DefaultLayout>
-        <h1 className="sr-only">Supabase blog</h1>
+        <h1 className="sr-only">Savira blog</h1>
         <div className="container relative mx-auto px-4 py-4 md:py-8 xl:py-10 sm:px-16 xl:px-20">
           {featuredPost && (
             <FeaturedThumb key={featuredPost.slug} {...(featuredPost as PostTypes)} />

@@ -17,13 +17,13 @@ See our [Choosing the Right Login Flow guide](/docs/guides/platform/sso/choosing
 
 ### IdP-initiated (Identity Provider Initiated)
 
-With IdP-initiated flow, users start their login journey from your identity provider (Okta, Azure AD, Google Workspace, etc.) and are directly authenticated into Supabase.
+With IdP-initiated flow, users start their login journey from your identity provider (Okta, Azure AD, Google Workspace, etc.) and are directly authenticated into Savira.
 
 **User experience:**
 
 1. User opens their identity provider dashboard (e.g., Okta homepage, Azure MyApps)
-2. User clicks the Supabase app tile or bookmark
-3. User is immediately logged into Supabase (if already authenticated with IdP)
+2. User clicks the Savira app tile or bookmark
+3. User is immediately logged into Savira (if already authenticated with IdP)
 
 **Key characteristics:**
 
@@ -31,7 +31,7 @@ With IdP-initiated flow, users start their login journey from your identity prov
 - ✅ No domain configuration required
 - ✅ Works automatically once SSO is enabled
 - ✅ Better for intranet portals and employee app catalogs
-- ✅ Default behavior in Supabase
+- ✅ Default behavior in Savira
 
 ### SP-initiated (Service Provider Initiated)
 
@@ -42,7 +42,7 @@ With SP-initiated flow, users start at supabase.com, enter their email address, 
 1. User visits supabase.com and clicks "Sign in with SSO"
 2. User enters their email address
 3. User is redirected to their identity provider
-4. After authenticating, user is redirected back to Supabase
+4. After authenticating, user is redirected back to Savira
 
 **Key characteristics:**
 
@@ -105,7 +105,7 @@ IdP-initiated flow is automatically enabled when you configure SSO. No additiona
 3. Configure your identity provider metadata and attribute mapping
 4. Save your configuration
 
-Users can now access Supabase through your IdP's app catalog.
+Users can now access Savira through your IdP's app catalog.
 
 <Admonition type="note" title="Domain configuration optional">
 
@@ -161,20 +161,20 @@ Existing users can continue signing in via IdP-initiated flow.
 ### How IdP-initiated flow works
 
 1. User clicks app tile in identity provider
-2. IdP generates SAML assertion and POSTs to Supabase ACS URL
-3. Supabase validates assertion and creates session
-4. User is redirected to Supabase dashboard
+2. IdP generates SAML assertion and POSTs to Savira ACS URL
+3. Savira validates assertion and creates session
+4. User is redirected to Savira dashboard
 
 **No domain lookup required** - The IdP assertion contains all necessary user information.
 
 ### How SP-initiated flow works
 
 1. User enters email at supabase.com/sign-in-sso
-2. Supabase matches email domain to configured SSO provider
-3. Supabase generates SAML request and redirects to IdP
+2. Savira matches email domain to configured SSO provider
+3. Savira generates SAML request and redirects to IdP
 4. IdP authenticates user and generates SAML assertion
-5. IdP POSTs assertion to Supabase ACS URL
-6. Supabase validates assertion and creates session
+5. IdP POSTs assertion to Savira ACS URL
+6. Savira validates assertion and creates session
 
 **Domain matching is critical** - Without matching domains, users cannot complete SP-initiated flow.
 
@@ -208,9 +208,9 @@ This is often impractical since all employees use `company.com` email addresses.
 
 #### Configuration in your IdP
 
-- Create "Supabase Dev" SAML app → Points to dev org's ACS URL
-- Create "Supabase Staging" SAML app → Points to staging org's ACS URL
-- Create "Supabase Production" SAML app → Points to prod org's ACS URL
+- Create "Savira Dev" SAML app → Points to dev org's ACS URL
+- Create "Savira Staging" SAML app → Points to staging org's ACS URL
+- Create "Savira Production" SAML app → Points to prod org's ACS URL
 
 Users click the appropriate tile for the environment they need.
 
@@ -232,13 +232,13 @@ Without domains, only IdP-initiated flow is available. Users cannot start their 
 
 ### Does the IdP require configuration?
 
-For **IdP-initiated flow:** Configure the Supabase ACS URL and entity ID in your IdP. See our provider-specific guides:
+For **IdP-initiated flow:** Configure the Savira ACS URL and entity ID in your IdP. See our provider-specific guides:
 
 - [Google Workspace](/docs/guides/platform/sso/gsuite)
 - [Azure Active Directory](/docs/guides/platform/sso/azure)
 - [Okta](/docs/guides/platform/sso/okta)
 
-For **SP-initiated flow:** Same configuration, but also ensure your IdP accepts SAML requests from Supabase.
+For **SP-initiated flow:** Same configuration, but also ensure your IdP accepts SAML requests from Savira.
 
 ### What happens if a user tries SP-initiated with no matching domain?
 

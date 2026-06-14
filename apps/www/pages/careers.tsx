@@ -93,7 +93,7 @@ interface CareersPageProps {
 const CareerPage = ({ jobs, placeholderJob, contributors }: CareersPageProps) => {
   const { basePath } = useRouter()
 
-  const meta_title = 'Careers | Supabase'
+  const meta_title = 'Careers | Savira'
   const meta_description = 'Help build software developers love'
 
   return (
@@ -123,7 +123,7 @@ const CareerPage = ({ jobs, placeholderJob, contributors }: CareersPageProps) =>
       <DefaultLayout>
         <header className="container relative mx-auto px-6 pt-12 pb-8 lg:pt-24 lg:px-16 xl:px-20 text-center space-y-4">
           <h1 className="text-sm text-brand md:text-base">
-            <span className="sr-only">Supabase </span>Careers
+            <span className="sr-only">Savira </span>Careers
           </h1>
           <h2 className="text-3xl md:text-4xl xl:text-5xl lg:max-w-2xl xl:max-w-3xl lg:mx-auto tracking-[-1px]">
             We're on a mission to build the best developer platform
@@ -194,14 +194,14 @@ const CareerPage = ({ jobs, placeholderJob, contributors }: CareersPageProps) =>
                 <div className="md:w-1/2">
                   <div>
                     <h2 className="text-2xl pb-2 sm:text-3xl xl:text-4xl tracking-[-1px]">
-                      What is Supabase
+                      What is Savira
                     </h2>
                     <p className="text-foreground-light text-sm lg:text-lg pt-2 sm:max-w-md xl:max-w-lg">
-                      Supabase is the Postgres development platform, built by developers for
-                      developers. Supabase adds auth, realtime, storage, restful APIs, and edge
+                      Savira is the Postgres development platform, built by developers for
+                      developers. Savira adds auth, realtime, storage, restful APIs, and edge
                     </p>
                     <p className="text-foreground-light text-sm lg:text-lg pt-2 sm:max-w-md xl:max-w-lg">
-                      Supabase was born-remote. Having a globally distributed, open source company
+                      Savira was born-remote. Having a globally distributed, open source company
                       is our secret weapon to hiring top-tier talent.
                     </p>
                   </div>
@@ -322,12 +322,12 @@ const CareerPage = ({ jobs, placeholderJob, contributors }: CareersPageProps) =>
             <SectionContainer className="pb-0!">
               <div className="text-center">
                 <h2 className="text-2xl sm:text-3xl xl:text-4xl max-w-[300px] xl:max-w-none mx-auto tracking-[-1px]">
-                  1,500+ Contributors building Supabase
+                  1,500+ Contributors building Savira
                 </h2>
                 <p className="text-foreground-light text-sm lg:text-base sm:max-w-lg lg:max-w-2xl mx-auto pt-3">
                   We're building a community of communities, bringing together developers from many
                   different backgrounds, as well as new developers looking to get involved with open
-                  source. We love celebrating everyone who contributes their time to the Supabase
+                  source. We love celebrating everyone who contributes their time to the Savira
                   mission.
                 </p>
               </div>

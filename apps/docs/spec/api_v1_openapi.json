@@ -7342,8 +7342,8 @@
     }
   },
   "info": {
-    "title": "Supabase API (v1)",
-    "description": "Supabase API generated from the OpenAPI specification.<br>Visit [https://supabase.com/docs](https://supabase.com/docs) for a complete documentation.",
+    "title": "Savira API (v1)",
+    "description": "Savira API generated from the OpenAPI specification.<br>Visit [https://supabase.com/docs](https://supabase.com/docs) for a complete documentation.",
     "version": "1.0.0",
     "contact": {}
   },

@@ -5,16 +5,16 @@ const page: GoPageInput = {
   template: 'lead-gen',
   slug: 'agency-webinar-mar2026',
   metadata: {
-    title: 'Ship Fast, Stay Safe: Learn More | Supabase Agency Webinar',
+    title: 'Ship Fast, Stay Safe: Learn More | Savira Agency Webinar',
     description:
-      'You watched the webinar. Want to go deeper? Get resources, talk to our team, or learn how top agencies balance AI prototyping speed with production safety on Supabase.',
+      'You watched the webinar. Want to go deeper? Get resources, talk to our team, or learn how top agencies balance AI prototyping speed with production safety on Savira.',
     ogImage: '/images/landing-pages/agency-webinar-mar2026/og.png',
   },
   hero: {
     subtitle: 'Thanks for watching',
     title: 'Ship Fast, Stay Safe: AI Prototyping That Survives Production',
     description:
-      'You saw how agency leaders balance velocity with control when using AI coding tools to build production applications on Supabase. Want to learn more, get hands-on, or talk to our team? Share your details below.',
+      'You saw how agency leaders balance velocity with control when using AI coding tools to build production applications on Savira. Want to learn more, get hands-on, or talk to our team? Share your details below.',
     image: {
       src: 'https://zhfonblqamxferhoguzj.supabase.co/functions/v1/generate-og?template=ruler&layout=icon-only&copy=%5B2.5x+faster%5D%0A%5BPostgres+parser%5D%0Awith+Claude+Code&icon=supabase.svg',
       alt: 'Ship Fast, Stay Safe: AI Prototyping That Survives Production',
@@ -39,7 +39,7 @@ const page: GoPageInput = {
       type: 'single-column',
       title: 'Watch the recording',
       description:
-        'Join agency leaders and Supabase as they share how top agencies balance velocity with control when using AI coding tools to build production applications.',
+        'Join agency leaders and Savira as they share how top agencies balance velocity with control when using AI coding tools to build production applications.',
       children: <MediaBlock youtubeUrl="https://www.youtube.com/watch?v=D_Qhiyyp6_M" />,
     },
     {

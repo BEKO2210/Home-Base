@@ -1,6 +1,6 @@
 ---
 name: studio-best-practices
-description: React and TypeScript best practices for Supabase Studio. Use when writing
+description: React and TypeScript best practices for Savira Studio. Use when writing
   or reviewing Studio components — covers boolean naming, component structure, loading/error
   states, state management, custom hooks, event handlers, conditional rendering,
   performance, and TypeScript conventions.

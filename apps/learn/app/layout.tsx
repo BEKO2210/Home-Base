@@ -15,14 +15,14 @@ const inter = Inter({ subsets: ['latin'] })
 const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? ''
 
 export const metadata: Metadata = {
-  applicationName: 'Learn Supabase',
-  title: 'Learn Supabase',
-  description: 'Learn Supabase.',
+  applicationName: 'Learn Savira',
+  title: 'Learn Savira',
+  description: 'Learn Savira.',
   metadataBase: new URL('https://supabase.com/learn'),
   icons: genFaviconData(BASE_PATH),
   openGraph: {
     type: 'article',
-    authors: 'Supabase',
+    authors: 'Savira',
     url: `${BASE_PATH}`,
     images: `${BASE_PATH}/img/supabase-og-image.png`,
     publishedTime: new Date().toISOString(),

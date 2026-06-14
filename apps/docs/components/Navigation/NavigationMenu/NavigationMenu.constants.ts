@@ -333,7 +333,7 @@ export const GLOBAL_MENU_ITEMS: GlobalMenuItems = [
 
 export const gettingstarted: NavMenuConstant = {
   icon: 'getting-started',
-  title: 'Start with Supabase',
+  title: 'Start with Savira',
   url: '/guides/getting-started',
   items: [
     { name: 'Build with AI tools', url: '/guides/ai-tools' },
@@ -1479,7 +1479,7 @@ export const database: NavMenuConstant = {
           url: '/guides/database/postgres/which-version-of-postgres' as `/${string}`,
         },
         {
-          name: 'Replicating from Supabase to External Postgres',
+          name: 'Replicating from Savira to External Postgres',
           url: '/guides/database/postgres/setup-replication-external' as `/${string}`,
         },
       ],
@@ -1520,7 +1520,7 @@ export const queues: NavMenuConstant = {
           url: '/guides/queues/consuming-messages-with-edge-functions',
         },
         {
-          name: 'Expose Queues for local and self-hosted Supabase',
+          name: 'Expose Queues for local and self-hosted Savira',
           url: '/guides/queues/expose-self-hosted-queues',
         },
       ],
@@ -1765,7 +1765,7 @@ export const functions: NavMenuConstant = {
       url: undefined,
       items: [
         {
-          name: 'Supabase Auth',
+          name: 'Savira Auth',
           url: '/guides/functions/auth',
           items: [
             { name: 'Securing your functions', url: '/guides/functions/auth' },
@@ -1773,8 +1773,8 @@ export const functions: NavMenuConstant = {
             { name: 'Legacy JWT secret', url: '/guides/functions/auth-legacy-jwt' },
           ],
         },
-        { name: 'Supabase Database (Postgres)', url: '/guides/functions/connect-to-postgres' },
-        { name: 'Supabase Storage', url: '/guides/functions/storage-caching' },
+        { name: 'Savira Database (Postgres)', url: '/guides/functions/connect-to-postgres' },
+        { name: 'Savira Storage', url: '/guides/functions/storage-caching' },
       ],
     },
     {
@@ -1867,7 +1867,7 @@ export const functions: NavMenuConstant = {
       name: 'Third-Party Tools',
       url: undefined,
       items: [
-        { name: 'Dart Edge on Supabase', url: '/guides/functions/dart-edge' },
+        { name: 'Dart Edge on Savira', url: '/guides/functions/dart-edge' },
         {
           name: 'mcp-lite (Model Context Protocol)',
           url: '/guides/functions/examples/mcp-server-mcp-lite' as `/${string}`,
@@ -2643,7 +2643,7 @@ export const platform: NavMenuConstant = {
       items: [
         { name: 'Upgrading', url: '/guides/platform/upgrading' },
         {
-          name: 'Migrating within Supabase',
+          name: 'Migrating within Savira',
           url: '/guides/platform/migrating-within-supabase',
           items: [
             {
@@ -2661,7 +2661,7 @@ export const platform: NavMenuConstant = {
           ],
         },
         {
-          name: 'Migrating to Supabase',
+          name: 'Migrating to Savira',
           url: '/guides/platform/migrating-to-supabase',
           items: [
             { name: 'Overview', url: '/guides/platform/migrating-to-supabase' as `/${string}` },
@@ -2773,7 +2773,7 @@ export const platform: NavMenuConstant = {
       enabled: billingEnabled,
       items: [
         {
-          name: 'About billing on Supabase',
+          name: 'About billing on Savira',
           url: '/guides/platform/billing-on-supabase' as `/${string}`,
         },
         {
@@ -3192,14 +3192,14 @@ export const integrations: NavMenuConstant = {
       url: '/guides/integrations/vercel-marketplace',
     },
     {
-      name: 'Supabase Marketplace',
+      name: 'Savira Marketplace',
       url: '/guides/integrations/supabase-marketplace',
     },
     {
       name: 'Build Your Own',
       items: [
         {
-          name: 'Supabase OAuth Integration',
+          name: 'Savira OAuth Integration',
           url: '/guides/integrations/build-a-supabase-oauth-integration',
           items: [
             {
@@ -3213,11 +3213,11 @@ export const integrations: NavMenuConstant = {
           ],
         },
         {
-          name: 'Supabase for Platforms',
+          name: 'Savira for Platforms',
           url: '/guides/integrations/supabase-for-platforms',
         },
         {
-          name: 'Supabase partner integration guide',
+          name: 'Savira partner integration guide',
           url: '/guides/integrations/partner-integration-guide',
         },
       ],
@@ -3282,7 +3282,7 @@ export const reference = {
       name: 'Other tools',
       items: [
         {
-          name: 'Supabase CLI',
+          name: 'Savira CLI',
           url: '/reference/cli/start',
           icon: '/img/icons/menu/reference-cli' as `/${string}`,
         },
@@ -3431,7 +3431,7 @@ export const reference_kotlin_v3 = {
 
 export const reference_cli = {
   icon: 'reference-cli',
-  title: 'Supabase CLI',
+  title: 'Savira CLI',
   url: '/guides/reference/cli',
   parent: '/',
   pkg: {

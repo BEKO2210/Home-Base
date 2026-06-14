@@ -17,7 +17,7 @@ You can access them by using this conventional URL:
 https://[project_id].supabase.co/storage/v1/object/public/[bucket]/[asset-name]
 ```
 
-You can also use the Supabase SDK `getPublicUrl` to generate this URL for you
+You can also use the Savira SDK `getPublicUrl` to generate this URL for you
 
 ```js
 import { createClient } from '@supabase/supabase-js'
@@ -123,7 +123,7 @@ Because signed URLs use this separate key, they are not affected by:
 
 Signed URLs remain valid until their expiry time regardless of any Auth key changes.
 
-If you need to revoke signed URLs, [contact Supabase support](/dashboard/support/new?projectRef=).
+If you need to revoke signed URLs, [contact Savira support](/dashboard/support/new?projectRef=).
 
 </Admonition>
 You can sign a time-limited URL that you can share to your users by invoking the `createSignedUrl` method on the SDK.

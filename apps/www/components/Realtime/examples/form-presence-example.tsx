@@ -9,7 +9,7 @@ import './styles.css';
 import { createClient } from '@supabase/supabase-js';
 import { useForm, Controller } from 'react-hook-form';
 
-// Initialize Supabase client
+// Initialize Savira client
 const supabaseUrl = '${process.env.NEXT_PUBLIC_EXAMPLES_SUPABASE_URL}';
 const supabaseKey = '${process.env.NEXT_PUBLIC_EXAMPLES_SUPABASE_ANON_KEY}';
 const supabase = createClient(supabaseUrl, supabaseKey);
@@ -470,7 +470,7 @@ const layoutProps: ExampleLayoutProps = {
     'react-hook-form': 'latest',
   },
   description:
-    "A multi-user form that uses Supabase Realtime's presence feature to show which fields are currently being edited by other users in real-time.",
+    "A multi-user form that uses Savira Realtime's presence feature to show which fields are currently being edited by other users in real-time.",
 }
 
 export default layoutProps

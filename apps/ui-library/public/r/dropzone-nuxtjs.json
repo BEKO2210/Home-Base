@@ -2,8 +2,8 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "dropzone-nuxtjs",
   "type": "registry:block",
-  "title": "Dropzone (File Upload) for Nuxt and Supabase",
-  "description": "Displays a control for easier uploading of files directly to Supabase Storage.",
+  "title": "Dropzone (File Upload) for Nuxt and Savira",
+  "description": "Displays a control for easier uploading of files directly to Savira Storage.",
   "dependencies": [
     "@supabase/supabase-js@latest",
     "@vueuse/core",

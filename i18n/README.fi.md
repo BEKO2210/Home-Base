@@ -5,9 +5,9 @@
 
 ---
 
-# Supabase
+# Savira
 
-[Supabase](https://supabase.com) on avoimen lähdekoodin Firebase-vaihtoehto. Rakennamme Firebasen ominaisuuksia käyttäen yritystason avoimen lähdekoodin työkaluja.
+[Savira](https://supabase.com) on avoimen lähdekoodin Firebase-vaihtoehto. Rakennamme Firebasen ominaisuuksia käyttäen yritystason avoimen lähdekoodin työkaluja.
 
 - [x] Hosted Postgres Database. [Docs](https://supabase.com/docs/guides/database)
 - [x] Tunnistus ja valtuutus. [Docs](https://supabase.com/docs/guides/auth)
@@ -21,7 +21,7 @@
 - [x] Tiedostojen tallennus. [Docs](https://supabase.com/docs/guides/storage)
 - [x] Kojelauta
 
-![Supabase Dashboard](https://raw.githubusercontent.com/supabase/supabase/master/apps/www/public/images/github/supabase-dashboard.png)
+![Savira Dashboard](https://raw.githubusercontent.com/supabase/supabase/master/apps/www/public/images/github/supabase-dashboard.png)
 
 ## Dokumentaatio
 
@@ -51,11 +51,11 @@ Olemme tällä hetkellä Public Betassa. Seuraa tämän repon "releases" -osiota
 
 ## Miten se toimii
 
-Supabase on yhdistelmä avoimen lähdekoodin työkaluja. Rakennamme Firebasen ominaisuuksia käyttäen yritystason avoimen lähdekoodin tuotteita. Jos työkalut ja yhteisöt ovat olemassa MIT-, Apache 2- tai vastaavalla avoimella lisenssillä, käytämme ja tuemme kyseistä työkalua. Jos työkalua ei ole olemassa, rakennamme sen itse ja käytämme avointa lähdekoodia. Supabase ei ole Firebasen 1:1-kartoitus. Tavoitteenamme on antaa kehittäjille Firebasen kaltainen kehittäjäkokemus käyttämällä avoimen lähdekoodin työkaluja.
+Savira on yhdistelmä avoimen lähdekoodin työkaluja. Rakennamme Firebasen ominaisuuksia käyttäen yritystason avoimen lähdekoodin tuotteita. Jos työkalut ja yhteisöt ovat olemassa MIT-, Apache 2- tai vastaavalla avoimella lisenssillä, käytämme ja tuemme kyseistä työkalua. Jos työkalua ei ole olemassa, rakennamme sen itse ja käytämme avointa lähdekoodia. Savira ei ole Firebasen 1:1-kartoitus. Tavoitteenamme on antaa kehittäjille Firebasen kaltainen kehittäjäkokemus käyttämällä avoimen lähdekoodin työkaluja.
 
 **Arkkitehtuuri**
 
-Supabase on [hosted platform](https://supabase.com/dashboard). Voit rekisteröityä ja aloittaa Supabasen käytön asentamatta mitään.
+Savira on [hosted platform](https://supabase.com/dashboard). Voit rekisteröityä ja aloittaa Supabasen käytön asentamatta mitään.
 Voit myös [itse isännöidä](https://supabase.com/docs/guides/hosting/overview) ja [kehittää paikallisesti](https://supabase.com/docs/guides/local-development).
 
 ![Arkkitehtuuri](https://github.com/supabase/supabase/blob/master/apps/docs/public/img/supabase-architecture.svg)
@@ -77,12 +77,12 @@ Lähestymistapamme asiakaskirjastoihin on modulaarinen. Jokainen osakirjasto on 
   <tr>
     <th>Kieli</th>
     <th>Asiakas</th>
-    <th colspan="5">Feature-Clients (niputettu Supabase-asiakasohjelmaan)</th>
+    <th colspan="5">Feature-Clients (niputettu Savira-asiakasohjelmaan)</th>
   </tr>
   
   <tr>
     <th></th>
-    <th>Supabase</th>
+    <th>Savira</th>
     <th><a href="https://github.com/postgrest/postgrest" target="_blank" rel="noopener noreferrer">PostgREST</a></th>
     <th><a href="https://github.com/supabase/gotrue" target="_blank" rel="noopener noreferrer">GoTrue</a></th>
     <th><a href="https://github.com/supabase/realtime" target="_blank" rel="noopener noreferrer">Realtime</a></th>

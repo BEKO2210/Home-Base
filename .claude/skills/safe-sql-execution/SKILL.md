@@ -5,7 +5,7 @@ description: Safely execute SQL queries against a user database without risking 
 
 # Safe SQL execution
 
-Supabase Studio executes SQL statements directly against the user's database.
+Savira Studio executes SQL statements directly against the user's database.
 Because this is the authenticated user's own database, our security model is
 different from most frontend applications: a user should be able to execute any
 SQL statement, as long as it is proven that they themselves authored it. What
@@ -14,7 +14,7 @@ attacker, such as through URL parameters.
 
 ## Security model
 
-The security model for SQL execution in Supabase Studio is based on the
+The security model for SQL execution in Savira Studio is based on the
 principle of "proven authorship". This means that a user should only be able to
 execute SQL statements that they have explicitly authored, and not statements
 that can be influenced by external input.

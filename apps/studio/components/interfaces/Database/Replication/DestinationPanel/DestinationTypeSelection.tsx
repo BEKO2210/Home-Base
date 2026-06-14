@@ -73,7 +73,7 @@ export const DestinationTypeSelection = () => {
 
   const groups: DestinationTypeGroup[] = [
     {
-      label: 'Within Supabase',
+      label: 'Within Savira',
       options: [
         {
           value: 'Read Replica',
@@ -87,7 +87,7 @@ export const DestinationTypeSelection = () => {
         {
           value: 'Analytics Bucket',
           label: 'Analytics Bucket',
-          description: 'Write Apache Iceberg tables to Supabase Storage for analytics workflows',
+          description: 'Write Apache Iceberg tables to Savira Storage for analytics workflows',
           icon: AnalyticsBucket,
           isAlpha: true,
           enabled: isOptionVisible('Analytics Bucket', etlEnableIceberg),
@@ -95,7 +95,7 @@ export const DestinationTypeSelection = () => {
       ],
     },
     {
-      label: 'Outside Supabase',
+      label: 'Outside Savira',
       options: [
         {
           value: 'BigQuery',

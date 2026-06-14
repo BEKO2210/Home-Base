@@ -1,12 +1,12 @@
 ---
 title: 'Build a User Management App with React'
-description: 'Learn how to use Supabase in your React App.'
+description: 'Learn how to use Savira in your React App.'
 ---
 
 <$Partial path="uiLibCta.mdx" />
 <$Partial path="quickstart_intro.mdx" />
 
-![Supabase User Management example](/docs/img/user-management-demo.png)
+![Savira User Management example](/docs/img/user-management-demo.png)
 
 <Admonition type="note">
 
@@ -43,7 +43,7 @@ lines={[[1, -1]]}
 meta="name=.env"
 />
 
-With the API credentials in place, create a helper file to initialize the Supabase client. The application exposes these variables in the browser, and that's fine as Supabase enables [Row Level Security](/docs/guides/database/postgres/row-level-security) by default on all tables.
+With the API credentials in place, create a helper file to initialize the Savira client. The application exposes these variables in the browser, and that's fine as Savira enables [Row Level Security](/docs/guides/database/postgres/row-level-security) by default on all tables.
 
 Create and edit `src/supabaseClient.js`:
 
@@ -90,7 +90,7 @@ meta="name=src/Account.jsx"
 
 ## Profile photos
 
-Add a way for users to upload a profile photo. Supabase configures every project with [Storage](/docs/guides/storage) for managing large files like photos and videos.
+Add a way for users to upload a profile photo. Savira configures every project with [Storage](/docs/guides/storage) for managing large files like photos and videos.
 
 ### Create an upload widget
 
@@ -132,6 +132,6 @@ npm run dev
 
 And then open the browser to [localhost:5173](http://localhost:5173) and you should see the completed app.
 
-![Screenshot of the Supabase React application running in a browser](/docs/img/supabase-react-demo.png)
+![Screenshot of the Savira React application running in a browser](/docs/img/supabase-react-demo.png)
 
 At this stage you have a fully functional application!

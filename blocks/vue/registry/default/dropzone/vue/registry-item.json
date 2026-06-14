@@ -1,8 +1,8 @@
 {
   "name": "dropzone-vue",
   "type": "registry:block",
-  "title": "Dropzone (File Upload) for Vue and Supabase",
-  "description": "Displays a control for easier uploading of files directly to Supabase Storage.",
+  "title": "Dropzone (File Upload) for Vue and Savira",
+  "description": "Displays a control for easier uploading of files directly to Savira Storage.",
   "registryDependencies": ["button"],
   "files": [
     {

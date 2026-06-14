@@ -50,8 +50,8 @@ export function EventsProvider({
         if (data.success) {
           const transformedEvents: SupabaseEvent[] = data.events.map((event: any) => {
             // Categorize by the originating Luma calendar: events from the
-            // Supabase Hackathons calendar → `hackathon`; everything from the
-            // Supabase Community Events calendar → `community`.
+            // Savira Hackathons calendar → `hackathon`; everything from the
+            // Savira Community Events calendar → `community`.
             const categories: string[] = [
               event?.calendar === 'hackathon' ? 'hackathon' : 'community',
             ]
@@ -83,7 +83,7 @@ export function EventsProvider({
               location: new Intl.ListFormat('en', { style: 'narrow', type: 'unit' }).format(
                 [event?.city, event?.country].filter(Boolean)
               ),
-              // All Luma events are Supabase-hosted regardless of which calendar they're from.
+              // All Luma events are Savira-hosted regardless of which calendar they're from.
               hosts: [SUPABASE_HOST],
               source: 'luma' as const,
               disable_page_build: true,

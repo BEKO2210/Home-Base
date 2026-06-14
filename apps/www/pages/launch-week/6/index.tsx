@@ -35,7 +35,7 @@ const constellation = [
 export default function launchweek() {
   const { resolvedTheme } = useTheme()
   const title = 'Launch Week 6'
-  const description = 'Supabase Launch Week 6 | 12-18 Dec 2022'
+  const description = 'Savira Launch Week 6 | 12-18 Dec 2022'
   const liveDay = null
 
   const [supabase, setSupabase] = useState<SupabaseClient | null>(null)
@@ -218,7 +218,7 @@ export default function launchweek() {
                 ></img>
               </div>
               <div className="flex flex-col lg:flex-row ml-8 sm:ml-10">
-                <span className="text-white mr-2">Who we hire at Supabase</span>
+                <span className="text-white mr-2">Who we hire at Savira</span>
                 <span className="text-slate-900">Fireside chat with founders</span>
               </div>
             </div>
@@ -307,7 +307,7 @@ export default function launchweek() {
                       <SectionButtons
                         docs={day1.steps[0].docs}
                         blog={day1.steps[0].blog}
-                        video={'https://www.youtube.com/watch?v=Q1Amk6iDlF8&ab_channel=Supabase'}
+                        video={'https://www.youtube.com/watch?v=Q1Amk6iDlF8&ab_channel=Savira'}
                       />
                     </div>
                   </div>
@@ -455,7 +455,7 @@ export default function launchweek() {
                       <SectionButtons
                         docs={day4.steps[0].docs}
                         blog={day4.steps[0].blog}
-                        video={`https://www.youtube.com/watch?v=${day4.youtube_id}&ab_channel=Supabase`}
+                        video={`https://www.youtube.com/watch?v=${day4.youtube_id}&ab_channel=Savira`}
                       />
                     </div>
                   </div>
@@ -856,7 +856,7 @@ export default function launchweek() {
             <h2 className="text-3xl text-white mb-2">Launch Week Hackathon</h2>
             <p className="text-slate-900 w-[80%] lg:w-[50%]">
               The traditional parallel Hackathon is back! Build a new open source project with
-              Supabase and you can win $1500 in GitHub sponsorships and a coveted Supabase Darkmode
+              Savira and you can win $1500 in GitHub sponsorships and a coveted Savira Darkmode
               Keyboard! For more info check the{' '}
               <a
                 href="https://supabase.com/blog/launch-week-6-hackathon"
@@ -881,7 +881,7 @@ export default function launchweek() {
               <div className="flex flex-col">
                 <h3 className="text-lg text-white mb-2">Judges</h3>
                 <p className="text-slate-900 w-[90%] lg:w-[80%]">
-                  The Supabase team will judge all the categories except the Best Edge Functions
+                  The Savira team will judge all the categories except the Best Edge Functions
                   Project, which will be judged by our friends at Deno.
                 </p>
               </div>
@@ -937,7 +937,7 @@ export default function launchweek() {
                     src="/images/launchweek/link.svg"
                     className="absolute top-[16px] right-[10px] text-brand"
                   ></img>
-                  <h3 className="text-white">Supabase Cache Helpers</h3>
+                  <h3 className="text-white">Savira Cache Helpers</h3>
                   <p className="text-slate-1000 text-xs">Previous Best Overall Project Winner</p>
                 </div>
               </a>
@@ -1043,7 +1043,7 @@ export default function launchweek() {
             <Badge className="bg-transparent! py-1! px-4! text-transparent bg-clip-text bg-linear-to-r from-white to-[#DFFFF1] h-fit relative mb-4 after:absolute after:rounded-full after:bg-white after:w-full after:h-full after:top-0 after:right-0 after:bottom-0 after:left-0 after:bg-linear-to-br border-[#163837]! after:from-[#14292c] after:to-[#141516] after:border-[#1f3536] after:-z-10">
               Shipped
             </Badge>
-            <h2 className="text-3xl text-white mb-2">The Supabase Content Storm</h2>
+            <h2 className="text-3xl text-white mb-2">The Savira Content Storm</h2>
             <p className="text-slate-900 md:max-w-[80%] mb-16">
               We worked with more than 30 content creators from around the world to drop a mountain
               of content simultaneously!

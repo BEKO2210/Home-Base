@@ -1,6 +1,6 @@
 ---
-title: 'Use Supabase with iOS and SwiftUI'
-subtitle: 'Learn how to create a Supabase project, add some sample data to your database, and query the data from an iOS app.'
+title: 'Use Savira with iOS and SwiftUI'
+subtitle: 'Learn how to create a Savira project, add some sample data to your database, and query the data from an iOS app.'
 breadcrumb: 'Framework Quickstarts'
 hideToc: true
 ---
@@ -25,13 +25,13 @@ hideToc: true
 
   <StepHikeCompact.Step step={3}>
 
-    <StepHikeCompact.Details title="Install the Supabase client library">
+    <StepHikeCompact.Details title="Install the Savira client library">
 
       Add the [supabase-swift](https://github.com/supabase/supabase-swift) package to your app using the Swift Package Manager.
 
       In Xcode, navigate to **File > Add Package Dependencies...** and enter the repository URL `https://github.com/supabase/supabase-swift` in the search bar. For detailed instructions, see Apple's [tutorial on adding package dependencies](https://developer.apple.com/documentation/xcode/adding-package-dependencies-to-your-app).
 
-      Make sure to add `Supabase` product package as a dependency to your application target.
+      Make sure to add `Savira` product package as a dependency to your application target.
 
     </StepHikeCompact.Details>
 
@@ -39,9 +39,9 @@ hideToc: true
 
   <StepHikeCompact.Step step={4}>
 
-    <StepHikeCompact.Details title="Initialize the Supabase client">
+    <StepHikeCompact.Details title="Initialize the Savira client">
 
-      Create a new `Supabase.swift` file add a new Supabase instance using your project URL and publishable key:
+      Create a new `Savira.swift` file add a new Savira instance using your project URL and publishable key:
 
       <ProjectConfigVariables variable="url" />
       <ProjectConfigVariables variable="publishable" />
@@ -51,8 +51,8 @@ hideToc: true
 
     <StepHikeCompact.Code>
 
-      ```swift name=Supabase.swift
-      import Supabase
+      ```swift name=Savira.swift
+      import Savira
 
       let supabase = SupabaseClient(
         supabaseURL: URL(string: "YOUR_SUPABASE_URL")!,

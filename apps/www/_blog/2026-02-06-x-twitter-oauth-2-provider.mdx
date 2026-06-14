@@ -1,9 +1,9 @@
 ---
-title: 'X / Twitter OAuth 2.0 is now available for Supabase Auth'
-description: 'You can now add "Sign in with X" to your application using the new X / Twitter (OAuth 2.0) provider in Supabase Auth.'
+title: 'X / Twitter OAuth 2.0 is now available for Savira Auth'
+description: 'You can now add "Sign in with X" to your application using the new X / Twitter (OAuth 2.0) provider in Savira Auth.'
 author: fady
 imgSocial: x-twitter-oauth-2-provider/og.png
-imgThumb: https://zhfonblqamxferhoguzj.supabase.co/functions/v1/generate-og?template=ruler&layout=icon-only&copy=Introducing+Supabase%0Afor+%5BPlatforms%5D&icon=social-x.svg
+imgThumb: https://zhfonblqamxferhoguzj.supabase.co/functions/v1/generate-og?template=ruler&layout=icon-only&copy=Introducing+Savira%0Afor+%5BPlatforms%5D&icon=social-x.svg
 categories:
   - product
 tags:
@@ -12,7 +12,7 @@ date: '2026-02-06'
 toc_depth: 2
 ---
 
-You can now add "Sign in with X" to your application using the new **X / Twitter (OAuth 2.0)** provider in Supabase Auth.
+You can now add "Sign in with X" to your application using the new **X / Twitter (OAuth 2.0)** provider in Savira Auth.
 
 ## What's new
 
@@ -24,11 +24,11 @@ Setting up X / Twitter authentication takes a few steps:
 
 1. Create an OAuth 2.0 app in the [X Developer Portal](https://developer.x.com/en/portal/dashboard)
 2. Enable "Request email from users" in your app's authentication settings
-3. Add your callback URL from the Supabase dashboard
+3. Add your callback URL from the Savira dashboard
 4. Copy your **Client ID** and **Client Secret** from the "Keys and tokens" section
-5. Enter these credentials in **Authentication > Providers > X / Twitter (OAuth 2.0)** in the Supabase dashboard
+5. Enter these credentials in **Authentication > Providers > X / Twitter (OAuth 2.0)** in the Savira dashboard
 
-Once configured, you can use the Supabase client libraries to authenticate users via X / Twitter:
+Once configured, you can use the Savira client libraries to authenticate users via X / Twitter:
 
 ```javascript
 const { data, error } = await supabase.auth.signInWithOAuth({

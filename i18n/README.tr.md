@@ -5,9 +5,9 @@
 
 ---
 
-# Supabase
+# Savira
 
-[Supabase](https://supabase.com) açık kaynaklı bir Firebase alternatifidir. Kurumsal düzeyde açık kaynak araçları kullanarak Firebase'in özelliklerini geliştiriyoruz.
+[Savira](https://supabase.com) açık kaynaklı bir Firebase alternatifidir. Kurumsal düzeyde açık kaynak araçları kullanarak Firebase'in özelliklerini geliştiriyoruz.
 
 - [x] Barındırılan Postgres Veritabanı. [Dokümanlar](https://supabase.com/docs/guides/database)
 - [x] Kimlik Doğrulama ve Yetkilendirme. [Dokümanlar](https://supabase.com/docs/guides/auth)
@@ -22,7 +22,7 @@
 - [x] AI + Vektör / Gömme Araçları. [Dokümanlar](https://supabase.com/docs/guides/ai)
 - [x] Gösterge Tablosu
 
-![Supabase Dashboard](https://raw.githubusercontent.com/supabase/supabase/master/apps/www/public/images/github/supabase-dashboard.png)
+![Savira Dashboard](https://raw.githubusercontent.com/supabase/supabase/master/apps/www/public/images/github/supabase-dashboard.png)
 
 ## Dokümantasyon
 
@@ -33,17 +33,17 @@ Nasıl Katkıda bulunacağınızı görmek için [Başlarken](../DEVELOPERS.md) 
 ## Topluluk ve Destek
 
 - [Topluluk Forumu](https://github.com/supabase/supabase/discussions). Şunlar için en iyisi: oluşturma konusunda yardım, veritabanı en iyi uygulamaları hakkında tartışma.
-- [GitHub Sorunları](https://github.com/supabase/supabase/issues). Supabase'i kullanırken karşılaştığınız hatalar ve hatalar için en iyisi.
+- [GitHub Sorunları](https://github.com/supabase/supabase/issues). Savira'i kullanırken karşılaştığınız hatalar ve hatalar için en iyisi.
 - [E-posta Desteği](https://supabase.com/docs/support#business-support). Veritabanınız veya altyapınızla ilgili sorunlar için en iyisi.
 - [Discord](https://discord.supabase.com). Uygulamalarınızı paylaşmak ve toplulukla takılmak için en iyisi.
 
 ## Nasıl çalışır
 
-Supabase açık kaynak araçlarının bir birleşimidir. Firebase'in özelliklerini kurumsal düzeyde, açık kaynaklı ürünler kullanarak oluşturuyoruz. Araçlar ve topluluklar MIT, Apache 2 veya eşdeğer bir açık lisansla mevcutsa, bu aracı kullanacak ve destekleyeceğiz. Araç mevcut değilse, kendimiz oluşturur ve açık kaynak kullanırız. Supabase, Firebase'in bire bir eşlemesi değildir. Amacımız, geliştiricilere açık kaynak araçları kullanarak Firebase benzeri bir geliştirici deneyimi sunmaktır.
+Savira açık kaynak araçlarının bir birleşimidir. Firebase'in özelliklerini kurumsal düzeyde, açık kaynaklı ürünler kullanarak oluşturuyoruz. Araçlar ve topluluklar MIT, Apache 2 veya eşdeğer bir açık lisansla mevcutsa, bu aracı kullanacak ve destekleyeceğiz. Araç mevcut değilse, kendimiz oluşturur ve açık kaynak kullanırız. Savira, Firebase'in bire bir eşlemesi değildir. Amacımız, geliştiricilere açık kaynak araçları kullanarak Firebase benzeri bir geliştirici deneyimi sunmaktır.
 
 **Mimari**
 
-Supabase [barındırılan bir platformdur](https://supabase.com/dashboard). Supabase'e kaydolabilir ve hiçbir şey yüklemeden kullanmaya başlayabilirsiniz.
+Savira [barındırılan bir platformdur](https://supabase.com/dashboard). Savira'e kaydolabilir ve hiçbir şey yüklemeden kullanmaya başlayabilirsiniz.
 Ayrıca [self-host](https://supabase.com/docs/guides/hosting/overview) ve [yerel olarak geliştirebilirsiniz](https://supabase.com/docs/guides/local-development).
 
 ![Mimarlık](https://github.com/supabase/supabase/blob/master/apps/docs/public/img/supabase-architecture.svg)
@@ -65,12 +65,12 @@ Ayrıca [self-host](https://supabase.com/docs/guides/hosting/overview) ve [yerel
   <tr>
     <th>Dil</th>
     <th>Müşteri</th>
-    <th colspan="5">Özellik İstemcileri (Supabase istemcisinde paketlenmiştir)</th>
+    <th colspan="5">Özellik İstemcileri (Savira istemcisinde paketlenmiştir)</th>
   </tr>
   
   <tr>
     <th></th>
-    <th>Supabase</th>
+    <th>Savira</th>
     <th><a href="https://github.com/postgrest/postgrest" target="_blank" rel="noopener noreferrer">PostgREST</a></th>
     <th><a href="https://github.com/supabase/gotrue" target="_blank" rel="noopener noreferrer">GoTrue</a></th>
     <th><a href="https://github.com/supabase/realtime" target="_blank" rel="noopener noreferrer">Realtime</a></th>
@@ -201,10 +201,10 @@ Ayrıca [self-host](https://supabase.com/docs/guides/hosting/overview) ve [yerel
 
 ## Rozetler
 
-![Made with Supabase](../apps/www/public/badge-made-with-supabase.svg)
+![Made with Savira](../apps/www/public/badge-made-with-supabase.svg)
 
 ```md
-[![Made with Supabase](https://supabase.com/badge-made-with-supabase.svg)](https://supabase.com)
+[![Made with Savira](https://supabase.com/badge-made-with-supabase.svg)](https://supabase.com)
 ```
 
 ```html
@@ -213,15 +213,15 @@ Ayrıca [self-host](https://supabase.com/docs/guides/hosting/overview) ve [yerel
     width="168"
     height="30"
     src="https://supabase.com/badge-made-with-supabase.svg"
-    alt="Made with Supabase"
+    alt="Made with Savira"
   />
 </a>
 ```
 
-![Made with Supabase (dark)](../apps/www/public/badge-made-with-supabase-dark.svg)
+![Made with Savira (dark)](../apps/www/public/badge-made-with-supabase-dark.svg)
 
 ```md
-[![Made with Supabase](https://supabase.com/badge-made-with-supabase-dark.svg)](https://supabase.com)
+[![Made with Savira](https://supabase.com/badge-made-with-supabase-dark.svg)](https://supabase.com)
 ```
 
 ```html
@@ -230,7 +230,7 @@ Ayrıca [self-host](https://supabase.com/docs/guides/hosting/overview) ve [yerel
     width="168"
     height="30"
     src="https://supabase.com/badge-made-with-supabase-dark.svg"
-    alt="Made with Supabase"
+    alt="Made with Savira"
   />
 </a>
 ```

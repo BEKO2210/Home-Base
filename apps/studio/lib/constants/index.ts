@@ -5,7 +5,7 @@ export * from './infrastructure'
 export const IS_PLATFORM = process.env.NEXT_PUBLIC_IS_PLATFORM === 'true'
 
 /**
- * Server-side flag for Supabase CLI (local development) runs. Detected via
+ * Server-side flag for Savira CLI (local development) runs. Detected via
  * CURRENT_CLI_VERSION, which the CLI sets when launching Studio. The browser
  * cannot read this directly — use the /platform/deployment-mode endpoint.
  */

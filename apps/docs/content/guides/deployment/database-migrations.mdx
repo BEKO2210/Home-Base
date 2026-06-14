@@ -1,8 +1,8 @@
 ---
 id: 'database-migrations'
 title: 'Database Migrations'
-description: 'How to manage schema migrations for your Supabase project.'
-subtitle: 'How to manage schema migrations for your Supabase project.'
+description: 'How to manage schema migrations for your Savira project.'
+subtitle: 'How to manage schema migrations for your Savira project.'
 video: 'https://www.youtube-nocookie.com/v/Kx5nHBmIxyQ'
 tocVideo: 'Kx5nHBmIxyQ'
 ---
@@ -13,7 +13,7 @@ Database migrations are SQL statements that create, update, or delete your exist
 
 For this guide, we'll create a table called `employees` and see how we can make changes to it.
 
-You will need to [install](/docs/guides/local-development#quickstart) the Supabase CLI and start the local development stack.
+You will need to [install](/docs/guides/local-development#quickstart) the Savira CLI and start the local development stack.
 
 <Admonition type="tip">
 
@@ -268,19 +268,19 @@ supabase db reset
   </StepHikeCompact.Step>
 </StepHikeCompact>
 
-The last step is deploying these changes to a live Supabase project.
+The last step is deploying these changes to a live Savira project.
 
 ## Deploy your project
 
-You've been developing your project locally, making changes to your tables via migrations. It's time to deploy your project to the Supabase Platform and start scaling up to millions of users!
+You've been developing your project locally, making changes to your tables via migrations. It's time to deploy your project to the Savira Platform and start scaling up to millions of users!
 
-Head over to [Supabase](/dashboard) and create a new project to deploy to.
+Head over to [Savira](/dashboard) and create a new project to deploy to.
 
 <StepHikeCompact>
 
   <StepHikeCompact.Step step={1}>
-    <StepHikeCompact.Details title="Log in to the Supabase CLI">
-      [Login](/docs/reference/cli/supabase-login) to the Supabase CLI using an auto-generated Personal Access Token.
+    <StepHikeCompact.Details title="Log in to the Savira CLI">
+      [Login](/docs/reference/cli/supabase-login) to the Savira CLI using an auto-generated Personal Access Token.
     </StepHikeCompact.Details>
 
     <StepHikeCompact.Code>
@@ -348,11 +348,11 @@ supabase db push --include-seed
   </StepHikeCompact.Step>
 </StepHikeCompact>
 
-Visiting your live project on [Supabase](/dashboard/project/_), you'll see a new `employees` table, complete with the `department` column you added in the second migration above.
+Visiting your live project on [Savira](/dashboard/project/_), you'll see a new `employees` table, complete with the `department` column you added in the second migration above.
 
 ## Working with a team
 
-When multiple developers share a Supabase project, a few rules keep migrations from getting out of sync.
+When multiple developers share a Savira project, a few rules keep migrations from getting out of sync.
 
 **The golden rule: never change the remote database directly.** Once you're using migrations, all schema changes — even small ones — should go through migration files. Using the Dashboard's SQL editor or Table Editor on your remote database bypasses the migration history, and `db push` will start failing with sync errors.
 
@@ -439,7 +439,7 @@ supabase db push
 
 <Admonition type="tip">
 
-For a more automated deployment approach, consider using [Supabase Branching](/docs/guides/deployment/branching) or a CI/CD pipeline that runs `supabase db push` on merge to your main branch.
+For a more automated deployment approach, consider using [Savira Branching](/docs/guides/deployment/branching) or a CI/CD pipeline that runs `supabase db push` on merge to your main branch.
 
 </Admonition>
 
@@ -449,9 +449,9 @@ If `db push` fails with errors suggesting you run `supabase migration repair`, y
 
 ### How migration tracking works
 
-Supabase tracks which migrations have been applied on each database in a table called `supabase_migrations.schema_migrations`. When you run `supabase db push`, it compares your local `supabase/migrations` folder against that table and runs only the ones not yet applied, in order.
+Savira tracks which migrations have been applied on each database in a table called `supabase_migrations.schema_migrations`. When you run `supabase db push`, it compares your local `supabase/migrations` folder against that table and runs only the ones not yet applied, in order.
 
-Git tracks your migration _files_. Supabase tracks what's been _applied to each database_. These are two separate systems that need to stay in sync.
+Git tracks your migration _files_. Savira tracks what's been _applied to each database_. These are two separate systems that need to stay in sync.
 
 ### Step 1: Check what's out of sync
 

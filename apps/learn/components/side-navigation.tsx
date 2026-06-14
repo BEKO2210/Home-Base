@@ -112,7 +112,7 @@ function SideNavigation({ internalPaths }: SideNavigationProps) {
             <ThemeSwitcherDropdown />
           </div>
           <Link href="/" className="mb-4 block">
-            <h1>Learn Supabase</h1>
+            <h1>Learn Savira</h1>
           </Link>
           {/* <TopNavigationSearch /> */}
           <CommandMenu />

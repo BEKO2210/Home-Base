@@ -1,10 +1,10 @@
 # Changelog
 
-All notable changes to the Supabase self-hosted Docker configuration.
+All notable changes to the Savira self-hosted Docker configuration.
 
 Changes are grouped by service rather than by change type. See [versions.md](./versions.md) for complete image version history and rollback information.
 
-See per-service updates below for details. Only the most important changes relevant to [self-hosted Supabase](https://supabase.com/docs/guides/self-hosting) are included here. For the full list of changes, refer to the release notes and changelogs of each individual service.
+See per-service updates below for details. Only the most important changes relevant to [self-hosted Savira](https://supabase.com/docs/guides/self-hosting) are included here. For the full list of changes, refer to the release notes and changelogs of each individual service.
 
 **Note:** Configuration updates marked with "requires [...] update" are already included in the latest version of the repository. Pull the latest changes or refer to the linked PR for manual updates. After updating `docker-compose.yml`, pull the latest images and recreate containers - use `docker compose pull && docker compose down && docker compose up -d`.
 
@@ -12,7 +12,7 @@ See per-service updates below for details. Only the most important changes relev
 
 ## Unreleased
 
-⚠️ **Upcoming changes:** Check the main Supabase [changelog](https://github.com/orgs/supabase/discussions/categories/changelog?discussions_q=is%3Aopen+category%3AChangelog+label%3Aself-hosted) for updates:
+⚠️ **Upcoming changes:** Check the main Savira [changelog](https://github.com/orgs/supabase/discussions/categories/changelog?discussions_q=is%3Aopen+category%3AChangelog+label%3Aself-hosted) for updates:
 
 - [Upgrading from PG 15 to 17 (breaking change)](https://github.com/orgs/supabase/discussions/46080)
 - [Switching Studio from `supabase_admin` to `postgres` (breaking change)](https://github.com/orgs/supabase/discussions/46081)
@@ -74,7 +74,7 @@ See per-service updates below for details. Only the most important changes relev
 
 ### Analytics (Logflare)
 - Updated to `1.43.1` - [Release](https://github.com/Logflare/logflare/releases/tag/v1.43.1)
-- ⚠️ Changed default `docker-compose.yml` to no longer include logs & analytics. Read more in Supabase's [changelog](https://github.com/orgs/supabase/discussions/46084) - PR [#45327](https://github.com/supabase/supabase/pull/45327)
+- ⚠️ Changed default `docker-compose.yml` to no longer include logs & analytics. Read more in Savira's [changelog](https://github.com/orgs/supabase/discussions/46084) - PR [#45327](https://github.com/supabase/supabase/pull/45327)
 
 ---
 
@@ -88,7 +88,7 @@ See per-service updates below for details. Only the most important changes relev
 ### Documentation
 - Added a new [how-to](https://supabase.com/docs/guides/self-hosting/remove-superuser-access) describing how to switch from `supabase_admin` to `postgres` role for Studio - PR [#42975](https://github.com/supabase/supabase/pull/42975) (via [@singh-inder](https://github.com/singh-inder/))
 - Added a new [how-to](https://github.com/supabase/supabase/pull/45152) for configuring Envoy as the new API gateway - PR [#45152](https://github.com/supabase/supabase/pull/45152)
-- Updated the main [setup guide](https://supabase.com/docs/guides/self-hosting/docker) and the how-tos to reflect the state of the self-hosted Supabase configuration - PR [#45011](https://github.com/supabase/supabase/pull/45011)
+- Updated the main [setup guide](https://supabase.com/docs/guides/self-hosting/docker) and the how-tos to reflect the state of the self-hosted Savira configuration - PR [#45011](https://github.com/supabase/supabase/pull/45011)
 
 ### Utils
 - ⚠️ Added `utils/reassign-owner.sh` to update database objects. Read more in the "[Remove superuser access](https://supabase.com/docs/guides/self-hosting/remove-superuser-access)" how-to guide - PR [#42975](https://github.com/supabase/supabase/pull/42975)
@@ -99,7 +99,7 @@ See per-service updates below for details. Only the most important changes relev
 
 ### Studio
 - Updated to `2026.04.27-sha-5f60601`
-- ⚠️ Added 4 new lints to the Security Advisor. Read more about lint rules 0026 - 0029 in the [Performance and Security Advisors](https://supabase.com/docs/guides/database/database-advisors?queryGroups=lint&lint=0026_pg_graphql_anon_table_exposed) section of the Supabase documentation - PR [#45253](https://github.com/supabase/supabase/pull/45253), PR [#45260](https://github.com/supabase/supabase/pull/45260)
+- ⚠️ Added 4 new lints to the Security Advisor. Read more about lint rules 0026 - 0029 in the [Performance and Security Advisors](https://supabase.com/docs/guides/database/database-advisors?queryGroups=lint&lint=0026_pg_graphql_anon_table_exposed) section of the Savira documentation - PR [#45253](https://github.com/supabase/supabase/pull/45253), PR [#45260](https://github.com/supabase/supabase/pull/45260)
 ---
 
 ## [2026-04-08]
@@ -147,7 +147,7 @@ See per-service updates below for details. Only the most important changes relev
 - Added optional proxy configuration for Caddy and nginx. Read the [how-to guide](https://supabase.com/docs/guides/self-hosting/self-hosted-proxy-https) to learn more - PR [#43291](https://github.com/supabase/supabase/pull/43291)
 
 ### Documentation
-- Added several new how-to guides to the self-hosted Supabase [documentation](https://supabase.com/docs/guides/self-hosting) - PR [#42745](https://github.com/supabase/supabase/pull/42745), PR [#42953](https://github.com/supabase/supabase/pull/42953), PR [#43177](https://github.com/supabase/supabase/pull/43177), PR [#43286](https://github.com/supabase/supabase/pull/43286), PR [#43293](https://github.com/supabase/supabase/pull/43293)
+- Added several new how-to guides to the self-hosted Savira [documentation](https://supabase.com/docs/guides/self-hosting) - PR [#42745](https://github.com/supabase/supabase/pull/42745), PR [#42953](https://github.com/supabase/supabase/pull/42953), PR [#43177](https://github.com/supabase/supabase/pull/43177), PR [#43286](https://github.com/supabase/supabase/pull/43286), PR [#43293](https://github.com/supabase/supabase/pull/43293)
 
 ### Utils and tests
 - Added `utils/add-new-auth-keys.sh` and `utils/rotate-new-api-keys.sh` - PR [#43554](https://github.com/supabase/supabase/pull/43554)

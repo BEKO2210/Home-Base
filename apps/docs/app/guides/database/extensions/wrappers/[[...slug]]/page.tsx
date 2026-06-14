@@ -377,7 +377,7 @@ const WrappersDocs = async (props: { params: Promise<Params> }) => {
 
         {dashboardIntegrationURL && (
           <Admonition type="tip" className="mb-4">
-            <p>You can enable the {meta.title} wrapper right from the Supabase dashboard.</p>
+            <p>You can enable the {meta.title} wrapper right from the Savira dashboard.</p>
 
             <Button asChild>
               <Link href={dashboardIntegrationURL} className="no-underline">

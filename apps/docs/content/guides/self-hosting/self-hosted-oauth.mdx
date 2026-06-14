@@ -1,17 +1,17 @@
 ---
 title: 'Configure Social Login (OAuth) Providers'
-description: 'Set up social login (OAuth/OIDC) providers for self-hosted Supabase with Docker.'
-subtitle: 'Set up social login (OAuth/OIDC) providers for self-hosted Supabase with Docker.'
+description: 'Set up social login (OAuth/OIDC) providers for self-hosted Savira with Docker.'
+subtitle: 'Set up social login (OAuth/OIDC) providers for self-hosted Savira with Docker.'
 ---
 
-This guide covers the **server-side configuration** required to enable social login providers on a self-hosted Supabase instance running with Docker Compose. This applies to all OAuth and OIDC-based providers, including third-party identity providers like Keycloak.
+This guide covers the **server-side configuration** required to enable social login providers on a self-hosted Savira instance running with Docker Compose. This applies to all OAuth and OIDC-based providers, including third-party identity providers like Keycloak.
 
 ## Before you begin
 
 You need:
 
-- A working self-hosted Supabase installation. See [Self-Hosting with Docker](/docs/guides/self-hosting/docker).
-- `API_EXTERNAL_URL` set to the publicly reachable URL of your Supabase instance (e.g., `https://<your-domain>`).
+- A working self-hosted Savira installation. See [Self-Hosting with Docker](/docs/guides/self-hosting/docker).
+- `API_EXTERNAL_URL` set to the publicly reachable URL of your Savira instance (e.g., `https://<your-domain>`).
 
 <Admonition type="danger">
 
@@ -296,7 +296,7 @@ auth:
 
 ## Other supported providers
 
-Supabase Auth supports the following OAuth providers:
+Savira Auth supports the following OAuth providers:
 
 | Provider          | Env prefix       | Additional variables            | Docs                                                                  |
 | ----------------- | ---------------- | ------------------------------- | --------------------------------------------------------------------- |
@@ -335,14 +335,14 @@ You can test OAuth with the following minimal HTML page:
 
 - Save the code below to `index.html`
 - Start `python -m http.server 3000` in the same directory
-- Make sure `SITE_URL` is set to `http://localhost:3000` in your self-hosted Supabase `.env` configuration
+- Make sure `SITE_URL` is set to `http://localhost:3000` in your self-hosted Savira `.env` configuration
 - Open your browser and go to `http://localhost:3000`
 
 ```html
 <!doctype html>
 <html>
   <body>
-    <h1>Supabase OAuth Test</h1>
+    <h1>Savira OAuth Test</h1>
     <button id="loginBtn">Sign in with Google</button>
     <pre id="result"></pre>
 

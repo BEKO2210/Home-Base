@@ -58,7 +58,7 @@ export const componentPages: SidebarNavGroup = {
       supportedFrameworks: ['nextjs', 'react-router', 'tanstack', 'react', 'vue', 'nuxtjs'],
       href: '/docs/nextjs/client',
       items: [],
-      commandItemLabel: 'Supabase Client',
+      commandItemLabel: 'Savira Client',
     },
     {
       title: 'Password-Based Auth',

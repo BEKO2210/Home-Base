@@ -284,7 +284,7 @@ function DirectConnectionContent({ state, deploymentMode }: StepContentProps) {
           >
             configurable
           </a>{' '}
-          for self-hosted Supabase.
+          for self-hosted Savira.
         </p>
       )}
       <ConnectionParameters

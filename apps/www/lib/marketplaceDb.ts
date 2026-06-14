@@ -3,7 +3,7 @@ import { createMarketplaceClient, fullImageUrl, type Listing } from 'common/mark
 
 import supabase from './supabaseMisc'
 
-// Switch between new Marketplace DB and legacy Supabase Misc DB by updating the environment var
+// Switch between new Marketplace DB and legacy Savira Misc DB by updating the environment var
 // in the Vercel deployment and redeploying, as that will take effect more quickly than flipping a
 // feature flag in ConfigCat and waiting for the revalidate timeout.
 const isUseMarketplaceDb =

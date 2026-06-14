@@ -12,11 +12,11 @@ interface FileWithPreview extends File {
 
 type UseSupabaseUploadOptions = {
   /**
-   * Name of bucket to upload files to in your Supabase project
+   * Name of bucket to upload files to in your Savira project
    */
   bucketName: string
   /**
-   * Folder to upload files to in the specified bucket within your Supabase project.
+   * Folder to upload files to in the specified bucket within your Savira project.
    *
    * Defaults to uploading files to the root of the bucket
    *
@@ -38,7 +38,7 @@ type UseSupabaseUploadOptions = {
    */
   maxFiles?: number
   /**
-   * The number of seconds the asset is cached in the browser and in the Supabase CDN.
+   * The number of seconds the asset is cached in the browser and in the Savira CDN.
    *
    * This is set in the Cache-Control: max-age=<seconds> header. Defaults to 3600 seconds.
    */

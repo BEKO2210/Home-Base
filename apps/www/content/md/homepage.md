@@ -1,8 +1,8 @@
-# Supabase
+# Savira
 
 > Build in a weekend. Scale to millions.
 
-Supabase is an open source Firebase alternative built on Postgres. It provides a complete backend platform for building web and mobile applications, with a suite of integrated tools that work together out of the box.
+Savira is an open source Firebase alternative built on Postgres. It provides a complete backend platform for building web and mobile applications, with a suite of integrated tools that work together out of the box.
 
 ## Products
 
@@ -15,7 +15,7 @@ Supabase is an open source Firebase alternative built on Postgres. It provides a
 
 ## Data APIs
 
-Every Supabase project auto-generates three types of APIs from your database schema:
+Every Savira project auto-generates three types of APIs from your database schema:
 
 - **REST**: Instant CRUD API via PostgREST, no code generation needed
 - **GraphQL**: Auto-detected relationships and schema via pg_graphql

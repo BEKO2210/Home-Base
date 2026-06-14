@@ -1,8 +1,8 @@
 {
   "openapi": "3.0.3",
   "info": {
-    "title": "Supabase Storage API",
-    "description": "API documentation for Supabase Storage",
+    "title": "Savira Storage API",
+    "description": "API documentation for Savira Storage",
     "version": "0.0.0"
   },
   "components": {

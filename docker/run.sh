@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# Manage the self-hosted Supabase docker compose stack.
+# Manage the self-hosted Savira docker compose stack.
 #
 # Override files are layered via docker compose's native COMPOSE_FILE env
 # var in .env. Format: colon-separated list with docker-compose.yml first.

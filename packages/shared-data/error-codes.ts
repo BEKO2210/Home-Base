@@ -59,7 +59,7 @@ export const ERROR_CODES: Record<ErrorCodeService, Record<string, ErrorCodeDefin
     },
     bad_oauth_state: {
       description:
-        'OAuth state (data echoed back by the OAuth provider to Supabase Auth) is not in the correct format. Indicates an issue with the OAuth provider integration.',
+        'OAuth state (data echoed back by the OAuth provider to Savira Auth) is not in the correct format. Indicates an issue with the OAuth provider integration.',
     },
     captcha_failed: {
       description:
@@ -75,7 +75,7 @@ export const ERROR_CODES: Record<ErrorCodeService, Record<string, ErrorCodeDefin
     },
     email_address_not_authorized: {
       description:
-        'Email sending is not allowed for this address as your project is using the default SMTP service. Emails can only be sent to members in your Supabase organization. If you want to send emails to others, set up a custom SMTP provider.',
+        'Email sending is not allowed for this address as your project is using the default SMTP service. Emails can only be sent to members in your Savira organization. If you want to send emails to others, set up a custom SMTP provider.',
       references: [
         {
           href: 'https://supabase.com/docs/guides/auth/auth-smtp',
@@ -242,7 +242,7 @@ export const ERROR_CODES: Record<ErrorCodeService, Record<string, ErrorCodeDefin
     },
     provider_email_needs_verification: {
       description:
-        "Not all OAuth providers verify their user's email address. Supabase Auth requires emails to be verified, so this error is sent out when a verification email is sent after completing the OAuth flow.",
+        "Not all OAuth providers verify their user's email address. Savira Auth requires emails to be verified, so this error is sent out when a verification email is sent after completing the OAuth flow.",
     },
     reauthentication_needed: {
       description:
@@ -289,7 +289,7 @@ export const ERROR_CODES: Record<ErrorCodeService, Record<string, ErrorCodeDefin
     },
     saml_idp_not_found: {
       description:
-        'SAML identity provider not found. Most often returned after IdP-initiated sign-in with an unregistered SAML identity provider in Supabase Auth.',
+        'SAML identity provider not found. Most often returned after IdP-initiated sign-in with an unregistered SAML identity provider in Savira Auth.',
     },
     saml_metadata_fetch_failed: {
       description:
@@ -347,7 +347,7 @@ export const ERROR_CODES: Record<ErrorCodeService, Record<string, ErrorCodeDefin
     },
     unexpected_audience: {
       description:
-        "(Deprecated feature not available via Supabase client libraries.) The request's X-JWT-AUD claim does not match the JWT's audience.",
+        "(Deprecated feature not available via Savira client libraries.) The request's X-JWT-AUD claim does not match the JWT's audience.",
     },
     unexpected_failure: {
       description: 'Auth service is degraded or a bug is present, without a specific reason.',

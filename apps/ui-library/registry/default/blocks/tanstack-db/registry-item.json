@@ -2,8 +2,8 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "tanstack-db-nextjs",
   "type": "registry:block",
-  "title": "TanStack DB for Next.js and Supabase",
-  "description": "TanStack DB integration with Supabase collections for type-safe database operations",
+  "title": "TanStack DB for Next.js and Savira",
+  "description": "TanStack DB integration with Savira collections for type-safe database operations",
   "registryDependencies": ["button", "input", "label", "sheet"],
   "dependencies": [
     "supa-tdb-collection@latest",
@@ -12,5 +12,5 @@
     "@tanstack/react-db@latest"
   ],
   "files": [],
-  "docs": "This block provides TanStack DB integration with Supabase collections. The schemas and collections are generated based on your database schema."
+  "docs": "This block provides TanStack DB integration with Savira collections. The schemas and collections are generated based on your database schema."
 }

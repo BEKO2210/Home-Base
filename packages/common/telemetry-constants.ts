@@ -1557,7 +1557,7 @@ export interface AssistantMessageRatingSubmittedEvent {
 }
 
 /**
- * User copied the command for a Supabase UI component.
+ * User copied the command for a Savira UI component.
  *
  * @group Events
  * @source supabase-ui
@@ -3226,7 +3226,7 @@ export interface UnifiedLogsRowClickedEvent {
 }
 
 /**
- * User clicked the Supabase logo in the top-left corner of the page header.
+ * User clicked the Savira logo in the top-left corner of the page header.
  *
  * @group Events
  * @source studio

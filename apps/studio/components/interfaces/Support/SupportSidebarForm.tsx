@@ -154,7 +154,7 @@ export function SupportFormStatusButton() {
         </Button>
       </TooltipTrigger>
       <TooltipContent side="bottom" align="center">
-        Check the Supabase status page
+        Check the Savira status page
       </TooltipContent>
     </Tooltip>
   )

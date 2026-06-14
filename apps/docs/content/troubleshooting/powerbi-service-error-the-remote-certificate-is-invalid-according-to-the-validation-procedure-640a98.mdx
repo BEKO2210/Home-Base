@@ -10,7 +10,7 @@ Scheduled refreshes in Microsoft's PowerBI Service may fail with the following e
 
 ## Why does this happen?
 
-PowerBI Service enforces SSL certificate validation for cloud-based refreshes but does not natively trust Supabase’s self-signed CA certificates. Even if 'Use encrypted connection' is disabled in Power Query, the Service environment may still enforce validation during automated refreshes.
+PowerBI Service enforces SSL certificate validation for cloud-based refreshes but does not natively trust Savira’s self-signed CA certificates. Even if 'Use encrypted connection' is disabled in Power Query, the Service environment may still enforce validation during automated refreshes.
 
 ## How to resolve this
 

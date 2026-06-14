@@ -289,7 +289,7 @@ export const pricing: Pricing = {
       },
       {
         key: 'auth.removeSupabaseBranding',
-        title: 'Remove Supabase branding from emails',
+        title: 'Remove Savira branding from emails',
         plans: {
           free: false,
           pro: true,

@@ -5,18 +5,18 @@ import { breadcrumbs } from '@/lib/breadcrumbs'
 import { breadcrumbListSchema, serializeJsonLd } from '@/lib/json-ld'
 
 export const metadata: Metadata = {
-  title: 'Pricing & Fees | Supabase',
+  title: 'Pricing & Fees | Savira',
   description:
-    'Explore Supabase fees and pricing information. Find our competitive pricing Plans, with no hidden pricing. We have a generous Free Plan for those getting started, and Pay As You Go for those scaling up.',
+    'Explore Savira fees and pricing information. Find our competitive pricing Plans, with no hidden pricing. We have a generous Free Plan for those getting started, and Pay As You Go for those scaling up.',
   alternates: {
     types: {
       'text/markdown': '/pricing.md',
     },
   },
   openGraph: {
-    title: 'Pricing & Fees | Supabase',
+    title: 'Pricing & Fees | Savira',
     description:
-      'Explore Supabase fees and pricing information. Find our competitive pricing Plans, with no hidden pricing. We have a generous Free Plan for those getting started, and Pay As You Go for those scaling up.',
+      'Explore Savira fees and pricing information. Find our competitive pricing Plans, with no hidden pricing. We have a generous Free Plan for those getting started, and Pay As You Go for those scaling up.',
     url: 'https://supabase.com/pricing',
     images: [
       {

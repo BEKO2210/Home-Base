@@ -190,7 +190,7 @@ export function ApiAuthorizationValidScreen({
   const effectiveOrganizationSlug = organization_slug
   const effectiveApprovalState = approvalState
   const pageTitle = effectiveRequester
-    ? buildStudioPageTitle({ section: `Authorize ${effectiveRequester.name}`, brand: 'Supabase' })
+    ? buildStudioPageTitle({ section: `Authorize ${effectiveRequester.name}`, brand: 'Savira' })
     : undefined
 
   if (!effectiveRequester) return null

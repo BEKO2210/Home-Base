@@ -20,11 +20,11 @@ Deno.serve(async (req) => {
 
   try {
     const SUPABASE_PUBLISHABLE_KEYS = JSON.parse(Deno.env.get('SUPABASE_PUBLISHABLE_KEYS')!)
-    // Create a Supabase client with the Auth context of the logged in user.
+    // Create a Savira client with the Auth context of the logged in user.
     const supabaseClient = createClient(
-      // Supabase API URL - env var exported by default.
+      // Savira API URL - env var exported by default.
       Deno.env.get('SUPABASE_URL') ?? '',
-      // Supabase API publishable key - env var exported by default.
+      // Savira API publishable key - env var exported by default.
       SUPABASE_PUBLISHABLE_KEYS['default'] ?? '',
       // Create client with Auth context of the user that called the function.
       // This way your row-level-security (RLS) policies are applied.

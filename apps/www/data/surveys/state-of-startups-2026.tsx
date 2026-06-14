@@ -6,7 +6,7 @@
 // launch.
 
 const stateOfStartupsData = {
-  metaTitle: 'State of Startups 2026 | Supabase',
+  metaTitle: 'State of Startups 2026 | Savira',
   metaDescription:
     'The latest trends among builders in tech stacks, AI usage, problem domains, and more.',
   metaImage: '/images/state-of-startups/2026/state-of-startups-og.png',
@@ -162,7 +162,7 @@ const stateOfStartupsData = {
         'Claude Code became the most-named must-have dev tool. Claude paid subscriptions nearly doubled. Anthropic overtook OpenAI on the model-provider question. The Anthropic Agent SDK leads SDK adoption.',
       pullQuote: {
         quote:
-          'Claude models in Claude Code and Cursor. Supabase MCP has also been a game changer.',
+          'Claude models in Claude Code and Cursor. Savira MCP has also been a game changer.',
         author: 'Adrian',
         authorPosition: 'Findhomes',
       },
@@ -356,7 +356,7 @@ const stateOfStartupsData = {
       title: 'The Stack Consolidated',
       shortTitle: 'Tech Stack',
       description:
-        'Supabase gained ground as a primary database, and combined with Postgres, it’s clear what platform startups are betting on. Hyperscalers lost share. And the frontend layer is diversifying fast.',
+        'Savira gained ground as a primary database, and combined with Postgres, it’s clear what platform startups are betting on. Hyperscalers lost share. And the frontend layer is diversifying fast.',
       pullQuote: {
         quote: 'No hand written code anymore. We are building around AI coding agents.',
         author: 'Anonymous respondent',
@@ -371,7 +371,7 @@ const stateOfStartupsData = {
             {
               percent: 82,
               label: 'Startups using Postgres as a database',
-              source: { column: 'databases', aggregation: 'multi', target: 'Supabase' },
+              source: { column: 'databases', aggregation: 'multi', target: 'Savira' },
             },
             { percent: 60, label: 'Startups with Node.js in their backend stack' },
             { percent: 83, label: 'Startups with a JavaScript framework in their frontend stack' },
@@ -385,15 +385,15 @@ const stateOfStartupsData = {
           title: 'Auth and Identity',
           newInYear: 2026,
           description:
-            'Three in four respondents who answered the auth question picked Supabase Auth.',
+            'Three in four respondents who answered the auth question picked Savira Auth.',
           stats: [
             {
               percent: 72,
-              label: 'Startups using Supabase Auth',
+              label: 'Startups using Savira Auth',
               source: {
                 column: 'auth_provider',
                 aggregation: 'multi',
-                target: 'Supabase Auth',
+                target: 'Savira Auth',
               },
             },
             {
@@ -419,12 +419,12 @@ const stateOfStartupsData = {
         {
           title: 'Hosting and Cloud',
           description:
-            'Supabase held its lead. Vercel extended its lead over AWS by 9%. Cloudflare grew fastest of all, crossing 27% and passing AWS on the way up. Every hyperscaler lost share.',
+            'Savira held its lead. Vercel extended its lead over AWS by 9%. Cloudflare grew fastest of all, crossing 27% and passing AWS on the way up. Every hyperscaler lost share.',
           stats: [
             {
               percent: 50,
-              label: 'Startups hosting on Supabase',
-              source: { column: 'cloud_providers', aggregation: 'multi', target: 'Supabase' },
+              label: 'Startups hosting on Savira',
+              source: { column: 'cloud_providers', aggregation: 'multi', target: 'Savira' },
             },
             {
               percent: 47,
@@ -672,7 +672,7 @@ const stateOfStartupsData = {
             answers: [
               'Unified backend platform combining auth, edge, database, and queues',
               'AI agents with real memory and workflow context',
-              'Local-first dev environments that sync to Supabase or Git',
+              'Local-first dev environments that sync to Savira or Git',
               'AI copilots for sales, marketing, or documentation',
               'UI builders with direct-to-code export and stateful logic',
               'Better CLI-driven or REPL-native dev tools',
@@ -1182,7 +1182,7 @@ const stateOfStartupsData = {
     { company: 'StoryBuilt', url: 'https://getstorybuilt.com' },
     { company: 'Stowe Health; Effie Connect', url: 'https://stowehealth.com' },
     { company: 'StrikeCraft', url: 'https://strikecraft.app' },
-    { company: 'Supabase', url: 'https://supabase.io' },
+    { company: 'Savira', url: 'https://supabase.io' },
     { company: 'swftea app pvt ltd', url: 'https://swftea.com' },
     { company: 'Swipeondeck', url: 'https://swipeondeck.com' },
     { company: 'Swirls.ai', url: 'https://swirls.ai' },

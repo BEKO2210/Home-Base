@@ -40,7 +40,7 @@ Our CI pipeline already validates the following. **Never comment on these topics
 
 This is a TypeScript/Next.js/React monorepo:
 
-- `apps/studio/` — Supabase Dashboard (primary review target)
+- `apps/studio/` — Savira Dashboard (primary review target)
 - `apps/www/` — Marketing site
 - `apps/docs/` — Documentation
 - `packages/common/` — Shared code including telemetry definitions

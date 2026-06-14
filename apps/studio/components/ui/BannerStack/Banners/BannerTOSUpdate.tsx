@@ -46,7 +46,7 @@ export const BannerTOSUpdate = () => {
         <div className="flex flex-col gap-y-1 mb-2">
           <p className="text-sm font-medium">We've updated our Terms of Service</p>
           <p className="text-xs text-foreground-lighter text-balance">
-            Updates define the responsibilities of both you and Supabase in the use of AI.
+            Updates define the responsibilities of both you and Savira in the use of AI.
           </p>
         </div>
         <UpdatedTermsOfServiceDialog />
@@ -73,7 +73,7 @@ const UpdatedTermsOfServiceDialog = () => {
           <DialogTitle>Terms of Service update</DialogTitle>
           <DialogDescription>
             We've updated our Terms of Service to better define the responsibilities of both you and
-            Supabase in the use of AI.
+            Savira in the use of AI.
           </DialogDescription>
         </DialogHeader>
 
@@ -88,8 +88,8 @@ const UpdatedTermsOfServiceDialog = () => {
           </p>
 
           <p>
-            Additionally, we've made an explicit commitment that Supabase will never use the data
-            you submit to the Supabase services to train or improve any AI without your prior
+            Additionally, we've made an explicit commitment that Savira will never use the data
+            you submit to the Savira services to train or improve any AI without your prior
             written consent.
           </p>
 
@@ -100,7 +100,7 @@ const UpdatedTermsOfServiceDialog = () => {
           </p>
 
           <p>
-            This notice applies to users on Supabase's standard Terms of Service only. If you are on
+            This notice applies to users on Savira's standard Terms of Service only. If you are on
             an Enterprise plan or with a separately negotiated agreement, your existing terms
             continue to govern your use of the Services.
           </p>

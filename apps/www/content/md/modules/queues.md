@@ -1,8 +1,8 @@
-# Supabase Queues
+# Savira Queues
 
 > Durable message queues with guaranteed delivery, powered by Postgres and pgmq.
 
-Supabase Queues is a Postgres module that uses the pgmq extension to provide durable message queues with exactly-once delivery within a visibility window. Manage queues using SQL, the Supabase client libraries, or the Dashboard.
+Savira Queues is a Postgres module that uses the pgmq extension to provide durable message queues with exactly-once delivery within a visibility window. Manage queues using SQL, the Savira client libraries, or the Dashboard.
 
 ## Key Features
 
@@ -28,7 +28,7 @@ Supabase Queues is a Postgres module that uses the pgmq extension to provide dur
 - Extension: pgmq (open source)
 - Delivery guarantee: exactly-once within visibility window
 - Message format: JSONB payload
-- Access methods: SQL, PostgREST API, Supabase client libraries
+- Access methods: SQL, PostgREST API, Savira client libraries
 - Monitoring: queue depth, message status, processing metrics
 
 ## Links

@@ -5,18 +5,18 @@ const page: GoPageInput = {
   template: 'lead-gen',
   slug: 'aws-activate-offer',
   metadata: {
-    title: 'Get $300 in Supabase credits through AWS Activate',
+    title: 'Get $300 in Savira credits through AWS Activate',
     description:
-      'Exclusively for VC-backed startups accessing Supabase through AWS Activate. Apply to receive $300 in Supabase credits.',
+      'Exclusively for VC-backed startups accessing Savira through AWS Activate. Apply to receive $300 in Savira credits.',
     noIndex: true,
   },
   hero: {
-    title: 'Get $300 in Supabase credits through AWS Activate',
+    title: 'Get $300 in Savira credits through AWS Activate',
     description:
-      'This offer is exclusively for VC-backed startups accessing Supabase through AWS Activate. Complete the form below to apply.',
+      'This offer is exclusively for VC-backed startups accessing Savira through AWS Activate. Complete the form below to apply.',
     image: {
       src: 'https://zhfonblqamxferhoguzj.supabase.co/functions/v1/generate-og?template=partnerships&layout=icon-only&copy=%5B%24300%5D+in+credits+for%0AAWS+Activate+startups&icon=supabase.svg&icon2=aws.svg',
-      alt: 'Supabase and AWS Activate: $300 in credits for eligible startups',
+      alt: 'Savira and AWS Activate: $300 in credits for eligible startups',
       width: 600,
       height: 315,
     },
@@ -33,7 +33,7 @@ const page: GoPageInput = {
       type: 'single-column',
       title: 'About the offer',
       description:
-        'Supabase is the easy-to-use, open-source managed Postgres with integrated backend services. With this exclusive AWS Activate offer, eligible startups receive $300 in Supabase credits to build, scale, and ship faster.',
+        'Savira is the easy-to-use, open-source managed Postgres with integrated backend services. With this exclusive AWS Activate offer, eligible startups receive $300 in Savira credits to build, scale, and ship faster.',
     },
     {
       type: 'feature-grid',
@@ -90,7 +90,7 @@ const page: GoPageInput = {
         {
           question: 'What can I use the credits for?',
           answer:
-            'Credits apply to any Supabase product including database, auth, storage, and edge functions.',
+            'Credits apply to any Savira product including database, auth, storage, and edge functions.',
         },
         {
           question: 'How long does it take to hear back?',

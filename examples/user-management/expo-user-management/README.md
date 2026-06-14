@@ -8,7 +8,7 @@
 
 ### 1. Create new project
 
-Sign up to Supabase - [https://supabase.com/dashboard](https://supabase.com/dashboard) and create a new project. Wait for your database to start.
+Sign up to Savira - [https://supabase.com/dashboard](https://supabase.com/dashboard) and create a new project. Wait for your database to start.
 
 ### 2. Run "User Management Starter" Quickstart
 
@@ -46,12 +46,12 @@ npm run prebuild
 
 Run the application: `npm start`.
 
-## Supabase details
+## Savira details
 
 ### Postgres Row level security
 
 This project uses very high-level Authorization using Postgres' Row Level Security.
-When you start a Postgres database on Supabase, we populate it with an `auth` schema, and some helper functions.
+When you start a Postgres database on Savira, we populate it with an `auth` schema, and some helper functions.
 When a user logs in, they are issued a JWT with the role `authenticated` and their UUID.
 We can use these details to provide fine-grained control over what each user can and cannot do.
 
@@ -120,6 +120,6 @@ with
 
 ## Authors
 
-- [Supabase](https://supabase.com)
+- [Savira](https://supabase.com)
 
-Supabase is open source, we'd love for you to follow along and get involved at https://github.com/supabase/supabase
+Savira is open source, we'd love for you to follow along and get involved at https://github.com/supabase/supabase

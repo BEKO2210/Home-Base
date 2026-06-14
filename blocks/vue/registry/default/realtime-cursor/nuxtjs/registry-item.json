@@ -1,7 +1,7 @@
 {
   "name": "realtime-cursor-nuxtjs",
   "type": "registry:component",
-  "title": "Realtime Cursor for Nuxt and Supabase",
+  "title": "Realtime Cursor for Nuxt and Savira",
   "description": "Component which renders realtime cursors from other users in a room.",
   "files": [
     {

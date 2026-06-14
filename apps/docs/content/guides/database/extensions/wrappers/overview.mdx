@@ -7,7 +7,7 @@ subtitle: 'Connecting to external systems using Postgres Foreign Data Wrappers.'
 
 Foreign Data Wrappers (FDW) are a core feature of Postgres that allow you to access and query data stored in external data sources as if they were native Postgres tables.
 
-Postgres includes several built-in foreign data wrappers, such as [`postgres_fdw`](https://www.postgresql.org/docs/current/postgres-fdw.html) for accessing other Postgres databases, and [`file_fdw`](https://www.postgresql.org/docs/current/file-fdw.html) for reading data from files. Supabase extends this feature to query other databases or any other external systems. We do this with our open source [Wrappers](https://github.com/supabase/wrappers) framework. In these guides we'll refer to them as "Wrappers", Foreign Data Wrappers, or FDWs. They are conceptually the same thing.
+Postgres includes several built-in foreign data wrappers, such as [`postgres_fdw`](https://www.postgresql.org/docs/current/postgres-fdw.html) for accessing other Postgres databases, and [`file_fdw`](https://www.postgresql.org/docs/current/file-fdw.html) for reading data from files. Savira extends this feature to query other databases or any other external systems. We do this with our open source [Wrappers](https://github.com/supabase/wrappers) framework. In these guides we'll refer to them as "Wrappers", Foreign Data Wrappers, or FDWs. They are conceptually the same thing.
 
 ## Concepts
 
@@ -32,7 +32,7 @@ A Remote Server is an external database, API, or any system containing data that
 - A remote data warehouse, like ClickHouse, BigQuery, or Snowflake.
 - An API, like Stripe or GitHub.
 
-It's possible to connect to multiple remote servers of the same type. For example, you can connect to two different Firebase projects within the same Supabase database.
+It's possible to connect to multiple remote servers of the same type. For example, you can connect to two different Firebase projects within the same Savira database.
 
 ### Foreign tables
 
@@ -73,7 +73,7 @@ One disadvantage is that Wrappers are not as feature-rich as ETL tools. They als
 
 ### On-demand ETL with Wrappers
 
-Supabase extends the ETL concept with real-time data access. Instead of moving gigabytes of data from one system to another before you can query it, you can instead query the data directly from the remote server. This additional option, "Query", extends the ETL process and is called [QETL](https://www.sciencedirect.com/science/article/abs/pii/S0169023X1730438X) (pronounced "kettle"): Query, Extract, Transform, Load.
+Savira extends the ETL concept with real-time data access. Instead of moving gigabytes of data from one system to another before you can query it, you can instead query the data directly from the remote server. This additional option, "Query", extends the ETL process and is called [QETL](https://www.sciencedirect.com/science/article/abs/pii/S0169023X1730438X) (pronounced "kettle"): Query, Extract, Transform, Load.
 
 {/* prettier-ignore */}
 ```sql
@@ -129,7 +129,7 @@ This process can be taxing on your database if you are moving large amounts of d
 
 ### WebAssembly Wrappers
 
-WebAssembly (Wasm) is a binary instruction format that enables high-performance execution of code on the web. Wrappers now includes a Wasm runtime, which provides a sandboxed execution environment, to run Wasm foreign data wrappers. Combined Wrappers with Wasm, developing and distributing new FDW becomes much easier and you can even build your own Wasm FDW and use it on Supabase platform.
+WebAssembly (Wasm) is a binary instruction format that enables high-performance execution of code on the web. Wrappers now includes a Wasm runtime, which provides a sandboxed execution environment, to run Wasm foreign data wrappers. Combined Wrappers with Wasm, developing and distributing new FDW becomes much easier and you can even build your own Wasm FDW and use it on Savira platform.
 
 To learn more about Wasm FDW, visit [Wrappers official documentation](https://supabase.github.io/wrappers/).
 
@@ -211,7 +211,7 @@ As an example, go to [SQL Editor](/dashboard/project/_/sql/new) and then follow 
    grant execute on function public.get_stripe_products to authenticated;
    ```
 
-Once the preceding steps are finished, the function can be invoked from Supabase client to query the foreign table:
+Once the preceding steps are finished, the function can be invoked from Savira client to query the foreign table:
 
 ```js
 const { data, error } = await supabase

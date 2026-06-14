@@ -153,7 +153,7 @@ const navCommands = [
   },
   {
     id: 'nav-ui',
-    name: 'Go to Supabase UI Library',
+    name: 'Go to Savira UI Library',
     route: 'https://supabase.com/ui',
     icon: () => <ArrowRight />,
   },

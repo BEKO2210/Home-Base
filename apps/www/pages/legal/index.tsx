@@ -32,10 +32,10 @@ const linkIcons = {
 export default function LegalHubPage() {
   return (
     <DefaultLayout>
-      <NextSeo title="Legal" description="Supabase legal documents and resources." />
+      <NextSeo title="Legal" description="Savira legal documents and resources." />
       <PageHeader
         h1="Legal"
-        subheader="Legal documents and resources for Supabase customers and partners."
+        subheader="Legal documents and resources for Savira customers and partners."
       />
       <SectionContainer className="prose">
         <div className="divide-y divide-border">

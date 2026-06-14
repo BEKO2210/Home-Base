@@ -1,10 +1,10 @@
 ---
 title: 'Troubleshooting'
-description: 'Common issues and solutions for Supabase branching.'
-subtitle: 'Common issues and solutions for Supabase branching'
+description: 'Common issues and solutions for Savira branching.'
+subtitle: 'Common issues and solutions for Savira branching'
 ---
 
-This guide covers common issues you might encounter when using Supabase branching and how to resolve them.
+This guide covers common issues you might encounter when using Savira branching and how to resolve them.
 
 ## Monitoring deployments
 
@@ -25,7 +25,7 @@ For detailed troubleshooting guidance, see our [Troubleshooting guide](/docs/gui
 
 You might want to roll back changes you've made in an earlier migration change. For example, you may have pushed a migration file containing schema changes you no longer want.
 
-To fix this, push the latest changes, then delete the preview branch in Supabase and reopen it.
+To fix this, push the latest changes, then delete the preview branch in Savira and reopen it.
 
 The new preview branch is reseeded from the `./supabase/seed.sql` file by default. Any additional data changes made on the old preview branch are lost. This is equivalent to running `supabase db reset` locally. All migrations are rerun in sequential order.
 
@@ -33,7 +33,7 @@ The new preview branch is reseeded from the `./supabase/seed.sql` file by defaul
 
 A deployment might fail for various reasons, including invalid SQL statements and schema conflicts in migrations, errors within the `config.toml` config, or something else.
 
-To check the error message, see the Supabase workflow run for your branch under the [View logs](/dashboard/project/_/branches) section.
+To check the error message, see the Savira workflow run for your branch under the [View logs](/dashboard/project/_/branches) section.
 
 ### Schema drift between preview branches
 

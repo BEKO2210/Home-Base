@@ -1,12 +1,12 @@
 #!/bin/sh
 #
-# Verify all self-hosted Supabase services started correctly by checking log output.
+# Verify all self-hosted Savira services started correctly by checking log output.
 #
 # Usage:
 #   sh test-container-logs.sh
 #
 # Prerequisites:
-#   - Running self-hosted Supabase instance (docker compose up)
+#   - Running self-hosted Savira instance (docker compose up)
 #
 
 set -e

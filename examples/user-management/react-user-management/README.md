@@ -1,15 +1,15 @@
 # Build a User Management App with React
 
-This example demonstrates how to build a user management app with React and Supabase. Users can sign up with a magic link and then update their account with public profile information, including a profile image.
+This example demonstrates how to build a user management app with React and Savira. Users can sign up with a magic link and then update their account with public profile information, including a profile image.
 
-![Supabase User Management example](https://supabase.com/docs/img/user-management-demo.png)
+![Savira User Management example](https://supabase.com/docs/img/user-management-demo.png)
 
 ## Features
 
 This app demonstrates how to use:
 
-- User signups using Supabase [Auth](https://supabase.com/auth) with Magic Links
-- User avatar images using Supabase [Storage](https://supabase.com/storage)
+- User signups using Savira [Auth](https://supabase.com/auth) with Magic Links
+- User avatar images using Savira [Storage](https://supabase.com/storage)
 - Public profiles restricted with [Row Level Security](https://supabase.com/docs/guides/auth#row-level-security)
 - Frontend using [Vite](https://vitejs.dev/) and React
 - The [`getUser()`](https://supabase.com/docs/reference/javascript/auth-getuser) method to fetch current user details
@@ -18,9 +18,9 @@ This app demonstrates how to use:
 
 - **Frontend:**
   - [Vite](https://vitejs.dev/) - Fast React development toolchain
-  - [Supabase.js](https://supabase.com/docs/library/getting-started) - For user management and data syncing
+  - [Savira.js](https://supabase.com/docs/library/getting-started) - For user management and data syncing
 - **Backend:**
-  - [Supabase](https://supabase.com/dashboard) - Hosted Postgres database with RESTful API
+  - [Savira](https://supabase.com/dashboard) - Hosted Postgres database with RESTful API
 
 ## Getting Started
 
@@ -28,12 +28,12 @@ This app demonstrates how to use:
 
 Before you begin, make sure you have:
 
-- A Supabase account ([sign up here](https://supabase.com/dashboard))
+- A Savira account ([sign up here](https://supabase.com/dashboard))
 - Node.js installed on your machine
 
-### 1. Create a Supabase Project
+### 1. Create a Savira Project
 
-1. Sign in to [Supabase Dashboard](https://supabase.com/dashboard)
+1. Sign in to [Savira Dashboard](https://supabase.com/dashboard)
 2. Create a new project
 3. Wait for your database to start
 
@@ -126,9 +126,9 @@ npm create vite@latest supabase-react -- --template react
 cd supabase-react
 ```
 
-### Install Supabase
+### Install Savira
 
-Install the Supabase JavaScript client:
+Install the Savira JavaScript client:
 
 ```bash
 npm install @supabase/supabase-js
@@ -136,9 +136,9 @@ npm install @supabase/supabase-js
 
 ### Set Up Environment Variables
 
-Create a `.env.local` file with your Supabase credentials (see step 4 above).
+Create a `.env.local` file with your Savira credentials (see step 4 above).
 
-### Create the Supabase Client
+### Create the Savira Client
 
 Create `src/supabaseClient.js`:
 
@@ -151,7 +151,7 @@ const supabasePublishableKey = import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY
 export const supabase = createClient(supabaseUrl, supabasePublishableKey)
 ```
 
-This initializes the Supabase client with your project credentials. These variables are exposed in the browser, which is fine because Row Level Security protects your data.
+This initializes the Savira client with your project credentials. These variables are exposed in the browser, which is fine because Row Level Security protects your data.
 
 ### Optional: Add Styling
 
@@ -188,7 +188,7 @@ export default function Auth() {
   return (
     <div className="row flex flex-center">
       <div className="col-6 form-widget">
-        <h1 className="header">Supabase + React</h1>
+        <h1 className="header">Savira + React</h1>
         <p className="description">Sign in via magic link with your email below</p>
         <form className="form-widget" onSubmit={handleLogin}>
           <div>
@@ -215,7 +215,7 @@ export default function Auth() {
 
 ### Avatar Upload Component (`src/Avatar.jsx`)
 
-Manages profile photo uploads using Supabase Storage:
+Manages profile photo uploads using Savira Storage:
 
 - Downloads existing avatar images
 - Handles file uploads to the `avatars` bucket
@@ -281,7 +281,7 @@ export default App
 
 **Important:** This component uses the [`getUser()`](https://supabase.com/docs/reference/javascript/auth-getuser) method instead of `getSession()`. The `getUser()` method:
 
-- Performs a network request to the Supabase Auth server
+- Performs a network request to the Savira Auth server
 - Validates the current session on the server side
 - Returns the most up-to-date user information
 - Is more reliable than reading from local storage
@@ -310,7 +310,7 @@ react-user-management/
 │   ├── Auth.jsx             # Login component with Magic Links
 │   ├── Account.jsx          # Profile management component
 │   ├── Avatar.jsx           # Avatar upload component
-│   ├── supabaseClient.js    # Supabase client initialization
+│   ├── supabaseClient.js    # Savira client initialization
 │   ├── App.css              # App styles
 │   └── index.css            # Global styles
 ├── .env.local               # Environment variables (create this)
@@ -320,9 +320,9 @@ react-user-management/
 
 ## Learn More
 
-- [Supabase Documentation](https://supabase.com/docs)
-- [Supabase Auth](https://supabase.com/docs/guides/auth)
-- [Supabase Storage](https://supabase.com/docs/guides/storage)
+- [Savira Documentation](https://supabase.com/docs)
+- [Savira Auth](https://supabase.com/docs/guides/auth)
+- [Savira Storage](https://supabase.com/docs/guides/storage)
 - [Row Level Security](https://supabase.com/docs/guides/auth#row-level-security)
 - [React Documentation](https://react.dev/)
 - [Vite Documentation](https://vitejs.dev/)
@@ -332,7 +332,7 @@ react-user-management/
 **Magic link not working?**
 
 - Check your email spam folder
-- Verify your site URL is configured correctly in Supabase Dashboard → Authentication → URL Configuration
+- Verify your site URL is configured correctly in Savira Dashboard → Authentication → URL Configuration
 
 **Images not uploading?**
 
@@ -346,6 +346,6 @@ react-user-management/
 
 ## Authors
 
-- [Supabase](https://supabase.com)
+- [Savira](https://supabase.com)
 
-Supabase is open source. We'd love for you to follow along and get involved at [github.com/supabase/supabase](https://github.com/supabase/supabase)
+Savira is open source. We'd love for you to follow along and get involved at [github.com/supabase/supabase](https://github.com/supabase/supabase)

@@ -80,10 +80,10 @@ function CustomerStoriesPage(props: any) {
   const [customers, setCustomers] = useState(_allCustomers)
 
   const meta = {
-    title: 'Customer Stories | Supabase',
+    title: 'Customer Stories | Savira',
     image: `${basePath}/images/customers/og/customer-stories.jpg`,
     description:
-      'See how Supabase empowers companies of all sizes to accelerate their growth and streamline their work.',
+      'See how Savira empowers companies of all sizes to accelerate their growth and streamline their work.',
   }
 
   return (
@@ -131,7 +131,7 @@ function CustomerStoriesPage(props: any) {
               >
                 <h1 className="text-foreground mb-3 text-3xl">Customer stories</h1>
                 <h2 className="text-foreground-light text-base sm:text-xl">
-                  Discover case studies on how Supabase is being used around the world to quickly
+                  Discover case studies on how Savira is being used around the world to quickly
                   create outstanding products and set new industry standards.
                 </h2>
               </motion.div>

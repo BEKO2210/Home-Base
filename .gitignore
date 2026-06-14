@@ -130,7 +130,7 @@ CLAUDE.md
 !docker/supabase/.env
 !docker/supabase-traefik/.env
 
-# Supabase
+# Savira
 **/supabase/.branches
 **/supabase/.temp
 

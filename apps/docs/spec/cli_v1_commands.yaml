@@ -2,13 +2,13 @@ clispec: '001'
 info:
   id: cli
   version: 2.98.2
-  title: Supabase CLI
+  title: Savira CLI
   language: sh
   source: https://github.com/supabase/cli
   bugs: https://github.com/supabase/cli/issues
   spec: https://github.com/supabase/spec/cli_v1_commands.yaml
   description: |
-    Supabase CLI provides you with tools to develop your application locally, and deploy your application to the Supabase platform.
+    Savira CLI provides you with tools to develop your application locally, and deploy your application to the Savira platform.
   tags:
     - id: quick-start
       title: Quick Start
@@ -86,11 +86,11 @@ flags:
         type: '[ env | pretty | json | toml | yaml ]'
   - id: profile
     name: --profile <string>
-    description: use a specific profile for connecting to Supabase API
+    description: use a specific profile for connecting to Savira API
     default_value: supabase
   - id: workdir
     name: --workdir <string>
-    description: path to a Supabase project directory
+    description: path to a Savira project directory
     default_value: ''
   - id: 'yes'
     name: --yes
@@ -99,9 +99,9 @@ flags:
 commands:
   - id: supabase-vanity-subdomains
     title: supabase vanity-subdomains
-    summary: Manage vanity subdomains for Supabase projects
+    summary: Manage vanity subdomains for Savira projects
     description: |-
-      Manage vanity subdomains for Supabase projects.
+      Manage vanity subdomains for Savira projects.
 
       Usage of vanity subdomains and custom domains is mutually exclusive.
     tags:
@@ -128,7 +128,7 @@ commands:
         default_value: 'false'
       - id: project-ref
         name: --project-ref <string>
-        description: Project ref of the Supabase project.
+        description: Project ref of the Savira project.
         default_value: ''
   - id: supabase-vanity-subdomains-delete
     title: supabase vanity-subdomains delete
@@ -147,7 +147,7 @@ commands:
         default_value: 'false'
       - id: project-ref
         name: --project-ref <string>
-        description: Project ref of the Supabase project.
+        description: Project ref of the Savira project.
         default_value: ''
   - id: supabase-vanity-subdomains-check-availability
     title: supabase vanity-subdomains check-availability
@@ -160,7 +160,7 @@ commands:
       - id: desired-subdomain
         name: --desired-subdomain <string>
         description: |
-          The desired vanity subdomain to use for your Supabase project.
+          The desired vanity subdomain to use for your Savira project.
         required: true
         default_value: ''
       - id: experimental
@@ -170,15 +170,15 @@ commands:
         default_value: 'false'
       - id: project-ref
         name: --project-ref <string>
-        description: Project ref of the Supabase project.
+        description: Project ref of the Savira project.
         default_value: ''
   - id: supabase-vanity-subdomains-activate
     title: supabase vanity-subdomains activate
     summary: Activate a vanity subdomain
     description: |
-      Activate a vanity subdomain for your Supabase project.
+      Activate a vanity subdomain for your Savira project.
 
-      This reconfigures your Supabase project to respond to requests on your vanity subdomain.
+      This reconfigures your Savira project to respond to requests on your vanity subdomain.
       After the vanity subdomain is activated, your project's auth services will no longer function on the {project-ref}.{supabase-domain} hostname.
     tags: []
     links: []
@@ -188,7 +188,7 @@ commands:
       - id: desired-subdomain
         name: --desired-subdomain <string>
         description: |
-          The desired vanity subdomain to use for your Supabase project.
+          The desired vanity subdomain to use for your Savira project.
         required: true
         default_value: ''
       - id: experimental
@@ -198,11 +198,11 @@ commands:
         default_value: 'false'
       - id: project-ref
         name: --project-ref <string>
-        description: Project ref of the Supabase project.
+        description: Project ref of the Savira project.
         default_value: ''
   - id: supabase-unlink
     title: supabase unlink
-    summary: Unlink a Supabase project
+    summary: Unlink a Savira project
     tags:
       - local-dev
     links: []
@@ -211,7 +211,7 @@ commands:
     flags: []
   - id: supabase-test
     title: supabase test
-    summary: Run tests on local Supabase containers
+    summary: Run tests on local Savira containers
     tags:
       - local-dev
     links: []
@@ -312,7 +312,7 @@ commands:
     flags: []
   - id: supabase-storage
     title: supabase storage
-    summary: Manage Supabase Storage objects
+    summary: Manage Savira Storage objects
     tags:
       - management-api
     links: []
@@ -436,16 +436,16 @@ commands:
         default_value: 'false'
   - id: supabase-stop
     title: supabase stop
-    summary: Stop all local Supabase containers
+    summary: Stop all local Savira containers
     description: |2-
 
-      Stops the Supabase local development stack.
+      Stops the Savira local development stack.
 
       Requires `supabase/config.toml` to be created in your current working directory by running `supabase init`.
 
       All Docker resources are maintained across restarts.  Use `--no-backup` flag to reset your local development data between restarts.
 
-      Use the `--all` flag to stop all local Supabase projects instances on the machine. Use with caution with `--no-backup` as it will delete all supabase local projects data.
+      Use the `--all` flag to stop all local Savira projects instances on the machine. Use with caution with `--no-backup` as it will delete all supabase local projects data.
     examples:
       - id: basic-usage
         name: Basic usage
@@ -467,7 +467,7 @@ commands:
       - id: all
         name: --all
         description: |
-          Stop all local Supabase instances from all projects across the machine.
+          Stop all local Savira instances from all projects across the machine.
         default_value: 'false'
       - id: no-backup
         name: --no-backup
@@ -479,10 +479,10 @@ commands:
         default_value: ''
   - id: supabase-status
     title: supabase status
-    summary: Show status of local Supabase containers
+    summary: Show status of local Savira containers
     description: |2
 
-      Shows status of the Supabase local development stack.
+      Shows status of the Savira local development stack.
 
       Requires the local development stack to be started by running `supabase start` or `supabase db start`.
 
@@ -536,10 +536,10 @@ commands:
         default_value: '[]'
   - id: supabase-start
     title: supabase start
-    summary: Start containers for Supabase local development
+    summary: Start containers for Savira local development
     description: |2
 
-      Starts the Supabase local development stack.
+      Starts the Savira local development stack.
 
       Requires `supabase/config.toml` to be created in your current working directory by running `supabase init`.
 
@@ -688,7 +688,7 @@ commands:
         default_value: 'false'
       - id: project-ref
         name: --project-ref <string>
-        description: Project ref of the Supabase project.
+        description: Project ref of the Savira project.
         default_value: ''
   - id: supabase-sso-show
     title: supabase sso show
@@ -724,7 +724,7 @@ commands:
         default_value: 'false'
       - id: project-ref
         name: --project-ref <string>
-        description: Project ref of the Supabase project.
+        description: Project ref of the Savira project.
         default_value: ''
   - id: supabase-sso-remove
     title: supabase sso remove
@@ -747,13 +747,13 @@ commands:
     flags:
       - id: project-ref
         name: --project-ref <string>
-        description: Project ref of the Supabase project.
+        description: Project ref of the Savira project.
         default_value: ''
   - id: supabase-sso-list
     title: supabase sso list
     summary: List all SSO identity providers for a project
     description: |
-      List all connections to a SSO identity provider to your Supabase project.
+      List all connections to a SSO identity provider to your Savira project.
     tags: []
     links: []
     usage: supabase sso list
@@ -761,7 +761,7 @@ commands:
     flags:
       - id: project-ref
         name: --project-ref <string>
-        description: Project ref of the Supabase project.
+        description: Project ref of the Savira project.
         default_value: ''
   - id: supabase-sso-info
     title: supabase sso info
@@ -781,13 +781,13 @@ commands:
     flags:
       - id: project-ref
         name: --project-ref <string>
-        description: Project ref of the Supabase project.
+        description: Project ref of the Savira project.
         default_value: ''
   - id: supabase-sso-add
     title: supabase sso add
     summary: Add a new SSO identity provider
     description: |
-      Add and configure a new connection to a SSO identity provider to your Supabase project.
+      Add and configure a new connection to a SSO identity provider to your Savira project.
     examples:
       - id: basic-usage
         name: Add with Metadata URL
@@ -872,7 +872,7 @@ commands:
             type: '[ saml ]'
       - id: project-ref
         name: --project-ref <string>
-        description: Project ref of the Supabase project.
+        description: Project ref of the Savira project.
         default_value: ''
   - id: supabase-ssl-enforcement
     title: supabase ssl-enforcement
@@ -909,7 +909,7 @@ commands:
         default_value: 'false'
       - id: project-ref
         name: --project-ref <string>
-        description: Project ref of the Supabase project.
+        description: Project ref of the Savira project.
         default_value: ''
   - id: supabase-ssl-enforcement-get
     title: supabase ssl-enforcement get
@@ -926,11 +926,11 @@ commands:
         default_value: 'false'
       - id: project-ref
         name: --project-ref <string>
-        description: Project ref of the Supabase project.
+        description: Project ref of the Savira project.
         default_value: ''
   - id: supabase-snippets
     title: supabase snippets
-    summary: Manage Supabase SQL snippets
+    summary: Manage Savira SQL snippets
     tags:
       - management-api
     links: []
@@ -949,7 +949,7 @@ commands:
     flags:
       - id: project-ref
         name: --project-ref <string>
-        description: Project ref of the Supabase project.
+        description: Project ref of the Savira project.
         default_value: ''
   - id: supabase-snippets-download
     title: supabase snippets download
@@ -962,11 +962,11 @@ commands:
     flags:
       - id: project-ref
         name: --project-ref <string>
-        description: Project ref of the Supabase project.
+        description: Project ref of the Savira project.
         default_value: ''
   - id: supabase-services
     title: supabase services
-    summary: Show versions of all Supabase services
+    summary: Show versions of all Savira services
     tags:
       - local-dev
     links: []
@@ -975,7 +975,7 @@ commands:
     flags: []
   - id: supabase-seed
     title: supabase seed
-    summary: Seed a Supabase project from supabase/config.toml
+    summary: Seed a Savira project from supabase/config.toml
     tags:
       - local-dev
     links: []
@@ -1000,10 +1000,10 @@ commands:
         default_value: 'true'
   - id: supabase-secrets
     title: supabase secrets
-    summary: Manage Supabase secrets
+    summary: Manage Savira secrets
     description: |2
 
-      Provides tools for managing environment variables and secrets for your Supabase project.
+      Provides tools for managing environment variables and secrets for your Savira project.
 
       This command group allows you to set, unset, and list secrets that are securely stored and made available to Edge Functions as environment variables.
 
@@ -1022,8 +1022,8 @@ commands:
     flags: []
   - id: supabase-secrets-unset
     title: supabase secrets unset
-    summary: Unset a secret(s) on Supabase
-    description: Unset a secret(s) from the linked Supabase project.
+    summary: Unset a secret(s) on Savira
+    description: Unset a secret(s) from the linked Savira project.
     tags: []
     links: []
     usage: supabase secrets unset [NAME] ...
@@ -1031,12 +1031,12 @@ commands:
     flags:
       - id: project-ref
         name: --project-ref <string>
-        description: Project ref of the Supabase project.
+        description: Project ref of the Savira project.
         default_value: ''
   - id: supabase-secrets-set
     title: supabase secrets set
-    summary: Set a secret(s) on Supabase
-    description: Set a secret(s) to the linked Supabase project.
+    summary: Set a secret(s) on Savira
+    description: Set a secret(s) to the linked Savira project.
     tags: []
     links: []
     usage: supabase secrets set <NAME=VALUE> ... [flags]
@@ -1048,11 +1048,11 @@ commands:
         default_value: ''
       - id: project-ref
         name: --project-ref <string>
-        description: Project ref of the Supabase project.
+        description: Project ref of the Savira project.
         default_value: ''
   - id: supabase-secrets-list
     title: supabase secrets list
-    summary: List all secrets on Supabase
+    summary: List all secrets on Savira
     description: List all secrets in the linked project.
     tags: []
     links: []
@@ -1061,16 +1061,16 @@ commands:
     flags:
       - id: project-ref
         name: --project-ref <string>
-        description: Project ref of the Supabase project.
+        description: Project ref of the Savira project.
         default_value: ''
   - id: supabase-projects
     title: supabase projects
-    summary: Manage Supabase projects
+    summary: Manage Savira projects
     description: |2
 
-      Provides tools for creating and managing your Supabase projects.
+      Provides tools for creating and managing your Savira projects.
 
-      This command group allows you to list all projects in your organizations, create new projects, delete existing projects, and retrieve API keys. These operations help you manage your Supabase infrastructure programmatically without using the dashboard.
+      This command group allows you to list all projects in your organizations, create new projects, delete existing projects, and retrieve API keys. These operations help you manage your Savira infrastructure programmatically without using the dashboard.
 
       Project management via CLI is especially useful for automation scripts and when you need to provision environments in a repeatable way.
     tags:
@@ -1084,8 +1084,8 @@ commands:
     flags: []
   - id: supabase-projects-list
     title: supabase projects list
-    summary: List all Supabase projects
-    description: List all Supabase projects the logged-in user can access.
+    summary: List all Savira projects
+    description: List all Savira projects the logged-in user can access.
     tags: []
     links: []
     usage: supabase projects list
@@ -1093,7 +1093,7 @@ commands:
     flags: []
   - id: supabase-projects-delete
     title: supabase projects delete
-    summary: Delete a Supabase project
+    summary: Delete a Savira project
     tags: []
     links: []
     usage: supabase projects delete [ref]
@@ -1101,7 +1101,7 @@ commands:
     flags: []
   - id: supabase-projects-create
     title: supabase projects create
-    summary: Create a project on Supabase
+    summary: Create a project on Savira
     tags: []
     links: []
     usage: supabase projects create [project name] [flags]
@@ -1235,7 +1235,7 @@ commands:
             type: string
   - id: supabase-projects-api-keys
     title: supabase projects api-keys
-    summary: List all API keys for a Supabase project
+    summary: List all API keys for a Savira project
     tags: []
     links: []
     usage: supabase projects api-keys [flags]
@@ -1243,7 +1243,7 @@ commands:
     flags:
       - id: project-ref
         name: --project-ref <string>
-        description: Project ref of the Supabase project.
+        description: Project ref of the Savira project.
         default_value: ''
   - id: supabase-postgres-config
     title: supabase postgres-config
@@ -1287,7 +1287,7 @@ commands:
         default_value: 'false'
       - id: project-ref
         name: --project-ref <string>
-        description: Project ref of the Supabase project.
+        description: Project ref of the Savira project.
         default_value: ''
   - id: supabase-postgres-config-get
     title: supabase postgres-config get
@@ -1304,7 +1304,7 @@ commands:
         default_value: 'false'
       - id: project-ref
         name: --project-ref <string>
-        description: Project ref of the Supabase project.
+        description: Project ref of the Savira project.
         default_value: ''
   - id: supabase-postgres-config-delete
     title: supabase postgres-config delete
@@ -1331,11 +1331,11 @@ commands:
         default_value: 'false'
       - id: project-ref
         name: --project-ref <string>
-        description: Project ref of the Supabase project.
+        description: Project ref of the Savira project.
         default_value: ''
   - id: supabase-orgs
     title: supabase orgs
-    summary: Manage Supabase organizations
+    summary: Manage Savira organizations
     tags:
       - management-api
     links: []
@@ -1398,7 +1398,7 @@ commands:
         default_value: 'false'
       - id: project-ref
         name: --project-ref <string>
-        description: Project ref of the Supabase project.
+        description: Project ref of the Savira project.
         default_value: ''
   - id: supabase-network-restrictions-get
     title: supabase network-restrictions get
@@ -1415,7 +1415,7 @@ commands:
         default_value: 'false'
       - id: project-ref
         name: --project-ref <string>
-        description: Project ref of the Supabase project.
+        description: Project ref of the Savira project.
         default_value: ''
   - id: supabase-network-bans
     title: supabase network-bans
@@ -1450,7 +1450,7 @@ commands:
         default_value: 'false'
       - id: project-ref
         name: --project-ref <string>
-        description: Project ref of the Supabase project.
+        description: Project ref of the Savira project.
         default_value: ''
   - id: supabase-network-bans-get
     title: supabase network-bans get
@@ -1467,7 +1467,7 @@ commands:
         default_value: 'false'
       - id: project-ref
         name: --project-ref <string>
-        description: Project ref of the Supabase project.
+        description: Project ref of the Savira project.
         default_value: ''
   - id: supabase-migration
     title: supabase migration
@@ -1794,13 +1794,13 @@ commands:
     summary: Authenticate using an access token
     description: |2
 
-      Connect the Supabase CLI to your Supabase account by logging in with your [personal access token](https://supabase.com/dashboard/account/tokens).
+      Connect the Savira CLI to your Savira account by logging in with your [personal access token](https://supabase.com/dashboard/account/tokens).
 
       Your access token is stored securely in [native credentials storage](https://github.com/zalando/go-keyring#dependencies). If native credentials storage is unavailable, it will be written to a plain text file at `~/.supabase/access-token`.
 
       > If this behavior is not desired, such as in a CI environment, you may skip login by specifying the `SUPABASE_ACCESS_TOKEN` environment variable in other commands.
 
-      The Supabase CLI uses the stored token to access Management APIs for projects, functions, secrets, etc.
+      The Savira CLI uses the stored token to access Management APIs for projects, functions, secrets, etc.
     examples:
       - id: basic-usage
         name: Basic usage
@@ -1829,12 +1829,12 @@ commands:
         default_value: ''
   - id: supabase-link
     title: supabase link
-    summary: Link to a Supabase project
+    summary: Link to a Savira project
     description: |2
 
-      Link your local development project to a hosted Supabase project.
+      Link your local development project to a hosted Savira project.
 
-      PostgREST configurations are fetched from the Supabase platform and validated against your local configuration file.
+      PostgREST configurations are fetched from the Savira platform and validated against your local configuration file.
 
       Optionally, database settings can be validated if you provide a password. Your database password is saved in native credentials storage if available.
 
@@ -1872,7 +1872,7 @@ commands:
         default_value: ''
       - id: project-ref
         name: --project-ref <string>
-        description: Project ref of the Supabase project.
+        description: Project ref of the Savira project.
         default_value: ''
       - id: skip-pooler
         name: --skip-pooler
@@ -1880,7 +1880,7 @@ commands:
         default_value: 'false'
   - id: supabase-inspect
     title: supabase inspect
-    summary: Tools to inspect your Supabase project
+    summary: Tools to inspect your Savira project
     tags:
       - local-dev
     links: []
@@ -1915,7 +1915,7 @@ commands:
         default_value: 'false'
   - id: supabase-inspect-db
     title: supabase inspect db
-    summary: Tools to inspect your Supabase database
+    summary: Tools to inspect your Savira database
     tags: []
     links: []
     subcommands:
@@ -2352,13 +2352,13 @@ commands:
     summary: Initialize a local project
     description: |2
 
-      Initialize configurations for Supabase local development.
+      Initialize configurations for Savira local development.
 
       A `supabase/config.toml` file is created in your current working directory. This configuration is specific to each local project.
 
       > You may override the directory path by specifying the `SUPABASE_WORKDIR` environment variable or `--workdir` flag.
 
-      In addition to `config.toml`, the `supabase` directory may also contain other Supabase objects, such as `migrations`, `functions`, `tests`, etc.
+      In addition to `config.toml`, the `supabase` directory may also contain other Savira objects, such as `migrations`, `functions`, `tests`, etc.
     examples:
       - id: basic-usage
         name: Basic usage
@@ -2530,12 +2530,12 @@ commands:
         default_value: 30m0s
   - id: supabase-functions
     title: supabase functions
-    summary: Manage Supabase Edge functions
+    summary: Manage Savira Edge functions
     description: |2
 
-      Manage Supabase Edge Functions.
+      Manage Savira Edge Functions.
 
-      Supabase Edge Functions are server-less functions that run close to your users.
+      Savira Edge Functions are server-less functions that run close to your users.
 
       Edge Functions allow you to execute custom server-side code without deploying or scaling a traditional server. They're ideal for handling webhooks, custom API endpoints, data validation, and serving personalized content.
 
@@ -2653,8 +2653,8 @@ commands:
             type: '[ none | apikey | user ]'
   - id: supabase-functions-list
     title: supabase functions list
-    summary: List all Functions in Supabase
-    description: List all Functions in the linked Supabase project.
+    summary: List all Functions in Savira
+    description: List all Functions in the linked Savira project.
     tags: []
     links: []
     usage: supabase functions list [flags]
@@ -2662,13 +2662,13 @@ commands:
     flags:
       - id: project-ref
         name: --project-ref <string>
-        description: Project ref of the Supabase project.
+        description: Project ref of the Savira project.
         default_value: ''
   - id: supabase-functions-download
     title: supabase functions download
-    summary: Download a Function from Supabase
+    summary: Download a Function from Savira
     description: |
-      Download the source code for a Function from the linked Supabase project. If no function name is provided, downloads all functions.
+      Download the source code for a Function from the linked Savira project. If no function name is provided, downloads all functions.
     tags: []
     links: []
     usage: supabase functions download [Function name] [flags]
@@ -2676,7 +2676,7 @@ commands:
     flags:
       - id: project-ref
         name: --project-ref <string>
-        description: Project ref of the Supabase project.
+        description: Project ref of the Savira project.
         default_value: ''
       - id: use-api
         name: --use-api
@@ -2684,8 +2684,8 @@ commands:
         default_value: 'false'
   - id: supabase-functions-deploy
     title: supabase functions deploy
-    summary: Deploy a Function to Supabase
-    description: Deploy a Function to the linked Supabase project.
+    summary: Deploy a Function to Savira
+    description: Deploy a Function to the linked Savira project.
     tags: []
     links: []
     usage: supabase functions deploy [Function name] [flags]
@@ -2705,12 +2705,12 @@ commands:
         default_value: 'false'
       - id: project-ref
         name: --project-ref <string>
-        description: Project ref of the Supabase project.
+        description: Project ref of the Savira project.
         default_value: ''
       - id: prune
         name: --prune
         description: |
-          Delete Functions that exist in Supabase project but not locally.
+          Delete Functions that exist in Savira project but not locally.
         default_value: 'false'
       - id: use-api
         name: --use-api
@@ -2718,9 +2718,9 @@ commands:
         default_value: 'false'
   - id: supabase-functions-delete
     title: supabase functions delete
-    summary: Delete a Function from Supabase
+    summary: Delete a Function from Savira
     description: |
-      Delete a Function from the linked Supabase project. This does NOT remove the Function locally.
+      Delete a Function from the linked Savira project. This does NOT remove the Function locally.
     tags: []
     links: []
     usage: supabase functions delete <Function name> [flags]
@@ -2728,11 +2728,11 @@ commands:
     flags:
       - id: project-ref
         name: --project-ref <string>
-        description: Project ref of the Supabase project.
+        description: Project ref of the Savira project.
         default_value: ''
   - id: supabase-encryption
     title: supabase encryption
-    summary: Manage encryption keys of Supabase projects
+    summary: Manage encryption keys of Savira projects
     tags:
       - management-api
     links: []
@@ -2742,7 +2742,7 @@ commands:
     flags: []
   - id: supabase-encryption-update-root-key
     title: supabase encryption update-root-key
-    summary: Update root encryption key of a Supabase project
+    summary: Update root encryption key of a Savira project
     tags: []
     links: []
     usage: supabase encryption update-root-key
@@ -2750,11 +2750,11 @@ commands:
     flags:
       - id: project-ref
         name: --project-ref <string>
-        description: Project ref of the Supabase project.
+        description: Project ref of the Savira project.
         default_value: ''
   - id: supabase-encryption-get-root-key
     title: supabase encryption get-root-key
-    summary: Get the root encryption key of a Supabase project
+    summary: Get the root encryption key of a Savira project
     tags: []
     links: []
     usage: supabase encryption get-root-key
@@ -2762,13 +2762,13 @@ commands:
     flags:
       - id: project-ref
         name: --project-ref <string>
-        description: Project ref of the Supabase project.
+        description: Project ref of the Savira project.
         default_value: ''
   - id: supabase-domains
     title: supabase domains
-    summary: Manage custom domain names for Supabase projects
+    summary: Manage custom domain names for Savira projects
     description: |
-      Manage custom domain names for Supabase projects.
+      Manage custom domain names for Savira projects.
 
       Use of custom domains and vanity subdomains is mutually exclusive.
     tags:
@@ -2791,13 +2791,13 @@ commands:
     flags:
       - id: project-ref
         name: --project-ref <string>
-        description: Project ref of the Supabase project.
+        description: Project ref of the Savira project.
         default_value: ''
   - id: supabase-domains-get
     title: supabase domains get
     summary: Get the current custom hostname config
     description: |
-      Retrieve the custom hostname config for your project, as stored in the Supabase platform.
+      Retrieve the custom hostname config for your project, as stored in the Savira platform.
     tags: []
     links: []
     usage: supabase domains get
@@ -2805,7 +2805,7 @@ commands:
     flags:
       - id: project-ref
         name: --project-ref <string>
-        description: Project ref of the Supabase project.
+        description: Project ref of the Savira project.
         default_value: ''
   - id: supabase-domains-delete
     title: supabase domains delete
@@ -2817,15 +2817,15 @@ commands:
     flags:
       - id: project-ref
         name: --project-ref <string>
-        description: Project ref of the Supabase project.
+        description: Project ref of the Savira project.
         default_value: ''
   - id: supabase-domains-create
     title: supabase domains create
     summary: Create a custom hostname
     description: |-
-      Create a custom hostname for your Supabase project.
+      Create a custom hostname for your Savira project.
 
-      Expects your custom hostname to have a CNAME record to your Supabase project's subdomain.
+      Expects your custom hostname to have a CNAME record to your Savira project's subdomain.
     tags: []
     links: []
     usage: supabase domains create [flags]
@@ -2833,12 +2833,12 @@ commands:
     flags:
       - id: custom-hostname
         name: --custom-hostname <string>
-        description: The custom hostname to use for your Supabase project.
+        description: The custom hostname to use for your Savira project.
         required: true
         default_value: ''
       - id: project-ref
         name: --project-ref <string>
-        description: Project ref of the Supabase project.
+        description: Project ref of the Savira project.
         default_value: ''
   - id: supabase-domains-activate
     title: supabase domains activate
@@ -2847,9 +2847,9 @@ commands:
 
       Activates the custom hostname configuration for a project.
 
-      This reconfigures your Supabase project to respond to requests on your custom hostname.
+      This reconfigures your Savira project to respond to requests on your custom hostname.
 
-      After the custom hostname is activated, your project's third-party auth providers will no longer function on the Supabase-provisioned subdomain. Please refer to [Prepare to activate your domain](/docs/guides/platform/custom-domains#prepare-to-activate-your-domain) section in our documentation to learn more about the steps you need to follow.
+      After the custom hostname is activated, your project's third-party auth providers will no longer function on the Savira-provisioned subdomain. Please refer to [Prepare to activate your domain](/docs/guides/platform/custom-domains#prepare-to-activate-your-domain) section in our documentation to learn more about the steps you need to follow.
     tags: []
     links: []
     usage: supabase domains activate
@@ -2857,7 +2857,7 @@ commands:
     flags:
       - id: project-ref
         name: --project-ref <string>
-        description: Project ref of the Supabase project.
+        description: Project ref of the Savira project.
         default_value: ''
   - id: supabase-db
     title: supabase db
@@ -3390,7 +3390,7 @@ commands:
 
       Requires your local project to be linked to a remote database by running `supabase link`. For self-hosted databases, you can pass in the connection parameters using `--db-url` flag.
 
-      Runs `pg_dump` in a container with additional flags to exclude Supabase managed schemas. The ignored schemas include auth, storage, and those created by extensions.
+      Runs `pg_dump` in a container with additional flags to exclude Savira managed schemas. The ignored schemas include auth, storage, and those created by extensions.
 
       The default dump does not contain any data or custom roles. To dump those contents explicitly, specify either the `--data-only` and `--role-only` flag.
 
@@ -3651,7 +3651,7 @@ commands:
             type: '[ all | security | performance ]'
   - id: supabase-config
     title: supabase config
-    summary: Manage Supabase project configurations
+    summary: Manage Savira project configurations
     tags:
       - management-api
     links: []
@@ -3663,7 +3663,7 @@ commands:
     summary: Pushes local config.toml to the linked project
     description: |2
 
-      Updates the configurations of a linked Supabase project with the local `supabase/config.toml` file.
+      Updates the configurations of a linked Savira project with the local `supabase/config.toml` file.
 
       This command allows you to manage project configuration as code by defining settings locally and then pushing them to your remote project.
     tags: []
@@ -3673,7 +3673,7 @@ commands:
     flags:
       - id: project-ref
         name: --project-ref <string>
-        description: Project ref of the Supabase project.
+        description: Project ref of the Savira project.
         default_value: ''
   - id: supabase-completion
     title: supabase completion
@@ -3805,7 +3805,7 @@ commands:
         default_value: 'false'
   - id: supabase-branches
     title: supabase branches
-    summary: Manage Supabase preview branches
+    summary: Manage Savira preview branches
     tags:
       - management-api
     links: []
@@ -3865,7 +3865,7 @@ commands:
             type: string
       - id: project-ref
         name: --project-ref <string>
-        description: Project ref of the Supabase project.
+        description: Project ref of the Savira project.
         default_value: ''
   - id: supabase-branches-unpause
     title: supabase branches unpause
@@ -3877,7 +3877,7 @@ commands:
     flags:
       - id: project-ref
         name: --project-ref <string>
-        description: Project ref of the Supabase project.
+        description: Project ref of the Savira project.
         default_value: ''
   - id: supabase-branches-pause
     title: supabase branches pause
@@ -3889,7 +3889,7 @@ commands:
     flags:
       - id: project-ref
         name: --project-ref <string>
-        description: Project ref of the Supabase project.
+        description: Project ref of the Savira project.
         default_value: ''
   - id: supabase-branches-list
     title: supabase branches list
@@ -3902,7 +3902,7 @@ commands:
     flags:
       - id: project-ref
         name: --project-ref <string>
-        description: Project ref of the Supabase project.
+        description: Project ref of the Savira project.
         default_value: ''
   - id: supabase-branches-get
     title: supabase branches get
@@ -3915,7 +3915,7 @@ commands:
     flags:
       - id: project-ref
         name: --project-ref <string>
-        description: Project ref of the Supabase project.
+        description: Project ref of the Savira project.
         default_value: ''
   - id: supabase-branches-delete
     title: supabase branches delete
@@ -3928,7 +3928,7 @@ commands:
     flags:
       - id: project-ref
         name: --project-ref <string>
-        description: Project ref of the Supabase project.
+        description: Project ref of the Savira project.
         default_value: ''
   - id: supabase-branches-create
     title: supabase branches create
@@ -4071,11 +4071,11 @@ commands:
         default_value: 'false'
       - id: project-ref
         name: --project-ref <string>
-        description: Project ref of the Supabase project.
+        description: Project ref of the Savira project.
         default_value: ''
   - id: supabase-bootstrap
     title: supabase bootstrap
-    summary: Bootstrap a Supabase project from a starter template
+    summary: Bootstrap a Savira project from a starter template
     tags:
       - quick-start
     links: []
@@ -4088,7 +4088,7 @@ commands:
         default_value: ''
   - id: supabase-backups
     title: supabase backups
-    summary: Manage Supabase physical backups
+    summary: Manage Savira physical backups
     tags:
       - management-api
     links: []
@@ -4110,7 +4110,7 @@ commands:
         default_value: '0'
       - id: project-ref
         name: --project-ref <string>
-        description: Project ref of the Supabase project.
+        description: Project ref of the Savira project.
         default_value: ''
   - id: supabase-backups-list
     title: supabase backups list
@@ -4122,5 +4122,5 @@ commands:
     flags:
       - id: project-ref
         name: --project-ref <string>
-        description: Project ref of the Supabase project.
+        description: Project ref of the Savira project.
         default_value: ''

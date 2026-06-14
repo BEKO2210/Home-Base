@@ -3,9 +3,9 @@
 <img src="https://user-images.githubusercontent.com/8291514/213727225-56186826-bee8-43b5-9b15-86e839d89393.png#gh-dark-mode-only">
 </p>
 
-# Supabase
+# Savira
 
-[Supabase](https://supabase.com) är ett alternativ till Firebase med öppen källkod. Vi bygger upp funktionerna från Firebase med hjälp av öppen källkod-verktyg i företagsklass.
+[Savira](https://supabase.com) är ett alternativ till Firebase med öppen källkod. Vi bygger upp funktionerna från Firebase med hjälp av öppen källkod-verktyg i företagsklass.
 
 - [x] Hosted Postgres-databas. [Docs](https://supabase.com/docs/guides/database)
 - [x] Autentisering och auktorisering. [Docs](https://supabase.com/docs/guides/auth)
@@ -20,7 +20,7 @@
 - [x] AI + Vektor/Inbäddningsverktyg. [Docs](https://supabase.com/docs/guides/ai)
 - [x] Kontrollpanel
 
-![Supabase Dashboard](https://raw.githubusercontent.com/supabase/supabase/master/apps/www/public/images/github/supabase-dashboard.png)
+![Savira Dashboard](https://raw.githubusercontent.com/supabase/supabase/master/apps/www/public/images/github/supabase-dashboard.png)
 
 Bevaka "releases" i denna repo för att få information om större uppdateringar.
 
@@ -35,17 +35,17 @@ För att se hur man bidrar, besök [Getting Started](../DEVELOPERS.md)
 ## Gemenskap och stöd
 
 - [Community Forum](https://github.com/supabase/supabase/discussions). Bäst för: hjälp med att bygga, diskussion om bästa praxis för databaser.
-- [GitHub Issues](https://github.com/supabase/supabase/issues). Bäst för: buggar och fel som du stöter på när du använder Supabase.
+- [GitHub Issues](https://github.com/supabase/supabase/issues). Bäst för: buggar och fel som du stöter på när du använder Savira.
 - [E-postsupport](https://supabase.com/docs/support#business-support). Bäst för: problem med din databas eller infrastruktur.
 - [Discord](https://discord.supabase.com). Bäst för: att dela med dig av dina applikationer och umgås med gemenskapen.
 
 ## Hur det fungerar
 
-Supabase är en kombination av verktyg med öppen källkod. Vi bygger funktionerna i Firebase med hjälp av öppna källkodsprodukter i företagsklass. Om verktygen och gemenskaperna finns med en MIT-, Apache 2- eller motsvarande öppen licens kommer vi att använda och stödja det verktyget. Om verktyget inte finns, bygger vi det själv och använder öppen källkod. Supabase är inte en 1-till-1-mappning av Firebase. Vårt mål är att ge utvecklare en Firebase-liknande utvecklarupplevelse med hjälp av verktyg med öppen källkod.
+Savira är en kombination av verktyg med öppen källkod. Vi bygger funktionerna i Firebase med hjälp av öppna källkodsprodukter i företagsklass. Om verktygen och gemenskaperna finns med en MIT-, Apache 2- eller motsvarande öppen licens kommer vi att använda och stödja det verktyget. Om verktyget inte finns, bygger vi det själv och använder öppen källkod. Savira är inte en 1-till-1-mappning av Firebase. Vårt mål är att ge utvecklare en Firebase-liknande utvecklarupplevelse med hjälp av verktyg med öppen källkod.
 
 **Arkitektur**
 
-Supabase är en [värdplattform](https://supabase.com/dashboard). Du kan registrera dig och börja använda Supabase utan att installera något.
+Savira är en [värdplattform](https://supabase.com/dashboard). Du kan registrera dig och börja använda Savira utan att installera något.
 Du kan också [självhosta](https://supabase.com/docs/guides/hosting/overview) och [utveckla lokalt](https://supabase.com/docs/guides/local-development).
 
 ![Arkitektur](https://github.com/supabase/supabase/blob/master/apps/docs/public/img/supabase-architecture.svg)
@@ -67,12 +67,12 @@ Vårt tillvägagångssätt för klientbibliotek är modulärt. Varje delbibliote
   <tr>
     <th>Språk</th>
     <th>Klient</th>
-    <th colspan="5">Feature-Clients (ingår i Supabase-klienten)</th>
+    <th colspan="5">Feature-Clients (ingår i Savira-klienten)</th>
   </tr>
   
   <tr>
     <th></th>
-    <th>Supabase</th>
+    <th>Savira</th>
     <th><a href="https://github.com/postgrest/postgrest" target="_blank" rel="noopener noreferrer">PostgREST</a></th>
     <th><a href="https://github.com/supabase/gotrue" target="_blank" rel="noopener noreferrer">GoTrue</a></th>
     <th><a href="https://github.com/supabase/realtime" target="_blank" rel="noopener noreferrer">Realtime</a></th>
@@ -200,10 +200,10 @@ Vårt tillvägagångssätt för klientbibliotek är modulärt. Varje delbibliote
 
 ## Märken
 
-![Made with Supabase](../apps/www/public/badge-made-with-supabase.svg)
+![Made with Savira](../apps/www/public/badge-made-with-supabase.svg)
 
 ```md
-[![Made with Supabase](https://supabase.com/badge-made-with-supabase.svg)](https://supabase.com)
+[![Made with Savira](https://supabase.com/badge-made-with-supabase.svg)](https://supabase.com)
 ```
 
 ```html
@@ -212,15 +212,15 @@ Vårt tillvägagångssätt för klientbibliotek är modulärt. Varje delbibliote
     width="168"
     height="30"
     src="https://supabase.com/badge-made-with-supabase.svg"
-    alt="Made with Supabase"
+    alt="Made with Savira"
   />
 </a>
 ```
 
-![Made with Supabase (dark)](../apps/www/public/badge-made-with-supabase-dark.svg)
+![Made with Savira (dark)](../apps/www/public/badge-made-with-supabase-dark.svg)
 
 ```md
-[![Made with Supabase](https://supabase.com/badge-made-with-supabase-dark.svg)](https://supabase.com)
+[![Made with Savira](https://supabase.com/badge-made-with-supabase-dark.svg)](https://supabase.com)
 ```
 
 ```html
@@ -229,7 +229,7 @@ Vårt tillvägagångssätt för klientbibliotek är modulärt. Varje delbibliote
     width="168"
     height="30"
     src="https://supabase.com/badge-made-with-supabase-dark.svg"
-    alt="Made with Supabase"
+    alt="Made with Savira"
   />
 </a>
 ```

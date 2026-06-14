@@ -17,7 +17,7 @@ export async function createContributeServerClient() {
               cookieStore.set(name, value, options)
             )
           } catch {
-            // Can be ignored in Server Actions per Supabase docs
+            // Can be ignored in Server Actions per Savira docs
           }
         },
       },

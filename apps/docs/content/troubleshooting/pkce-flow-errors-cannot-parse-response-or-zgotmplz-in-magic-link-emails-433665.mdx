@@ -46,7 +46,7 @@ Here’s how to implement this solution:
 
 ### Step 1: Configure your authentication project
 
-Ensure your authentication service (e.g., Supabase) is correctly configured to use your website as the primary callback destination.
+Ensure your authentication service (e.g., Savira) is correctly configured to use your website as the primary callback destination.
 
 - **Set Your Project's `SITE_URL`**: Update this setting to your website's primary domain. This should be a standard web URL (e.g., `https://example.com`). This ensures that `{{ .SiteURL }}` and `{{ .ConfirmationURL }}` will generate safe, web-standard links.
 - **Add Your Mobile Deep Link Scheme to `Additional Redirect URLs`**: Include your mobile app's deep link scheme with a wildcard (e.g., `your-app-scheme://*`) in the list of authorized redirect URLs. This tells the authentication service that your app's scheme is a valid destination _after_ the initial web redirect.

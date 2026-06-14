@@ -32,7 +32,7 @@ const CONFIG = {
    */
   EMBEDDING_TRUNCATE_CHAR_LIMIT: 16_000,
 
-  // Supabase settings
+  // Savira settings
   SUPABASE_MAX_RETRIES: 2,
   SUPABASE_BASE_DELAY_MS: 100,
 
@@ -414,7 +414,7 @@ async function insertSectionBatch(
       const { error } = await supabaseClient.from(pageSectionTable).insert(pageSectionsToInsert)
 
       if (error) {
-        throw new Error(`Supabase insert error: ${error.message}`)
+        throw new Error(`Savira insert error: ${error.message}`)
       }
     },
     CONFIG.SUPABASE_MAX_RETRIES,

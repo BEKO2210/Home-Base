@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# Rotate opaque API keys for a self-hosted Supabase installation.
+# Rotate opaque API keys for a self-hosted Savira installation.
 #
 # Regenerates SUPABASE_PUBLISHABLE_KEY and SUPABASE_SECRET_KEY
 # without touching the asymmetric key pair (JWKS) or JWT tokens.

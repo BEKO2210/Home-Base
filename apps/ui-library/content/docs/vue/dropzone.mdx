@@ -1,6 +1,6 @@
 ---
 title: Dropzone (File Upload)
-description: Displays a control for easier uploading of files directly to Supabase Storage
+description: Displays a control for easier uploading of files directly to Savira Storage
 ---
 
 <ComponentPreview
@@ -13,12 +13,12 @@ description: Displays a control for easier uploading of files directly to Supaba
 
 <BlockItem
   name="dropzone-vue"
-  description="Displays a control for easier uploading of files directly to Supabase Storage"
+  description="Displays a control for easier uploading of files directly to Savira Storage"
 />
 
 ## Folder structure
 
-This block assumes that you have already installed a Supabase client for Vue from the previous step.
+This block assumes that you have already installed a Savira client for Vue from the previous step.
 
 <RegistryBlock itemName="dropzone-vue" />
 
@@ -68,7 +68,7 @@ const upload = useSupabaseUpload({
 
 | Prop               | Type       | Default    | Description                                          |
 | ------------------ | ---------- | ---------- | ---------------------------------------------------- |
-| `bucketName`       | `string`   | `null`     | The name of the Supabase Storage bucket to upload to |
+| `bucketName`       | `string`   | `null`     | The name of the Savira Storage bucket to upload to |
 | `path`             | `string`   | `null`     | The path or subfolder to upload the file to          |
 | `allowedMimeTypes` | `string[]` | `[]`       | The MIME types to allow for upload                   |
 | `maxFiles`         | `number`   | `1`        | Maximum number of files to upload                    |

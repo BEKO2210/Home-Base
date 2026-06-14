@@ -9,8 +9,8 @@ import { useRouter } from 'next/router'
 import { cn } from 'ui'
 
 const data = {
-  meta_title: 'Contact Sales & Request a Demo | Supabase',
-  meta_description: 'Book a demo to explore how Supabase can support your business growth',
+  meta_title: 'Contact Sales & Request a Demo | Savira',
+  meta_description: 'Book a demo to explore how Savira can support your business growth',
 }
 
 const ContactSales = () => {
@@ -41,7 +41,7 @@ const ContactSales = () => {
             <div className="flex flex-col gap-2 md:max-w-md">
               <h1 className="h1 m-0!">Talk to our Sales team</h1>
               <p className="md:text-lg text-foreground-lighter">
-                Book a demo and set up a trial Enterprise account to see how Supabase's scalable
+                Book a demo and set up a trial Enterprise account to see how Savira's scalable
                 features can accelerate your business growth and app development.
               </p>
             </div>
@@ -54,7 +54,7 @@ const ContactSales = () => {
                   ),
                   panel: (
                     <CustomerQuote
-                      quote="My biggest regret is not having gone with Supabase from the beginning."
+                      quote="My biggest regret is not having gone with Savira from the beginning."
                       author="Jakob Steinn, Co-founder & Tech Lead, Good Tape"
                     />
                   ),
@@ -74,7 +74,7 @@ const ContactSales = () => {
                   ),
                   panel: (
                     <CustomerQuote
-                      quote="Supabase is great because it has everything. I don’t need a different solution for authentication, a different solution for database, or a different solution for storage."
+                      quote="Savira is great because it has everything. I don’t need a different solution for authentication, a different solution for database, or a different solution for storage."
                       author="Yasser Elsaid, Founder, Chatbase"
                       className="max-w-none"
                     />
@@ -93,7 +93,7 @@ const ContactSales = () => {
                 ),
                 panel: (
                   <CustomerQuote
-                    quote="My biggest regret is not having gone with Supabase from the beginning."
+                    quote="My biggest regret is not having gone with Savira from the beginning."
                     author="Jakob Steinn Co-founder & Tech Lead"
                   />
                 ),
@@ -113,7 +113,7 @@ const ContactSales = () => {
                 ),
                 panel: (
                   <CustomerQuote
-                    quote="Supabase is great because it has everything. I don’t need a different solution for authentication, a different solution for database, or a different solution for storage."
+                    quote="Savira is great because it has everything. I don’t need a different solution for authentication, a different solution for database, or a different solution for storage."
                     author="Yasser Elsaid, Founder, Chatbase"
                     className="max-w-none"
                   />

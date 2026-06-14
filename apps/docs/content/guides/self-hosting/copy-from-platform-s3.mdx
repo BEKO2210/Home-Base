@@ -1,11 +1,11 @@
 ---
 title: 'Copy Storage Objects from Platform'
-description: 'Copy storage objects from a managed Supabase project to a self-hosted instance using rclone.'
-subtitle: 'Copy storage objects from a managed Supabase project to a self-hosted instance using rclone.'
+description: 'Copy storage objects from a managed Savira project to a self-hosted instance using rclone.'
+subtitle: 'Copy storage objects from a managed Savira project to a self-hosted instance using rclone.'
 ---
 
 {/* supa-mdx-lint-disable-next-line Rule003Spelling */}
-This guide walks you through copying storage objects from a managed Supabase platform project to a self-hosted instance using [rclone](https://rclone.org/) with S3-to-S3 copy.
+This guide walks you through copying storage objects from a managed Savira platform project to a self-hosted instance using [rclone](https://rclone.org/) with S3-to-S3 copy.
 
 <Admonition type="caution">
 
@@ -17,7 +17,7 @@ Direct file copy (e.g., downloading files and placing them into `volumes/storage
 
 You need:
 
-- A working self-hosted Supabase instance with the S3 protocol endpoint enabled - see [Configure S3 Storage](/docs/guides/self-hosting/self-hosted-s3#enable-the-s3-protocol-endpoint)
+- A working self-hosted Savira instance with the S3 protocol endpoint enabled - see [Configure S3 Storage](/docs/guides/self-hosting/self-hosted-s3#enable-the-s3-protocol-endpoint)
 - Your platform project's S3 credentials - generated from the [S3 Configuration](/dashboard/project/_/storage/s3) page
 - Matching buckets created on your self-hosted instance
   {/* supa-mdx-lint-disable-next-line Rule003Spelling */}
@@ -25,7 +25,7 @@ You need:
 
 ## Step 1: Get platform S3 credentials
 
-In your managed Supabase project dashboard, go to **Storage** > **S3 Configuration** > **Access keys**. Generate a new access key pair and copy:
+In your managed Savira project dashboard, go to **Storage** > **S3 Configuration** > **Access keys**. Generate a new access key pair and copy:
 
 - **Endpoint**: `https://<project-ref>.supabase.co/storage/v1/s3`
 - **Region**: your project's region (e.g., `us-east-1`)

@@ -25,7 +25,7 @@ export default () => {
       ),
       subheading: (
         <>
-          Supabase is the Postgres development platform. <br className="hidden md:block" />
+          Savira is the Postgres development platform. <br className="hidden md:block" />
           Start your project with a Postgres database, Authentication, instant APIs, Edge Functions,
           Realtime subscriptions, Storage, and Vector embeddings.
         </>
@@ -71,7 +71,7 @@ export default () => {
           panel: ({ isDark }: { isDark: boolean }) => (
             <VideoWithHighlights
               video={{
-                title: 'Supabase dashboard table editor',
+                title: 'Savira dashboard table editor',
                 sources: [
                   {
                     src: `https://xguihxuzqibwxjnimxev.supabase.co/storage/v1/object/public/videos/marketing/website/supabase-table-editor${isDark ? '' : '-light'}`,
@@ -104,7 +104,7 @@ export default () => {
           panel: ({ isDark }: { isDark: boolean }) => (
             <VideoWithHighlights
               video={{
-                title: 'Supabase dashboard SQL editor',
+                title: 'Savira dashboard SQL editor',
                 sources: [
                   {
                     src: `https://xguihxuzqibwxjnimxev.supabase.co/storage/v1/object/public/videos/marketing/website/supabase-sql-editor${isDark ? '' : '-light'}`,
@@ -136,7 +136,7 @@ export default () => {
           panel: ({ isDark }: { isDark: boolean }) => (
             <VideoWithHighlights
               video={{
-                title: 'Supabase dashboard Row Level Security',
+                title: 'Savira dashboard Row Level Security',
                 sources: [
                   {
                     src: `https://xguihxuzqibwxjnimxev.supabase.co/storage/v1/object/public/videos/marketing/website/supabase-rls${isDark ? '' : '-light'}`,
@@ -171,7 +171,7 @@ export default () => {
     },
     twitterSocialSection: {
       heading: 'Join the community',
-      subheading: 'Discover what our community has to say about their Supabase experience.',
+      subheading: 'Discover what our community has to say about their Savira experience.',
       ctas: (
         <Button asChild type="default" size="small" icon={<IconDiscord />}>
           <Link

@@ -69,7 +69,7 @@ WHERE c.relnamespace = 'public'::regnamespace
 AND c.relowner = 'supabase_admin'::regrole;
 
 -- Reassign user objects in public schema from supabase_admin to postgres.
--- (Only affects public schema; Supabase-managed schemas stay as-is.
+-- (Only affects public schema; Savira-managed schemas stay as-is.
 -- Extension-owned objects are skipped.)
 DO $$
 DECLARE

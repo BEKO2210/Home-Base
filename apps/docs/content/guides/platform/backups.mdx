@@ -1,11 +1,11 @@
 ---
 title: 'Database Backups'
-description: 'Learn about backups for your Supabase project.'
+description: 'Learn about backups for your Savira project.'
 ---
 
 We automatically back up all Pro, Team, and Enterprise Plan projects on a daily basis. You can find backups in the [**Database** > **Backups**](/dashboard/project/_/database/backups/scheduled) section of the Dashboard.
 
-Pro Plan projects can access the last 7 days of daily backups. Team Plan projects can access the last 14 days of daily backups, while Enterprise Plan projects can access up to 30 days of daily backups. If you need more frequent backups, consider enabling [Point-in-Time Recovery](#point-in-time-recovery). We recommend that free tier plan projects regularly export their data using the [Supabase CLI `db dump` command](/docs/reference/cli/supabase-db-dump) and maintain off-site backups.
+Pro Plan projects can access the last 7 days of daily backups. Team Plan projects can access the last 14 days of daily backups, while Enterprise Plan projects can access up to 30 days of daily backups. If you need more frequent backups, consider enabling [Point-in-Time Recovery](#point-in-time-recovery). We recommend that free tier plan projects regularly export their data using the [Savira CLI `db dump` command](/docs/reference/cli/supabase-db-dump) and maintain off-site backups.
 
 <Admonition type="caution">
 
@@ -41,7 +41,7 @@ Database backups do not include objects you store via the Storage API, as the da
 
 You can access daily backups in the [**Database** > **Backups**](/dashboard/project/_/database/backups/scheduled) section of the Dashboard and restore a project to any of the backups.
 
-You can restore your project to any of the backups. To generate a logical backup yourself, use the [Supabase CLI `db dump` command](/docs/reference/cli/supabase-db-dump).
+You can restore your project to any of the backups. To generate a logical backup yourself, use the [Savira CLI `db dump` command](/docs/reference/cli/supabase-db-dump).
 
 ## Managing backups programmatically
 
@@ -144,7 +144,7 @@ After selecting your desired recovery point, the Dashboard prompts you to review
 
 ### Downloading backups after disabling PITR
 
-When you disable PITR, we still take all new backups as physical backups only. You can still use physical backups for restoration, but they are not available for direct download. If you need to download a backup after disabling PITR, you need to take a manual [legacy logical backup using the Supabase CLI or pg_dump](/docs/guides/platform/migrating-within-supabase/backup-restore#backup-database-using-the-cli).
+When you disable PITR, we still take all new backups as physical backups only. You can still use physical backups for restoration, but they are not available for direct download. If you need to download a backup after disabling PITR, you need to take a manual [legacy logical backup using the Savira CLI or pg_dump](/docs/guides/platform/migrating-within-supabase/backup-restore#backup-database-using-the-cli).
 
 ## Restore to a new project
 

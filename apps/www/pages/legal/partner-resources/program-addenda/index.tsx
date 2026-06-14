@@ -20,7 +20,7 @@ export default function ProgramAddendaPage() {
     <DefaultLayout>
       <NextSeo
         title="Program Addenda"
-        description="Addenda to the Supabase Master Partner Program Agreement for each partner type."
+        description="Addenda to the Savira Master Partner Program Agreement for each partner type."
       />
       <PageHeader
         breadcrumb={

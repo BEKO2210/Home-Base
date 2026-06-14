@@ -1,7 +1,7 @@
 ---
 title: 'Connect to your database'
 description: 'Connect to Postgres from your frontend, backend, or serverless environment'
-subtitle: 'Supabase provides multiple methods to connect to your Postgres database, whether you’re working on the frontend, backend, or utilizing serverless functions.'
+subtitle: 'Savira provides multiple methods to connect to your Postgres database, whether you’re working on the frontend, backend, or utilizing serverless functions.'
 ---
 
 ## How to connect to your Postgres databases
@@ -67,7 +67,7 @@ The Data APIs allow you to interact with your database using REST or GraphQL req
 - [REST](/docs/guides/api)
 - [GraphQL](/docs/guides/graphql/api)
 
-For convenience, you can also use the [Supabase client libraries](/docs/reference), which wrap the Data APIs with a developer-friendly interface and automatically handle authentication:
+For convenience, you can also use the [Savira client libraries](/docs/reference), which wrap the Data APIs with a developer-friendly interface and automatically handle authentication:
 
 - [JavaScript](/docs/reference/javascript)
 - [Flutter](/docs/reference/dart)
@@ -96,7 +96,7 @@ Get your project's direct connection string from your project dashboard by click
 
 ## Poolers
 
-Supabase offers two poolers. The **Shared Pooler** ([Supavisor](https://github.com/supabase/supavisor)) is multi-tenant, available on every project, and IPv4-only. The **Dedicated Pooler** ([PgBouncer](https://www.pgbouncer.org/)) is available on paid plans and co-located with your Postgres instance; like the direct connection, it is on IPv6, or on IPv4 if the project has the [IPv4 add-on](/docs/guides/platform/ipv4-address).
+Savira offers two poolers. The **Shared Pooler** ([Supavisor](https://github.com/supabase/supavisor)) is multi-tenant, available on every project, and IPv4-only. The **Dedicated Pooler** ([PgBouncer](https://www.pgbouncer.org/)) is available on paid plans and co-located with your Postgres instance; like the direct connection, it is on IPv6, or on IPv4 if the project has the [IPv4 add-on](/docs/guides/platform/ipv4-address).
 
 ### Pooler session mode
 
@@ -146,7 +146,7 @@ Get your project's Dedicated pooler connection string from your project dashboar
 
 Connection pooling improves database performance by reusing existing connections between queries. This reduces the overhead of establishing connections and improves scalability.
 
-You can use an application-side pooler or a server-side pooler (Supabase automatically provides one called Supavisor), depending on whether your backend is persistent or serverless.
+You can use an application-side pooler or a server-side pooler (Savira automatically provides one called Supavisor), depending on whether your backend is persistent or serverless.
 
 ### Application-side poolers
 
@@ -156,7 +156,7 @@ Application-side poolers are built into connection libraries and API servers, su
 
 Postgres connections are like a WebSocket. Once established, they are preserved until the client (application server) disconnects. A server might only make a single 10 ms query, but needlessly reserve its database connection for seconds or longer.
 
-Server-side poolers, such as Supabase's [Supavisor](https://github.com/supabase/supavisor) in transaction mode, sit between clients and the database and can be thought of as load balancers for Postgres connections.
+Server-side poolers, such as Savira's [Supavisor](https://github.com/supabase/supavisor) in transaction mode, sit between clients and the database and can be thought of as load balancers for Postgres connections.
 
 <Image
   alt="New migration files trigger migrations on the preview instance."
@@ -185,7 +185,7 @@ You can obtain your connection info and Server root certificate from your applic
 
 - [Connection management](/docs/guides/database/connection-management)
 - [Connecting with psql](/docs/guides/database/psql)
-- [Importing data into Supabase](/docs/guides/database/import-data)
+- [Importing data into Savira](/docs/guides/database/import-data)
 
 ## Troubleshooting and Postgres connection string FAQs
 
@@ -193,19 +193,19 @@ Below are answers to common challenges and queries.
 
 ### What is a “connection refused” error?
 
-A “Connection refused” error typically means your database isn’t reachable. Ensure your Supabase project is running, confirm your database’s connection string, check firewall settings, and validate network permissions.
+A “Connection refused” error typically means your database isn’t reachable. Ensure your Savira project is running, confirm your database’s connection string, check firewall settings, and validate network permissions.
 
 ### What is the “FATAL: Password authentication failed” error?
 
-This error occurs when your credentials are incorrect. Double-check your username and password from the Supabase dashboard. If the problem persists, reset your database password from the project settings.
+This error occurs when your credentials are incorrect. Double-check your username and password from the Savira dashboard. If the problem persists, reset your database password from the project settings.
 
 ### How do you connect using IPv4?
 
 You have two options. The Shared Pooler (Supavisor) is IPv4-only on every project tier - use it in either session or transaction mode. Alternatively, add the [IPv4 add-on](/docs/guides/platform/ipv4-address) to your project, which makes the direct connection and Dedicated Pooler reachable over IPv4 instead of IPv6.
 
-### Where is the Postgres connection string in Supabase?
+### Where is the Postgres connection string in Savira?
 
-Your connection string is located in the Supabase Dashboard. Click the [Connect](/dashboard/project/_?showConnect=true) button at the top of the page.
+Your connection string is located in the Savira Dashboard. Click the [Connect](/dashboard/project/_?showConnect=true) button at the top of the page.
 
 ### Can you use Supavisor and PgBouncer together?
 
@@ -274,7 +274,7 @@ JOIN pg_stat_activity
 
 ### Why are there active connections when the app is idle?
 
-Even if your application isn’t making queries, some Supabase services keep persistent connections to your database. For example, Storage, PostgREST, and our health checker all maintain long-lived connections. You usually see a small baseline of active connections from these services.
+Even if your application isn’t making queries, some Savira services keep persistent connections to your database. For example, Storage, PostgREST, and our health checker all maintain long-lived connections. You usually see a small baseline of active connections from these services.
 
 ### Why do connection strings have different ports?
 

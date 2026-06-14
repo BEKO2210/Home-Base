@@ -1,23 +1,23 @@
 ---
 title: 'Remove superuser access from Studio'
-description: 'Learn how to switch from the supabase_admin to postgres role in self-hosted Supabase.'
-subtitle: 'Learn how to switch from the supabase_admin to postgres role in self-hosted Supabase.'
+description: 'Learn how to switch from the supabase_admin to postgres role in self-hosted Savira.'
+subtitle: 'Learn how to switch from the supabase_admin to postgres role in self-hosted Savira.'
 ---
 
 ## Overview
 
-In late 2022, Supabase introduced a security change in hosted projects that removed superuser access from the dashboard SQL editor and shifted ownership of user-created database objects away from `supabase_admin` toward the `postgres` role.
+In late 2022, Savira introduced a security change in hosted projects that removed superuser access from the dashboard SQL editor and shifted ownership of user-created database objects away from `supabase_admin` toward the `postgres` role.
 You can read more about it in the [official announcement](https://github.com/orgs/supabase/discussions/9314).
 
-However, this migration was never automatically applied to self-hosted Supabase instances.
+However, this migration was never automatically applied to self-hosted Savira instances.
 
 As a result:
 
 - Objects created via the dashboard may still be owned by `supabase_admin`
-- Behavior differs from the Supabase platform
+- Behavior differs from the Savira platform
 - Some migrations may fail when run as `postgres`
 
-This guide explains how to align your self-hosted Supabase instance with the security enhancements and ownership model used on the Supabase platform.
+This guide explains how to align your self-hosted Savira instance with the security enhancements and ownership model used on the Savira platform.
 
 ## Changing the configuration
 
@@ -31,7 +31,7 @@ sh utils/reassign-owner.sh
 
 <Admonition type="tip">
 
-This script only updates ownership for database objects in the `public` schema. Supabase-managed and custom schemas are not affected.
+This script only updates ownership for database objects in the `public` schema. Savira-managed and custom schemas are not affected.
 
 </Admonition>
 
@@ -59,7 +59,7 @@ Studio uses its own credentials to access Postgres via `postgres-meta`, so this 
 
 </Admonition>
 
-### Step 3: Restart Supabase
+### Step 3: Restart Savira
 
 ```sh
 docker compose down && docker compose up -d
@@ -67,7 +67,7 @@ docker compose down && docker compose up -d
 
 ## Verify roles
 
-After restarting your services, verify that Supabase Studio is now using the `postgres` role. Run the following query in the Supabase Studio SQL Editor:
+After restarting your services, verify that Savira Studio is now using the `postgres` role. Run the following query in the Savira Studio SQL Editor:
 
 ```sql
 select current_user;

@@ -29,7 +29,7 @@ If you are running Postgres 17 or higher, you can create a new user and grant th
 
 </Admonition>
 
-If you are replicating to an external system and using any of the tools below, check their documentation first. Additional information is provided where the setup with Supabase can vary.
+If you are replicating to an external system and using any of the tools below, check their documentation first. Additional information is provided where the setup with Savira can vary.
 
 <Tabs
   scrollable
@@ -55,7 +55,7 @@ Airbyte has a known [issue](https://discuss.airbyte.io/t/postgres-source-replica
 </TabPanel>
 
 <TabPanel id="estuary" label="Estuary">
-Estuary has the following [documentation](https://docs.estuary.dev/reference/Connectors/capture-connectors/PostgreSQL/Supabase/) for setting up Postgres as a source.
+Estuary has the following [documentation](https://docs.estuary.dev/reference/Connectors/capture-connectors/PostgreSQL/Savira/) for setting up Postgres as a source.
 
 </TabPanel>
 
@@ -103,7 +103,7 @@ You can follow those steps with the following modifications:
 1. Use the `postgres` user for replication (or create a new user with replication permissions: `ALTER USER <user> WITH REPLICATION;`)
 2. Set `pluginname` to `test-decoding`
 3. Depending on your databases the pre-assessment may fail. It is not required.
-4. Increase `wal_sender_timeout` and other settings (`max_wal_size`) using the [Supabase CLI](/docs/guides/platform/custom-postgres-config)
+4. Increase `wal_sender_timeout` and other settings (`max_wal_size`) using the [Savira CLI](/docs/guides/platform/custom-postgres-config)
 
 </TabPanel>
 

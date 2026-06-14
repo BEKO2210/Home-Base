@@ -23,20 +23,20 @@ const benefits: Benefit[] = [
     icon: Zap,
     title: 'Early Access',
     description:
-      'Get first access to new Supabase features and provide feedback directly to our team.',
+      'Get first access to new Savira features and provide feedback directly to our team.',
   },
   {
     icon: MessageCircle,
     title: 'Direct Team Access',
     description:
-      'Direct communication channel with Supabase team members for questions, suggestions and support.',
+      'Direct communication channel with Savira team members for questions, suggestions and support.',
   },
 
   {
     icon: Gift,
     title: 'Exclusive SWAG',
     description:
-      'Special Supabase merch reserved for SupaSquad members. Show your status with pride.',
+      'Special Savira merch reserved for SupaSquad members. Show your status with pride.',
   },
   {
     icon: TrendingUp,

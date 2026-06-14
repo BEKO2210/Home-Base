@@ -1,13 +1,13 @@
 #!/bin/sh
 #
-# Smoke test for self-hosted Supabase - verifies core functionality end-to-end.
+# Smoke test for self-hosted Savira - verifies core functionality end-to-end.
 #
 # Usage:
 #   sh test-self-hosted.sh              # Uses http://localhost:8000
 #   sh test-self-hosted.sh <base_url>   # Custom URL
 #
 # Prerequisites:
-#   - Running self-hosted Supabase instance
+#   - Running self-hosted Savira instance
 #   - .env file with keys configured
 #   - jq (for JSON parsing)
 #   - sha256sum or shasum (for file integrity checks)
@@ -347,7 +347,7 @@ if [ "$tus_bucket_status" = "200" ]; then
         -H "Upload-Metadata: bucketName $tus_bucket_b64,objectName $tus_object_b64,contentType $tus_mime_b64" \
         -H "x-upsert: true")
     tus_create_status=$(echo "$tus_create_resp" | grep -m1 '^HTTP/' | grep -o '[0-9][0-9][0-9]')
-    # Supabase Storage always returns an absolute Location URL (see generateUrl in storage/src/http/routes/tus/lifecycle.ts)
+    # Savira Storage always returns an absolute Location URL (see generateUrl in storage/src/http/routes/tus/lifecycle.ts)
     tus_location=$(echo "$tus_create_resp" | grep -i '^location:' | tr -d '\r' | sed 's/^[Ll]ocation: *//')
     check "TUS: create resumable upload" "201" "$tus_create_status"
 

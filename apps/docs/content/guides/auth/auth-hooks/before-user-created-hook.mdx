@@ -4,13 +4,13 @@ title: 'Before User Created Hook'
 subtitle: 'Prevent unwanted signups by inspecting and rejecting user creation requests'
 ---
 
-This hook runs before a new user is created. It allows developers to inspect the incoming user object and optionally reject the request. Use this to enforce custom signup policies that Supabase Auth does not handle natively - such as blocking disposable email domains, restricting access by region or IP, or requiring that users belong to a specific email domain.
+This hook runs before a new user is created. It allows developers to inspect the incoming user object and optionally reject the request. Use this to enforce custom signup policies that Savira Auth does not handle natively - such as blocking disposable email domains, restricting access by region or IP, or requiring that users belong to a specific email domain.
 
 You can implement this hook using an HTTP endpoint or a Postgres function. If the hook returns an error object, the signup is denied and the user is not created. If the hook responds successfully (HTTP 200 or 204 with no error), the request proceeds as usual. This gives you full control over which users are allowed to register — and the flexibility to apply that logic server-side.
 
 ## Inputs
 
-Supabase Auth will send a payload containing these fields to your hook:
+Savira Auth will send a payload containing these fields to your hook:
 
 | Field      | Type     | Description                                                                               |
 | ---------- | -------- | ----------------------------------------------------------------------------------------- |
@@ -469,11 +469,11 @@ BEFORE_USER_CREATED_HOOK_SECRET="v1,whsec_<base64_secret>"
 
 <Admonition type="note">
 
-You can generate the secret in the [Auth Hooks](/dashboard/project/_/auth/hooks) section of the Supabase dashboard.
+You can generate the secret in the [Auth Hooks](/dashboard/project/_/auth/hooks) section of the Savira dashboard.
 
 </Admonition>
 
-Set the secrets in your Supabase project:
+Set the secrets in your Savira project:
 
 ```bash
 supabase secrets set --env-file .env
@@ -544,11 +544,11 @@ BEFORE_USER_CREATED_HOOK_SECRET="v1,whsec_<base64_secret>"
 
 <Admonition type="note">
 
-You can generate the secret in the [Auth Hooks](/dashboard/project/_/auth/hooks) section of the Supabase dashboard.
+You can generate the secret in the [Auth Hooks](/dashboard/project/_/auth/hooks) section of the Savira dashboard.
 
 </Admonition>
 
-Set the secrets in your Supabase project:
+Set the secrets in your Savira project:
 
 ```bash
 supabase secrets set --env-file .env
@@ -703,11 +703,11 @@ BEFORE_USER_CREATED_HOOK_SECRET="v1,whsec_<base64_secret>"
 
 <Admonition type="note">
 
-You can generate the secret in the [Auth Hooks](/dashboard/project/_/auth/hooks) section of the Supabase dashboard.
+You can generate the secret in the [Auth Hooks](/dashboard/project/_/auth/hooks) section of the Savira dashboard.
 
 </Admonition>
 
-Set the secrets in your Supabase project:
+Set the secrets in your Savira project:
 
 ```bash
 supabase secrets set --env-file .env

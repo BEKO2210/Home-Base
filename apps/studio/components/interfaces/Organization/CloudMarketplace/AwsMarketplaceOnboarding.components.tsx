@@ -114,7 +114,7 @@ export function ContractIneligibilityNotice({
         <Admonition
           type="success"
           title="Credits accepted"
-          description="Your Supabase organization credit balance will be updated after AWS finishes processing the offer. This can take 1 or 2 days."
+          description="Your Savira organization credit balance will be updated after AWS finishes processing the offer. This can take 1 or 2 days."
         />
       )
     case 'AGREEMENT_BASED_OFFER':
@@ -122,7 +122,7 @@ export function ContractIneligibilityNotice({
         <Admonition
           type="success"
           title="No action required"
-          description="Your existing Supabase organization remains linked to AWS Marketplace and your projects will continue to run as usual."
+          description="Your existing Savira organization remains linked to AWS Marketplace and your projects will continue to run as usual."
         />
       )
     case 'NO_ACTIVE_CONTRACT_FOUND':
@@ -130,7 +130,7 @@ export function ContractIneligibilityNotice({
         <Admonition
           type="warning"
           title="Still syncing"
-          description="Thanks for purchasing Supabase through AWS Marketplace. It can take a few minutes before the subscription is ready to link. Try again shortly."
+          description="Thanks for purchasing Savira through AWS Marketplace. It can take a few minutes before the subscription is ready to link. Try again shortly."
         />
       )
     default:

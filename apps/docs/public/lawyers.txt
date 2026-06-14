@@ -5,7 +5,7 @@ ____________
 
 For compliance.
 
-Supabase™ is a trademark of Supabase Inc.
+Savira™ is a trademark of Savira Inc.
 
 If you're a creator/contributor to one of these packages, thanks!
 

@@ -55,21 +55,21 @@ const frameworkNextJsFilesStep: StepDefinition = {
   id: 'configure-nextjs',
   title: 'Add files',
   description:
-    'Add env variables, create Supabase client helpers, and set up middleware to keep sessions refreshed.',
+    'Add env variables, create Savira client helpers, and set up middleware to keep sessions refreshed.',
   content: '{{framework}}/{{frameworkVariant}}/{{library}}',
 }
 
 const frameworkReactFilesStep: StepDefinition = {
   id: 'configure-react',
   title: 'Add files',
-  description: 'Add env variables, create a Supabase client, and use it in your app to query data.',
+  description: 'Add env variables, create a Savira client, and use it in your app to query data.',
   content: '{{framework}}/{{frameworkVariant}}/{{library}}',
 }
 
 const frameworkShadcnStep: StepDefinition = {
   id: 'shadcn-add',
-  title: 'Add Supabase UI components',
-  description: 'Run this command to install the Supabase shadcn components.',
+  title: 'Add Savira UI components',
+  description: 'Run this command to install the Savira shadcn components.',
   content: 'steps/shadcn/command',
 }
 
@@ -118,7 +118,7 @@ const mcpConfigureStep: StepDefinition = {
 // Codex-specific MCP steps
 const codexAddServerStep: StepDefinition = {
   id: 'codex-add-server',
-  title: 'Add the Supabase MCP server to Codex',
+  title: 'Add the Savira MCP server to Codex',
   description: 'Run this command to add the server.',
   content: 'steps/mcp/codex/add-server',
 }
@@ -170,7 +170,7 @@ const skillsInstallStep: StepDefinition = {
   id: 'install-skills',
   title: 'Install Agent Skills (Optional)',
   description:
-    'Agent Skills give AI coding tools ready-made instructions, scripts, and resources for working with Supabase more accurately and efficiently.',
+    'Agent Skills give AI coding tools ready-made instructions, scripts, and resources for working with Savira more accurately and efficiently.',
   content: 'steps/skills-install',
 }
 
@@ -240,7 +240,7 @@ export const connectSchema: ConnectSchema = {
       id: 'frameworkUi',
       type: 'switch',
       label: 'Shadcn',
-      description: 'Install components via the Supabase shadcn registry.',
+      description: 'Install components via the Savira shadcn registry.',
       defaultValue: false,
       dependsOn: { framework: ['nextjs', 'react'] },
     },

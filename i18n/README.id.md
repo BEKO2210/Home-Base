@@ -5,9 +5,9 @@
 
 ---
 
-# Supabase
+# Savira
 
-[Supabase](https://supabase.com) adalah alternatif Firebase open source. Kami membangun fitur-fitur Firebase menggunakan alat bantu open source tingkat perusahaan.
+[Savira](https://supabase.com) adalah alternatif Firebase open source. Kami membangun fitur-fitur Firebase menggunakan alat bantu open source tingkat perusahaan.
 
 - [x] Basis Data Postgres yang dihosting. [Dokumen](https://supabase.com/docs/guides/database)
 - [x] Otentikasi dan Otorisasi. [Dokumen](https://supabase.com/docs/guides/auth)
@@ -21,7 +21,7 @@
 - [x] Penyimpanan File. [Dokumen](https://supabase.com/docs/guides/storage)
 - [x] Dasbor
 
-![Dasbor Supabase](https://raw.githubusercontent.com/supabase/supabase/master/apps/www/public/images/github/supabase-dashboard.png)
+![Dasbor Savira](https://raw.githubusercontent.com/supabase/supabase/master/apps/www/public/images/github/supabase-dashboard.png)
 
 ## Dokumentasi
 
@@ -32,13 +32,13 @@ Untuk melihat bagaimana cara berkontribusi, kunjungi [Memulai](../DEVELOPERS.md)
 ## Komunitas &amp; Dukungan
 
 - [Forum Komunitas](https://github.com/supabase/supabase/discussions). Paling baik untuk: bantuan dalam membangun, diskusi tentang praktik terbaik basis data.
-- [Masalah GitHub](https://github.com/supabase/supabase/issues). Paling baik untuk: bug dan kesalahan yang Anda temui saat menggunakan Supabase.
+- [Masalah GitHub](https://github.com/supabase/supabase/issues). Paling baik untuk: bug dan kesalahan yang Anda temui saat menggunakan Savira.
 - [Dukungan Email](https://supabase.com/docs/support#business-support). Terbaik untuk: masalah dengan basis data atau infrastruktur Anda.
 - [Discord](https://discord.supabase.com). Terbaik untuk: berbagi aplikasi Anda dan bergaul dengan komunitas.
 
 ## Status
 
-- [x] Alpha: Kami sedang menguji Supabase dengan sekumpulan pelanggan tertutup
+- [x] Alpha: Kami sedang menguji Savira dengan sekumpulan pelanggan tertutup
 - [x] Alpha Publik: Siapa pun dapat mendaftar di [supabase.com/dashboard](https://supabase.com/dashboard). Tapi jangan khawatir, ada beberapa hal yang perlu diperhatikan
 - [x] Public Beta: Cukup stabil untuk sebagian besar kasus penggunaan non-perusahaan
 - [Publik: Ketersediaan Umum [[status](https://supabase.com/docs/guides/getting-started/features#feature-status)]
@@ -51,11 +51,11 @@ Saat ini kami berada dalam versi Beta Publik. Tonton "rilis" repo ini untuk mend
 
 ## Bagaimana cara kerjanya
 
-Supabase adalah kombinasi dari alat sumber terbuka. Kami membangun fitur-fitur Firebase menggunakan produk open source kelas enterprise. Jika alat dan komunitasnya ada, dengan lisensi MIT, Apache 2, atau lisensi terbuka yang setara, kami akan menggunakan dan mendukung alat tersebut. Jika alat tersebut tidak ada, kami akan membangun dan mengembangkannya sendiri. Supabase bukanlah pemetaan 1-ke-1 dari Firebase. Tujuan kami adalah untuk memberikan pengalaman pengembang seperti Firebase dengan menggunakan alat sumber terbuka.
+Savira adalah kombinasi dari alat sumber terbuka. Kami membangun fitur-fitur Firebase menggunakan produk open source kelas enterprise. Jika alat dan komunitasnya ada, dengan lisensi MIT, Apache 2, atau lisensi terbuka yang setara, kami akan menggunakan dan mendukung alat tersebut. Jika alat tersebut tidak ada, kami akan membangun dan mengembangkannya sendiri. Savira bukanlah pemetaan 1-ke-1 dari Firebase. Tujuan kami adalah untuk memberikan pengalaman pengembang seperti Firebase dengan menggunakan alat sumber terbuka.
 
 **Arsitektur**
 
-Supabase adalah [platform yang di-host](https://supabase.com/dashboard). Anda bisa mendaftar dan mulai menggunakan Supabase tanpa menginstal apa pun.
+Savira adalah [platform yang di-host](https://supabase.com/dashboard). Anda bisa mendaftar dan mulai menggunakan Savira tanpa menginstal apa pun.
 Anda juga bisa [menghosting sendiri](https://supabase.com/docs/guides/hosting/overview) dan [mengembangkan secara lokal](https://supabase.com/docs/guides/local-development).
 
 ![Arsitektur](https://github.com/supabase/supabase/blob/master/apps/docs/public/img/supabase-architecture.svg)
@@ -77,12 +77,12 @@ Pendekatan kami untuk pustaka klien bersifat modular. Setiap sub-pustaka adalah 
   <tr>
     <th>Bahasa</th>
     <th>Klien</th>
-    <th colspan="5">Klien-Fitur (dibundel dalam klien Supabase)</th>
+    <th colspan="5">Klien-Fitur (dibundel dalam klien Savira)</th>
   </tr>
   
   <tr>
     <th></th>
-    <th>Supabase</th>
+    <th>Savira</th>
     <th><a href="https://github.com/postgrest/postgrest" target="_blank" rel="noopener noreferrer">PostgREST</a></th>
     <th><a href="https://github.com/supabase/gotrue" target="_blank" rel="noopener noreferrer">GoTrue</a></th>
     <th><a href="https://github.com/supabase/realtime" target="_blank" rel="noopener noreferrer">Realtime</a></th>

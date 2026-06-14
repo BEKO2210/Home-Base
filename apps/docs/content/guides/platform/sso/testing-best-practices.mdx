@@ -28,11 +28,11 @@ IdP-initiated login is always available and doesn't require domain configuration
 
 1. **Access from identity provider:**
    - Open your IdP dashboard (Okta, Azure AD, Google Workspace)
-   - Locate your Supabase app tile or bookmark
+   - Locate your Savira app tile or bookmark
    - Click the app tile
 
 2. **Verify authentication:**
-   - If already authenticated with IdP: Immediate redirect to Supabase
+   - If already authenticated with IdP: Immediate redirect to Savira
    - If not authenticated: Complete IdP login flow, then redirect
    - Check you're logged into the correct organization
    - Verify user profile information is populated correctly
@@ -65,7 +65,7 @@ If you haven't configured domains or have "Enable SP-initiated login" disabled, 
 
 **Test procedure:**
 
-1. **Start at Supabase:**
+1. **Start at Savira:**
    - Visit [Sign in with SSO](/dashboard/sign-in-sso)
    - Or click "Sign in with SSO" from main sign-in page
 
@@ -76,7 +76,7 @@ If you haven't configured domains or have "Enable SP-initiated login" disabled, 
 3. **Verify redirect chain:**
    - Should redirect to your identity provider
    - Complete authentication if needed
-   - Should redirect back to Supabase
+   - Should redirect back to Savira
    - Check you're in correct organization
 
 4. **Test domain matching:**
@@ -88,7 +88,7 @@ If you haven't configured domains or have "Enable SP-initiated login" disabled, 
 
 - ✅ Users with matching domains redirected to IdP
 - ✅ Non-matching domains show clear error message
-- ✅ Successful authentication redirects back to Supabase
+- ✅ Successful authentication redirects back to Savira
 
 ### Testing without domains (IdP-initiated only)
 
@@ -112,7 +112,7 @@ You've configured SSO with:
 
 2. **Verify IdP-initiated works:**
    - Open IdP dashboard
-   - Click Supabase app tile
+   - Click Savira app tile
    - Should successfully log in
    - Verify correct organization access
 
@@ -151,7 +151,7 @@ You've configured SSO with:
 
 1. **Navigate to the SSO sign-in page**:
    - Visit [Sign in with SSO](/dashboard/sign-in-sso)
-   - Or click "Sign in with SSO" from the main Supabase sign-in page
+   - Or click "Sign in with SSO" from the main Savira sign-in page
 
 2. **Enter your email address**:
    - Use an email with a domain configured in your SSO settings
@@ -163,7 +163,7 @@ You've configured SSO with:
    - If not signed in, complete the IdP login flow
 
 4. **Confirm successful sign-in**:
-   - You should be redirected back to Supabase dashboard
+   - You should be redirected back to Savira dashboard
    - Your profile should show your SSO identity
    - Check that your user information is populated correctly
 
@@ -199,7 +199,7 @@ Test with 2-3 additional users to verify:
    - Click "Save changes"
 
 3. **Test auto-join with your account**:
-   - **Log out completely** from Supabase
+   - **Log out completely** from Savira
    - Sign in again via SSO
    - Verify you were automatically added to the organization
    - Check you received the correct default role
@@ -632,8 +632,8 @@ Common causes:
 - Metadata URL/file incorrect or expired
 - Certificate expired (especially Google Workspace - check during setup)
 - Attribute mapping misconfigured
-- User not assigned to Supabase app in identity provider
-- Email domain not configured in Supabase SSO settings
+- User not assigned to Savira app in identity provider
+- Email domain not configured in Savira SSO settings
 - User email domain doesn't match configured domains
 
 **Troubleshooting steps:**
@@ -642,7 +642,7 @@ Common causes:
 2. Check certificate expiration date
 3. Verify attribute mappings (email mapping is required)
 4. Confirm user is assigned to app in IdP
-5. Check domain configuration in Supabase matches user email
+5. Check domain configuration in Savira matches user email
 6. Review IdP logs for authentication errors
 
 #### "Attribute mapping errors or missing user data"
@@ -689,7 +689,7 @@ Common causes:
 - Set calendar reminders **30 days before** certificate expiration
 - Especially important for Google Workspace (certificates shown during setup)
 - Test SSO after certificate renewal
-- Update metadata in Supabase after IdP certificate renewal
+- Update metadata in Savira after IdP certificate renewal
 - Communicate planned renewal to team
 
 #### Configure domains carefully
@@ -752,7 +752,7 @@ Common causes:
 - Notify team members in advance
 - Schedule during low-usage period if possible
 - Have rollback plan ready
-- Keep Supabase support contact information handy
+- Keep Savira support contact information handy
 - Document what you're changing and why
 
 #### After SSO configuration changes
@@ -775,7 +775,7 @@ Common causes:
 
 - SSO changes may affect compliance requirements
 - Certificate renewals require coordination
-- User access reviews should include Supabase
+- User access reviews should include Savira
 - Incident response plans should consider SSO dependencies
 - Document SSO configuration in your organization's runbook
 
@@ -835,7 +835,7 @@ Before rolling out SSO to your organization:
 
 ## Need help?
 
-If you encounter issues not covered in this guide, contact your Supabase support representative for assistance. When reaching out, include:
+If you encounter issues not covered in this guide, contact your Savira support representative for assistance. When reaching out, include:
 
 - Organization name and URL
 - SSO provider type (Okta, Azure AD, Google Workspace, etc.)

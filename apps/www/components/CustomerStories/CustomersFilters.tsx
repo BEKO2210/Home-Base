@@ -219,7 +219,7 @@ const getProductLabel = (product: string) => {
     case 'functions':
       return 'Edge Functions'
     case 'platforms':
-      return 'Supabase for Platforms'
+      return 'Savira for Platforms'
     default:
       return startCase(product.replaceAll('-', ' '))
   }

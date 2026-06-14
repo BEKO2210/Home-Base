@@ -26,7 +26,7 @@ export default function LaunchWeekPrizeSection({ className }: { className?: stri
                 <div className="relative w-full pl-4 xl:px-4 lg:w-2/3 border-b lg:border-none border-muted aspect-3/1 top-0 md:-bottom-8 overflow-hidden">
                   <Image
                     src="/images/launchweek/12/lw12-backpack.png"
-                    alt="Supabase AirPod Max prize"
+                    alt="Savira AirPod Max prize"
                     draggable={false}
                     width={300}
                     height={300}
@@ -62,7 +62,7 @@ export default function LaunchWeekPrizeSection({ className }: { className?: stri
                   <div className="relative grow w-full">
                     <Image
                       src="/images/launchweek/12/world-tour-tshirt.png"
-                      alt="Supabase Launch Week 12 World Tour T-Shirt"
+                      alt="Savira Launch Week 12 World Tour T-Shirt"
                       draggable={false}
                       width={300}
                       height={300}

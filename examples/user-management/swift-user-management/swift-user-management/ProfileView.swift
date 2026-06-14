@@ -6,7 +6,7 @@
 //
 
 import PhotosUI
-import Supabase
+import Savira
 import SwiftUI
 
 struct ProfileView: View {

@@ -1,8 +1,8 @@
 {
   "name": "password-based-auth-nuxtjs",
   "type": "registry:block",
-  "title": "Password Based Auth flow for Nuxt.js and Supabase",
-  "description": "Password Based Auth flow for Nuxt.js and Supabase",
+  "title": "Password Based Auth flow for Nuxt.js and Savira",
+  "description": "Password Based Auth flow for Nuxt.js and Savira",
   "registryDependencies": ["button", "card", "input", "label"],
   "dependencies": ["@supabase/ssr@latest", "@supabase/supabase-js@latest"],
   "files": [

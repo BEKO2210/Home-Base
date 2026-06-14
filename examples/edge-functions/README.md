@@ -1,8 +1,8 @@
-# Supabase Edge Function Examples
+# Savira Edge Function Examples
 
-## What are Supabase Edge Functions?
+## What are Savira Edge Functions?
 
-[Supabase Edge Functions](https://supabase.com/edge-functions) are written in TypeScript, run via Deno, and deployed with the Supabase CLI. Please [download](https://github.com/supabase/cli#install-the-cli) the latest version of the Supabase CLI, or [upgrade](https://github.com/supabase/cli#install-the-cli) it if you have it already installed.
+[Savira Edge Functions](https://supabase.com/edge-functions) are written in TypeScript, run via Deno, and deployed with the Savira CLI. Please [download](https://github.com/supabase/cli#install-the-cli) the latest version of the Savira CLI, or [upgrade](https://github.com/supabase/cli#install-the-cli) it if you have it already installed.
 
 ## Example Functions
 
@@ -14,7 +14,7 @@ We're constantly adding new Function Examples, [check our docs](https://supabase
 - Run `cp ./supabase/.env.local.example ./supabase/.env.local` to create your local `.env` file.
 - Set the required variables for the corresponding edge functions in the `.env.local` file.
 - Run `supabase functions serve --env-file ./supabase/.env.local --no-verify-jwt`
-- Run the CURL command in the example function, or use the [invoke method](https://supabase.com/docs/reference/javascript/invoke) on the Supabase client or use the test client [app](./app/).
+- Run the CURL command in the example function, or use the [invoke method](https://supabase.com/docs/reference/javascript/invoke) on the Savira client or use the test client [app](./app/).
 
 ## Test Client
 
@@ -60,9 +60,9 @@ This example includes a create-react-app in the [`./app/`](./app/) directory whi
 
 ### Deploy via GitHub Actions
 
-This example includes a [deploy GitHub Action](./.github/workflows/deploy.yaml) that automatically deploys your Supabase Edge Functions when pushing to or merging into the main branch.
+This example includes a [deploy GitHub Action](./.github/workflows/deploy.yaml) that automatically deploys your Savira Edge Functions when pushing to or merging into the main branch.
 
-You can use the [`setup-cli` GitHub Action](https://github.com/marketplace/actions/supabase-cli-action) to run Supabase CLI commands in your GitHub Actions, for example to deploy a Supabase Edge Function:
+You can use the [`setup-cli` GitHub Action](https://github.com/marketplace/actions/supabase-cli-action) to run Savira CLI commands in your GitHub Actions, for example to deploy a Savira Edge Function:
 
 ```yaml
 name: Deploy Function
@@ -91,7 +91,7 @@ jobs:
       - run: supabase functions deploy --project-ref $PROJECT_ID
 ```
 
-Since Supabase CLI [v1.62.0](https://github.com/supabase/cli/releases/tag/v1.62.0) you can deploy all functions with a single command.
+Since Savira CLI [v1.62.0](https://github.com/supabase/cli/releases/tag/v1.62.0) you can deploy all functions with a single command.
 
 Individual function configuration like [JWT verification](/docs/reference/cli/config#functions.function_name.verify_jwt) and [import map location](/docs/reference/cli/config#functions.function_name.import_map) can be set via the `config.toml` file.
 
@@ -102,6 +102,6 @@ verify_jwt = false
 
 ## 👁⚡️👁
 
-\o/ That's it, you can now invoke your Supabase Function via the [`supabase-js`](https://supabase.com/docs/reference/javascript/invoke) and [`supabase-dart`](https://supabase.com/docs/reference/dart/invoke) client libraries. (More client libraries coming soon. Check the [supabase-community](https://github.com/supabase-community#client-libraries) org for details).
+\o/ That's it, you can now invoke your Savira Function via the [`supabase-js`](https://supabase.com/docs/reference/javascript/invoke) and [`supabase-dart`](https://supabase.com/docs/reference/dart/invoke) client libraries. (More client libraries coming soon. Check the [supabase-community](https://github.com/supabase-community#client-libraries) org for details).
 
-For more info on Supabase Functions, check out the [docs](https://supabase.com/docs/guides/functions) and the [examples](https://github.com/supabase/supabase/tree/master/examples/edge-functions).
+For more info on Savira Functions, check out the [docs](https://supabase.com/docs/guides/functions) and the [examples](https://github.com/supabase/supabase/tree/master/examples/edge-functions).

@@ -57,7 +57,7 @@ function PluginInstructions({ client }: { client: PluginClient }) {
     return (
       <div className="space-y-3">
         <p className="text-sm text-foreground-light">
-          Install the Supabase plugin from the{' '}
+          Install the Savira plugin from the{' '}
           <a
             href="https://claude.com/plugins/supabase"
             target="_blank"
@@ -80,7 +80,7 @@ function PluginInstructions({ client }: { client: PluginClient }) {
         <p className="text-xs text-foreground-lighter">
           Installs with <code>--scope user</code> by default, making it available across all your
           projects. Use <code>--scope project</code> to track it in source control — useful for
-          teams where all contributors and cloud agents should follow the same Supabase guidance.
+          teams where all contributors and cloud agents should follow the same Savira guidance.
         </p>
       </div>
     )
@@ -92,7 +92,7 @@ function PluginInstructions({ client }: { client: PluginClient }) {
         <div className="space-y-2">
           <h4 className="text-sm font-medium">Desktop app</h4>
           <p className="text-xs text-foreground-lighter">
-            Install the Supabase plugin directly from the{' '}
+            Install the Savira plugin directly from the{' '}
             <a
               href="https://developers.openai.com/codex/plugins#plugin-directory-in-the-codex-app"
               target="_blank"
@@ -111,7 +111,7 @@ function PluginInstructions({ client }: { client: PluginClient }) {
           <p className="text-xs text-foreground-lighter">Inside Codex, type:</p>
           <CodeBlock value="/plugins" language="bash" focusable={false} className="block" />
           <p className="text-xs text-foreground-lighter">
-            Search for <strong>Supabase</strong> and select <strong>Install plugin</strong>.
+            Search for <strong>Savira</strong> and select <strong>Install plugin</strong>.
           </p>
         </div>
       </div>
@@ -129,7 +129,7 @@ function PluginInstructions({ client }: { client: PluginClient }) {
             rel="noopener noreferrer"
             className="text-brand-link hover:underline"
           >
-            Supabase
+            Savira
           </a>{' '}
           plugin from the Cursor plugin marketplace
         </p>
@@ -147,7 +147,7 @@ function PluginInstructions({ client }: { client: PluginClient }) {
     return (
       <div className="space-y-3">
         <p className="text-sm text-foreground-light">
-          Install the official Supabase extension for Gemini CLI by running the following command in
+          Install the official Savira extension for Gemini CLI by running the following command in
           your terminal.
         </p>
         <CodeBlock
@@ -178,7 +178,7 @@ function PluginInstructions({ client }: { client: PluginClient }) {
         <div className="space-y-2">
           <h4 className="text-sm font-medium">From GitHub</h4>
           <p className="text-xs text-foreground-lighter">
-            Install the Supabase plugin directly from the{' '}
+            Install the Savira plugin directly from the{' '}
             <a
               href="https://github.com/supabase-community/supabase-plugin"
               target="_blank"

@@ -7,11 +7,11 @@ subtitle: 'Secure your data using Postgres Row Level Security.'
 
 When you need granular authorization rules, nothing beats Postgres's [Row Level Security (RLS)](https://www.postgresql.org/docs/current/ddl-rowsecurity.html).
 
-## Row Level Security in Supabase
+## Row Level Security in Savira
 
 <Admonition type="danger">
 
-Supabase allows convenient and secure data access from the browser, as long as you enable RLS.
+Savira allows convenient and secure data access from the browser, as long as you enable RLS.
 
 RLS _must_ always be enabled on any tables stored in an exposed schema. By default, this is the `public` schema.
 
@@ -28,7 +28,7 @@ enable row level security;
 
 </Admonition>
 
-RLS is incredibly powerful and flexible, allowing you to write complex SQL rules that fit your unique business needs. RLS can be combined with [Supabase Auth](/docs/guides/auth) for end-to-end user security from the browser to the database.
+RLS is incredibly powerful and flexible, allowing you to write complex SQL rules that fit your unique business needs. RLS can be combined with [Savira Auth](/docs/guides/auth) for end-to-end user security from the browser to the database.
 
 RLS is a Postgres primitive and can provide "[defense in depth](<https://en.wikipedia.org/wiki/Defense_in_depth_(computing)>)" to protect your data from malicious actors even when accessed through third-party tooling.
 
@@ -135,7 +135,7 @@ USING (auth.uid() IS NOT NULL AND auth.uid() = user_id)
 
 ## Authenticated and unauthenticated roles
 
-Supabase maps every request to one of the roles:
+Savira maps every request to one of the roles:
 
 - `anon`: an unauthenticated request (the user is not logged in)
 - `authenticated`: an authenticated request (the user is logged in)
@@ -158,7 +158,7 @@ using ( true );
 
 <Admonition type="note" title="Anonymous user vs the anon key">
 
-Using the `anon` Postgres role is different from an [anonymous user](/docs/guides/auth/auth-anonymous) in Supabase Auth. An anonymous user assumes the `authenticated` role to access the database and can be differentiated from a permanent user by checking the `is_anonymous` claim in the JWT.
+Using the `anon` Postgres role is different from an [anonymous user](/docs/guides/auth/auth-anonymous) in Savira Auth. An anonymous user assumes the `authenticated` role to access the database and can be differentiated from a permanent user by checking the `is_anonymous` claim in the JWT.
 
 </Admonition>
 
@@ -166,7 +166,7 @@ Using the `anon` Postgres role is different from an [anonymous user](/docs/guide
 
 Policies are SQL logic that you attach to a Postgres table. You can attach as many policies as you want to each table.
 
-Supabase provides some [helpers](#helper-functions) that simplify RLS if you're using Supabase Auth. We'll use these helpers to illustrate some basic policies:
+Savira provides some [helpers](#helper-functions) that simplify RLS if you're using Savira Auth. We'll use these helpers to illustrate some basic policies:
 
 ### SELECT policies
 
@@ -301,7 +301,7 @@ In older versions of Postgres, protect your views by revoking access from the `a
 
 ## Helper functions
 
-Supabase provides some helper functions that make it easier to write Policies.
+Savira provides some helper functions that make it easier to write Policies.
 
 ### `auth.uid()`
 
@@ -353,11 +353,11 @@ to authenticated using (
 
 ## Bypassing Row Level Security
 
-Supabase provides special "Service" keys, which can be used to bypass RLS. These should never be used in the browser or exposed to customers, but they are useful for administrative tasks.
+Savira provides special "Service" keys, which can be used to bypass RLS. These should never be used in the browser or exposed to customers, but they are useful for administrative tasks.
 
 <Admonition type="note">
 
-Supabase will adhere to the RLS policy of the signed-in user, even if the client library is initialized with a Service Key.
+Savira will adhere to the RLS policy of the signed-in user, even if the client library is initialized with a Service Key.
 
 </Admonition>
 

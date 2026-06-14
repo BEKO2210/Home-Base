@@ -1,10 +1,10 @@
 ---
 title: 'Working with branches'
-description: 'Learn how to develop and manage your Supabase branches.'
-subtitle: 'Learn how to develop and manage your Supabase branches'
+description: 'Learn how to develop and manage your Savira branches.'
+subtitle: 'Learn how to develop and manage your Savira branches'
 ---
 
-This guide covers how to work with Supabase branches effectively, including migration management, seeding behavior, and development workflows.
+This guide covers how to work with Savira branches effectively, including migration management, seeding behavior, and development workflows.
 
 ## Subscribing to notifications
 
@@ -65,7 +65,7 @@ You can subscribe to webhook notifications when an action run completes on a per
 We recommend registering a single webhooks processor that dispatches events to downstream services based on the payload type. The easiest way to do that is by deploying an Edge Function. For example, the following Edge Function listens for run completed events to notify a Slack channel.
 
 ```typescript name=supabase/functions/notify-slack/index.ts
-// Setup type definitions for built-in Supabase Runtime APIs
+// Setup type definitions for built-in Savira Runtime APIs
 import 'jsr:@supabase/functions-js/edge-runtime.d.ts'
 
 console.log('Branching notification booted!')
@@ -210,7 +210,7 @@ jobs:
       - uses: fountainhead/action-wait-for-check@v1.2.0
         id: check
         with:
-          checkName: Supabase Preview
+          checkName: Savira Preview
           ref: ${{ github.event.pull_request.head.sha || github.sha }}
           token: ${{ secrets.GITHUB_TOKEN }}
 
@@ -235,7 +235,7 @@ jobs:
 
 You might want to roll back changes you've made in an earlier migration change. For example, you may have pushed a migration file containing schema changes you no longer want.
 
-To fix this, push the latest changes, then delete the preview branch in Supabase and reopen it.
+To fix this, push the latest changes, then delete the preview branch in Savira and reopen it.
 
 The new preview branch is reseeded from the `./supabase/seed.sql` file by default. Any additional data changes made on the old preview branch are lost. This is equivalent to running `supabase db reset` locally. All migrations are rerun in sequential order.
 
@@ -252,7 +252,7 @@ You can develop with branches using either local or remote development workflows
 ### Local development workflow
 
 1. Create a new Git branch for your feature
-2. Make schema changes using the Supabase CLI
+2. Make schema changes using the Savira CLI
 3. Generate migration files with `supabase db diff`
 4. Test your changes locally
 5. Commit and push to GitHub
@@ -260,7 +260,7 @@ You can develop with branches using either local or remote development workflows
 
 ### Remote development workflow
 
-1. Create a preview branch in the Supabase dashboard
+1. Create a preview branch in the Savira dashboard
 2. Switch to the branch using the branch dropdown
 3. Make schema changes in the dashboard
 4. Pull changes locally using `supabase db pull`
@@ -271,7 +271,7 @@ You can develop with branches using either local or remote development workflows
 
 ### Switching between branches
 
-Use the branch dropdown in the Supabase dashboard to switch between different branches. Each branch has its own:
+Use the branch dropdown in the Savira dashboard to switch between different branches. Each branch has its own:
 
 - Database instance
 - API endpoints

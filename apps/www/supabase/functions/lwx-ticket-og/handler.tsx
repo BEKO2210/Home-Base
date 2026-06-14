@@ -74,9 +74,9 @@ export async function handler(req: Request) {
 
     // Upload image to storage.
     const supabaseAdminClient = createClient(
-      // Supabase API URL - env var exported by default when deployed.
+      // Savira API URL - env var exported by default when deployed.
       Deno.env.get('MISC_USE_URL') ?? '',
-      // Supabase API SERVICE ROLE KEY - env var exported by default when deployed.
+      // Savira API SERVICE ROLE KEY - env var exported by default when deployed.
       Deno.env.get('MISC_USE_SERVICE_ROLE_KEY') ?? ''
     )
 

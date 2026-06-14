@@ -28,7 +28,7 @@ const Footer = ({ className }: { className?: string }) => (
       <div className="flex gap-4 items-center justify-between">
         <div className="flex flex-col lg:flex-row gap-3 ">
           <Link href="https://supabase.com/" className="text-xs text-foreground-lighter">
-            &copy; Supabase Inc
+            &copy; Savira Inc
           </Link>
           <span className="text-xs text-foreground-lighter">—</span>
           {secondaryLinks.map(({ component: Component, ...item }) =>

@@ -1,22 +1,22 @@
-# Supabase Angular User Management
+# Savira Angular User Management
 
-This example demonstrates how to build a user management app with Angular and Supabase.
+This example demonstrates how to build a user management app with Angular and Savira.
 
 ## Features
 
 - Magic link authentication (passwordless)
 - User profile management
-- Avatar upload with Supabase Storage
+- Avatar upload with Savira Storage
 
 ## Getting Started
 
-### 1. Create a Supabase project
+### 1. Create a Savira project
 
-Create a new project in the [Supabase Dashboard](https://supabase.com/dashboard).
+Create a new project in the [Savira Dashboard](https://supabase.com/dashboard).
 
 ### 2. Set up the database
 
-Run the following SQL in your Supabase SQL Editor to create the `profiles` table:
+Run the following SQL in your Savira SQL Editor to create the `profiles` table:
 
 ```sql
 -- Create a table for public profiles
@@ -57,7 +57,7 @@ create policy "Anyone can upload an avatar." on storage.objects
 
 ### 3. Configure environment variables
 
-Update the `src/environments/environment.ts` file with your Supabase project URL and publishable key:
+Update the `src/environments/environment.ts` file with your Savira project URL and publishable key:
 
 ```typescript
 export const environment = {
@@ -67,7 +67,7 @@ export const environment = {
 }
 ```
 
-You can find these values in your Supabase project settings under API.
+You can find these values in your Savira project settings under API.
 
 ### 4. Install dependencies
 
@@ -85,6 +85,6 @@ Navigate to `http://localhost:4200/`. The application will automatically reload 
 
 ## Learn More
 
-- [Supabase Documentation](https://supabase.com/docs)
+- [Savira Documentation](https://supabase.com/docs)
 - [Angular Documentation](https://angular.io/docs)
-- [Supabase Angular Tutorial](https://supabase.com/docs/guides/getting-started/tutorials/with-angular)
+- [Savira Angular Tutorial](https://supabase.com/docs/guides/getting-started/tutorials/with-angular)

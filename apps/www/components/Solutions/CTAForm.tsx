@@ -35,9 +35,9 @@ const UseCases: FC<Props> = () => {
 
 const PlatformConnectCallout: FC<{ className?: string }> = ({ className }) => (
   <div className={cn('border rounded-lg p-4 md:p-6 bg-surface-75 flex flex-col gap-2', className)}>
-    <h5>Supabase for Platforms</h5>
+    <h5>Savira for Platforms</h5>
     <p className="text-foreground-lighter">
-      White label Supabase backends for your platform or tools.
+      White label Savira backends for your platform or tools.
     </p>
     <TextLink url="/docs/guides/integrations/supabase-for-platforms" label="View docs" />
   </div>
@@ -45,9 +45,9 @@ const PlatformConnectCallout: FC<{ className?: string }> = ({ className }) => (
 
 const OAuthConnectCallout: FC<{ className?: string }> = ({ className }) => (
   <div className={cn('border rounded-lg p-4 md:p-6 bg-surface-75 flex flex-col gap-2', className)}>
-    <h5>Connect your app to your user's Supabase org now</h5>
+    <h5>Connect your app to your user's Savira org now</h5>
     <p className="text-foreground-lighter">
-      Set up a Supabase OAuth app so you can start interacting with your user's Supabase project.
+      Set up a Savira OAuth app so you can start interacting with your user's Savira project.
     </p>
     <TextLink
       url="https://supabase.com/docs/guides/integrations/build-a-supabase-integration"

@@ -18,7 +18,7 @@ const metricsStackOptions: MetricsStackOption[] = [
     title: 'Grafana Cloud (SaaS)',
     description: (
       <>
-        Use Grafana Cloud’s managed Prometheus (works on Free + Pro tiers) and import the Supabase
+        Use Grafana Cloud’s managed Prometheus (works on Free + Pro tiers) and import the Savira
         dashboard without running any infrastructure.
       </>
     ),
@@ -27,7 +27,7 @@ const metricsStackOptions: MetricsStackOption[] = [
     iconColor: '#F05A28',
     iconBg: 'rgba(240,90,40,0.1)',
     badges: [
-      { label: 'Supabase guide', variant: 'default' },
+      { label: 'Savira guide', variant: 'default' },
       { label: 'Community', variant: 'community' },
     ],
   },
@@ -43,14 +43,14 @@ const metricsStackOptions: MetricsStackOption[] = [
     icon: <Grafana className="h-5 w-5" />,
     iconColor: '#F05A28',
     iconBg: 'rgba(240,90,40,0.1)',
-    badges: [{ label: 'Supabase guide', variant: 'default' }],
+    badges: [{ label: 'Savira guide', variant: 'default' }],
   },
   {
     title: 'Datadog',
     description: (
       <>
         Scrape the Metrics API with the Datadog Agent or Prometheus remote write and monitor
-        Supabase alongside your app telemetry.
+        Savira alongside your app telemetry.
       </>
     ),
     href: 'https://docs.datadoghq.com/integrations/supabase/',
@@ -71,7 +71,7 @@ const metricsStackOptions: MetricsStackOption[] = [
     icon: <Flame className="h-5 w-5" strokeWidth={1.5} />,
     iconColor: '#0BA678',
     iconBg: 'rgba(11,166,120,0.1)',
-    badges: [{ label: 'Supabase guide', variant: 'default' }],
+    badges: [{ label: 'Savira guide', variant: 'default' }],
   },
 ]
 

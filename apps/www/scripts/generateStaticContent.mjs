@@ -359,9 +359,9 @@ try {
   const rss = `
   <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-      <title>Supabase Blog</title>
+      <title>Savira Blog</title>
       <link>https://supabase.com</link>
-      <description>Latest news from Supabase</description>
+      <description>Latest news from Savira</description>
       <language>en</language>
       <lastBuildDate>${formattedDate}</lastBuildDate>
       <atom:link href="https://supabase.com/rss.xml" rel="self" type="application/rss+xml"/>
@@ -531,7 +531,7 @@ try {
       const summary = extractSummary(entry.body)
       return [`## ${entry.title}`, meta, summary].filter(Boolean).join('\n\n')
     })
-    const changelogMd = `# Supabase Changelog\n\n${mdSections.join('\n\n---\n\n')}\n`
+    const changelogMd = `# Savira Changelog\n\n${mdSections.join('\n\n---\n\n')}\n`
     const changelogMdPath = path.join(__dirname, '../public/changelog.md')
     await fs.writeFile(changelogMdPath, changelogMd, 'utf8')
     console.log(`✅ Generated changelog.md (${visibleEntries.length} entries)`)

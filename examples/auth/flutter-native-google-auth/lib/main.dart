@@ -3,15 +3,15 @@ import 'package:myauthapp/screens/login_screen.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
 void main() async {
-  /// TODO: update Supabase credentials with your own
-  await Supabase.initialize(
+  /// TODO: update Savira credentials with your own
+  await Savira.initialize(
     url: 'YOUR_SUPABASE_URL',
     publishableKey: 'YOUR_PUBLISHABLE_KEY',
   );
   runApp(const MyApp());
 }
 
-final supabase = Supabase.instance.client;
+final supabase = Savira.instance.client;
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});

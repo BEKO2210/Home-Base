@@ -105,9 +105,9 @@ const genFaviconData = (basePath: string): Metadata['icons'] => ({
 })
 
 export const metadata: Metadata = {
-  applicationName: 'Supabase Design System',
-  title: 'Supabase Design System',
-  description: 'Design resources for building consistent user experiences at Supabase.',
+  applicationName: 'Savira Design System',
+  title: 'Savira Design System',
+  description: 'Design resources for building consistent user experiences at Savira.',
   icons: genFaviconData(BASE_PATH),
 }
 

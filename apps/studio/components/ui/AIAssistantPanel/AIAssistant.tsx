@@ -472,7 +472,7 @@ export const AIAssistant = ({ className }: AIAssistantProps) => {
                 />
               )}
               <p className="text-center text-xs text-foreground-muted mt-6">
-                Supabase AI may not always produce correct answers. Double check responses.
+                Savira AI may not always produce correct answers. Double check responses.
               </p>
             </ConversationContent>
             <ConversationScrollButton />

@@ -67,7 +67,7 @@ export const LogicalBackupCliInstructions = ({
   return (
     <div className={cn('space-y-3', className)}>
       <div className="space-y-1">
-        <h4 className="text-sm font-medium">Back up your database with the Supabase CLI</h4>
+        <h4 className="text-sm font-medium">Back up your database with the Savira CLI</h4>
         <p className="text-sm text-foreground-light">
           Use your direct connection string — replace {DB_PASSWORD_PLACEHOLDER} with your database
           password.{' '}

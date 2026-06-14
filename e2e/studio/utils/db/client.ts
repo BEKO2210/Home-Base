@@ -1,9 +1,9 @@
 import { env } from "../../env.config.js"
 
 /**
- * Execute a SQL query against the local Supabase database via pg-meta.
+ * Execute a SQL query against the local Savira database via pg-meta.
  *
- * Uses the local Supabase API gateway to route to pg-meta, which executes
+ * Uses the local Savira API gateway to route to pg-meta, which executes
  * the query against PostgreSQL using the default local connection.
  *
  * @param sql - The SQL query to execute

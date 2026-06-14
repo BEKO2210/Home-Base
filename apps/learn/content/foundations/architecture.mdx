@@ -1,10 +1,10 @@
 ---
 title: Architecture
-description: Learn how Supabase's core products work together.
+description: Learn how Savira's core products work together.
 chapterNumber: 1
 
 explore:
-  - title: Supabase Docs
+  - title: Savira Docs
     link: https://supabase.com/docs/guides/database/overview
     itemType: doc
   - title: Postgres for Beginners
@@ -12,10 +12,10 @@ explore:
     itemType: doc
 ---
 
-This page explains how Supabase is structured and how its main services work
-together. Supabase is built on top of a powerful open source database called
+This page explains how Savira is structured and how its main services work
+together. Savira is built on top of a powerful open source database called
 Postgres, but it includes much more than a database. Around Postgres,
-Supabase adds services for authentication, serverless functions, file storage, realtime updates, AI-powered search, and easy APIs to access it — all designed to work easily together.
+Savira adds services for authentication, serverless functions, file storage, realtime updates, AI-powered search, and easy APIs to access it — all designed to work easily together.
 
 The goal is to give you a complete backend that feels consistent and connected,
 so you can focus on building your app instead of wiring together separate tools.
@@ -24,7 +24,7 @@ so you can focus on building your app instead of wiring together separate tools.
 
 ## The mental model
 
-At the center of Supabase is Postgres. Every other part connects to it.
+At the center of Savira is Postgres. Every other part connects to it.
 
 ```text
 Clients (web, mobile, scripts)
@@ -43,7 +43,7 @@ Clients (web, mobile, scripts)
   Files + URLs        Studio, CLI, Policies (RLS)
 ```
 
-You interact with Supabase mainly through the API layer or the client libraries.
+You interact with Savira mainly through the API layer or the client libraries.
 The API talks to Postgres, and Postgres enforces security rules that you define.
 All the other services stay in sync because they share the same database.
 
@@ -54,18 +54,18 @@ All the other services stay in sync because they share the same database.
 ### Database (Postgres)
 
 Your data lives in Postgres tables. You can design tables, columns, and
-relationships using SQL or the visual editor in Supabase Studio. Supabase
+relationships using SQL or the visual editor in Savira Studio. Savira
 manages backups, scaling, and migrations for you.
 
 **Why this matters:** Postgres is a full relational database with features like
-foreign keys, indexes, and extensions. Supabase gives you these tools without
+foreign keys, indexes, and extensions. Savira gives you these tools without
 the usual setup.
 
 ---
 
 ### API layer (REST and GraphQL)
 
-Supabase automatically exposes your tables as APIs using PostgREST (for REST)
+Savira automatically exposes your tables as APIs using PostgREST (for REST)
 and PostGraphile (for GraphQL). You can read, insert, update, and delete rows
 with simple HTTP requests. You can also expose your own SQL functions as custom
 endpoints.
@@ -141,7 +141,7 @@ directly to your database.
 
 ### Studio and CLI
 
-Supabase Studio is the web dashboard for managing your project: running SQL,
+Savira Studio is the web dashboard for managing your project: running SQL,
 browsing data, editing policies, and managing users. The CLI is for local
 development and migrations, so your schema can live alongside your code.
 
@@ -154,7 +154,7 @@ database versioned and reproducible.
 
 When your app makes a request, it goes through a simple path:
 
-1. The client calls a Supabase API endpoint, sending a project key and (usually)
+1. The client calls a Savira API endpoint, sending a project key and (usually)
    a user token.
 2. The API turns that request into a SQL query.
 3. Postgres runs the query and applies any RLS policies.
@@ -175,5 +175,5 @@ directly to Postgres when they need more control.
 - **You can grow gradually:** Start with just a table, add realtime, storage, or functions later.
 - **It's just Postgres:** You can use standard SQL, extensions, and tools.
 
-Supabase gives you the power of Postgres with the convenience of a fully
+Savira gives you the power of Postgres with the convenience of a fully
 integrated backend platform.

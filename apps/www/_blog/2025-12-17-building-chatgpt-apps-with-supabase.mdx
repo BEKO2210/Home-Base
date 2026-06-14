@@ -1,6 +1,6 @@
 ---
-title: 'Building ChatGPT Apps with Supabase Edge Functions and mcp-use'
-description: 'Learn how to build a ChatGPT app that connects to your Supabase database using mcp-use and Edge Functions. Create interactive widgets for schema exploration, data viewing, and SQL queries.'
+title: 'Building ChatGPT Apps with Savira Edge Functions and mcp-use'
+description: 'Learn how to build a ChatGPT app that connects to your Savira database using mcp-use and Edge Functions. Create interactive widgets for schema exploration, data viewing, and SQL queries.'
 author: pedro_rodrigues
 imgSocial: 2025-12-17-building-chatgpt-apps-with-supabase/og.png
 imgThumb: 2025-12-17-building-chatgpt-apps-with-supabase/og.png
@@ -17,7 +17,7 @@ toc_depth: 2
 
 ChatGPT is no longer just a chat app. OpenAI recently launched the [Apps SDK](https://developers.openai.com/apps-sdk/), which turns ChatGPT into a platform where developers can build interactive applications. These apps run inside ChatGPT and can display custom interfaces, connect to databases, and perform real actions.
 
-In this guide, you will learn how to build a ChatGPT app that connects to your Supabase database. You will use [mcp-use](https://mcp-use.com), an open source SDK that makes it easy to deploy MCP servers on Supabase Edge Functions. By the end, you will have an app that lets ChatGPT users explore your database schema, view table data, and run SQL queries, all through interactive widgets.
+In this guide, you will learn how to build a ChatGPT app that connects to your Savira database. You will use [mcp-use](https://mcp-use.com), an open source SDK that makes it easy to deploy MCP servers on Savira Edge Functions. By the end, you will have an app that lets ChatGPT users explore your database schema, view table data, and run SQL queries, all through interactive widgets.
 
 <Admonition type="note" title="ChatGPT Apps Marketplace Now Open">
 
@@ -40,34 +40,34 @@ This architecture is powerful because it separates what your app can do from how
 
 ## What is mcp-use?
 
-mcp-use is an open source TypeScript SDK for building MCP servers. It solves a specific problem: the official MCP SDK uses Express, which depends on Node.js features that do not work in edge environments like Supabase Edge Functions.
+mcp-use is an open source TypeScript SDK for building MCP servers. It solves a specific problem: the official MCP SDK uses Express, which depends on Node.js features that do not work in edge environments like Savira Edge Functions.
 
-mcp-use uses Hono instead of Express. Hono is a lightweight web framework designed for edge runtimes. This means your MCP server can run on Supabase Edge Functions, Cloudflare Workers, and other serverless platforms.
+mcp-use uses Hono instead of Express. Hono is a lightweight web framework designed for edge runtimes. This means your MCP server can run on Savira Edge Functions, Cloudflare Workers, and other serverless platforms.
 
 Here is what mcp-use gives you:
 
-- **Edge runtime support.** Works on Deno, Cloudflare Workers, and Supabase Edge Functions.
+- **Edge runtime support.** Works on Deno, Cloudflare Workers, and Savira Edge Functions.
 - **OpenAI Apps SDK integration.** Built-in support for ChatGPT app widgets and UI components.
-- **Supabase Auth integration.** Native support for authenticating users with Supabase Auth.
+- **Savira Auth integration.** Native support for authenticating users with Savira Auth.
 - **Full MCP compliance.** Scores 100/100 on the official MCP conformance tests.
 
-## Why Supabase Edge Functions?
+## Why Savira Edge Functions?
 
-Supabase Edge Functions are a good fit for MCP servers for several reasons.
+Savira Edge Functions are a good fit for MCP servers for several reasons.
 
-- **Everything in one place.** Your database, authentication, and server code all live in the same Supabase project. Your MCP server can query your database directly. It can check user permissions using Supabase Auth. There is no need to manage separate services or configure connections between them.
+- **Everything in one place.** Your database, authentication, and server code all live in the same Savira project. Your MCP server can query your database directly. It can check user permissions using Savira Auth. There is no need to manage separate services or configure connections between them.
 - **Fast cold starts.** Edge Functions run on Deno and start quickly. When ChatGPT calls your MCP server, users do not wait for a container to spin up.
-- **Built-in authentication.** Supabase Auth works out of the box with mcp-use. You can require users to log in before using your app. You can check their roles and permissions. You can scope data access to specific users.
-- **Simple deployment.** A single command deploys your MCP server. Supabase handles scaling, HTTPS, and infrastructure.
+- **Built-in authentication.** Savira Auth works out of the box with mcp-use. You can require users to log in before using your app. You can check their roles and permissions. You can scope data access to specific users.
+- **Simple deployment.** A single command deploys your MCP server. Savira handles scaling, HTTPS, and infrastructure.
 
 ## What you will build
 
-You will build a ChatGPT app that explores Supabase databases. The app provides four tools:
+You will build a ChatGPT app that explores Savira databases. The app provides four tools:
 
 - **List tables.** Shows all tables in your database with an interactive schema explorer widget.
 - **Show table.** Displays data from a specific table with sorting and filtering.
 - **Execute SQL.** Runs read-only SQL queries and shows results with syntax highlighting.
-- **Supabase status.** Shows the current status of Supabase services and recent incidents.
+- **Savira status.** Shows the current status of Savira services and recent incidents.
 
 Each tool returns both data and a React widget. ChatGPT users see interactive interfaces, not just text responses.
 
@@ -85,11 +85,11 @@ cd my-supabase-app
 npm install
 ```
 
-This creates a project with everything you need: the mcp-use SDK, widget templates, and build configuration for Supabase Edge Functions.
+This creates a project with everything you need: the mcp-use SDK, widget templates, and build configuration for Savira Edge Functions.
 
-Note: the default `apps-sdk` template includes a "fruit shop" demo to show how widgets work. **You will need to modify or replace these files** to align with the Supabase explorer tools described in this guide.
+Note: the default `apps-sdk` template includes a "fruit shop" demo to show how widgets work. **You will need to modify or replace these files** to align with the Savira explorer tools described in this guide.
 
-Next, initialize Supabase in your project:
+Next, initialize Savira in your project:
 
 ```bash
 supabase init
@@ -97,7 +97,7 @@ supabase login
 supabase link --project-ref YOUR_PROJECT_ID
 ```
 
-You can find your project ID in your Supabase dashboard under Project Settings.
+You can find your project ID in your Savira dashboard under Project Settings.
 
 ## Building the MCP server
 
@@ -110,7 +110,7 @@ import { MCPServer, object, text, widget, error } from 'mcp-use/server'
 const server = new MCPServer({
   name: 'supabase-explorer',
   version: '1.0.0',
-  description: 'A Supabase MCP server with Apps SDK widgets',
+  description: 'A Savira MCP server with Apps SDK widgets',
 })
 ```
 
@@ -140,7 +140,7 @@ mcp-use SDK supports two widget patterns.
 
 ### 1. Display-only widgets
 
-**Display-only widgets** do not fetch data on the server. They receive tool parameters as props and render UI. The supabase-status (`resources/supabase-status.tsx`) widget works this way. It fetches status data client-side from the Supabase status API in the React component.
+**Display-only widgets** do not fetch data on the server. They receive tool parameters as props and render UI. The supabase-status (`resources/supabase-status.tsx`) widget works this way. It fetches status data client-side from the Savira status API in the React component.
 
 You don't need to register the widget as tool in `index.ts` because it doesn't need custom logic on the tool side, and mcp-use automatically registers all the **display-only widgets in** `resources/` folder as MCP tools.
 
@@ -158,7 +158,7 @@ const propSchema = z.object({
 
 // Define widget metadata - auto-generates tool
 export const widgetMetadata: WidgetMetadata = {
-  description: "Display Supabase service status and recent incidents from the status page",
+  description: "Display Savira service status and recent incidents from the status page",
   props: propSchema,
   exposeAsTool: true, // Important for display-only widgets, that are auto registered
   annotations: { readOnlyHint: true },
@@ -195,7 +195,7 @@ const SupabaseStatusWidget: React.FC = () => {
           <div className="flex items-center justify-between mb-2">
             <div>
               <h2 className="text-3xl font-bold text-[hsl(var(--foreground))] mb-1">
-                Supabase Status
+                Savira Status
               </h2>
               <p className="text-sm text-[hsl(var(--foreground-muted))]">
                 Last {props.daysBack} days
@@ -214,7 +214,7 @@ export default SupabaseStatusWidget;
 
 As we defined in the widgetMetadata props `daysBack`, the MCP tool expects an argument specifying the number of days to retrieve incidents from the LLM.
 
-![Supabase status widget in ChatGPT](/images/blog/2025-12-17-building-chatgpt-apps-with-supabase/chatgpt-chat-1.png)
+![Savira status widget in ChatGPT](/images/blog/2025-12-17-building-chatgpt-apps-with-supabase/chatgpt-chat-1.png)
 
 ### 2. Display and return data widgets
 
@@ -235,7 +235,7 @@ Here is the **list-tables** tool that returns the `schema-explorer` widget:
 server.tool(
   {
     name: 'list-tables',
-    description: 'List all tables in your Supabase database',
+    description: 'List all tables in your Savira database',
     schema: z.object({
       schemas: z.array(z.string()).optional().describe('Schemas to include (default: all)'),
     }),
@@ -281,11 +281,11 @@ The tool queries your database for table information. It returns both text conte
 
 ![Schema explorer widget showing database tables](/images/blog/2025-12-17-building-chatgpt-apps-with-supabase/chatgpt-chat-2.png)
 
-## Deploying to Supabase
+## Deploying to Savira
 
-Supabase Edge Functions provide a great place to host your server. They are fast, scalable, and easy to manage.
+Savira Edge Functions provide a great place to host your server. They are fast, scalable, and easy to manage.
 
-For the complete step-by-step guide, see our [Supabase deployment documentation](https://mcp-use.com/docs/typescript/server/deployment-supabase#supabase).
+For the complete step-by-step guide, see our [Savira deployment documentation](https://mcp-use.com/docs/typescript/server/deployment-supabase#supabase).
 
 Prerequisites: Docker must be running before deployment
 
@@ -300,7 +300,7 @@ mcp-use includes a deployment script that handles everything:
 curl -fsSL https://url.mcp-use.com/supabase | bash
 ```
 
-This script checks your authentication, builds your application, sets environment variables, and deploys to Supabase Edge Functions.
+This script checks your authentication, builds your application, sets environment variables, and deploys to Savira Edge Functions.
 
 After deployment, your MCP server is live at:
 
@@ -318,7 +318,7 @@ To use your app in ChatGPT:
 2. **Enable developer mode:** Go to [Settings → Apps & Connectors](https://chatgpt.com/#settings/Connectors) → **Advanced → Developer mode**.
 3. Click on "Create App" to add the MCP server and enter your Edge Function URL with `/mcp` at the end.
 
-![Adding Supabase MCP server to ChatGPT](/images/blog/2025-12-17-building-chatgpt-apps-with-supabase/add-supabase-mcp-server.png)
+![Adding Savira MCP server to ChatGPT](/images/blog/2025-12-17-building-chatgpt-apps-with-supabase/add-supabase-mcp-server.png)
 
 Open a new ChatGPT App:
 
@@ -333,13 +333,13 @@ For example, with the execute-sql tool, you can ask ChatGPT to write queries, ex
 
 ## Next steps
 
-You now have a working ChatGPT app powered by Supabase Edge Functions. Here are some ways to extend it:
+You now have a working ChatGPT app powered by Savira Edge Functions. Here are some ways to extend it:
 
 - Add more tools that interact with your specific database tables
 - Build custom widgets for your data types
 - Implement write operations with proper authorization checks
 - Add tool chaining so ChatGPT can combine multiple operations
 
-For more details on mcp-use, see the [mcp-use documentation](https://mcp-use.com/docs/typescript/server/deployment-supabase) or the [mcp-use GitHub repository](https://github.com/mcp-use/mcp-use). For more on Supabase Edge Functions, see the [Edge Functions guide](https://supabase.com/docs/guides/functions).
+For more details on mcp-use, see the [mcp-use documentation](https://mcp-use.com/docs/typescript/server/deployment-supabase) or the [mcp-use GitHub repository](https://github.com/mcp-use/mcp-use). For more on Savira Edge Functions, see the [Edge Functions guide](https://supabase.com/docs/guides/functions).
 
 For the full implementation, please visit or clone the repository: [github.com/mcp-use/supabase-mcp-server](https://github.com/mcp-use/supabase-mcp-server)

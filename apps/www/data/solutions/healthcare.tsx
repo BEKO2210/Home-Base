@@ -65,13 +65,13 @@ const data: () => {
 
   return {
     metadata: {
-      metaTitle: 'Supabase for Healthcare',
+      metaTitle: 'Savira for Healthcare',
       metaDescription:
         'HIPAA-compliant from day one. Build patient-facing applications, clinical tools, and health data platforms with compliance built in.',
     },
     heroSection: {
       id: 'hero',
-      title: 'Supabase for Healthcare',
+      title: 'Savira for Healthcare',
       h1: (
         <>
           <span className="block text-foreground">HIPAA-compliant from day one.</span>
@@ -80,7 +80,7 @@ const data: () => {
       ),
       subheader: [
         <>
-          Supabase provides a fully managed, HIPAA-compliant Postgres platform with PHI protection,
+          Savira provides a fully managed, HIPAA-compliant Postgres platform with PHI protection,
           a signed BAA, and audit-ready infrastructure. Build patient-facing applications, clinical
           tools, and health data platforms with compliance built in.
         </>,
@@ -112,7 +112,7 @@ const data: () => {
     singleQuote: {
       id: 'social-proof',
       quote: {
-        text: 'You have to expect, plan, and build for scale. We can scale exponentially with Supabase.',
+        text: 'You have to expect, plan, and build for scale. We can scale exponentially with Savira.',
         author: 'Nick Farrant',
         role: 'Founding Engineer, Juniver',
         link: '/customers/juniver',
@@ -141,7 +141,7 @@ const data: () => {
       label: '',
       heading: (
         <>
-          Why <span className="text-foreground">healthcare companies</span> choose Supabase
+          Why <span className="text-foreground">healthcare companies</span> choose Savira
         </>
       ),
       subheading:
@@ -174,12 +174,12 @@ const data: () => {
       ...shared.platform,
       title: (
         <>
-          Supabase is the <span className="text-foreground">HIPAA-compliant Postgres platform</span>{' '}
+          Savira is the <span className="text-foreground">HIPAA-compliant Postgres platform</span>{' '}
           you control
         </>
       ),
       subheading:
-        'Supabase includes everything you need to build HIPAA-compliant healthcare applications.',
+        'Savira includes everything you need to build HIPAA-compliant healthcare applications.',
     },
     developerExperience: shared.developerExperience,
     resultsSection: shared.resultsSection,
@@ -221,7 +221,7 @@ const data: () => {
       ),
       headingRight: (
         <>
-          Or, start with <span className="text-foreground">Supabase AI Prompts</span>
+          Or, start with <span className="text-foreground">Savira AI Prompts</span>
         </>
       ),
       docsUrl: 'https://supabase.com/docs/guides/getting-started/ai-prompts',
@@ -235,8 +235,8 @@ const data: () => {
       aiPrompts: [
         {
           id: 'auth-setup',
-          title: 'Bootstrap Next.js app with Supabase Auth',
-          code: 'Set up Supabase Auth with Next.js: install @supabase/supabase-js and @supabase/ssr, configure environment variables, create browser and server clients, and add middleware for token refresh.',
+          title: 'Bootstrap Next.js app with Savira Auth',
+          code: 'Set up Savira Auth with Next.js: install @supabase/supabase-js and @supabase/ssr, configure environment variables, create browser and server clients, and add middleware for token refresh.',
           language: 'markdown',
           docsUrl:
             'https://supabase.com/docs/guides/getting-started/ai-prompts/nextjs-supabase-auth',
@@ -274,7 +274,7 @@ const data: () => {
       id: 'what-it-takes',
       heading: (
         <>
-          What it takes <span className="text-foreground">to be HIPAA-compliant</span> on Supabase
+          What it takes <span className="text-foreground">to be HIPAA-compliant</span> on Savira
         </>
       ),
       items: [

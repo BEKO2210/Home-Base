@@ -18,8 +18,8 @@ export default function GoPageRenderer({ page }: { page: GoPage }) {
       <nav className="absolute top-0 left-0 right-0 z-10">
         <div className="max-w-7xl mx-auto flex items-center h-14 px-8">
           <Link href="/">
-            <Image src={supabaseLogoIcon} width={24} height={24} alt="Supabase" priority />
-            <span className="sr-only">Supabase</span>
+            <Image src={supabaseLogoIcon} width={24} height={24} alt="Savira" priority />
+            <span className="sr-only">Savira</span>
           </Link>
         </div>
       </nav>
@@ -29,7 +29,7 @@ export default function GoPageRenderer({ page }: { page: GoPage }) {
       </main>
       <footer className="border-t border-muted">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 py-4 sm:h-14 px-8 text-sm text-foreground-lighter">
-          <span>&copy; {new Date().getFullYear()} Supabase Inc.</span>
+          <span>&copy; {new Date().getFullYear()} Savira Inc.</span>
           <div className="flex gap-6">
             <Link href="/privacy" className="hover:text-foreground transition-colors">
               Privacy Policy

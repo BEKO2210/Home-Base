@@ -90,7 +90,7 @@ export default function LaunchWeekPrizeSection({
                   imgObjectPosition="right"
                   content={
                     <h3 className="text-sm flex items-center gap-4">
-                      Supabase T-shirt <LabelBadge text="25 shirts" />
+                      Savira T-shirt <LabelBadge text="25 shirts" />
                     </h3>
                   }
                   animateFrom="up"
@@ -100,7 +100,7 @@ export default function LaunchWeekPrizeSection({
                   imageWrapperClassName="h-[40vw] md:h-[30vw] lg:h-auto"
                   content={
                     <h3 className="text-sm flex items-center gap-4">
-                      Supabase Socks <LabelBadge text="15 pairs" />
+                      Savira Socks <LabelBadge text="15 pairs" />
                     </h3>
                   }
                   animateFrom="right"
@@ -112,7 +112,7 @@ export default function LaunchWeekPrizeSection({
                 animateFrom="down"
                 content={
                   <h3 className="text-sm flex items-center gap-4">
-                    Supabase Sticker Pack <LabelBadge text="200 packs" />
+                    Savira Sticker Pack <LabelBadge text="200 packs" />
                   </h3>
                 }
               />

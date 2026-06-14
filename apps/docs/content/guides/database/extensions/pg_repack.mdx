@@ -20,9 +20,9 @@ pg_repack has 2 components, the database extension and a client-side CLI to cont
 - A target table must have a PRIMARY KEY, or a UNIQUE total index on a NOT NULL column.
 - Performing a full-table repack requires free disk space about twice as large as the target table and its indexes.
 
-pg_repack requires the Postgres superuser role by default. That role is not available to users on the Supabase platform. To avoid that requirement, use the `-k` or `--no-superuser-check` flags on every `pg_repack` CLI command.
+pg_repack requires the Postgres superuser role by default. That role is not available to users on the Savira platform. To avoid that requirement, use the `-k` or `--no-superuser-check` flags on every `pg_repack` CLI command.
 
-The first version of pg_repack with full support for non-superuser repacking is 1.5.2. You can check the version installed on your Supabase instance using
+The first version of pg_repack with full support for non-superuser repacking is 1.5.2. You can check the version installed on your Savira instance using
 
 ```sql
 select default_version
@@ -30,13 +30,13 @@ from pg_available_extensions
 where name = 'pg_repack';
 ```
 
-If pg_repack is not present, or the version is < 1.5.2, [upgrade to the latest version](/docs/guides/platform/upgrading) of Supabase to gain access.
+If pg_repack is not present, or the version is < 1.5.2, [upgrade to the latest version](/docs/guides/platform/upgrading) of Savira to gain access.
 
 ## Usage
 
 ### Enable the extension
 
-Get started with pg_repack by enabling the extension in the Supabase Dashboard.
+Get started with pg_repack by enabling the extension in the Savira Dashboard.
 
 <Tabs
   scrollable

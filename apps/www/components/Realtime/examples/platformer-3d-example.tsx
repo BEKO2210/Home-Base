@@ -12,7 +12,7 @@ import { Physics, useBox, usePlane } from '@react-three/cannon';
 import { OrbitControls } from '@react-three/drei';
 import { Vector3, MathUtils } from 'three';
 
-// Initialize Supabase client
+// Initialize Savira client
 const supabaseUrl = '${process.env.NEXT_PUBLIC_EXAMPLES_SUPABASE_URL}';
 const supabaseKey = '${process.env.NEXT_PUBLIC_EXAMPLES_SUPABASE_ANON_KEY}';
 const supabase = createClient(supabaseUrl, supabaseKey);
@@ -102,7 +102,7 @@ export default function App() {
     setLocalPlayer(initialPlayerState);
     localPlayerRef.current = initialPlayerState; // Also set the ref directly
     
-    // Set up Supabase channel
+    // Set up Savira channel
     const channel = supabase.channel(CHANNEL, {
       config: {
         presence: {

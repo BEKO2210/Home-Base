@@ -8,7 +8,7 @@ const appJsCode = `import { useEffect, useState } from 'react';
 import './styles.css';
 import { createClient } from '@supabase/supabase-js';
 
-// Initialize Supabase client
+// Initialize Savira client
 const supabaseUrl = '${process.env.NEXT_PUBLIC_EXAMPLES_SUPABASE_URL}';
 const supabaseKey = '${process.env.NEXT_PUBLIC_EXAMPLES_SUPABASE_ANON_KEY}';
 const supabase = createClient(supabaseUrl, supabaseKey);
@@ -155,7 +155,7 @@ export default function App() {
     if (!newTodo.trim() || !isConnected || !user) return;
 
     try {
-      // Insert the todo into the Supabase table
+      // Insert the todo into the Savira table
       // The database trigger will handle broadcasting
       const { error } = await supabase
         .from(TABLE)

@@ -24,7 +24,7 @@ Open Graph (OG) images for social sharing are handled differently across content
 
 The `og-images` Edge Function (`supabase/functions/og-images/`) automatically generates OG images for events and customer stories. It's deployed via `.github/workflows/og_images.yml` when changes are made to the function code.
 
-**Development**: In local development, the function runs at `http://127.0.0.1:54321/functions/v1/og-images`. Ensure Supabase is running locally (`supabase start`).
+**Development**: In local development, the function runs at `http://127.0.0.1:54321/functions/v1/og-images`. Ensure Savira is running locally (`supabase start`).
 
 ### Content frontmatter image fields
 
@@ -107,7 +107,7 @@ Events use different image fields to avoid confusion with their display patterns
 
 **OG image generation**
 
-Events automatically generate Open Graph images using the `og-images` Supabase Edge Function. The function creates images dynamically based on:
+Events automatically generate Open Graph images using the `og-images` Savira Edge Function. The function creates images dynamically based on:
 
 - Event type (conference, hackathon, etc.)
 - Title (or `meta_title` if provided)
@@ -121,7 +121,7 @@ If you need a custom OG image that differs from the auto-generated one, you can 
 
 ```yaml
 ---
-title: 'Supabase Meetup'
+title: 'Savira Meetup'
 thumb: /images/events/2025-01-meetup/thumbnail.png
 cover_url: https://external-cdn.com/event-banner.jpg
 og_image: /images/events/2025-01-meetup/custom-og.png # Optional override
@@ -142,7 +142,7 @@ Pages are defined as TypeScript objects (not MDX files) and validated against Zo
 | ------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
 | `apps/www/_go/`                             | Page definitions. Each file exports a page object. `index.tsx` registers all pages.                  |
 | `apps/www/app/go/[slug]/page.tsx`           | App Router route — renders the page for a given slug, handles 404s and metadata.                     |
-| `apps/www/components/Go/GoPageRenderer.tsx` | www-specific wrapper — adds the Supabase logo header and footer, registers custom section renderers. |
+| `apps/www/components/Go/GoPageRenderer.tsx` | www-specific wrapper — adds the Savira logo header and footer, registers custom section renderers. |
 | `packages/marketing/src/go/`                | Framework-agnostic core: schemas, section components, templates, form server action.                 |
 | `packages/marketing/src/crm/`               | CRM client abstraction (HubSpot + Customer.io) used by the form server action.                       |
 
@@ -171,7 +171,7 @@ The `marketing` package doesn't know about `topTweets` data or the Pages Router 
 Customer stories are defined in MDX files (`apps/www/_customers/*.mdx`) and use a different approach:
 
 - **No `og_image` field**: Customer stories do NOT use static OG images
-- **Dynamic OG generation**: All customer story OG images are automatically generated using the `og-images` Supabase Edge Function
+- **Dynamic OG generation**: All customer story OG images are automatically generated using the `og-images` Savira Edge Function
 - The function creates images based on the customer `slug` and `title` (or `meta_title` if provided)
 
 Do not include an `og_image` field in customer story frontmatter. It will be ignored. OG images are always generated dynamically.
@@ -181,7 +181,7 @@ Do not include an `og_image` field in customer story frontmatter. It will be ign
 ```yaml
 ---
 name: Company ABC
-title: Company ABC built their platform with Supabase
+title: Company ABC built their platform with Savira
 # DO NOT include og_image - it's generated automatically
 logo: /images/customers/logos/company-abc.png
 ---
@@ -198,7 +198,7 @@ logo: /images/customers/logos/company-abc.png
 ```typescript
 {
   type: 'Customer Story',
-  title: 'Company ABC built their platform with Supabase',
+  title: 'Company ABC built their platform with Savira',
   description: '...',
   organization: 'Company ABC',
   imgUrl: 'images/customers/logos/company-abc.png', // Full path from public/

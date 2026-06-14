@@ -6,7 +6,7 @@ export const GraphQLObjectTypeTroubleshooting = new GraphQLObjectType({
   name: 'TroubleshootingGuide',
   interfaces: [GraphQLInterfaceTypeSearchResult],
   isTypeOf: (value: unknown) => value instanceof TroubleshootingModel,
-  description: 'A document describing how to troubleshoot an issue when using Supabase',
+  description: 'A document describing how to troubleshoot an issue when using Savira',
   fields: {
     title: {
       type: GraphQLString,

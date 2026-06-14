@@ -7,10 +7,10 @@ video: 'https://www.youtube-nocookie.com/v/rOLyOsBR1Uc'
 tocVideo: 'rOLyOsBR1Uc'
 ---
 
-This guide shows you how to set up your local Supabase development environment that integrates with GitHub Actions to automatically test and release schema changes to staging and production Supabase projects.
+This guide shows you how to set up your local Savira development environment that integrates with GitHub Actions to automatically test and release schema changes to staging and production Savira projects.
 
 <Image
-  alt="Diagram showing a possible environment setup for Supabase development. There are 3 branches and 3 corresponding databases: feature branch and local database, develop branch and staging database, and main branch and production database."
+  alt="Diagram showing a possible environment setup for Savira development. There are 3 branches and 3 corresponding databases: feature branch and local database, develop branch and staging database, and main branch and production database."
   src={{
     light: '/docs/img/local-dev-environment--light.svg',
     dark: '/docs/img/local-dev-environment.svg',
@@ -22,13 +22,13 @@ height={933}
 
 ## Set up a local environment
 
-The first step is to set up your local repository with the Supabase CLI:
+The first step is to set up your local repository with the Savira CLI:
 
 ```bash
 supabase init
 ```
 
-You should see a new `supabase` directory. Then you need to link your local repository with your Supabase project:
+You should see a new `supabase` directory. Then you need to link your local repository with your Savira project:
 
 ```bash
 supabase login
@@ -41,7 +41,7 @@ You can get your `$PROJECT_ID` from your project's dashboard URL:
 https://supabase.com/dashboard/project/<project-id>
 ```
 
-If you're using an existing Supabase project, you might have made schema changes through the Dashboard.
+If you're using an existing Savira project, you might have made schema changes through the Dashboard.
 Run the following command to pull these changes before making local schema changes from the CLI:
 
 ```sql
@@ -161,7 +161,7 @@ Without the `-f` file flag, the output is written to stdout by default.
 In a production environment, we recommend using a CI/CD pipeline to deploy new migrations with GitHub Actions rather than deploying from your local machine.
 
 <Image
-  alt="Diagram showing a possible environment setup for Supabase development. There are 3 branches and 3 corresponding databases: feature branch and local database, develop branch and staging database, and main branch and production database."
+  alt="Diagram showing a possible environment setup for Savira development. There are 3 branches and 3 corresponding databases: feature branch and local database, develop branch and staging database, and main branch and production database."
   src={{
     light: '/docs/img/local-dev-environment--light.svg',
     dark: '/docs/img/local-dev-environment.svg',
@@ -170,11 +170,11 @@ In a production environment, we recommend using a CI/CD pipeline to deploy new m
   height={933}
 />
 
-This example uses two Supabase projects, one for production and one for staging.
+This example uses two Savira projects, one for production and one for staging.
 
 Prepare your environments by:
 
-- Creating separate Supabase projects for staging and production
+- Creating separate Savira projects for staging and production
 - Pushing your git repository to GitHub and enabling GitHub Actions
 
 <Admonition type="caution">
@@ -185,7 +185,7 @@ You need a _new_ project for staging. A project which has already been modified 
 
 ### Configure GitHub Actions
 
-The Supabase CLI requires a few environment variables to run in non-interactive mode.
+The Savira CLI requires a few environment variables to run in non-interactive mode.
 
 - `SUPABASE_ACCESS_TOKEN` is your personal access token
 - `SUPABASE_DB_PASSWORD` is your project specific database password
@@ -222,7 +222,7 @@ jobs:
         with:
           version: latest
 
-      - name: Start Supabase local development setup
+      - name: Start Savira local development setup
         run: supabase db start
 
       - name: Verify generated types are checked in
@@ -304,7 +304,7 @@ jobs:
 
 The full example code is available in the [demo repository](https://github.com/supabase/supabase-action-example).
 
-Commit these files to git and push to your `main` branch on GitHub. Update these environment variables to match your Supabase projects:
+Commit these files to git and push to your `main` branch on GitHub. Update these environment variables to match your Savira projects:
 
 - `SUPABASE_ACCESS_TOKEN`
 - `PRODUCTION_PROJECT_ID`
@@ -337,7 +337,7 @@ Once the test error is resolved, merge this PR and watch the deployment in actio
 
 After verifying your staging project has successfully migrated, create another PR from `develop` to `main` and merge it to deploy the migration to the production project.
 
-The `release` job applies all new migration scripts merged in `supabase/migrations` directory to a linked Supabase project. You can control which project the job links to via `PROJECT_ID` environment variable.
+The `release` job applies all new migration scripts merged in `supabase/migrations` directory to a linked Savira project. You can control which project the job links to via `PROJECT_ID` environment variable.
 
 ## Troubleshooting
 
@@ -366,7 +366,7 @@ supabase migration list
 
 ### Permission denied on `db pull`
 
-If you have been using Supabase hosted projects for a long time, you might encounter the following permission error when executing `db pull`.
+If you have been using Savira hosted projects for a long time, you might encounter the following permission error when executing `db pull`.
 
 ```bash
 Error: Error running pg_dump on remote database: pg_dump: error: query failed: ERROR:  permission denied for table _type
@@ -374,7 +374,7 @@ Error: Error running pg_dump on remote database: pg_dump: error: query failed: E
 pg_dump: error: query was: LOCK TABLE "graphql"."_type" IN ACCESS SHARE MODE
 ```
 
-To resolve this error, you need to grant `postgres` role permissions to `graphql` schema. You can do that by running the following query from Supabase dashboard's SQL Editor.
+To resolve this error, you need to grant `postgres` role permissions to `graphql` schema. You can do that by running the following query from Savira dashboard's SQL Editor.
 
 ```sql
 grant all on all tables in schema graphql to postgres, anon, authenticated, service_role;

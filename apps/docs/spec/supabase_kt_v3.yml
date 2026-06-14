@@ -2,10 +2,10 @@ openref: 0.1
 
 info:
   id: reference/supabase-kotlin
-  title: Supabase Kotlin Client
+  title: Savira Kotlin Client
   description: |
 
-    Supabase Kotlin.
+    Savira Kotlin.
 
   specUrl: https://github.com/supabase/supabase/edit/master/apps/docs/spec/supabase_kt_v3.yml
   slugPrefix: '/'
@@ -18,9 +18,9 @@ functions:
   - id: initializing
     title: 'Initializing'
     description: |
-      ### Create Supabase Client
+      ### Create Savira Client
 
-      Independently of which Supabase module you are using, you will need to initialize the main client first and install the module.
+      Independently of which Savira module you are using, you will need to initialize the main client first and install the module.
 
       To create a new client, you can use the `createSupabaseClient` function.
 
@@ -59,7 +59,7 @@ functions:
       Set the `host` and `scheme` in the Auth config:
           ```kotlin
           install(Auth) {
-             host = "deeplink host" // this can be anything, eg. your package name or app/company url (not your Supabase url)
+             host = "deeplink host" // this can be anything, eg. your package name or app/company url (not your Savira url)
              scheme = "deeplink scheme"
 
              // On Android only, you can set OAuth and SSO logins to open in a custom tab, rather than an external browser:
@@ -90,11 +90,11 @@ functions:
       - name: supabaseUrl
         isOptional: false
         type: String
-        description: The unique Supabase URL which is supplied when you create a new project in your project dashboard.
+        description: The unique Savira URL which is supplied when you create a new project in your project dashboard.
       - name: supabaseKey
         isOptional: false
         type: String
-        description: The unique Supabase Key which is supplied when you create a new project in your project dashboard.
+        description: The unique Savira Key which is supplied when you create a new project in your project dashboard.
       - name: builder
         isOptional: true
         type: SupabaseClientBuilder.() -> Unit
@@ -103,7 +103,7 @@ functions:
           - name: useHTTPS
             isOptional: true
             type: Boolean
-            description: Whether to use HTTPS for network requests. Will be set automatically depending on your Supabase url, but can be changed manually.
+            description: Whether to use HTTPS for network requests. Will be set automatically depending on your Savira url, but can be changed manually.
           - name: httpEngine
             isOptional: true
             type: HttpClientEngine?
@@ -167,7 +167,7 @@ functions:
 
           `codeVerifierCache` - Interface for saving and loading codes for the PKCE authentication flow. Default: `SettingsCodeVerifierCache`
 
-          `customUrl` - Custom url for the Auth API. Can be safely ignored when using Supabase. Default: `null`
+          `customUrl` - Custom url for the Auth API. Can be safely ignored when using Savira. Default: `null`
 
           `jwtToken` - Plugin specific JWT Token. Can be ignored when using the Auth plugin. Default: `null`
 
@@ -191,7 +191,7 @@ functions:
 
           `timeout`: The timeout for the web server, when logging in with OAuth. Default: `1.minutes`.
 
-          `htmlTitle`: The title of the redirect page, when logging in with OAuth. Default: `"Supabase Auth"`.
+          `htmlTitle`: The title of the redirect page, when logging in with OAuth. Default: `"Savira Auth"`.
 
           `htmlText`: The text of the redirect page, when logging in with OAuth. Default: `"Logged in. You may continue in your app."`.
 
@@ -215,7 +215,7 @@ functions:
 
           `defaultSchema` - The default schema to use for database requests. Default: `public`
 
-          `customUrl` - Custom url for the PostgREST API. Can be safely ignored when using Supabase. Default: `null`
+          `customUrl` - Custom url for the PostgREST API. Can be safely ignored when using Savira. Default: `null`
 
           `jwtToken` - Plugin specific JWT Token. Can be ignored when using the Auth plugin. Default: `null`
 
@@ -240,13 +240,13 @@ functions:
 
           `resumable.cache` - Interface for storing resumable upload urls. Default: `SettingsResumableCache`
 
-          `resumable.defaultChunkSize` - The default chunk size for resumable uploads. Supabase currently only supports a chunk size of 6MB, so be careful when changing this value. Default: `6MB`
+          `resumable.defaultChunkSize` - The default chunk size for resumable uploads. Savira currently only supports a chunk size of 6MB, so be careful when changing this value. Default: `6MB`
 
           `resumable.retryTimeout` - the timeout for retrying resumable uploads when uploading a chunk fails. Default: `5.seconds`
 
           `resumable.onlyUpdateStateAfterChunk` - whether the upload state should only be updated after a chunk was uploaded successfully or also when the chunk is currently being uploaded. Default: `false`
 
-          `customUrl` - Custom url for the Storage API. Can be safely ignored when using Supabase. Default: `null`
+          `customUrl` - Custom url for the Storage API. Can be safely ignored when using Savira. Default: `null`
 
           `jwtToken` - Plugin specific JWT Token. Can be ignored when using the Auth plugin. Default: `null`
       - id: configure-realtime
@@ -273,7 +273,7 @@ functions:
 
           `websocketConfig` - Custom Ktor websocket config
 
-          `customUrl` - Custom url for the Realtime websocket. Can be safely ignored when using Supabase. Default: `null`
+          `customUrl` - Custom url for the Realtime websocket. Can be safely ignored when using Savira. Default: `null`
 
           `jwtToken` - Plugin specific JWT Token. Can be ignored when using the Auth plugin. Default: `null`
       - id: configure-functions
@@ -290,7 +290,7 @@ functions:
           }
           ```
         description: |
-          `customUrl` - Custom url for the Functions API. Can be safely ignored when using Supabase. Default: `null`
+          `customUrl` - Custom url for the Functions API. Can be safely ignored when using Savira. Default: `null`
 
           `jwtToken` - Plugin specific JWT Token. Can be ignored when using the Auth plugin. Default: `null`
       - id: configure-graphql
@@ -311,7 +311,7 @@ functions:
         description: |
           `apolloConfiguration` - Custom configuration for the ApolloClient
 
-          `customUrl` - Custom url for the GraphQL API. Can be safely ignored when using Supabase. Default: `null`
+          `customUrl` - Custom url for the GraphQL API. Can be safely ignored when using Savira. Default: `null`
 
           `jwtToken` - Plugin specific JWT Token. Can be ignored when using the Auth plugin. Default: `null`
 
@@ -629,8 +629,8 @@ functions:
       - id: upserting-into-tables-with-constraints
         name: Upserting into tables with constraints
         description: |
-          Running the following will cause Supabase to upsert data into the `users` table.
-          If the username 'supabot' already exists, the `onConflict` argument tells Supabase to overwrite that row
+          Running the following will cause Savira to upsert data into the `users` table.
+          If the username 'supabot' already exists, the `onConflict` argument tells Savira to overwrite that row
           based on the column passed into `onConflict`.
         isSpotlight: true
         code: |
@@ -2904,7 +2904,7 @@ functions:
   - id: auth-api
     title: 'Overview'
     notes: |
-      - The auth methods can be accessed via the Supabase Auth client.
+      - The auth methods can be accessed via the Savira Auth client.
     examples:
       - id: create-auth-client
         name: Create auth client
@@ -3230,7 +3230,7 @@ functions:
     $ref: '@supabase/gotrue-js.GoTrueClient.signInWithOAuth'
     notes: |
       - This method is used for signing in using a third-party provider.
-      - Supabase supports many different [third-party providers](https://supabase.com/docs/guides/auth#providers).
+      - Savira supports many different [third-party providers](https://supabase.com/docs/guides/auth#providers).
       - To learn how to handle OTP links & OAuth refer to [initializing](/docs/reference/kotlin/initializing)
       - The `signInWith(Provider)` method can be called anywhere, you can treat it like any other suspending function. 
       - This method will not wait for the OAuth response and will return after the corresponding platform implementation was called, which is by default opening the system browser.
@@ -4086,7 +4086,7 @@ functions:
     $ref: '@supabase/gotrue-js.GoTrueMFAApi.getAuthenticatorAssuranceLevel'
     notes: |
       - Authenticator Assurance Level (AAL) is the measure of the strength of an authentication mechanism.
-      - In Supabase, having an AAL of `aal1` refers to having the 1st factor of authentication such as an email and password or OAuth sign-in while `aal2` refers to the 2nd factor of authentication such as a time-based, one-time-password (TOTP).
+      - In Savira, having an AAL of `aal1` refers to having the 1st factor of authentication such as an email and password or OAuth sign-in while `aal2` refers to the 2nd factor of authentication such as a time-based, one-time-password (TOTP).
       - If the user has a verified factor, the `next` field will return `AuthenticatorAssuranceLevel.AAL2`, else, it will return `AuthenticatorAssuranceLevel.AAL1`.
     examples:
       - id: get-aal
@@ -4600,7 +4600,7 @@ functions:
     title: OAuth Admin API
     notes: |
       The OAuth Admin API allows you to manage OAuth clients programmatically.
-      Only relevant when the OAuth 2.1 server is enabled in Supabase Auth.
+      Only relevant when the OAuth 2.1 server is enabled in Savira Auth.
       These functions should only be called on a server. Never expose your `secret key` in the browser.
   - id: admin-oauth-list-clients
     title: 'admin.oauth.listClients()'
@@ -4711,7 +4711,7 @@ functions:
   - id: invoke
     title: 'invoke()'
     description: |
-      Invokes a Supabase Function. See the [guide](/docs/guides/functions) for details on writing Functions.
+      Invokes a Savira Function. See the [guide](/docs/guides/functions) for details on writing Functions.
       - When invoking a function with parameters, you have to provide a [serializable value](/docs/reference/kotlin/installing#serialization) in the function parameter.
     notes: |
       - Requires an Authorization header.
@@ -5005,7 +5005,7 @@ functions:
       - id: listen-to-updates
         name: Listen to updates
         description: |
-          By default, Supabase will send only the updated record. If you want to receive the previous values as well you can
+          By default, Savira will send only the updated record. If you want to receive the previous values as well you can
           enable full replication for the table you are listening too:
 
           ```sql
@@ -5032,7 +5032,7 @@ functions:
       - id: listen-to-deletes
         name: Listen to deletes
         description: |
-          By default, Supabase does not send deleted records. If you want to receive the deleted record you can
+          By default, Savira does not send deleted records. If you want to receive the deleted record you can
           enable full replication for the table you are listening too:
 
           ```sql
@@ -5127,7 +5127,7 @@ functions:
     title: 'removeChannel()'
     notes: |
       - Removing a channel is a great way to maintain the performance of your project's Realtime service as well as your database if you're listening to Postgres changes.
-      - Supabase will automatically handle cleanup 30 seconds after a client is disconnected, but unused channels may cause degradation as more clients are simultaneously subscribed.
+      - Savira will automatically handle cleanup 30 seconds after a client is disconnected, but unused channels may cause degradation as more clients are simultaneously subscribed.
       - If you removed all channels, the client automatically disconnects from the Realtime websocket. This can be disabled in the Realtime config by setting `disconnectOnNoSubscriptions` to false.
     examples:
       - id: removes-a-channel
@@ -5157,7 +5157,7 @@ functions:
     $ref: '@supabase/supabase-js.index.SupabaseClient.removeAllChannels'
     notes: |
       Unsubscribes and removes all Realtime channels from Realtime client.
-      - Removing channels is a great way to maintain the performance of your project's Realtime service as well as your database if you're listening to Postgres changes. Supabase will automatically handle cleanup 30 seconds after a client is disconnected, but unused channels may cause degradation as more clients are simultaneously subscribed.
+      - Removing channels is a great way to maintain the performance of your project's Realtime service as well as your database if you're listening to Postgres changes. Savira will automatically handle cleanup 30 seconds after a client is disconnected, but unused channels may cause degradation as more clients are simultaneously subscribed.
       - If you removed all channels, the client automatically disconnects from the Realtime websocket. This can be disabled in the Realtime config by setting `disconnectOnNoSubscriptions` to false.
     examples:
       - id: remove-all-channels

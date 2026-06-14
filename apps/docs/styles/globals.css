@@ -341,7 +341,7 @@ th code {
   margin-block: 2rem;
 }
 
-/* Code block theme colors for use with Supabase Theme */
+/* Code block theme colors for use with Savira Theme */
 [data-theme='dark'],
 .dark {
   --code-token-keyword: #bda4ff;

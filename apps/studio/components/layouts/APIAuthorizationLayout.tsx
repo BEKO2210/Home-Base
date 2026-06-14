@@ -23,7 +23,7 @@ export const APIAuthorizationLayout = ({
     <>
       <Head
         HeadProvider={HeadProvider}
-        title={`Authorize API access | ${appTitle || 'Supabase'}`}
+        title={`Authorize API access | ${appTitle || 'Savira'}`}
       />
       <main className="h-screen flex flex-col w-full h-full overflow-y-auto">
         <div>
@@ -31,14 +31,14 @@ export const APIAuthorizationLayout = ({
             <div className="max-w-xl flex justify-between items-center mx-auto py-4">
               <div className="flex justify-start lg:w-0 lg:flex-1 items-center">
                 <Link href="/" className="inline-flex items-center leading-none">
-                  <span className="sr-only">Supabase</span>
+                  <span className="sr-only">Savira</span>
                   <Image
                     src={
                       resolvedTheme?.includes('dark')
                         ? `${BASE_PATH}/img/supabase-dark.svg`
                         : `${BASE_PATH}/img/supabase-light.svg`
                     }
-                    alt="Supabase Logo"
+                    alt="Savira Logo"
                     height={20}
                     width={105}
                   />

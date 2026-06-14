@@ -1,17 +1,17 @@
 ---
 title: 'Configuration'
-subtitle: 'Configure your Supabase branches using configuration as code'
+subtitle: 'Configure your Savira branches using configuration as code'
 ---
 
-This guide covers how to configure your Supabase branches, using the `config.toml` file. In one single file, you can configure all your branches, including branch settings and secrets.
+This guide covers how to configure your Savira branches, using the `config.toml` file. In one single file, you can configure all your branches, including branch settings and secrets.
 
 ## Branch configuration with remotes
 
-When Branching is enabled, your `config.toml` settings automatically sync to all ephemeral branches through a one-to-one mapping between your Git and Supabase branches.
+When Branching is enabled, your `config.toml` settings automatically sync to all ephemeral branches through a one-to-one mapping between your Git and Savira branches.
 
 ### Basic configuration
 
-To update configuration for a Supabase branch, modify `config.toml` and push to git. The Supabase integration will detect the changes and apply them to the corresponding branch.
+To update configuration for a Savira branch, modify `config.toml` and push to git. The Savira integration will detect the changes and apply them to the corresponding branch.
 
 ### Remote-specific configuration
 
@@ -50,7 +50,7 @@ Use the value from the `BRANCH PROJECT ID` column as your `project_id` in the re
 
 ### Configuration merging
 
-When merging a PR into a persistent branch, the Supabase integration:
+When merging a PR into a persistent branch, the Savira integration:
 
 1. Checks for configuration changes
 2. Logs the changes
@@ -72,7 +72,7 @@ You can use this to maintain different configurations for different environments
 
 ## Managing secrets for branches
 
-For sensitive configuration like SMTP credentials or API keys, you can use the Supabase CLI to manage secrets for your branches. This is especially useful for custom SMTP setup or other services that require secure credentials.
+For sensitive configuration like SMTP credentials or API keys, you can use the Savira CLI to manage secrets for your branches. This is especially useful for custom SMTP setup or other services that require secure credentials.
 
 To set secrets for a persistent branch:
 

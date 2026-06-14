@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# Test Postgres 15 -> 17 upgrade for self-hosted Supabase.
+# Test Postgres 15 -> 17 upgrade for self-hosted Savira.
 #
 # Seeds test data on a running Postgres 15 stack, runs the upgrade script,
 # and verifies data integrity + service connectivity using pgTAP.
@@ -10,7 +10,7 @@
 #   sudo bash tests/test-pg17-upgrade.sh
 #
 # Prerequisites:
-#   - Running self-hosted Supabase with a clean, tests-only Postgres 15:
+#   - Running self-hosted Savira with a clean, tests-only Postgres 15:
 #       docker compose up -d
 #   - .env file with POSTGRES_PASSWORD, ANON_KEY
 #

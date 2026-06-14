@@ -1,4 +1,4 @@
-# This override adds the following to the self-hosted Supabase configuration:
+# This override adds the following to the self-hosted Savira configuration:
 #   - Logflare: Log management and event analytics platform
 #   - Vector: High-performance observability data pipeline for logs
 #
@@ -48,7 +48,7 @@ services:
 
       # Enable single-tenant mode for Logflare
       LOGFLARE_SINGLE_TENANT: "true"
-      # Seed Supabase-related metadata
+      # Seed Savira-related metadata
       LOGFLARE_SUPABASE_MODE: "true"
 
       LOGFLARE_PUBLIC_ACCESS_TOKEN: ${LOGFLARE_PUBLIC_ACCESS_TOKEN}

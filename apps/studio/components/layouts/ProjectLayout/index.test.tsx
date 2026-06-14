@@ -163,7 +163,7 @@ vi.mock('@/components/ui/PartnerIcon', () => ({
 }))
 
 vi.mock('@/hooks/custom-content/useCustomContent', () => ({
-  useCustomContent: () => ({ appTitle: 'Supabase' }),
+  useCustomContent: () => ({ appTitle: 'Savira' }),
 }))
 
 vi.mock('@/hooks/misc/useLocalStorage', () => ({
@@ -278,7 +278,7 @@ describe('ProjectLayout title', () => {
 
     await waitFor(() => {
       expect(document.title).toBe(
-        ['Settings', 'Project 1', 'Organization 1', 'Supabase'].join(STUDIO_PAGE_TITLE_SEPARATOR)
+        ['Settings', 'Project 1', 'Organization 1', 'Savira'].join(STUDIO_PAGE_TITLE_SEPARATOR)
       )
     })
   })
@@ -298,7 +298,7 @@ describe('ProjectLayout title', () => {
 
     await waitFor(() => {
       expect(document.title).toBe(
-        ['users', 'Tables', 'Database', 'Project 1', 'Organization 1', 'Supabase'].join(
+        ['users', 'Tables', 'Database', 'Project 1', 'Organization 1', 'Savira'].join(
           STUDIO_PAGE_TITLE_SEPARATOR
         )
       )

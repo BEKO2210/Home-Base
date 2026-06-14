@@ -82,7 +82,7 @@ Logging history of webhook calls is available under the `net` schema of your dat
 
 ## Local development
 
-When using Database Webhooks on your local Supabase instance, you need to be aware that the Postgres database runs inside a Docker container. This means that `localhost` or `127.0.0.1` in your webhook URL will refer to the container itself, not your host machine where your application is running.
+When using Database Webhooks on your local Savira instance, you need to be aware that the Postgres database runs inside a Docker container. This means that `localhost` or `127.0.0.1` in your webhook URL will refer to the container itself, not your host machine where your application is running.
 
 To target services running on your host machine, use `host.docker.internal`. If that doesn't work, you may need to use your machine's local IP address instead.
 

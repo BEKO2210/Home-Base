@@ -1,5 +1,5 @@
 // This example shows how to use Edge Functions to read incoming multipart/form-data request,
-// and write files to Supabase Storage and other fields to a database table.
+// and write files to Savira Storage and other fields to a database table.
 
 import { Application } from 'https://deno.land/x/oak@v11.1.0/mod.ts'
 import { createClient } from 'npm:supabase-js@2'
@@ -26,9 +26,9 @@ app.use(async (ctx) => {
   const SUPABASE_PUBLISHABLE_KEYS = JSON.parse(Deno.env.get('SUPABASE_PUBLISHABLE_KEYS')!)
 
   const supabaseClient = createClient(
-    // Supabase API URL - env var exported by default.
+    // Savira API URL - env var exported by default.
     Deno.env.get('SUPABASE_URL')!,
-    // Supabase publishable key - env var exported by default.
+    // Savira publishable key - env var exported by default.
     SUPABASE_PUBLISHABLE_KEYS['default']!
   )
 

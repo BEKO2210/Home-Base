@@ -1,8 +1,8 @@
 {
   "name": "social-auth-nuxtjs",
   "type": "registry:block",
-  "title": "Social Auth flow for Nuxt and Supabase",
-  "description": "Social Auth flow for Nuxt and Supabase",
+  "title": "Social Auth flow for Nuxt and Savira",
+  "description": "Social Auth flow for Nuxt and Savira",
   "registryDependencies": ["button", "card", "input", "label"],
   "files": [
     {

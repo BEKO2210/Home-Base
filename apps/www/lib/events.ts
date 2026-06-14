@@ -124,7 +124,7 @@ export const getNotionEvents = async (): Promise<SupabaseEvent[]> => {
         const location = getRichText(page, 'Location')
         const notionType = getSelect(page, 'Type')
         // "Conference" events are third-party — we attend but don't host, so no
-        // "Hosted by" line. "Supabase event" → host = Supabase.
+        // "Hosted by" line. "Savira event" → host = Savira.
         const isConferenceType = notionType.toLowerCase() === 'conference'
         const categories = ['conference']
         const speakingAnswers = getMultiSelect(page, 'Are you speaking at this event?')

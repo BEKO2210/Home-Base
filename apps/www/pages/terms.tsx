@@ -9,7 +9,7 @@ import { NextSeo } from 'next-seo'
 
 const meta = {
   title: 'Terms of Service',
-  description: 'Supabase Terms of Service',
+  description: 'Savira Terms of Service',
 }
 
 const versions: LegalDocVersion[] = [

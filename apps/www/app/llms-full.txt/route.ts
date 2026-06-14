@@ -30,14 +30,14 @@ function getSources(): Source[] {
   ])
 
   return [
-    { title: 'Supabase Reference (JavaScript)', slug: 'js', enabled: true },
-    { title: 'Supabase Reference (Dart)', slug: 'dart', enabled: sdkDart },
-    { title: 'Supabase Reference (Swift)', slug: 'swift', enabled: sdkSwift },
-    { title: 'Supabase Reference (Kotlin)', slug: 'kotlin', enabled: sdkKotlin },
-    { title: 'Supabase Reference (Python)', slug: 'python', enabled: sdkPython },
-    { title: 'Supabase Reference (C#)', slug: 'csharp', enabled: sdkCsharp },
-    { title: 'Supabase CLI Reference', slug: 'cli', enabled: true },
-    { title: 'Supabase Management API Reference', slug: 'api', enabled: true },
+    { title: 'Savira Reference (JavaScript)', slug: 'js', enabled: true },
+    { title: 'Savira Reference (Dart)', slug: 'dart', enabled: sdkDart },
+    { title: 'Savira Reference (Swift)', slug: 'swift', enabled: sdkSwift },
+    { title: 'Savira Reference (Kotlin)', slug: 'kotlin', enabled: sdkKotlin },
+    { title: 'Savira Reference (Python)', slug: 'python', enabled: sdkPython },
+    { title: 'Savira Reference (C#)', slug: 'csharp', enabled: sdkCsharp },
+    { title: 'Savira CLI Reference', slug: 'cli', enabled: true },
+    { title: 'Savira Management API Reference', slug: 'api', enabled: true },
   ]
 }
 
@@ -89,12 +89,12 @@ export async function GET() {
     .map(({ title, text }) => `# ${title}\n\n${text}`)
     .join('\n\n---\n\n')
 
-  const docsSection = [`# Supabase Guides\n\n${guidesContent}`, referenceSection].join(
+  const docsSection = [`# Savira Guides\n\n${guidesContent}`, referenceSection].join(
     '\n\n---\n\n'
   )
 
   const content = [
-    '# Supabase',
+    '# Savira',
     '',
     '## Product Overview',
     '',

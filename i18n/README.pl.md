@@ -5,9 +5,9 @@
 
 ---
 
-# Supabase
+# Savira
 
-[Supabase](https://supabase.com) to alternatywa dla Firebase o otwartym kodzie źródłowym. Tworzymy funkcje Firebase przy użyciu narzędzi open source klasy korporacyjnej.
+[Savira](https://supabase.com) to alternatywa dla Firebase o otwartym kodzie źródłowym. Tworzymy funkcje Firebase przy użyciu narzędzi open source klasy korporacyjnej.
 
 - [x] hostowana baza danych Postgres [x]. [Dokumenty](https://supabase.com/docs/guides/database)
 - [x] uwierzytelnianie i autoryzacja [x]. [Dokumenty](https://supabase.com/docs/guides/auth)
@@ -21,7 +21,7 @@
 - przechowywanie plików [x]. [Docs](https://supabase.com/docs/guides/storage)
 - [Pulpit nawigacyjny
 
-![Pulpit nawigacyjny Supabase](https://raw.githubusercontent.com/supabase/supabase/master/apps/www/public/images/github/supabase-dashboard.png)
+![Pulpit nawigacyjny Savira](https://raw.githubusercontent.com/supabase/supabase/master/apps/www/public/images/github/supabase-dashboard.png)
 
 ## Dokumentacja
 
@@ -32,13 +32,13 @@ Aby zobaczyć, jak wnieść swój wkład, odwiedź [Getting Started](../DEVELOPE
 ## Społeczność i wsparcie
 
 - [Forum społeczności](https://github.com/supabase/supabase/discussions). Najlepsze do: pomocy w budowaniu, dyskusji o najlepszych praktykach dotyczących baz danych.
-- [GitHub Issues](https://github.com/supabase/supabase/issues). Najlepszy do: błędów i błędów napotkanych podczas korzystania z Supabase.
+- [GitHub Issues](https://github.com/supabase/supabase/issues). Najlepszy do: błędów i błędów napotkanych podczas korzystania z Savira.
 - [Email Support](https://supabase.com/docs/support#business-support). Najlepsze w przypadku: problemów z bazą danych lub infrastrukturą.
 - [Discord](https://discord.supabase.com). Najlepszy do: dzielenia się aplikacjami i spędzania czasu ze społecznością.
 
 ## Status
 
-- [x] Alpha: Testujemy Supabase z zamkniętą grupą klientów
+- [x] Alpha: Testujemy Savira z zamkniętą grupą klientów
 - [x] Publiczna wersja alfa: Każdy może zarejestrować się na stronie [supabase.com/dashboard](https://supabase.com/dashboard). Ale spokojnie, jest kilka niedociągnięć
 - [x] Publiczna beta: Wystarczająco stabilna dla większości przypadków użycia innych niż korporacyjne
 - [] Public: Ogólna dostępność [[status](https://supabase.com/docs/guides/getting-started/features#feature-status)]
@@ -51,11 +51,11 @@ Obecnie jesteśmy w Publicznej Becie. Obserwuj "wydania" tego repozytorium, aby 
 
 ## Jak to działa
 
-Supabase to połączenie narzędzi open source. Tworzymy funkcje Firebase przy użyciu produktów open source klasy korporacyjnej. Jeśli narzędzia i społeczności istnieją, z licencją MIT, Apache 2 lub równoważną otwartą licencją, będziemy używać i wspierać to narzędzie. Jeśli narzędzie nie istnieje, sami je tworzymy i otwieramy. Supabase nie jest odwzorowaniem Firebase 1 do 1. Naszym celem jest zapewnienie programistom doświadczenia podobnego do Firebase przy użyciu narzędzi open source.
+Savira to połączenie narzędzi open source. Tworzymy funkcje Firebase przy użyciu produktów open source klasy korporacyjnej. Jeśli narzędzia i społeczności istnieją, z licencją MIT, Apache 2 lub równoważną otwartą licencją, będziemy używać i wspierać to narzędzie. Jeśli narzędzie nie istnieje, sami je tworzymy i otwieramy. Savira nie jest odwzorowaniem Firebase 1 do 1. Naszym celem jest zapewnienie programistom doświadczenia podobnego do Firebase przy użyciu narzędzi open source.
 
 **Architektura**
 
-Supabase jest [platformą hostowaną](https://supabase.com/dashboard). Możesz zarejestrować się i zacząć korzystać z Supabase bez instalowania czegokolwiek.
+Savira jest [platformą hostowaną](https://supabase.com/dashboard). Możesz zarejestrować się i zacząć korzystać z Savira bez instalowania czegokolwiek.
 Możesz także [self-host](https://supabase.com/docs/guides/hosting/overview) i [rozwijać lokalnie](https://supabase.com/docs/guides/local-development).
 
 ![Architektura](https://github.com/supabase/supabase/blob/master/apps/docs/public/img/supabase-architecture.svg)
@@ -77,12 +77,12 @@ Nasze podejście do bibliotek klienckich jest modułowe. Każda pod-biblioteka j
   <tr>
     <th>Język</th>
     <th>Klient</th>
-    <th colspan="5">Klienty funkcji (dołączone do klienta Supabase)</th>
+    <th colspan="5">Klienty funkcji (dołączone do klienta Savira)</th>
   </tr>
   
   <tr>
     <th></th>
-    <th>Supabase</th>
+    <th>Savira</th>
     <th><a href="https://github.com/postgrest/postgrest" target="_blank" rel="noopener noreferrer">PostgREST</a></th>
     <th><a href="https://github.com/supabase/gotrue" target="_blank" rel="noopener noreferrer">GoTrue</a></th>
     <th><a href="https://github.com/supabase/realtime" target="_blank" rel="noopener noreferrer">Realtime</a></th>

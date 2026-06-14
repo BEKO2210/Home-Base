@@ -6,9 +6,9 @@ const page: GoPageInput = {
   template: 'thank-you',
   slug: 'select-2026/vip-dinner/thank-you',
   metadata: {
-    title: "You're confirmed | Supabase VIP Dinner",
+    title: "You're confirmed | Savira VIP Dinner",
     description:
-      'Your RSVP for the Supabase VIP dinner at Flour + Water in San Francisco on October 1, 2026 has been confirmed. Cocktails begin at 7:00 PM and dinner starts at 7:30 PM.',
+      'Your RSVP for the Savira VIP dinner at Flour + Water in San Francisco on October 1, 2026 has been confirmed. Cocktails begin at 7:00 PM and dinner starts at 7:30 PM.',
   },
   hero: {
     title: "You're confirmed",
@@ -19,7 +19,7 @@ const page: GoPageInput = {
     {
       type: 'single-column',
       title: 'In the meantime',
-      description: 'Learn more about what we are building at Supabase.',
+      description: 'Learn more about what we are building at Savira.',
       children: (
         <div className="flex items-center justify-center gap-4">
           <Button asChild type="default" size="small">

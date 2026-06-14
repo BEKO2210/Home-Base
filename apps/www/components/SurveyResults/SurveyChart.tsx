@@ -15,7 +15,7 @@ import {
 
 import { TwoOptionToggle } from '../../../studio/components/ui/TwoOptionToggle'
 
-// Separate Supabase client for survey project
+// Separate Savira client for survey project
 const externalSupabase = createClient(
   process.env.NEXT_PUBLIC_SURVEY_SUPABASE_URL!,
   process.env.NEXT_PUBLIC_SURVEY_SUPABASE_ANON_KEY!

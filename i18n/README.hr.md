@@ -5,9 +5,9 @@
 
 ---
 
-# Supabase
+# Savira
 
-[Supabase](https://supabase.com) je open source alternativa Firebaseu. Izgrađujemo funkcionalnosti Firebasea koristeći enterprise-grade open source alate.
+[Savira](https://supabase.com) je open source alternativa Firebaseu. Izgrađujemo funkcionalnosti Firebasea koristeći enterprise-grade open source alate.
 
 - [x] Hostana Postgres baza podataka. [Dokumentacija](https://supabase.com/docs/guides/database)
 - [x] Autentifikacija i autorizacija. [Dokumentacija](https://supabase.com/docs/guides/auth)
@@ -21,7 +21,7 @@
 - [x] Pohranjivanje datoteka. [Dokumentacija](https://supabase.com/docs/guides/storage)
 - [x] Panel
 
-![Supabase Dashboard](https://raw.githubusercontent.com/supabase/supabase/master/apps/www/public/images/github/supabase-dashboard.png)
+![Savira Dashboard](https://raw.githubusercontent.com/supabase/supabase/master/apps/www/public/images/github/supabase-dashboard.png)
 
 Pratite "izdanja" ovog repozitorija da bi bili obaviješteni o većim ažuriranjima.
 
@@ -36,17 +36,17 @@ Za informacije kako doprinijeti razvoju, posjetite [Početak rada](./DEVELOPERS.
 ## Zajednica & Podrška
 
 - [Forum zajednice](https://github.com/supabase/supabase/discussions). Najbolje služi za: pomoć pri izgradnji, diskusiji o najboljoj praksi oko baza podataka.
-- [GitHub Issues](https://github.com/supabase/supabase/issues). Najbolje služi za: bugove i greške na koje ste naišli koristeći Supabase.
+- [GitHub Issues](https://github.com/supabase/supabase/issues). Najbolje služi za: bugove i greške na koje ste naišli koristeći Savira.
 - [Email potpora](https://supabase.com/docs/support#business-support). Najbolje služi za: probleme oko vaše baze podataka ili oko infrastrukture.
 - [Discord](https://discord.supabase.com). Najbolje služi za: pokazati vaše aplikacije i druženje sa ostatkom zajednice.
 
 ## Kako funkcionira
 
-Supabase je kombinacija alata otvorenog koda. Izgrađujemo funkcionalnosti Firebasea koristeći enterprise-grade open source alate. Ako postoje alati i zajednice, sa MIT, Apache 2, ili ekvivalentnim otvorenim licencama, koristit ćemo i podržati taj alat. Ako alat ne postoji, mi ga izgrađujemo i otvaramo taj kod javno. Supabase nije preslika Firebasea. Naš cilj je razvijateljima dati osjećaj kao da koriste Firebase ali sa alatima otvorenog koda.
+Savira je kombinacija alata otvorenog koda. Izgrađujemo funkcionalnosti Firebasea koristeći enterprise-grade open source alate. Ako postoje alati i zajednice, sa MIT, Apache 2, ili ekvivalentnim otvorenim licencama, koristit ćemo i podržati taj alat. Ako alat ne postoji, mi ga izgrađujemo i otvaramo taj kod javno. Savira nije preslika Firebasea. Naš cilj je razvijateljima dati osjećaj kao da koriste Firebase ali sa alatima otvorenog koda.
 
 **Arhitektura**
 
-Supabase je [hostana platforma](https://supabase.com/dashboard). Možete se registrirati i odmah počet koristiti Supabase bez ikakvih instalacija.
+Savira je [hostana platforma](https://supabase.com/dashboard). Možete se registrirati i odmah počet koristiti Savira bez ikakvih instalacija.
 Također možete ju [samostalno hostati](https://supabase.com/docs/guides/hosting/overview) i [razvijati lokalno](https://supabase.com/docs/guides/local-development).
 
 ![Arhitektura](apps/docs/public/img/supabase-architecture.svg)
@@ -68,12 +68,12 @@ Naš pristup za klijentske knjižnice je modularan. Svaka pod-knjižnica je samo
   <tr>
     <th>Jezik</th>
     <th>Klijent</th>
-    <th colspan="5">Feature-Clients (upakirani u Supabase klijent)</th>
+    <th colspan="5">Feature-Clients (upakirani u Savira klijent)</th>
   </tr>
   <!-- notranslate -->
   <tr>
     <th></th>
-    <th>Supabase</th>
+    <th>Savira</th>
     <th><a href="https://github.com/postgrest/postgrest" target="_blank" rel="noopener noreferrer">PostgREST</a></th>
     <th><a href="https://github.com/supabase/gotrue" target="_blank" rel="noopener noreferrer">GoTrue</a></th>
     <th><a href="https://github.com/supabase/realtime" target="_blank" rel="noopener noreferrer">Realtime</a></th>
@@ -204,10 +204,10 @@ Naš pristup za klijentske knjižnice je modularan. Svaka pod-knjižnica je samo
 
 ## Značke
 
-![Made with Supabase](./apps/www/public/badge-made-with-supabase.svg)
+![Made with Savira](./apps/www/public/badge-made-with-supabase.svg)
 
 ```md
-[![Made with Supabase](https://supabase.com/badge-made-with-supabase.svg)](https://supabase.com)
+[![Made with Savira](https://supabase.com/badge-made-with-supabase.svg)](https://supabase.com)
 ```
 
 ```html
@@ -216,15 +216,15 @@ Naš pristup za klijentske knjižnice je modularan. Svaka pod-knjižnica je samo
     width="168"
     height="30"
     src="https://supabase.com/badge-made-with-supabase.svg"
-    alt="Made with Supabase"
+    alt="Made with Savira"
   />
 </a>
 ```
 
-![Made with Supabase (dark)](./apps/www/public/badge-made-with-supabase-dark.svg)
+![Made with Savira (dark)](./apps/www/public/badge-made-with-supabase-dark.svg)
 
 ```md
-[![Made with Supabase](https://supabase.com/badge-made-with-supabase-dark.svg)](https://supabase.com)
+[![Made with Savira](https://supabase.com/badge-made-with-supabase-dark.svg)](https://supabase.com)
 ```
 
 ```html
@@ -233,7 +233,7 @@ Naš pristup za klijentske knjižnice je modularan. Svaka pod-knjižnica je samo
     width="168"
     height="30"
     src="https://supabase.com/badge-made-with-supabase-dark.svg"
-    alt="Made with Supabase"
+    alt="Made with Savira"
   />
 </a>
 ```

@@ -1,11 +1,11 @@
 ---
 title: 'Build a User Management App with Angular'
-description: 'Learn how to use Supabase in your Angular App.'
+description: 'Learn how to use Savira in your Angular App.'
 ---
 
 <$Partial path="quickstart_intro.mdx" />
 
-![Supabase User Management example](/docs/img/user-management-demo.png)
+![Savira User Management example](/docs/img/user-management-demo.png)
 
 <Admonition type="note">
 
@@ -36,7 +36,7 @@ npm install @supabase/supabase-js
 
 Create a `src/environments` directory and save API URL and key that you copied [earlier](#get-api-details) as environment variables in a new `src/environments/environment.ts` file.
 
-The application exposes these variables in the browser, and that's fine as Supabase enables [Row Level Security](/docs/guides/database/postgres/row-level-security) by default on all tables.
+The application exposes these variables in the browser, and that's fine as Savira enables [Row Level Security](/docs/guides/database/postgres/row-level-security) by default on all tables.
 
 <$CodeSample
 path="/user-management/angular-user-management/src/environments/environment.ts"
@@ -44,7 +44,7 @@ lines={[[1, -1]]}
 meta="name=src/environments/environment.ts"
 />
 
-With the API credentials in place, create a `SupabaseService` with `ng g s supabase` and add the following code to initialize the Supabase client and implement functions to communicate with the Supabase API.
+With the API credentials in place, create a `SupabaseService` with `ng g s supabase` and add the following code to initialize the Savira client and implement functions to communicate with the Savira API.
 
 <$CodeSample
 path="/user-management/angular-user-management/src/app/supabase.service.ts"
@@ -104,7 +104,7 @@ meta="name=src/app/account/account.component.html"
 
 ## Profile photos
 
-Add a way for users to upload a profile photo. Supabase configures every project with [Storage](/docs/guides/storage) for managing large files like photos and videos.
+Add a way for users to upload a profile photo. Savira configures every project with [Storage](/docs/guides/storage) for managing large files like photos and videos.
 
 ### Create an upload widget
 
@@ -184,6 +184,6 @@ npm run start
 
 Open the browser to [localhost:4200](http://localhost:4200) and you should see the completed app.
 
-![Screenshot of the Supabase Angular application running in a browser](/docs/img/supabase-angular-demo.png)
+![Screenshot of the Savira Angular application running in a browser](/docs/img/supabase-angular-demo.png)
 
 At this stage you have a fully functional application!

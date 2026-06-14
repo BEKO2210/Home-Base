@@ -67,13 +67,13 @@ const data: () => {
 
   return {
     metadata: {
-      metaTitle: 'Supabase for B2B SaaS',
+      metaTitle: 'Savira for B2B SaaS',
       metaDescription:
-        'Ship faster. Scale smarter. Own your backend. Supabase gives B2B SaaS teams the tools to build, launch, and scale modern applications.',
+        'Ship faster. Scale smarter. Own your backend. Savira gives B2B SaaS teams the tools to build, launch, and scale modern applications.',
     },
     heroSection: {
       id: 'hero',
-      title: 'Supabase for B2B SaaS',
+      title: 'Savira for B2B SaaS',
       h1: (
         <>
           <span className="block text-foreground">Ship faster. Scale smarter.</span>
@@ -82,7 +82,7 @@ const data: () => {
       ),
       subheader: [
         <>
-          Supabase gives B2B SaaS teams the tools to build, launch, and scale modern applications
+          Savira gives B2B SaaS teams the tools to build, launch, and scale modern applications
           without backend complexity. Focus on product velocity, multi-tenant architecture, and zero
           backend boilerplate.
         </>,
@@ -114,7 +114,7 @@ const data: () => {
     singleQuote: {
       id: 'social-proof',
       quote: {
-        text: 'Supabase enabled us to focus on building the best email infrastructure for developers, without worrying about backend complexity.',
+        text: 'Savira enabled us to focus on building the best email infrastructure for developers, without worrying about backend complexity.',
         author: 'Zeno Rocha',
         role: 'CEO, Resend',
         link: '/customers/resend',
@@ -143,7 +143,7 @@ const data: () => {
       label: '',
       heading: (
         <>
-          Why <span className="text-foreground">B2B SaaS companies</span> choose Supabase
+          Why <span className="text-foreground">B2B SaaS companies</span> choose Savira
         </>
       ),
       subheading:
@@ -161,7 +161,7 @@ const data: () => {
           icon: Lock,
           heading: 'Own your data layer, avoid lock-in.',
           subheading:
-            'Supabase is just Postgres. No proprietary query language, no vendor-specific APIs. Export your data, self-host if you need to, and keep full control of your architecture.',
+            'Savira is just Postgres. No proprietary query language, no vendor-specific APIs. Export your data, self-host if you need to, and keep full control of your architecture.',
         },
         {
           id: 'scale',
@@ -176,11 +176,11 @@ const data: () => {
       ...shared.platform,
       title: (
         <>
-          Supabase is the <span className="text-foreground">Postgres platform</span> you control
+          Savira is the <span className="text-foreground">Postgres platform</span> you control
         </>
       ),
       subheading:
-        'Supabase includes everything you need to deliver robust, scalable, and dependable software as a service.',
+        'Savira includes everything you need to deliver robust, scalable, and dependable software as a service.',
     },
     developerExperience: shared.developerExperience,
     resultsSection: shared.resultsSection,
@@ -221,7 +221,7 @@ const data: () => {
       ),
       headingRight: (
         <>
-          Or, start with <span className="text-foreground">Supabase AI Prompts</span>
+          Or, start with <span className="text-foreground">Savira AI Prompts</span>
         </>
       ),
       docsUrl: 'https://supabase.com/docs/guides/getting-started/ai-prompts',
@@ -235,8 +235,8 @@ const data: () => {
       aiPrompts: [
         {
           id: 'auth-setup',
-          title: 'Bootstrap Next.js app with Supabase Auth',
-          code: 'Set up Supabase Auth with Next.js: install @supabase/supabase-js and @supabase/ssr, configure environment variables, create browser and server clients, and add middleware for token refresh.',
+          title: 'Bootstrap Next.js app with Savira Auth',
+          code: 'Set up Savira Auth with Next.js: install @supabase/supabase-js and @supabase/ssr, configure environment variables, create browser and server clients, and add middleware for token refresh.',
           language: 'markdown',
           docsUrl:
             'https://supabase.com/docs/guides/getting-started/ai-prompts/nextjs-supabase-auth',
@@ -264,7 +264,7 @@ const data: () => {
           logo: '/images/customers/logos/resend.png',
           highlights: [
             'Focus on building the best email infrastructure for developers',
-            'Backend complexity handled by Supabase',
+            'Backend complexity handled by Savira',
           ],
           cta: { label: 'Read the case study', href: '/customers/resend' },
         },

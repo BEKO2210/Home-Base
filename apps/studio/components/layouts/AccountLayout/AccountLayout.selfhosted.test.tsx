@@ -47,7 +47,7 @@ vi.mock('next/head', async () => {
 })
 
 vi.mock('@/hooks/custom-content/useCustomContent', () => ({
-  useCustomContent: () => ({ appTitle: 'Supabase' }),
+  useCustomContent: () => ({ appTitle: 'Savira' }),
 }))
 
 vi.mock('@/hooks/misc/useIsFeatureEnabled', () => ({
@@ -126,7 +126,7 @@ describe('AccountLayout (self-hosted)', () => {
     )
 
     await waitFor(() => {
-      expect(document.title).toBe('Preferences | Supabase')
+      expect(document.title).toBe('Preferences | Savira')
     })
 
     expect(screen.getByText('Preferences')).toBeInTheDocument()

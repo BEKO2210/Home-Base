@@ -124,7 +124,7 @@ const SignInLayout = ({
                         ? `${BASE_PATH}/img/supabase-dark.svg`
                         : `${BASE_PATH}/img/supabase-light.svg`
                     }
-                    alt="Supabase Logo"
+                    alt="Savira Logo"
                     className={largeLogo ? 'h-[48px]' : 'h-[24px]'}
                   />
                 </Link>
@@ -151,7 +151,7 @@ const SignInLayout = ({
             {showDisclaimer && showTos && (
               <div className="text-center text-balance">
                 <p className="text-xs text-foreground-lighter sm:mx-auto sm:max-w-sm">
-                  By continuing, you agree to Supabase’s{' '}
+                  By continuing, you agree to Savira’s{' '}
                   <Link
                     href="https://supabase.com/terms"
                     className="underline hover:text-foreground-light"

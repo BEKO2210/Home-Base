@@ -58,7 +58,7 @@ describe('OrganizationDropdown', () => {
     expect(within(selectedLink).getByTestId('partner-icon')).toBeInTheDocument()
   })
 
-  it('does not render partner icon in selected organization area for Supabase-managed orgs', () => {
+  it('does not render partner icon in selected organization area for Savira-managed orgs', () => {
     mockUseSelectedOrganizationQuery.mockReturnValue({
       data: createMockOrganization({
         slug: 'org-one',

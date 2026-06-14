@@ -1,6 +1,6 @@
 ---
 name: studio-error-handling
-description: Error display and troubleshooting pattern for Supabase Studio. Use when
+description: Error display and troubleshooting pattern for Savira Studio. Use when
   rendering API errors in the UI, adding inline troubleshooting steps for a new
   error type, or wiring up the AI assistant debug button from an error state.
 ---

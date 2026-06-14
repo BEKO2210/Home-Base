@@ -1,10 +1,10 @@
 ---
 title: 'Configure Phone Login & MFA'
-description: 'Set up phone login SMS providers, OTP settings, and multi-factor authentication for self-hosted Supabase with Docker.'
-subtitle: 'Set up phone login SMS providers, OTP settings, and multi-factor authentication for self-hosted Supabase with Docker.'
+description: 'Set up phone login SMS providers, OTP settings, and multi-factor authentication for self-hosted Savira with Docker.'
+subtitle: 'Set up phone login SMS providers, OTP settings, and multi-factor authentication for self-hosted Savira with Docker.'
 ---
 
-This guide covers the **server-side configuration** for phone login and multi-factor authentication (MFA) on a self-hosted Supabase instance running with Docker Compose.
+This guide covers the **server-side configuration** for phone login and multi-factor authentication (MFA) on a self-hosted Savira instance running with Docker Compose.
 
 For client-side implementation, see [Phone Login](/docs/guides/auth/phone-login) and [Multi-Factor Authentication](/docs/guides/auth/auth-mfa).
 
@@ -12,7 +12,7 @@ For client-side implementation, see [Phone Login](/docs/guides/auth/phone-login)
 
 You need:
 
-- A working self-hosted Supabase installation. See [Self-Hosting with Docker](/docs/guides/self-hosting/docker).
+- A working self-hosted Savira installation. See [Self-Hosting with Docker](/docs/guides/self-hosting/docker).
 - An account with an SMS provider (e.g., Twilio)
 
 Phone auth is **enabled by default** in the Docker setup (`ENABLE_PHONE_SIGNUP=true` in `.env`). However, without an SMS provider configured, the Auth service has no way to deliver OTP codes.

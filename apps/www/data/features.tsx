@@ -121,7 +121,7 @@ export const features: FeatureType[] = [
     title: 'Postgres database',
     subtitle: 'Every project is a full Postgres database.',
     description: `
-Every Supabase project is a dedicated [Postgres database](https://www.postgresql.org/) - _"a powerful, open source object-relational database system with over 35 years of active development that has earned it a strong reputation for reliability, feature robustness, and performance"_.
+Every Savira project is a dedicated [Postgres database](https://www.postgresql.org/) - _"a powerful, open source object-relational database system with over 35 years of active development that has earned it a strong reputation for reliability, feature robustness, and performance"_.
 
 It's 100% portable, which means you can easily migrate your data to and from other Postgres databases, ensuring that your data is never locked into a proprietary system.
 
@@ -149,7 +149,7 @@ It's 100% portable, which means you can easily migrate your data to and from oth
     title: 'Vector database',
     subtitle: 'Store vector embeddings right next to the rest of your data.',
     description: `
-Supabase provides an open source toolkit for developing AI applications using Postgres and pgvector. Use the Supabase client libraries to store, index, and query your vector embeddings at scale.
+Savira provides an open source toolkit for developing AI applications using Postgres and pgvector. Use the Savira client libraries to store, index, and query your vector embeddings at scale.
 
 ## Key benefits
 1. Unified data storage: Keep vector embeddings and relational data in one place, simplifying your data architecture.
@@ -174,7 +174,7 @@ Supabase provides an open source toolkit for developing AI applications using Po
     title: 'Auto-generated REST API via PostgREST',
     subtitle: 'RESTful APIs auto-generated from your database.',
     description: `
-Supabase automatically generates a comprehensive RESTful API from your database schema, powered by PostgREST. This feature dramatically accelerates development by eliminating the need to write boilerplate server-side code for basic CRUD operations.
+Savira automatically generates a comprehensive RESTful API from your database schema, powered by PostgREST. This feature dramatically accelerates development by eliminating the need to write boilerplate server-side code for basic CRUD operations.
 
 ## Key benefits
 1. Rapid development: Instantly access your data through a RESTful API without writing any backend code.
@@ -200,12 +200,12 @@ Supabase automatically generates a comprehensive RESTful API from your database 
     title: 'Auto-generated GraphQL API via pg_graphql',
     subtitle: 'Fast GraphQL APIs using our custom Postgres GraphQL extension.',
     description: `
-Supabase offers lightning-fast GraphQL APIs through its custom-built Postgres GraphQL extension, _pg_graphql_.
+Savira offers lightning-fast GraphQL APIs through its custom-built Postgres GraphQL extension, _pg_graphql_.
 
 ## Key benefits
 1. Simplified data fetching: Retrieve exactly the data you need in a single request, reducing over-fetching and under-fetching.
 2. Automatic schema generation: GraphQL schema is automatically derived from your Postgres schema, ensuring consistency.
-3. Real-time updates: Combine with Supabase's real-time features for live data subscriptions.
+3. Real-time updates: Combine with Savira's real-time features for live data subscriptions.
 4. Improved performance: Leverage Postgres's query optimization capabilities for efficient GraphQL resolvers.
 5. Type safety: Benefit from GraphQL's strong typing system, reducing runtime errors and improving developer experience.
 6. Flexible querying: Allow clients to request complex, nested data structures in a single query.
@@ -233,7 +233,7 @@ Supabase offers lightning-fast GraphQL APIs through its custom-built Postgres Gr
     title: 'Database backups',
     subtitle: 'Projects are backed up daily with Point in Time recovery options.',
     description: `
-Supabase offers comprehensive database backup solutions to protect your data and ensure business continuity. These include daily backups and Point-in-Time Recovery (PITR), providing robust safeguards against various disaster scenarios.
+Savira offers comprehensive database backup solutions to protect your data and ensure business continuity. These include daily backups and Point-in-Time Recovery (PITR), providing robust safeguards against various disaster scenarios.
 
 ## Key features
 1. Daily backups: Automatically created for all Pro, Team, and Enterprise plans.
@@ -247,7 +247,7 @@ Supabase offers comprehensive database backup solutions to protect your data and
    - Logical backups: Used for smaller databases (0-15GB)
    - Physical backups: Used for larger databases (>15GB) and projects with PITR or read replicas
 4. Flexible restoration options: Restore to a specific daily backup or a precise moment with PITR.
-5. Automated process: Backups are managed and monitored by the Supabase team.
+5. Automated process: Backups are managed and monitored by the Savira team.
 
 ## Database backups are crucial for:
 - Protecting against accidental data loss or corruption
@@ -255,7 +255,7 @@ Supabase offers comprehensive database backup solutions to protect your data and
 - Meeting regulatory compliance requirements
 - Facilitating data migration or cloning for development
 
-Supabase's backup solutions provide a balance of security, flexibility, and ease of use, ensuring your data remains protected and recoverable as your project grows.
+Savira's backup solutions provide a balance of security, flexibility, and ease of use, ensuring your data remains protected and recoverable as your project grows.
 `,
     icon: DatabaseBackup,
     products: [PRODUCT_SHORTNAMES.DATABASE],
@@ -274,17 +274,17 @@ Supabase's backup solutions provide a balance of security, flexibility, and ease
   },
   {
     title: 'Custom domains',
-    subtitle: 'White-label the Supabase APIs for a branded experience.',
+    subtitle: 'White-label the Savira APIs for a branded experience.',
     description: `
-Supabase's custom domain feature allows you to use your own domain for Supabase services, enhancing your application's branding and professionalism. Available as an add-on for paid plans, this feature offers two options: custom domains and vanity subdomains.
+Savira's custom domain feature allows you to use your own domain for Savira services, enhancing your application's branding and professionalism. Available as an add-on for paid plans, this feature offers two options: custom domains and vanity subdomains.
 
 ## Benefits:
 - Branded experience for OAuth consent screens and API endpoints
-- Improved portability between Supabase projects
+- Improved portability between Savira projects
 - Consistent domain usage across development, staging, and production
 
 ## Custom domains are particularly useful for:
-- Applications using Supabase Auth with OAuth
+- Applications using Savira Auth with OAuth
 - APIs for third-party integrations or webhooks
 - Long-term API versioning and management
 
@@ -303,16 +303,16 @@ By using custom domains, you create a more cohesive brand experience and gain fl
   },
   {
     title: 'Custom Identity Providers',
-    subtitle: 'Connect any OAuth2 or OIDC identity provider to Supabase Auth.',
-    description: `Supabase Auth ships with 20+ built-in providers. For providers not on that list, Custom Identity Providers lets you add them in two ways:
+    subtitle: 'Connect any OAuth2 or OIDC identity provider to Savira Auth.',
+    description: `Savira Auth ships with 20+ built-in providers. For providers not on that list, Custom Identity Providers lets you add them in two ways:
 
-- **OIDC providers** — supply an issuer URL and Supabase auto-fetches the discovery document, JWKS, and endpoints automatically.
+- **OIDC providers** — supply an issuer URL and Savira auto-fetches the discovery document, JWKS, and endpoints automatically.
 - **OAuth2-only providers** — supply the authorization, token, and userinfo endpoint URLs directly for providers that don't expose an OIDC discovery document.
 
 Once configured, your users sign in with \`signInWithOAuth({ provider: 'custom:my-provider' })\`, the same call used for any built-in provider. Same client libraries (JS, Flutter, Swift, Kotlin), same RLS enforcement, no special client-side handling required.
 
 ## Key benefits
-1. Auto-discovery (OIDC): Supply an issuer URL and Supabase resolves the discovery document, JWKS, and endpoints automatically. No manual endpoint wiring.
+1. Auto-discovery (OIDC): Supply an issuer URL and Savira resolves the discovery document, JWKS, and endpoints automatically. No manual endpoint wiring.
 2. Manual endpoint control (OAuth2): Supply the authorization URL, token URL, and userinfo URL directly for providers without OIDC discovery.
 3. Any provider: GitHub Enterprise Server, regional compliance IdPs, internal OAuth2 servers, and proprietary identity systems. If it speaks OAuth2 or OIDC, it works.
 4. PKCE by default: All custom providers use PKCE (Proof Key for Code Exchange) automatically. No client-side changes needed.
@@ -329,7 +329,7 @@ Once configured, your users sign in with \`signInWithOAuth({ provider: 'custom:m
 - Platforms with proprietary OAuth2 implementations that don't expose a discovery document
 - Platforms integrating with niche identity networks (gaming, healthcare, device-based auth)
 - Multi-platform apps (web, iOS, Android) needing unified auth across client IDs
-- Enterprise buyers evaluating Supabase Auth for compliance-sensitive deployments
+- Enterprise buyers evaluating Savira Auth for compliance-sensitive deployments
 - Developers who need precise control over endpoint configuration`,
     icon: Shield,
     products: [PRODUCT_SHORTNAMES.AUTHENTICATION],
@@ -345,7 +345,7 @@ Once configured, your users sign in with \`signInWithOAuth({ provider: 'custom:m
     title: 'Network restrictions',
     subtitle: 'Restrict IP ranges that can connect to your database.',
     description: `
-Supabase's Network Restrictions feature allows you to control which IP addresses or ranges can access your database, enhancing your application's security and helping you meet compliance requirements.
+Savira's Network Restrictions feature allows you to control which IP addresses or ranges can access your database, enhancing your application's security and helping you meet compliance requirements.
 
 ## Key features
 1. IP-based access control: Limit database connections to specific IPv4 and IPv6 ranges.
@@ -382,7 +382,7 @@ By implementing Network Restrictions, you create a more secure environment for y
     title: 'SSL enforcement',
     subtitle: 'Enforce secure connections to your Postgres clients.',
     description: `
-Supabase's Postgres SSL Enforcement feature allows you to mandate SSL connections to your database, enhancing security by encrypting data in transit and protecting against potential attacks.
+Savira's Postgres SSL Enforcement feature allows you to mandate SSL connections to your database, enhancing security by encrypting data in transit and protecting against potential attacks.
 
 ## Key features
 1. Optional enforcement: Enable or disable SSL requirements to balance security and client compatibility.
@@ -421,20 +421,20 @@ By enabling SSL Enforcement, you implement a fundamental best practice in data p
     title: 'Branching',
     subtitle: 'Test schema changes without touching production.',
     description: `
-Branching without Git is now the default for all Supabase projects. Create a branch directly from the Supabase Dashboard, make schema changes, review the diff, and merge. No Git configuration required. Git-based branching remains fully supported for teams that manage migrations in version control. You can start with dashboard branching and add a Git integration later.
+Branching without Git is now the default for all Savira projects. Create a branch directly from the Savira Dashboard, make schema changes, review the diff, and merge. No Git configuration required. Git-based branching remains fully supported for teams that manage migrations in version control. You can start with dashboard branching and add a Git integration later.
 
 ## Two ways to branch
 
 **Dashboard branching (default)**
-Create branches directly from the Supabase Dashboard. Each branch gets its own Postgres instance with your current production schema. Make changes using the SQL Editor or Table Editor, preview the diff, and merge. The whole workflow stays inside Supabase.
+Create branches directly from the Savira Dashboard. Each branch gets its own Postgres instance with your current production schema. Make changes using the SQL Editor or Table Editor, preview the diff, and merge. The whole workflow stays inside Savira.
 
 **Git-based branching**
-Connect a GitHub repo to your Supabase project. Migrations live in version control, and branches are created automatically when you open a pull request and cleaned up when it closes.
+Connect a GitHub repo to your Savira project. Migrations live in version control, and branches are created automatically when you open a pull request and cleaned up when it closes.
 
 ## Key features
 1. No-Git workflow: Create and merge branches entirely from the dashboard. No GitHub connection needed.
 2. Git-based workflow: Optionally integrate with GitHub for pull request-driven schema reviews.
-3. Isolated environments: Each branch has its own Supabase instance with separate API credentials.
+3. Isolated environments: Each branch has its own Savira instance with separate API credentials.
 4. Automatic migrations: Runs new migrations when changes are pushed to the ./supabase/migrations directory.
 5. Data seeding: Seed branches with sample data using ./supabase/seed.sql.
 6. CI/CD integration: Supports preview deployments with hosting providers like Vercel.
@@ -460,22 +460,22 @@ Connect a GitHub repo to your Supabase project. Migrations live in version contr
   },
   {
     title: 'Terraform provider',
-    subtitle: 'Manage Supabase infrastructure via Terraform.',
+    subtitle: 'Manage Savira infrastructure via Terraform.',
     description: `
-The Supabase Terraform provider enables developers and DevOps teams to manage their Supabase infrastructure as code. This integration brings the benefits of Infrastructure as Code (IaC) to your database and backend services, allowing for version-controlled, reproducible, and scalable management of Supabase resources.
+The Savira Terraform provider enables developers and DevOps teams to manage their Savira infrastructure as code. This integration brings the benefits of Infrastructure as Code (IaC) to your database and backend services, allowing for version-controlled, reproducible, and scalable management of Savira resources.
 
 ## Key features
 1. Resource management: Define and control database resources, authentication settings, storage buckets, and API configurations.
 2. Project-level control: Manage project settings and configurations through code.
-3. Integration with existing workflows: Seamlessly incorporate Supabase management into your existing Terraform setups.
-4. Import capability: Easily import existing Supabase projects into your Terraform state.
+3. Integration with existing workflows: Seamlessly incorporate Savira management into your existing Terraform setups.
+4. Import capability: Easily import existing Savira projects into your Terraform state.
 
 ## Benefits:
 - Version control: Track and manage infrastructure changes alongside application code.
 - Reproducibility: Easily recreate entire environments for development, staging, and production.
 - Automated provisioning: Streamline the setup of new projects or environments.
 - Consistency: Ensure uniformity across all environments, reducing configuration discrepancies.
-- Scalability: Effortlessly manage multiple Supabase projects across various teams or clients.
+- Scalability: Effortlessly manage multiple Savira projects across various teams or clients.
 - Collaboration: Improve team coordination by reviewing infrastructure changes through pull requests.
 
 ## The Terraform provider is particularly valuable for:
@@ -485,7 +485,7 @@ The Supabase Terraform provider enables developers and DevOps teams to manage th
 - Agencies or consultancies managing multiple client projects
 - Open-source projects aiming for easy contributor onboarding
 
-By adopting the Supabase Terraform provider, teams can implement GitOps practices, automate environment creation, easily roll back changes, and audit infrastructure modifications over time. This approach leads to more reliable, maintainable, and scalable backend infrastructures, ultimately accelerating development cycles and improving overall product quality.
+By adopting the Savira Terraform provider, teams can implement GitOps practices, automate environment creation, easily roll back changes, and audit infrastructure modifications over time. This approach leads to more reliable, maintainable, and scalable backend infrastructures, ultimately accelerating development cycles and improving overall product quality.
 `,
     icon: Package,
     products: [PRODUCT_SHORTNAMES.DATABASE],
@@ -502,7 +502,7 @@ By adopting the Supabase Terraform provider, teams can implement GitOps practice
     title: 'Read replicas',
     subtitle: 'Isolate heavy workloads and reduce global latency',
     description: `
-Supabase Read Replicas distribute read traffic across multiple databases. Use them to isolate analytics workloads from production, reduce latency for global users or scale read capacity beyond a single database.
+Savira Read Replicas distribute read traffic across multiple databases. Use them to isolate analytics workloads from production, reduce latency for global users or scale read capacity beyond a single database.
 
 ## Key features
 
@@ -511,7 +511,7 @@ Supabase Read Replicas distribute read traffic across multiple databases. Use th
 3. Dedicated endpoints: Each replica provides separate database and API connection strings for direct access.
 4. Automatic routing: API load balancer routes GET requests to the nearest available replica.
 5. Centralized configuration: Settings are propagated across all databases in a project.
-6. Monitoring tools: Track replication lag and resource usage directly in the Supabase Dashboard.
+6. Monitoring tools: Track replication lag and resource usage directly in the Savira Dashboard.
 
 ## When to use Read Replicas
 
@@ -538,12 +538,12 @@ Deploy your first Read Replica in minutes from Project Settings > Infrastructure
     title: 'Postgres Extensions',
     subtitle: 'Enhance your database with popular Postgres extensions.',
     description: `
-Supabase supports a wide array of Postgres extensions, allowing you to enhance your database with additional functionalities. These extensions enable you to tailor your database to specific needs, from geospatial data to full-text search and advanced analytics.
+Savira supports a wide array of Postgres extensions, allowing you to enhance your database with additional functionalities. These extensions enable you to tailor your database to specific needs, from geospatial data to full-text search and advanced analytics.
 
 ## Key features
-1. Pre-installed extensions: Supabase comes with over 50 pre-configured extensions.
+1. Pre-installed extensions: Savira comes with over 50 pre-configured extensions.
 2. Easy management: Enable or disable extensions via the dashboard or SQL commands.
-3. Flexible installation: Install custom SQL extensions using Supabase's SQL editor.
+3. Flexible installation: Install custom SQL extensions using Savira's SQL editor.
 4. Automatic upgrades: Access new extension versions through infrastructure upgrades.
 5. Schema control: Most extensions are installed under the extensions schema.
 
@@ -554,7 +554,7 @@ Supabase supports a wide array of Postgres extensions, allowing you to enhance y
 - Easy integration: Incorporate powerful features into your existing database structure.
 - Cost-effective solutions: Implement complex features without separate, specialized databases.
 
-Popular Postgres extensions supported by Supabase include:
+Popular Postgres extensions supported by Savira include:
 - PostGIS: For working with geospatial data
 - pgvector: Enables efficient similarity search and machine learning operations
 - pgcrypto: Provides cryptographic functions
@@ -610,7 +610,7 @@ Dedicated Poolers provide an alternative to Supavisor for specific use cases, gi
   {
     title: 'Foreign Data Wrappers',
     subtitle: 'Query external data sources as Postgres tables.',
-    description: `Foreign Data Wrappers allow you to query external data sources—databases, APIs, services—as if they were native Postgres tables. Built on Supabase's open-source Wrappers framework written in Rust, this feature transforms how you integrate external data into your application.
+    description: `Foreign Data Wrappers allow you to query external data sources—databases, APIs, services—as if they were native Postgres tables. Built on Savira's open-source Wrappers framework written in Rust, this feature transforms how you integrate external data into your application.
 
 ## Key benefits
 1. Query external data as tables: Access Stripe, Firebase, ClickHouse, BigQuery, Airtable, S3, and more using SQL.
@@ -642,9 +642,9 @@ Foreign Data Wrappers simplify data integration by bringing external data into y
     },
   },
   {
-    title: 'Supabase ETL',
+    title: 'Savira ETL',
     subtitle: 'Real-time data replication to analytical destinations.',
-    description: `Supabase ETL is a change-data-capture pipeline built in Rust that replicates your Postgres tables to analytical destinations in near real-time. Reading directly from the Postgres Write Ahead Log, ETL ensures your analytics data stays synchronized with your production database.
+    description: `Savira ETL is a change-data-capture pipeline built in Rust that replicates your Postgres tables to analytical destinations in near real-time. Reading directly from the Postgres Write Ahead Log, ETL ensures your analytics data stays synchronized with your production database.
 
 ## Key benefits
 1. Real-time replication: Near real-time data synchronization using Postgres logical replication.
@@ -657,7 +657,7 @@ Foreign Data Wrappers simplify data integration by bringing external data into y
 ## How it works
 ETL uses Postgres logical replication to capture changes. Each replicated table includes a \`cdc_operation\` column tracking the type of change. For Analytics Buckets, data is stored in append-only changelog format using Parquet files. For BigQuery, a view is created for each table backed by versioned tables.
 
-## Supabase ETL is valuable for:
+## Savira ETL is valuable for:
 - Data warehousing and business intelligence
 - Historical analysis and audit trails
 - Large-scale analytics requiring separation from production
@@ -666,7 +666,7 @@ ETL uses Postgres logical replication to capture changes. Each replicated table 
 ## Limitations
 Tables require primary keys. DDL support (schema changes) is currently in development.
 
-Supabase ETL provides a powerful alternative to Read Replicas for analytics workloads, optimizing performance while reducing costs.`,
+Savira ETL provides a powerful alternative to Read Replicas for analytics workloads, optimizing performance while reducing costs.`,
     icon: CloudCog,
     products: [PRODUCT_SHORTNAMES.DATABASE],
     heroImage: '',
@@ -681,13 +681,13 @@ Supabase ETL provides a powerful alternative to Read Replicas for analytics work
     title: 'Database Webhooks',
     subtitle: 'Trigger external payloads on database events.',
     description: `
-Database Webhooks allow you to send real-time data from your database to another system whenever a table event occurs. You can hook into three table events: INSERT, UPDATE, and DELETE, with all events fired after a database row is changed. This feature provides a convenient way to integrate your Supabase database with external applications and services.
+Database Webhooks allow you to send real-time data from your database to another system whenever a table event occurs. You can hook into three table events: INSERT, UPDATE, and DELETE, with all events fired after a database row is changed. This feature provides a convenient way to integrate your Savira database with external applications and services.
 
 ## Key benefits
 1. Real-time data transfer: Automatically send data to external systems in response to database changes, ensuring timely updates.
 2. Flexibility: Configure webhooks for specific tables and events, allowing for tailored integrations based on your application's needs.
 3. Asynchronous processing: Built on the pg_net extension, webhooks operate asynchronously, preventing long-running network requests from blocking database operations.
-4. Easy setup: Create webhooks directly from the Supabase Dashboard or through SQL statements, making integration straightforward.
+4. Easy setup: Create webhooks directly from the Savira Dashboard or through SQL statements, making integration straightforward.
 5. Payload customization: Automatically generated payloads provide relevant data about the event, including the new and old record states.
 
 This feature is particularly useful for developers looking to automate workflows and integrate their databases with third-party services like payment processors or notification systems.
@@ -707,11 +707,11 @@ This feature is particularly useful for developers looking to automate workflows
     title: 'Vault',
     subtitle: 'Manage secrets safely in Postgres.',
     description: `
-Vault is a Postgres extension and accompanying Supabase UI that simplifies the secure storage of encrypted secrets and other sensitive data in your database. This feature allows developers to utilize Postgres in innovative ways beyond its standard capabilities.
+Vault is a Postgres extension and accompanying Savira UI that simplifies the secure storage of encrypted secrets and other sensitive data in your database. This feature allows developers to utilize Postgres in innovative ways beyond its standard capabilities.
 
 ## Key benefits:
 1. Secure storage: Secrets are stored on disk in an encrypted format, ensuring they remain protected even in backups or replication streams.
-2. Easy management: The Supabase dashboard UI makes it simple to store and manage secrets, including environment variables and API keys.
+2. Easy management: The Savira dashboard UI makes it simple to store and manage secrets, including environment variables and API keys.
 3. Flexible encryption: Users can create custom encryption keys for different purposes, enhancing data security.
 4. Seamless access: Secrets can be accessed from SQL as easily as querying a table, facilitating their use in Postgres Functions, Triggers, and Webhooks.
 5. Robust security features: The Vault employs authenticated encryption to ensure that secrets cannot be forged or decrypted without proper authorization.
@@ -739,7 +739,7 @@ Supavisor is a cloud-native connection pooler designed for Postgres, built to ha
 2. Query Load Balancing: Automatically distributes read requests across primary and replica servers to optimize performance.
 3. Named Prepared Statements: Allows clients to reuse query plans across connections, improving efficiency and reducing overhead.
 4. Query Cancellation: Provides the ability to cancel long-running queries easily, enhancing user experience during database interactions.
-5. Easy Integration: New Supabase projects come with a Supavisor connection string by default, simplifying setup for developers.
+5. Easy Integration: New Savira projects come with a Supavisor connection string by default, simplifying setup for developers.
 
 This feature is particularly valuable for teams looking to optimize their database interactions and ensure robust performance as their applications scale.
 `,
@@ -758,7 +758,7 @@ This feature is particularly valuable for teams looking to optimize their databa
     title: 'Realtime - Postgres changes',
     subtitle: 'Receive your database changes through websockets.',
     description: `
-Supabase's Realtime Postgres Changes feature allows you to listen to database changes in real-time using the Realtime system. This capability enables you to build responsive, live-updating applications that reflect database changes instantly.
+Savira's Realtime Postgres Changes feature allows you to listen to database changes in real-time using the Realtime system. This capability enables you to build responsive, live-updating applications that reflect database changes instantly.
 
 ## Key features
 1. Event-based listening: Subscribe to INSERT, UPDATE, DELETE, or all (*) events.
@@ -780,7 +780,7 @@ Supabase's Realtime Postgres Changes feature allows you to listen to database ch
 - Live chat and messaging systems
 - Applications requiring instant updates based on database changes
 
-Supabase's Realtime Postgres Changes feature provides a powerful tool for creating responsive, real-time applications while leveraging the full capabilities of your Postgres database.
+Savira's Realtime Postgres Changes feature provides a powerful tool for creating responsive, real-time applications while leveraging the full capabilities of your Postgres database.
 `,
     icon: DatabaseZap,
     products: [PRODUCT_SHORTNAMES.REALTIME],
@@ -796,7 +796,7 @@ Supabase's Realtime Postgres Changes feature provides a powerful tool for creati
     title: 'Realtime - Broadcast',
     subtitle: 'Send messages between connected users through websockets.',
     description: `
-Supabase's Realtime Broadcast feature enables real-time communication between connected clients using the Realtime system. This functionality allows you to build interactive, collaborative applications where users can instantly share messages or data in real-time.
+Savira's Realtime Broadcast feature enables real-time communication between connected clients using the Realtime system. This functionality allows you to build interactive, collaborative applications where users can instantly share messages or data in real-time.
 
 ## Key features
 1. Channel-based messaging: Send and receive messages within specific channels or rooms.
@@ -821,7 +821,7 @@ Supabase's Realtime Broadcast feature enables real-time communication between co
 - Real-time commenting systems for blogs or social media platforms
 - Interactive presentations or educational platforms
 
-Supabase's Realtime Broadcast feature provides a powerful tool for creating responsive, real-time applications with minimal setup and infrastructure management.
+Savira's Realtime Broadcast feature provides a powerful tool for creating responsive, real-time applications with minimal setup and infrastructure management.
 `,
     icon: MessageCircle,
     products: [PRODUCT_SHORTNAMES.REALTIME],
@@ -837,7 +837,7 @@ Supabase's Realtime Broadcast feature provides a powerful tool for creating resp
     title: 'Realtime - Presence',
     subtitle: 'Synchronize shared state between users through websockets.',
     description: `
-Supabase's Realtime Presence feature allows you to track and synchronize shared state between connected users in real-time. This capability enables you to build collaborative applications where users can see each other's status, actions, or any custom state information instantly.
+Savira's Realtime Presence feature allows you to track and synchronize shared state between connected users in real-time. This capability enables you to build collaborative applications where users can see each other's status, actions, or any custom state information instantly.
 
 ## Key features
 1. Real-time state synchronization: Track and update shared state across multiple clients.
@@ -861,7 +861,7 @@ Supabase's Realtime Presence feature allows you to track and synchronize shared 
 - Project management applications with real-time task assignments
 - Social media platforms showing active users in a group or chat
 
-Supabase's Realtime Presence feature provides a powerful tool for creating interactive, real-time applications that require shared state management, allowing developers to focus on creating unique and valuable user experiences.
+Savira's Realtime Presence feature provides a powerful tool for creating interactive, real-time applications that require shared state management, allowing developers to focus on creating unique and valuable user experiences.
 `,
     icon: Users,
     products: [PRODUCT_SHORTNAMES.REALTIME],
@@ -944,7 +944,7 @@ Create a trigger function using realtime.broadcast_change, set up triggers on yo
 - Database-driven real-time updates
 
 ## Security
-Supabase Admin role connects to the database and tests messages against RLS policies. Transactions are rolled back after authorization checks.
+Savira Admin role connects to the database and tests messages against RLS policies. Transactions are rolled back after authorization checks.
 
 Broadcast from Database provides a powerful way to trigger real-time events directly from your database logic.`,
     icon: DatabaseZap,
@@ -996,7 +996,7 @@ Broadcast Replay ensures users never miss important real-time updates, even when
     title: 'Email login',
     subtitle: 'Build email logins for your application or website.',
     description: `
-Supabase's Email Login feature enables secure email-based authentication for your applications, allowing users to create accounts and sign in using their email addresses.
+Savira's Email Login feature enables secure email-based authentication for your applications, allowing users to create accounts and sign in using their email addresses.
 
 ## Key features
 1. Email signup and signin: Implement user registration and login with email and password.
@@ -1004,12 +1004,12 @@ Supabase's Email Login feature enables secure email-based authentication for you
 3. Password reset flow: Built-in functionality for secure password resets.
 4. Customizable redirect URLs: Specify where users are directed after email confirmation.
 5. Flexible implementation: Support for both implicit and PKCE authentication flows.
-6. SMTP integration: Use Supabase's email service or configure a custom SMTP server.
+6. SMTP integration: Use Savira's email service or configure a custom SMTP server.
 
 ## Benefits:
 - Secure authentication: Implement industry-standard security practices.
 - Customizable workflows: Tailor the signup and login processes to your needs.
-- Seamless integration: Works with Supabase's other auth providers and features.
+- Seamless integration: Works with Savira's other auth providers and features.
 - Local development support: Test email flows using built-in tools like Mailpit.
 
 ## Email login is valuable for:
@@ -1018,7 +1018,7 @@ Supabase's Email Login feature enables secure email-based authentication for you
 - Community websites and forums
 - Enterprise applications with employee logins
 
-Supabase's Email Login provides a robust foundation for user authentication, allowing you to focus on building your core application features while ensuring secure account management.
+Savira's Email Login provides a robust foundation for user authentication, allowing you to focus on building your core application features while ensuring secure account management.
 `,
     icon: Mail,
     products: [PRODUCT_SHORTNAMES.AUTHENTICATION],
@@ -1035,7 +1035,7 @@ Supabase's Email Login provides a robust foundation for user authentication, all
     title: 'Social login',
     subtitle: 'Provide social logins from platforms like Apple, GitHub, and Slack.',
     description: `
-Supabase's Social Login feature enables users to authenticate using their existing accounts from popular social platforms and services, providing a streamlined, password-free access to your application.
+Savira's Social Login feature enables users to authenticate using their existing accounts from popular social platforms and services, providing a streamlined, password-free access to your application.
 
 ## Key features
 1. Multiple provider support: Integrate with various platforms like Google, Facebook, Twitter, and more.
@@ -1057,7 +1057,7 @@ Supabase's Social Login feature enables users to authenticate using their existi
 - Community-driven websites fostering user engagement
 - B2B applications integrating with professional networks
 
-Supabase's Social Login feature allows you to improve user experience and potentially increase signup rates while maintaining security and control over user authentication.
+Savira's Social Login feature allows you to improve user experience and potentially increase signup rates while maintaining security and control over user authentication.
 `,
     icon: Users,
     products: [PRODUCT_SHORTNAMES.AUTHENTICATION],
@@ -1074,7 +1074,7 @@ Supabase's Social Login feature allows you to improve user experience and potent
     title: 'Phone logins',
     subtitle: 'Provide phone logins using a third-party SMS provider.',
     description: `
-Supabase's Phone Login feature allows users to authenticate using their phone numbers, providing a password-free login experience with SMS verification.
+Savira's Phone Login feature allows users to authenticate using their phone numbers, providing a password-free login experience with SMS verification.
 
 ## Key features
 1. OTP-based authentication: Users sign in with a one-time code sent via SMS.
@@ -1095,7 +1095,7 @@ Supabase's Phone Login feature allows users to authenticate using their phone nu
 - Messaging platforms where phone numbers serve as user identifiers
 - Applications targeting regions where phone usage exceeds email usage
 
-Supabase's Phone Login feature enables a seamless authentication experience, particularly suited for mobile and SMS-centric applications, while providing an additional layer of security through phone number verification.
+Savira's Phone Login feature enables a seamless authentication experience, particularly suited for mobile and SMS-centric applications, while providing an additional layer of security through phone number verification.
 `,
     icon: Smartphone,
     products: [PRODUCT_SHORTNAMES.AUTHENTICATION],
@@ -1112,7 +1112,7 @@ Supabase's Phone Login feature enables a seamless authentication experience, par
     title: 'Passwordless login via Magic Links',
     subtitle: 'Build passwordless logins via magic links for your application or website.',
     description: `
-Supabase's Passwordless Login via Magic Links allows users to sign in by clicking a unique link sent to their email address, eliminating the need for traditional passwords.
+Savira's Passwordless Login via Magic Links allows users to sign in by clicking a unique link sent to their email address, eliminating the need for traditional passwords.
 
 ## Key features
 1. One-time use links: Each Magic Link is valid for a single login attempt.
@@ -1135,7 +1135,7 @@ Supabase's Passwordless Login via Magic Links allows users to sign in by clickin
 - Enterprise applications managing access for numerous employees
 - Any application targeting users fatigued by managing multiple passwords
 
-Supabase's Magic Links feature offers a secure and user-friendly authentication method, aligning with modern security practices while providing a frictionless login experience.
+Savira's Magic Links feature offers a secure and user-friendly authentication method, aligning with modern security practices while providing a frictionless login experience.
 `,
     icon: Lock,
     products: [PRODUCT_SHORTNAMES.AUTHENTICATION],
@@ -1179,28 +1179,28 @@ SSO with SAML provides the enterprise-grade authentication capabilities required
   {
     title: 'Third-Party Authentication',
     subtitle: 'Trust JWTs from external authentication providers.',
-    description: `Third-Party Authentication allows Supabase APIs to trust JWTs issued by external authentication providers. Your existing auth system issues JWTs that Supabase verifies but doesn't create, enabling integration with Firebase Authentication, Auth0, or custom providers.
+    description: `Third-Party Authentication allows Savira APIs to trust JWTs issued by external authentication providers. Your existing auth system issues JWTs that Savira verifies but doesn't create, enabling integration with Firebase Authentication, Auth0, or custom providers.
 
 ## Key benefits
-1. Existing auth integration: Use your production auth system with Supabase APIs.
-2. No user migration: Avoid migrating users to Supabase Auth.
+1. Existing auth integration: Use your production auth system with Savira APIs.
+2. No user migration: Avoid migrating users to Savira Auth.
 3. Multi-provider support: Authenticate with multiple providers simultaneously.
-4. JWT verification: Supabase verifies tokens against provider signing keys.
-5. Works across Supabase: Compatible with Data APIs, Storage, and Realtime.
+4. JWT verification: Savira verifies tokens against provider signing keys.
+5. Works across Savira: Compatible with Data APIs, Storage, and Realtime.
 
 ## Requirements
 Provider must use asymmetrically signed JWTs exposed as OIDC Issuer Discovery URL. JWTs must include \`kid\` header parameter for key identification.
 
 ## Third-Party Authentication is valuable for:
 - Production apps with established auth systems
-- Firebase Authentication users migrating to Supabase
+- Firebase Authentication users migrating to Savira
 - Multi-provider authentication strategies
 - Avoiding user migration during platform adoption
 
 ## Limitations
-Supabase Auth cannot be disabled. Symmetric keys (HS256) not currently supported. 30-minute delay for key rotation updates.
+Savira Auth cannot be disabled. Symmetric keys (HS256) not currently supported. 30-minute delay for key rotation updates.
 
-Third-Party Authentication bridges your existing auth system with Supabase's backend services.`,
+Third-Party Authentication bridges your existing auth system with Savira's backend services.`,
     icon: ShieldCheck,
     products: [PRODUCT_SHORTNAMES.AUTHENTICATION],
     heroImage: '',
@@ -1233,7 +1233,7 @@ Custom Access Token Hook modifies JWT claims before issuance. Send SMS Hook cust
 - Adding business logic to authentication
 - Customizing auth emails and SMS messages
 
-Auth Hooks provide the flexibility to customize authentication while leveraging Supabase Auth's foundation.`,
+Auth Hooks provide the flexibility to customize authentication while leveraging Savira Auth's foundation.`,
     icon: Puzzle,
     products: [PRODUCT_SHORTNAMES.AUTHENTICATION],
     heroImage: '',
@@ -1247,7 +1247,7 @@ Auth Hooks provide the flexibility to customize authentication while leveraging 
   {
     title: 'JWT Signing Keys',
     subtitle: 'Asymmetric key management for enhanced JWT security.',
-    description: `JWT Signing Keys replace the legacy JWT secret with asymmetric key cryptography. Private keys sign tokens on Supabase servers, while public keys verify them anywhere—enabling local JWT verification without calling Supabase servers.
+    description: `JWT Signing Keys replace the legacy JWT secret with asymmetric key cryptography. Private keys sign tokens on Savira servers, while public keys verify them anywhere—enabling local JWT verification without calling Savira servers.
 
 ## Key benefits
 1. Faster verification: Verify JWTs locally without server calls.
@@ -1283,7 +1283,7 @@ JWT Signing Keys provide modern, secure JWT management with the flexibility requ
   {
     title: 'OAuth2.1 Server',
     subtitle: 'Turn your project into an OAuth 2.1 identity provider.',
-    description: `OAuth 2.1 Server transforms your Supabase project into a complete OAuth 2.1 and OpenID Connect identity provider. Authenticate AI agents, mobile apps, third-party services, and more using your existing Supabase Auth users.
+    description: `OAuth 2.1 Server transforms your Savira project into a complete OAuth 2.1 and OpenID Connect identity provider. Authenticate AI agents, mobile apps, third-party services, and more using your existing Savira Auth users.
 
 ## Key benefits
 1. Complete control: Build custom authorization UI for your brand.
@@ -1306,7 +1306,7 @@ Authorization endpoint \`/oauth/authorize\`. Token endpoint \`/oauth/token\`. Us
 - Enterprise customer integrations
 - Multi-service authentication architectures
 
-OAuth 2.1 Server provides enterprise-grade identity provider capabilities built on your Supabase Auth foundation.`,
+OAuth 2.1 Server provides enterprise-grade identity provider capabilities built on your Savira Auth foundation.`,
     icon: ShieldPlus,
     products: [PRODUCT_SHORTNAMES.AUTHENTICATION],
     heroImage: '',
@@ -1400,7 +1400,7 @@ Email Templates provide complete control over your authentication email experien
     title: 'Multi-Factor Authentication (MFA)',
     subtitle: 'Add an extra layer of security to your application with MFA.',
     description: `
-Supabase's Multi-Factor Authentication (MFA) adds an extra layer of security to your application by verifying user identity through additional steps beyond the initial login.
+Savira's Multi-Factor Authentication (MFA) adds an extra layer of security to your application by verifying user identity through additional steps beyond the initial login.
 
 ## Key features
 1. Multiple authentication methods: Support for App Authenticator (TOTP) and phone messaging.
@@ -1423,7 +1423,7 @@ Supabase's Multi-Factor Authentication (MFA) adds an extra layer of security to 
 - E-commerce sites protecting user payment information
 - Any application storing sensitive user data
 
-Supabase's MFA feature provides a robust tool for enhancing application security, allowing developers to implement strong authentication measures tailored to their specific requirements.
+Savira's MFA feature provides a robust tool for enhancing application security, allowing developers to implement strong authentication measures tailored to their specific requirements.
 `,
     icon: Lock,
     products: [PRODUCT_SHORTNAMES.AUTHENTICATION],
@@ -1439,13 +1439,13 @@ Supabase's MFA feature provides a robust tool for enhancing application security
     title: 'Authorization via Row Level Security',
     subtitle: 'Control the data each user can access with Postgres Policies.',
     description: `
-Supabase's Row Level Security (RLS) feature allows you to implement granular authorization rules directly in your Postgres database, securing your data at the row level.
+Savira's Row Level Security (RLS) feature allows you to implement granular authorization rules directly in your Postgres database, securing your data at the row level.
 
 ## Key features
 1. Policy-based access control: Create SQL rules to determine data access for each table.
 2. Role-specific policies: Define different access rules for authenticated and anonymous users.
 3. Flexible policy types: Implement SELECT, INSERT, UPDATE, and DELETE policies.
-4. Integration with Supabase Auth: Use built-in helper functions like auth.uid() and auth.jwt() in policies.
+4. Integration with Savira Auth: Use built-in helper functions like auth.uid() and auth.jwt() in policies.
 5. Performance optimization: Utilize indexes and optimized query patterns for efficient policy execution.
 6. Bypass options: Use service keys or create roles with bypassrls privilege for administrative tasks.
 
@@ -1462,7 +1462,7 @@ Supabase's Row Level Security (RLS) feature allows you to implement granular aut
 - Collaborative tools where users should only see their own or shared data
 - Any application dealing with sensitive or personalized data
 
-Supabase's RLS feature provides a powerful tool for implementing sophisticated access control patterns with minimal application code, enhancing security while simplifying development.
+Savira's RLS feature provides a powerful tool for implementing sophisticated access control patterns with minimal application code, enhancing security while simplifying development.
 `,
     icon: Lock,
     products: [PRODUCT_SHORTNAMES.DATABASE, PRODUCT_SHORTNAMES.AUTHENTICATION],
@@ -1478,14 +1478,14 @@ Supabase's RLS feature provides a powerful tool for implementing sophisticated a
     title: 'Captcha protection',
     subtitle: 'Add Captcha to your sign-in, sign-up, and password reset forms.',
     description: `
-Supabase's Captcha Protection feature allows you to integrate CAPTCHA challenges into your authentication flows, providing an additional layer of security against automated attacks and bot activities.
+Savira's Captcha Protection feature allows you to integrate CAPTCHA challenges into your authentication flows, providing an additional layer of security against automated attacks and bot activities.
 
 ## Key features
 1. Multiple provider support: Integration with hCaptcha and Cloudflare Turnstile.
-2. Easy configuration: Enable and configure CAPTCHA through the Supabase Dashboard.
+2. Easy configuration: Enable and configure CAPTCHA through the Savira Dashboard.
 3. Flexible implementation: Support for various JavaScript frameworks and custom frontend integration.
 4. Auth flow integration: Seamlessly add CAPTCHA to sign-up, sign-in, and password reset processes.
-5. Token-based verification: Use CAPTCHA tokens in Supabase auth functions for enhanced security.
+5. Token-based verification: Use CAPTCHA tokens in Savira auth functions for enhanced security.
 
 ## Benefits:
 - Bot protection: Defend against automated attacks on authentication endpoints.
@@ -1500,7 +1500,7 @@ Supabase's Captcha Protection feature allows you to integrate CAPTCHA challenges
 - Financial services applications adding an extra layer of security
 - Any public-facing forms susceptible to bot submissions
 
-Supabase's Captcha Protection feature provides a powerful tool for enhancing application security, helping to protect against various automated threats while maintaining a user-friendly experience.
+Savira's Captcha Protection feature provides a powerful tool for enhancing application security, helping to protect against various automated threats while maintaining a user-friendly experience.
 `,
     icon: RectangleEllipsis,
     products: [PRODUCT_SHORTNAMES.AUTHENTICATION],
@@ -1517,13 +1517,13 @@ Supabase's Captcha Protection feature provides a powerful tool for enhancing app
     title: 'Server-side Auth',
     subtitle: 'Helpers for implementing user authentication in popular server-side languages.',
     description: `
-Supabase's Server-side Auth feature provides tools and utilities for implementing secure user authentication in server-side environments, complementing client-side auth implementations.
+Savira's Server-side Auth feature provides tools and utilities for implementing secure user authentication in server-side environments, complementing client-side auth implementations.
 
 ## Key features
 1. SSR compatibility: Fully supports Server-Side Rendering frameworks.
 2. Cookie-based sessions: Store user sessions in cookies instead of local storage for enhanced security.
 3. PKCE flow support: Implement the more secure PKCE authentication flow for server-side apps.
-4. @supabase/ssr package: Simplified setup for Supabase client in SSR environments (currently in beta).
+4. @supabase/ssr package: Simplified setup for Savira client in SSR environments (currently in beta).
 5. Framework integration: Easily integrate with popular SSR frameworks like Next.js and SvelteKit.
 
 ## Benefits:
@@ -1539,7 +1539,7 @@ Supabase's Server-side Auth feature provides tools and utilities for implementin
 - Projects leveraging SSR frameworks like Next.js, Nuxt, or SvelteKit
 - Applications requiring secure, programmatic access to user session data
 
-Supabase's Server-side Auth feature allows developers to create more secure and robust applications with consistent authentication across both client and server components, adhering to security best practices while leveraging Supabase's auth system.
+Savira's Server-side Auth feature allows developers to create more secure and robust applications with consistent authentication across both client and server components, adhering to security best practices while leveraging Savira's auth system.
 `,
     icon: Server,
     products: [PRODUCT_SHORTNAMES.AUTHENTICATION],
@@ -1554,9 +1554,9 @@ Supabase's Server-side Auth feature allows developers to create more secure and 
   // Storage
   {
     title: 'File storage',
-    subtitle: 'Supabase Storage makes it simple to store and serve files.',
+    subtitle: 'Savira Storage makes it simple to store and serve files.',
     description: `
-Supabase Storage provides a scalable solution for storing and serving files in your applications, allowing easy management of user-generated content and assets within your Supabase project. Storage supports files up to 500GB on paid plans, offers S3 protocol compatibility for any S3-compatible client, and includes three specialized bucket types: File buckets for traditional storage, Analytics buckets for data warehousing, and Vector buckets for AI embeddings with similarity search.
+Savira Storage provides a scalable solution for storing and serving files in your applications, allowing easy management of user-generated content and assets within your Savira project. Storage supports files up to 500GB on paid plans, offers S3 protocol compatibility for any S3-compatible client, and includes three specialized bucket types: File buckets for traditional storage, Analytics buckets for data warehousing, and Vector buckets for AI embeddings with similarity search.
 
 ## Key features
 1. 500GB file support: Upload files up to 500GB using the new storage-specific hostname on paid plans.
@@ -1571,7 +1571,7 @@ Supabase Storage provides a scalable solution for storing and serving files in y
 10. Organization: Structure files into buckets and folders for efficient management.
 
 ## Benefits:
-- Seamless integration: Use the same Supabase client for both database and storage operations.
+- Seamless integration: Use the same Savira client for both database and storage operations.
 - Scalability: Handle large numbers of files and high traffic loads without infrastructure management.
 - Performance: Quick file serving with global CDN support and Smart CDN optimization.
 - Cost-effectiveness: Pay only for the storage you use, with no upfront costs.
@@ -1586,7 +1586,7 @@ Supabase Storage provides a scalable solution for storing and serving files in y
 - Data teams requiring SQL-accessible data lakes
 - AI applications storing and searching vector embeddings
 
-Supabase Storage simplifies adding robust file management to your applications, allowing you to focus on building unique features while relying on Supabase for secure, scalable file storage and serving.
+Savira Storage simplifies adding robust file management to your applications, allowing you to focus on building unique features while relying on Savira for secure, scalable file storage and serving.
 `,
     icon: Folders,
     products: [PRODUCT_SHORTNAMES.STORAGE],
@@ -1609,7 +1609,7 @@ Supabase Storage simplifies adding robust file management to your applications, 
 2. Automatic compaction: S3 Tables merges small files automatically for optimal performance.
 3. Built-in time travel: Query historical data using snapshots.
 4. Schema evolution: Evolve schema over time without breaking queries.
-5. Integrated with ETL: Real-time replication from Postgres via Supabase ETL.
+5. Integrated with ETL: Real-time replication from Postgres via Savira ETL.
 6. Query from Postgres: Use Iceberg Foreign Data Wrapper to join with operational data.
 
 ## Query tools supported
@@ -1675,9 +1675,9 @@ Vector Buckets provide the scalable vector storage required for AI-powered appli
   },
   {
     title: 'Content Delivery Network',
-    subtitle: 'Cache large files using the Supabase CDN.',
+    subtitle: 'Cache large files using the Savira CDN.',
     description: `
-Supabase's Content Delivery Network (CDN) feature caches and serves assets uploaded to Supabase Storage efficiently across the globe, improving latency for users worldwide.
+Savira's Content Delivery Network (CDN) feature caches and serves assets uploaded to Savira Storage efficiently across the globe, improving latency for users worldwide.
 
 ## Key features
 1. Global distribution: Serve content from geographically distributed servers.
@@ -1700,7 +1700,7 @@ Supabase's Content Delivery Network (CDN) feature caches and serves assets uploa
 - Content publishers distributing large documents or multimedia files
 - Any application dealing with large file downloads or streaming
 
-Supabase's CDN significantly improves the performance and user experience of your applications, especially for users accessing large files or media content globally, without the complexity of managing your own CDN infrastructure.
+Savira's CDN significantly improves the performance and user experience of your applications, especially for users accessing large files or media content globally, without the complexity of managing your own CDN infrastructure.
 `,
     icon: Cloud,
     products: [PRODUCT_SHORTNAMES.STORAGE],
@@ -1720,7 +1720,7 @@ Supabase's CDN significantly improves the performance and user experience of you
     title: 'Smart Content Delivery Network',
     subtitle: 'Automatically revalidate assets at the edge via the Smart CDN.',
     description: `
-Supabase's Smart CDN automatically synchronizes asset metadata to the edge, ensuring content is quickly delivered and remains up-to-date without manual intervention.
+Savira's Smart CDN automatically synchronizes asset metadata to the edge, ensuring content is quickly delivered and remains up-to-date without manual intervention.
 
 ## Key features
 1. Automatic cache revalidation: Invalidates CDN cache when assets are changed or deleted.
@@ -1743,7 +1743,7 @@ Supabase's Smart CDN automatically synchronizes asset metadata to the edge, ensu
 - Applications with rapidly changing user-generated content
 - Global platforms requiring both speed and content accuracy
 
-Supabase's Smart CDN optimizes both performance and content accuracy, providing a superior user experience for applications with dynamic or frequently updated content, without the complexity of manual cache management.
+Savira's Smart CDN optimizes both performance and content accuracy, providing a superior user experience for applications with dynamic or frequently updated content, without the complexity of manual cache management.
 `,
     icon: Cloud,
     products: [PRODUCT_SHORTNAMES.STORAGE],
@@ -1761,9 +1761,9 @@ Supabase's Smart CDN optimizes both performance and content accuracy, providing 
   },
   {
     title: 'Image transformations',
-    subtitle: 'Optimize and resize images on-the-fly directly from your Supabase storage buckets.',
+    subtitle: 'Optimize and resize images on-the-fly directly from your Savira storage buckets.',
     description: `
-Supabase’s Image Transformations feature enables developers to dynamically manipulate images stored in Supabase Storage. This functionality is ideal for applications requiring responsive design, efficient media delivery, and streamlined image management.
+Savira’s Image Transformations feature enables developers to dynamically manipulate images stored in Savira Storage. This functionality is ideal for applications requiring responsive design, efficient media delivery, and streamlined image management.
 
 ## Key features
 1. Dynamic resizing: Adjust image dimensions using width and height parameters to suit various display requirements.
@@ -1788,12 +1788,12 @@ Supabase’s Image Transformations feature enables developers to dynamically man
 - Mobile applications: Optimize images for devices with varying egress and display capabilities.
 - High-volume image handling: Efficiently manage and serve large quantities of images in diverse contexts with [resumable uploads](/features/resumable-uploads).
 
-Supabase's Image Transformations feature enables you to efficiently manage and serve optimized images, improving your application's performance and user experience while saving time and resources.
+Savira's Image Transformations feature enables you to efficiently manage and serve optimized images, improving your application's performance and user experience while saving time and resources.
 
 ## Integration capabilities
 
-Supabase’s Image Transformations seamlessly integrate within its ecosystem and with external tools:
-- Supabase Storage: Directly apply transformations to images stored in Supabase buckets, streamlining media management.
+Savira’s Image Transformations seamlessly integrate within its ecosystem and with external tools:
+- Savira Storage: Directly apply transformations to images stored in Savira buckets, streamlining media management.
 - Next.js compatibility: Utilize a custom loader to integrate image transformations within Next.js applications, enhancing performance and user experience.
 - Self-hosting with Imgproxy: Deploy your own image transformation service using Imgproxy, offering greater control and customization options.
 - API access: Leverage RESTful APIs to programmatically apply transformations, enabling automation and integration with various workflows.
@@ -1801,13 +1801,13 @@ Supabase’s Image Transformations seamlessly integrate within its ecosystem and
 These integration options provide flexibility, allowing developers to tailor image transformation processes to their specific project requirements.
 For a deeper understanding and step-by-step guidance on using Image Transformations, please refer to our [documentation](/docs/guides/storage/image-transformations).
 
-## FAQs about image transformations with Supabase
+## FAQs about image transformations with Savira
 
-Below are answers to common questions about Supabase Image Transformations.
+Below are answers to common questions about Savira Image Transformations.
 
-### What image formats are supported by Supabase Image Transformations?
+### What image formats are supported by Savira Image Transformations?
 
-Supabase Image Transformations primarily support common web-friendly formats such as JPEG, PNG, and WebP. When using the automatic format optimization feature, images can be converted to WebP for supported browsers to enhance performance.
+Savira Image Transformations primarily support common web-friendly formats such as JPEG, PNG, and WebP. When using the automatic format optimization feature, images can be converted to WebP for supported browsers to enhance performance.
 
 ### Can I apply multiple transformations to a single image request?
 
@@ -1815,11 +1815,11 @@ Yes, you can chain multiple transformation parameters in a single request. For e
 
 ### How do I implement transformations in my Next.js application?
 
-Supabase provides a custom loader for Next.js, allowing seamless integration of Image Transformations. By configuring the loader, you can optimize images on-the-fly within your Next.js project.
+Savira provides a custom loader for Next.js, allowing seamless integration of Image Transformations. By configuring the loader, you can optimize images on-the-fly within your Next.js project.
 
 ### Are there any limitations on image size or dimensions?
 
-While Supabase does not impose strict limits on image sizes, it’s recommended to optimize images for web use to ensure faster load times and better performance. Large images may consume more egress and affect loading speeds.
+While Savira does not impose strict limits on image sizes, it’s recommended to optimize images for web use to ensure faster load times and better performance. Large images may consume more egress and affect loading speeds.
 
 ### How does automatic format optimization work?
 
@@ -1840,7 +1840,7 @@ Automatic format optimization detects the capabilities of the user’s browser a
     title: 'Resumable uploads',
     subtitle: 'Upload large files using resumable uploads.',
     description: `
-Supabase's Resumable Uploads feature enables reliable transfer of large files, allowing uploads to be paused and resumed, particularly useful for files exceeding 6MB or in unstable network conditions.
+Savira's Resumable Uploads feature enables reliable transfer of large files, allowing uploads to be paused and resumed, particularly useful for files exceeding 6MB or in unstable network conditions.
 
 ## Key features
 1. TUS protocol implementation: Utilizes the open protocol for resumable uploads.
@@ -1864,7 +1864,7 @@ Supabase's Resumable Uploads feature enables reliable transfer of large files, a
 - Content creation tools handling large media files
 - Any application where users need to upload sizeable files in potentially unstable conditions
 
-Supabase's Resumable Uploads feature significantly improves the reliability and user experience of file uploads, especially for large files or in scenarios with unpredictable network conditions.
+Savira's Resumable Uploads feature significantly improves the reliability and user experience of file uploads, especially for large files or in scenarios with unpredictable network conditions.
 `,
     icon: UploadCloud,
     products: [PRODUCT_SHORTNAMES.STORAGE],
@@ -1880,7 +1880,7 @@ Supabase's Resumable Uploads feature significantly improves the reliability and 
     title: 'S3 compatibility',
     subtitle: 'Interact with Storage from tools which support the S3 protocol.',
     description: `
-Supabase Storage offers compatibility with the S3 protocol, allowing you to use any S3 client to interact with your Storage objects.
+Savira Storage offers compatibility with the S3 protocol, allowing you to use any S3 client to interact with your Storage objects.
 
 ## Key features
 1. Protocol interoperability: Support for standard, resumable, and S3 uploads, all interoperable.
@@ -1892,10 +1892,10 @@ Supabase Storage offers compatibility with the S3 protocol, allowing you to use 
 7. Conditional operations: Support for conditional GET and HEAD requests.
 
 ## Benefits:
-- Ecosystem compatibility: Leverage existing S3-compatible tools and libraries with Supabase Storage.
+- Ecosystem compatibility: Leverage existing S3-compatible tools and libraries with Savira Storage.
 - Familiar workflows: Use well-known S3 commands and SDKs for storage operations.
 - Flexibility: Choose the most suitable client libraries or tools for your specific needs.
-- Easy migration: Simplify the process of moving from S3 to Supabase or using both in parallel.
+- Easy migration: Simplify the process of moving from S3 to Savira or using both in parallel.
 
 ## S3 compatibility is valuable for:
 - DevOps teams using S3-based deployment and backup scripts
@@ -1904,7 +1904,7 @@ Supabase Storage offers compatibility with the S3 protocol, allowing you to use 
 - Legacy applications built around S3 storage
 - Any project looking to leverage the vast ecosystem of S3-compatible tools
 
-Supabase's S3 compatibility allows seamless integration with existing workflows and tools, providing flexibility in data storage and management while benefiting from Supabase's managed solution.
+Savira's S3 compatibility allows seamless integration with existing workflows and tools, providing flexibility in data storage and management while benefiting from Savira's managed solution.
 `,
     icon: UploadCloud,
     products: [PRODUCT_SHORTNAMES.STORAGE],
@@ -1922,14 +1922,14 @@ Supabase's S3 compatibility allows seamless integration with existing workflows 
     title: 'Deno Edge Functions',
     subtitle: 'Globally distributed TypeScript functions to execute custom business logic.',
     description: `
-Supabase's Deno Edge Functions allow you to deploy and run custom TypeScript functions globally at the edge, bringing your code closer to users for enhanced performance and reduced latency.
+Savira's Deno Edge Functions allow you to deploy and run custom TypeScript functions globally at the edge, bringing your code closer to users for enhanced performance and reduced latency.
 
 ## Key features
 1. Global distribution: Edge Functions run close to users, reducing latency.
 2. TypeScript support: Leverage TypeScript's type safety and modern language features.
 3. Deno runtime: Benefit from Deno's security-first approach and modern JavaScript APIs.
 4. NPM + Node compatibility: Use NPM modules and Node.js built-in APIs when you need them.
-5. Seamless integration: Easy integration with other Supabase services like Auth and Database.
+5. Seamless integration: Easy integration with other Savira services like Auth and Database.
 6. Versatile use cases: Support for webhooks, third-party integrations, and custom API endpoints.
 7. Open-source and portable: Run locally or on any Deno-compatible platform.
 8. Rich ecosystem: Wide range of examples and integrations available.
@@ -1937,7 +1937,7 @@ Supabase's Deno Edge Functions allow you to deploy and run custom TypeScript fun
 ## Benefits:
 - Low-latency responses: Ideal for globally distributed applications.
 - Scalability: Automatically handle varying loads without manual intervention.
-- Flexibility: Extend Supabase project capabilities beyond database operations.
+- Flexibility: Extend Savira project capabilities beyond database operations.
 - Developer-friendly: Fast deployments and rollbacks for agile development.
 
 ## Deno Edge Functions are valuable for:
@@ -1949,7 +1949,7 @@ Supabase's Deno Edge Functions allow you to deploy and run custom TypeScript fun
 - Integration with various services (e.g., Stripe, OpenAI, Hugging Face)
 - Building bots for platforms like Discord and Telegram
 
-Supabase's Deno Edge Functions enable you to build responsive, globally distributed applications with custom server-side logic, supporting a wide range of use cases and integrations. You can also tap into the Node and NPM ecosystem when needed.
+Savira's Deno Edge Functions enable you to build responsive, globally distributed applications with custom server-side logic, supporting a wide range of use cases and integrations. You can also tap into the Node and NPM ecosystem when needed.
 `,
     icon: FileCode2,
     products: [PRODUCT_SHORTNAMES.FUNCTIONS],
@@ -1969,7 +1969,7 @@ Supabase's Deno Edge Functions enable you to build responsive, globally distribu
 ## Key benefits
 1. Dramatically faster cold starts: Up to 97% improvement in cold start times.
 2. Persistent across invocations: Files survive between function executions.
-3. S3 protocol compatibility: Mount any S3-compatible bucket, including Supabase Storage.
+3. S3 protocol compatibility: Mount any S3-compatible bucket, including Savira Storage.
 4. POSIX-like file system: Read and write files using standard Deno APIs.
 5. Large file processing: Handle large files without fetching on each invocation.
 
@@ -2004,7 +2004,7 @@ Persistent Storage transforms Edge Functions into stateful, high-performance com
     title: 'Regional invocations',
     subtitle: 'Execute an Edge Function in a region close to your database.',
     description: `
-Supabase's Regional Invocations feature allows you to execute Edge Functions in a region close to your database, optimizing performance for database-intensive operations. This capability ensures low-latency communication between your functions and database, enhancing overall application responsiveness.
+Savira's Regional Invocations feature allows you to execute Edge Functions in a region close to your database, optimizing performance for database-intensive operations. This capability ensures low-latency communication between your functions and database, enhancing overall application responsiveness.
 
 ## Key benefits
 1. Reduced latency: Minimize round-trip time between edge functions and database for faster operations.
@@ -2023,7 +2023,7 @@ Supabase's Regional Invocations feature allows you to execute Edge Functions in 
 - Compliance-sensitive applications with data residency requirements
 - Any scenario where minimizing function-to-database latency is crucial
 
-By leveraging Supabase's Regional Invocations, you can significantly enhance the performance of your database-centric serverless functions. This feature allows you to build more responsive applications, especially those requiring frequent or complex database interactions, by ensuring that your Edge Functions operate as close as possible to your Supabase database.
+By leveraging Savira's Regional Invocations, you can significantly enhance the performance of your database-centric serverless functions. This feature allows you to build more responsive applications, especially those requiring frequent or complex database interactions, by ensuring that your Edge Functions operate as close as possible to your Savira database.
 `,
     icon: Globe,
     products: [PRODUCT_SHORTNAMES.FUNCTIONS],
@@ -2040,15 +2040,15 @@ By leveraging Supabase's Regional Invocations, you can significantly enhance the
     title: 'AI Integrations',
     subtitle: 'Enhance applications with OpenAI and Hugging Face integrations.',
     description: `
-Supabase's AI Integrations feature provides seamless connectivity with leading AI platforms like OpenAI and Hugging Face, allowing you to easily incorporate advanced AI capabilities into your applications. This powerful feature enables developers to leverage state-of-the-art machine learning models and natural language processing directly within their Supabase projects.
+Savira's AI Integrations feature provides seamless connectivity with leading AI platforms like OpenAI and Hugging Face, allowing you to easily incorporate advanced AI capabilities into your applications. This powerful feature enables developers to leverage state-of-the-art machine learning models and natural language processing directly within their Savira projects.
 
 ## Key benefits
 1. Easy AI integration: Incorporate advanced AI capabilities without managing complex infrastructure.
 2. Versatile model access: Utilize a wide range of pre-trained models for various AI tasks.
-3. Scalability: Handle AI workloads efficiently with Supabase's managed infrastructure.
+3. Scalability: Handle AI workloads efficiently with Savira's managed infrastructure.
 4. Cost-effective AI deployment: Leverage powerful AI models without significant upfront investments.
-5. Real-time AI processing: Combine AI capabilities with Supabase's real-time features for dynamic applications.
-6. Data synergy: Seamlessly use your Supabase data with AI models for personalized experiences.
+5. Real-time AI processing: Combine AI capabilities with Savira's real-time features for dynamic applications.
+6. Data synergy: Seamlessly use your Savira data with AI models for personalized experiences.
 7. Rapid prototyping: Quickly experiment with and deploy AI-powered features in your applications.
 
 ## AI Integrations are particularly valuable for:
@@ -2059,7 +2059,7 @@ Supabase's AI Integrations feature provides seamless connectivity with leading A
 - Personalization engines for user experience enhancement
 - Any application seeking to incorporate AI-driven insights or automation
 
-By leveraging Supabase's AI Integrations, you can rapidly develop and deploy sophisticated AI-powered applications. This feature bridges the gap between powerful AI models and your application data, enabling you to create more intelligent, responsive, and personalized user experiences without the complexity of managing separate AI infrastructure.
+By leveraging Savira's AI Integrations, you can rapidly develop and deploy sophisticated AI-powered applications. This feature bridges the gap between powerful AI models and your application data, enabling you to create more intelligent, responsive, and personalized user experiences without the complexity of managing separate AI infrastructure.
 `,
     icon: Brain,
     products: [PRODUCT_MODULES_SHORTNAMES.VECTOR],
@@ -2119,26 +2119,26 @@ Automatic Embeddings eliminate the manual work of generating and maintaining vec
     title: 'CLI',
     subtitle: 'Use our CLI to develop your project locally and deploy.',
     description: `
-Supabase's Command Line Interface (CLI) tool provides developers with a powerful and flexible way to manage their Supabase projects directly from the terminal. This feature streamlines the development workflow, allowing for local development, testing, and seamless deployment of Supabase projects.
+Savira's Command Line Interface (CLI) tool provides developers with a powerful and flexible way to manage their Savira projects directly from the terminal. This feature streamlines the development workflow, allowing for local development, testing, and seamless deployment of Savira projects.
 
 ## Key benefits
-1. Local development: Set up and run a local Supabase instance for development and testing.
+1. Local development: Set up and run a local Savira instance for development and testing.
 2. Version control integration: Easily manage database migrations and schema changes with Git-like workflows.
-3. Automated deployments: Deploy changes to your Supabase project with simple CLI commands.
+3. Automated deployments: Deploy changes to your Savira project with simple CLI commands.
 4. Database migrations: Generate, apply, and revert database migrations effortlessly.
 5. Environment management: Handle multiple environments (development, staging, production) efficiently.
 6. Seed data management: Populate your database with test data for consistent development and testing.
-7. CI/CD integration: Incorporate Supabase operations into your continuous integration and deployment pipelines.
+7. CI/CD integration: Incorporate Savira operations into your continuous integration and deployment pipelines.
 
 ## The CLI is particularly valuable for:
-- Development teams working on Supabase projects collaboratively
-- DevOps professionals managing Supabase deployments across multiple environments
-- Open-source projects requiring reproducible Supabase setups
+- Development teams working on Savira projects collaboratively
+- DevOps professionals managing Savira deployments across multiple environments
+- Open-source projects requiring reproducible Savira setups
 - Developers preferring command-line tools for increased productivity
 - Projects with complex database schemas requiring careful version control
-- Any application needing a streamlined local-to-production workflow with Supabase
+- Any application needing a streamlined local-to-production workflow with Savira
 
-By leveraging the Supabase CLI, you can significantly improve your development workflow, ensuring consistency between local and production environments, streamlining deployments, and making it easier to manage complex Supabase projects. This tool empowers developers to work more efficiently with Supabase, whether they're building small prototypes or large-scale applications.
+By leveraging the Savira CLI, you can significantly improve your development workflow, ensuring consistency between local and production environments, streamlining deployments, and making it easier to manage complex Savira projects. This tool empowers developers to work more efficiently with Savira, whether they're building small prototypes or large-scale applications.
 `,
     icon: Terminal,
     products: [ADDITIONAL_PRODUCTS.PLATFORM],
@@ -2155,26 +2155,26 @@ By leveraging the Supabase CLI, you can significantly improve your development w
     title: 'Management API',
     subtitle: 'Manage your projects programmatically.',
     description: `
-Supabase's Management API provides a powerful interface for programmatically managing your Supabase projects. This feature allows developers and DevOps teams to automate project creation, configuration, and maintenance tasks, enabling more efficient and scalable project management workflows.
+Savira's Management API provides a powerful interface for programmatically managing your Savira projects. This feature allows developers and DevOps teams to automate project creation, configuration, and maintenance tasks, enabling more efficient and scalable project management workflows.
 
 ## Key benefits
 1. Automation: Automate repetitive tasks like project creation and configuration.
-2. Scalability: Easily manage multiple Supabase projects across different environments.
-3. CI/CD integration: Incorporate Supabase project management into your continuous integration and deployment pipelines.
+2. Scalability: Easily manage multiple Savira projects across different environments.
+3. CI/CD integration: Incorporate Savira project management into your continuous integration and deployment pipelines.
 4. Programmatic control: Manage projects dynamically based on your application's needs.
 5. Consistent setup: Ensure uniform configuration across multiple projects or environments.
 6. Audit trail: Keep track of project changes and configurations programmatically.
 7. Resource optimization: Dynamically allocate and deallocate resources based on demand.
 
 ## The Management API is particularly valuable for:
-- Large organizations managing multiple Supabase projects
-- SaaS platforms offering Supabase-powered backends to their customers
+- Large organizations managing multiple Savira projects
+- SaaS platforms offering Savira-powered backends to their customers
 - DevOps teams implementing infrastructure-as-code practices
-- Managed service providers offering Supabase as part of their stack
+- Managed service providers offering Savira as part of their stack
 - Applications requiring dynamic project creation and management
 - Any scenario where manual project management through the dashboard is impractical
 
-By utilizing the Supabase Management API, you can create more efficient, scalable, and automated workflows for managing your Supabase projects. This feature is especially powerful for organizations dealing with multiple projects or environments, enabling them to maintain consistency, reduce manual errors, and quickly respond to changing project requirements.
+By utilizing the Savira Management API, you can create more efficient, scalable, and automated workflows for managing your Savira projects. This feature is especially powerful for organizations dealing with multiple projects or environments, enabling them to maintain consistency, reduce manual errors, and quickly respond to changing project requirements.
 `,
     icon: FileCode2,
     products: [ADDITIONAL_PRODUCTS.PLATFORM],
@@ -2192,7 +2192,7 @@ By utilizing the Supabase Management API, you can create more efficient, scalabl
     icon: ShieldPlus,
     subtitle: 'Define and manage user roles securely',
     description: `
-Supabase's Role-Based Access Control (RBAC) feature provides a powerful and flexible way to manage user permissions within your application. RBAC allows you to define roles with specific sets of permissions and assign these roles to users, enabling fine-grained control over who can access what within your system.
+Savira's Role-Based Access Control (RBAC) feature provides a powerful and flexible way to manage user permissions within your application. RBAC allows you to define roles with specific sets of permissions and assign these roles to users, enabling fine-grained control over who can access what within your system.
 
 ## Key benefits
 1. Granular access control: Define precise permissions for different user types or job functions.
@@ -2228,7 +2228,7 @@ By leveraging Role-Based Access Control, you can create a secure, scalable, and 
     title: 'Reports & Metrics',
     subtitle: "Monitor your project's health with usage insights.",
     description: `
-Supabase Reports provide comprehensive insights into your project's performance, usage patterns, and overall health. This feature offers a detailed view of various metrics, helping you optimize your application, troubleshoot issues, and make data-driven decisions about resource allocation and scaling.
+Savira Reports provide comprehensive insights into your project's performance, usage patterns, and overall health. This feature offers a detailed view of various metrics, helping you optimize your application, troubleshoot issues, and make data-driven decisions about resource allocation and scaling.
 
 ## Key benefits
 1. Performance monitoring: Track query performance, API response times, and overall system health.
@@ -2246,7 +2246,7 @@ Supabase Reports provide comprehensive insights into your project's performance,
 - Security personnel monitoring for unusual activity or potential threats
 - Any stakeholder requiring insights into the project's operational status
 
-By leveraging Supabase Reports, you gain a understanding of your project's performance and usage patterns. This feature empowers you to make informed decisions about scaling, optimization, and resource allocation, ensuring that your application runs efficiently and cost-effectively. Whether you're troubleshooting issues, planning for growth, or optimizing costs, Supabase Reports provides the insights you need to manage your project effectively.
+By leveraging Savira Reports, you gain a understanding of your project's performance and usage patterns. This feature empowers you to make informed decisions about scaling, optimization, and resource allocation, ensuring that your application runs efficiently and cost-effectively. Whether you're troubleshooting issues, planning for growth, or optimizing costs, Savira Reports provides the insights you need to manage your project effectively.
 `,
     icon: BarChart,
     products: [ADDITIONAL_PRODUCTS.PLATFORM],
@@ -2263,16 +2263,16 @@ By leveraging Supabase Reports, you gain a understanding of your project's perfo
     title: 'SOC 2 Compliance',
     subtitle: 'Build with confidence on a SOC 2 compliant platform.',
     description: `
-Supabase's SOC 2 Compliance demonstrates its commitment to maintaining the highest standards of security, availability, and confidentiality. This certification assures users that Supabase follows strict information security policies and procedures, encompassing the security, availability, processing, integrity, and confidentiality of customer data.
+Savira's SOC 2 Compliance demonstrates its commitment to maintaining the highest standards of security, availability, and confidentiality. This certification assures users that Savira follows strict information security policies and procedures, encompassing the security, availability, processing, integrity, and confidentiality of customer data.
 
 ## Key benefits
 1. Trust and credibility: Build on a platform that has been independently audited for security practices.
 2. Risk mitigation: Reduce the risk of data breaches and security incidents.
 3. Compliance support: Easier compliance with your own regulatory requirements.
-4. Standardized processes: Benefit from Supabase's adherence to industry-standard security practices.
-5. Continuous improvement: Supabase's commitment to maintaining SOC 2 compliance ensures ongoing security enhancements.
-6. Transparency: Access to SOC 2 reports provides insight into Supabase's security controls.
-7. Competitive advantage: Use Supabase's compliance as a selling point for your own services.
+4. Standardized processes: Benefit from Savira's adherence to industry-standard security practices.
+5. Continuous improvement: Savira's commitment to maintaining SOC 2 compliance ensures ongoing security enhancements.
+6. Transparency: Access to SOC 2 reports provides insight into Savira's security controls.
+7. Competitive advantage: Use Savira's compliance as a selling point for your own services.
 
 ## SOC 2 Compliance is particularly valuable for:
 - Enterprises with strict vendor security requirements
@@ -2282,13 +2282,13 @@ Supabase's SOC 2 Compliance demonstrates its commitment to maintaining the highe
 - Government contractors requiring compliant cloud services
 - Any organization prioritizing data security and privacy in their applications
 
-Leveraging Supabase's SOC 2 Compliance involves:
-1. Reviewing Supabase's SOC 2 report to understand its security practices
-2. Aligning your application's security practices with Supabase's standards
-3. Utilizing Supabase's compliant features to enhance your own security posture
+Leveraging Savira's SOC 2 Compliance involves:
+1. Reviewing Savira's SOC 2 report to understand its security practices
+2. Aligning your application's security practices with Savira's standards
+3. Utilizing Savira's compliant features to enhance your own security posture
 4. Communicating the benefits of building on a SOC 2 compliant platform to stakeholders
 
-By building on Supabase's SOC 2 compliant platform, you gain a significant advantage in terms of security and trust. This compliance demonstrates to your users, partners, and regulators that you take data protection seriously and have chosen a backend platform that adheres to rigorous security standards. Whether you're a startup looking to win enterprise clients or an established company aiming to enhance your security posture, Supabase's SOC 2 compliance provides a solid foundation for building secure, trustworthy applications.
+By building on Savira's SOC 2 compliant platform, you gain a significant advantage in terms of security and trust. This compliance demonstrates to your users, partners, and regulators that you take data protection seriously and have chosen a backend platform that adheres to rigorous security standards. Whether you're a startup looking to win enterprise clients or an established company aiming to enhance your security posture, Savira's SOC 2 compliance provides a solid foundation for building secure, trustworthy applications.
 `,
     icon: ShieldCheck,
     products: [ADDITIONAL_PRODUCTS.PLATFORM],
@@ -2302,10 +2302,10 @@ By building on Supabase's SOC 2 compliant platform, you gain a significant advan
   },
   // Studio
   {
-    title: 'Supabase AI Assistant',
+    title: 'Savira AI Assistant',
     subtitle: 'Your intelligent companion for managing Postgres databases.',
     description: `
-Supabase AI Assistant is integrated into the Supabase Dashboard to drastically improve your database management experience. This tool helps streamline your workflow, significantly reducing the time it takes to transition from concept to product.
+Savira AI Assistant is integrated into the Savira Dashboard to drastically improve your database management experience. This tool helps streamline your workflow, significantly reducing the time it takes to transition from concept to product.
 
 The AI Assistant can save you hours of work by automating repetitive tasks and providing context-aware support. For instance, when designing a new database schema, it can generate all necessary SQL queries based on your specifications, allowing you to focus on the bigger picture rather than getting bogged down in details. If you encounter an error in your SQL code, the Assistant can quickly analyze the issue and suggest solutions, enabling you to resolve problems efficiently without losing your train of thought. Additionally, while working on a specific table, the Assistant can provide instant feedback and recommendations tailored to that context, ensuring that you always have relevant information at your fingertips.
 
@@ -2317,7 +2317,7 @@ Key benefits:
 5. RLS Policies Management: Create and modify Row Level Security (RLS) Policies according to your requirements.
 6. Functions and Triggers Support: Easily suggest, create, or update Postgres Functions and Triggers.
 
-With Supabase AI Assistant, you gain a powerful ally in your development process, helping you work more efficiently and effectively while keeping you focused on your goals.
+With Savira AI Assistant, you gain a powerful ally in your development process, helping you work more efficiently and effectively while keeping you focused on your goals.
 `,
     icon: Brain,
     products: [ADDITIONAL_PRODUCTS.PLATFORM],
@@ -2337,7 +2337,7 @@ With Supabase AI Assistant, you gain a powerful ally in your development process
     title: 'Logs & Analytics',
     subtitle: 'Gain insights into your application’s performance and usage.',
     description: `
-The Logs & Analytics feature in Supabase provides users with comprehensive logging and analytics capabilities, powered by Logflare. This tool enables developers to track and analyze log events from various Supabase services, such as the API gateway, Postgres databases, Storage, Edge Functions, and more. By leveraging a multi-node Elixir cluster, Supabase processes billions of log events daily, ensuring that users have access to critical insights for optimizing their applications.
+The Logs & Analytics feature in Savira provides users with comprehensive logging and analytics capabilities, powered by Logflare. This tool enables developers to track and analyze log events from various Savira services, such as the API gateway, Postgres databases, Storage, Edge Functions, and more. By leveraging a multi-node Elixir cluster, Savira processes billions of log events daily, ensuring that users have access to critical insights for optimizing their applications.
 
 OpenTelemetry integration allows you to export logs, metrics, and traces to any OTel-compatible tool—Datadog, Honeycomb, Grafana, or your preferred monitoring platform. The Metrics API exposes ~200 Prometheus-compatible Postgres metrics, including CPU, IO, WAL, connections, and query statistics.
 
@@ -2345,7 +2345,7 @@ OpenTelemetry integration allows you to export logs, metrics, and traces to any 
 1. Real-Time Monitoring: Access live data on application performance and user interactions to make informed decisions.
 2. Comprehensive Log Management: Ingest and store logs from multiple sources, allowing for centralized management of application events.
 3. Powerful Querying: Utilize SQL queries through Logflare Endpoints to analyze logs efficiently, enabling users to extract meaningful metrics.
-4. Customizable Dashboards: Create tailored views within Supabase Studio to visualize log data and track key performance indicators (KPIs).
+4. Customizable Dashboards: Create tailored views within Savira Studio to visualize log data and track key performance indicators (KPIs).
 5. Scalability: Handle large volumes of log data with a robust infrastructure designed for high availability and performance.
 6. OpenTelemetry Support: Export telemetry data to vendor-agnostic monitoring platforms for unified observability.
 7. Metrics API: Stream Postgres performance metrics for CPU, IO, WAL, connections, and query statistics.
@@ -2367,7 +2367,7 @@ This feature is particularly valuable for teams looking to enhance their applica
     title: 'Visual Schema Designer',
     subtitle: 'Design your Postgres database schema with an intuitive interface.',
     description: `
-The Visual Schema Designer is an integral part of [Supabase Studio](/features?products=studio), offering users a seamless way to create and modify PostgreSQL database schemas without writing SQL code. This visual database design tool simplifies the process of structuring your database by allowing you to:
+The Visual Schema Designer is an integral part of [Savira Studio](/features?products=studio), offering users a seamless way to create and modify PostgreSQL database schemas without writing SQL code. This visual database design tool simplifies the process of structuring your database by allowing you to:
 
 - Drag and drop tables and fields. Easily add, remove, and arrange tables and fields to build your schema visually.
 - Define relationships. Establish connections between tables, such as one-to-one, one-to-many, and many-to-many relationships, to accurately represent your data model.
@@ -2396,11 +2396,11 @@ The Visual Schema Designer caters to a diverse range of users, each benefiting u
 
 The Visual Schema Designer addresses the needs of various stakeholders; fostering collaboration and enhancing productivity across the board.
 
-## Integration capabilities with Supabase’s Schema designer
+## Integration capabilities with Savira’s Schema designer
 
-The Visual Schema Designer seamlessly integrates within the Supabase ecosystem, enhancing your database management experience:
+The Visual Schema Designer seamlessly integrates within the Savira ecosystem, enhancing your database management experience:
 
-- Supabase Studio integration. Embedded directly into Supabase Studio, the Visual Schema Designer allows for intuitive schema creation and modification alongside other powerful tools like the SQL Editor and Role Management UI. 
+- Savira Studio integration. Embedded directly into Savira Studio, the Visual Schema Designer allows for intuitive schema creation and modification alongside other powerful tools like the SQL Editor and Role Management UI. 
 - AI-powered SQL Editor. Leverage the AI SQL Editor to generate and modify SQL queries effortlessly, streamlining your development workflow. 
 - Role management UI. Manage user roles and access permissions efficiently, ensuring secure and organized database operations. 
 - Database migration UI. Track and manage database migrations with ease, maintaining consistency across your development and production environments.
@@ -2416,9 +2416,9 @@ Below are answers to common questions about the Visual Schema Designer, covering
 
 No, the Visual Schema Designer is designed for users of all technical levels. It enables schema design through a visual interface without the need to write SQL code.
 
-### Can I use this with self-hosted Supabase instances?
+### Can I use this with self-hosted Savira instances?
 
-Yes, our drag-and-drop schema builder is available for both cloud and self-hosted Supabase setups.
+Yes, our drag-and-drop schema builder is available for both cloud and self-hosted Savira setups.
 
 ### Does the Designer support collaborative editing?
 
@@ -2439,13 +2439,13 @@ Multiple users can collaborate on schema design in real-time, enhancing teamwork
     title: 'Policy Templates',
     subtitle: 'Quickly implement common security policies.',
     description: `
-Policy Templates provide a library of predefined security policies that can be easily applied to your Supabase projects. This feature streamlines the process of establishing role-based access control and other security measures, ensuring that best practices are followed consistently across applications.
+Policy Templates provide a library of predefined security policies that can be easily applied to your Savira projects. This feature streamlines the process of establishing role-based access control and other security measures, ensuring that best practices are followed consistently across applications.
 
 ## Key benefits
 1. Time Efficient: Reduces the time required to set up security policies by offering ready-made templates.
 2. Best Practices: Ensures adherence to industry standards for data security and access control.
 3. Customizable: Allows users to modify templates to fit specific project needs while maintaining a strong security foundation.
-4. User-Friendly: Simplifies policy application through an intuitive interface within the Supabase Studio.
+4. User-Friendly: Simplifies policy application through an intuitive interface within the Savira Studio.
 5. Documentation Support: Each template comes with comprehensive documentation to guide users through implementation.
 
 This feature is essential for organizations looking to maintain robust security protocols without extensive manual configuration efforts.
@@ -2465,7 +2465,7 @@ This feature is essential for organizations looking to maintain robust security 
     title: 'SQL Editor',
     subtitle: 'A powerful interface for writing and executing SQL queries.',
     description: `
-The SQL Editor in [Supabase Studio](/features?products=studio) provides users with a robust platform for writing, executing, and managing SQL queries directly within their browser. This feature is designed to enhance productivity by offering syntax highlighting, auto-completion, and error detection, making it easier for developers to interact with their databases efficiently.
+The SQL Editor in [Savira Studio](/features?products=studio) provides users with a robust platform for writing, executing, and managing SQL queries directly within their browser. This feature is designed to enhance productivity by offering syntax highlighting, auto-completion, and error detection, making it easier for developers to interact with their databases efficiently.
 
 ## Key benefits
 1. User-friendly interface: Intuitive design that simplifies the process of writing SQL queries.
@@ -2478,22 +2478,22 @@ This feature is particularly valuable for developers looking to streamline their
 
 ## AI-powered assistance
 
-Integrated directly into the SQL Editor, Supabase AI serves as an intelligent assistant to enhance your database development workflow.
+Integrated directly into the SQL Editor, Savira AI serves as an intelligent assistant to enhance your database development workflow.
 
 - Natural language to SQL: Transform plain English prompts into accurate SQL queries, making database interactions more accessible.
 - Context-aware suggestions: Receive intelligent recommendations based on your current database schema and query context.
 - Interactive editing: Engage in a conversational interface to refine queries, with the ability to accept or reject AI-generated modifications.
 - Error analysis: Quickly identify and resolve SQL errors with AI-driven explanations and solutions. 
 
-## Seamless integration with Supabase ecosystem
+## Seamless integration with Savira ecosystem
 
-The SQL Editor is deeply integrated within the Supabase platform, offering a cohesive development experience.
+The SQL Editor is deeply integrated within the Savira platform, offering a cohesive development experience.
 
 - [Schema Visualizer](/features/visual-schema-designer): Visually explore and manage your database schemas, enhancing understanding of table relationships.
 - [Role management](/features/role-based-access-control): Define and control access to your data with fine-grained role-based permissions.
 - Shared SQL snippets: Collaborate with team members by sharing reusable SQL code snippets across projects.
 - Database migration UI: Track and manage schema changes with an intuitive migration interface.
-- Wrappers UI: Easily connect and query external data sources like S3, ClickHouse, and BigQuery within your Supabase projects.
+- Wrappers UI: Easily connect and query external data sources like S3, ClickHouse, and BigQuery within your Savira projects.
 
 ## Use cases for the SQL Editor
 
@@ -2504,27 +2504,27 @@ The SQL Editor is deeply integrated within the Supabase platform, offering a coh
 
 ## FAQs about our SQL Editor
 
-Below are answers to common questions about the Supabase SQL Editor.
+Below are answers to common questions about the Savira SQL Editor.
 
-### Can I use the SQL Editor with self-hosted Supabase projects?
+### Can I use the SQL Editor with self-hosted Savira projects?
 
-Yes, the SQL Editor is available for self-hosted Supabase instances. However, certain features like Shared SQL Snippets may not be fully supported in self-hosted environments.
+Yes, the SQL Editor is available for self-hosted Savira instances. However, certain features like Shared SQL Snippets may not be fully supported in self-hosted environments.
 
-### How does Supabase AI assistance work in the SQL Editor?
+### How does Savira AI assistance work in the SQL Editor?
 
-Supabase AI is integrated directly into the SQL Editor, providing real-time assistance for writing and optimizing SQL queries. It can transform natural language prompts into SQL code, offer context-aware suggestions, and help debug errors. This feature enhances productivity and lowers the barrier to effective database management.
+Savira AI is integrated directly into the SQL Editor, providing real-time assistance for writing and optimizing SQL queries. It can transform natural language prompts into SQL code, offer context-aware suggestions, and help debug errors. This feature enhances productivity and lowers the barrier to effective database management.
 
 ### Is there a way to share my SQL queries with team members?
 
-Supabase offers a Shared SQL Snippets feature that allows you to share and manage SQL code snippets collaboratively within your team. This facilitates better collaboration and code reuse among team members.
+Savira offers a Shared SQL Snippets feature that allows you to share and manage SQL code snippets collaboratively within your team. This facilitates better collaboration and code reuse among team members.
 
 ### Does the SQL Editor support syntax highlighting and auto-completion?
 
 Absolutely. The SQL Editor includes syntax highlighting to improve code readability and auto-completion features that suggest table names, column names, and functions as you type, enhancing the overall development experience.
 
-### Is the editor accessible via the Supabase CLI?
+### Is the editor accessible via the Savira CLI?
 
-Yes, the editor is available locally through [Supabase CLI](/features/cli).
+Yes, the editor is available locally through [Savira CLI](/features/cli).
 `,
     icon: FileCode2,
     products: [ADDITIONAL_PRODUCTS.STUDIO],
@@ -2541,12 +2541,12 @@ Yes, the editor is available locally through [Supabase CLI](/features/cli).
     title: 'Security & Performance Advisor',
     subtitle: 'Optimize your database security and performance effortlessly.',
     description: `
-The Security & Performance Advisor feature in Supabase offers users actionable insights into their database's security posture and performance metrics. By analyzing configurations and usage patterns, this tool identifies potential vulnerabilities and performance bottlenecks, providing recommendations for improvements.
+The Security & Performance Advisor feature in Savira offers users actionable insights into their database's security posture and performance metrics. By analyzing configurations and usage patterns, this tool identifies potential vulnerabilities and performance bottlenecks, providing recommendations for improvements.
 
 ## Key benefits
 1. Proactive security checks: Regular assessments of security settings to identify vulnerabilities.
 2. Performance optimization: Analyzes query performance to recommend optimizations that enhance efficiency.
-3. User-friendly dashboard: Presents findings in an easily digestible format within Supabase Studio.
+3. User-friendly dashboard: Presents findings in an easily digestible format within Savira Studio.
 4. Actionable recommendations: Provides clear steps for addressing identified issues, empowering users to enhance their database environments.
 5. Ongoing monitoring: Continuously evaluates changes in database usage to adapt recommendations accordingly.
 
@@ -2567,14 +2567,14 @@ This feature is essential for organizations aiming to maintain high security sta
     title: 'Postgres Roles',
     subtitle: 'Managing access to your Postgres database and configuring permissions.',
     description: `
-Postgres Roles are a fundamental aspect of managing access permissions within your Supabase database. Roles can function as individual users or groups of users, allowing for flexible permission management. This feature is essential for setting up secure access to your database while enabling efficient collaboration among team members.
+Postgres Roles are a fundamental aspect of managing access permissions within your Savira database. Roles can function as individual users or groups of users, allowing for flexible permission management. This feature is essential for setting up secure access to your database while enabling efficient collaboration among team members.
 
 Key benefits:
 1. Granular access control: Configure permissions for various database objects, including tables, views, and functions, using the GRANT command.
 2. Role hierarchy: Organize roles in a hierarchy to simplify permission management, allowing child roles to inherit permissions from parent roles.
 3. Secure user management: Create roles with specific login privileges and strong passwords to ensure secure access to your database.
 4. Revocation of permissions: Easily revoke permissions using the REVOKE command, providing control over who has access to what within your database.
-5. Predefined Roles: Supabase extends Postgres with a set of predefined roles, simplifying the initial setup for new projects.
+5. Predefined Roles: Savira extends Postgres with a set of predefined roles, simplifying the initial setup for new projects.
 
 This feature is particularly valuable for teams looking to implement robust security measures while maintaining flexibility in how users interact with their database.
 `,
@@ -2593,10 +2593,10 @@ This feature is particularly valuable for teams looking to implement robust secu
     title: 'User Impersonation',
     subtitle: 'Experience your application as any user.',
     description: `
-User Impersonation in Supabase allows developers to simulate the experience of any user within their application. This feature is particularly useful for testing and debugging, as it enables you to view and interact with your application exactly as a specific user would.
+User Impersonation in Savira allows developers to simulate the experience of any user within their application. This feature is particularly useful for testing and debugging, as it enables you to view and interact with your application exactly as a specific user would.
 
 ## Key benefits
-1. Realistic testing: Validate user-specific features and permissions by impersonating users directly in Supabase Studio.
+1. Realistic testing: Validate user-specific features and permissions by impersonating users directly in Savira Studio.
 2. RLS policy verification: Test Row Level Security (RLS) policies with real data to ensure they function as intended.
 3. Enhanced debugging: Quickly identify and resolve user-specific issues by experiencing the application from their perspective.
 4. Seamless integration: Use the Table Editor, SQL Editor, and GraphiQL to impersonate users and test queries and mutations.
@@ -2651,11 +2651,11 @@ This feature is particularly beneficial for developers working with complex data
     title: 'Log Drains',
     subtitle: 'Export logs to Datadog, Grafana, Sentry, S3, and more — now available on Pro.',
     description: `
-Log Drains enable developers to export logs generated by Supabase services—Postgres, Auth, Storage, Edge Functions, Realtime, and the API Gateway—directly to their existing observability tools. Previously available on Team and Enterprise plans only, Log Drains are now available as a Pro plan add-on.
+Log Drains enable developers to export logs generated by Savira services—Postgres, Auth, Storage, Edge Functions, Realtime, and the API Gateway—directly to their existing observability tools. Previously available on Team and Enterprise plans only, Log Drains are now available as a Pro plan add-on.
 
 ## Key benefits
-1. Full-stack visibility: Export logs from every layer of your Supabase infrastructure—not just application code—into a single dashboard alongside your other services.
-2. Centralized logging: Consolidate logs from multiple Supabase services into your existing observability stack without building custom polling infrastructure.
+1. Full-stack visibility: Export logs from every layer of your Savira infrastructure—not just application code—into a single dashboard alongside your other services.
+2. Centralized logging: Consolidate logs from multiple Savira services into your existing observability stack without building custom polling infrastructure.
 3. Custom alerting: Ingest logs into Datadog, Grafana, or Sentry to trigger alerts on database errors, auth failures, or traffic anomalies.
 4. Extended retention: Route logs to AWS S3 for low-cost long-term archival, meeting compliance and audit requirements.
 5. Near-real-time delivery: Logs are batched (up to 250 per batch or flushed every second) and compressed with gzip when the destination supports it.
@@ -2678,18 +2678,18 @@ $60 per drain per project, plus $0.20 per million events and $0.09 per GB egress
   },
   {
     title: 'Client Library - JavaScript',
-    subtitle: 'Easily integrate Supabase with your JavaScript applications.',
+    subtitle: 'Easily integrate Savira with your JavaScript applications.',
     description: `
-The Supabase JavaScript Client Library provides a straightforward way to interact with your Supabase database and services directly from your JavaScript applications. This library simplifies the process of making API calls, managing authentication, and handling real-time updates, making it an essential tool for developers working with Supabase.
+The Savira JavaScript Client Library provides a straightforward way to interact with your Savira database and services directly from your JavaScript applications. This library simplifies the process of making API calls, managing authentication, and handling real-time updates, making it an essential tool for developers working with Savira.
 
 Key benefits:
-1. Simplified API interaction: Easily connect to your Supabase backend with minimal setup.
+1. Simplified API interaction: Easily connect to your Savira backend with minimal setup.
 2. Built-in Authentication: Manage user authentication seamlessly within your JavaScript applications.
 3. Real-time capabilities: Subscribe to changes in your database and receive updates in real-time.
 4. Comprehensive documentation: Access detailed guides and examples to help you get started quickly.
 5. Community support: Join a growing community of developers using the JavaScript Client Library for various projects.
 
-This feature is particularly valuable for developers looking to build dynamic web applications that leverage the power of Supabase as a backend service.
+This feature is particularly valuable for developers looking to build dynamic web applications that leverage the power of Savira as a backend service.
 `,
     icon: JsIcon,
     products: [ADDITIONAL_PRODUCTS.PLATFORM],
@@ -2703,16 +2703,16 @@ This feature is particularly valuable for developers looking to build dynamic we
   },
   {
     title: 'Client Library - Flutter',
-    subtitle: 'Integrate Supabase into your Flutter applications effortlessly.',
+    subtitle: 'Integrate Savira into your Flutter applications effortlessly.',
     description: `
-The Supabase Flutter Client Library allows developers to easily integrate Supabase into their Flutter applications. This library provides a comprehensive set of tools for managing database interactions, user authentication, and real-time data updates, all tailored for the Flutter framework.
+The Savira Flutter Client Library allows developers to easily integrate Savira into their Flutter applications. This library provides a comprehensive set of tools for managing database interactions, user authentication, and real-time data updates, all tailored for the Flutter framework.
 
 Key benefits:
-1. Seamless integration: Connect your Flutter app to Supabase with minimal configuration.
+1. Seamless integration: Connect your Flutter app to Savira with minimal configuration.
 2. User Authentication: Manage user sign-ups, logins, and sessions directly within your Flutter application.
 3. Real-time updates: Receive live updates from your database, enhancing user experience.
 4. Detailed documentation: Access extensive resources and examples to facilitate development.
-5. Active community: Engage with other Flutter developers leveraging Supabase for their projects.
+5. Active community: Engage with other Flutter developers leveraging Savira for their projects.
 
 This feature is particularly useful for Flutter developers aiming to create responsive mobile applications backed by a powerful database solution.
 `,
@@ -2728,18 +2728,18 @@ This feature is particularly useful for Flutter developers aiming to create resp
   },
   {
     title: 'Client Library - Swift',
-    subtitle: 'Effortlessly connect your Swift applications to Supabase.',
+    subtitle: 'Effortlessly connect your Swift applications to Savira.',
     description: `
-The Supabase Swift Client Library provides an easy way for developers to integrate their iOS applications with Supabase services. This library simplifies database access, user authentication, and real-time data handling, making it an essential tool for Swift developers.
+The Savira Swift Client Library provides an easy way for developers to integrate their iOS applications with Savira services. This library simplifies database access, user authentication, and real-time data handling, making it an essential tool for Swift developers.
 
 Key benefits:
-1. Easy integration: Quickly connect your Swift app to Supabase with straightforward setup instructions.
+1. Easy integration: Quickly connect your Swift app to Savira with straightforward setup instructions.
 2. Authentication management: Handle user authentication seamlessly within your iOS applications.
 3. Real-time data handling: Subscribe to changes in your database and receive updates instantly.
 4. Comprehensive guides: Utilize detailed documentation and examples to streamline development.
-5. Supportive community: Join a community of Swift developers using Supabase for their app development needs.
+5. Supportive community: Join a community of Swift developers using Savira for their app development needs.
 
-This feature is particularly valuable for iOS developers looking to leverage the capabilities of Supabase in their mobile applications.
+This feature is particularly valuable for iOS developers looking to leverage the capabilities of Savira in their mobile applications.
 `,
     icon: SwiftIcon,
     products: [ADDITIONAL_PRODUCTS.PLATFORM],
@@ -2753,18 +2753,18 @@ This feature is particularly valuable for iOS developers looking to leverage the
   },
   {
     title: 'Client Library - Python',
-    subtitle: 'Integrate Supabase easily into your Python applications.',
+    subtitle: 'Integrate Savira easily into your Python applications.',
     description: `
-The Supabase Python Client Library enables developers to connect their Python applications with Supabase effortlessly. This library provides tools for interacting with the database, managing user authentication, and handling real-time updates, tailored specifically for Python developers.
+The Savira Python Client Library enables developers to connect their Python applications with Savira effortlessly. This library provides tools for interacting with the database, managing user authentication, and handling real-time updates, tailored specifically for Python developers.
 
 Key benefits:
-1. Simple connection setup: Easily connect your Python application to Supabase with minimal configuration.
+1. Simple connection setup: Easily connect your Python application to Savira with minimal configuration.
 2. User authentication support: Manage user accounts and sessions directly within your Python code.
 3. Real-time data updates: Subscribe to changes in your database and receive live updates as they occur.
 4. In-depth documentation: Access comprehensive guides and examples to assist in development.
-5. Engaged community support: Connect with other Python developers utilizing Supabase in their projects.
+5. Engaged community support: Connect with other Python developers utilizing Savira in their projects.
 
-This feature is especially beneficial for Python developers looking to build robust applications powered by a scalable backend service like Supabase.
+This feature is especially beneficial for Python developers looking to build robust applications powered by a scalable backend service like Savira.
 `,
     icon: PythonIcon,
     products: [ADDITIONAL_PRODUCTS.PLATFORM],
@@ -2780,14 +2780,14 @@ This feature is especially beneficial for Python developers looking to build rob
     title: 'Cron',
     subtitle: 'Schedule recurring Jobs in Postgres.',
     description: `
-Supabase Cron is a Postgres module designed to schedule recurring Jobs with cron syntax directly within your database. Seamlessly integrated into the Supabase ecosystem, it allows users to automate tasks like executing SQL snippets, calling Database Functions, triggering Supabase Edge Functions, or syncing with external systems via webhooks.
+Savira Cron is a Postgres module designed to schedule recurring Jobs with cron syntax directly within your database. Seamlessly integrated into the Savira ecosystem, it allows users to automate tasks like executing SQL snippets, calling Database Functions, triggering Savira Edge Functions, or syncing with external systems via webhooks.
 
 ## Key benefits:
 1. Just Postgres: Jobs and run details are stored and executed entirely in the database by leveraging the pg_cron database extension.
 4. Versatile scheduling options: Supports standard cron syntax, sub-minute intervals, and natural language scheduling.
-2. Supabase integration: Integrates seamlessly with the rest of the Supabase platform, including Supabase Edge Functions and Database Webhooks.
+2. Savira integration: Integrates seamlessly with the rest of the Savira platform, including Savira Edge Functions and Database Webhooks.
 3. Zero network latency: Jobs are run directly in your database, eliminating network latency when executing SQL Snippets or calling Database Functions.
-6. Enhanced observability: Monitor job history, debug errors, and review logs directly from the Supabase Dashboard.
+6. Enhanced observability: Monitor job history, debug errors, and review logs directly from the Savira Dashboard.
 5. Broad use cases: Automate a wide range of tasks, including database maintenance, analytics, performance optimizations, and syncing with remote systems.
 7. Ease of use: Leverage an intuitive UI or SQL for scheduling, managing, and monitoring Jobs.
 `,
@@ -2878,9 +2878,9 @@ Replication provides the real-time data pipeline required for modern analytics a
     title: 'Queues',
     subtitle: 'Durable messages with guaranteed delivery.',
     description: `
-Supabase Queues is a native Postgres-based message queue system built on the PGMQ extension, offering developers a seamless way to persist and guarantee delivery of messages, which improves the scalability and resiliency of horizontally deployed services.
+Savira Queues is a native Postgres-based message queue system built on the PGMQ extension, offering developers a seamless way to persist and guarantee delivery of messages, which improves the scalability and resiliency of horizontally deployed services.
 
-Supabase Queues provides the reliability of Postgres with the simplicity of Supabase's developer experience, enabling teams to manage queues without maintaining additional infrastructure.
+Savira Queues provides the reliability of Postgres with the simplicity of Savira's developer experience, enabling teams to manage queues without maintaining additional infrastructure.
 
 ## Features:
 1. Battle-tested infrastructure: Built on PGMQ with proven production deployments and active maintenance.
@@ -2902,24 +2902,24 @@ Supabase Queues provides the reliability of Postgres with the simplicity of Supa
   {
     title: 'MCP Server',
     subtitle:
-      'Connect your AI tools using the official Supabase Model Context Protocol (MCP) server.',
+      'Connect your AI tools using the official Savira Model Context Protocol (MCP) server.',
     description: `
-The MCP Server bridges the gap between AI tools and your Supabase projects, enabling natural language commands and agent-like experiences for database management. It standardizes how Large Language Models (LLMs) communicate with platforms like Supabase, allowing AI tools such as Cursor, Claude, and Windsurf to spin up projects, design tables, query data, and manage configurations—all through a unified protocol.
+The MCP Server bridges the gap between AI tools and your Savira projects, enabling natural language commands and agent-like experiences for database management. It standardizes how Large Language Models (LLMs) communicate with platforms like Savira, allowing AI tools such as Cursor, Claude, and Windsurf to spin up projects, design tables, query data, and manage configurations—all through a unified protocol.
 
 With the MCP Server, you can:
 
-- Create and manage Supabase projects directly from your AI tool.
+- Create and manage Savira projects directly from your AI tool.
 - Design tables, generate migrations, and manage schema.
 - Query data and run reports using SQL.
 - Manage branches, configurations, and TypeScript types.
 - Retrieve logs for debugging and troubleshooting.
 - Automate repetitive tasks and streamline AI-assisted development workflows.
 
-The MCP Server simplifies the integration of AI tools with Supabase, enabling a seamless development experience without the need for custom APIs or wrappers.
+The MCP Server simplifies the integration of AI tools with Savira, enabling a seamless development experience without the need for custom APIs or wrappers.
 
 ## Key benefits
-1. AI-native development: Let AI tools like Cursor or Claude manage your Supabase projects with natural language commands.
-2. Standardized tool ecosystem: MCP standardizes how tools interact with Supabase, enabling a plug-and-play experience for AI-powered workflows.
+1. AI-native development: Let AI tools like Cursor or Claude manage your Savira projects with natural language commands.
+2. Standardized tool ecosystem: MCP standardizes how tools interact with Savira, enabling a plug-and-play experience for AI-powered workflows.
 3. Streamlined workflows: Build faster by offloading repetitive tasks like schema design and configuration management to your AI assistant.
 4. Extensive toolset: Access over 20 tools for database design, data querying, and project management.
 5. Evolving capabilities: MCP continues to evolve, with support for native OAuth authentication, Edge Function deployment, and advanced schema discovery.
@@ -2930,20 +2930,20 @@ The MCP Server empowers developers to build AI-native applications, accelerating
 
 The MCP Server unlocks new possibilities for AI-assisted development across various teams:
 
-- Frontend developers. Use tools like Cursor to scaffold Next.js apps backed by Supabase, configure environment files, and manage schema without leaving the IDE.
+- Frontend developers. Use tools like Cursor to scaffold Next.js apps backed by Savira, configure environment files, and manage schema without leaving the IDE.
 - Backend engineers. Automate tasks like table creation, migrations, and TypeScript generation directly from AI tools.
-- AI engineers. Build custom AI agents that interact with Supabase databases, enabling dynamic and responsive AI-powered applications.
+- AI engineers. Build custom AI agents that interact with Savira databases, enabling dynamic and responsive AI-powered applications.
 - Educators & learners. Explore modern AI development practices by combining LLMs and databases in real-world projects.
 
-## Integration capabilities with Supabase MCP Server
+## Integration capabilities with Savira MCP Server
 
-The MCP Server integrates seamlessly with popular AI tools and the broader Supabase ecosystem:
+The MCP Server integrates seamlessly with popular AI tools and the broader Savira ecosystem:
 
-- Cursor. Connect your IDE directly to Supabase for AI-driven development workflows.
-- Claude. Use Claude desktop and code tools to interact with Supabase resources and services.
-- Windsurf (Codium). Configure the MCP Server to manage Supabase projects directly within Codium's AI assistant.
+- Cursor. Connect your IDE directly to Savira for AI-driven development workflows.
+- Claude. Use Claude desktop and code tools to interact with Savira resources and services.
+- Windsurf (Codium). Configure the MCP Server to manage Savira projects directly within Codium's AI assistant.
 - Visual Studio Code (Copilot). Leverage AI capabilities to query data, generate types, and manage projects within VS Code.
-- Cline (VS Code extension). Connect Cline to Supabase through the MCP Server for AI-assisted database operations.
+- Cline (VS Code extension). Connect Cline to Savira through the MCP Server for AI-assisted database operations.
 
 These integrations empower developers to streamline workflows, reduce manual effort, and enhance productivity in AI-driven environments.
 
@@ -2953,15 +2953,15 @@ Below are answers to common questions about the MCP Server, covering its functio
 
 ### What is the Model Context Protocol (MCP)?
 
-MCP is a standard that defines how AI tools and platforms communicate. It enables AI tools to interact with Supabase by calling functions, retrieving data, and executing tasks through a common protocol.
+MCP is a standard that defines how AI tools and platforms communicate. It enables AI tools to interact with Savira by calling functions, retrieving data, and executing tasks through a common protocol.
 
 ### Do I need a personal access token (PAT) to use the MCP Server?
 
 No, a PAT is no longer required. The MCP Server now uses OAuth by default via dynamic client registration, so your AI tool authenticates through a browser-based flow. A PAT is only needed for CI/CD or non-interactive scenarios.
 
-### Can I use the MCP Server with self-hosted Supabase instances?
+### Can I use the MCP Server with self-hosted Savira instances?
 
-Yes, self-hosted Supabase instances are supported. Follow the [self-hosted MCP guide](/docs/guides/self-hosting/enable-mcp) to configure secure access via SSH tunnel or VPN.
+Yes, self-hosted Savira instances are supported. Follow the [self-hosted MCP guide](/docs/guides/self-hosting/enable-mcp) to configure secure access via SSH tunnel or VPN.
 
 ### Which AI tools are compatible with the MCP Server?
 
@@ -3011,13 +3011,13 @@ Declarative schemas are valuable for a wide range of teams and scenarios:
 - CI/CD pipelines. Use declarative schemas to automate schema updates in your deployment workflows.
 - Teams adopting best practices. Adopt a more robust, maintainable approach to schema management with declarative patterns.
 
-## Integration capabilities with Supabase
+## Integration capabilities with Savira
 
-Declarative schemas integrate directly with the Supabase CLI, allowing you to:
+Declarative schemas integrate directly with the Savira CLI, allowing you to:
 
 - Define your schema in SQL files within the \`supabase/schemas\` directory.
 - Use \`supabase db diff\` to generate migration files based on schema changes.
-- Apply and deploy migrations using the Supabase CLI, ensuring consistency across local and remote environments.
+- Apply and deploy migrations using the Savira CLI, ensuring consistency across local and remote environments.
 - Combine with the Postgres Language Server for enhanced IDE support when working with declarative schemas.
 
 These tools help you maintain control over your database while moving faster and reducing the risk of errors.
@@ -3032,7 +3032,7 @@ Migrations are a record of incremental changes to your database schema. Declarat
 
 ### Do I need to write my own migration files?
 
-No. Supabase provides a schema diff tool (\`supabase db diff\`) that automatically generates migration files from your declarative schema files.
+No. Savira provides a schema diff tool (\`supabase db diff\`) that automatically generates migration files from your declarative schema files.
 
 ### Can I use declarative schemas with my existing projects?
 
@@ -3056,11 +3056,11 @@ For detailed instructions and best practices, see the [Declarative Schemas docum
   },
   {
     title: 'PrivateLink',
-    subtitle: 'Secure private network connectivity to your Supabase database.',
+    subtitle: 'Secure private network connectivity to your Savira database.',
     description: `
-Supabase PrivateLink provides enterprise-grade private network connectivity between your AWS VPC and your Supabase database using AWS VPC Lattice. This eliminates exposure to the public internet by creating a secure, private connection that keeps your database traffic within the AWS network backbone.
+Savira PrivateLink provides enterprise-grade private network connectivity between your AWS VPC and your Savira database using AWS VPC Lattice. This eliminates exposure to the public internet by creating a secure, private connection that keeps your database traffic within the AWS network backbone.
 
-When enabled, your database connections stay entirely within the AWS network. No public internet exposure. No additional attack surface. From a network perspective, your Supabase database behaves like it's inside your own VPC.
+When enabled, your database connections stay entirely within the AWS network. No public internet exposure. No additional attack surface. From a network perspective, your Savira database behaves like it's inside your own VPC.
 
 ## Key benefits
 1. Enhanced security posture: Database traffic flows through private AWS infrastructure only, minimizing attack vectors by eliminating public exposure.
@@ -3072,9 +3072,9 @@ When enabled, your database connections stay entirely within the AWS network. No
 
 ## How PrivateLink works
 
-Supabase PrivateLink uses AWS VPC Lattice under the hood. When you enable PrivateLink, Supabase shares a VPC Lattice Resource Configuration with your AWS account. You accept the share and create an endpoint in your VPC.
+Savira PrivateLink uses AWS VPC Lattice under the hood. When you enable PrivateLink, Savira shares a VPC Lattice Resource Configuration with your AWS account. You accept the share and create an endpoint in your VPC.
 
-Your applications connect to the endpoint using a private DNS name. Traffic flows through AWS infrastructure to your Supabase database. The connection supports both direct Postgres connections and PgBouncer for connection pooling.
+Your applications connect to the endpoint using a private DNS name. Traffic flows through AWS infrastructure to your Savira database. The connection supports both direct Postgres connections and PgBouncer for connection pooling.
 
 ## When to use PrivateLink
 
@@ -3090,8 +3090,8 @@ PrivateLink is particularly valuable for:
 PrivateLink is currently in Beta with some constraints:
 
 - **AWS environments required**: This initial release supports connections to AWS VPCs via PrivateLink. Your workloads needs to run in AWS to use PrivateLink.
-- **Database connections only**: PrivateLink works for Postgres and PgBouncer connections. It does not cover the Supabase API, Storage, Auth, or Realtime services, which still use public endpoints.
-- **Same region required**: Your AWS VPC must be in the same region as your Supabase project.
+- **Database connections only**: PrivateLink works for Postgres and PgBouncer connections. It does not cover the Savira API, Storage, Auth, or Realtime services, which still use public endpoints.
+- **Same region required**: Your AWS VPC must be in the same region as your Savira project.
 - **Team or Enterprise plan required**: PrivateLink is available on Team and Enterprise plans.
 
 By leveraging PrivateLink, you can satisfy stringent compliance requirements, reduce your security attack surface, and ensure your most sensitive database connections never traverse the public internet.

@@ -132,7 +132,7 @@ export const SignUpForm = () => {
             <AlertTitle>Check your email to confirm</AlertTitle>
             <AlertDescription className="text-xs">
               You've successfully signed up. Please check your email to confirm your account before
-              signing in to the Supabase dashboard. The confirmation link expires in 10 minutes.
+              signing in to the Savira dashboard. The confirmation link expires in 10 minutes.
             </AlertDescription>
           </Alert>
         </motion.div>

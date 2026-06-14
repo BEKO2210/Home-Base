@@ -92,7 +92,7 @@ const PricingComputeSection = () => {
                   <p className="text-foreground-light">SOC2 & ISO 27001</p>
                   <p className="text-foreground-light">Project-scoped and read-only access</p>
                   <p className="text-foreground-light">HIPAA available as paid add-on</p>
-                  <p className="text-foreground-light">SSO for Supabase Dashboard</p>
+                  <p className="text-foreground-light">SSO for Savira Dashboard</p>
                   <p className="text-foreground-light">Priority email support & SLAs</p>
                   <p className="text-foreground-light">Daily backups (14 day retention)</p>
                 </>
@@ -152,7 +152,7 @@ const PricingComputeSection = () => {
               <div className="max-w-4xl prose p-4 md:p-8 relative z-10">
                 <h4 className="text-lg">Choose the best compute size for you</h4>
                 <p className="text-[13px] text-foreground-lighter">
-                  Every project on the Supabase Platform comes with its own dedicated Postgres
+                  Every project on the Savira Platform comes with its own dedicated Postgres
                   instance. Select the compute size that fits your needs.
                 </p>
                 <p className="text-[13px] text-foreground-lighter">

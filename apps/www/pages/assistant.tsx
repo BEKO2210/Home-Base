@@ -54,7 +54,7 @@ const welcomeMessages = [
           </g>
         </svg>
         <p>
-          Welcome Product Hunter! 👋 Thanks for checking out the Supabase Assistant. Let me show you
+          Welcome Product Hunter! 👋 Thanks for checking out the Savira Assistant. Let me show you
           what I can do!
         </p>
       </div>
@@ -256,7 +256,7 @@ USING (
     ],
   },
   {
-    label: 'SQL to Supabase-js',
+    label: 'SQL to Savira-js',
     messages: [
       {
         id: '23',
@@ -307,18 +307,18 @@ ORDER BY p.created_at DESC;`}
       {
         id: '25',
         role: 'user' as const,
-        content: 'Can you show me how to do this with the Supabase client?',
+        content: 'Can you show me how to do this with the Savira client?',
         createdAt: new Date(),
       },
       {
         id: '26',
         role: 'assistant' as const,
-        content: "Here's how to perform the same query using the Supabase JavaScript client:",
+        content: "Here's how to perform the same query using the Savira JavaScript client:",
         createdAt: new Date(),
         render: (
           <SqlSnippet
             id="projects-js"
-            title="Get All Projects with Supabase Client"
+            title="Get All Projects with Savira Client"
             sql={`const { data: projects, error } = await supabase
   .from('projects')
   .select(\`
@@ -627,8 +627,8 @@ function Assistant() {
   const [incomingMessages, setIncomingMessages] = useState<Message[]>([])
   const isLoggedIn = useIsLoggedIn()
   const isUserLoading = useIsUserLoading()
-  const meta_title = 'AI | Supabase'
-  const meta_description = 'Build AI-powered applications with Supabase'
+  const meta_title = 'AI | Savira'
+  const meta_description = 'Build AI-powered applications with Savira'
   const router = useRouter()
   const { query } = router
 

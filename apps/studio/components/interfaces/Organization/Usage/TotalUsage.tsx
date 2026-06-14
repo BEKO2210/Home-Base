@@ -138,7 +138,7 @@ export const TotalUsage = ({
                   url: `${DOCS_URL}/guides/platform/billing-on-supabase`,
                 },
                 {
-                  name: 'Supabase Plans',
+                  name: 'Savira Plans',
                   url: 'https://supabase.com/pricing',
                 },
               ]
@@ -169,7 +169,7 @@ export const TotalUsage = ({
                   <span>
                     You have exceeded your{' '}
                     <span className="font-medium">{subscription?.plan.name}</span> Plan quota in
-                    this billing cycle. Upgrade your plan to continue using Supabase without
+                    this billing cycle. Upgrade your plan to continue using Savira without
                     restrictions.
                   </span>
                 ) : hasExceededAnyLimits &&
@@ -178,7 +178,7 @@ export const TotalUsage = ({
                   <span>
                     You have exceeded your{' '}
                     <span className="font-medium">{subscription?.plan.name}</span> Plan quota in
-                    this billing cycle. Disable your spend cap to continue using Supabase without
+                    this billing cycle. Disable your spend cap to continue using Savira without
                     restrictions.
                   </span>
                 ) : hasExceededAnyLimits && subscription?.usage_billing_enabled === true ? (

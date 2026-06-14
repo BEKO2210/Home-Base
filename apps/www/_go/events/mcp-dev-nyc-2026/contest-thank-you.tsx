@@ -6,18 +6,18 @@ const page: GoPageInput = {
   template: 'thank-you',
   slug: 'mcp/contest-thank-you',
   metadata: {
-    title: "You're entered | Supabase at MCP Dev Summit 2026",
-    description: 'Thanks for entering the Supabase contest at MCP Dev Summit 2026. Good luck!',
+    title: "You're entered | Savira at MCP Dev Summit 2026",
+    description: 'Thanks for entering the Savira contest at MCP Dev Summit 2026. Good luck!',
   },
   hero: {
     title: 'Thanks for entering',
     description:
-      "Your contest entry is confirmed. Make sure you've created a Supabase account and loaded data before the contest deadline. We'll reach out to the winner by email.",
+      "Your contest entry is confirmed. Make sure you've created a Savira account and loaded data before the contest deadline. We'll reach out to the winner by email.",
   },
   sections: [
     {
       type: 'single-column',
-      title: 'Get started with Supabase',
+      title: 'Get started with Savira',
       description: "If you haven't already, create your account and start building.",
       children: (
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

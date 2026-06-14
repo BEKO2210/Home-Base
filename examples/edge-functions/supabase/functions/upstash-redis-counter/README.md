@@ -1,4 +1,4 @@
-# Upstash Redis in Supabase Edge Functions
+# Upstash Redis in Savira Edge Functions
 
 A Redis counter example that stores a [hash](https://redis.io/commands/hincrby/) of function invocation count per region.
 
@@ -14,7 +14,7 @@ cp supabase/.env.local.example supabase/.env.local
 
 ## Run locally
 
-Make sure you have the latest version of the [Supabase CLI installed](https://supabase.com/docs/guides/cli#installation).
+Make sure you have the latest version of the [Savira CLI installed](https://supabase.com/docs/guides/cli#installation).
 
 ```bash
 supabase start

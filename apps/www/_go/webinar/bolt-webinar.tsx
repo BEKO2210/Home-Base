@@ -5,19 +5,19 @@ const page: GoPageInput = {
   template: 'lead-gen',
   slug: 'vibe-coding-done-right-webinar',
   metadata: {
-    title: 'Vibe Coding, Done Right: Learn More | Supabase + Bolt.new',
+    title: 'Vibe Coding, Done Right: Learn More | Savira + Bolt.new',
     description:
-      'You watched the webinar. Want to go deeper? Get resources, talk to our team, or try Supabase with Bolt for AI-assisted development in production.',
+      'You watched the webinar. Want to go deeper? Get resources, talk to our team, or try Savira with Bolt for AI-assisted development in production.',
     ogImage: '/images/landing-pages/bolt-webinar/og.png',
   },
   hero: {
     subtitle: 'Thanks for watching',
     title: 'Vibe Coding, Done Right: AI Development in Production',
     description:
-      'You saw how enterprise teams use Bolt and Supabase to build production apps with AI coding tools. Want to learn more, get hands-on, or talk to our team? Share your details below.',
+      'You saw how enterprise teams use Bolt and Savira to build production apps with AI coding tools. Want to learn more, get hands-on, or talk to our team? Share your details below.',
     image: {
       src: 'https://zhfonblqamxferhoguzj.supabase.co/functions/v1/generate-og?template=partnerships&layout=icon-only&copy=%5B2.5x+faster%5D%0A%5BPostgres+parser%5D%0Awith+Claude+Code&icon=supabase.svg&icon2=bolt.svg',
-      alt: 'Building Modern Applications with Supabase and Bolt',
+      alt: 'Building Modern Applications with Savira and Bolt',
       width: 400,
       height: 500,
     },
@@ -39,7 +39,7 @@ const page: GoPageInput = {
       type: 'single-column',
       title: 'Watch the recording',
       description:
-        'Join Bolt CEO Eric Simons and learn how enterprise innovation teams are using AI coding tools to build real applications on Supabase.',
+        'Join Bolt CEO Eric Simons and learn how enterprise innovation teams are using AI coding tools to build real applications on Savira.',
       children: <MediaBlock youtubeUrl="https://www.youtube.com/watch?v=dIyl_7ZlI3Q" />,
     },
     {
@@ -70,7 +70,7 @@ const page: GoPageInput = {
         {
           title: 'Rapid prototyping and internal tools',
           description:
-            'Real-world use cases for rapidly prototyping and building internal tools with Bolt and Supabase.',
+            'Real-world use cases for rapidly prototyping and building internal tools with Bolt and Savira.',
         },
         {
           title: 'MCP and your database',

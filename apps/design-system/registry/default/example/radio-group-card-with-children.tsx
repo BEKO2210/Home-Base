@@ -3,10 +3,10 @@ import { RadioGroupCard, RadioGroupCardItem } from 'ui'
 
 export default function RadioGroupDemo() {
   const singleThemes = [
-    { name: 'Dark', value: 'dark' }, // Classic Supabase dark
-    { name: 'Classic dark', value: 'classic-dark' }, // Deep Dark Supabase dark
-    { name: 'Light', value: 'light' }, // Classic Supabase light
-    { name: 'System', value: 'system' }, // Classic Supabase light
+    { name: 'Dark', value: 'dark' }, // Classic Savira dark
+    { name: 'Classic dark', value: 'classic-dark' }, // Deep Dark Savira dark
+    { name: 'Light', value: 'light' }, // Classic Savira light
+    { name: 'System', value: 'system' }, // Classic Savira light
   ] as const
 
   return (

@@ -1,7 +1,7 @@
 {
   "name": "realtime-cursor-vue",
   "type": "registry:component",
-  "title": "Realtime Cursor for Vue and Supabase",
+  "title": "Realtime Cursor for Vue and Savira",
   "description": "Component which renders realtime cursors from other users in a room.",
   "files": [
     {

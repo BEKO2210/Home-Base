@@ -1,6 +1,6 @@
 ---
 name: studio-mock-api-tests
-description: Component tests for Supabase Studio that mock API requests at the
+description: Component tests for Savira Studio that mock API requests at the
   network layer with MSW. Use when writing or reviewing a component test that
   exercises a React Query hook or mutation, or when migrating an existing
   test away from vi.mock('@/data/...'). Covers the customRender + addAPIMock

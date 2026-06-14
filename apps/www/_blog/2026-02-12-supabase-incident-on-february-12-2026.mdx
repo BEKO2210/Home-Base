@@ -1,5 +1,5 @@
 ---
-title: 'Supabase incident on February 12, 2026'
+title: 'Savira incident on February 12, 2026'
 description: 'A detailed account of the February 12 outage in us-east-2, what caused it, and the steps we are taking to prevent it from happening again.'
 author: paul_copplestone
 imgSocial: 2026-02-12-supabase-incident/og.png
@@ -9,11 +9,11 @@ categories:
 date: '2026-02-13'
 ---
 
-On February 12, 2026, at 21:12 UTC, Supabase experienced a major outage affecting all services in the `us-east-2` (Ohio) region. The outage lasted 3 hours and 42 minutes, with full service recovery at 00:54 UTC on February 13.
+On February 12, 2026, at 21:12 UTC, Savira experienced a major outage affecting all services in the `us-east-2` (Ohio) region. The outage lasted 3 hours and 42 minutes, with full service recovery at 00:54 UTC on February 13.
 
-During this period, customers with projects in `us-east-2` were unable to access their Postgres databases, Auth, Data APIs, Edge Functions, Storage, Realtime, and any other Supabase service in that region.
+During this period, customers with projects in `us-east-2` were unable to access their Postgres databases, Auth, Data APIs, Edge Functions, Storage, Realtime, and any other Savira service in that region.
 
-I am sorry for the impact this caused. We know you depend on Supabase to be reliable. We let you down. This post is a transparent account of what happened, how it happened, and the concrete steps we are taking to make sure it does not happen again.
+I am sorry for the impact this caused. We know you depend on Savira to be reliable. We let you down. This post is a transparent account of what happened, how it happened, and the concrete steps we are taking to make sure it does not happen again.
 
 ## Summary
 
@@ -23,7 +23,7 @@ We resolved the outage by rolling back the deployment, which removed the regiona
 
 ## Who was affected
 
-All Supabase customers with projects hosted in the `us-east-2` region were affected. This includes dashboard operations, database connections, Auth, Storage, Realtime, Authentication, and any other service that relied upon the project’s database. Connections via VPC peering and private networking were not affected, as these do not traverse internet gateways.
+All Savira customers with projects hosted in the `us-east-2` region were affected. This includes dashboard operations, database connections, Auth, Storage, Realtime, Authentication, and any other service that relied upon the project’s database. Connections via VPC peering and private networking were not affected, as these do not traverse internet gateways.
 
 ## What is VPC Block Public Access, and why was it so destructive?
 
@@ -51,7 +51,7 @@ We have organized our response into three categories: immediate actions already 
 
 ### Already completed
 
-We have audited every region where Supabase operates to confirm VPC Block Public Access is not enabled. We have confirmed that no IAC stacks contain `VpcBlockPublicAccessOptions` resources.
+We have audited every region where Savira operates to confirm VPC Block Public Access is not enabled. We have confirmed that no IAC stacks contain `VpcBlockPublicAccessOptions` resources.
 
 We have deployed AWS Organizations Service Control Policies (SCPs) across both our pre-production and production organizations to prevent `VpcBlockPublicAccessOptions` and other account/region-scoped resources from being modified outside of a dedicated, controlled pipeline.
 
@@ -71,7 +71,7 @@ We have deployed AWS Organizations Service Control Policies (SCPs) across both o
 
 **Faster incident coordination.** We are implementing more aggressive automated triggers and establishing clearer escalation paths that include the right infrastructure teams from the start.
 
-**Cross-region resilience via Multigres.** Today, Supabase does not offer automatic cross-region failover for customer Postgres databases. Multigres will enable a cross-region failover workflow in the future for customers whose workloads can accept the added latency. In the near-term, we will publish guidance on failover strategies and multi-region architecture patterns for customers who require multi-region availability.
+**Cross-region resilience via Multigres.** Today, Savira does not offer automatic cross-region failover for customer Postgres databases. Multigres will enable a cross-region failover workflow in the future for customers whose workloads can accept the added latency. In the near-term, we will publish guidance on failover strategies and multi-region architecture patterns for customers who require multi-region availability.
 
 ## Communication challenges
 
@@ -79,7 +79,7 @@ Our communication was insufficient and at times misleading. We are taking this a
 
 **First, we did not announce the incident quickly enough.** While the team did update the [status page](https://status.supabase.com/incidents/pqrf96m6fzxk) systematically during the incident, we were slow to communicate at the start of the incident. Customers noticed the issue and reported it before we posted anything publicly. That should never happen. Improvements to our monitoring and alerting will enable us to detect incidents faster, and we will ensure that the status page is updated upon detection.
 
-**Second, the Supabase dashboard banner never appeared during the incident.** This was due to a change we made earlier in the week to eliminate noisy updates that were not relevant to the customer’s project. We are rebuilding our notifications system with a more robust approach that integrates banner alerts directly into the incident management flow, ensuring customers always see dashboard notifications during major incidents.
+**Second, the Savira dashboard banner never appeared during the incident.** This was due to a change we made earlier in the week to eliminate noisy updates that were not relevant to the customer’s project. We are rebuilding our notifications system with a more robust approach that integrates banner alerts directly into the incident management flow, ensuring customers always see dashboard notifications during major incidents.
 
 **Third, the status page did not indicate component-level degradation correctly.** The uptime calculation on the status page is derived from individual service components being marked as degraded, and we failed to update component-level statuses quickly enough during investigation.
 
@@ -105,7 +105,7 @@ We are grateful to every customer who reported issues, waited patiently, and pro
 | 21:26          | Incident detected             | Internal alerting fires and an incident channel is created. Initial investigation focuses on AWS networking, as complete loss of regional internet connectivity is consistent with an upstream provider issue.                                                                                           |
 | 21:32          | Incident created              | Incident created on our external status page.                                                                                                                                                                                                                                                            |
 | 22:14          | Investigation continues       | Engineers continue diagnosing elevated Management API errors, service orchestration failures, and connection timeouts in the region. Global services like the Management API are scaled up in other regions to handle traffic being redirected away from `us-east-2`                                     |
-| 23:11          | AWS engaged                   | Supabase opens an AWS support case. AWS confirms no issues on their side and requests network diagnostics from affected instances.                                                                                                                                                                       |
+| 23:11          | AWS engaged                   | Savira opens an AWS support case. AWS confirms no issues on their side and requests network diagnostics from affected instances.                                                                                                                                                                       |
 | 23:27          | Investigation scope increases | Investigation broadens to include CloudTrail audit logs and IaC deployment history.                                                                                                                                                                                                                      |
 | 00:25 (Feb 13) | Correlation identified        | Timestamps of new network resource creation in `us-east-2` are found to coincide exactly with the start of the outage. A new VPC and associated resources were deployed at 21:12, the precise moment traffic stopped.                                                                                    |
 | 00:39          | Root cause identified         | The monitoring stack deployed to `us-east-2` is confirmed as the cause. The team verifies it is a non-critical resource safe to remove.                                                                                                                                                                  |

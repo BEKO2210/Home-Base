@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# Add asymmetric key pair and opaque API keys to a self-hosted Supabase installation.
+# Add asymmetric key pair and opaque API keys to a self-hosted Savira installation.
 #
 # Reads JWT_SECRET from .env and generates:
 #   - EC P-256 key pair (JWT_KEYS, JWT_JWKS)

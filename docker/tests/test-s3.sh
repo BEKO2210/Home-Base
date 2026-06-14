@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# Test S3 protocol endpoint for self-hosted Supabase Storage.
+# Test S3 protocol endpoint for self-hosted Savira Storage.
 #
 # Verifies that the S3-compatible endpoint at /storage/v1/s3 works with
 # standard S3 clients — the same way end users interact with it via
@@ -11,7 +11,7 @@
 #   sh test-s3.sh <base_url>   # Custom URL
 #
 # Prerequisites:
-#   - Running self-hosted Supabase instance with S3 enabled:
+#   - Running self-hosted Savira instance with S3 enabled:
 #       docker compose -f docker-compose.yml -f docker-compose.s3.yml up -d
 #   - .env file with S3_PROTOCOL_ACCESS_KEY_ID, S3_PROTOCOL_ACCESS_KEY_SECRET, REGION
 #   - aws cli v2 (for S3 operations)

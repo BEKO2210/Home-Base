@@ -105,7 +105,7 @@ export const General = () => {
           {isCli && (
             <Admonition
               type="default"
-              title="Local development with the Supabase CLI"
+              title="Local development with the Savira CLI"
               description={
                 <p>
                   Project settings are configured in{' '}
@@ -119,7 +119,7 @@ export const General = () => {
           {isSelfHosted && (
             <Admonition
               type="default"
-              title="Self-hosted Supabase"
+              title="Self-hosted Savira"
               description={<p>Project settings are configured via environment variables.</p>}
               actions={<DocsButton href={`${DOCS_URL}/guides/self-hosting`} />}
             />

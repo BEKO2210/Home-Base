@@ -5,7 +5,7 @@ import { breadcrumbListSchema, serializeJsonLd } from '~/lib/json-ld'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'View all Supabase events and meetups.',
+  title: 'View all Savira events and meetups.',
   description:
     'Find all the upcoming events, webinars and meetups hosted by supabase and its community.',
 }

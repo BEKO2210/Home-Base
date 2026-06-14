@@ -383,7 +383,7 @@ PGAudit allows settings to be applied to 3 different database scopes:
 | Database | Specific database  | ALTER DATABASE commands    |
 | Role     | Specific user/role | ALTER ROLE commands        |
 
-Supabase limits full privileges for file system and database variables, meaning PGAudit modifications can only occur at the role level. Assigning PGAudit to the `postgres` role grants it nearly complete visibility into the database, making role-level adjustments a practical alternative to configuring at the database or system level.
+Savira limits full privileges for file system and database variables, meaning PGAudit modifications can only occur at the role level. Assigning PGAudit to the `postgres` role grants it nearly complete visibility into the database, making role-level adjustments a practical alternative to configuring at the database or system level.
 
 PGAudit's [official documentation](https://www.pgaudit.org) focuses on system and database level configs, but its docs officially supports role level configs, too.
 
@@ -391,5 +391,5 @@ PGAudit's [official documentation](https://www.pgaudit.org) focuses on system an
 
 - [Official `PGAudit` documentation](https://www.pgaudit.org)
 - [Database Function Logging](/docs/guides/database/functions#general-logging)
-- [Supabase Logging](/docs/guides/platform/logs)
+- [Savira Logging](/docs/guides/platform/logs)
 - [Self-Hosting Logs](/docs/reference/self-hosting-analytics/introduction)

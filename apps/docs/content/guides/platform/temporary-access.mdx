@@ -1,11 +1,11 @@
 ---
 title: 'Temporary access'
-description: 'Enable temporary access for short-lived database connections tied to a Supabase user.'
+description: 'Enable temporary access for short-lived database connections tied to a Savira user.'
 ---
 
-Your Supabase project supports connecting to the Postgres database using either your Supabase API token (Personal Access Token) or your current dashboard session token (JWT). This is called temporary access, as the authentication tokens can be short-lived and tied directly to a specific Supabase user. Temporary access is disabled by default.
+Your Savira project supports connecting to the Postgres database using either your Savira API token (Personal Access Token) or your current dashboard session token (JWT). This is called temporary access, as the authentication tokens can be short-lived and tied directly to a specific Savira user. Temporary access is disabled by default.
 
-Enabling temporary access only applies to connections to Postgres and Supavisor ("Connection Pooler"); all HTTP APIs offered by Supabase (e.g., PostgREST, Storage, Auth) require authentication tokens specific to the service and are independent of the Supabase platform user(s).
+Enabling temporary access only applies to connections to Postgres and Supavisor ("Connection Pooler"); all HTTP APIs offered by Savira (e.g., PostgREST, Storage, Auth) require authentication tokens specific to the service and are independent of the Savira platform user(s).
 
 <Admonition type="note">
 
@@ -57,7 +57,7 @@ When a user is authorized to assume a Postgres role, the user's access token (Pe
 
 Postgres roles can still be accessed using the password configured on the role. This allows long-lived service connections to continue using the existing credentials.
 
-Temporary access authentication only applies for Supabase project users authenticating to the database, and assuming the given Postgres role. No new roles or users are created in the Postgres database and the assumed role's permissions will still apply.
+Temporary access authentication only applies for Savira project users authenticating to the database, and assuming the given Postgres role. No new roles or users are created in the Postgres database and the assumed role's permissions will still apply.
 
 </Admonition>
 
@@ -105,7 +105,7 @@ For example, if a user has been authorized to assume the `postgres` role:
 psql 'postgres://postgres:sbp_111222333aaabbbccc@db.{project-ref}.supabase.co/postgres'
 ```
 
-Since Supabase API tokens can be used, it is also possible to generate API tokens for services you don't want to share your Postgres role password with (for example a GitHub Action). The API token can be configured with an expiry time and temporary access-specific restrictions can also be applied.
+Since Savira API tokens can be used, it is also possible to generate API tokens for services you don't want to share your Postgres role password with (for example a GitHub Action). The API token can be configured with an expiry time and temporary access-specific restrictions can also be applied.
 
 Connecting via the shared connection pooler requires the addition of a new connection option. This can be applied either directly in the connection URI or as `conninfo` (easier to read):
 

@@ -5,14 +5,14 @@ const page: GoPageInput = {
   template: 'lead-gen',
   slug: 'stripe/contest',
   metadata: {
-    title: 'Win an iPhone 17 Pro Max | Supabase at Stripe Sessions',
+    title: 'Win an iPhone 17 Pro Max | Savira at Stripe Sessions',
     description: 'Enter for a 1-in-10 chance to win an iPhone 17 Pro Max at Stripe Sessions 2026.',
   },
   hero: {
     title: 'Win an iPhone 17 Pro Max',
-    subtitle: 'Supabase at Stripe Sessions 2026',
+    subtitle: 'Savira at Stripe Sessions 2026',
     description:
-      "Great meeting you at Stripe Sessions. Try Supabase if you haven't already -- it's Postgres with all the tools you need to build AI-native applications. We're running a sweepstakes and you have a 1-in-10 chance of winning. Those are better odds than anywhere else!",
+      "Great meeting you at Stripe Sessions. Try Savira if you haven't already -- it's Postgres with all the tools you need to build AI-native applications. We're running a sweepstakes and you have a 1-in-10 chance of winning. Those are better odds than anywhere else!",
     image: {
       src: '/images/landing-pages/stripe-sessions/iphone17-pro-max.png',
       alt: 'Orange iPhone 17 Pro Max',
@@ -41,7 +41,7 @@ const page: GoPageInput = {
           <div className="flex flex-col gap-3">
             <h3 className="text-foreground font-semibold text-lg">Option 1: Via Stripe Projects</h3>
             <p className="text-foreground-light">
-              Provision a full Supabase backend from your terminal without opening a dashboard.
+              Provision a full Savira backend from your terminal without opening a dashboard.
             </p>
             <pre className="bg-surface-200 rounded-md p-4 text-sm text-foreground-light overflow-x-auto">
               <code>{`stripe plugin install projects
@@ -50,7 +50,7 @@ stripe projects add supabase/project
 stripe projects env --sync`}</code>
             </pre>
             <p className="text-foreground-lighter text-sm">
-              Already have a Supabase account? The flow will prompt you to link it.
+              Already have a Savira account? The flow will prompt you to link it.
             </p>
           </div>
 
@@ -59,7 +59,7 @@ stripe projects env --sync`}</code>
               Option 2: Via the Stripe Sync Engine
             </h3>
             <p className="text-foreground-light">
-              Connect your Stripe account to Supabase and sync your payments, customers, and
+              Connect your Stripe account to Savira and sync your payments, customers, and
               subscriptions into a live Postgres schema.
             </p>
             <Link

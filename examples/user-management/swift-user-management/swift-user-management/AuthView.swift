@@ -5,7 +5,7 @@
 //  Created by Guilherme Souza on 17/11/23.
 //
 
-import Supabase
+import Savira
 import SwiftUI
 
 struct AuthView: View {

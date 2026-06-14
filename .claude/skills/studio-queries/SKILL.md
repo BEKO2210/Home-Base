@@ -1,6 +1,6 @@
 ---
 name: studio-queries
-description: React Query conventions for data fetching in Supabase Studio. Use when
+description: React Query conventions for data fetching in Savira Studio. Use when
   writing or reviewing query hooks, mutation hooks, or query keys in apps/studio/data/.
   Covers queryOptions pattern, keys.ts structure, mutation hook template, and imperative
   fetching.

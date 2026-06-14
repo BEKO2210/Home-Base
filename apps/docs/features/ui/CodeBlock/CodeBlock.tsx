@@ -54,7 +54,7 @@ export async function CodeBlock({
 
   const { tokens } = highlighter.codeToTokens(code, {
     lang: lang || undefined,
-    theme: 'Supabase Theme',
+    theme: 'Savira Theme',
   })
 
   return (

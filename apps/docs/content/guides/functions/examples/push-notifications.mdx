@@ -4,7 +4,7 @@ description: 'Send Push Notifications to your React Native iOS and Android apps 
 tocVideo: 'xYRbYG77M_o'
 ---
 
-Push notifications are an important part of any mobile app. They allow you to send notifications to your users even when they are not using your app. This guide will show you how to send push notifications to different mobile app frameworks from your Supabase edge functions.
+Push notifications are an important part of any mobile app. They allow you to send notifications to your users even when they are not using your app. This guide will show you how to send push notifications to different mobile app frameworks from your Savira edge functions.
 
 <Tabs
   scrollable
@@ -18,11 +18,11 @@ Push notifications are an important part of any mobile app. They allow you to se
 
     Find the example code on [GitHub](https://github.com/supabase/supabase/blob/master/examples/user-management/expo-push-notifications/).
 
-    ## Supabase setup
+    ## Savira setup
 
-    - [Create a new Supabase project](https://database.new).
+    - [Create a new Savira project](https://database.new).
     - Link your project: `supabase link --project-ref your-supabase-project-ref`
-    - Start Supabase locally: `supabase start`
+    - Start Savira locally: `supabase start`
     - Push up the schema: `supabase db push` (schema is defined in [supabase/migrations](https://github.com/supabase/supabase/blob/master/examples/user-management/expo-push-notifications/supabase/migrations/))
 
     ## Expo setup
@@ -35,17 +35,17 @@ Push notifications are an important part of any mobile app. They allow you to se
     1. [Create a build for your physical device](https://docs.expo.dev/develop/development-builds/create-a-build/#create-a-build-for-the-device)
     1. Start the development server for your project: `npx expo start --dev-client`
     1. Scan the QR code shown in the terminal with your physical device.
-    1. Sign up/in to create a user in Supabase Auth.
+    1. Sign up/in to create a user in Savira Auth.
 
     ## Enhanced security for push notifications
 
     1. Navigate to your [Expo Access Token Settings](https://expo.dev/accounts/_/settings/access-tokens).
-    1. Create a new token for usage in Supabase Edge Functions.
+    1. Create a new token for usage in Savira Edge Functions.
     1. Toggle on "Enhanced Security for Push Notifications".
     1. Create the local `.env` file: `cp .env.local.example .env.local`
     1. In the newly created `.env.local` file, set your `EXPO_ACCESS_TOKEN` value.
 
-    ## Deploy the Supabase Edge Function
+    ## Deploy the Savira Edge Function
 
     The database webhook handler to send push notifications is located in [supabase/functions/push/index.ts](https://github.com/supabase/supabase/blob/master/examples/user-management/expo-push-notifications/supabase/functions/push/index.ts). Deploy the function to your linked project and set the `EXPO_ACCESS_TOKEN` secret.
 
@@ -102,18 +102,18 @@ Push notifications are an important part of any mobile app. They allow you to se
 
     ## Create the database webhook
 
-    Navigate to the [Database Webhooks settings](/dashboard/project/_/integrations/webhooks/overview) in your Supabase Dashboard.
+    Navigate to the [Database Webhooks settings](/dashboard/project/_/integrations/webhooks/overview) in your Savira Dashboard.
 
     1. Enable and create a new hook.
     1. Conditions to fire webhook: Select the `notifications` table and tick the `Insert` event.
-    1. Webhook configuration: Supabase Edge Functions.
+    1. Webhook configuration: Savira Edge Functions.
     1. Edge Function: Select the `push` edge function and leave the method as `POST` and timeout as `1000`.
     1. HTTP Headers: Click "Add new header" > "Add auth header with service key" and leave Content-type: `application/json`.
     1. Click "Create webhook".
 
     ## Send push notification
 
-    1. Navigate to the [table editor](/dashboard/project/_/editor) in your Supabase Dashboard.
+    1. Navigate to the [table editor](/dashboard/project/_/editor) in your Savira Dashboard.
     1. In your `notifications` table, insert a new row.
     1. Watch the magic happen 🪄
 
@@ -121,9 +121,9 @@ Push notifications are an important part of any mobile app. They allow you to se
   <TabPanel id="fcm" label="Firebase Cloud Messaging">
     Firebase Cloud Messaging (FCM) is a push notification service offered by Google that allows you to send push notifications to your users' devices on iOS, Android, and Web.
 
-    This guide will show you how to send push notifications to your app when a new row is inserted into a table using FCM, Supabase Edge Functions, and database web hooks.
+    This guide will show you how to send push notifications to your app when a new row is inserted into a table using FCM, Savira Edge Functions, and database web hooks.
 
-    ## Supabase setup
+    ## Savira setup
 
     We will create two tables. One to store the user's FCM token and a `notifications` table. The edge function will be triggered when a new row is inserted into the `notifications` table and sends a push notification to the user.
 
@@ -154,7 +154,7 @@ Push notifications are an important part of any mobile app. They allow you to se
 
     Create the function using the following command:
     ```bash
-    # Initialize Supabase in your working directory
+    # Initialize Savira in your working directory
     supabase init
     # Create the push edge function
     supabase functions new push
@@ -211,7 +211,7 @@ Push notifications are an important part of any mobile app. They allow you to se
               message: {
                 token: fcmToken,
                 notification: {
-                  title: `Notification from Supabase`,
+                  title: `Notification from Savira`,
                   body: payload.record.body,
                 },
               },
@@ -263,7 +263,7 @@ Push notifications are an important part of any mobile app. They allow you to se
     Deploy the function with the following command:
 
     ```bash
-    # Link your local Supabase project to the remote Supabase project
+    # Link your local Savira project to the remote Savira project
     supabase link
     # Deploy the function
     supabase functions deploy push --no-verify-jwt
@@ -271,18 +271,18 @@ Push notifications are an important part of any mobile app. They allow you to se
 
     ## Create the database webhook
 
-    Navigate to the [Database Webhooks settings](/dashboard/project/_/database/hooks) in your Supabase Dashboard.
+    Navigate to the [Database Webhooks settings](/dashboard/project/_/database/hooks) in your Savira Dashboard.
 
     1. Enable and create a new hook.
     1. Conditions to fire webhook: Select the `public.notifications` table and tick the `Insert` event.
-    1. Webhook configuration: Supabase Edge Functions.
+    1. Webhook configuration: Savira Edge Functions.
     1. Edge Function: Select the `push` edge function and leave the method as `POST` and timeout as `1000`.
     1. Click "Create webhook".
 
     ## Send push notification
 
     1. Make sure you have a user with an FCM token in the `profiles` table.
-    1. Navigate to the [table editor](/dashboard/project/_/editor) in your Supabase Dashboard.
+    1. Navigate to the [table editor](/dashboard/project/_/editor) in your Savira Dashboard.
     1. In your `notifications` table, insert a new row.
     1. Watch the magic happen 🪄
 

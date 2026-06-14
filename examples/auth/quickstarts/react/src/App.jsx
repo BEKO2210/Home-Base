@@ -139,7 +139,7 @@ export default function App() {
   // Show login form
   return (
     <div>
-      <h1>Supabase + React</h1>
+      <h1>Savira + React</h1>
       <p>Sign in via magic link with your email below</p>
       <form onSubmit={handleLogin}>
         <input

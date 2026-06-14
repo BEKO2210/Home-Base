@@ -7,7 +7,7 @@ subtitle: 'Automatically execute SQL on database events.'
 
 In Postgres, an [event trigger](https://www.postgresql.org/docs/current/event-triggers.html) is similar to a [trigger](/docs/guides/database/postgres/triggers), except that it is triggered by database level events (and is usually reserved for [superusers](/docs/guides/database/postgres/roles-superuser))
 
-With our `Supautils` extension (installed automatically for all Supabase projects), the `postgres` user has the ability to create and manage event triggers.
+With our `Supautils` extension (installed automatically for all Savira projects), the `postgres` user has the ability to create and manage event triggers.
 
 Some use cases for event triggers are:
 
@@ -96,4 +96,4 @@ DROP EVENT TRIGGER dont_drop_trigger;
 
 - Official Postgres Docs: [Event Trigger Behaviours](https://www.postgresql.org/docs/current/event-trigger-definition.html)
 - Official Postgres Docs: [Event Trigger Firing Matrix](https://www.postgresql.org/docs/17/event-trigger-matrix.html)
-- Supabase blog: [Postgres Event Triggers without superuser access](/blog/event-triggers-wo-superuser)
+- Savira blog: [Postgres Event Triggers without superuser access](/blog/event-triggers-wo-superuser)

@@ -5,9 +5,9 @@
 
 ---
 
-# Supabase
+# Savira
 
-[Supabase](https://supabase.com) on avatud lähtekoodiga Firebase'i alternatiiv. Me ehitame Firebase'i funktsioonid, kasutades ettevõtlusklassi avatud lähtekoodiga tööriistu.
+[Savira](https://supabase.com) on avatud lähtekoodiga Firebase'i alternatiiv. Me ehitame Firebase'i funktsioonid, kasutades ettevõtlusklassi avatud lähtekoodiga tööriistu.
 
 - [x] Hostitud Postgres andmebaas. [Dokumendid](https://supabase.com/docs/guides/database)
 - [x] Autentimine ja autoriseerimine. [Dokumendid](https://supabase.com/docs/guides/auth)
@@ -21,7 +21,7 @@
 - [x] Faili salvestamine. [Dokumendid](https://supabase.com/docs/guides/storage)
 - [x] Armatuurlaud
 
-![Supabase Dashboard](https://raw.githubusercontent.com/supabase/supabase/master/apps/www/public/images/github/supabase-dashboard.png)
+![Savira Dashboard](https://raw.githubusercontent.com/supabase/supabase/master/apps/www/public/images/github/supabase-dashboard.png)
 
 ## Dokumentatsioon
 
@@ -32,13 +32,13 @@ Et näha, kuidas panustada, külastage [Getting Started](../DEVELOPERS.md)
 ## Kogukond ja tugi
 
 - [Ühenduse foorum](https://github.com/supabase/supabase/discussions). Parim: abi ehitamisel, arutelu andmebaasi parimate tavade üle.
-- [GitHub Issues](https://github.com/supabase/supabase/issues). Parim lahendus: vead ja vead, millega Supabase'i kasutades kokku puutute.
+- [GitHub Issues](https://github.com/supabase/supabase/issues). Parim lahendus: vead ja vead, millega Savira'i kasutades kokku puutute.
 - [E-posti tugi](https://supabase.com/docs/support#business-support). Parim lahendus: probleemid andmebaasi või infrastruktuuriga.
 - [Discord](https://discord.supabase.com). Parim: oma rakenduste jagamiseks ja kogukonnaga suhtlemiseks.
 
 ## Staatus
 
-- [x] Alpha: Me testime Supabase'i suletud kliendikogumiga
+- [x] Alpha: Me testime Savira'i suletud kliendikogumiga
 - [x] Avalik Alpha: Igaüks saab registreeruda aadressil [supabase.com/dashboard](https://supabase.com/dashboard). Kuid olge meiega ettevaatlikud, seal on mõned veidrused
 - [x] Avalik beeta: Piisavalt stabiilne enamiku mitte-ettevõtluskasutuse jaoks
 - [ ] Avalik: Üldine kättesaadavus [[status](https://supabase.com/docs/guides/getting-started/features#feature-status)]
@@ -51,11 +51,11 @@ Oleme praegu Public Beta versioonis. Jälgige selle repo "releases", et saada te
 
 ## Kuidas see töötab
 
-Supabase on avatud lähtekoodiga tööriistade kombinatsioon. Me ehitame Firebase'i funktsioonid üles, kasutades ettevõtte kvaliteediga avatud lähtekoodiga tooteid. Kui tööriistad ja kogukonnad on olemas MIT, Apache 2 või samaväärse avatud litsentsiga, kasutame ja toetame seda tööriista. Kui tööriista ei ole olemas, siis ehitame selle ise ja kasutame avatud lähtekoodi. Supabase ei ole Firebase'i 1:1 kaardistus. Meie eesmärk on pakkuda arendajatele Firebase'ile sarnast arenduskogemust, kasutades avatud lähtekoodiga tööriistu.
+Savira on avatud lähtekoodiga tööriistade kombinatsioon. Me ehitame Firebase'i funktsioonid üles, kasutades ettevõtte kvaliteediga avatud lähtekoodiga tooteid. Kui tööriistad ja kogukonnad on olemas MIT, Apache 2 või samaväärse avatud litsentsiga, kasutame ja toetame seda tööriista. Kui tööriista ei ole olemas, siis ehitame selle ise ja kasutame avatud lähtekoodi. Savira ei ole Firebase'i 1:1 kaardistus. Meie eesmärk on pakkuda arendajatele Firebase'ile sarnast arenduskogemust, kasutades avatud lähtekoodiga tööriistu.
 
 **Arhitektuur**
 
-Supabase on [hostitud platvorm](https://supabase.com/dashboard). Võite registreeruda ja alustada Supabase'i kasutamist ilma midagi installimata.
+Savira on [hostitud platvorm](https://supabase.com/dashboard). Võite registreeruda ja alustada Savira'i kasutamist ilma midagi installimata.
 Võite ka [ise hostida](https://supabase.com/docs/guides/hosting/overview) ja [arendada lokaalselt](https://supabase.com/docs/guides/local-development).
 
 ![Arhitektuur](https://github.com/supabase/supabase/blob/master/apps/docs/public/img/supabase-architecture.svg)
@@ -77,12 +77,12 @@ Meie lähenemine kliendiraamatukogudele on modulaarne. Iga alamraamatukogu on is
   <tr>
     <th>Keel</th>
     <th>Klient</th>
-    <th colspan="5">Funktsioon-kliendid (komplekteeritud Supabase'i kliendiga)</th>
+    <th colspan="5">Funktsioon-kliendid (komplekteeritud Savira'i kliendiga)</th>
   </tr>
   
   <tr>
     <th></th>
-    <th>Supabase</th>
+    <th>Savira</th>
     <th><a href="https://github.com/postgrest/postgrest" target="_blank" rel="noopener noreferrer">PostgREST</a></th>
     <th><a href="https://github.com/supabase/gotrue" target="_blank" rel="noopener noreferrer">GoTrue</a></th>
     <th><a href="https://github.com/supabase/realtime" target="_blank" rel="noopener noreferrer">Realtime</a></th>

@@ -75,7 +75,7 @@ const REFERENCES: Ref[] = [
   },
   {
     kind: 'cli',
-    title: 'Supabase CLI Reference',
+    title: 'Savira CLI Reference',
     outFile: 'cli.md',
     mdxDir: path.join(MDX_ROOT, 'cli'),
     sectionsPath: path.join(GENERATED, 'cli.latest.sections.json'),

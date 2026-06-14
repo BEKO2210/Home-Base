@@ -19,7 +19,7 @@ describe('managed-by-utils', () => {
     )
   })
 
-  it('falls back to Supabase for unknown values', () => {
+  it('falls back to Savira for unknown values', () => {
     expect(getManagedByFromOrganizationPartner('unknown_partner', 'unknown_source')).toBe(
       MANAGED_BY.SUPABASE
     )

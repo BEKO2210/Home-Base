@@ -1,6 +1,6 @@
 ---
-title: 'Sync Stripe Data to Your Supabase Database in One Click'
-description: 'Announcing official support for the Stripe Sync Engine in the Supabase Dashboard. Get a one-click integration that syncs your Stripe data directly into your Supabase database.'
+title: 'Sync Stripe Data to Your Savira Database in One Click'
+description: 'Announcing official support for the Stripe Sync Engine in the Savira Dashboard. Get a one-click integration that syncs your Stripe data directly into your Savira database.'
 categories:
   - product
 tags:
@@ -13,9 +13,9 @@ imgSocial: 2025-12-19-stripe-sync-engine-integration/thumb.png
 imgThumb: 2025-12-19-stripe-sync-engine-integration/thumb.png
 ---
 
-Today we are announcing a partnership with Stripe and official support for the [Stripe Sync Engine](/blog/stripe-engine-as-sync-library) in the Supabase Dashboard. Now, you get a one-click integration that syncs your Stripe data directly into your Supabase database. Query your customers, subscriptions, invoices, and payments using standard SQL.
+Today we are announcing a partnership with Stripe and official support for the [Stripe Sync Engine](/blog/stripe-engine-as-sync-library) in the Savira Dashboard. Now, you get a one-click integration that syncs your Stripe data directly into your Savira database. Query your customers, subscriptions, invoices, and payments using standard SQL.
 
-This integration is the result of a collaboration between Supabase and Stripe. Stripe engineers contributed significant improvements to the open-source sync engine, including incremental sync, flexible JSONB storage, and a new CLI.
+This integration is the result of a collaboration between Savira and Stripe. Stripe engineers contributed significant improvements to the open-source sync engine, including incremental sync, flexible JSONB storage, and a new CLI.
 
 ## Why sync Stripe data to your database?
 
@@ -30,7 +30,7 @@ The Stripe Sync Engine gives you a third option: click a button and query your S
 
 ## How it works
 
-The sync engine keeps your Stripe data current through two mechanisms: webhooks for real-time updates and scheduled backfills for historical data. When you enable the integration, Supabase automatically configures both.
+The sync engine keeps your Stripe data current through two mechanisms: webhooks for real-time updates and scheduled backfills for historical data. When you enable the integration, Savira automatically configures both.
 
 Once your data is synced, you can query it like any other Postgres table. Here are three scenarios we expect to be especially common.
 
@@ -97,7 +97,7 @@ order by subscriptions.current_period_end;
 
 ## Stripe Sync Engine vs Foreign Data Wrapper
 
-Supabase already offers a [Stripe Foreign Data Wrapper](/blog/postgres-foreign-data-wrappers-with-wasm) that lets you query Stripe data using SQL. The FDW is a thin layer that translates your SQL queries into Stripe API calls. When you run `select * from stripe.customers`, the FDW makes an API request to Stripe, transforms the JSON response into rows, and returns the results.
+Savira already offers a [Stripe Foreign Data Wrapper](/blog/postgres-foreign-data-wrappers-with-wasm) that lets you query Stripe data using SQL. The FDW is a thin layer that translates your SQL queries into Stripe API calls. When you run `select * from stripe.customers`, the FDW makes an API request to Stripe, transforms the JSON response into rows, and returns the results.
 
 This works well for simple lookups. Need to check a customer's subscription status? The FDW handles it elegantly. But the abstraction breaks down when your queries get more complex or for queries that are critical to your application.
 
@@ -107,15 +107,15 @@ The Sync Engine takes a fundamentally different approach. Instead of translating
 
 Ultimately, the FDW is great for occasional lookups and simple queries. The Sync Engine is built for applications that need billing data as a first-class part of their database.
 
-## Reliable syncing with Supabase Queues
+## Reliable syncing with Savira Queues
 
-There can be a lot of data to import from your Stripe account to your database, especially when you're setting up syncing with an existing account. To perform this backfilling process efficiently and reliably, the sync engine uses [Supabase Queues](/blog/supabase-queues) (powered by pgmq) to sync data incrementally and in batches.
+There can be a lot of data to import from your Stripe account to your database, especially when you're setting up syncing with an existing account. To perform this backfilling process efficiently and reliably, the sync engine uses [Savira Queues](/blog/supabase-queues) (powered by pgmq) to sync data incrementally and in batches.
 
 When you install the integration, the backfilling process will automatically start and spread the work across Edge Functions that can concurrently fetch data from the Stripe API and retry if there are any failures or rate limits.
 
 ## Getting started
 
-Enable the Stripe Sync Engine from your Supabase dashboard:
+Enable the Stripe Sync Engine from your Savira dashboard:
 
 1. Navigate to **Integrations** in your project dashboard
 2. Find **Stripe Sync Engine** and click **Install**
@@ -136,7 +136,7 @@ The initial backfill will sync your historical data. Depending on your Stripe ac
 The Stripe Sync Engine is open source. Stripe engineers contributed improvements including:
 
 - **JSONB storage with generated columns** for flexibility without sacrificing query performance
-- **Incremental sync** using Stripe's cursor-based pagination and Supabase Queues
+- **Incremental sync** using Stripe's cursor-based pagination and Savira Queues
 - **Multi-account support** for Stripe Connect platforms
 - **New CLI** with proper event ordering
 
@@ -150,4 +150,4 @@ We're working with Stripe on additional improvements:
 - Pre-built SQL views for common metrics (MRR, churn, LTV)
 - Support for additional Stripe objects and other customizations
 
-Start syncing your Stripe data today. Enable the integration from your [Supabase dashboard](https://supabase.com/dashboard).
+Start syncing your Stripe data today. Enable the integration from your [Savira dashboard](https://supabase.com/dashboard).

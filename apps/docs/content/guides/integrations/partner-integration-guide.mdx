@@ -1,22 +1,22 @@
 ---
 id: 'partner-integration-guide'
-title: 'Supabase Partner Integration Guide'
-subtitle: 'Integrate Supabase with your platform or product.'
-description: 'This guide explains how a Supabase partner can integrate with the Supabase platform via OAuth.'
+title: 'Savira Partner Integration Guide'
+subtitle: 'Integrate Savira with your platform or product.'
+description: 'This guide explains how a Savira partner can integrate with the Savira platform via OAuth.'
 ---
 
-This guide assumes you have already followed [the Build a Supabase Integration guide](/docs/guides/integrations/build-a-supabase-oauth-integration) and have a working OAuth client.
+This guide assumes you have already followed [the Build a Savira Integration guide](/docs/guides/integrations/build-a-supabase-oauth-integration) and have a working OAuth client.
 
-When a Supabase user clicks the **Install Integration** button in the Dashboard, they are redirected to your system to begin the OAuth flow. You can implement this redirect in one of two ways:
+When a Savira user clicks the **Install Integration** button in the Dashboard, they are redirected to your system to begin the OAuth flow. You can implement this redirect in one of two ways:
 
-- **[Simple redirect](#method-1-simple-redirect)**: Easier to build, but your system cannot verify that the incoming user was sent by Supabase.
-- **[Signed redirect](#method-2-signed-redirect)**: More work to build, but cryptographically verifies that the redirect originated from Supabase. **Recommended for production integrations.**
+- **[Simple redirect](#method-1-simple-redirect)**: Easier to build, but your system cannot verify that the incoming user was sent by Savira.
+- **[Signed redirect](#method-2-signed-redirect)**: More work to build, but cryptographically verifies that the redirect originated from Savira. **Recommended for production integrations.**
 
 Pick the method that fits your security requirements, then follow the matching section below.
 
 ## Method 1: Simple redirect
 
-In this method, you implement a single `GET` endpoint. Supabase redirects the user to this endpoint when they click **Install Integration**, and your endpoint kicks off the OAuth flow.
+In this method, you implement a single `GET` endpoint. Savira redirects the user to this endpoint when they click **Install Integration**, and your endpoint kicks off the OAuth flow.
 
 ```mermaid
 sequenceDiagram
@@ -24,31 +24,31 @@ sequenceDiagram
   participant User
   participant Browser
   participant Partner as Partner (OAuth Client)
-  participant Supabase as Supabase (OAuth Authorization Server/Protected Resource)
+  participant Savira as Savira (OAuth Authorization Server/Protected Resource)
 
-  Note over Browser: Supabase Dashboard Open
+  Note over Browser: Savira Dashboard Open
 
   User->>Browser: Clicks "Install Integration"
 
   Browser->>Partner: "Connect to Partner" Click Handler Page
-  Partner->>Browser: Redirect to Supabase Authorization Page
+  Partner->>Browser: Redirect to Savira Authorization Page
 
-  Browser->>Supabase: Request Authorization
-  Supabase->>Browser: Redirect to Consent Screen
+  Browser->>Savira: Request Authorization
+  Savira->>Browser: Redirect to Consent Screen
 
   Browser->>User: Display Consent Screen
   User->>Browser: Gives Consent
 
-  Browser->>Supabase: Submit User Consent
-  Supabase->>Browser: Redirect to Partner With Authorization Code
+  Browser->>Savira: Submit User Consent
+  Savira->>Browser: Redirect to Partner With Authorization Code
 
   Browser->>Partner: Submit Authorization Code
 
-  Partner->>Supabase: Exchange Authorization Code for Token
-  Supabase->>Partner: Return Token
+  Partner->>Savira: Exchange Authorization Code for Token
+  Savira->>Partner: Return Token
 
-  Partner->>Supabase: Request Management API Resources
-  Supabase->>Partner: Return Resources
+  Partner->>Savira: Request Management API Resources
+  Savira->>Partner: Return Resources
 
   Partner->>Browser: Ok 200, OAuth Flow Complete
 
@@ -63,24 +63,24 @@ Expose a `GET` endpoint at any URL you control:
 GET https://<your-host>/<optional-path>?project_id=<supabase-project_ref>&organization_slug=<supabase-org-slug>
 ```
 
-Supabase will append the following query parameters to the URL when redirecting:
+Savira will append the following query parameters to the URL when redirecting:
 
 | Param               | Description                                                                                    |
 | ------------------- | ---------------------------------------------------------------------------------------------- |
-| `project_id`        | Supabase project ref of the project where the user clicked the **Install Integration** button. |
-| `organization_slug` | Supabase organization slug where the user clicked the **Install Integration** button.          |
+| `project_id`        | Savira project ref of the project where the user clicked the **Install Integration** button. |
+| `organization_slug` | Savira organization slug where the user clicked the **Install Integration** button.          |
 
 Save these parameters in your system. You can use them to fetch project or organization details, or to pre-select a project or organization in your UI once the OAuth flow is complete.
 
-Your endpoint may ask the user to sign up, sign in, or perform other setup tasks on your website. Once those are complete, immediately [redirect to the Supabase authorization URL](/docs/guides/integrations/build-a-supabase-oauth-integration#redirecting-to-the-authorize-url) without further user interaction. This starts the OAuth flow.
+Your endpoint may ask the user to sign up, sign in, or perform other setup tasks on your website. Once those are complete, immediately [redirect to the Savira authorization URL](/docs/guides/integrations/build-a-supabase-oauth-integration#redirecting-to-the-authorize-url) without further user interaction. This starts the OAuth flow.
 
-### Step 2: Share your endpoint with Supabase
+### Step 2: Share your endpoint with Savira
 
-Send Supabase the URL of your endpoint so we can configure the **Install Integration** button to redirect there.
+Send Savira the URL of your endpoint so we can configure the **Install Integration** button to redirect there.
 
 ## Method 2: Signed redirect
 
-In this method, Supabase signs a JWT before redirecting the user. You verify the signature, generate a one-time redirect record, and return its URL to Supabase. Supabase then redirects the user to that URL. This guarantees that any redirect your system handles originated from Supabase.
+In this method, Savira signs a JWT before redirecting the user. You verify the signature, generate a one-time redirect record, and return its URL to Savira. Savira then redirects the user to that URL. This guarantees that any redirect your system handles originated from Savira.
 
 You will implement two endpoints:
 
@@ -93,18 +93,18 @@ sequenceDiagram
   participant User
   participant Browser
   participant Partner as Partner (OAuth Client)
-  participant Supabase as Supabase (OAuth Authorization Server/Protected Resource)
+  participant Savira as Savira (OAuth Authorization Server/Protected Resource)
 
-  Note over Browser: Supabase Dashboard Open
+  Note over Browser: Savira Dashboard Open
 
   User->>Browser: Clicks "Install Integration"
 
-  Browser->>Supabase: Request Redirect URL Generation
-  Supabase->>Partner: Send Signed JWT
+  Browser->>Savira: Request Redirect URL Generation
+  Savira->>Partner: Send Signed JWT
   Partner->>Partner: Validate JWT
   Partner->>Partner: Generate Unique Redirect URL
-  Partner->>Supabase: Return Redirect URL
-  Supabase->>Browser: Redirect to the Redirect URL
+  Partner->>Savira: Return Redirect URL
+  Savira->>Browser: Redirect to the Redirect URL
 
   Browser->>Partner: Visit Redirect URL
   Partner->>Partner: Validate Redirect Record
@@ -112,33 +112,33 @@ sequenceDiagram
   Browser->>User: User Performs Optional Actions
   User->>Browser: User Optional Actions Complete
   Browser->>Partner: User Optional Actions Complete
-  Partner->>Browser: Redirect to Supabase Authorization Page
+  Partner->>Browser: Redirect to Savira Authorization Page
 
-  Browser->>Supabase: Request Authorization
-  Supabase->>Browser: Redirect to Consent Screen
+  Browser->>Savira: Request Authorization
+  Savira->>Browser: Redirect to Consent Screen
 
   Browser->>User: Display Consent Screen
   User->>Browser: Gives Consent
 
-  Browser->>Supabase: Submit User Consent
-  Supabase->>Browser: Redirect to Partner With Authorization Code
+  Browser->>Savira: Submit User Consent
+  Savira->>Browser: Redirect to Partner With Authorization Code
 
   Browser->>Partner: Submit Authorization Code
 
-  Partner->>Supabase: Exchange Authorization Code for Token
-  Supabase->>Partner: Return Token
+  Partner->>Savira: Exchange Authorization Code for Token
+  Savira->>Partner: Return Token
 
-  Partner->>Supabase: Request Management API Resources
-  Supabase->>Partner: Return Resources
+  Partner->>Savira: Request Management API Resources
+  Savira->>Partner: Return Resources
 
   Partner->>Browser: Ok 200, OAuth Flow Complete
 
   Browser->>User: Display "Integration Installed" Message
 ```
 
-### Step 1: Exchange public keys with Supabase
+### Step 1: Exchange public keys with Savira
 
-Supabase generates two key-pairs, one for staging, one for production, and shares the public keys with you. Save both public keys and their key IDs in your system. The keys are PEM-encoded EC P-256.
+Savira generates two key-pairs, one for staging, one for production, and shares the public keys with you. Save both public keys and their key IDs in your system. The keys are PEM-encoded EC P-256.
 
 Example:
 
@@ -164,7 +164,7 @@ MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEWCGhwtFWn4jpWZNeyZpTlaAdq/tD
 
 Look up the correct public key by the `kid` field in the JWT header.
 
-Storing keys by ID enables zero-downtime key rotation. When Supabase rotates keys, we share new key-pairs and start signing JWTs with the new key ID. Your system picks the correct key based on `kid` without any code changes.
+Storing keys by ID enables zero-downtime key rotation. When Savira rotates keys, we share new key-pairs and start signing JWTs with the new key ID. Your system picks the correct key based on `kid` without any code changes.
 
 <Admonition type="note">
 
@@ -174,7 +174,7 @@ In future, we plan to publish keys at a `.../.well-known/jwks.json` URL and full
 
 ### Step 2: Implement the redirect record endpoint
 
-This endpoint receives the signed JWT from Supabase and returns a one-time redirect URL.
+This endpoint receives the signed JWT from Savira and returns a one-time redirect URL.
 
 Host the endpoint at any URL and path you control. Do not require authentication on this endpoint, but apply rate limiting to prevent abuse.
 
@@ -210,8 +210,8 @@ The token is a JWT signed with the ES256 private key.
 | `aud`               | Yes      | A unique string identifying the audience of this JWT. Usually a URL.                                              |
 | `iat`               | Yes      | Issued-at timestamp (seconds since epoch).                                                                        |
 | `exp`               | Yes      | Expiry timestamp — at most 5 minutes after `iat`.                                                                 |
-| `organization_slug` | No       | The Supabase organization the user is connecting from. Use to pre-select the org during the OAuth consent screen. |
-| `project_id`        | No       | The Supabase project ref the user wants to connect. Use to pre-select a Supabase project in your UI.              |
+| `organization_slug` | No       | The Savira organization the user is connecting from. Use to pre-select the org during the OAuth consent screen. |
+| `project_id`        | No       | The Savira project ref the user wants to connect. Use to pre-select a Savira project in your UI.              |
 
 **Signature**
 
@@ -225,7 +225,7 @@ When you receive a request:
 2. Verify the JWT signature with that public key.
 3. Verify that `alg` is `ES256`.
 4. Verify that `iss` is `supabase`.
-5. Verify that `aud` matches the value you agreed with Supabase.
+5. Verify that `aud` matches the value you agreed with Savira.
 6. Verify that the current time is between `iat` and `exp`.
 
 If any check fails, return `401 Unauthorized`.
@@ -257,20 +257,20 @@ When a user arrives at this endpoint:
 1. Extract the redirect record UUID from the URL path.
 2. Look it up in your system. If it doesn't exist or has expired, return `401 Unauthorized`.
 3. Optionally, walk the user through any setup required on your side — for example, signing up, signing in, or configuring your system so the integration will work.
-4. Redirect the user to the [Supabase authorization URL](/docs/guides/integrations/build-a-supabase-oauth-integration#redirecting-to-the-authorize-url) to start the OAuth flow.
+4. Redirect the user to the [Savira authorization URL](/docs/guides/integrations/build-a-supabase-oauth-integration#redirecting-to-the-authorize-url) to start the OAuth flow.
 
 <Admonition type="tip">
 
-If you need the user to perform setup steps on your site, design the experience as a wizard that ends by redirecting to the Supabase authorization URL. This minimizes the chance of users getting distracted, navigating elsewhere on your site, and abandoning the OAuth flow.
+If you need the user to perform setup steps on your site, design the experience as a wizard that ends by redirecting to the Savira authorization URL. This minimizes the chance of users getting distracted, navigating elsewhere on your site, and abandoning the OAuth flow.
 
 </Admonition>
 
-### Step 4: Share your details with Supabase
+### Step 4: Share your details with Savira
 
-Send Supabase the following so we can configure the **Install Integration** button:
+Send Savira the following so we can configure the **Install Integration** button:
 
 - The URL of your redirect record endpoint ([Step 2](#step-2-implement-the-redirect-record-endpoint)).
 - The URL pattern of your redirect handler endpoint ([Step 3](#step-3-implement-the-redirect-handler-endpoint)).
-- The `aud` claim value you want Supabase to send in the signed JWT.
+- The `aud` claim value you want Savira to send in the signed JWT.
 
-Ask Supabase for the public keys and key IDs for the staging and production environments.
+Ask Savira for the public keys and key IDs for the staging and production environments.

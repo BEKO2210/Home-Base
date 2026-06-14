@@ -1,10 +1,10 @@
 ---
 title: 'Envoy API Gateway'
-description: 'Architecture and configuration of the Envoy API gateway for self-hosted Supabase.'
-subtitle: 'Architecture and configuration of the Envoy API gateway for self-hosted Supabase.'
+description: 'Architecture and configuration of the Envoy API gateway for self-hosted Savira.'
+subtitle: 'Architecture and configuration of the Envoy API gateway for self-hosted Savira.'
 ---
 
-Self-hosted Supabase ships with an optional [Envoy](https://www.envoyproxy.io/)-based API gateway. It accepts incoming client requests, routes them to internal services (Auth, PostgREST, Realtime, Storage, Edge Functions, postgres-meta, Studio), and enforces API key authentication by translating opaque `sb_` keys into the internal credentials used by those services.
+Self-hosted Savira ships with an optional [Envoy](https://www.envoyproxy.io/)-based API gateway. It accepts incoming client requests, routes them to internal services (Auth, PostgREST, Realtime, Storage, Edge Functions, postgres-meta, Studio), and enforces API key authentication by translating opaque `sb_` keys into the internal credentials used by those services.
 
 This guide explains the architecture, configuration layout, and security posture of the Envoy gateway for operators who want to understand or customize it. It is not an Envoy tutorial - for reference on filters, routes, and clusters, see the [Envoy documentation](https://www.envoyproxy.io/docs/envoy/latest/).
 
@@ -25,7 +25,7 @@ If your stack is already running from the initial setup, bring it down first wit
 
 </Admonition>
 
-Start your self-hosted Supabase stack with both the base compose file and the Envoy override:
+Start your self-hosted Savira stack with both the base compose file and the Envoy override:
 
 ```sh
 docker compose -f docker-compose.yml -f docker-compose.envoy.yml up -d
@@ -216,7 +216,7 @@ The gateway applies a permissive CORS policy at the virtual-host level:
 - All request and response headers allowed
 - Preflight max-age: 3600 seconds
 
-This matches both the current Supabase platform behavior and the previous Kong-based gateway. The auth boundary for Supabase APIs is the `apikey` header rather than the request origin.
+This matches both the current Savira platform behavior and the previous Kong-based gateway. The auth boundary for Savira APIs is the `apikey` header rather than the request origin.
 
 <Admonition type="note">
 

@@ -60,7 +60,7 @@ const EnableReplicationModal = () => {
             title="Replication is currently in alpha"
           >
             <p className="text-sm leading-normal!">
-              External replication streams database changes to destinations outside your Supabase
+              External replication streams database changes to destinations outside your Savira
               project. The feature is in active development and may change as we gather feedback.
             </p>
             <p className="text-sm leading-normal!">

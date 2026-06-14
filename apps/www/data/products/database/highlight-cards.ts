@@ -5,7 +5,7 @@ const cards: { [name: string]: CardProps } = {
     title: 'Branching',
     badge: 'New',
     features: [
-      'Branch your Supabase project',
+      'Branch your Savira project',
       'Sync with your git branches',
       'Manage every Preview from the Dashboard',
       'Support for Vercel Previews',

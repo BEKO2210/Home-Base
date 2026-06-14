@@ -43,7 +43,7 @@ export const IntegrationOverviewTabV2 = ({ children }: PropsWithChildren) => {
   const { type, content, docsUrl, siteUrl, files = [] } = integration
 
   const docsUrlLabel = docsUrl?.includes('supabase.com/docs')
-    ? 'Supabase Docs'
+    ? 'Savira Docs'
     : isGithubHost(docsUrl)
       ? 'GitHub Docs'
       : 'Documentation'

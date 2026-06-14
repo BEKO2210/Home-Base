@@ -1,6 +1,6 @@
 {
-  "name": "Supabase Theme",
-  "displayName": "Supabase Theme",
+  "name": "Savira Theme",
+  "displayName": "Savira Theme",
   "semanticHighlighting": true,
   "colors": {
     "editor.background": "var(--code-highlight-color)",

@@ -72,8 +72,8 @@ export const AWSPrivateLinkSection = () => {
             <PageSectionSummary>
               <PageSectionTitle>AWS PrivateLink</PageSectionTitle>
               <PageSectionDescription>
-                Connect to your Supabase project from your AWS VPC using AWS PrivateLink. Create a
-                private connection between your AWS VPC and your Supabase project without traffic
+                Connect to your Savira project from your AWS VPC using AWS PrivateLink. Create a
+                private connection between your AWS VPC and your Savira project without traffic
                 traversing the public internet.
               </PageSectionDescription>
             </PageSectionSummary>
@@ -85,7 +85,7 @@ export const AWSPrivateLinkSection = () => {
               <UpgradeToPro
                 layout="vertical"
                 primaryText="Only available on Team or Enterprise Plan and above"
-                secondaryText="Connect your AWS VPC privately to your Supabase project using AWS PrivateLink."
+                secondaryText="Connect your AWS VPC privately to your Savira project using AWS PrivateLink."
                 buttonText="Upgrade to Team"
                 source="aws-privatelink-integration"
               />

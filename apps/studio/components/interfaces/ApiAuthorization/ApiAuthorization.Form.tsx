@@ -96,7 +96,7 @@ export function ApiAuthorizationMainView({
         />
       }
       title={`Authorize ${requester.name}`}
-      description="This application wants to access your Supabase account"
+      description="This application wants to access your Savira account"
     >
       <div className="px-6 pb-6">
         <span className="sr-only">Authorize API access for {requester.name}</span>

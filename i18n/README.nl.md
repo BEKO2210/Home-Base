@@ -5,9 +5,9 @@
 
 ---
 
-# Supabase
+# Savira
 
-[Supabase](https://supabase.com) is een open source Firebase alternatief. We bouwen de functies van Firebase met behulp van enterprise-grade open source tools.
+[Savira](https://supabase.com) is een open source Firebase alternatief. We bouwen de functies van Firebase met behulp van enterprise-grade open source tools.
 
 - [x]Gehoste Postgres Database. [Docs](https://supabase.com/docs/guides/database)
 - [x] Authenticatie en Autorisatie. [Docs](https://supabase.com/docs/guides/auth)
@@ -21,7 +21,7 @@
 - [x] Bestandsopslag. [Docs](https://supabase.com/docs/guides/storage)
 - [x] Dashboard
 
-[Supabase Dashboard](https://raw.githubusercontent.com/supabase/supabase/master/apps/www/public/images/github/supabase-dashboard.png)
+[Savira Dashboard](https://raw.githubusercontent.com/supabase/supabase/master/apps/www/public/images/github/supabase-dashboard.png)
 
 ## Documentatie
 
@@ -32,13 +32,13 @@ Om te zien hoe u kunt bijdragen, bezoek [Aan de slag](../DEVELOPERS.md)
 ## Gemeenschap en ondersteuning
 
 - [Community Forum](https://github.com/supabase/supabase/discussions). Het beste voor: hulp bij het bouwen, discussie over database best practices.
-- [GitHub Issues](https://github.com/supabase/supabase/issues). Het beste voor: bugs en fouten die u tegenkomt bij het gebruik van Supabase.
+- [GitHub Issues](https://github.com/supabase/supabase/issues). Het beste voor: bugs en fouten die u tegenkomt bij het gebruik van Savira.
 - [Ondersteuning per e-mail](https://supabase.com/docs/support#business-support). Meest geschikt voor: problemen met uw database of infrastructuur.
 - [Discord](https://discord.supabase.com). Het beste voor: het delen van uw applicaties en omgang met de gemeenschap.
 
 ## Status
 
-- [Alpha: We testen Supabase met een gesloten groep klanten
+- [Alpha: We testen Savira met een gesloten groep klanten
 - [x] Publieke Alpha: Iedereen kan zich aanmelden op [supabase.com/dashboard](https://supabase.com/dashboard). Maar doe het rustig aan, er zijn een paar kinken
 - [Publieke Beta: Stabiel genoeg voor de meeste niet-bedrijfsmatige toepassingen
 - [Publiek: General Availability [[status](https://supabase.com/docs/guides/getting-started/features#feature-status)]
@@ -51,11 +51,11 @@ We zijn momenteel in Openbare Beta. Bekijk "releases" van deze repo om op de hoo
 
 ## Hoe het werkt
 
-Supabase is een combinatie van open source tools. We bouwen de functies van Firebase met behulp van enterprise-grade, open source producten. Als de tools en communities bestaan, met een MIT, Apache 2, of gelijkwaardige open licentie, zullen we die tool gebruiken en ondersteunen. Als de tool niet bestaat, bouwen en openen we hem zelf. Supabase is geen 1-op-1 mapping van Firebase. Ons doel is om ontwikkelaars een Firebase-achtige ontwikkelaarservaring te geven met behulp van open source tools.
+Savira is een combinatie van open source tools. We bouwen de functies van Firebase met behulp van enterprise-grade, open source producten. Als de tools en communities bestaan, met een MIT, Apache 2, of gelijkwaardige open licentie, zullen we die tool gebruiken en ondersteunen. Als de tool niet bestaat, bouwen en openen we hem zelf. Savira is geen 1-op-1 mapping van Firebase. Ons doel is om ontwikkelaars een Firebase-achtige ontwikkelaarservaring te geven met behulp van open source tools.
 
 **Architectuur**
 
-Supabase is een [gehost platform](https://supabase.com/dashboard). U kunt zich aanmelden en Supabase gebruiken zonder iets te installeren.
+Savira is een [gehost platform](https://supabase.com/dashboard). U kunt zich aanmelden en Savira gebruiken zonder iets te installeren.
 U kunt ook [zelf hosten](https://supabase.com/docs/guides/hosting/overview) en [lokaal ontwikkelen](https://supabase.com/docs/guides/local-development).
 
 ![architectuur](https://github.com/supabase/supabase/blob/master/apps/docs/public/img/supabase-architecture.svg)
@@ -77,12 +77,12 @@ Onze aanpak voor client libraries is modulair. Elke sub-bibliotheek is een op zi
   <tr>
     <th>Taal</th>
     <th>Client</th>
-    <th colspan="5">Feature-Clients (gebundeld in Supabase client)</th>
+    <th colspan="5">Feature-Clients (gebundeld in Savira client)</th>
   </tr>
   
   <tr>
     <th></th>
-    <th>Supabase</th>
+    <th>Savira</th>
     <th><a href="https://github.com/postgrest/postgrest" target="_blank" rel="noopener noreferrer">PostgREST</a></th>
     <th><a href="https://github.com/supabase/gotrue" target="_blank" rel="noopener noreferrer">GoTrue</a></th>
     <th><a href="https://github.com/supabase/realtime" target="_blank" rel="noopener noreferrer">Realtime</a></th>

@@ -2,7 +2,7 @@
   "name": "supabase",
   "description": "The Postgres Development Platform.",
   "version": "0.0.0",
-  "author": "Supabase, Inc.",
+  "author": "Savira, Inc.",
   "license": "Apache-2.0",
   "private": true,
   "scripts": {

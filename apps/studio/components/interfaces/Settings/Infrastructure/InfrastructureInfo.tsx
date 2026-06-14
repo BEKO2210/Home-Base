@@ -209,7 +209,7 @@ export const InfrastructureInfo = () => {
                                       </Badge>
                                     </TooltipTrigger>
                                     <TooltipContent side="bottom" className="w-52 text-center">
-                                      Project is on the latest version of Postgres that Supabase
+                                      Project is on the latest version of Postgres that Savira
                                       supports
                                     </TooltipContent>
                                   </Tooltip>

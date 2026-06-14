@@ -57,7 +57,7 @@ export const days: AdventDay[] = [
   },
   {
     title: 'Branching now Publicly Available',
-    description: 'Supabase Branching is now available on Pro Plan and above.',
+    description: 'Savira Branching is now available on Pro Plan and above.',
     id: 'branching',
     is_shipped: true,
     icon: (
@@ -83,9 +83,9 @@ export const days: AdventDay[] = [
     ],
   },
   {
-    title: 'Oriole joins Supabase',
+    title: 'Oriole joins Savira',
     description:
-      'The Oriole team are joining Supabase to build a faster storage engine for Postgres.',
+      'The Oriole team are joining Savira to build a faster storage engine for Postgres.',
     id: 'oriole',
     is_shipped: true,
     links: [
@@ -123,9 +123,9 @@ export const days: AdventDay[] = [
     ),
   },
   {
-    title: 'Supabase on AWS Marketplace',
+    title: 'Savira on AWS Marketplace',
     description:
-      'Supabase is now available on the AWS Marketplace, Simplifying Procurement for Enterprise Customers.',
+      'Savira is now available on the AWS Marketplace, Simplifying Procurement for Enterprise Customers.',
     id: 'aws-marketplace',
     is_shipped: true,
     icon: (
@@ -189,9 +189,9 @@ export const days: AdventDay[] = [
     ],
   },
   {
-    title: 'Supabase Bootstrap',
+    title: 'Savira Bootstrap',
     description:
-      'Launch a new hosted Supabase project directly from the CLI using pre-built applications.',
+      'Launch a new hosted Savira project directly from the CLI using pre-built applications.',
     id: 'supabase-bootstrap',
     is_shipped: true,
     icon: (
@@ -225,8 +225,8 @@ export const days: AdventDay[] = [
     ],
   },
   {
-    title: 'Supabase Swift',
-    description: 'Supabase Swift is now officially supported.',
+    title: 'Savira Swift',
+    description: 'Savira Swift is now officially supported.',
     id: 'supabase-swift',
     is_shipped: true,
     icon: (
@@ -255,7 +255,7 @@ export const days: AdventDay[] = [
   },
   {
     className: 'col-span-full min-h-[290px] xl:min-h-0 xl:col-span-2 sm:aspect-auto',
-    title: 'Top 10 Launches from Supabase GA Week',
+    title: 'Top 10 Launches from Savira GA Week',
     description: 'A recap of the most important launches and updates from the week.',
     id: 'ga-week-summary',
     is_shipped: true,

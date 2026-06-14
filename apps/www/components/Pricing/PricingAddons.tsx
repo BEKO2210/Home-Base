@@ -27,7 +27,7 @@ const addons = [
     icon: 'custom-domain-upgrade',
     price: 'Flat fee $10/month',
     description:
-      'Use your own domain for your Supabase project to present a branded experience to your users.',
+      'Use your own domain for your Savira project to present a branded experience to your users.',
     ctaText: 'Documentation',
     ctaLink: 'https://supabase.com/docs/guides/platform/custom-domains',
     ctaTarget: '_blank',
@@ -51,7 +51,7 @@ const PricingAddons: FC = () => {
       <div className="text-center">
         <h2 className="text-foreground text-3xl">Fine-tune your project</h2>
         <p className="text-foreground-light mt-4 mb-8 lg:mb-16 text-lg">
-          Go beyond your Plan limits and level up your Supabase experience
+          Go beyond your Plan limits and level up your Savira experience
         </p>
       </div>
       <div className="grid lg:grid-cols-2 gap-4 mb-16 mx-auto max-w-6xl">

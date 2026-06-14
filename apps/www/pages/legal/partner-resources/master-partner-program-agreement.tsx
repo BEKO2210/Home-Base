@@ -10,7 +10,7 @@ import { NextSeo } from 'next-seo'
 
 const meta = {
   title: 'Master Partner Program Agreement',
-  description: 'Supabase Master Partner Program Agreement',
+  description: 'Savira Master Partner Program Agreement',
 }
 
 const versions: LegalDocVersion[] = [
@@ -31,7 +31,7 @@ export default function MasterPartnerProgramAgreementPage() {
           />
         }
         h1="Master Partner Program Agreement"
-        subheader="The governing agreement for participants in the Supabase partner program."
+        subheader="The governing agreement for participants in the Savira partner program."
       />
       <MDXProvider components={mdxComponents()}>
         <SectionContainer className="prose">

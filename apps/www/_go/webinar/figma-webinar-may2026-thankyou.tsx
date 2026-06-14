@@ -18,7 +18,7 @@ const page: GoPageInput = {
       type: 'single-column',
       title: 'In the meantime',
       description:
-        'Explore Supabase and get ready to build production-ready applications with Figma Make.',
+        'Explore Savira and get ready to build production-ready applications with Figma Make.',
       children: (
         <div className="flex items-center justify-center gap-4">
           <Button asChild type="default" size="small">

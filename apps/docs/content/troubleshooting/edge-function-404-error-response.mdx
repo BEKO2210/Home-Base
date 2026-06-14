@@ -10,11 +10,11 @@ code = "NOT_FOUND"
 message = "Requested function was not found"
 ---
 
-The edge function is not recognized by Supabase
+The edge function is not recognized by Savira
 
 ## Context for the error
 
-If the Supabase Edge Function Runtime does not recognize the function specified in the URL endpoint:
+If the Savira Edge Function Runtime does not recognize the function specified in the URL endpoint:
 
 ```sh
 https://PROJECT_REF.supabase.co/functions/v1/UNRECOGNIZED_FUNCTION_NAME
@@ -38,7 +38,7 @@ If the tests return a 404 but do not match the criteria below, the error is comi
 
 Platform 404 errors cannot be detected in the browser. Instead, to confirm 404s from the browser, you must [check the logs](#inspecting-the-logs) instead.
 
-Browsers misreport 404s as generic `CORS errors`. As a result, the [Supabase JavaScript client](/docs/reference/javascript/introduction) surfaces only a generic message: `Failed to send a request to the Edge Function`.
+Browsers misreport 404s as generic `CORS errors`. As a result, the [Savira JavaScript client](/docs/reference/javascript/introduction) surfaces only a generic message: `Failed to send a request to the Edge Function`.
 
 </Admonition>
 
@@ -61,7 +61,7 @@ Always configure an appropriate time frame when using the log explorer
 
 </Admonition>
 
-You cannot inspect the function dashboard to find platform 404 errors, instead, run the below query in the [log explorer](</dashboard/project/_/logs/explorer?its=&ite=&s=select+distinct%0A++req.pathname+as+function_name,%0A++res.status_code,%0A++CASE+%0A++++WHEN+metadata.execution_id+is+null+THEN+%27FUNCTION_NOT_FOUND%27%0A++++ELSE+%27FUNCTION+RECOGNIZED:+custom+404+message+in+app+logic%27%0A++END+AS+type_of_404%0Afrom%0A++function_edge_logs%0A++cross+join+UNNEST(metadata)+as+metadata%0A++cross+join+UNNEST(metadata.request)+as+req%0A++cross+join+UNNEST(metadata.response)+as+res%0Awhere+status_code+=+404%0Alimit+10;>). The results show all requests that reached Supabase but were rejected as unrecognizable.
+You cannot inspect the function dashboard to find platform 404 errors, instead, run the below query in the [log explorer](</dashboard/project/_/logs/explorer?its=&ite=&s=select+distinct%0A++req.pathname+as+function_name,%0A++res.status_code,%0A++CASE+%0A++++WHEN+metadata.execution_id+is+null+THEN+%27FUNCTION_NOT_FOUND%27%0A++++ELSE+%27FUNCTION+RECOGNIZED:+custom+404+message+in+app+logic%27%0A++END+AS+type_of_404%0Afrom%0A++function_edge_logs%0A++cross+join+UNNEST(metadata)+as+metadata%0A++cross+join+UNNEST(metadata.request)+as+req%0A++cross+join+UNNEST(metadata.response)+as+res%0Awhere+status_code+=+404%0Alimit+10;>). The results show all requests that reached Savira but were rejected as unrecognizable.
 
 ```sql
 select distinct
@@ -103,7 +103,7 @@ If step 3 fails, it may be a sign of an internal bug and it may be necessary to 
 
 ![image](/docs/img/troubleshooting/edge_function_404_redeploy.png)
 
-Alternatively, if you develop locally, you can redeploy the function with the [Supabase CLI](/docs/guides/local-development/cli/getting-started?queryGroups=platform&platform=macos):
+Alternatively, if you develop locally, you can redeploy the function with the [Savira CLI](/docs/guides/local-development/cli/getting-started?queryGroups=platform&platform=macos):
 
 ```sh
 supabase functions deploy FUNCTION_NAME
@@ -112,7 +112,7 @@ supabase functions deploy FUNCTION_NAME
 supabase functions deploy
 ```
 
-Then write in a ticket to [Supabase Support](/dashboard/support/new)
+Then write in a ticket to [Savira Support](/dashboard/support/new)
 
 ## Additional resources
 

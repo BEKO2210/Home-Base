@@ -53,14 +53,14 @@ const SecurityNewsletterForm = () => {
       <div className="text-center mb-6 max-w-sm">
         <h2 className="text-2xl text-foreground mb-2">Security Newsletter</h2>
         <p className="text-foreground-light text-sm text-pretty">
-          Sign up for the Supabase Security Newsletter. Receive updates during security incidents.
+          Sign up for the Savira Security Newsletter. Receive updates during security incidents.
         </p>
       </div>
 
       <div className="border rounded-xl bg-surface-75 p-4 md:p-6 w-full max-w-lg">
         {status === 'success' ? (
           <p className="text-foreground text-sm">
-            Thanks for subscribing! You'll receive security updates from Supabase.
+            Thanks for subscribing! You'll receive security updates from Savira.
           </p>
         ) : (
           <form onSubmit={handleSubmit} className="flex flex-col gap-4">

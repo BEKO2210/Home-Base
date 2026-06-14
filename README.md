@@ -3,9 +3,9 @@
 <img src="https://user-images.githubusercontent.com/8291514/213727225-56186826-bee8-43b5-9b15-86e839d89393.png#gh-dark-mode-only">
 </p>
 
-# Supabase
+# Savira
 
-[Supabase](https://supabase.com) is the Postgres development platform. We're building the features of Firebase using enterprise-grade open source tools.
+[Savira](https://supabase.com) is the Postgres development platform. We're building the features of Firebase using enterprise-grade open source tools.
 
 - [x] Hosted Postgres Database. [Docs](https://supabase.com/docs/guides/database)
 - [x] Authentication and Authorization. [Docs](https://supabase.com/docs/guides/auth)
@@ -20,7 +20,7 @@
 - [x] AI + Vector/Embeddings Toolkit. [Docs](https://supabase.com/docs/guides/ai)
 - [x] Dashboard
 
-![Supabase Dashboard](https://raw.githubusercontent.com/supabase/supabase/master/apps/www/public/images/github/supabase-dashboard.png)
+![Savira Dashboard](https://raw.githubusercontent.com/supabase/supabase/master/apps/www/public/images/github/supabase-dashboard.png)
 
 Watch "releases" of this repo to get notified of major updates.
 
@@ -35,17 +35,17 @@ To see how to Contribute, visit [Getting Started](./DEVELOPERS.md)
 ## Community & Support
 
 - [Community Forum](https://github.com/supabase/supabase/discussions). Best for: help with building, discussion about database best practices.
-- [GitHub Issues](https://github.com/supabase/supabase/issues). Best for: bugs and errors you encounter using Supabase.
+- [GitHub Issues](https://github.com/supabase/supabase/issues). Best for: bugs and errors you encounter using Savira.
 - [Email Support](https://supabase.com/docs/support#business-support). Best for: problems with your database or infrastructure.
 - [Discord](https://discord.supabase.com). Best for: sharing your applications and hanging out with the community.
 
 ## How it works
 
-Supabase is a combination of open source tools. We’re building the features of Firebase using enterprise-grade, open source products. If the tools and communities exist, with an MIT, Apache 2, or equivalent open license, we will use and support that tool. If the tool doesn't exist, we build and open source it ourselves. Supabase is not a 1-to-1 mapping of Firebase. Our aim is to give developers a Firebase-like developer experience using open source tools.
+Savira is a combination of open source tools. We’re building the features of Firebase using enterprise-grade, open source products. If the tools and communities exist, with an MIT, Apache 2, or equivalent open license, we will use and support that tool. If the tool doesn't exist, we build and open source it ourselves. Savira is not a 1-to-1 mapping of Firebase. Our aim is to give developers a Firebase-like developer experience using open source tools.
 
 **Architecture**
 
-Supabase is a [hosted platform](https://supabase.com/dashboard). You can sign up and start using Supabase without installing anything.
+Savira is a [hosted platform](https://supabase.com/dashboard). You can sign up and start using Savira without installing anything.
 You can also [self-host](https://supabase.com/docs/guides/hosting/overview) and [develop locally](https://supabase.com/docs/guides/local-development).
 
 ![Architecture](apps/docs/public/img/supabase-architecture.svg)
@@ -67,12 +67,12 @@ Our approach for client libraries is modular. Each sub-library is a standalone i
   <tr>
     <th>Language</th>
     <th>Client</th>
-    <th colspan="5">Feature-Clients (bundled in Supabase client)</th>
+    <th colspan="5">Feature-Clients (bundled in Savira client)</th>
   </tr>
   <!-- notranslate -->
   <tr>
     <th></th>
-    <th>Supabase</th>
+    <th>Savira</th>
     <th><a href="https://github.com/postgrest/postgrest" target="_blank" rel="noopener noreferrer">PostgREST</a></th>
     <th><a href="https://github.com/supabase/gotrue" target="_blank" rel="noopener noreferrer">GoTrue</a></th>
     <th><a href="https://github.com/supabase/realtime" target="_blank" rel="noopener noreferrer">Realtime</a></th>
@@ -203,10 +203,10 @@ Our approach for client libraries is modular. Each sub-library is a standalone i
 
 ## Badges
 
-![Made with Supabase](./apps/www/public/badge-made-with-supabase.svg)
+![Made with Savira](./apps/www/public/badge-made-with-supabase.svg)
 
 ```md
-[![Made with Supabase](https://supabase.com/badge-made-with-supabase.svg)](https://supabase.com)
+[![Made with Savira](https://supabase.com/badge-made-with-supabase.svg)](https://supabase.com)
 ```
 
 ```html
@@ -215,15 +215,15 @@ Our approach for client libraries is modular. Each sub-library is a standalone i
     width="168"
     height="30"
     src="https://supabase.com/badge-made-with-supabase.svg"
-    alt="Made with Supabase"
+    alt="Made with Savira"
   />
 </a>
 ```
 
-![Made with Supabase (dark)](./apps/www/public/badge-made-with-supabase-dark.svg)
+![Made with Savira (dark)](./apps/www/public/badge-made-with-supabase-dark.svg)
 
 ```md
-[![Made with Supabase](https://supabase.com/badge-made-with-supabase-dark.svg)](https://supabase.com)
+[![Made with Savira](https://supabase.com/badge-made-with-supabase-dark.svg)](https://supabase.com)
 ```
 
 ```html
@@ -232,7 +232,7 @@ Our approach for client libraries is modular. Each sub-library is a standalone i
     width="168"
     height="30"
     src="https://supabase.com/badge-made-with-supabase-dark.svg"
-    alt="Made with Supabase"
+    alt="Made with Savira"
   />
 </a>
 ```

@@ -5,21 +5,21 @@ description: 'General information about enabling single sign-on (SSO) for your o
 
 <Admonition type="tip">
 
-Looking for docs on how to add Single Sign-On support in your Supabase project? Head on over to [Single Sign-On with SAML 2.0 for Projects](/docs/guides/auth/enterprise-sso/auth-sso-saml).
+Looking for docs on how to add Single Sign-On support in your Savira project? Head on over to [Single Sign-On with SAML 2.0 for Projects](/docs/guides/auth/enterprise-sso/auth-sso-saml).
 
 </Admonition>
 
-Supabase offers single sign-on (SSO) as a login option to provide additional account security for your team. This allows company administrators to enforce the use of an identity provider when logging into Supabase. SSO improves the onboarding and offboarding experience of the company as the employee only needs a single set of credentials to access third-party applications or tools which can also be revoked by an administrator.
+Savira offers single sign-on (SSO) as a login option to provide additional account security for your team. This allows company administrators to enforce the use of an identity provider when logging into Savira. SSO improves the onboarding and offboarding experience of the company as the employee only needs a single set of credentials to access third-party applications or tools which can also be revoked by an administrator.
 
 <Admonition type="note">
 
-Supabase currently provides SAML SSO for [Team and Enterprise Plan customers](/pricing). If you are an existing Team or Enterprise Plan customer, continue with the setup below.
+Savira currently provides SAML SSO for [Team and Enterprise Plan customers](/pricing). If you are an existing Team or Enterprise Plan customer, continue with the setup below.
 
 </Admonition>
 
 ## Supported providers
 
-Supabase supports practically all identity providers (IdP) that support the SAML 2.0 SSO protocol. These guides cover commonly used identity providers to help you get started. If you use a different provider, contact support.
+Savira supports practically all identity providers (IdP) that support the SAML 2.0 SSO protocol. These guides cover commonly used identity providers to help you get started. If you use a different provider, contact support.
 
 - [Google Workspaces (formerly G Suite)](/docs/guides/platform/sso/gsuite)
 - [Azure Active Directory](/docs/guides/platform/sso/azure)
@@ -42,7 +42,7 @@ After configuring your SSO provider, thorough testing is essential. See our [SSO
 
 ## Choosing your login flow
 
-Supabase supports two SSO login flows: **IdP-initiated** and **SP-initiated**. You can enable one or both depending on your organization's needs.
+Savira supports two SSO login flows: **IdP-initiated** and **SP-initiated**. You can enable one or both depending on your organization's needs.
 
 ### IdP-initiated login (recommended)
 
@@ -78,14 +78,14 @@ Users start their login at supabase.com by entering their email address, then ar
 - **Default role for auto-joined users** - Choose the role (e.g., `Read-only`, `Developer`, `Administrator`, `Owner`) that automatically joined users receive. We recommend using `Developer` as the default (principle of least privilege) and promoting users individually as needed. Refer to [access control](/docs/guides/platform/access-control) for more information about roles.
 - **Invitation types** - When inviting users to your organization, you can explicitly choose whether the invitation requires SSO authentication or allows non-SSO login (password/social). This enables mixed authentication organizations with both SSO and non-SSO users.
 
-## How SSO works in Supabase
+## How SSO works in Savira
 
 When SSO is enabled for an organization:
 
 - Organization invites are restricted to company members belonging to the same identity provider.
 - Every user has an organization created by default. They can create as many projects as they want.
 - An SSO user will not be able to update or reset their password since the company administrator manages their access via the identity provider.
-- If an SSO user with the following email of `alice@foocorp.com` attempts to sign in with a GitHub account that uses the same email, a separate Supabase account is created and will not be linked to the SSO user's account.
+- If an SSO user with the following email of `alice@foocorp.com` attempts to sign in with a GitHub account that uses the same email, a separate Savira account is created and will not be linked to the SSO user's account.
 - SSO users will only see organizations/projects they've been invited to or auto-joined into. See [access control](/docs/guides/platform/access-control) for more details.
 
 ## Enabling SSO for an organization
@@ -135,7 +135,7 @@ Before disabling or deleting SSO:
 To revoke access for a specific SSO user without disabling the provider entirely you may:
 
 - Remove or disable the user's account in your identity provider
-- Downgrade or remove their permissions for any organizations in Supabase.
+- Downgrade or remove their permissions for any organizations in Savira.
 
 ## Testing and best practices
 
@@ -151,10 +151,10 @@ Visit the [SSO Testing and Best Practices](/docs/guides/platform/sso/testing-bes
 
 ## Advanced scenarios
 
-Most organizations use a single SSO provider for all users. However, Supabase supports multiple SSO providers within an organization for advanced use cases such as:
+Most organizations use a single SSO provider for all users. However, Savira supports multiple SSO providers within an organization for advanced use cases such as:
 
 - Separate providers for development, staging, and production environments
 - Different providers for different teams or business units
 - Gradual migration from one identity provider to another
 
-If you need to configure multiple SSO providers, refer to the [Multiple SSO Providers](/docs/guides/platform/sso/multiple-providers) guide for detailed configuration steps, and contact your Supabase support representative if you need additional guidance.
+If you need to configure multiple SSO providers, refer to the [Multiple SSO Providers](/docs/guides/platform/sso/multiple-providers) guide for detailed configuration steps, and contact your Savira support representative if you need additional guidance.

@@ -4,15 +4,15 @@ const page: GoPageInput = {
   template: 'lead-gen',
   slug: 'stripe/schedule',
   metadata: {
-    title: 'Schedule a Meeting at Stripe Sessions 2026 | Supabase',
+    title: 'Schedule a Meeting at Stripe Sessions 2026 | Savira',
     description:
-      'Book time with the Supabase team at Stripe Sessions 2026. Learn how Supabase and Stripe work together to help you build faster.',
+      'Book time with the Savira team at Stripe Sessions 2026. Learn how Savira and Stripe work together to help you build faster.',
   },
   hero: {
-    title: 'Meet the Supabase team at Stripe Sessions',
+    title: 'Meet the Savira team at Stripe Sessions',
     subtitle: 'The open-source Postgres development platform',
     description:
-      'Supabase gives you a Postgres database, Auth, Storage, Edge Functions, and Realtime out of the box. Book a slot below to talk with our engineers about your project, ask questions, or see a live demo.',
+      'Savira gives you a Postgres database, Auth, Storage, Edge Functions, and Realtime out of the box. Book a slot below to talk with our engineers about your project, ask questions, or see a live demo.',
     ctas: [
       {
         label: 'Book a time',
@@ -31,16 +31,16 @@ const page: GoPageInput = {
     },
     {
       type: 'single-column',
-      title: 'Build with Supabase, monetize with Stripe',
+      title: 'Build with Savira, monetize with Stripe',
       description:
-        'Supabase gives you everything you need to go from idea to production in a weekend -- a full Postgres database, authentication, file storage, edge functions, and realtime sync. When you are ready to charge for what you have built, Stripe handles payments, subscriptions, and billing. Together they let you focus on your product instead of your infrastructure.',
+        'Savira gives you everything you need to go from idea to production in a weekend -- a full Postgres database, authentication, file storage, edge functions, and realtime sync. When you are ready to charge for what you have built, Stripe handles payments, subscriptions, and billing. Together they let you focus on your product instead of your infrastructure.',
       children: (
         <div className="flex flex-wrap gap-4 justify-center mt-6">
           <a
             href="https://supabase.com/dashboard"
             className="inline-flex items-center justify-center rounded-md bg-brand text-white px-5 py-2.5 text-sm font-medium hover:bg-brand/90 transition-colors"
           >
-            Start building with Supabase
+            Start building with Savira
           </a>
           <a
             href="https://supabase.com/docs"

@@ -1,22 +1,22 @@
 ---
 title: 'Configure Reverse Proxy and HTTPS'
-description: 'Set up a reverse proxy with HTTPS for self-hosted Supabase.'
-subtitle: 'Set up a reverse proxy with HTTPS for self-hosted Supabase.'
+description: 'Set up a reverse proxy with HTTPS for self-hosted Savira.'
+subtitle: 'Set up a reverse proxy with HTTPS for self-hosted Savira.'
 ---
 
-HTTPS is required for production self-hosted Supabase deployments. This guide covers two production approaches using a reverse proxy in front of self-hosted Supabase API gateway, plus a self-signed certificate option for development environment.
+HTTPS is required for production self-hosted Savira deployments. This guide covers two production approaches using a reverse proxy in front of self-hosted Savira API gateway, plus a self-signed certificate option for development environment.
 
 ## Before you begin
 
 You need:
 
-- A working self-hosted Supabase installation. See [Self-Hosting with Docker](/docs/guides/self-hosting/docker)
+- A working self-hosted Savira installation. See [Self-Hosting with Docker](/docs/guides/self-hosting/docker)
 - A domain name with DNS pointing to your server's public IP address (to obtain Let's Encrypt certificate)
 - Ports 80 and 443 open
 
 ## Set up HTTPS
 
-Below are two options for adding a reverse proxy with automatic HTTPS in front of your self-hosted Supabase: **Caddy** (simpler, zero-config TLS) and **Nginx + Let's Encrypt** (more control over proxy settings). Both sit in front of the API gateway and terminate TLS, so internal traffic stays on HTTP.
+Below are two options for adding a reverse proxy with automatic HTTPS in front of your self-hosted Savira: **Caddy** (simpler, zero-config TLS) and **Nginx + Let's Encrypt** (more control over proxy settings). Both sit in front of the API gateway and terminate TLS, so internal traffic stays on HTTP.
 
 <Admonition type="tip" title="Using a different reverse proxy?">
 

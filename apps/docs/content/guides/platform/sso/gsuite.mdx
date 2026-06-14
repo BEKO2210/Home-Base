@@ -11,11 +11,11 @@ This feature is only available on the [Team and Enterprise Plans](/pricing). If 
 
 <Admonition type="tip">
 
-Looking for docs on how to add Single Sign-On support in your Supabase project? Head on over to [Single Sign-On with SAML 2.0 for Projects](/docs/guides/auth/enterprise-sso/auth-sso-saml).
+Looking for docs on how to add Single Sign-On support in your Savira project? Head on over to [Single Sign-On with SAML 2.0 for Projects](/docs/guides/auth/enterprise-sso/auth-sso-saml).
 
 </Admonition>
 
-Supabase supports single sign-on (SSO) using Google Workspace (formerly known as G Suite).
+Savira supports single sign-on (SSO) using Google Workspace (formerly known as G Suite).
 
 ## Step 1: Open the Google Workspace web and mobile apps console [#google-workspace-console]
 
@@ -29,7 +29,7 @@ From the _Add app_ button in the toolbar choose _Add custom SAML app_.
 
 ## Step 3: Fill out app details [#add-app-details]
 
-The information you enter here is for visibility into your Google Workspace. You can choose any values you like. `Supabase` as a name works well for most use cases. Optionally enter a description.
+The information you enter here is for visibility into your Google Workspace. You can choose any values you like. `Savira` as a name works well for most use cases. Optionally enter a description.
 
 ![Google Workspace: Web and mobile apps admin console, Add custom SAML, App details screen](/docs/img/sso-gsuite-step-03.png)
 
@@ -43,7 +43,7 @@ This is a very important step. Click on _DOWNLOAD METADATA_ and save the file th
 
 <Admonition type="caution">
 
-**Certificate expiration:** Set a calendar reminder 30 days before the certificate expiration date. When the certificate is renewed, you'll need to download the new metadata file and update it in your Supabase SSO settings. Expired certificates are a common cause of SSO sign-in failures.
+**Certificate expiration:** Set a calendar reminder 30 days before the certificate expiration date. When the certificate is renewed, you'll need to download the new metadata file and update it in your Savira SSO settings. Expired certificates are a common cause of SSO sign-in failures.
 
 </Admonition>
 
@@ -63,7 +63,7 @@ Fill out these service provider details on the next screen.
 
 ## Step 6: Configure attribute mapping [#configure-attribute-mapping]
 
-Attribute mappings allow Supabase to get information about your Google Workspace users on each login.
+Attribute mappings allow Savira to get information about your Google Workspace users on each login.
 
 **A _Primary email_ to `email` mapping is required.** Other mappings shown below are optional and configurable depending on your Google Workspace setup. If in doubt, replicate the same config as shown.
 
@@ -73,11 +73,11 @@ Any changes you make from this screen will be used later in [Step 10: Configure 
 
 ## Step 7: Configure user access [#configure-user-access]
 
-You can configure which Google Workspace user accounts will get access to Supabase. This is important if you wish to limit access to your software engineering teams.
+You can configure which Google Workspace user accounts will get access to Savira. This is important if you wish to limit access to your software engineering teams.
 
 You can configure this access by clicking on the _User access_ card (or down-arrow). Follow the instructions on screen.
 
-![Google Workspace: Web and mobile apps admin console, Supabase app screen](/docs/img/sso-gsuite-step-08.png)
+![Google Workspace: Web and mobile apps admin console, Savira app screen](/docs/img/sso-gsuite-step-08.png)
 
 <Admonition type="note">
 

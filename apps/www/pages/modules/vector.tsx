@@ -54,7 +54,7 @@ function VectorPage() {
           dangerouslySetInnerHTML={{
             __html: serializeJsonLd(
               softwareApplicationSchema({
-                name: 'Supabase Vector',
+                name: 'Savira Vector',
                 description: meta_description,
                 url: 'https://supabase.com/modules/vector',
                 image: meta_image,

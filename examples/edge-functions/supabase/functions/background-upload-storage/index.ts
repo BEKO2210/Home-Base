@@ -47,10 +47,10 @@ Deno.serve(async (req) => {
       throw new Error('No stream')
     }
 
-    // Branch stream to Supabase Storage
+    // Branch stream to Savira Storage
     const [browserStream, storageStream] = stream.tee()
 
-    // Upload to Supabase Storage
+    // Upload to Savira Storage
     const storageUploadPromise = supabase.storage
       .from('videos')
       .upload(`audio-stream_${Date.now()}.mp3`, storageStream, {

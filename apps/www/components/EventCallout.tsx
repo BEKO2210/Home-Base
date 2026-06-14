@@ -27,7 +27,7 @@ const EventCallout = ({ className, size = 'tiny', ...props }: PropsWithChildren<
         >
           <span className="uppercase text-brand font-mono">Webinar</span>
           {/* <span className="uppercase px-2 text-xs">23 Oct</span> */}
-          <span className="">Migrating to Supabase Auth / Good Tape</span>
+          <span className="">Migrating to Savira Auth / Good Tape</span>
           <ChevronRightIcon className="translate-x-0 transition-transform group-hover:translate-x-0.5 w-3 h-3 -ml-1" />
         </Link>
       )
@@ -44,7 +44,7 @@ const EventCallout = ({ className, size = 'tiny', ...props }: PropsWithChildren<
           <VideoCameraIcon className="w-4 h-4 text-brand mr-2" />
           <span className="py-1 uppercase text-brand font-mono">Webinar</span>
           <span className="py-1 uppercase mx-3 px-3 border-x">23 Oct</span>
-          <span className="py-1">Migrating to Supabase Auth / Good Tape</span>
+          <span className="py-1">Migrating to Savira Auth / Good Tape</span>
           <ChevronRightIcon className="translate-x-0 transition-transform group-hover:translate-x-0.5 w-3 h-3 ml-1.5" />
         </Link>
       )
@@ -72,7 +72,7 @@ const EventCallout = ({ className, size = 'tiny', ...props }: PropsWithChildren<
               </div>
 
               <span className="text-foreground text-3xl">Scale to Millions</span>
-              <p>Learn how to reduce costs while maintaining top-tier security with Supabase</p>
+              <p>Learn how to reduce costs while maintaining top-tier security with Savira</p>
               <TextLink label="Register now" />
             </div>
           </Panel>

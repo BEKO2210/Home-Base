@@ -1,6 +1,6 @@
 ---
-title: 'Protecting your Supabase projects from npm supply chain attacks'
-description: 'How Supabase is responding to npm supply chain attacks and practical steps you should take today to reduce your risk.'
+title: 'Protecting your Savira projects from npm supply chain attacks'
+description: 'How Savira is responding to npm supply chain attacks and practical steps you should take today to reduce your risk.'
 author: katerina_skroumpelou
 date: '2026-05-26'
 imgSocial: 'https://zhfonblqamxferhoguzj.supabase.co/functions/v1/generate-og?template=platform&layout=icon-text&copy=Protecting+projects+from%0A%5Bnpm+supply+chain+attacks%5D&icon=supabase.svg'
@@ -17,18 +17,18 @@ toc_depth: 3
 
 There has been a growing trend of supply chain attacks on Node Package Manager (NPM). In addition, we have seen other creative attacks, including a typosquat package named `supabase-javascript` that appeared on npm, copying our name to phish developers. We reported it. npm took it down a few hours later, long enough that the package picked up real downloads.
 
-If you build on Supabase, this matters to you. Edge Functions pull from npm. The Supabase CLI is on npm. `supabase-js`, `@supabase/ssr`, and `@supabase/server` are all on npm. Any of these is a credential leak waiting for the wrong update to land.
+If you build on Savira, this matters to you. Edge Functions pull from npm. The Savira CLI is on npm. `supabase-js`, `@supabase/ssr`, and `@supabase/server` are all on npm. Any of these is a credential leak waiting for the wrong update to land.
 
 This post lays out what we are doing about it and what you should do today.
 
-## What we are doing about it at Supabase
+## What we are doing about it at Savira
 
 We kicked off a [coordinated response](https://supabase.com/docs/guides/security/npm-security#what-supabase-does-on-its-side) across the company. The work in flight:
 
 - **Publishing a [canonical security guide](https://supabase.com/docs/guides/security/npm-security) in our docs.** A single, agent-readable page that tells you exactly what to do.
-- **Hardening our own GitHub Actions.** Our security team finished a pass on `pull_request_target` usage across the Supabase org months ago and is close to enforcing pinned action SHAs across every repo.
+- **Hardening our own GitHub Actions.** Our security team finished a pass on `pull_request_target` usage across the Savira org months ago and is close to enforcing pinned action SHAs across every repo.
 - **Adding security notes to secret-handling APIs.** TSDoc and JSDoc on functions like `createClient` so editor hovers warn when you are working with sensitive credentials.
-- **Comms across every channel.** Our goal is to educate as many people as we can, whether or not they are Supabase customers.
+- **Comms across every channel.** Our goal is to educate as many people as we can, whether or not they are Savira customers.
 
 ## How npm supply chain attacks actually happen
 
@@ -84,7 +84,7 @@ The trade-off is that some packages with native code (`bcrypt`, `sharp`, and sim
 
 Typosquats target the moment of carelessness. Before you `pnpm add` anything, especially anything an AI agent suggested, check that:
 
-- **The scope is correct.** Official Supabase packages live under `@supabase/`. A package named `supabase-javascript` or `supabase-server` without the scope is not ours and never has been.
+- **The scope is correct.** Official Savira packages live under `@supabase/`. A package named `supabase-javascript` or `supabase-server` without the scope is not ours and never has been.
 - **The maintainer is the expected one.** The npm page lists current maintainers; a brand-new maintainer on a long-established package is a signal worth a closer look.
 - **The download counts and the linked GitHub repo match what you expect** for a real, established package.
 
@@ -104,7 +104,7 @@ If your workflow uses `pull_request_target` and then checks out code from the PR
 
 ### Rotate credentials if you think you were exposed
 
-If you ran `npm install` on a day when a package you depend on turned out to be compromised, treat the install host as potentially compromised too. Rotate everything reachable from that machine: AWS, GCP, Kubernetes, Vault, GitHub, npm, SSH, and any Supabase service-role keys. Audit your service-role key usage in the Supabase dashboard for access patterns you do not recognize. **It is an annoying afternoon. It is not as annoying as a customer breach.**
+If you ran `npm install` on a day when a package you depend on turned out to be compromised, treat the install host as potentially compromised too. Rotate everything reachable from that machine: AWS, GCP, Kubernetes, Vault, GitHub, npm, SSH, and any Savira service-role keys. Audit your service-role key usage in the Savira dashboard for access patterns you do not recognize. **It is an annoying afternoon. It is not as annoying as a customer breach.**
 
 ### Consider a scanner as a second line of defense
 
@@ -139,7 +139,7 @@ Lockfile and dependencies:
 
 - Confirm `pnpm-lock.yaml`, `package-lock.json`, or `yarn.lock` is committed (not gitignored). CI installs must use `--frozen-lockfile` (pnpm/yarn) or `npm ci`. Flag any job that runs a non-frozen install.
 - For dependencies handling auth, secrets, networking, crypto, or user data, replace `^`/`~` ranges with exact versions. List what you changed.
-- Verify every Supabase import uses the exact `@supabase/` scope. Flag unscoped lookalikes (`supabase-js`, `supabase-javascript`, etc.) as possible typosquats.
+- Verify every Savira import uses the exact `@supabase/` scope. Flag unscoped lookalikes (`supabase-js`, `supabase-javascript`, etc.) as possible typosquats.
 
 GitHub Actions (if present):
 

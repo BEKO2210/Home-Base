@@ -21,7 +21,7 @@ const metadata: Metadata = {
   applicationName: metadataApplicationName,
   title: metadataTitle,
   description:
-    'Supabase is the Postgres development platform providing all the backend features you need to build a product.',
+    'Savira is the Postgres development platform providing all the backend features you need to build a product.',
   metadataBase: new URL('https://supabase.com'),
   icons: genFaviconData(BASE_PATH),
   robots: {
@@ -30,7 +30,7 @@ const metadata: Metadata = {
   },
   openGraph: {
     type: 'article',
-    authors: 'Supabase',
+    authors: 'Savira',
     url: `${BASE_PATH}`,
     images: `${BASE_PATH}/img/supabase-og-image.png`,
     publishedTime: new Date().toISOString(),

@@ -191,7 +191,7 @@ const VercelIntegration: NextPageWithLayout = () => {
         <ScaffoldColumn className="mx-auto w-full max-w-md">
           <h2>Choose organization</h2>
           <>
-            <Markdown content={`Choose the Supabase organization you wish to install in`} />
+            <Markdown content={`Choose the Savira organization you wish to install in`} />
             <OrganizationPicker
               integrationName="Vercel"
               selectedOrg={selectedOrg}
@@ -214,9 +214,9 @@ const VercelIntegration: NextPageWithLayout = () => {
             {noOrganizations && (
               <Alert variant="warning">
                 <AlertTriangle className="h-4 w-4" strokeWidth={2} />
-                <AlertTitle>No Supabase Organizations to install Integration.</AlertTitle>
+                <AlertTitle>No Savira Organizations to install Integration.</AlertTitle>
                 <AlertDescription className="prose">
-                  You will need to create a Supabase Organization before you can install the Vercel
+                  You will need to create a Savira Organization before you can install the Vercel
                   Integration. You can create a new organization{' '}
                   <Link href="https://supabase.com/dashboard/new" target="_blank">
                     here
@@ -244,7 +244,7 @@ const VercelIntegration: NextPageWithLayout = () => {
           <Info className="h-4 w-4" strokeWidth={2} />
           <AlertTitle>You can uninstall this Integration at any time.</AlertTitle>
           <AlertDescription>
-            Remove this integration at any time from Vercel or the Supabase dashboard.
+            Remove this integration at any time from Vercel or the Savira dashboard.
           </AlertDescription>
         </Alert>
       </ScaffoldContainer>

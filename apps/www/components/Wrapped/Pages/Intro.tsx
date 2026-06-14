@@ -8,7 +8,7 @@ import { cn } from 'ui'
 
 const titles = [
   'Thank you to our community.',
-  'You created more Supabase databases in 2025 than in all previous years combined.',
+  'You created more Savira databases in 2025 than in all previous years combined.',
   "You've stored over 3.9B objects, and called almost 50B edge functions.",
   "Together, we've launched new ideas, startups, community projects, weekend hackathons…",
   'Thank you for building with us.',

@@ -1,4 +1,4 @@
-# Supabase Monorepo
+# Savira Monorepo
 
 pnpm 10 + Turborepo monorepo. Requires Node >= 22.
 
@@ -6,7 +6,7 @@ pnpm 10 + Turborepo monorepo. Requires Node >= 22.
 
 | Directory         | Purpose                                                      |
 | ----------------- | ------------------------------------------------------------ |
-| `apps/studio`     | Supabase Studio/Dashboard — Next.js (pages router), React 19 |
+| `apps/studio`     | Savira Studio/Dashboard — Next.js (pages router), React 19 |
 | `apps/docs`       | Documentation site                                           |
 | `apps/www`        | Marketing website                                            |
 | `packages/ui`     | Shared UI components (shadcn/ui based)                       |

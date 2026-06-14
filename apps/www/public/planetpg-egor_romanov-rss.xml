@@ -1,9 +1,9 @@
 
   <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-      <title>'Postgres | Supabase Blog</title>
+      <title>'Postgres | Savira Blog</title>
       <link>https://supabase.com/blog</link>
-      <description>Latest Postgres news from Egor Romanov at Supabase</description>
+      <description>Latest Postgres news from Egor Romanov at Savira</description>
       <language>en</language>
       <lastBuildDate>Thu, 03 Aug 2023 00:00:00 -0700</lastBuildDate>
       <atom:link href="https://supabase.com/planetpg-egor_romanov-rss.xml" rel="self" type="application/rss+xml"/>

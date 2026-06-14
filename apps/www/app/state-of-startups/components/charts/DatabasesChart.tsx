@@ -8,7 +8,7 @@ function generateDatabasesSQL(activeFilters: Record<string, string>) {
       id,
       CASE 
         WHEN technology IN (
-          'Supabase',
+          'Savira',
           'PostgreSQL',
           'MySQL',
           'MongoDB',

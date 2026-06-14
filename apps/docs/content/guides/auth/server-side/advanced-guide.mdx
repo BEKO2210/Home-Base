@@ -3,18 +3,18 @@ title: 'Advanced guide'
 subtitle: 'Details about SSR Auth flows and implementation for advanced users.'
 ---
 
-When a user authenticates with Supabase Auth, two pieces of information are issued by the server:
+When a user authenticates with Savira Auth, two pieces of information are issued by the server:
 
 1. **Access token** in the form of a JWT.
 2. **Refresh token** which is a randomly generated string.
 
 The default behavior if you're not using SSR is to store this information in local storage. Local storage isn't accessible by the server, so for SSR, the tokens instead need to be stored in a secure cookie. The cookie can then be passed back and forth between your app code in the client and your app code in the server.
 
-If you're not using SSR, you might also be using the [implicit flow](/docs/guides/auth/sessions/implicit-flow) to get the access and refresh tokens. The server can't access the tokens in this flow, so for SSR, you should change to the [PKCE flow](/docs/guides/auth/sessions/pkce-flow). You can change the flow type when initiating your Supabase client if your client library provides this option.
+If you're not using SSR, you might also be using the [implicit flow](/docs/guides/auth/sessions/implicit-flow) to get the access and refresh tokens. The server can't access the tokens in this flow, so for SSR, you should change to the [PKCE flow](/docs/guides/auth/sessions/pkce-flow). You can change the flow type when initiating your Savira client if your client library provides this option.
 
 <Admonition type="tip">
 
-In the `@supabase/ssr` package, Supabase clients are initiated to use the PKCE flow by default. They are also automatically configured to handle the saving and retrieval of session information in cookies.
+In the `@supabase/ssr` package, Savira clients are initiated to use the PKCE flow by default. They are also automatically configured to handle the saving and retrieval of session information in cookies.
 
 </Admonition>
 
@@ -22,7 +22,7 @@ In the `@supabase/ssr` package, Supabase clients are initiated to use the PKCE f
 
 In the PKCE flow, a redirect is made to your app, with an Auth Code contained in the URL. When you exchange this code using `exchangeCodeForSession`, you receive the session information, which contains the access and refresh tokens.
 
-To maintain the session, these tokens must be stored in a storage medium securely shared between client and server, which is traditionally cookies. Whenever the session is refreshed, the auth and refresh tokens in the shared storage medium must be updated. Supabase client libraries provide a customizable `storage` option when a client is initiated, allowing you to change where tokens are stored.
+To maintain the session, these tokens must be stored in a storage medium securely shared between client and server, which is traditionally cookies. Whenever the session is refreshed, the auth and refresh tokens in the shared storage medium must be updated. Savira client libraries provide a customizable `storage` option when a client is initiated, allowing you to change where tokens are stored.
 
 ## Frequently asked questions
 
@@ -32,7 +32,7 @@ To maintain the session, these tokens must be stored in a storage medium securel
 
 When you use route prefetching in Next.js using `<Link href="/...">` components or the `Router.push()` APIs can send server-side requests before the browser processes the access and refresh tokens. This means that those requests may not have any cookies set and your server code will render unauthenticated content.
 
-To improve experience for your users, we recommend redirecting users to one specific page after sign-in that does not include any route prefetching from Next.js. Once the Supabase client library running in the browser has obtained the access and refresh tokens from the URL fragment, you can send users to any pages that use prefetching.
+To improve experience for your users, we recommend redirecting users to one specific page after sign-in that does not include any route prefetching from Next.js. Once the Savira client library running in the browser has obtained the access and refresh tokens from the URL fragment, you can send users to any pages that use prefetching.
 
 ### How do I make the cookies `HttpOnly`?
 
@@ -64,7 +64,7 @@ Yes, but there are two specific scenarios that can cause users to receive anothe
 
 #### ISR (incremental static regeneration)
 
-If you use ISR on pages that trigger a Supabase session refresh, the cached response will include the `Set-Cookie` header containing the refreshed JWT. When that cached response is served to a subsequent user, their browser stores the token and they are signed in as the wrong person.
+If you use ISR on pages that trigger a Savira session refresh, the cached response will include the `Set-Cookie` header containing the refreshed JWT. When that cached response is served to a subsequent user, their browser stores the token and they are signed in as the wrong person.
 
 Do not enable ISR on any route where authentication is handled or where a session refresh can occur. In Nuxt, avoid setting `isr` on authenticated routes. In Next.js, use `export const dynamic = 'force-dynamic'` on pages that require authentication.
 
@@ -72,7 +72,7 @@ Do not enable ISR on any route where authentication is handled or where a sessio
 
 When `@supabase/ssr` refreshes a session token server-side, it writes the updated JWT to the HTTP response via a `Set-Cookie` header. If your CDN (e.g. Vercel Edge, Cloudflare) caches that response and serves it to a different user, that user's browser will store the cached token and be signed in as the wrong person.
 
-As of `@supabase/ssr` v0.10.0, the library automatically passes the necessary cache headers (`Cache-Control`, `Expires`, `Pragma`) to your `setAll` callback as a second argument whenever a token refresh occurs. If your `setAll` implementation applies those headers to the response (as shown in the examples in [Creating a Supabase client for SSR](/docs/guides/auth/server-side/creating-a-client)), no additional manual configuration is needed for most CDNs.
+As of `@supabase/ssr` v0.10.0, the library automatically passes the necessary cache headers (`Cache-Control`, `Expires`, `Pragma`) to your `setAll` callback as a second argument whenever a token refresh occurs. If your `setAll` implementation applies those headers to the response (as shown in the examples in [Creating a Savira client for SSR](/docs/guides/auth/server-side/creating-a-client)), no additional manual configuration is needed for most CDNs.
 
 If you are on an older version or need to set headers manually, add `Cache-Control: private, no-store` to responses from any route that handles authentication:
 
@@ -112,10 +112,10 @@ If you need to cache SSR pages for performance, apply caching only to routes tha
 
 #### Vercel Fluid compute (in-memory client sharing)
 
-Vercel's Fluid compute model can keep server instances warm and reuse them across requests. In some cases this means a Supabase client initialized in module scope — or stored in a shared variable — may be reused across requests from different users, causing one user's session to leak into another user's request.
+Vercel's Fluid compute model can keep server instances warm and reuse them across requests. In some cases this means a Savira client initialized in module scope — or stored in a shared variable — may be reused across requests from different users, causing one user's session to leak into another user's request.
 
-Always initialize the Supabase client inside the request handler, not at module level. Do not store the client or any user-specific state in a variable that persists between requests.
+Always initialize the Savira client inside the request handler, not at module level. Do not store the client or any user-specific state in a variable that persists between requests.
 
 ### Which authentication flows have PKCE support?
 
-At present, PKCE is supported on the Magic Link, OAuth, Sign Up, and Password Recovery routes. These correspond to the `signInWithOtp`, `signInWithOAuth`, `signUp`, and `resetPasswordForEmail` methods on the Supabase client library. When using PKCE with Phone and Email OTPs, there is no behavior change with respect to the implicit flow - an access token will be returned in the body when a request is successful.
+At present, PKCE is supported on the Magic Link, OAuth, Sign Up, and Password Recovery routes. These correspond to the `signInWithOtp`, `signInWithOAuth`, `signUp`, and `resetPasswordForEmail` methods on the Savira client library. When using PKCE with Phone and Email OTPs, there is no behavior change with respect to the implicit flow - an access token will be returned in the body when a request is successful.

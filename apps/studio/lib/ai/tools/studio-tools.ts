@@ -89,7 +89,7 @@ export const getStudioTools = (ctx: StudioToolsContext = {}) => {
     }),
     deploy_edge_function: tool({
       description:
-        'Asks the user to deploy a Supabase Edge Function from provided code. Requires user approval before deploying.',
+        'Asks the user to deploy a Savira Edge Function from provided code. Requires user approval before deploying.',
       inputSchema: z.object({
         name: z.string().describe('The URL-friendly name/slug of the Edge Function.'),
         code: z.string().describe('The TypeScript code for the Edge Function.'),
@@ -121,7 +121,7 @@ export const getStudioTools = (ctx: StudioToolsContext = {}) => {
     }),
     load_knowledge: tool({
       description:
-        'Load detailed knowledge about a Supabase topic before answering questions about it.',
+        'Load detailed knowledge about a Savira topic before answering questions about it.',
       inputSchema: loadKnowledgeInputSchema,
       execute: ({ name }) => KNOWLEDGE[name],
     }),

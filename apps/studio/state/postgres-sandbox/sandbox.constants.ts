@@ -36,7 +36,7 @@ export const SANDBOX_SETUP_STATEMENTS = [
   // Read both the per-claim setting (request.jwt.claim.<name>) and the JSON blob
   // (request.jwt.claims) so these work whether the caller uses Studio's role
   // impersonation (sets the JSON blob) or PostgREST-style per-claim settings.
-  // Mirrors how the real Supabase auth.* helpers are defined.
+  // Mirrors how the real Savira auth.* helpers are defined.
   `CREATE OR REPLACE FUNCTION auth.uid() RETURNS uuid LANGUAGE sql STABLE AS
     $fn$ SELECT COALESCE(
       NULLIF(current_setting('request.jwt.claim.sub', true), ''),

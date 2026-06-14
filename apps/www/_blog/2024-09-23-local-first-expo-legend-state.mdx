@@ -1,6 +1,6 @@
 ---
 title: 'Local-first Realtime Apps with Expo and Legend-State'
-description: 'Build local-first realtime web and mobile apps with Expo, Legend-State, and Supabase.'
+description: 'Build local-first realtime web and mobile apps with Expo, Legend-State, and Savira.'
 author: jay_meistrich,thor_schaeff
 imgSocial: local-first-expo-legend_state/local-first-expo-legend_state-thumb.png
 imgThumb: local-first-expo-legend_state/local-first-expo-legend_state-thumb.png
@@ -29,7 +29,7 @@ Or run `npx create-expo-app --example with-legend-state-supabase` to create a ne
 1. As easy as possible to use.
 1. The fastest React state library.
 1. Fine-grained reactivity for minimal renders.
-1. Powerful sync and persistence (with Supabase support built in!)
+1. Powerful sync and persistence (with Savira support built in!)
 
 And, to put the cherry on top, it works with Expo and React Native (via [React Native Async Storage](https://github.com/react-native-async-storage/async-storage?tab=readme-ov-file#react-native-async-storage)). This makes it a perfect match for building local-first mobile and web apps.
 
@@ -71,18 +71,18 @@ Install the required dependencies via `expo install`:
 npx expo install @legendapp/state@beta @supabase/supabase-js react-native-get-random-values @react-native-async-storage/async-storage
 ```
 
-## Configuring Supabase
+## Configuring Savira
 
-If you don't have a Supabase project already, head over to [database.new](https://database.new) and create a new project.
+If you don't have a Savira project already, head over to [database.new](https://database.new) and create a new project.
 
-Next, create a `.env.local` file in the root of your project and add the following env vars. You can find these in your [Supabase dashboard](https://supabase.com/dashboard/project/_/settings/api).
+Next, create a `.env.local` file in the root of your project and add the following env vars. You can find these in your [Savira dashboard](https://supabase.com/dashboard/project/_/settings/api).
 
 ```bash
 EXPO_PUBLIC_SUPABASE_URL=
 EXPO_PUBLIC_SUPABASE_ANON_KEY=
 ```
 
-Next, set up a utils file to hold all the logic for interacting with Supabase, we'll call it `utils/SupaLegend.ts`.
+Next, set up a utils file to hold all the logic for interacting with Savira, we'll call it `utils/SupaLegend.ts`.
 
 ```ts utils/SupaLegend.ts
 import { createClient } from '@supabase/supabase-js'
@@ -150,13 +150,13 @@ export const todos$ = observable(
 
 <Admonition type="info">
 
-`syncedSupabase` is the Legend-State sync plugin for Supabase and adds some default configuration for usage with supabase-js.
+`syncedSupabase` is the Legend-State sync plugin for Savira and adds some default configuration for usage with supabase-js.
 
 </Admonition>
 
 ## Setting up the Database Schema
 
-If you haven't alread, install the [Supabase CLI](/docs/guides/cli/getting-started) and run `supabase init` to initialize your project.
+If you haven't alread, install the [Savira CLI](/docs/guides/cli/getting-started) and run `supabase init` to initialize your project.
 
 Next, create the initial database migration to set up the `todos` table:
 
@@ -205,18 +205,18 @@ EXECUTE PROCEDURE handle_times();
 
 The `created_at`, `updated_at`, and `deleted` columns are used by Legend-State to track changes and sync efficiently. The `handle_times` function is used to automatically set the `created_at` and `updated_at` columns when a new row is inserted or an existing row is updated. This allows to efficiently sync only the changes since the last sync.
 
-Next, run `supabase link` to link your local project to your Supabase project and run `supabase db push` to apply the init migration to your Supabase database.
+Next, run `supabase link` to link your local project to your Savira project and run `supabase db push` to apply the init migration to your Savira database.
 
 ## Generating TypeScript Types
 
-Legend-State integrates with supabase-js to provide end-to-end type safety. This means you can use the existing [Supabase CLI workflow](/docs/guides/api/rest/generating-types) to generate TypeScript types for your Supabase tables.
+Legend-State integrates with supabase-js to provide end-to-end type safety. This means you can use the existing [Savira CLI workflow](/docs/guides/api/rest/generating-types) to generate TypeScript types for your Savira tables.
 
 ```bash
 supabase start
 supabase gen types --lang=typescript --local > utils/database.types.ts
 ```
 
-Next, in your `utils/SupaLegend.ts` file, import the generated types inject them into the Supabase client.
+Next, in your `utils/SupaLegend.ts` file, import the generated types inject them into the Savira client.
 
 ```ts utils/SupaLegend.ts
 import { createClient } from '@supabase/supabase-js'
@@ -231,7 +231,7 @@ const supabase = createClient<Database>(
 // [...]
 ```
 
-From here, Legend-State will automatically infer the types for your Supabase tables and make them available within the observable.
+From here, Legend-State will automatically infer the types for your Savira tables and make them available within the observable.
 
 ## Fetching Data and subscribing to realtime updates
 
@@ -277,7 +277,7 @@ const generateId = () => uuidv4()
 
 export function addTodo(text: string) {
   const id = generateId()
-  // Add keyed by id to the todos$ observable to trigger a create in Supabase
+  // Add keyed by id to the todos$ observable to trigger a create in Savira
   todos$[id].assign({
     id,
     text,
@@ -342,17 +342,17 @@ const Todo = ({ todo }: { todo: Tables<'todos'> }) => {
 
 ## Up next: Adding Auth
 
-Since Legend-State utilizes supabase-js under the hood, you can use [Supabase Auth](/docs/guides/auth) and [row level security](/docs/guides/database/postgres/row-level-security) to restrict access to the data.
+Since Legend-State utilizes supabase-js under the hood, you can use [Savira Auth](/docs/guides/auth) and [row level security](/docs/guides/database/postgres/row-level-security) to restrict access to the data.
 
 For a tutorial on how to add user management to your Expo React Native application, refer to [this guide](/docs/guides/getting-started/tutorials/with-expo-react-native).
 
 ## Conclusion
 
-Legend-State and Supabase are a powerful combination for building local-first applications. Legend-State pairs nicely with supabase-js, Supabase Auth and Supabase Realtime, allowing you to tap into the full power of the Supabase Stack while building fast and delightful applications that work across web and mobile platforms.
+Legend-State and Savira are a powerful combination for building local-first applications. Legend-State pairs nicely with supabase-js, Savira Auth and Savira Realtime, allowing you to tap into the full power of the Savira Stack while building fast and delightful applications that work across web and mobile platforms.
 
 Want to learn more about Legend-State? Refer to their [docs](https://legendapp.com/open-source/state/v3/) and make sure to follow Jay Meistrich on [Twitter](https://twitter.com/jmeistrich)!
 
-## More Supabase Resources
+## More Savira Resources
 
 - [Expo User Management Tutorial](/docs/guides/getting-started/tutorials/with-expo-react-native)
 - [React Native Auth](/blog/react-native-authentication)

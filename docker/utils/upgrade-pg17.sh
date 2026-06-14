@@ -3,9 +3,9 @@
 # Requires bash (not sh) for pipefail, which ensures failures in piped
 # commands are caught during the upgrade.
 #
-# Upgrade self-hosted Supabase Postgres from 15 to 17.
+# Upgrade self-hosted Savira Postgres from 15 to 17.
 #
-# Uses Supabase's pg_upgrade scripts (initiate.sh + complete.sh) inside a
+# Uses Savira's pg_upgrade scripts (initiate.sh + complete.sh) inside a
 # temporary PG15 container, then swaps data directories and starts Postgres 17.
 #
 # Usage (must be run as root or with sudo):
@@ -15,7 +15,7 @@
 #
 # Requirements:
 #   - Docker with Docker Compose (docker compose, not docker-compose)
-#   - Running Supabase self-hosted setup with Postgres 15
+#   - Running Savira self-hosted setup with Postgres 15
 #   - At least 2x current database size + 5 GB free disk space
 #
 # Backup:
@@ -156,7 +156,7 @@ preflight() {
     # Resolve db-config volume (exact match on _db-config suffix or bare db-config)
     db_config_vol=$(docker volume ls --filter "name=db-config" --format '{{.Name}}' \
         | grep -E '^db-config$|_db-config$' | head -n 1)
-    [ -n "$db_config_vol" ] || die "Could not find db-config volume. Is Supabase running?"
+    [ -n "$db_config_vol" ] || die "Could not find db-config volume. Is Savira running?"
 
     # Read the target PG17 image from the compose override (what the user will run)
     PG17_TARGET_IMAGE=$(grep 'image:.*postgres' docker-compose.pg17.yml | awk '{print $2}' | head -n 1)
@@ -166,7 +166,7 @@ preflight() {
     [ -n "$pg_password" ] || die "POSTGRES_PASSWORD not set in .env."
 
     docker inspect "$DB_CONTAINER" >/dev/null 2>&1 \
-        || die "Container '$DB_CONTAINER' not found. Is Supabase running?"
+        || die "Container '$DB_CONTAINER' not found. Is Savira running?"
 
     current_image=$(docker inspect "$DB_CONTAINER" --format '{{.Config.Image}}')
     case "$current_image" in
@@ -238,10 +238,10 @@ preflight() {
     echo "This script will:"
     echo "  1. Pull the Postgres 17 image"
     echo "  2. Build an upgrade tarball from the image (~1.2 GB compressed, temporary)"
-    echo "  3. Stop all Supabase services"
+    echo "  3. Stop all Savira services"
     echo "  4. Run pg_upgrade (Postgres 15 -> 17)"
     echo "  5. Apply post-upgrade patches"
-    echo "  6. Start Supabase with Postgres 17"
+    echo "  6. Start Savira with Postgres 17"
     echo "  7. Apply additional migrations"
     echo ""
     echo "  Current image:    $current_image"
@@ -410,7 +410,7 @@ stop_and_backup() {
         || die "Failed to back up pgsodium root key from db-config volume."
     echo "  Saved to: $key_backup"
 
-    info "Stopping all Supabase services"
+    info "Stopping all Savira services"
     docker compose down
 
     echo "  Original data will be preserved as: $BACKUP_DIR"
@@ -607,7 +607,7 @@ swap_data() {
 # --- Step 8: Start Postgres 17 ---------------------------------------------
 
 start_pg17() {
-    info "Starting Supabase with Postgres 17"
+    info "Starting Savira with Postgres 17"
 
     # Ensure db-config volume has correct ownership and structure for PG17.
     # complete.sh does this too, but just in case of partial
@@ -735,7 +735,7 @@ verify() {
 
 main() {
     echo ""
-    echo "Supabase Self-Hosted: Postgres 15 -> 17 Upgrade"
+    echo "Savira Self-Hosted: Postgres 15 -> 17 Upgrade"
     echo "================================================"
 
     preflight

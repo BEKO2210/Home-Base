@@ -12,15 +12,15 @@ const page: GoPageInput = {
   slug: 'accenture-reinvention-2026/contest',
   metadata: {
     title:
-      'Win an iPhone 17 Pro Max | Supabase at Accenture AI & Data Conference (ReinventionX) 2026',
+      'Win an iPhone 17 Pro Max | Savira at Accenture AI & Data Conference (ReinventionX) 2026',
     description:
-      'Create a Supabase account and load data for a chance to win an iPhone 17 Pro Max. Accenture AI & Data Conference (ReinventionX) 2026.',
+      'Create a Savira account and load data for a chance to win an iPhone 17 Pro Max. Accenture AI & Data Conference (ReinventionX) 2026.',
   },
   hero: {
     title: 'Win an iPhone 17 Pro Max',
-    subtitle: 'Supabase at Accenture AI & Data Conference 2026',
+    subtitle: 'Savira at Accenture AI & Data Conference 2026',
     description:
-      'Your team is already building with AI tools. Supabase is the production backend that turns those prototypes into secure, scalable applications. Try it out -- create an account, load some data, and you could win an iPhone 17 Pro Max.',
+      'Your team is already building with AI tools. Savira is the production backend that turns those prototypes into secure, scalable applications. Try it out -- create an account, load some data, and you could win an iPhone 17 Pro Max.',
     image: {
       src: '/images/landing-pages/stripe-sessions/iphone17-pro-max.png',
       alt: 'Orange iPhone 17 Pro Max',
@@ -57,7 +57,7 @@ const page: GoPageInput = {
                   {speaker.author}
                   {speaker.position && `, ${speaker.position}`}
                 </p>
-                <p className="text-foreground-lighter text-sm text-center">Supabase</p>
+                <p className="text-foreground-lighter text-sm text-center">Savira</p>
               </div>
             </div>
           )}
@@ -76,7 +76,7 @@ const page: GoPageInput = {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Learn about Supabase AI Tools
+                Learn about Savira AI Tools
               </Link>
             </Button>
             <Button asChild type="default" size="medium">
@@ -99,8 +99,8 @@ const page: GoPageInput = {
       children: (
         <div className="flex flex-col items-center gap-6">
           <ol className="flex flex-col gap-4 text-foreground-light text-lg list-decimal list-inside">
-            <li>Create a Supabase account with the same email where you got our post-event note</li>
-            <li>Load data into a Supabase database</li>
+            <li>Create a Savira account with the same email where you got our post-event note</li>
+            <li>Load data into a Savira database</li>
             <li>Complete these steps by Monday, May 4, 2026 at 12:00 PM PST</li>
           </ol>
           <Button asChild type="default" size="medium">

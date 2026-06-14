@@ -1,7 +1,7 @@
 ---
-title: 'Custom OIDC Providers for Supabase Auth'
-description: 'Connect any OpenID Connect identity provider to your Supabase project: GitHub Enterprise, regional providers, and more.'
-imgSocial: 'https://zhfonblqamxferhoguzj.supabase.co/functions/v1/generate-og?template=announcement&layout=horizontal&copy=%5BCustom+OIDC+Providers%5D%0Afor+Supabase+Auth&icon=icon-auth.svg'
+title: 'Custom OIDC Providers for Savira Auth'
+description: 'Connect any OpenID Connect identity provider to your Savira project: GitHub Enterprise, regional providers, and more.'
+imgSocial: 'https://zhfonblqamxferhoguzj.supabase.co/functions/v1/generate-og?template=announcement&layout=horizontal&copy=%5BCustom+OIDC+Providers%5D%0Afor+Savira+Auth&icon=icon-auth.svg'
 imgThumb: 'https://zhfonblqamxferhoguzj.supabase.co/functions/v1/generate-og?template=ruler&layout=icon-only&icon=icon-auth.svg'
 
 author: cemal_kilic
@@ -15,9 +15,9 @@ date: '2026-04-08'
 toc_depth: 2
 ---
 
-Supabase Auth ships with over 20 built-in social providers: Google, GitHub, Apple, and more. But what about your company's SAML-to-OIDC bridge? A regional identity provider required for compliance? Your self-hosted GitHub Enterprise? Until now, if your identity provider wasn't on the built-in list, you were stuck.
+Savira Auth ships with over 20 built-in social providers: Google, GitHub, Apple, and more. But what about your company's SAML-to-OIDC bridge? A regional identity provider required for compliance? Your self-hosted GitHub Enterprise? Until now, if your identity provider wasn't on the built-in list, you were stuck.
 
-Today we're launching **Custom OIDC Providers**, letting you connect any standards-compliant OpenID Connect identity provider to your Supabase project. Once configured, custom providers work just like built-in ones: same sign-in flow, same client libraries, same RLS enforcement.
+Today we're launching **Custom OIDC Providers**, letting you connect any standards-compliant OpenID Connect identity provider to your Savira project. Once configured, custom providers work just like built-in ones: same sign-in flow, same client libraries, same RLS enforcement.
 
 ## Why We Built This
 
@@ -27,11 +27,11 @@ Built-in providers cover the most common cases, but not every identity provider 
 - **Self-hosted providers**: GitHub Enterprise Server, GitLab self-managed, or any on-premise OAuth2 service.
 - **Niche providers**: Gaming platforms, healthcare identity networks, or industry-specific SSO systems.
 
-Last year, we shipped [OAuth 2.1 server capabilities](/blog/oauth2-provider) so your Supabase project can _be_ an identity provider. Custom providers complete the picture from the other direction, now your project can also _consume_ any external identity provider.
+Last year, we shipped [OAuth 2.1 server capabilities](/blog/oauth2-provider) so your Savira project can _be_ an identity provider. Custom providers complete the picture from the other direction, now your project can also _consume_ any external identity provider.
 
 ## Adding a Custom Provider
 
-Supply your provider's issuer URL, client credentials, and scopes. Supabase handles the rest. The discovery document, endpoints, and JWKS are resolved automatically from `{issuer}/.well-known/openid-configuration`.
+Supply your provider's issuer URL, client credentials, and scopes. Savira handles the rest. The discovery document, endpoints, and JWKS are resolved automatically from `{issuer}/.well-known/openid-configuration`.
 
 ```js
 const { data, error } = await supabase.auth.admin.customProviders.createProvider({
@@ -47,7 +47,7 @@ const { data, error } = await supabase.auth.admin.customProviders.createProvider
 
 The `openid` scope is always included automatically, and ID tokens are verified against the provider's JWKS.
 
-You can also create providers from the Supabase Dashboard: go to **Authentication > Sign In / Providers**, scroll to the **Custom Providers** section at the bottom, and click **New Provider**.
+You can also create providers from the Savira Dashboard: go to **Authentication > Sign In / Providers**, scroll to the **Custom Providers** section at the bottom, and click **New Provider**.
 
 ## User Sign-In
 
@@ -75,7 +75,7 @@ try await supabase.auth.signInWithOAuth(
 )
 ```
 
-Behind the scenes, the auth server handles the full OAuth flow: redirecting to the external provider, exchanging the authorization code for tokens, fetching user profile data, and creating or linking the user in your Supabase project.
+Behind the scenes, the auth server handles the full OAuth flow: redirecting to the external provider, exchanging the authorization code for tokens, fetching user profile data, and creating or linking the user in your Savira project.
 
 ## Key Features
 

@@ -56,12 +56,12 @@ export const courses: SidebarNavGroup = {
     {
       title: 'Performance & Scaling',
       href: '/internals/performance-scaling',
-      commandItemLabel: 'Supabase Internals: Performance & Scaling',
+      commandItemLabel: 'Savira Internals: Performance & Scaling',
     },
     {
       title: 'Debugging & Operations',
       href: '/internals/debugging-operations',
-      commandItemLabel: 'Supabase Internals: Debugging & Operations',
+      commandItemLabel: 'Savira Internals: Debugging & Operations',
     },
   ],
 }

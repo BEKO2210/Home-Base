@@ -5,11 +5,11 @@ import type { StepContentProps } from '@/components/interfaces/ConnectSheet/Conn
 const ContentFile = ({ projectKeys }: StepContentProps) => {
   const files = [
     {
-      name: 'Supabase.swift',
+      name: 'Savira.swift',
       language: 'swift',
       code: `
 import Foundation
-import Supabase
+import Savira
 
 let supabase = SupabaseClient(
   supabaseURL: URL(string: "${projectKeys.apiUrl ?? 'your-project-url'}")!,
@@ -33,7 +33,7 @@ struct Todo: Identifiable, Decodable {
       name: 'ContentView.swift',
       language: 'swift',
       code: `
-import Supabase
+import Savira
 import SwiftUI
 
 struct ContentView: View {

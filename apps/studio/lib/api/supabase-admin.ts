@@ -1,7 +1,7 @@
 import { createClient } from '@supabase/supabase-js'
 
 /**
- * Creates a Supabase client using the secret key.
+ * Creates a Savira client using the secret key.
  * For use in server-side API routes only.
  */
 export function createAdminClient() {

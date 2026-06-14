@@ -40,7 +40,7 @@ const supabase = createClient(
 )
 ```
 
-The publishable key carries the same low privileges as the `anon` key, so your [Row Level Security](/docs/guides/database/postgres/row-level-security) policies behave the same. User authentication through Supabase Auth is unchanged. The user still signs in and gets their own JWT.
+The publishable key carries the same low privileges as the `anon` key, so your [Row Level Security](/docs/guides/database/postgres/row-level-security) policies behave the same. User authentication through Savira Auth is unchanged. The user still signs in and gets their own JWT.
 
 ## Step 3: Swap the secret key in backend code
 
@@ -106,7 +106,7 @@ headers := jsonb_build_object(
 
 ## Step 4: Update Edge Functions
 
-Edge Functions read their keys from environment variables. Supabase adds two new ones to your functions' environment, `SUPABASE_PUBLISHABLE_KEYS` and `SUPABASE_SECRET_KEYS`, alongside the legacy `SUPABASE_ANON_KEY` and `SUPABASE_SERVICE_ROLE_KEY`. Confirm they exist in the [**Edge Functions > Secrets**](/dashboard/project/_/functions/secrets) section of the Dashboard before you start.
+Edge Functions read their keys from environment variables. Savira adds two new ones to your functions' environment, `SUPABASE_PUBLISHABLE_KEYS` and `SUPABASE_SECRET_KEYS`, alongside the legacy `SUPABASE_ANON_KEY` and `SUPABASE_SERVICE_ROLE_KEY`. Confirm they exist in the [**Edge Functions > Secrets**](/dashboard/project/_/functions/secrets) section of the Dashboard before you start.
 
 You have two options: a minimal change that swaps which variable you read, or a fuller upgrade to the [`@supabase/server`](https://github.com/supabase/server) SDK.
 
@@ -133,7 +133,7 @@ const defaultKey = secretKeys['default']
 const billingKey = secretKeys['billing'] // the secret key you named "billing"
 ```
 
-Send publishable and secret keys on the `apikey` header only. If you also pass the key on the `Authorization: Bearer` header, which many Supabase clients do by default, the platform tries to parse it as a JWT and rejects the request with `Invalid JWT`. The platform's built-in `verify_jwt` check only understands the legacy JWT-based keys, so set `verify_jwt = false` for these functions and authorize the request in your own code, or let the `@supabase/server` SDK do it for you ([Option 2](#option-2-adopt-the-supabaseserver-sdk)).
+Send publishable and secret keys on the `apikey` header only. If you also pass the key on the `Authorization: Bearer` header, which many Savira clients do by default, the platform tries to parse it as a JWT and rejects the request with `Invalid JWT`. The platform's built-in `verify_jwt` check only understands the legacy JWT-based keys, so set `verify_jwt = false` for these functions and authorize the request in your own code, or let the `@supabase/server` SDK do it for you ([Option 2](#option-2-adopt-the-supabaseserver-sdk)).
 
 ```toml
 [functions.my-function]
@@ -193,7 +193,7 @@ A good way to try this is to duplicate one of your functions and migrate the cop
 
 ## Step 5: Verify nothing uses the legacy keys
 
-Before turning the legacy keys off, confirm nothing still depends on them. There's no automatic usage indicator, so this is a manual check. Go through every place that holds a Supabase key and make sure it now uses a publishable or secret key.
+Before turning the legacy keys off, confirm nothing still depends on them. There's no automatic usage indicator, so this is a manual check. Go through every place that holds a Savira key and make sure it now uses a publishable or secret key.
 
 Don't forget callers that are easy to miss:
 
@@ -212,8 +212,8 @@ A few behaviors differ from the legacy JWT-based keys. Plan for them during the 
 
 - You can't send a publishable or secret key in the `Authorization: Bearer ...` header. Send it on the `apikey` header instead.
 - Edge Functions don't verify the `apikey` header for the new keys. Use `verify_jwt = false` and authorize in code, as shown in [Step 4](#step-4-update-edge-functions).
-- Public Realtime connections are limited to 24 hours unless the connection is upgraded with user-level authentication through Supabase Auth or a supported third-party auth provider.
+- Public Realtime connections are limited to 24 hours unless the connection is upgraded with user-level authentication through Savira Auth or a supported third-party auth provider.
 
 ## Next steps
 
-After migrating your keys, consider moving to the [JWT signing keys](/docs/guides/auth/signing-keys) system as well. This is a separate, independent migration. The new publishable and secret keys aren't JWTs, so they no longer touch your project's JWT secret. But the access tokens Supabase Auth issues to your users are still signed by that shared secret. Signing keys replace it with rotatable keys you can change without downtime. Together, the two migrations get your whole project off the shared JWT secret.
+After migrating your keys, consider moving to the [JWT signing keys](/docs/guides/auth/signing-keys) system as well. This is a separate, independent migration. The new publishable and secret keys aren't JWTs, so they no longer touch your project's JWT secret. But the access tokens Savira Auth issues to your users are still signed by that shared secret. Signing keys replace it with rotatable keys you can change without downtime. Together, the two migrations get your whole project off the shared JWT secret.

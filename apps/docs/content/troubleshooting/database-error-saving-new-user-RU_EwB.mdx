@@ -17,7 +17,7 @@ code = "unexpected_failure"
 message = "Database error creating new user"
 ---
 
-You generally get this error when trying to invite a new user from the dashboard or when trying to insert a user into a table using the table editor in the Supabase dashboard. You may also see this error in logs in connection to failed signups.
+You generally get this error when trying to invite a new user from the dashboard or when trying to insert a user into a table using the table editor in the Savira dashboard. You may also see this error in logs in connection to failed signups.
 
 This error is normally associated with a side effect of a database transaction.
 
@@ -52,7 +52,7 @@ error finding user: sql: Scan error on column index 8, name "confirmation_token"
 
 **Cause:**
 
-The `auth` schema is managed by Supabase and expects specific column formats. This error typically happens when users are inserted directly via SQL or using an AI tool that uses a direct SQL `INSERT`, rather than through the [Auth API](/docs/reference/javascript/auth-api). A direct insert can leave required columns as `NULL` when the Auth service expects an empty string.
+The `auth` schema is managed by Savira and expects specific column formats. This error typically happens when users are inserted directly via SQL or using an AI tool that uses a direct SQL `INSERT`, rather than through the [Auth API](/docs/reference/javascript/auth-api). A direct insert can leave required columns as `NULL` when the Auth service expects an empty string.
 
 **Fix:**
 

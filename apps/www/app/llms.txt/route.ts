@@ -40,7 +40,7 @@ async function getGuideSources(): Promise<Source[]> {
     dirNames.map(async (dirName) => {
       const frontmatterTitle = await readFrontmatterTitle(dirName)
       return {
-        title: `Supabase - ${frontmatterTitle ?? dirName}`,
+        title: `Savira - ${frontmatterTitle ?? dirName}`,
         relPath: `docs/guides/${dirName}.md`,
         enabled: true,
       }
@@ -61,14 +61,14 @@ async function getSources(): Promise<Source[]> {
 
   return [
     ...guideSources,
-    { title: 'Supabase Reference (JavaScript)', relPath: 'llms/js.txt', enabled: true },
-    { title: 'Supabase Reference (Dart)', relPath: 'llms/dart.txt', enabled: sdkDart },
-    { title: 'Supabase Reference (Swift)', relPath: 'llms/swift.txt', enabled: sdkSwift },
-    { title: 'Supabase Reference (Kotlin)', relPath: 'llms/kotlin.txt', enabled: sdkKotlin },
-    { title: 'Supabase Reference (Python)', relPath: 'llms/python.txt', enabled: sdkPython },
-    { title: 'Supabase Reference (C#)', relPath: 'llms/csharp.txt', enabled: sdkCsharp },
-    { title: 'Supabase CLI Reference', relPath: 'llms/cli.txt', enabled: true },
-    { title: 'Supabase Management API Reference', relPath: 'llms/api.txt', enabled: true },
+    { title: 'Savira Reference (JavaScript)', relPath: 'llms/js.txt', enabled: true },
+    { title: 'Savira Reference (Dart)', relPath: 'llms/dart.txt', enabled: sdkDart },
+    { title: 'Savira Reference (Swift)', relPath: 'llms/swift.txt', enabled: sdkSwift },
+    { title: 'Savira Reference (Kotlin)', relPath: 'llms/kotlin.txt', enabled: sdkKotlin },
+    { title: 'Savira Reference (Python)', relPath: 'llms/python.txt', enabled: sdkPython },
+    { title: 'Savira Reference (C#)', relPath: 'llms/csharp.txt', enabled: sdkCsharp },
+    { title: 'Savira CLI Reference', relPath: 'llms/cli.txt', enabled: true },
+    { title: 'Savira Management API Reference', relPath: 'llms/api.txt', enabled: true },
   ]
 }
 
@@ -77,16 +77,16 @@ async function getSources(): Promise<Source[]> {
 // intentional. When dropping a new content/md/<slug>.md file, add a matching
 // entry here too — otherwise the page ships but won't be linked from /llms.txt.
 const PRODUCT_OVERVIEW_LINKS = [
-  '- [Supabase Overview](https://supabase.com/homepage.md)',
-  '- [Supabase Database](https://supabase.com/database.md)',
-  '- [Supabase Auth](https://supabase.com/auth.md)',
-  '- [Supabase Storage](https://supabase.com/storage.md)',
-  '- [Supabase Edge Functions](https://supabase.com/edge-functions.md)',
-  '- [Supabase Realtime](https://supabase.com/realtime.md)',
-  '- [Supabase Vector](https://supabase.com/vector.md)',
-  '- [Supabase Cron](https://supabase.com/modules/cron.md)',
-  '- [Supabase Queues](https://supabase.com/modules/queues.md)',
-  '- [Supabase Pricing](https://supabase.com/pricing.md)',
+  '- [Savira Overview](https://supabase.com/homepage.md)',
+  '- [Savira Database](https://supabase.com/database.md)',
+  '- [Savira Auth](https://supabase.com/auth.md)',
+  '- [Savira Storage](https://supabase.com/storage.md)',
+  '- [Savira Edge Functions](https://supabase.com/edge-functions.md)',
+  '- [Savira Realtime](https://supabase.com/realtime.md)',
+  '- [Savira Vector](https://supabase.com/vector.md)',
+  '- [Savira Cron](https://supabase.com/modules/cron.md)',
+  '- [Savira Queues](https://supabase.com/modules/queues.md)',
+  '- [Savira Pricing](https://supabase.com/pricing.md)',
 ].join('\n')
 
 export async function GET() {
@@ -98,7 +98,7 @@ export async function GET() {
     .join('\n')
 
   const content = [
-    '# Supabase Docs',
+    '# Savira Docs',
     '',
     'For the complete documentation in a single file, see [Full Documentation](https://supabase.com/llms-full.txt).',
     '',

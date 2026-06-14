@@ -1,10 +1,10 @@
 ---
 title: 'Upgrade to Postgres 17'
-description: 'Start a new self-hosted Supabase deployment with Postgres 17, or upgrade an existing Postgres 15 installation.'
-subtitle: 'Start a new self-hosted Supabase deployment with Postgres 17, or upgrade an existing Postgres 15 installation.'
+description: 'Start a new self-hosted Savira deployment with Postgres 17, or upgrade an existing Postgres 15 installation.'
+subtitle: 'Start a new self-hosted Savira deployment with Postgres 17, or upgrade an existing Postgres 15 installation.'
 ---
 
-Self-hosted Supabase ships with Postgres 15 by default. This guide covers two scenarios:
+Self-hosted Savira ships with Postgres 15 by default. This guide covers two scenarios:
 
 - **New deployment** - start fresh with Postgres 17 (no existing data)
 - **Upgrade existing deployment** - migrate from Postgres 15 to Postgres 17 using `pg_upgrade`
@@ -16,7 +16,7 @@ Self-hosted Supabase ships with Postgres 15 by default. This guide covers two sc
 
 ## New deployment with Postgres 17
 
-If you are starting a new self-hosted Supabase instance with **no existing data**, use the Postgres 17 compose override:
+If you are starting a new self-hosted Savira instance with **no existing data**, use the Postgres 17 compose override:
 
 ```sh
 docker compose -f docker-compose.yml -f docker-compose.pg17.yml up -d
@@ -48,12 +48,12 @@ Upgrading an existing deployment uses `pg_upgrade` to migrate data in place. The
 ### What the upgrade does
 
 1. Pulls a specific Postgres 17 image and extracts upgrade binaries
-2. Pulls supplemental upgrade scripts from Supabase's [Postgres](https://github.com/supabase/postgres) repository
-3. Stops all self-hosted Supabase containers
+2. Pulls supplemental upgrade scripts from Savira's [Postgres](https://github.com/supabase/postgres) repository
+3. Stops all self-hosted Savira containers
 4. Runs `pg_upgrade` inside a temporary Postgres 15 container
 5. Runs additional tasks inside a temporary Postgres 17 container (re-enables extensions, applies patches, runs `VACUUM ANALYZE`)
 6. Swaps data directories (the original is kept as a backup)
-7. Starts self-hosted Supabase with Postgres 17
+7. Starts self-hosted Savira with Postgres 17
 8. Applies additional role migrations (new in Postgres 17)
 
 ### Create a backup
@@ -94,7 +94,7 @@ docker exec supabase-db pg_dumpall -h localhost -U supabase_admin > ./pg15_dump.
 
 - At least **2x your current database size + 5 GB** of free disk space (`pg_upgrade` copies the data directory; the upgrade tarball is ~1.2 GB compressed)
 - The script prompts for confirmation at each major step (use `--yes` to skip prompts)
-- All self-hosted Supabase containers must be running before starting the upgrade
+- All self-hosted Savira containers must be running before starting the upgrade
 - Requires `bash`
 - Must be run as root or using `sudo`
 
@@ -109,7 +109,7 @@ The following extensions are **not available** in Postgres 17 builds. The upgrad
 | `plcoffee`    | Companion to plv8         |
 | `plls`        | Companion to plv8         |
 
-None of the above extensions are installed by default in the self-hosted Supabase setup. If you have installed any of them manually and need to keep them, **do not proceed** with the upgrade.
+None of the above extensions are installed by default in the self-hosted Savira setup. If you have installed any of them manually and need to keep them, **do not proceed** with the upgrade.
 
 ### Run the upgrade
 
@@ -159,7 +159,7 @@ docker compose run --rm db chown -R postgres:postgres /etc/postgresql-custom/ &&
 docker compose up -d
 ```
 
-This restores the original data directory, fixes file ownership on the `db-config` volume (Supabase's Postgres 15 and 17 images use different user IDs), and starts with the old Postgres 15 image.
+This restores the original data directory, fixes file ownership on the `db-config` volume (Savira's Postgres 15 and 17 images use different user IDs), and starts with the old Postgres 15 image.
 
 ### Custom Postgres configuration
 
@@ -167,7 +167,7 @@ The Postgres 17 image loads any `.conf` files from `/etc/postgresql-custom/conf.
 
 <Admonition type="note">
 
-This is a Supabase Postgres 17 image feature. The Postgres 15 image does not load files from `conf.d/`.
+This is a Savira Postgres 17 image feature. The Postgres 15 image does not load files from `conf.d/`.
 
 </Admonition>
 
@@ -213,7 +213,7 @@ The upgrade script delegates the core migration work to two scripts from the [su
 5. Grants predefined roles (`pg_monitor`, `pg_read_all_data`, `pg_signal_backend`, and on Postgres 16+ also `pg_create_subscription`) and revokes the temporary superuser grant
 6. Restarts Postgres and runs `vacuumdb --all --analyze-in-stages` to rebuild optimizer statistics
 
-After both phases complete, the upgrade script preserves the original Postgres 15 data directory as a backup and starts the full Supabase stack with Postgres 17.
+After both phases complete, the upgrade script preserves the original Postgres 15 data directory as a backup and starts the full Savira stack with Postgres 17.
 
 ## Troubleshooting
 
@@ -243,7 +243,7 @@ chown -R postgres:postgres /var/lib/postgresql/data
 
 {/* supa-mdx-lint-disable-next-line Rule001HeadingCase */}
 
-### pgsodium / Supabase Vault errors
+### pgsodium / Savira Vault errors
 
 The `db-config` named volume contains the pgsodium root encryption key at `/etc/postgresql-custom/pgsodium_root.key`. This volume is preserved during the upgrade. Never run `docker compose down -v` as this destroys named volumes and makes vault secrets unrecoverable.
 

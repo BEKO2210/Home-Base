@@ -1,8 +1,8 @@
-# Supabase Auth
+# Savira Auth
 
-> Built-in authentication, authorization, and user management for every Supabase project.
+> Built-in authentication, authorization, and user management for every Savira project.
 
-Supabase Auth provides a complete user management system without any external authentication service. It is deeply integrated with Postgres Row Level Security for fine-grained access control, so you can write authorization policies in SQL rather than application code.
+Savira Auth provides a complete user management system without any external authentication service. It is deeply integrated with Postgres Row Level Security for fine-grained access control, so you can write authorization policies in SQL rather than application code.
 
 ## Key Features
 
@@ -12,7 +12,7 @@ Supabase Auth provides a complete user management system without any external au
 - **Magic links**: passwordless email authentication
 - **Row Level Security**: authorization policies written in SQL, evaluated at the database level, no middleware needed
 - **JWT-based sessions**: standard JSON Web Tokens, compatible with any JWT library
-- **User management dashboard**: view, create, edit, and delete users from the Supabase Dashboard
+- **User management dashboard**: view, create, edit, and delete users from the Savira Dashboard
 - **Enterprise SSO**: SAML 2.0 support for enterprise single sign-on
 - **Multi-factor authentication**: TOTP-based MFA for additional account security
 - **Custom OAuth scopes**: request additional permissions when using social login providers
@@ -29,8 +29,8 @@ Supabase Auth provides a complete user management system without any external au
 ## How It Works
 
 1. Users authenticate via social provider, email/password, phone, or magic link
-2. Supabase Auth issues a JWT containing the user's ID and metadata
-3. The JWT is sent with every request to your Supabase project
+2. Savira Auth issues a JWT containing the user's ID and metadata
+3. The JWT is sent with every request to your Savira project
 4. Postgres Row Level Security policies reference the JWT to determine what data the user can access
 5. No middleware or application-level authorization code needed
 

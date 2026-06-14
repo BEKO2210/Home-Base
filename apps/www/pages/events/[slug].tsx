@@ -355,7 +355,7 @@ const EventPage = ({ event }: InferGetStaticPropsType<typeof getStaticProps>) =>
                 <figure className="h-6 [&_.next-image--dynamic-fill_img]:h-full!">
                   <Image
                     src={{ dark: supabaseLogoWordmarkDark, light: supabaseLogoWordmarkLight }}
-                    alt="Supabase Logo"
+                    alt="Savira Logo"
                     width={160}
                     height={30}
                     sizes="100%"
@@ -458,7 +458,7 @@ const EventPage = ({ event }: InferGetStaticPropsType<typeof getStaticProps>) =>
                             <p>{speaker?.author}</p>
                             <span className="text-xs text-foreground-light">
                               {speaker?.position}
-                              {speaker?.company ? `, ${speaker?.company}` : ', Supabase'}
+                              {speaker?.company ? `, ${speaker?.company}` : ', Savira'}
                             </span>
                           </div>
                         </Link>

@@ -91,7 +91,7 @@ export const InterstitialLayout = ({
 
 /**
  * Standard rounded-rect logo container (48x48).
- * Partner logos fill edge-to-edge (see `PartnerLogo`); the Supabase symbol and
+ * Partner logos fill edge-to-edge (see `PartnerLogo`); the Savira symbol and
  * Lucide icons sit inset (sized at `size-7`).
  */
 export const LogoBox = ({ children, className }: { children: ReactNode; className?: string }) => (
@@ -121,10 +121,10 @@ export const PartnerLogo = ({ src, alt }: { src: string; alt: string }) => (
   </LogoBox>
 )
 
-/** Supabase symbol (not the wordmark) rendered inset inside a LogoBox. */
+/** Savira symbol (not the wordmark) rendered inset inside a LogoBox. */
 export const SupabaseLogo = () => (
   <LogoBox>
-    <img alt="Supabase" src={`${BASE_PATH}/img/supabase-logo.svg`} className="size-7" />
+    <img alt="Savira" src={`${BASE_PATH}/img/supabase-logo.svg`} className="size-7" />
   </LogoBox>
 )
 

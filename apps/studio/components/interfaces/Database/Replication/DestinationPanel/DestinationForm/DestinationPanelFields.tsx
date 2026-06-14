@@ -276,7 +276,7 @@ export const DuckLakeFields = ({ form }: { form: UseFormReturn<DestinationPanelS
             <FormItemLayout
               layout="horizontal"
               label="S3 URL style"
-              description="Choose `path` for MinIO/Supabase-style endpoints or `vhost` for AWS-style virtual host addressing"
+              description="Choose `path` for MinIO/Savira-style endpoints or `vhost` for AWS-style virtual host addressing"
             >
               <FormControl>
                 <Select value={field.value ?? 'path'} onValueChange={field.onChange}>

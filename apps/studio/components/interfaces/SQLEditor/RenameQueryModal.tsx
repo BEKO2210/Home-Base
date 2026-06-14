@@ -72,7 +72,7 @@ export const RenameQueryModal = ({
   const isSQLSnippet = snippet.type === 'sql'
   const { data: projectSettings } = useProjectSettingsV2Query({ projectRef: ref })
 
-  // Customers on HIPAA plans should not have access to Supabase AI
+  // Customers on HIPAA plans should not have access to Savira AI
   const hasHipaaAddon = subscriptionHasHipaaAddon(subscription) && projectSettings?.is_sensitive
 
   const { id, name, description } = snippet
@@ -218,7 +218,7 @@ export const RenameQueryModal = ({
                       <div className="scale-75">
                         <AiIconAnimation loading={isTitleGenerationLoading} />
                       </div>
-                      <span>Rename with Supabase AI</span>
+                      <span>Rename with Savira AI</span>
                     </div>
                   </ButtonTooltip>
                 )}

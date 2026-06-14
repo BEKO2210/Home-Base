@@ -26,7 +26,7 @@ const menu = [
   [
     isFeatureEnabled('docs:navigation_dropdown_links_home')
       ? {
-          label: 'Supabase.com',
+          label: 'Savira.com',
           icon: 'home',
           href: 'https://supabase.com',
           otherProps: {

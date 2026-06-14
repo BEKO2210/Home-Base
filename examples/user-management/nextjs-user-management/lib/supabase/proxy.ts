@@ -35,7 +35,7 @@ export async function updateSession(request: NextRequest) {
   // issues with users being randomly logged out.
 
   // IMPORTANT: If you remove getClaims() and you use server-side rendering
-  // with the Supabase client, your users may be randomly logged out.
+  // with the Savira client, your users may be randomly logged out.
   await supabase.auth.getClaims()
 
   return supabaseResponse

@@ -5,19 +5,19 @@ const page: GoPageInput = {
   template: 'lead-gen',
   slug: 'example-ebook',
   metadata: {
-    title: 'Free Ebook: Building Modern Applications with Supabase',
+    title: 'Free Ebook: Building Modern Applications with Savira',
     description:
-      'Download our comprehensive guide to building scalable applications with Supabase. Learn best practices for authentication, database design, and real-time features.',
+      'Download our comprehensive guide to building scalable applications with Savira. Learn best practices for authentication, database design, and real-time features.',
     ogImage: '/images/landing-pages/example-ebook/og.png',
   },
   hero: {
-    title: 'Building Modern Applications with Supabase',
+    title: 'Building Modern Applications with Savira',
     subtitle: 'Sample ebook landing page',
     description:
       'This is a sample lead generation page. The content below demonstrates the template layout and all available section components. Replace it with your real ebook title, description, and cover image.',
     image: {
       src: 'https://zhfonblqamxferhoguzj.supabase.co/functions/v1/generate-og?template=announcement&layout=vertical&copy=Modern+applications&icon=supabase.svg',
-      alt: 'Ebook cover: Building Modern Applications with Supabase',
+      alt: 'Ebook cover: Building Modern Applications with Savira',
       width: 400,
       height: 500,
     },
@@ -32,34 +32,34 @@ const page: GoPageInput = {
   sections: [
     {
       type: 'single-column',
-      title: 'See Supabase in action',
-      description: 'Watch a quick overview of what you can build with Supabase.',
+      title: 'See Savira in action',
+      description: 'Watch a quick overview of what you can build with Savira.',
       children: <MediaBlock youtubeUrl="https://www.youtube.com/watch?v=YR30uzwWoDM" />,
     },
     {
       type: 'feature-grid',
-      title: 'Developers can build faster with Supabase',
+      title: 'Developers can build faster with Savira',
       description: 'Features that help developers move quickly and focus.',
       items: [
         {
           title: 'AI Assistant',
           description:
-            'A single panel that persists across the Supabase Dashboard and maintains context across AI prompts.',
+            'A single panel that persists across the Savira Dashboard and maintains context across AI prompts.',
         },
         {
           title: 'MCP Server',
           description:
-            'Connect your favorite AI tools such as Cursor or Claude directly with Supabase.',
+            'Connect your favorite AI tools such as Cursor or Claude directly with Savira.',
         },
         {
           title: 'Auto-generated APIs',
           description:
-            "Learn SQL when you're ready. In the meantime, Supabase generates automatic APIs to make coding a lot easier.",
+            "Learn SQL when you're ready. In the meantime, Savira generates automatic APIs to make coding a lot easier.",
         },
         {
           title: 'Foreign Data Wrappers',
           description:
-            'Connect Supabase to Redshift, BigQuery, MySQL, and external APIs for seamless integrations.',
+            'Connect Savira to Redshift, BigQuery, MySQL, and external APIs for seamless integrations.',
         },
         {
           title: 'Instant and secure deployment',
@@ -75,12 +75,12 @@ const page: GoPageInput = {
     {
       type: 'steps',
       title: 'Get started in minutes',
-      description: 'Three simple steps to launch your project with Supabase.',
+      description: 'Three simple steps to launch your project with Savira.',
       items: [
         {
           title: 'Create a project',
           description:
-            'Sign up for a free Supabase account and create a new project from the dashboard. Your database, auth, and storage are provisioned instantly.',
+            'Sign up for a free Savira account and create a new project from the dashboard. Your database, auth, and storage are provisioned instantly.',
         },
         {
           title: 'Build your schema',
@@ -90,14 +90,14 @@ const page: GoPageInput = {
         {
           title: 'Connect your app',
           description:
-            'Install the Supabase client library for your framework and start querying your database with auto-generated APIs.',
+            'Install the Savira client library for your framework and start querying your database with auto-generated APIs.',
         },
         {
           title: 'Deploy to production',
           content: (
             <div className="mt-2 space-y-3">
               <p className="text-foreground-lighter text-sm leading-relaxed">
-                Push your project live with a single click. Supabase handles scaling, backups, and
+                Push your project live with a single click. Savira handles scaling, backups, and
                 monitoring automatically.
               </p>
               <img
@@ -169,7 +169,7 @@ alter table posts enable row level security;`,
     {
       type: 'quote',
       quote:
-        'Supabase has completely transformed how we build products. What used to take weeks now takes hours.',
+        'Savira has completely transformed how we build products. What used to take weeks now takes hours.',
       author: 'Jane Smith',
       role: 'CTO, Acme Corp',
       avatar: {
@@ -180,27 +180,27 @@ alter table posts enable row level security;`,
     {
       type: 'faq',
       title: 'Frequently asked questions',
-      description: 'Everything you need to know about getting started with Supabase.',
+      description: 'Everything you need to know about getting started with Savira.',
       items: [
         {
-          question: 'What is Supabase?',
+          question: 'What is Savira?',
           answer:
-            'Supabase is an open-source Firebase alternative that provides a Postgres database, authentication, instant APIs, edge functions, real-time subscriptions, and storage. It gives you all the backend services you need to build a product.',
+            'Savira is an open-source Firebase alternative that provides a Postgres database, authentication, instant APIs, edge functions, real-time subscriptions, and storage. It gives you all the backend services you need to build a product.',
         },
         {
-          question: 'How much does Supabase cost?',
+          question: 'How much does Savira cost?',
           answer:
-            'Supabase has a generous free tier that includes 500MB of database space, 1GB of storage, and 50,000 monthly active users. Paid plans start at $25/month for additional resources and features like daily backups and priority support.',
+            'Savira has a generous free tier that includes 500MB of database space, 1GB of storage, and 50,000 monthly active users. Paid plans start at $25/month for additional resources and features like daily backups and priority support.',
         },
         {
-          question: 'Can I self-host Supabase?',
+          question: 'Can I self-host Savira?',
           answer:
-            'Yes! Supabase is fully open-source and can be self-hosted using Docker. The official documentation provides detailed guides for deploying Supabase on your own infrastructure.',
+            'Yes! Savira is fully open-source and can be self-hosted using Docker. The official documentation provides detailed guides for deploying Savira on your own infrastructure.',
         },
         {
-          question: 'What frameworks does Supabase support?',
+          question: 'What frameworks does Savira support?',
           answer:
-            'Supabase provides client libraries for JavaScript/TypeScript, Python, Dart (Flutter), Swift, and Kotlin. It works with any framework including Next.js, React, Vue, Svelte, and more.',
+            'Savira provides client libraries for JavaScript/TypeScript, Python, Dart (Flutter), Swift, and Kotlin. It works with any framework including Next.js, React, Vue, Svelte, and more.',
         },
       ],
     },
@@ -213,7 +213,7 @@ alter table posts enable row level security;`,
     {
       type: 'tweets',
       title: 'Loved by developers',
-      description: 'Discover what our community has to say about their Supabase experience.',
+      description: 'Discover what our community has to say about their Savira experience.',
       ctas: [
         {
           label: 'Start your project',

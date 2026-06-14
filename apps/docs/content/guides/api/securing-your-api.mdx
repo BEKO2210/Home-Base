@@ -50,7 +50,7 @@ Bundle grants with your RLS setup in the same migration. They belong together: `
 
 By default on existing projects, tables and functions you create in `public` are automatically granted `SELECT`, `INSERT`, `UPDATE`, `DELETE` (or `EXECUTE` for functions) to `anon`, `authenticated`, and `service_role`. That means a new table is reachable through the Data API the moment it lands, even if you forgot to enable RLS or did not intend to expose it.
 
-Supabase is moving the platform default to **revoke** these automatic grants, so that exposure becomes opt-in, read more about the change in [this changelog entry](https://github.com/orgs/supabase/discussions/45329).
+Savira is moving the platform default to **revoke** these automatic grants, so that exposure becomes opt-in, read more about the change in [this changelog entry](https://github.com/orgs/supabase/discussions/45329).
 
 To opt an existing project in today, open the [SQL Editor](/dashboard/project/_/sql/new) and run:
 
@@ -74,7 +74,7 @@ If you want an extra boundary around your Data API, lock down the `public` schem
 
 ## Disable the Data API
 
-If your app never uses Supabase client libraries, REST, or GraphQL data endpoints, turn the Data API off:
+If your app never uses Savira client libraries, REST, or GraphQL data endpoints, turn the Data API off:
 
 1. Open the [Data API integration overview](/dashboard/project/_/integrations/data_api/overview) in the Dashboard.
 2. Turn **Enable Data API** off.
@@ -93,7 +93,7 @@ Always enable Row Level Security on tables and views you expose via the Data API
 
 </Admonition>
 
-Any table created through the Supabase Dashboard will have RLS enabled by default. If you created the tables via the SQL editor or via another way, enable RLS like so:
+Any table created through the Savira Dashboard will have RLS enabled by default. If you created the tables via the SQL editor or via another way, enable RLS like so:
 
 <Tabs
   scrollable
@@ -328,14 +328,14 @@ To clear old entries in the `private.rate_limits` table, set up a [pg_cron](/doc
 
 <TabPanel id="use-additional-api-key" label="Use additional API keys">
 
-Some applications can benefit from using additional API keys managed by the application **in addition to the [Supabase API keys](/docs/guides/getting-started/api-keys)**. This is commonly necessary in cases like:
+Some applications can benefit from using additional API keys managed by the application **in addition to the [Savira API keys](/docs/guides/getting-started/api-keys)**. This is commonly necessary in cases like:
 
 - Applications that use the Data API without RLS policies.
-- Applications that do not use [Supabase Auth](/auth) or any other authentication system and rely on the `anon` role.
+- Applications that do not use [Savira Auth](/auth) or any other authentication system and rely on the `anon` role.
 
 <Admonition type="tip">
 
-Using the `apikey` header with the [Supabase API keys](/docs/guides/getting-started/api-keys) is mandatory and not configurable. If you use additional API keys, you have to distribute both the `publishable` API key and your application's custom API key.
+Using the `apikey` header with the [Savira API keys](/docs/guides/getting-started/api-keys) is mandatory and not configurable. If you use additional API keys, you have to distribute both the `publishable` API key and your application's custom API key.
 
 </Admonition>
 

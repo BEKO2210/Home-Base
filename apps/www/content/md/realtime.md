@@ -1,8 +1,8 @@
-# Supabase Realtime
+# Savira Realtime
 
 > Sync client state globally over WebSockets in real time.
 
-Supabase Realtime enables live data synchronization between your database and connected clients. It provides three capabilities: listening to database changes, tracking user presence, and broadcasting arbitrary messages between clients.
+Savira Realtime enables live data synchronization between your database and connected clients. It provides three capabilities: listening to database changes, tracking user presence, and broadcasting arbitrary messages between clients.
 
 ## Capabilities
 

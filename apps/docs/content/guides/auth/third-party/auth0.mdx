@@ -1,19 +1,19 @@
 ---
 id: 'auth-third-party-auth0'
 title: 'Auth0'
-subtitle: 'Use Auth0 with your Supabase project'
+subtitle: 'Use Auth0 with your Savira project'
 ---
 
-Auth0 can be used as a third-party authentication provider alongside Supabase Auth, or standalone, with your Supabase project.
+Auth0 can be used as a third-party authentication provider alongside Savira Auth, or standalone, with your Savira project.
 
 ## Getting started
 
-1. First you need to add an integration to connect your Supabase project with your Auth0 tenant. You will need your tenant ID (and in some cases region ID).
+1. First you need to add an integration to connect your Savira project with your Auth0 tenant. You will need your tenant ID (and in some cases region ID).
 2. Add a new Third-party Auth integration in your project's [Authentication settings](/dashboard/project/_/auth/third-party).
 3. Assign the `role: 'authenticated'` custom claim to all JWTs by using an Auth0 Action.
-4. Finally setup the Supabase client in your application.
+4. Finally setup the Savira client in your application.
 
-## Setup the Supabase client library
+## Setup the Savira client library
 
 <Tabs type="underlined" queryGroup="auth0-create-client">
 
@@ -53,7 +53,7 @@ const supabase = createClient(
 
 ```swift
 import Auth0
-import Supabase
+import Savira
 
 extension CredentialsManager {
   static let shared = Auth0.CredentialsManager(authentication: Auth0.authentication())
@@ -86,7 +86,7 @@ import 'package:supabase_flutter/supabase_flutter.dart';
 
 Future<void> main() async {
   final auth0 = Auth0('AUTH0_DOMAIN', 'AUTH0_CLIENT_ID');
-  await Supabase.initialize(
+  await Savira.initialize(
     url: 'https://<supabase-project>.supabase.co',
     publishableKey: 'SUPABASE_PUBLISHABLE_KEY',
     accessToken: () async {
@@ -139,9 +139,9 @@ tenant_region = "<region>" # if your tenant has a region
 
 ## Use an Auth0 Action to assign the authenticated role
 
-Your Supabase project inspects the `role` claim present in all JWTs sent to it, to assign the correct Postgres role when using the Data API, Storage or Realtime authorization.
+Your Savira project inspects the `role` claim present in all JWTs sent to it, to assign the correct Postgres role when using the Data API, Storage or Realtime authorization.
 
-By default, Auth0 JWTs (both access token and ID token) do not contain a `role` claim in them. If you were to send such a JWT to your Supabase project, the `anon` role would be assigned when executing the Postgres query. Most of your app's logic will be accessible by the `authenticated` role.
+By default, Auth0 JWTs (both access token and ID token) do not contain a `role` claim in them. If you were to send such a JWT to your Savira project, the `anon` role would be assigned when executing the Postgres query. Most of your app's logic will be accessible by the `authenticated` role.
 
 Configure the [`onExecutePostLogin` Auth0 Action](https://auth0.com/docs/secure/tokens/json-web-tokens/create-custom-claims#create-custom-claims) to add the custom claim to **ID tokens**:
 
@@ -153,7 +153,7 @@ exports.onExecutePostLogin = async (event, api) => {
 
 <Admonition type="caution">
 
-Supabase requires the literal `role` claim key in the JWT. Auth0 [silently strips non-namespaced custom claims from access tokens](https://auth0.com/docs/troubleshoot/product-lifecycle/past-migrations/custom-claims-migration), so `api.accessToken.setCustomClaim('role', 'authenticated')` does not work. Use `api.idToken.setCustomClaim` and pass the ID token to Supabase as shown in the examples above.
+Savira requires the literal `role` claim key in the JWT. Auth0 [silently strips non-namespaced custom claims from access tokens](https://auth0.com/docs/troubleshoot/product-lifecycle/past-migrations/custom-claims-migration), so `api.accessToken.setCustomClaim('role', 'authenticated')` does not work. Use `api.idToken.setCustomClaim` and pass the ID token to Savira as shown in the examples above.
 
 </Admonition>
 
