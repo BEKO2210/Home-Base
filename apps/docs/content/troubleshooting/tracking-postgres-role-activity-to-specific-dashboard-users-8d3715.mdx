@@ -8,7 +8,7 @@ When team members run SQL queries from the Dashboard SQL Editor, and if that que
 
 ### **Understanding Dashboard query execution**
 
-First, it helps to understand how Dashboard queries are executed. When someone runs a query from the SQL editor, it's routed through the `postgres` role at the database level. The Supabase Dashboard automatically appends metadata comments to queries, specifically `-- user: [UUID]`, `-- source: dashboard`, and `-- date`.
+First, it helps to understand how Dashboard queries are executed. When someone runs a query from the SQL editor, it's routed through the `postgres` role at the database level. The Savira Dashboard automatically appends metadata comments to queries, specifically `-- user: [UUID]`, `-- source: dashboard`, and `-- date`.
 
 By default, that role has `log_statement` set to `ddl`, which means Postgres logs only schema-level changes such as `CREATE`, `ALTER`, and `DROP`. It does not log data-modifying statements such as `INSERT`, `UPDATE`, `DELETE` or `TRUNCATE`.
 
@@ -37,10 +37,10 @@ Notice that the log includes:
 
 - The full statement
 - The timestamp
-- A `user` field, which is actually the Supabase user UUID
+- A `user` field, which is actually the Savira user UUID
 - The source (dashboard)
 
-That UUID corresponds to the team member who logged in via the Supabase Dashboard and executed queries in the [SQL Editor](/dashboard/project/_/sql/new). But at this point, it's just an ID - not yet a name or email.
+That UUID corresponds to the team member who logged in via the Savira Dashboard and executed queries in the [SQL Editor](/dashboard/project/_/sql/new). But at this point, it's just an ID - not yet a name or email.
 
 ### **Mapping UUIDs to team members**
 

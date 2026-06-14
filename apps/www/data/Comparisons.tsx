@@ -1,18 +1,18 @@
 export const data = {
-  label: 'Compare Supabase',
+  label: 'Compare Savira',
   comparisons: [
     {
-      text: 'Supabase vs Firebase',
+      text: 'Savira vs Firebase',
       description: '',
       url: '/alternatives/supabase-vs-firebase',
     },
     {
-      text: 'Supabase vs Heroku Postgres',
+      text: 'Savira vs Heroku Postgres',
       description: '',
       url: '/alternatives/supabase-vs-heroku-postgres',
     },
     {
-      text: 'Supabase vs Auth0',
+      text: 'Savira vs Auth0',
       description: '',
       url: '/alternatives/supabase-vs-auth0',
     },

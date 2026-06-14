@@ -4,11 +4,11 @@ title: 'Passkey authentication'
 subtitle: 'Allow users to sign in with passkeys (WebAuthn)'
 ---
 
-[Passkeys](https://fidoalliance.org/passkeys/) are a passwordless credential built on the [WebAuthn](https://www.w3.org/TR/webauthn-3/) standard. The user proves possession of a private key stored on their device (or password manager) using biometrics, a PIN, or a hardware security key. The matching public key is registered with Supabase Auth and used to verify future sign-ins. Passkeys are phishing-resistant and remove the need to manage shared secrets.
+[Passkeys](https://fidoalliance.org/passkeys/) are a passwordless credential built on the [WebAuthn](https://www.w3.org/TR/webauthn-3/) standard. The user proves possession of a private key stored on their device (or password manager) using biometrics, a PIN, or a hardware security key. The matching public key is registered with Savira Auth and used to verify future sign-ins. Passkeys are phishing-resistant and remove the need to manage shared secrets.
 
 <Admonition type="caution" title="Experimental">
 
-Passkey support is experimental. The API may change without notice. You must explicitly opt-in when creating the Supabase client. See [Enable in the client](#enable-in-the-client).
+Passkey support is experimental. The API may change without notice. You must explicitly opt-in when creating the Savira client. See [Enable in the client](#enable-in-the-client).
 
 </Admonition>
 
@@ -22,11 +22,11 @@ Passkey support is experimental. The API may change without notice. You must exp
 
 Each sign-in or registration is a WebAuthn ceremony with three steps:
 
-1. **Options**: the client requests a challenge from Supabase Auth.
+1. **Options**: the client requests a challenge from Savira Auth.
 2. **Ceremony**: the browser invokes `navigator.credentials.create()` (registration) or `navigator.credentials.get()` (authentication), prompting the user for biometrics or a security key.
-3. **Verify**: the signed response is sent back to Supabase Auth, which validates the challenge and either stores the new credential or issues a session.
+3. **Verify**: the signed response is sent back to Savira Auth, which validates the challenge and either stores the new credential or issues a session.
 
-Supabase Auth uses [discoverable credentials](https://www.w3.org/TR/webauthn-3/#discoverable-credential) for sign-in. The user does not need to provide an email, phone, or username — the authenticator resolves the account from the credential it stores.
+Savira Auth uses [discoverable credentials](https://www.w3.org/TR/webauthn-3/#discoverable-credential) for sign-in. The user does not need to provide an email, phone, or username — the authenticator resolves the account from the credential it stores.
 
 Registering a passkey requires an existing, confirmed, non-anonymous user. Sign-in works for any user that has previously registered a passkey, provided their email or phone is confirmed and the account is not banned.
 
@@ -113,7 +113,7 @@ const supabase = createClient(supabaseUrl, supabaseKey, {
 
 A user must be signed in before they can register a passkey. Typically, you call this from a security settings page, or directly after sign-up.
 
-`auth.registerPasskey()` runs the full WebAuthn ceremony. It fetches a challenge, invokes the browser API, and verifies the response with Supabase Auth.
+`auth.registerPasskey()` runs the full WebAuthn ceremony. It fetches a challenge, invokes the browser API, and verifies the response with Savira Auth.
 
 ```ts
 const { data, error } = await supabase.auth.registerPasskey()
@@ -237,7 +237,7 @@ See the [`auth.admin.passkey` reference](/docs/reference/javascript/auth-admin-p
 | `passkey_disabled`              | Passkey sign-in is not enabled for this project.                                 |
 | `too_many_passkeys`             | The user has reached the maximum number of passkeys allowed per account.         |
 | `webauthn_credential_exists`    | This authenticator has already been registered to the account.                   |
-| `webauthn_credential_not_found` | The credential in the assertion is not registered with Supabase Auth.            |
+| `webauthn_credential_not_found` | The credential in the assertion is not registered with Savira Auth.            |
 | `webauthn_challenge_not_found`  | The challenge ID is unknown or has already been consumed.                        |
 | `webauthn_challenge_expired`    | The challenge expired before the client returned a credential.                   |
 | `webauthn_verification_failed`  | The signature, attestation, or assertion did not validate against the challenge. |

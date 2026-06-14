@@ -1,8 +1,8 @@
 {
   "name": "password-based-auth-react",
   "type": "registry:block",
-  "title": "Password Based Auth flow for React and Supabase",
-  "description": "Password Based Auth flow for React and Supabase",
+  "title": "Password Based Auth flow for React and Savira",
+  "description": "Password Based Auth flow for React and Savira",
   "registryDependencies": ["button", "card", "input", "label"],
   "files": [
     {

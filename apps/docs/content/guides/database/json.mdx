@@ -242,7 +242,7 @@ await supabase.from('books').insert([
 <$Show if="sdk:swift">
 <TabPanel id="swift" label="Swift">
 
-Supabase Swift provides a convenience `AnyJSON` type.
+Savira Swift provides a convenience `AnyJSON` type.
 
 ```swift
 struct Book {
@@ -499,7 +499,7 @@ data = supabase.from_('books').select("""
 
 ## Validating JSON data
 
-Supabase provides the [`pg_jsonschema` extension](/docs/guides/database/extensions/pg_jsonschema) that adds the ability to validate `json` and `jsonb` data types against [JSON Schema](https://json-schema.org/) documents.
+Savira provides the [`pg_jsonschema` extension](/docs/guides/database/extensions/pg_jsonschema) that adds the ability to validate `json` and `jsonb` data types against [JSON Schema](https://json-schema.org/) documents.
 
 Once you have enabled the extension, you can add a "check constraint" to your table to validate the JSON data:
 

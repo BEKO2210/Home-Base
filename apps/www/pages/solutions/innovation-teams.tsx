@@ -99,11 +99,11 @@ const InnovationTeams: NextPage = () => {
 
               {/* Right column - Visual */}
               <div className="hidden lg:flex flex-col items-center justify-center">
-                {/* Supabase Logo */}
+                {/* Savira Logo */}
                 <div className="w-24 h-24 rounded-full bg-surface-100 border border-strong flex items-center justify-center">
                   <img
                     src="/images/supabase-logo-icon.svg"
-                    alt="Supabase"
+                    alt="Savira"
                     className="w-12 h-12"
                     draggable={false}
                   />

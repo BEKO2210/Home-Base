@@ -126,7 +126,7 @@ export function RegisterContent() {
               This is a 7-minute survey. It covers AI adoption, tech stack, GTM, and the challenges
               startups are actually facing. We'll publish the full results.
             </p>
-            <p>And for your trouble, we'll send you a free Supabase t-shirt.</p>
+            <p>And for your trouble, we'll send you a free Savira t-shirt.</p>
           </div>
 
           <ShirtImage />
@@ -173,7 +173,7 @@ function ShirtImage() {
             delay: 2,
           }}
         >
-          <Image src={shirtImage} fill alt="Supabase Shirt" className="object-cover" />
+          <Image src={shirtImage} fill alt="Savira Shirt" className="object-cover" />
         </motion.div>
       </motion.div>
     </div>

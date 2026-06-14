@@ -1,6 +1,6 @@
 ---
 name: studio-ui-patterns
-description: Design system UI patterns for Supabase Studio. Use when building or updating
+description: Design system UI patterns for Savira Studio. Use when building or updating
   pages, forms, tables, charts, empty states, navigation, cards, alerts, or side panels
   (sheets). Covers layout selection, component choice, and placement conventions.
 ---

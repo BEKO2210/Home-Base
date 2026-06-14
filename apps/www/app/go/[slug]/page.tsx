@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
   const { metadata } = page
 
   return {
-    title: `${metadata.title} | Supabase`,
+    title: `${metadata.title} | Savira`,
     description: metadata.description,
     openGraph: {
       title: metadata.title,

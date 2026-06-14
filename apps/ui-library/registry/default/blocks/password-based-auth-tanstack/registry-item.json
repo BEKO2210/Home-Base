@@ -1,8 +1,8 @@
 {
   "name": "password-based-auth-tanstack",
   "type": "registry:block",
-  "title": "Password Based Auth flow for tanstack and Supabase",
-  "description": "Password Based Auth flow for tanstack and Supabase",
+  "title": "Password Based Auth flow for tanstack and Savira",
+  "description": "Password Based Auth flow for tanstack and Savira",
   "registryDependencies": ["button", "card", "input", "label"],
   "dependencies": ["@supabase/ssr@latest"],
   "files": [

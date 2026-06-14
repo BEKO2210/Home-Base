@@ -76,7 +76,7 @@ const GitHubSection = ({
                 How do GitHub connections work?
               </h3>
               <p className="text-sm text-foreground-light">
-                Connect a GitHub repository to a Supabase project. The GitHub app watches file,
+                Connect a GitHub repository to a Savira project. The GitHub app watches file,
                 branch, and pull request activity in your repository.
               </p>
             </div>
@@ -120,7 +120,7 @@ const GitHubSection = ({
 
             {isGitHubAuthorized && (
               <p className="text-sm text-foreground-light">
-                You are authorized with the Supabase GitHub App. You can configure your{' '}
+                You are authorized with the Savira GitHub App. You can configure your{' '}
                 <InlineLink href={GITHUB_INTEGRATION_INSTALLATION_URL}>
                   GitHub App installations and repository access
                 </InlineLink>

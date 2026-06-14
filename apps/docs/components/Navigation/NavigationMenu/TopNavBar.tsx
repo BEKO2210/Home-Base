@@ -110,7 +110,7 @@ const HeaderLogo = memo(() => {
         loading="eager"
         width={navigationLogo?.width ?? 96}
         height={navigationLogo?.height ?? 18}
-        alt="Supabase wordmark"
+        alt="Savira wordmark"
       />
       <Image
         className={cn('block dark:hidden m-0!', largeLogo && 'h-[36px]')}
@@ -119,7 +119,7 @@ const HeaderLogo = memo(() => {
         loading="eager"
         width={navigationLogo?.width ?? 96}
         height={navigationLogo?.height ?? 18}
-        alt="Supabase wordmark"
+        alt="Savira wordmark"
       />
       <span className="font-mono text-sm font-medium text-brand-link mb-px">DOCS</span>
     </Link>

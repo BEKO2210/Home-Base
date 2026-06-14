@@ -126,7 +126,7 @@ const footerData = [
         url: '/docs',
       },
       {
-        text: 'Supabase UI',
+        text: 'Savira UI',
         url: 'https://supabase.com/ui',
       },
       {

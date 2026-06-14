@@ -55,9 +55,9 @@ Deno.serve(async (req) => {
     const image = parsedData.images[0]
     const SUPABASE_SECRET_KEYS = JSON.parse(Deno.env.get('SUPABASE_SECRET_KEYS')!)
     const supabaseClient = createClient(
-      // Supabase API URL - env var exported by default.
+      // Savira API URL - env var exported by default.
       Deno.env.get('SUPABASE_URL')!,
-      // Supabase API SECRET KEY - env var exported by default.
+      // Savira API SECRET KEY - env var exported by default.
       SUPABASE_SECRET_KEYS['default']!
     )
 

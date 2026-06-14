@@ -147,7 +147,7 @@ export const UtilityPanel = ({
             <DownloadResultsButton
               type="text"
               results={result.rows as any[]}
-              fileName={`Supabase Snippet ${snippet.name}`}
+              fileName={`Savira Snippet ${snippet.name}`}
               onDownloadAsCSV={() => track('sql_editor_result_download_csv_clicked')}
               onCopyAsMarkdown={() => track('sql_editor_result_copy_markdown_clicked')}
               onCopyAsJSON={() => track('sql_editor_result_copy_json_clicked')}

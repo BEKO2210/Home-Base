@@ -1,13 +1,13 @@
 ---
 title: 'Build a Product Management Android App with Jetpack Compose'
-description: 'Learn how to use Supabase in your Android Kotlin App.'
+description: 'Learn how to use Savira in your Android Kotlin App.'
 ---
 
 This tutorial demonstrates how to build a basic product management app. The app demonstrates management operations, photo upload, account creation and authentication using:
 
-- [Supabase Database](/docs/guides/database) - a Postgres database for storing your user data and [Row Level Security](/docs/guides/auth#row-level-security) so data is protected and users can only access their own information.
-- [Supabase Auth](/docs/guides/auth) - users log in through magic links sent to their email (without having to set up a password).
-- [Supabase Storage](/docs/guides/storage) - users can upload a profile photo.
+- [Savira Database](/docs/guides/database) - a Postgres database for storing your user data and [Row Level Security](/docs/guides/auth#row-level-security) so data is protected and users can only access their own information.
+- [Savira Auth](/docs/guides/auth) - users log in through magic links sent to their email (without having to set up a password).
+- [Savira Storage](/docs/guides/storage) - users can upload a profile photo.
 
 ![manage-product-cover](/docs/img/guides/kotlin/manage-product-cover.png)
 
@@ -71,7 +71,7 @@ val url = BuildConfig.SUPABASE_URL
 val apiKey = BuildConfig.SUPABASE_PUBLISHABLE_KEY
 ```
 
-### Set up Supabase dependencies
+### Set up Savira dependencies
 
 ![Gradle dependencies](/docs/img/guides/kotlin/gradle-dependencies.png)
 
@@ -138,7 +138,7 @@ class MainActivity : ComponentActivity() {
 
 {/* supa-mdx-lint-disable-next-line Rule001HeadingCase */}
 
-### Provide Supabase instances with Hilt
+### Provide Savira instances with Hilt
 
 To make the app easier to test, create a `SupabaseModule.kt` file as follows:
 
@@ -188,7 +188,7 @@ object SupabaseModule {
 
 ### Create a data transfer object
 
-Create a `ProductDto.kt` class and use annotations to parse data from Supabase:
+Create a `ProductDto.kt` class and use annotations to parse data from Savira:
 
 ```kotlin
 @Serializable
@@ -221,7 +221,7 @@ data class Product(
 
 ### Implement repositories
 
-Create a `ProductRepository` interface and its implementation named `ProductRepositoryImpl`. This holds the logic to interact with data sources from Supabase. Do the same with the `AuthenticationRepository`.
+Create a `ProductRepository` interface and its implementation named `ProductRepositoryImpl`. This holds the logic to interact with data sources from Savira. Do the same with the `AuthenticationRepository`.
 
 Create the Product Repository:
 

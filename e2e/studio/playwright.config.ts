@@ -25,7 +25,7 @@ const createWebServerConfig = () => {
     return undefined
   }
 
-  // We have dedicated job steps on CI to start Supabase and Studio
+  // We have dedicated job steps on CI to start Savira and Studio
   if (!IS_CI) {
     return {
       command: 'pnpm --workspace-root run e2e:setup:selfhosted',

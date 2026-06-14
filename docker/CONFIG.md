@@ -1,8 +1,8 @@
 Last updated: 2026-05-23
 
-# Self-hosted Supabase configuration reference
+# Self-hosted Savira configuration reference
 
-This document is the aggregated reference for environment variables relevant to a self-hosted Supabase deployment. It aims to be comprehensive for the self-hosted use case rather than literally exhaustive - variables that only apply on the hosted platform are typically omitted or marked as such. For the complete set a given service can read, refer to its [upstream repositories](#upstream-repositories) below.
+This document is the aggregated reference for environment variables relevant to a self-hosted Savira deployment. It aims to be comprehensive for the self-hosted use case rather than literally exhaustive - variables that only apply on the hosted platform are typically omitted or marked as such. For the complete set a given service can read, refer to its [upstream repositories](#upstream-repositories) below.
 
 The default self-hosted setup already includes explicit values for all required variables, and the remaining configuration inherits sensible defaults from the services themselves. Otherwise, it serves as a reference for advanced customization or educational purposes. For more guidance on the essential keys and secrets, see [Configuring secrets](https://supabase.com/docs/guides/self-hosting/docker#configuring-secrets) in the self-hosting guide.
 
@@ -20,8 +20,8 @@ The Type column was derived from each service's parse-site code (Go struct field
 - **Auth** - against [supabase/auth/README.md](https://github.com/supabase/auth/blob/master/README.md)
 - **PostgREST** - against [postgrest.org/en/stable](https://docs.postgrest.org/en/stable/references/configuration.html)
 - **Realtime** - against [supabase/realtime/ENVS.md](https://github.com/supabase/realtime/blob/main/ENVS.md)
-- **Storage** - against the Supabase docs [YAML spec](https://github.com/supabase/supabase/blob/master/apps/docs/spec/storage_v0_config.yaml) for the variables it covers; otherwise from code reads
-- **Analytics (Logflare)** - against the Supabase docs [YAML spec](https://github.com/supabase/supabase/blob/master/apps/docs/spec/analytics_v0_config.yaml) and [docs.logflare.app/self-hosting](https://docs.logflare.app/self-hosting/) for the rest, with [logflare/config/runtime.exs](https://github.com/Logflare/logflare/blob/main/config/runtime.exs) and [logflare/config/config.exs](https://github.com/Logflare/logflare/blob/main/config/config.exs) used as tiebreakers
+- **Storage** - against the Savira docs [YAML spec](https://github.com/supabase/supabase/blob/master/apps/docs/spec/storage_v0_config.yaml) for the variables it covers; otherwise from code reads
+- **Analytics (Logflare)** - against the Savira docs [YAML spec](https://github.com/supabase/supabase/blob/master/apps/docs/spec/analytics_v0_config.yaml) and [docs.logflare.app/self-hosting](https://docs.logflare.app/self-hosting/) for the rest, with [logflare/config/runtime.exs](https://github.com/Logflare/logflare/blob/main/config/runtime.exs) and [logflare/config/config.exs](https://github.com/Logflare/logflare/blob/main/config/config.exs) used as tiebreakers
 - **Supavisor** - against [supabase/supavisor/docs/configuration/env.md](https://github.com/supabase/supavisor/blob/main/docs/configuration/env.md)
 
 Other sections (Studio, Edge Functions, Postgres) appeared to have no comparable upstream prose documentation and were documented by reading the source repos. Corrections welcome via PR.
@@ -34,7 +34,7 @@ Each table has five columns:
 |---|---|
 | **Variable** | Exact env var name as the service's code reads it. Names are case-sensitive. |
 | **Type** | Closed vocabulary: `string`, `integer`, `number`, `boolean`, `JSON`, `enum`, `URL`, `path`, `JWT`, `JWKS`. Numeric forms carry a unit hint where one applies - e.g. `integer (seconds)`, `integer (ms)`, `integer (bytes)`, `integer (MB)`, `integer (count)`, `number (ratio)`. String forms with a semantic hint: `string (duration)` (Go `time.Duration` strings like `10s`, `5m`, distinct from `integer (seconds)`), `string (regex)`, `string (CSV)`. |
-| **Set by (CLI, Self-hosted)** | `Both` if the variable is set inside the corresponding container when you run `supabase start` (see the [Local development & CLI](https://supabase.com/docs/guides/local-development)) *and* in `docker/docker-compose.yml` / `docker/.env.example`. `Self-hosted` if only in the self-hosted compose/.env (including inside commented-out lines). `CLI` if only in the CLI runtime env. Blank if neither - the variable is documented because the service's code reads it, but no Supabase-side config pre-wires it. |
+| **Set by (CLI, Self-hosted)** | `Both` if the variable is set inside the corresponding container when you run `supabase start` (see the [Local development & CLI](https://supabase.com/docs/guides/local-development)) *and* in `docker/docker-compose.yml` / `docker/.env.example`. `Self-hosted` if only in the self-hosted compose/.env (including inside commented-out lines). `CLI` if only in the CLI runtime env. Blank if neither - the variable is documented because the service's code reads it, but no Savira-side config pre-wires it. |
 | **Description** | What the variable controls. |
 | **Notes** | Default value, requirement, deprecation, alias, or scope. |
 
@@ -93,7 +93,7 @@ The image tags below are pinned in `docker-compose.yml` at the time of this docu
 | `POSTGRES_USER_READ_ONLY` | string | | Postgres role used for read-only queries from the SQL editor. | Default: `supabase_read_only_user`. Only takes effect if you've manually created the role per the "remove superuser access" guide. |
 | `POSTGRES_USER_READ_WRITE` | string | Both | Postgres role used for read/write queries from the SQL editor. | Default: `supabase_admin`. Commented out in default compose. See "remove superuser access" guide. |
 | `STUDIO_PG_META_URL` | URL | Both | URL of the `postgres-meta` service used for schema introspection. | E.g. `http://meta:8080`. Required. |
-| `SUPABASE_PUBLIC_URL` | URL | Both | Public URL of the Supabase stack (Kong gateway) as seen by end users. | Used to construct REST API URLs and connection strings shown in the dashboard. |
+| `SUPABASE_PUBLIC_URL` | URL | Both | Public URL of the Savira stack (Kong gateway) as seen by end users. | Used to construct REST API URLs and connection strings shown in the dashboard. |
 | `SUPABASE_URL` | URL | Both | Internal URL Studio uses to reach Kong from inside the Docker network. | E.g. `http://kong:8000`. |
 
 ### Auth / JWT
@@ -157,7 +157,7 @@ Self-hosted Studio reads `ENABLED_FEATURES_*` env vars at container start time t
 
 | Variable | Type | Set by | Description | Notes |
 |---|---|---|---|---|
-| `CURRENT_CLI_VERSION` | string | CLI | Version string set when Studio is started by the Supabase CLI. | Renames the default project to "Supabase Studio (CLI)" when set. Exposed to client via Next.js passthrough. |
+| `CURRENT_CLI_VERSION` | string | CLI | Version string set when Studio is started by the Savira CLI. | Renames the default project to "Savira Studio (CLI)" when set. Exposed to client via Next.js passthrough. |
 | `NEXT_PUBLIC_IS_PLATFORM` | boolean | | Master switch: `"true"` runs Studio in hosted (multi-project) mode, anything else runs in self-hosted single-project mode. | Self-hosted images are **built** with this unset/`false`. Exposed to client. Setting this to `true` in a self-hosted deployment will break the dashboard. |
 | `NEXT_PUBLIC_NODE_ENV` | string | | Marks the build as a test build (used by E2E setup). | Set to `test` only by `generateLocalEnv.js`. Exposed to client. |
 | `NODE_ENV` | enum | Both | Standard Node.js environment (`development` / `production` / `test`). | Set automatically by Next.js. |
@@ -978,7 +978,7 @@ The fields below are repeated for each provider. Substitute `<PROVIDER>` with on
 
 | Variable | Type | Set by | Description | Notes |
 |---|---|---|---|---|
-| `DATABASE_APPLICATION_NAME` | string |  | Postgres `application_name` for the API connection pool. | Default: `Supabase Storage API ${VERSION}` |
+| `DATABASE_APPLICATION_NAME` | string |  | Postgres `application_name` for the API connection pool. | Default: `Savira Storage API ${VERSION}` |
 | `DATABASE_CONNECTION_TIMEOUT` | integer (ms) |  | Postgres connection acquire timeout (ms). | Default: `3000` |
 | `DATABASE_ENABLE_QUERY_CANCELLATION` | boolean |  | Issue a Postgres cancel on request abort. | Default: `false` |
 | `DATABASE_FREE_POOL_AFTER_INACTIVITY` | integer (ms) |  | Time (ms) after which an idle tenant pool is released. | Default: `60000` |
@@ -1198,14 +1198,14 @@ The fields below are repeated for each provider. Substitute `<PROVIDER>` with on
 | `EDGE_RUNTIME_TLS_CERT_PATH` | path | Both | Path to PEM X.509 certificate (when TLS enabled). | Wired to `--cert` flag |
 | `EDGE_RUNTIME_TLS_KEY_PATH` | path | Both | Path to PEM-encoded private key (when TLS enabled). | Wired to `--key` flag |
 | `EDGE_RUNTIME_WORKER_POOL_SIZE` | integer (count) | | Tokio LocalPool size for the user worker pool. | Default: `available_parallelism()` in release |
-| `EXT_AI_CACHE_DIR` | path | | Directory used to cache ONNX model files downloaded by `Supabase.ai`. | Defaults to OS cache dir |
+| `EXT_AI_CACHE_DIR` | path | | Directory used to cache ONNX model files downloaded by `Savira.ai`. | Defaults to OS cache dir |
 | `HTTP_PROXY` / `http_proxy` | URL | | HTTP outbound proxy for `fetch()` from user functions. | Read by `vendor/deno_fetch/proxy.rs` |
 | `HTTPS_PROXY` / `https_proxy` | URL | | HTTPS outbound proxy for `fetch()` and for the S3 filesystem backend. | Read by `vendor/deno_fetch/proxy.rs` and `crates/fs/impl/s3_fs.rs` |
 | `JSR_URL` | URL | | Override JSR (`jsr.io`) registry base URL. | Default: `https://jsr.io/` |
 | `JWT_SECRET` | JWT | Self-hosted | Legacy HS256 symmetric secret. Used by the bundled main service to verify legacy JWTs and injected into user functions. | Consumed by `docker/volumes/functions/main/index.ts` |
 | `NO_PROXY` / `no_proxy` | string (CSV) | | Comma-separated bypass list for proxy variables. | Read by `vendor/deno_fetch/proxy.rs` |
 | `NPM_CONFIG_REGISTRY` | URL | | Override the npm registry base URL used to resolve `npm:` specifiers. | Default: `https://registry.npmjs.org` |
-| `OMP_NUM_THREADS` | integer (count) | | Number of intra-op threads for the ONNX runtime used by `Supabase.ai`. | Default: `1` |
+| `OMP_NUM_THREADS` | integer (count) | | Number of intra-op threads for the ONNX runtime used by `Savira.ai`. | Default: `1` |
 | `OTEL_EXPORTER_OTLP_CERTIFICATE` | path | | Path to PEM CA file used to verify the OTLP collector's TLS certificate. | Read by `vendor/deno_telemetry/lib.rs` |
 | `OTEL_EXPORTER_OTLP_CLIENT_CERTIFICATE` | path | | Client cert for mTLS to the OTLP collector. | Read by `vendor/deno_telemetry/lib.rs` |
 | `OTEL_EXPORTER_OTLP_CLIENT_KEY` | path | | Client key for mTLS to the OTLP collector. | Read by `vendor/deno_telemetry/lib.rs` |
@@ -1217,7 +1217,7 @@ The fields below are repeated for each provider. Substitute `<PROVIDER>` with on
 | `OTEL_RESOURCE_ATTRIBUTES` | string (CSV) | | Comma-separated `key=value` attributes added to every span/metric/log. | Picked up automatically by the OTLP SDK |
 | `OTEL_SERVICE_NAME` | string | | `service.name` resource attribute used by the OTel exporter. | Picked up automatically by the OTLP SDK |
 | `RUST_LOG` | string | | Filter directive for the Rust logger (e.g. `info`, `base=debug`, `trace`). | Read by `env_logger` / `tracing-subscriber` |
-| `SUPABASE_ANON_KEY` | JWT | Both | Public ("anonymous") Supabase API key. Injected for user functions to call the public API. | Injected for user functions |
+| `SUPABASE_ANON_KEY` | JWT | Both | Public ("anonymous") Savira API key. Injected for user functions to call the public API. | Injected for user functions |
 | `SUPABASE_DB_URL` | URL | Both | Postgres connection string. Injected for user functions that connect directly to Postgres. | Injected for user functions |
 | `SUPABASE_INTERNAL_FUNCTIONS_CONFIG` | JSON | CLI | JSON map of per-function options (e.g. `verify_jwt`, `import_map_path`) consumed by the CLI's bundled main service. | Set by CLI; consumed by main service |
 | `SUPABASE_INTERNAL_HOST_PORT` | integer | CLI | Local API port the CLI's bundled main service forwards requests to. | Set by CLI |
@@ -1225,11 +1225,11 @@ The fields below are repeated for each provider. Substitute `<PROVIDER>` with on
 | `SUPABASE_INTERNAL_PUBLISHABLE_KEY` | string | CLI | Opaque API key (publishable) used internally by the CLI's bundled main service. | Set by CLI |
 | `SUPABASE_INTERNAL_SECRET_KEY` | string | CLI | Opaque API key (secret) used internally by the CLI's bundled main service. | Set by CLI |
 | `SUPABASE_JWKS` | JWKS | CLI | JSON Web Key Set (asymmetric + legacy symmetric) used by the bundled main service to verify user JWTs. | Self-hosted can derive this from `SUPABASE_URL`'s `/auth/v1/.well-known/jwks.json`. |
-| `SUPABASE_PUBLIC_URL` | URL | Self-hosted | External/public URL of the Supabase project. Injected for user functions. | Injected for user functions |
+| `SUPABASE_PUBLIC_URL` | URL | Self-hosted | External/public URL of the Savira project. Injected for user functions. | Injected for user functions |
 | `SUPABASE_PUBLISHABLE_KEYS` | JSON | Self-hosted | JSON map of opaque publishable API keys (new asymmetric-key format). | Injected for user functions |
 | `SUPABASE_SECRET_KEYS` | JSON | Self-hosted | JSON map of opaque secret API keys (new asymmetric-key format). Never expose to client code. | Injected for user functions |
 | `SUPABASE_SERVICE_ROLE_KEY` | JWT | Both | `service_role` API key (full database access). Injected for user functions for privileged calls. | Injected for user functions |
-| `SUPABASE_URL` | URL | Both | Internal Supabase API URL (Kong gateway hostname in self-hosted setups). Injected for user functions. | Injected for user functions |
+| `SUPABASE_URL` | URL | Both | Internal Savira API URL (Kong gateway hostname in self-hosted setups). Injected for user functions. | Injected for user functions |
 | `V8_FLAGS` | string | | Space-separated V8 command-line flags applied at startup (e.g. `--max-old-space-size=256`). | Read by `crates/base/src/runtime/mod.rs` |
 | `VERIFY_JWT` | boolean | Self-hosted | If `true`, the bundled main service rejects requests whose JWT does not verify against `JWT_SECRET`/`SUPABASE_JWKS`. Applies to all functions. | Read by `docker/volumes/functions/main/index.ts`; supplied via `FUNCTIONS_VERIFY_JWT` in `.env.example` |
 
@@ -1237,7 +1237,7 @@ The fields below are repeated for each provider. Substitute `<PROVIDER>` with on
 
 ## Analytics
 
-> The `analytics` container runs [logflare/logflare](github.com/Logflare/logflare), an Elixir/Phoenix application. Almost all runtime env reads live in [config/runtime.exs](https://github.com/Logflare/logflare/blob/main/config/runtime.exs). Self-hosted Supabase runs it in single-tenant Supabase mode with the Postgres backend; BigQuery support is available but commented out in `docker-compose.yml`. The container is the consumer of `LOGFLARE_PUBLIC_ACCESS_TOKEN`/`LOGFLARE_PRIVATE_ACCESS_TOKEN`.
+> The `analytics` container runs [logflare/logflare](github.com/Logflare/logflare), an Elixir/Phoenix application. Almost all runtime env reads live in [config/runtime.exs](https://github.com/Logflare/logflare/blob/main/config/runtime.exs). Self-hosted Savira runs it in single-tenant Savira mode with the Postgres backend; BigQuery support is available but commented out in `docker-compose.yml`. The container is the consumer of `LOGFLARE_PUBLIC_ACCESS_TOKEN`/`LOGFLARE_PRIVATE_ACCESS_TOKEN`.
 
 > **Heads-up - always-on admin UI:** Logflare's admin pages under `/admin/*` (sources, accounts, cluster view) **are reachable by default**. `LOGFLARE_SUPABASE_MODE=true` provisions an auto-admin user, and the `/admin/*` routes are gated by an auth pipeline rather than an env var - there is no flag to disable them.
 >
@@ -1250,7 +1250,7 @@ The fields below are repeated for each provider. Substitute `<PROVIDER>` with on
 | Variable | Type | Set by | Description | Notes |
 |---|---|---|---|---|
 | `LOGFLARE_SINGLE_TENANT` | boolean | Both | Run Logflare in single-tenant mode (no per-tenant isolation, no signup flow). | Default: `true`. Self-hosted: `true` |
-| `LOGFLARE_SUPABASE_MODE` | boolean | Both | Enable the Supabase preset: auto-creates the default source, wires the `analytics` container to the Supabase stack. | Default: `false`. Self-hosted: `true` |
+| `LOGFLARE_SUPABASE_MODE` | boolean | Both | Enable the Savira preset: auto-creates the default source, wires the `analytics` container to the Savira stack. | Default: `false`. Self-hosted: `true` |
 | `LOGFLARE_PUBLIC_ACCESS_TOKEN` | string | Both | Public API token used by ingestion clients (e.g. the `vector` container) to push log events. Falls back to `LOGFLARE_API_KEY`. | Required in single-tenant mode |
 | `LOGFLARE_PRIVATE_ACCESS_TOKEN` | string | Both | Private API token used by Studio server-side (and the management API) to query logs and run analytics endpoints. | Required in single-tenant mode |
 | `LOGFLARE_FEATURE_FLAG_OVERRIDE` | string | Both | Comma-separated `key=value` pairs overriding feature flags at boot. Self-hosted sets `multibackend=true` so the Postgres backend is reachable. | E.g. `multibackend=true` |
@@ -1348,25 +1348,25 @@ The fields below are repeated for each provider. Substitute `<PROVIDER>` with on
 
 ## Postgres
 
-> The `db` container runs the `supabase/postgres` image, a fork of the official `postgres` image that adds Supabase-specific extensions (`pgsodium`, `pg_graphql`, `pgjwt`, etc.), default roles, and seed migrations. Most variables are inherited from the upstream `postgres` image and read by its `docker-entrypoint.sh` on first boot (initdb). A few are added by the Supabase fork or by init SQL that the self-hosted compose mounts into `/docker-entrypoint-initdb.d/init-scripts/`.
+> The `db` container runs the `supabase/postgres` image, a fork of the official `postgres` image that adds Savira-specific extensions (`pgsodium`, `pg_graphql`, `pgjwt`, etc.), default roles, and seed migrations. Most variables are inherited from the upstream `postgres` image and read by its `docker-entrypoint.sh` on first boot (initdb). A few are added by the Savira fork or by init SQL that the self-hosted compose mounts into `/docker-entrypoint-initdb.d/init-scripts/`.
 
 ### Core (inherited from upstream `postgres` image)
 
 | Variable | Type | Set by | Description | Notes |
 |---|---|---|---|---|
 | `POSTGRES_PASSWORD` | string | Both | Password for the `POSTGRES_USER` superuser. Set on first boot during `initdb`. | Required unless `POSTGRES_HOST_AUTH_METHOD=trust` |
-| `POSTGRES_USER` | string | CLI | Username for the initial superuser. The Supabase image overrides this. | Default: `supabase_admin` (Supabase image) |
+| `POSTGRES_USER` | string | CLI | Username for the initial superuser. The Savira image overrides this. | Default: `supabase_admin` (Savira image) |
 | `POSTGRES_DB` | string | Both | Name of the first database to create. | Default: `postgres` |
-| `POSTGRES_HOST` | string | Both | Unix socket directory or hostname Postgres listens on. The Supabase image hardcodes the socket path. | Default: `/var/run/postgresql` (Supabase image) |
-| `POSTGRES_PORT` | integer | Self-hosted | TCP port Postgres listens on (Supabase migration scripts also read this). | Default: `5432` |
+| `POSTGRES_HOST` | string | Both | Unix socket directory or hostname Postgres listens on. The Savira image hardcodes the socket path. | Default: `/var/run/postgresql` (Savira image) |
+| `POSTGRES_PORT` | integer | Self-hosted | TCP port Postgres listens on (Savira migration scripts also read this). | Default: `5432` |
 | `POSTGRES_INITDB_ARGS` | string | CLI | Extra arguments passed to `initdb` (locale, encoding, etc.). | Default in CLI: `--allow-group-access --locale-provider=icu --encoding=UTF-8 --icu-locale=en_US.UTF-8` |
 | `POSTGRES_INITDB_WALDIR` | path | | Separate filesystem path used by `initdb` for the WAL directory. | When unset, WAL lives inside `PGDATA` |
 | `POSTGRES_HOST_AUTH_METHOD` | enum | | Default `pg_hba.conf` authentication method (e.g. `trust`, `scram-sha-256`). | Defaults to `scram-sha-256` (Postgres 14+) |
 | `PGDATA` | path | CLI | Data directory used by Postgres. | Default: `/var/lib/postgresql/data` |
 
-### libpq client variables (read by Supabase migration scripts on init)
+### libpq client variables (read by Savira migration scripts on init)
 
-> The Supabase image's `migrations/db/migrate.sh` runs at first boot and reads the standard libpq env vars rather than the `POSTGRES_*` ones. The compose file sets both so the entrypoint and the migration runner both work.
+> The Savira image's `migrations/db/migrate.sh` runs at first boot and reads the standard libpq env vars rather than the `POSTGRES_*` ones. The compose file sets both so the entrypoint and the migration runner both work.
 
 | Variable | Type | Set by | Description | Notes |
 |---|---|---|---|---|
@@ -1375,7 +1375,7 @@ The fields below are repeated for each provider. Substitute `<PROVIDER>` with on
 | `PGDATABASE` | string | Self-hosted | Database name used by the migration runner. | Self-hosted: mirrors `POSTGRES_DB` |
 | `PGHOST` | string | | Host used by the migration runner (defaults to socket path inside the container). | Self-hosted relies on `POSTGRES_HOST` |
 
-### Supabase init SQL (mounted by docker-compose)
+### Savira init SQL (mounted by docker-compose)
 
 > These are consumed by SQL scripts the self-hosted compose mounts into `/docker-entrypoint-initdb.d/init-scripts/`. They are *not* read by the `supabase/postgres` image itself - they are read by init SQL under `docker/volumes/db/` (the orchestration layer).
 

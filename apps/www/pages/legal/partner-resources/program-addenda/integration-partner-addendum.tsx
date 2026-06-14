@@ -10,7 +10,7 @@ import { NextSeo } from 'next-seo'
 
 const meta = {
   title: 'Integration Partner Addendum',
-  description: 'Supabase Integration Partner Addendum',
+  description: 'Savira Integration Partner Addendum',
 }
 
 const versions: LegalDocVersion[] = [

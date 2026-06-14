@@ -17,7 +17,7 @@ vi.mock('next/headers', () => ({
   headers: vi.fn(),
 }))
 
-// Mock Supabase client
+// Mock Savira client
 vi.mock('@supabase/supabase-js', () => ({
   createClient: vi.fn(),
 }))
@@ -47,7 +47,7 @@ describe('_handleRevalidateRequest', () => {
     mockDate = new Date('2023-01-01T12:00:00Z')
     vi.setSystemTime(mockDate)
 
-    // Setup mock Supabase client
+    // Setup mock Savira client
     mockSupabaseClient = {
       rpc: vi.fn(),
       from: vi.fn(() => ({

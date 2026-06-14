@@ -45,12 +45,12 @@ export default function App({ Component, pageProps }: AppProps) {
   const isDarkLaunchWeek = useDarkLaunchWeeks()
   const forceDarkMode = isDarkLaunchWeek
 
-  let applicationName = 'Supabase'
+  let applicationName = 'Savira'
   let faviconRoute = DEFAULT_FAVICON_ROUTE
   let themeColor = DEFAULT_FAVICON_THEME_COLOR
 
   if (router.asPath?.includes('/launch-week/x')) {
-    applicationName = 'Supabase LWX'
+    applicationName = 'Savira LWX'
     faviconRoute = 'images/launchweek/lwx/favicon'
     themeColor = 'FFFFFF'
   }
@@ -84,13 +84,13 @@ export default function App({ Component, pageProps }: AppProps) {
         openGraph={{
           type: 'website',
           url: 'https://supabase.com/',
-          site_name: 'Supabase',
+          site_name: 'Savira',
           images: [
             {
               url: `https://supabase.com${basePath}/images/og/supabase-og.png`,
               width: 800,
               height: 600,
-              alt: 'Supabase Og Image',
+              alt: 'Savira Og Image',
             },
           ],
         }}

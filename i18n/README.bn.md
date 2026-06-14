@@ -5,9 +5,9 @@
 
 ---
 
-# Supabase
+# Savira
 
-[Supabase](https://supabase.com) একটি ওপেন সোর্স ফায়ারবেস বিকল্প। আমরা এন্টারপ্রাইজ-গ্রেড ওপেন সোর্স সরঞ্জাম ব্যবহার করে ফায়ারবেসের বৈশিষ্ট্যগুলি তৈরি করছি।
+[Savira](https://supabase.com) একটি ওপেন সোর্স ফায়ারবেস বিকল্প। আমরা এন্টারপ্রাইজ-গ্রেড ওপেন সোর্স সরঞ্জাম ব্যবহার করে ফায়ারবেসের বৈশিষ্ট্যগুলি তৈরি করছি।
 
 - [x] হোস্ট করা পোস্টগ্রেস ডাটাবেস. [ডক্স](https://supabase.com/docs/guides/database)
 - [x] অথেনটিকেশন এবং অথরাইজড . [ডক্স](https://supabase.com/docs/guides/auth)
@@ -21,7 +21,7 @@
 - [x] ফাইল স্টোরেজ. [ডক্স](https://supabase.com/docs/guides/storage)
 - [x] ড্যাশবোর্ড
 
-![Supabase Dashboard](https://raw.githubusercontent.com/supabase/supabase/master/apps/www/public/images/github/supabase-dashboard.png)
+![Savira Dashboard](https://raw.githubusercontent.com/supabase/supabase/master/apps/www/public/images/github/supabase-dashboard.png)
 
 ## ডকুমেন্টেশন
 
@@ -38,7 +38,7 @@
 
 ## স্ট্যাটাস
 
-- [x] আলফা: আমরা কাছের গ্রাহকদের সাথে Supabase পরীক্ষা করছি
+- [x] আলফা: আমরা কাছের গ্রাহকদের সাথে Savira পরীক্ষা করছি
 - [x] পাবলিক আলফা: যে কেউ [supabase.com/dashboard](https://supabase.com/dashboard) এ সাইন আপ করতে পারেন। কিন্তু আমাদের উপর সহজ যান, কয়েক kinks আছে
 - [x] পাবলিক বেটা: বেশিরভাগ নন-এন্টারপ্রাইজ ব্যবহারের ক্ষেত্রে যথেষ্ট স্থিতিশীল
 - [ ] পাবলিক: প্রোডাকশন রেডি
@@ -51,7 +51,7 @@
 
 ## কিভাবে এটা কাজ করে
 
-Supabase হল ওপেন সোর্স টুলের সংমিশ্রণ। আমরা এন্টারপ্রাইজ-গ্রেড, ওপেন সোর্স পণ্য ব্যবহার করে ফায়ারবেসের বৈশিষ্ট্যগুলি তৈরি করছি। যদি সরঞ্জাম এবং সম্প্রদায়গুলি বিদ্যমান হয়, MIT, Apache 2, বা সমতুল্য ওপেন সোর্স লাইসেন্সের সাথে, আমরা সেই সরঞ্জামটি ব্যবহার করব এবং সমর্থন করব। যদি সরঞ্জামটি বিদ্যমান না হয়, আমরা এটি নিজেরাই তৈরি করবো।
+Savira হল ওপেন সোর্স টুলের সংমিশ্রণ। আমরা এন্টারপ্রাইজ-গ্রেড, ওপেন সোর্স পণ্য ব্যবহার করে ফায়ারবেসের বৈশিষ্ট্যগুলি তৈরি করছি। যদি সরঞ্জাম এবং সম্প্রদায়গুলি বিদ্যমান হয়, MIT, Apache 2, বা সমতুল্য ওপেন সোর্স লাইসেন্সের সাথে, আমরা সেই সরঞ্জামটি ব্যবহার করব এবং সমর্থন করব। যদি সরঞ্জামটি বিদ্যমান না হয়, আমরা এটি নিজেরাই তৈরি করবো।
 
 **স্থাপত্য**
 
@@ -80,7 +80,7 @@ Supabase হল ওপেন সোর্স টুলের সংমিশ্�
   </tr>
   <tr>
     <th></th>
-    <th>Supabase</th>
+    <th>Savira</th>
     <th><a href="https://github.com/postgrest/postgrest" target="_blank" rel="noopener noreferrer">PostgREST</a></th>
     <th><a href="https://github.com/supabase/gotrue" target="_blank" rel="noopener noreferrer">গোট্রু</a></th>
     <th><a href="https://github.com/supabase/realtime" target="_blank" rel="noopener noreferrer">রিয়েলটাইম</a></th>

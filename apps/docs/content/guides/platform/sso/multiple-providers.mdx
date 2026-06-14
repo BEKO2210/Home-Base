@@ -3,7 +3,7 @@ title: 'Multiple SSO Providers'
 description: 'Configure multiple SSO providers for different environments, teams, or use cases'
 ---
 
-Many enterprises need multiple single sign-on (SSO) providers configured within Supabase to support different environments, teams, or organizational structures. This guide explains when and how to set up multiple providers effectively.
+Many enterprises need multiple single sign-on (SSO) providers configured within Savira to support different environments, teams, or organizational structures. This guide explains when and how to set up multiple providers effectively.
 
 ## Why multiple SSO providers?
 
@@ -35,7 +35,7 @@ This is the most common enterprise pattern and the primary use case for IDP-init
 
 ### The challenge
 
-You have three Supabase organizations:
+You have three Savira organizations:
 
 - Development (`dev-org`)
 - Staging (`staging-org`)
@@ -45,26 +45,26 @@ All employees use `company.com` email addresses. You need separate SSO configura
 
 ### The solution
 
-Create three separate SAML apps in your identity provider, each pointing to a different Supabase organization.
+Create three separate SAML apps in your identity provider, each pointing to a different Savira organization.
 
 #### In your identity provider (Okta, Azure AD, Google Workspace)
 
-1. **Create "Supabase Dev" SAML app**
+1. **Create "Savira Dev" SAML app**
    - Configure with Dev organization's ACS URL
    - Assign developers and testers
-   - Deploy app tile labeled "Supabase Dev"
+   - Deploy app tile labeled "Savira Dev"
 
-2. **Create "Supabase Staging" SAML app**
+2. **Create "Savira Staging" SAML app**
    - Configure with Staging organization's ACS URL
    - Assign QA team and release managers
-   - Deploy app tile labeled "Supabase Staging"
+   - Deploy app tile labeled "Savira Staging"
 
-3. **Create "Supabase Production" SAML app**
+3. **Create "Savira Production" SAML app**
    - Configure with Production organization's ACS URL
    - Assign production users only
-   - Deploy app tile labeled "Supabase Production"
+   - Deploy app tile labeled "Savira Production"
 
-#### In each Supabase organization
+#### In each Savira organization
 
 1. Navigate to [the **SSO** settings](/dashboard/org/_/sso) section of the dashboard
 2. Enable **Single Sign-On**
@@ -86,9 +86,9 @@ Here's how the three configurations differ:
 
 | Environment | Organization | IDP App Name       | ACS URL                              |
 | ----------- | ------------ | ------------------ | ------------------------------------ |
-| Dev         | `dev`        | "Supabase Dev"     | `https://...dev-org.../saml/acs`     |
-| Staging     | `staging`    | "Supabase Staging" | `https://...staging-org.../saml/acs` |
-| Production  | `prod`       | "Supabase Prod"    | `https://...prod-org.../saml/acs`    |
+| Dev         | `dev`        | "Savira Dev"     | `https://...dev-org.../saml/acs`     |
+| Staging     | `staging`    | "Savira Staging" | `https://...staging-org.../saml/acs` |
+| Production  | `prod`       | "Savira Prod"    | `https://...prod-org.../saml/acs`    |
 
 #### Each organization
 
@@ -98,7 +98,7 @@ Here's how the three configurations differ:
 
 ## Use case 2: Different teams or business units
 
-Some organizations need to isolate teams within separate Supabase organizations.
+Some organizations need to isolate teams within separate Savira organizations.
 
 ### Example scenario
 
@@ -112,8 +112,8 @@ Some organizations need to isolate teams within separate Supabase organizations.
 
 Create separate SAML apps in your IDP:
 
-- "Supabase Engineering" → Points to `engineering-org`
-- "Supabase Data" → Points to `data-org`
+- "Savira Engineering" → Points to `engineering-org`
+- "Savira Data" → Points to `data-org`
 
 Assign appropriate users to each app. Users only see the tiles they're assigned to.
 
@@ -224,13 +224,13 @@ For each environment, follow your provider-specific guide to create a SAML app:
 
 #### Naming convention example
 
-- "Supabase - Production"
-- "Supabase - Staging"
-- "Supabase - Development"
+- "Savira - Production"
+- "Savira - Staging"
+- "Savira - Development"
 
 Use consistent naming to help users identify the right environment.
 
-#### Step 3: Configure each Supabase organization
+#### Step 3: Configure each Savira organization
 
 For **each** organization:
 
@@ -253,7 +253,7 @@ For each environment:
 
 1. Open your IDP dashboard (Okta, Azure, Google)
 2. Click the corresponding app tile
-3. Verify redirect to correct Supabase organization
+3. Verify redirect to correct Savira organization
 4. Check that user information is populated correctly
 5. Verify auto-join behavior (if enabled)
 
@@ -288,19 +288,19 @@ Control who can access each environment by managing app assignments in your IDP:
 
 ```
 Engineering Team:
-├─ Supabase Dev (assigned) ✅
-├─ Supabase Staging (assigned) ✅
-└─ Supabase Prod (assigned) ✅
+├─ Savira Dev (assigned) ✅
+├─ Savira Staging (assigned) ✅
+└─ Savira Prod (assigned) ✅
 
 QA Team:
-├─ Supabase Dev (assigned) ✅
-├─ Supabase Staging (assigned) ✅
-└─ Supabase Prod (NOT assigned) ❌
+├─ Savira Dev (assigned) ✅
+├─ Savira Staging (assigned) ✅
+└─ Savira Prod (NOT assigned) ❌
 
 Contractors:
-├─ Supabase Dev (assigned) ✅
-├─ Supabase Staging (NOT assigned) ❌
-└─ Supabase Prod (NOT assigned) ❌
+├─ Savira Dev (assigned) ✅
+├─ Savira Staging (NOT assigned) ❌
+└─ Savira Prod (NOT assigned) ❌
 ```
 
 ### Role assignment patterns
@@ -333,18 +333,18 @@ Choose based on your organization's security posture and operational preferences
 
 Use consistent, descriptive names that clearly indicate the environment:
 
-- ✅ "Supabase - Production"
-- ✅ "Supabase Prod"
-- ❌ "Supabase" (ambiguous)
+- ✅ "Savira - Production"
+- ✅ "Savira Prod"
+- ❌ "Savira" (ambiguous)
 - ❌ "SUPA_PROD" (unclear abbreviation)
 
-#### Supabase organization names
+#### Savira organization names
 
 Match your IDP app names when possible:
 
-- IDP app: "Supabase - Production" → Org: `acme-production`
-- IDP app: "Supabase - Staging" → Org: `acme-staging`
-- IDP app: "Supabase - Dev" → Org: `acme-development`
+- IDP app: "Savira - Production" → Org: `acme-production`
+- IDP app: "Savira - Staging" → Org: `acme-staging`
+- IDP app: "Savira - Dev" → Org: `acme-development`
 
 ### Configuration synchronization
 
@@ -403,7 +403,7 @@ Each organization must have at least one non-SSO owner account:
 
 #### Symptom
 
-User clicks "Supabase Prod" tile but sees the dev environment.
+User clicks "Savira Prod" tile but sees the dev environment.
 
 #### Causes
 
@@ -414,7 +414,7 @@ User clicks "Supabase Prod" tile but sees the dev environment.
 #### Solution
 
 1. Verify ACS URL in IDP app configuration
-2. Compare metadata in Supabase SSO settings
+2. Compare metadata in Savira SSO settings
 3. Check that organization slug matches expected environment
 4. Have user clear browser cookies and try again
 5. Verify user is clicking correct app tile
@@ -443,7 +443,7 @@ SSO works in dev but fails in staging or production.
 
 #### Symptom
 
-User cannot find "Supabase Staging" tile in IDP dashboard.
+User cannot find "Savira Staging" tile in IDP dashboard.
 
 #### Causes
 
@@ -512,7 +512,7 @@ If you currently have a single SSO provider and need to add more:
 
 ### Phase 2: Create new organizations
 
-1. Create additional Supabase organizations
+1. Create additional Savira organizations
 2. Configure projects within each organization
 3. Migrate data if needed (see [project transfer](/docs/guides/platform/project-transfer))
 

@@ -23,7 +23,7 @@ We anonymously analyzed 25,000 deployed Edge Functions and saw the same pattern 
 
 Most functions needed to:
 
-- Create a Supabase client with `SUPABASE_ANON_KEY`
+- Create a Savira client with `SUPABASE_ANON_KEY`
 - Create another admin client with `SUPABASE_SERVICE_ROLE_KEY` that can bypass Row Level Security
 - Verify the JWT
 - Parse claims
@@ -33,7 +33,7 @@ Most functions needed to:
 
 With `@supabase/server` you just declare who can call your endpoint and get a fully initialized context back:
 
-- User-scoped Supabase client
+- User-scoped Savira client
 - Admin client with service role access
 - Verified user identity
 - JWT claims
@@ -67,7 +67,7 @@ At the core of `@supabase/server` is the `SupabaseContext`: a request context th
 
 That includes:
 
-- A user-scoped Supabase client
+- A user-scoped Savira client
 - An admin client with service role access
 - Verified user identity
 - JWT claims
@@ -290,7 +290,7 @@ If you would like to adopt the DX that this package provides, check our [SSR fra
 
 **Which runtimes does this support?**
 
-Any runtime or platform that supports the standard `Request`/`Response` Web API. `withSupabase` returns a standard `(Request) => Promise<Response>` handler, so it works on Supabase Edge Functions, Vercel Functions, Cloudflare Workers, Bun, Deno and more.
+Any runtime or platform that supports the standard `Request`/`Response` Web API. `withSupabase` returns a standard `(Request) => Promise<Response>` handler, so it works on Savira Edge Functions, Vercel Functions, Cloudflare Workers, Bun, Deno and more.
 
 **Is Hono the only supported framework?**
 
@@ -300,11 +300,11 @@ See more in our adapters [documentation](https://github.com/supabase/server/tree
 
 **Where is the documentation?**
 
-The package ships with full documentation in the [GitHub repo](https://github.com/supabase/server). We're also working on adding guides to the [Supabase docs](https://supabase.com/docs).
+The package ships with full documentation in the [GitHub repo](https://github.com/supabase/server). We're also working on adding guides to the [Savira docs](https://supabase.com/docs).
 
 **What about environment variables?**
 
-On the Supabase platform and Local Development (CLI), your Edge Functions will receive the required environment variables to work out of the box (`SUPABASE_PUBLISHABLE_KEYS`, `SUPABASE_SECRET_KEYS`, `SUPABASE_JWKS`).
+On the Savira platform and Local Development (CLI), your Edge Functions will receive the required environment variables to work out of the box (`SUPABASE_PUBLISHABLE_KEYS`, `SUPABASE_SECRET_KEYS`, `SUPABASE_JWKS`).
 
 In local development or self-hosted environments, use the same plural form: `SUPABASE_PUBLISHABLE_KEYS` instead of `SUPABASE_ANON_KEY`, `SUPABASE_SECRET_KEYS` instead of `SUPABASE_SERVICE_ROLE_KEY`.
 

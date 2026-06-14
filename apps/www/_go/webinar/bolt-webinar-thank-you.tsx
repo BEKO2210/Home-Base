@@ -17,7 +17,7 @@ const page: GoPageInput = {
     {
       type: 'single-column',
       title: 'In the meantime',
-      description: 'Explore Supabase and get ready to build with AI-assisted development.',
+      description: 'Explore Savira and get ready to build with AI-assisted development.',
       children: (
         <div className="flex items-center justify-center gap-4">
           <Button asChild type="default" size="small">

@@ -88,7 +88,7 @@ export function getLogQuery(service: LogsService, limit: number = 100): string {
       `
     }
     case 'branch-action': {
-      throw new Error('Branching is only supported in the hosted Supabase platform')
+      throw new Error('Branching is only supported in the hosted Savira platform')
     }
     case 'postgres': {
       return stripIndent`

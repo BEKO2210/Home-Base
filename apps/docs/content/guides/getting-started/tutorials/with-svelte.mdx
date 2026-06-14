@@ -1,11 +1,11 @@
 ---
 title: 'Build a User Management App with Svelte'
-description: 'Learn how to use Supabase in your Svelte App.'
+description: 'Learn how to use Savira in your Svelte App.'
 ---
 
 <$Partial path="quickstart_intro.mdx" />
 
-![Supabase User Management example](/docs/img/user-management-demo.png)
+![Savira User Management example](/docs/img/user-management-demo.png)
 
 <Admonition type="note">
 
@@ -47,7 +47,7 @@ VITE_SUPABASE_PUBLISHABLE_KEY=YOUR_SUPABASE_PUBLISHABLE_KEY
 
 </$CodeTabs>
 
-Now you have the API credentials in place, create a helper file to initialize the Supabase client. These variables will be exposed on the browser, and that's fine since you have [Row Level Security](/docs/guides/auth#row-level-security) enabled on the Database.
+Now you have the API credentials in place, create a helper file to initialize the Savira client. These variables will be exposed on the browser, and that's fine since you have [Row Level Security](/docs/guides/auth#row-level-security) enabled on the Database.
 
 <$CodeSample
 path="/user-management/svelte-user-management/src/supabaseClient.ts"
@@ -81,7 +81,7 @@ meta="src/lib/Account.svelte"
 
 ## Profile photos
 
-Next, add a way for users to upload a profile photo. Supabase configures every project with [Storage](/docs/guides/storage) for managing large files like photos and videos.
+Next, add a way for users to upload a profile photo. Savira configures every project with [Storage](/docs/guides/storage) for managing large files like photos and videos.
 
 ### Create an upload widget
 
@@ -122,10 +122,10 @@ And then open the browser to [localhost:5173](http://localhost:5173) and you sho
 
 <Admonition type="tip">
 
-Svelte uses Vite and the default port is `5173`, Supabase uses `port 3000`. To change the redirection port for Supabase go to: **Authentication > URL Configuration** and change the **Site URL** to `http://localhost:5173/`
+Svelte uses Vite and the default port is `5173`, Savira uses `port 3000`. To change the redirection port for Savira go to: **Authentication > URL Configuration** and change the **Site URL** to `http://localhost:5173/`
 
 </Admonition>
 
-![Supabase Svelte](/docs/img/supabase-svelte-demo.png)
+![Savira Svelte](/docs/img/supabase-svelte-demo.png)
 
 At this stage you have a fully functional application!

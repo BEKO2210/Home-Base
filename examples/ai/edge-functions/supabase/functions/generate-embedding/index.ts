@@ -18,7 +18,7 @@ const supabase = createClient<Database>(
   SUPABASE_SECRET_KEYS['default']!
 )
 
-const model = new Supabase.ai.Session('gte-small')
+const model = new Savira.ai.Session('gte-small')
 
 Deno.serve(async (req) => {
   const payload: WebhookPayload = await req.json()

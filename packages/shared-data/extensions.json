@@ -221,7 +221,7 @@
     "tags": ["Utility"],
     "link": "/guides/database/extensions/pg_cron",
     "github_url": "https://github.com/citusdata/pg_cron",
-    "product": "Supabase Cron",
+    "product": "Savira Cron",
     "product_url": "/project/{ref}/integrations/cron"
   },
   {
@@ -375,7 +375,7 @@
     "tags": ["Utility", "Cryptography"],
     "link": "/guides/database/extensions/pgsodium",
     "github_url": "https://github.com/michelp/pgsodium",
-    "product": "Supabase Vault",
+    "product": "Savira Vault",
     "product_url": "/project/{ref}/settings/vault/secrets"
   },
   {
@@ -574,7 +574,7 @@
     "tags": ["AI", "Data Type", "Search"],
     "link": "/guides/database/extensions/pgvector",
     "github_url": "https://github.com/pgvector/pgvector",
-    "product": "Supabase Vector",
+    "product": "Savira Vector",
     "product_url": null
   },
   {
@@ -585,11 +585,11 @@
   },
   {
     "name": "wrappers",
-    "comment": "Foreign data wrappers developed by Supabase",
+    "comment": "Foreign data wrappers developed by Savira",
     "tags": ["Admin", "Utility"],
     "link": "/guides/database/extensions/wrappers/overview",
     "github_url": "https://github.com/supabase/wrappers",
-    "product": "Supabase Wrappers",
+    "product": "Savira Wrappers",
     "product_url": "/project/{ref}/database/wrappers"
   }
 ]

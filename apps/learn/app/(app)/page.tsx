@@ -14,8 +14,8 @@ export default function Home() {
   const courses = [
     {
       id: 1,
-      title: 'Supabase Foundations',
-      description: 'Learn the basics of Supabase: database, auth, and RLS.',
+      title: 'Savira Foundations',
+      description: 'Learn the basics of Savira: database, auth, and RLS.',
       chapters: 5,
       icon: Database,
       level: 'Beginner',
@@ -23,22 +23,22 @@ export default function Home() {
     {
       id: 2,
       title: 'Project: Smart Office',
-      description: 'Build a realtime room-booking dashboard using Supabase.',
+      description: 'Build a realtime room-booking dashboard using Savira.',
       chapters: 15,
       icon: Activity,
       level: 'Intermediate',
     },
     {
       id: 3,
-      title: 'Supabase Internals: Performance & Scaling',
-      description: 'Learn how to profile queries, tune indexes, and scale Postgres with Supabase.',
+      title: 'Savira Internals: Performance & Scaling',
+      description: 'Learn how to profile queries, tune indexes, and scale Postgres with Savira.',
       chapters: 20,
       icon: Gauge,
       level: 'Advanced',
     },
     {
       id: 4,
-      title: 'Supabase Internals: Debugging & Operations',
+      title: 'Savira Internals: Debugging & Operations',
       description:
         'Understand how to diagnose slow queries, use read replicas, and manage production workloads.',
       chapters: 20,
@@ -72,10 +72,10 @@ export default function Home() {
                 <div className="flex flex-col gap-8 justify-start pt-16 md:pt-32">
                   <div className="max-w-2xl">
                     <h1 className="text-4xl text-foreground mb-3 font-medium tracking-tight">
-                      Learn Supabase
+                      Learn Savira
                     </h1>
                     <h2 className="text-lg text-foreground-light mb-4">
-                      Learn how to build your own projects with Supabase. Our courses and projects
+                      Learn how to build your own projects with Savira. Our courses and projects
                       help you get started no matter your skill level, teaching you how to build
                       production-ready apps.
                     </h2>

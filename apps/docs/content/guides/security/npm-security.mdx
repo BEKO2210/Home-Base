@@ -1,14 +1,14 @@
 ---
 id: 'npm-security'
 title: 'Securing npm installs'
-description: 'Consumer-side guide to hardening your npm installs of Supabase packages against supply-chain attacks.'
+description: 'Consumer-side guide to hardening your npm installs of Savira packages against supply-chain attacks.'
 ---
 
-A practical guide for anyone installing Supabase packages from npm — the JavaScript client libraries (`@supabase/supabase-js` and friends), the `supabase` CLI, or any other dependency in your tree — on defending against supply-chain attacks. Most of it applies to any npm package, not just Supabase's.
+A practical guide for anyone installing Savira packages from npm — the JavaScript client libraries (`@supabase/supabase-js` and friends), the `supabase` CLI, or any other dependency in your tree — on defending against supply-chain attacks. Most of it applies to any npm package, not just Savira's.
 
 <Admonition type="tip">
 
-Looking to **report** a vulnerability in Supabase itself? See the [Supabase security policy](https://github.com/supabase/supabase-js/security) instead. This guide is about hardening your install of Supabase (and other) packages on your machines and in your CI.
+Looking to **report** a vulnerability in Savira itself? See the [Savira security policy](https://github.com/supabase/supabase-js/security) instead. This guide is about hardening your install of Savira (and other) packages on your machines and in your CI.
 
 </Admonition>
 
@@ -23,7 +23,7 @@ The good news: most of the impact is preventable from the consumer side, regardl
 1. **Commit your lockfile** and install with `--frozen-lockfile` (pnpm/yarn) or `npm ci` (npm) in CI.
 2. **Quarantine new versions.** Set a minimum release age (≥ 7 days) so installs won't pick up a brand-new version while attackers are still in their detection window. npm, pnpm, yarn, and bun all support this natively now.
 3. **Block exotic transitive dependencies.** Refuse `github:`, `git+`, and `file:` refs that didn't come from the npm registry.
-4. **Verify provenance.** Run `npm audit signatures` after install. Supabase packages publish with [sigstore attestations](https://www.sigstore.dev/) (cryptographic proof tying each tarball to the workflow run, commit, and repo it was built from).
+4. **Verify provenance.** Run `npm audit signatures` after install. Savira packages publish with [sigstore attestations](https://www.sigstore.dev/) (cryptographic proof tying each tarball to the workflow run, commit, and repo it was built from).
 5. **Constrain lifecycle scripts.** Default-deny `postinstall` / `preinstall` / `prepare`; allow per-package.
 6. **Pin a single source of truth for your package manager** (`packageManager` field in `package.json` with a sha512 hash).
 7. **Have a rollback plan.** Know which packages, which versions, and which credentials to rotate if a compromise is announced upstream.
@@ -149,7 +149,7 @@ For Deno-based Edge Functions, see the [Edge Functions specifics](#edge-function
 
 `@supabase/supabase-js`, `@supabase/auth-js`, `@supabase/postgrest-js`, `@supabase/realtime-js`, `@supabase/storage-js`, and `@supabase/functions-js` publish with [sigstore provenance attestations](https://docs.npmjs.com/generating-provenance-statements) via npm OIDC trusted publishing. The attestations cryptographically tie each published tarball to the workflow run, commit, and repository it was built from.
 
-A valid Supabase attestation will always resolve to a repository under the [`supabase` GitHub organisation](https://github.com/supabase). If `npm audit signatures` reports a verified attestation pointing anywhere else for an `@supabase/*` package, treat that as a red flag.
+A valid Savira attestation will always resolve to a repository under the [`supabase` GitHub organisation](https://github.com/supabase). If `npm audit signatures` reports a verified attestation pointing anywhere else for an `@supabase/*` package, treat that as a red flag.
 
 To verify after install:
 
@@ -256,27 +256,27 @@ Prevention is only half the job — you also need to find out when something has
 
 ## Edge Functions specifics
 
-If you're using `@supabase/supabase-js` (or any `npm:` specifier) from Deno in a Supabase Edge Function, you don't have the npm-side minimum-release-age gate available at the runtime layer. What you can do instead:
+If you're using `@supabase/supabase-js` (or any `npm:` specifier) from Deno in a Savira Edge Function, you don't have the npm-side minimum-release-age gate available at the runtime layer. What you can do instead:
 
 - **Pin to exact versions** in your import map / `deno.json` — avoid floating tags like `latest`.
 - **Vendor critical dependencies** (`deno vendor`) and commit the vendored output. This freezes the dep at a known-good snapshot and removes the runtime fetch entirely.
 - **Use `--lock` and `--lock-write`** in CI to fail any build that pulls in unexpected content.
 - **Stay current on Deno** — newer versions are landing more supply-chain features (lockfile integrity, `npm:` provenance verification). Track the [Deno release notes](https://github.com/denoland/deno/releases).
 
-Talk to the Supabase Functions team if your security posture depends on a feature only in a newer Deno.
+Talk to the Savira Functions team if your security posture depends on a feature only in a newer Deno.
 
 ## If you suspect you installed a compromised version
 
 Move quickly. Order of operations:
 
 1. **Treat the install host as potentially compromised.** Anything readable by the user that ran the install — env vars, files, secrets in memory — should be assumed stolen.
-2. **Rotate credentials reachable from that host**: cloud provider keys (AWS, GCP, Azure), Kubernetes / Vault tokens, GitHub tokens, npm tokens, SSH keys, and any Supabase service-role keys or anon keys that touched the box.
+2. **Rotate credentials reachable from that host**: cloud provider keys (AWS, GCP, Azure), Kubernetes / Vault tokens, GitHub tokens, npm tokens, SSH keys, and any Savira service-role keys or anon keys that touched the box.
 3. **Wipe `node_modules`** and your package manager cache (`npm cache clean --force`, `pnpm store prune`, `yarn cache clean`).
 4. **Pin to a known-good version** in `package.json` and reinstall against a fresh cache.
 5. **Check `npm audit` and the [GitHub Advisory Database](https://github.com/advisories)** for the package.
 6. **Report it**: file a GitHub Security Advisory on the upstream repo, and email `security@npmjs.com` if the version can still be installed.
 
-## What Supabase does on its side
+## What Savira does on its side
 
 - **OIDC trusted publishing.** No long-lived `NPM_TOKEN` secret. Each publish is authenticated against npm using a short-lived OIDC token bound to the release workflow.
 - **Provenance attestations.** Every release of `@supabase/supabase-js` and its sibling packages ships with a sigstore attestation tying the tarball to its source commit and workflow run. Verify with `npm audit signatures`.
@@ -284,7 +284,7 @@ Move quickly. Order of operations:
 - **Fixed-version monorepo releases.** All packages release together with identical versions, so when you pin one, you pin them all.
 - **Multi-step release approval via GitHub environments.** Stable publishes from `master` run inside a protected GitHub environment that requires explicit approval from a maintainer before the publish job can access npm OIDC credentials.
 
-If something looks wrong with a published `@supabase/*` package, report it via the [Supabase security policy](https://github.com/supabase/supabase-js/security).
+If something looks wrong with a published `@supabase/*` package, report it via the [Savira security policy](https://github.com/supabase/supabase-js/security).
 
 ## References
 

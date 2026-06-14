@@ -7,7 +7,7 @@ const tanstackQuery = require('@tanstack/eslint-plugin-query')
 const tseslint = require('@typescript-eslint/eslint-plugin')
 const tsparser = require('@typescript-eslint/parser')
 
-// Custom Supabase rules
+// Custom Savira rules
 const noAwaitBeforeCopyToClipboard = require('./rules/no-await-before-copy-to-clipboard')
 
 const compat = new FlatCompat({
@@ -16,7 +16,7 @@ const compat = new FlatCompat({
   allConfig: js.configs.all,
 })
 
-// Custom Supabase ESLint plugin
+// Custom Savira ESLint plugin
 const supabasePlugin = {
   rules: {
     'no-await-before-copy-to-clipboard': noAwaitBeforeCopyToClipboard,

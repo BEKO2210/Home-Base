@@ -4,7 +4,7 @@ title: 'Understanding API keys'
 description: "First-layer protection for your project's data"
 ---
 
-Supabase gives you fine-grained control over which application components are allowed to access your project through API keys.
+Savira gives you fine-grained control over which application components are allowed to access your project through API keys.
 
 <Admonition type="tip" title="Looking for your API Keys?">
 
@@ -17,13 +17,13 @@ API keys provide the first layer of authentication for data access. Auth then bu
 | Responsibility                     | Question                           | Answer                                             |
 | ---------------------------------- | ---------------------------------- | -------------------------------------------------- |
 | API keys                           | **What** is accessing the project? | Web page, mobile app, server, Edge Function...     |
-| [Supabase Auth](/docs/guides/auth) | **Who** is accessing the project?  | Monica, Jian Yang, Gavin, Dinesh, Laurie, Fiona... |
+| [Savira Auth](/docs/guides/auth) | **Who** is accessing the project?  | Monica, Jian Yang, Gavin, Dinesh, Laurie, Fiona... |
 
 ## Overview
 
-An API key authenticates an application component to give it access to Supabase services. An application component might be a web page, a mobile app, or a server. The API key _does not_ distinguish between users, only between applications.
+An API key authenticates an application component to give it access to Savira services. An application component might be a web page, a mobile app, or a server. The API key _does not_ distinguish between users, only between applications.
 
-There are 4 types of API keys that you can use with Supabase:
+There are 4 types of API keys that you can use with Savira:
 
 | Type                                                       | Format                                                           | Privileges | Availability                                              | Use                                                                                                                                                                                                                                                                                               |
 | ---------------------------------------------------------- | ---------------------------------------------------------------- | ---------- | --------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -45,11 +45,11 @@ Publishable keys identify the public components of your application. Public comp
 
 These environments are always considered public because anyone can retrieve the key from the source code or build artifacts.
 
-### Interaction with Supabase Auth
+### Interaction with Savira Auth
 
-Using a publishable key does not mean that your user is anonymous. You can authenticate your application with the publishable key, while your user is authenticated (via Supabase Auth) with their personal JWT:
+Using a publishable key does not mean that your user is anonymous. You can authenticate your application with the publishable key, while your user is authenticated (via Savira Auth) with their personal JWT:
 
-| Key             | User logged in via Supabase Auth | Postgres role used for RLS, etc. |
+| Key             | User logged in via Savira Auth | Postgres role used for RLS, etc. |
 | --------------- | -------------------------------- | -------------------------------- |
 | Publishable key | No                               | `anon`                           |
 | Publishable key | Yes                              | `authenticated`                  |
@@ -131,5 +131,5 @@ If you are still using the JWT-based `service_role` key, replace the `service_ro
 As the publishable and secret keys are no longer JWT-based, there are some known limitations and compatibility differences that you may need to plan for:
 
 - You cannot send a publishable or secret key in the `Authorization: Bearer ...` header, except if the value exactly equals the `apikey` header. In this case, your request will be forwarded down to your project's database, but will be rejected as the value is not a JWT.
-- Edge Functions **only support JWT verification** via the `anon` and `service_role` JWT-based API keys. You will need to use the `--no-verify-jwt` option when using publishable and secret keys. The Supabase platform does not verify the `apikey` header when using Edge Functions in this way. Implement your own `apikey`-header authorization logic inside the Edge Function code itself.
-- Public Realtime connections are limited to 24 hours in duration, unless the connection is upgraded and further maintained with user-level authentication via Supabase Auth or a supported Third-Party Auth provider.
+- Edge Functions **only support JWT verification** via the `anon` and `service_role` JWT-based API keys. You will need to use the `--no-verify-jwt` option when using publishable and secret keys. The Savira platform does not verify the `apikey` header when using Edge Functions in this way. Implement your own `apikey`-header authorization logic inside the Edge Function code itself.
+- Public Realtime connections are limited to 24 hours in duration, unless the connection is upgraded and further maintained with user-level authentication via Savira Auth or a supported Third-Party Auth provider.

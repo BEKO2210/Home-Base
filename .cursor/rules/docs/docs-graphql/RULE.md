@@ -33,7 +33,7 @@ resources/
 ## Example queries
 
 1. **searchDocs** (`globalSearch/`) - Vector-based search across all docs content
-2. **error** (`error/`) - Error code lookup for Supabase services
+2. **error** (`error/`) - Error code lookup for Savira services
 3. **schema** - GraphQL schema introspection
 
 ## Key Files

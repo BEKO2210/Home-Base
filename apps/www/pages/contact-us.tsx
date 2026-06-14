@@ -33,7 +33,7 @@ const ContactSection = ({
 const ContactUs = ({}: Props) => {
   const router = useRouter()
 
-  const meta_title = 'Contact Us | Supabase'
+  const meta_title = 'Contact Us | Savira'
   const meta_description =
     'Contact channels for support, legal, privacy, abuse, security, and grievance submissions'
 
@@ -78,7 +78,7 @@ const ContactUs = ({}: Props) => {
               <ContactSection
                 title="Privacy"
                 email="privacy@supabase.com"
-                description="For questions about personal data, data subject rights requests, GDPR/CCPA inquiries, or how Supabase processes personal information."
+                description="For questions about personal data, data subject rights requests, GDPR/CCPA inquiries, or how Savira processes personal information."
               />
 
               <ContactSection
@@ -90,7 +90,7 @@ const ContactUs = ({}: Props) => {
                     <Link href="/aup" className="text-brand-link hover:underline">
                       Acceptable Use Policy
                     </Link>
-                    , including spam, phishing, malware, or unlawful activity involving Supabase
+                    , including spam, phishing, malware, or unlawful activity involving Savira
                     services.
                   </>
                 }
@@ -99,7 +99,7 @@ const ContactUs = ({}: Props) => {
               <ContactSection
                 title="Security"
                 email="security@supabase.com"
-                description="To responsibly disclose potential security vulnerabilities or report suspected security incidents involving Supabase infrastructure or services."
+                description="To responsibly disclose potential security vulnerabilities or report suspected security incidents involving Savira infrastructure or services."
               />
 
               <ContactSection
@@ -124,12 +124,12 @@ const ContactUs = ({}: Props) => {
                 </div>
                 <p className="text-foreground-light text-sm lg:text-base mt-2 lg:mt-3">
                   In jurisdictions that require the designation of a Grievance Officer or similar
-                  compliance contact, Tracy Lane, General Counsel of Supabase, Inc., serves in that
+                  compliance contact, Tracy Lane, General Counsel of Savira, Inc., serves in that
                   role. Formal complaints, regulatory inquiries, or legally required grievance
                   submissions may be directed to the email above.
                 </p>
                 <p className="text-foreground-light text-sm lg:text-base mt-2">
-                  Supabase will acknowledge receipt of grievances and respond within the timeframe
+                  Savira will acknowledge receipt of grievances and respond within the timeframe
                   required by applicable law.
                 </p>
               </div>

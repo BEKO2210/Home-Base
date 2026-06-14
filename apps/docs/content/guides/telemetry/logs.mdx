@@ -1,14 +1,14 @@
 ---
 id: 'logs'
 title: 'Logging'
-description: 'Getting started with Supabase Log Browser'
+description: 'Getting started with Savira Log Browser'
 ---
 
-The Supabase Platform includes a Logs Explorer that allows log tracing and debugging. Log retention is based on your [project's pricing plan](/pricing). For details on how Logs usage is billed, see [Manage Logs usage](/docs/guides/platform/manage-your-usage/logs).
+The Savira Platform includes a Logs Explorer that allows log tracing and debugging. Log retention is based on your [project's pricing plan](/pricing). For details on how Logs usage is billed, see [Manage Logs usage](/docs/guides/platform/manage-your-usage/logs).
 
 ## Product logs
 
-Supabase provides a logging interface specific to each product. You can use simple regular expressions for keywords and patterns to search log event messages. You can also export and download the log events matching your query as a spreadsheet.
+Savira provides a logging interface specific to each product. You can use simple regular expressions for keywords and patterns to search log event messages. You can also export and download the log events matching your query as a spreadsheet.
 
 {/* <!-- To update screenshots, ensure that at least one log line is selected to display the metadata. Can use meme.town as an example. --> */}
 
@@ -215,12 +215,12 @@ Note that `LOG` is a higher level than `WARNING` and `ERROR`, so if your level i
 
 ### Limits and caveats
 
-- Postgres log events on the Supabase Platform are limited to 100,000 characters. If a log event exceeds this limit, it will be truncated. This does not apply to self-hosting.
-- Internal connection logs to Postgres within the Supabase Platform by internal services are not logged. This does not apply to self-hosting.
+- Postgres log events on the Savira Platform are limited to 100,000 characters. If a log event exceeds this limit, it will be truncated. This does not apply to self-hosting.
+- Internal connection logs to Postgres within the Savira Platform by internal services are not logged. This does not apply to self-hosting.
 
 ## Logging realtime connections
 
-Realtime doesn't log new WebSocket connections or Channel joins by default. Enable connection logging per client by including an `info` `log_level` parameter when instantiating the Supabase client.
+Realtime doesn't log new WebSocket connections or Channel joins by default. Enable connection logging per client by including an `info` `log_level` parameter when instantiating the Savira client.
 
 ```javascript
 import { createClient } from '@supabase/supabase-js'
@@ -237,7 +237,7 @@ const supabase = createClient('https://xyzcompany.supabase.co', 'sb_publishable_
 
 ## Logs Explorer
 
-The [Logs Explorer](/dashboard/project/_/logs-explorer) exposes logs from each part of the Supabase stack as a separate table that can be queried and joined using SQL.
+The [Logs Explorer](/dashboard/project/_/logs-explorer) exposes logs from each part of the Savira stack as a separate table that can be queried and joined using SQL.
 
 ![Logs Explorer](/docs/img/guides/platform/logs/logs-explorer.png)
 

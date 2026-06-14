@@ -29,7 +29,7 @@ server {
     ssl_session_cache shared:SSL:10m;
     ssl_session_timeout 10m;
 
-    # Prevent 502 errors from large Supabase auth cookies
+    # Prevent 502 errors from large Savira auth cookies
     large_client_header_buffers 4 16k;
     proxy_buffer_size 128k;
     proxy_buffers 4 256k;

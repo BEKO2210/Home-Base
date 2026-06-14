@@ -1052,7 +1052,7 @@
     "items": [
       {
         "id": "invoke",
-        "title": "Invokes a Supabase Edge Function.",
+        "title": "Invokes a Savira Edge Function.",
         "slug": "functions-invoke",
         "product": "functions",
         "type": "function"

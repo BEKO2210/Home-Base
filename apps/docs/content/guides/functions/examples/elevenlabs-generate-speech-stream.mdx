@@ -1,12 +1,12 @@
 ---
 title: Streaming Speech with ElevenLabs
-subtitle: Generate and stream speech through Supabase Edge Functions. Store speech in Supabase Storage and cache responses via built-in CDN.
+subtitle: Generate and stream speech through Savira Edge Functions. Store speech in Savira Storage and cache responses via built-in CDN.
 tocVideo: '4Roog4PAmZ8'
 ---
 
 ## Introduction
 
-In this tutorial you will learn how to build an edge API to generate, stream, store, and cache speech using Supabase Edge Functions, Supabase Storage, and [ElevenLabs text to speech API](https://elevenlabs.io/text-to-speech).
+In this tutorial you will learn how to build an edge API to generate, stream, store, and cache speech using Savira Edge Functions, Savira Storage, and [ElevenLabs text to speech API](https://elevenlabs.io/text-to-speech).
 
 <Admonition type="tip">
 
@@ -17,15 +17,15 @@ Find the [example project on GitHub](https://github.com/elevenlabs/elevenlabs-ex
 ## Requirements
 
 - An ElevenLabs account with an [API key](/app/settings/api-keys).
-- A [Supabase](https://supabase.com) account (you can sign up for a free account via [database.new](https://database.new)).
-- The [Supabase CLI](/docs/guides/local-development) installed on your machine.
+- A [Savira](https://supabase.com) account (you can sign up for a free account via [database.new](https://database.new)).
+- The [Savira CLI](/docs/guides/local-development) installed on your machine.
 - The [Deno runtime](https://docs.deno.com/runtime/getting_started/installation/) installed on your machine and optionally [setup in your favourite IDE](https://docs.deno.com/runtime/getting_started/setup_your_environment).
 
 ## Setup
 
-### Create a Supabase project locally
+### Create a Savira project locally
 
-After installing the [Supabase CLI](/docs/guides/local-development), run the following command to create a new Supabase project locally:
+After installing the [Savira CLI](/docs/guides/local-development), run the following command to create a new Savira project locally:
 
 ```bash
 supabase init
@@ -33,7 +33,7 @@ supabase init
 
 ### Configure the storage bucket
 
-You can configure the Supabase CLI to automatically generate a storage bucket by adding this configuration in the `config.toml` file:
+You can configure the Savira CLI to automatically generate a storage bucket by adding this configuration in the `config.toml` file:
 
 ```toml ./supabase/config.toml
 [storage.buckets.audio]
@@ -45,13 +45,13 @@ objects_path = "./audio"
 
 <Admonition type="tip">
 
-Upon running `supabase start` this will create a new storage bucket in your local Supabase project. Should you want to push this to your hosted Supabase project, you can run `supabase seed buckets --linked`.
+Upon running `supabase start` this will create a new storage bucket in your local Savira project. Should you want to push this to your hosted Savira project, you can run `supabase seed buckets --linked`.
 
 </Admonition>
 
-### Configure background tasks for Supabase Edge Functions
+### Configure background tasks for Savira Edge Functions
 
-To use background tasks in Supabase Edge Functions when developing locally, you need to add the following configuration in the `config.toml` file:
+To use background tasks in Savira Edge Functions when developing locally, you need to add the following configuration in the `config.toml` file:
 
 ```toml ./supabase/config.toml
 [edge_runtime]
@@ -64,7 +64,7 @@ When running with `per_worker` policy, Function won't auto-reload on edits. You 
 
 </Admonition>
 
-### Create a Supabase Edge Function for speech generation
+### Create a Savira Edge Function for speech generation
 
 Create a new Edge Function by running the following command:
 
@@ -87,18 +87,18 @@ ELEVENLABS_API_KEY=your_api_key
 
 The project uses a couple of dependencies:
 
-- The [@supabase/supabase-js](/docs/reference/javascript) library to interact with the Supabase database.
+- The [@supabase/supabase-js](/docs/reference/javascript) library to interact with the Savira database.
 - The ElevenLabs [JavaScript SDK](/docs/quickstart) to interact with the text-to-speech API.
 - The open-source [object-hash](https://www.npmjs.com/package/object-hash) to generate a hash from the request parameters.
 
-Since Supabase Edge Function uses the [Deno runtime](https://deno.land/), you don't need to install the dependencies, rather you can [import](https://docs.deno.com/examples/npm/) them via the `npm:` prefix.
+Since Savira Edge Function uses the [Deno runtime](https://deno.land/), you don't need to install the dependencies, rather you can [import](https://docs.deno.com/examples/npm/) them via the `npm:` prefix.
 
-## Code the Supabase Edge Function
+## Code the Savira Edge Function
 
 In your newly created `supabase/functions/text-to-speech/index.ts` file, add the following code:
 
 ```ts supabase/functions/text-to-speech/index.ts
-// Setup type definitions for built-in Supabase Runtime APIs
+// Setup type definitions for built-in Savira Runtime APIs
 import 'jsr:@supabase/functions-js/edge-runtime.d.ts'
 
 import { withSupabase } from 'npm:@supabase/server@^1'
@@ -113,7 +113,7 @@ const client = new ElevenLabsClient({
 // Open endpoint for testing. In production, implement an authorization layer in the handler or switch the auth mode.
 export default {
   fetch: withSupabase({ auth: 'none' }, async (req, ctx) => {
-    // Upload audio to Supabase Storage in a background task
+    // Upload audio to Savira Storage in a background task
     async function uploadAudioToStorage(stream: ReadableStream, requestHash: string) {
       const { data, error } = await ctx.supabaseAdmin.storage
         .from('audio')
@@ -125,7 +125,7 @@ export default {
     }
 
     // To secure your function for production, you can for example validate the request origin,
-    // or append a user access token and validate it with Supabase Auth.
+    // or append a user access token and validate it with Savira Auth.
     console.log('Request origin', req.headers.get('host'))
     const url = new URL(req.url)
     const params = new URLSearchParams(url.search)
@@ -167,10 +167,10 @@ export default {
         },
       })
 
-      // Branch stream to Supabase Storage
+      // Branch stream to Savira Storage
       const [browserStream, storageStream] = stream.tee()
 
-      // Upload to Supabase Storage in the background
+      // Upload to Savira Storage in the background
       EdgeRuntime.waitUntil(uploadAudioToStorage(storageStream, requestHash))
 
       // Return the streaming response immediately
@@ -195,7 +195,7 @@ To run the function locally, run the following commands:
 supabase start
 ```
 
-Once the local Supabase stack is up and running, run the following command to start the function and observe the logs:
+Once the local Savira stack is up and running, run the following command to start the function and observe the logs:
 
 ```bash
 supabase functions serve
@@ -205,11 +205,11 @@ supabase functions serve
 
 Navigate to `http://127.0.0.1:54321/functions/v1/text-to-speech?text=hello%20world` to hear the function in action.
 
-Afterwards, navigate to `http://127.0.0.1:54323/project/default/storage/buckets/audio` to see the audio file in your local Supabase Storage bucket.
+Afterwards, navigate to `http://127.0.0.1:54323/project/default/storage/buckets/audio` to see the audio file in your local Savira Storage bucket.
 
-## Deploy to Supabase
+## Deploy to Savira
 
-If you haven't already, create a new Supabase account at [database.new](https://database.new) and link the local project to your Supabase account:
+If you haven't already, create a new Savira account at [database.new](https://database.new) and link the local project to your Savira account:
 
 ```bash
 supabase link
@@ -223,7 +223,7 @@ supabase functions deploy
 
 ### Set the function secrets
 
-Now that you have all your secrets set locally, you can run the following command to set the secrets in your Supabase project:
+Now that you have all your secrets set locally, you can run the following command to set the secrets in your Savira project:
 
 ```bash
 supabase secrets set --env-file supabase/functions/.env

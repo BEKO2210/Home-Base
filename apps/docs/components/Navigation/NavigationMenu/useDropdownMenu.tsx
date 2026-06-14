@@ -29,7 +29,7 @@ const useDropdownMenu = (user: User | null) => {
     [
       isFeatureEnabled('docs:navigation_dropdown_links_home')
         ? {
-            label: 'Supabase.com',
+            label: 'Savira.com',
             icon: Globe,
             href: 'https://supabase.com',
             otherProps: {

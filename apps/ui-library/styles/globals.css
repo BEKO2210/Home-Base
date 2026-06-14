@@ -13,7 +13,7 @@
   --container-site: 128rem;
 
   /* The following are needed to render the examples, since they use regular shadcn variables. Some classes are 
-   * commented out classes because they clashed with Supabase defined classes 
+   * commented out classes because they clashed with Savira defined classes 
    */
   --radius-lg: var(--radius);
   --radius-md: calc(var(--radius) - 2px);

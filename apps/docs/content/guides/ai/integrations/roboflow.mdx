@@ -1,7 +1,7 @@
 ---
 id: 'ai-integration-roboflow'
 title: 'Roboflow'
-subtitle: 'Learn how to integrate Supabase with Roboflow, a tool for running fine-tuned and foundation vision models.'
+subtitle: 'Learn how to integrate Savira with Roboflow, a tool for running fine-tuned and foundation vision models.'
 breadcrumb: 'AI Integrations'
 ---
 
@@ -13,7 +13,7 @@ In this guide, we will walk through two examples of using [Roboflow Inference](h
 
 Once you have a trained vision model, you need to create business logic for your application. In many cases, you want to save inference results to a file.
 
-The steps below show you how to run a vision model locally and save predictions to Supabase.
+The steps below show you how to run a vision model locally and save predictions to Savira.
 
 ### Preparation: Set up a model
 
@@ -73,9 +73,9 @@ When you run the code above, a list of predictions will be printed to the consol
 {'time': 0.05402109300121083, 'image': {'width': 640, 'height': 480}, 'predictions': [{'x': 312.5, 'y': 392.0, 'width': 255.0, 'height': 110.0, 'confidence': 0.8620790839195251, 'class': 'Paper', 'class_id': 0}]}
 ```
 
-### Step 3: Save results in Supabase
+### Step 3: Save results in Savira
 
-To save results in Supabase, add the following code to your script:
+To save results in Savira, add the following code to your script:
 
 ```python
 import os
@@ -109,7 +109,7 @@ data=[{'predictions': {'time': 0.08492901099998562, 'image': {'width': 640, 'hei
 
 ## Calculate and save CLIP embeddings
 
-You can use the Supabase vector database functionality to store and query CLIP embeddings.
+You can use the Savira vector database functionality to store and query CLIP embeddings.
 
 Roboflow Inference provides an HTTP interface through which you can calculate image and text embeddings using CLIP.
 
@@ -165,9 +165,9 @@ Above, replace:
 
 You can also calculate CLIP embeddings in the cloud by setting `SERVER_URL` to `https://infer.roboflow.com`.
 
-### Step 3: Save embeddings in Supabase
+### Step 3: Save embeddings in Savira
 
-You can store your image embeddings in Supabase using the Supabase `vecs` Python package:
+You can store your image embeddings in Savira using the Savira `vecs` Python package:
 
 First, install `vecs`:
 
@@ -206,7 +206,7 @@ for result in results:
 images.create_index()
 ```
 
-Replace `DB_CONNECTION` with the authentication information for your database. You can retrieve this from the Supabase dashboard in `Project Settings > Database Settings`.
+Replace `DB_CONNECTION` with the authentication information for your database. You can retrieve this from the Savira dashboard in `Project Settings > Database Settings`.
 
 You can then query your embeddings using the following code:
 
@@ -234,4 +234,4 @@ print(result[0])
 
 - [Roboflow Inference documentation](https://inference.roboflow.com)
 - [Roboflow Getting Started guide](https://blog.roboflow.com/getting-started-with-roboflow/)
-- [How to Build a Semantic Image Search Engine with Supabase and OpenAI CLIP](https://blog.roboflow.com/how-to-use-semantic-search-supabase-openai-clip/)
+- [How to Build a Semantic Image Search Engine with Savira and OpenAI CLIP](https://blog.roboflow.com/how-to-use-semantic-search-supabase-openai-clip/)

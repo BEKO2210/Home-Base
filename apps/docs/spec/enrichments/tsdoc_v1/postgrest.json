@@ -13,7 +13,7 @@
       "flags": {
         "isExported": true
       },
-      "originalName": "/Users/copple/Projects/Supabase/postgrest-js/src/PostgrestClient.ts",
+      "originalName": "/Users/copple/Projects/Savira/postgrest-js/src/PostgrestClient.ts",
       "children": [
         {
           "id": 503,
@@ -826,7 +826,7 @@
       "flags": {
         "isExported": true
       },
-      "originalName": "/Users/copple/Projects/Supabase/postgrest-js/src/index.ts",
+      "originalName": "/Users/copple/Projects/Savira/postgrest-js/src/index.ts",
       "sources": [
         {
           "fileName": "index.ts",
@@ -843,7 +843,7 @@
       "flags": {
         "isExported": true
       },
-      "originalName": "/Users/copple/Projects/Supabase/postgrest-js/src/lib/PostgrestFilterBuilder.ts",
+      "originalName": "/Users/copple/Projects/Savira/postgrest-js/src/lib/PostgrestFilterBuilder.ts",
       "children": [
         {
           "id": 150,
@@ -5832,7 +5832,7 @@
       "flags": {
         "isExported": true
       },
-      "originalName": "/Users/copple/Projects/Supabase/postgrest-js/src/lib/PostgrestQueryBuilder.ts",
+      "originalName": "/Users/copple/Projects/Savira/postgrest-js/src/lib/PostgrestQueryBuilder.ts",
       "children": [
         {
           "id": 363,
@@ -8084,7 +8084,7 @@
       "flags": {
         "isExported": true
       },
-      "originalName": "/Users/copple/Projects/Supabase/postgrest-js/src/lib/PostgrestRpcBuilder.ts",
+      "originalName": "/Users/copple/Projects/Savira/postgrest-js/src/lib/PostgrestRpcBuilder.ts",
       "children": [
         {
           "id": 449,
@@ -9310,7 +9310,7 @@
       "flags": {
         "isExported": true
       },
-      "originalName": "/Users/copple/Projects/Supabase/postgrest-js/src/lib/PostgrestTransformBuilder.ts",
+      "originalName": "/Users/copple/Projects/Savira/postgrest-js/src/lib/PostgrestTransformBuilder.ts",
       "children": [
         {
           "id": 73,
@@ -11155,7 +11155,7 @@
       "flags": {
         "isExported": true
       },
-      "originalName": "/Users/copple/Projects/Supabase/postgrest-js/src/lib/constants.ts",
+      "originalName": "/Users/copple/Projects/Savira/postgrest-js/src/lib/constants.ts",
       "children": [
         {
           "id": 500,
@@ -11232,7 +11232,7 @@
       "flags": {
         "isExported": true
       },
-      "originalName": "/Users/copple/Projects/Supabase/postgrest-js/src/lib/types.ts",
+      "originalName": "/Users/copple/Projects/Savira/postgrest-js/src/lib/types.ts",
       "children": [
         {
           "id": 27,
@@ -12887,7 +12887,7 @@
       "flags": {
         "isExported": true
       },
-      "originalName": "/Users/copple/Projects/Supabase/postgrest-js/src/lib/version.ts",
+      "originalName": "/Users/copple/Projects/Savira/postgrest-js/src/lib/version.ts",
       "children": [
         {
           "id": 498,

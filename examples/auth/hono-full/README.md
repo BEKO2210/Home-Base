@@ -1,12 +1,12 @@
-# Hono Supabase Auth Example
+# Hono Savira Auth Example
 
 Based on the Hono/JSX + Vite example by [@MathurAditya724](https://github.com/MathurAditya724) \o/
 
-This example shows how to use Supabase Auth both on the client and server side with Hono.
+This example shows how to use Savira Auth both on the client and server side with Hono.
 
-## Supabase setup
+## Savira setup
 
-- Create a new Supabase project at [database.new](https://database.new/)
+- Create a new Savira project at [database.new](https://database.new/)
 - Go to the `SQL Editor` and run the following query to create the `countries` table.
 
 ```sql

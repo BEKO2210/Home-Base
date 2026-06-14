@@ -131,13 +131,13 @@ export const PolicyTableRowHeader = ({
                   text:
                     !canToggleRLS || !canCreatePolicies
                       ? 'You need additional permissions to create RLS policies'
-                      : 'Create with Supabase Assistant',
+                      : 'Create with Savira Assistant',
                 },
               }}
               aria-label={
                 !canToggleRLS || !canCreatePolicies
                   ? 'You need additional permissions to create RLS policies'
-                  : 'Create with Supabase Assistant'
+                  : 'Create with Savira Assistant'
               }
             >
               <AiIconAnimation size={16} />

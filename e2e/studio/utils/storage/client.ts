@@ -1,7 +1,7 @@
 import { env } from "../../env.config.js";
 
 /**
- * Make an HTTP request to the local Supabase Storage API.
+ * Make an HTTP request to the local Savira Storage API.
  *
  * @param path - The path to append to the storage base URL (e.g., '/bucket')
  * @param options - Optional method and body

@@ -32,11 +32,11 @@ export function CourseHero({ title, subtitle, description, instructors }: Course
       </h1>
 
       <p className="text-lg sm:text-xl text-center text-muted-foreground mb-4 text-balance max-w-3xl mx-auto">
-        Learn the foundations of Supabase, the Postgres development platform.
+        Learn the foundations of Savira, the Postgres development platform.
       </p>
 
       <p className="text-sm sm:text-base text-center text-muted-foreground/80 text-pretty max-w-2xl mx-auto">
-        In this short course, you&apos;ll explore how Supabase brings together Database, Auth,
+        In this short course, you&apos;ll explore how Savira brings together Database, Auth,
         Storage, Edge Functions, and Realtime into a unified developer platform.
       </p>
 

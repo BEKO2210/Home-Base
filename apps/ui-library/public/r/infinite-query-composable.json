@@ -2,8 +2,8 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "infinite-query-composable",
   "type": "registry:component",
-  "title": "Infinite Query for Vue and Supabase",
-  "description": "Vue Composable for infinite lists, fetching data from Supabase.",
+  "title": "Infinite Query for Vue and Savira",
+  "description": "Vue Composable for infinite lists, fetching data from Savira.",
   "dependencies": [
     "@supabase/supabase-js@latest",
     "@supabase/postgrest-js@*"

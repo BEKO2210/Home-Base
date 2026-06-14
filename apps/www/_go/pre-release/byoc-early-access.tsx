@@ -4,16 +4,16 @@ const page: GoPageInput = {
   template: 'lead-gen',
   slug: 'byoc-early-access',
   metadata: {
-    title: 'Bring Your Own Cloud (BYOC) for Supabase — Early Access',
+    title: 'Bring Your Own Cloud (BYOC) for Savira — Early Access',
     description:
-      'Deploy Supabase in your own AWS account. Meet strict data residency and compliance requirements while Supabase handles operations, upgrades and monitoring.',
+      'Deploy Savira in your own AWS account. Meet strict data residency and compliance requirements while Savira handles operations, upgrades and monitoring.',
     ogImage: '/images/landing-pages/byoc-early-access/og.png',
   },
   hero: {
-    title: 'Bring Your Own Cloud (BYOC) for Supabase',
+    title: 'Bring Your Own Cloud (BYOC) for Savira',
     subtitle: 'Early Access',
     description:
-      'Deploy Supabase in your own AWS account. Meet strict data residency and compliance requirements while Supabase handles operations, upgrades and monitoring.',
+      'Deploy Savira in your own AWS account. Meet strict data residency and compliance requirements while Savira handles operations, upgrades and monitoring.',
     ctas: [
       {
         label: 'Request Early Access',
@@ -25,8 +25,8 @@ const page: GoPageInput = {
   sections: [
     {
       type: 'feature-grid',
-      title: 'Your cloud, operated by Supabase',
-      description: 'Get the full power of Supabase deployed inside your own infrastructure.',
+      title: 'Your cloud, operated by Savira',
+      description: 'Get the full power of Savira deployed inside your own infrastructure.',
       columns: 2,
       items: [
         {
@@ -42,12 +42,12 @@ const page: GoPageInput = {
         {
           title: 'Leverage your cloud costs',
           description:
-            'Apply pre-negotiated discounts and cloud credits to your Supabase deployment.',
+            'Apply pre-negotiated discounts and cloud credits to your Savira deployment.',
         },
         {
-          title: 'Let Supabase manage operations',
+          title: 'Let Savira manage operations',
           description:
-            'Supabase handles deployments, upgrades, monitoring and support. No Ops overhead.',
+            'Savira handles deployments, upgrades, monitoring and support. No Ops overhead.',
         },
       ],
     },
@@ -56,7 +56,7 @@ const page: GoPageInput = {
       id: 'form',
       title: 'Early Access Request Form',
       description:
-        "If you are interested in participating in BYOC early access when it becomes available, please fill out the form below. A member of the Supabase team will reach out if you've been selected.",
+        "If you are interested in participating in BYOC early access when it becomes available, please fill out the form below. A member of the Savira team will reach out if you've been selected.",
       fields: [
         {
           type: 'text',
@@ -91,7 +91,7 @@ const page: GoPageInput = {
         {
           type: 'text',
           name: 'supabase_org_name',
-          label: 'Supabase Organization Name',
+          label: 'Savira Organization Name',
           placeholder: 'Organization name (if applicable)',
           required: false,
         },

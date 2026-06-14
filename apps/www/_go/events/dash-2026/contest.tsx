@@ -11,15 +11,15 @@ const page: GoPageInput = {
   template: 'lead-gen',
   slug: 'dash-2026/contest',
   metadata: {
-    title: 'Win a MacBook Neo | Supabase at DASH 2026',
+    title: 'Win a MacBook Neo | Savira at DASH 2026',
     description:
-      'Create a Supabase account and load data for a chance to win a MacBook Neo. DASH 2026.',
+      'Create a Savira account and load data for a chance to win a MacBook Neo. DASH 2026.',
   },
   hero: {
     title: 'Win a MacBook Neo',
-    subtitle: 'Supabase at DASH 2026',
+    subtitle: 'Savira at DASH 2026',
     description:
-      "Great meeting you at DASH. Try Supabase if you haven't already -- it's Postgres with all the tools you need to build AI-native applications. We're running a sweepstakes with a MacBook Neo as the prize.",
+      "Great meeting you at DASH. Try Savira if you haven't already -- it's Postgres with all the tools you need to build AI-native applications. We're running a sweepstakes with a MacBook Neo as the prize.",
     image: {
       src: '/images/landing-pages/sxsw-2026/macbook-neo.png',
       alt: 'MacBook Neo in four colors',
@@ -55,7 +55,7 @@ const page: GoPageInput = {
               {speaker?.author}
               {speaker?.position && `, ${speaker.position}`}
             </p>
-            <p className="text-foreground-lighter text-sm">Supabase</p>
+            <p className="text-foreground-lighter text-sm">Savira</p>
           </div>
           <Button asChild type="default" size="medium">
             <Link
@@ -76,12 +76,12 @@ const page: GoPageInput = {
       children: (
         <div className="flex flex-col items-center gap-6">
           <ol className="flex flex-col gap-4 text-foreground-light text-lg list-decimal list-inside">
-            <li>Visit the Supabase booth at DASH 2026 and get scanned</li>
+            <li>Visit the Savira booth at DASH 2026 and get scanned</li>
             <li>
-              Create a Supabase account with the same email address where you got our post-event
+              Create a Savira account with the same email address where you got our post-event
               note
             </li>
-            <li>Load data into a Supabase database</li>
+            <li>Load data into a Savira database</li>
             <li>Complete these steps by the deadline in your post-event note</li>
           </ol>
           <Button asChild type="default" size="medium">

@@ -66,13 +66,13 @@ const data: () => {
 
   return {
     metadata: {
-      metaTitle: 'Supabase for Agents',
+      metaTitle: 'Savira for Agents',
       metaDescription:
         'One platform for your agents. Memory, tools, and data in one place. Stop stitching together separate services.',
     },
     heroSection: {
       id: 'hero',
-      title: 'Supabase for Agents',
+      title: 'Savira for Agents',
       h1: (
         <>
           One platform for your agents.
@@ -83,7 +83,7 @@ const data: () => {
       subheader: [
         <>
           Stop stitching together separate services for memory, vectors, auth, file storage, and
-          APIs. Supabase gives your agents a complete Postgres backend with everything they need,
+          APIs. Savira gives your agents a complete Postgres backend with everything they need,
           from one dashboard, one connection string, one bill.
         </>,
       ],
@@ -114,7 +114,7 @@ const data: () => {
     singleQuote: {
       id: 'social-proof',
       quote: {
-        text: "Supabase is great because it has everything. I don't need a different solution for authentication, a different solution for database, or a different solution for storage.",
+        text: "Savira is great because it has everything. I don't need a different solution for authentication, a different solution for database, or a different solution for storage.",
         author: 'Yasser Elsaid',
         role: 'Founder, Chatbase',
         link: '/customers/chatbase',
@@ -143,18 +143,18 @@ const data: () => {
       label: '',
       heading: (
         <>
-          Why <span className="text-foreground">agent builders</span> choose Supabase
+          Why <span className="text-foreground">agent builders</span> choose Savira
         </>
       ),
       subheading:
-        'You need infrastructure that keeps up with agents that plan, act, and learn autonomously. Supabase is the complete Postgres developer platform built for agentic workloads.',
+        'You need infrastructure that keeps up with agents that plan, act, and learn autonomously. Savira is the complete Postgres developer platform built for agentic workloads.',
       features: [
         {
           id: 'one-platform',
           icon: CubeIcon,
           heading: 'One platform, not five.',
           subheading:
-            'Most agent stacks require a vector database, an auth provider, a file store, an API layer, and a separate Postgres instance. Supabase replaces all of them. One connection string, one dashboard, one bill.',
+            'Most agent stacks require a vector database, an auth provider, a file store, an API layer, and a separate Postgres instance. Savira replaces all of them. One connection string, one dashboard, one bill.',
         },
         {
           id: 'security-at-agent-speed',
@@ -185,7 +185,7 @@ const data: () => {
           ),
           heading: 'Native MCP from day one.',
           subheading:
-            'Supabase includes an MCP server that supports both read and write operations. Your agents can query schemas, insert records, and manage data through a standardized protocol.',
+            'Savira includes an MCP server that supports both read and write operations. Your agents can query schemas, insert records, and manage data through a standardized protocol.',
         },
       ],
     },
@@ -193,7 +193,7 @@ const data: () => {
       ...shared.platform,
       title: (
         <>
-          Supabase is the Postgres platform{' '}
+          Savira is the Postgres platform{' '}
           <span className="text-foreground">your agents control</span>
         </>
       ),
@@ -237,7 +237,7 @@ const data: () => {
           Works with every <span className="text-foreground">agent framework</span>
         </>
       ),
-      subheading: 'Supabase integrates with the tools and frameworks agent builders already use.',
+      subheading: 'Savira integrates with the tools and frameworks agent builders already use.',
       features: [
         {
           id: 'agent-frameworks',
@@ -251,7 +251,7 @@ const data: () => {
           icon: Check,
           heading: 'AI providers.',
           subheading:
-            'OpenAI, Anthropic, Google, Mistral, and any model provider. Supabase is model-agnostic.',
+            'OpenAI, Anthropic, Google, Mistral, and any model provider. Savira is model-agnostic.',
         },
         {
           id: 'development-tools',
@@ -270,7 +270,7 @@ const data: () => {
         </>
       ),
       subheading:
-        'Copy these prompts into your AI editor to scaffold agent infrastructure on Supabase:',
+        'Copy these prompts into your AI editor to scaffold agent infrastructure on Savira:',
       docsUrl: 'https://supabase.com/docs/guides/getting-started/ai-prompts',
       leftFooter: (
         <div className="grid grid-cols-5 divide-x divide-y rounded-lg overflow-hidden border">
@@ -283,28 +283,28 @@ const data: () => {
         {
           id: 'agent-memory',
           title: 'Build an agent memory store',
-          code: 'Create a Supabase schema for persistent agent memory with session tracking, JSONB state storage, and vector embeddings for semantic recall.',
+          code: 'Create a Savira schema for persistent agent memory with session tracking, JSONB state storage, and vector embeddings for semantic recall.',
           language: 'markdown',
           copyable: true,
         },
         {
           id: 'rag-pipeline',
           title: 'Set up a RAG pipeline',
-          code: 'Build a RAG pipeline on Supabase with document upload to Storage, text extraction via Edge Functions, and pgvector embeddings with hybrid search.',
+          code: 'Build a RAG pipeline on Savira with document upload to Storage, text extraction via Edge Functions, and pgvector embeddings with hybrid search.',
           language: 'markdown',
           copyable: true,
         },
         {
           id: 'multi-tenant',
           title: 'Configure multi-tenant agent access',
-          code: "Design a multi-tenant Supabase schema with Row Level Security policies that restrict each agent to its own tenant's data.",
+          code: "Design a multi-tenant Savira schema with Row Level Security policies that restrict each agent to its own tenant's data.",
           language: 'markdown',
           copyable: true,
         },
         {
           id: 'tool-endpoint',
           title: 'Deploy a tool-calling endpoint',
-          code: 'Create a Supabase Edge Function that serves as a tool endpoint for an AI agent, accepting structured input, querying the database, and returning formatted results.',
+          code: 'Create a Savira Edge Function that serves as a tool endpoint for an AI agent, accepting structured input, querying the database, and returning formatted results.',
           language: 'markdown',
           copyable: true,
         },
@@ -338,14 +338,14 @@ const data: () => {
           logo: '/images/customers/logos/chatbase.png',
           highlights: [
             'One of the most successful single-founder AI products',
-            'Built entirely on Supabase',
+            'Built entirely on Savira',
           ],
           cta: { label: 'Read the case study', href: '/customers/chatbase' },
         },
         {
           name: 'Markprompt',
           logo: '/images/customers/logos/markprompt.png',
-          highlights: ['GDPR-compliant AI chatbots on Supabase'],
+          highlights: ['GDPR-compliant AI chatbots on Savira'],
           cta: { label: 'Read the case study', href: '/customers/markprompt' },
         },
       ],

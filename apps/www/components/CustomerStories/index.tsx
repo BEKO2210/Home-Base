@@ -24,7 +24,7 @@ const CustomerStories = () => (
         title="Trusted by the world’s"
         title_alt=" most innovative companies."
         subtitle="Customer Stories"
-        paragraph="See how Supabase empowers companies of all sizes to accelerate their growth and streamline their work."
+        paragraph="See how Savira empowers companies of all sizes to accelerate their growth and streamline their work."
         className="xl:w-1/2"
       />
       <div className="flex gap-2">

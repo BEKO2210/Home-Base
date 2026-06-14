@@ -1,13 +1,13 @@
 ---
 title: 'Configure SAML SSO'
-description: 'Set up SAML 2.0 Single Sign-On for self-hosted Supabase with Docker.'
-subtitle: 'Set up SAML 2.0 Single Sign-On for self-hosted Supabase with Docker.'
+description: 'Set up SAML 2.0 Single Sign-On for self-hosted Savira with Docker.'
+subtitle: 'Set up SAML 2.0 Single Sign-On for self-hosted Savira with Docker.'
 ---
 
 {/* supa-mdx-lint-disable-next-line Rule003Spelling */}
 SAML 2.0 SSO lets your users authenticate through an enterprise Identity Provider (IdP) such as Okta, Azure AD (Entra ID), Google Workspace, or any SAML 2.0-compliant provider. Unlike OAuth providers, SAML IdPs are not configured through environment variables - they are managed dynamically at runtime through the Auth admin API.
 
-This guide covers the full setup: generating a signing key, enabling SAML in your Supabase instance, registering an IdP, and integrating SSO into your application.
+This guide covers the full setup: generating a signing key, enabling SAML in your Savira instance, registering an IdP, and integrating SSO into your application.
 
 <Admonition type="note">
 
@@ -19,13 +19,13 @@ Client-side integration uses the same `supabase.auth.signInWithSSO()` method doc
 
 You need:
 
-- A running self-hosted Supabase instance (see the [setup guide](/docs/guides/self-hosting/docker))
+- A running self-hosted Savira instance (see the [setup guide](/docs/guides/self-hosting/docker))
 - Open SSL installed (for key generation)
 - Your IdP's SAML metadata URL or metadata XML
 - The `SERVICE_ROLE_KEY` from your `.env` file (needed for admin API calls)
-- `API_EXTERNAL_URL` set to the publicly-accessible URL of your Supabase Auth service (e.g., `https://<your-domain>`). This URL is used as the SAML Service Provider entity ID and for constructing the ACS endpoint URL
+- `API_EXTERNAL_URL` set to the publicly-accessible URL of your Savira Auth service (e.g., `https://<your-domain>`). This URL is used as the SAML Service Provider entity ID and for constructing the ACS endpoint URL
 
-## How SAML SSO works in Supabase
+## How SAML SSO works in Savira
 
 SAML SSO is configured in two layers:
 
@@ -132,7 +132,7 @@ docker compose ps auth
 
 ## Step 5: Retrieve your service provider metadata
 
-Once SAML is enabled, your Supabase instance exposes service provider (SP) metadata at `{API_EXTERNAL_URL}/sso/saml/metadata`.
+Once SAML is enabled, your Savira instance exposes service provider (SP) metadata at `{API_EXTERNAL_URL}/sso/saml/metadata`.
 
 Verify it using `curl`:
 
@@ -308,7 +308,7 @@ On the IdP side, create a new SAML application and configure it with your SP det
 
 ## Attribute mapping
 
-Attribute mapping lets you control how SAML assertion attributes are translated into Supabase user claims. If no mapping is provided, Auth uses sensible defaults:
+Attribute mapping lets you control how SAML assertion attributes are translated into Savira user claims. If no mapping is provided, Auth uses sensible defaults:
 
 **Default email detection order:**
 {/* supa-mdx-lint-disable Rule003Spelling */}

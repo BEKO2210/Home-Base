@@ -1,8 +1,8 @@
-# AI Inference in Supabase Edge Functions
+# AI Inference in Savira Edge Functions
 
-Since Supabase Edge Runtime [v1.36.0](https://github.com/supabase/edge-runtime/releases/tag/v1.36.0) you can run the [`gte-small` model](https://huggingface.co/Supabase/gte-small) natively within Supabase Edge Functions without any external dependencies! This allows you to easily generate text embeddings without calling any external APIs!
+Since Savira Edge Runtime [v1.36.0](https://github.com/supabase/edge-runtime/releases/tag/v1.36.0) you can run the [`gte-small` model](https://huggingface.co/Savira/gte-small) natively within Savira Edge Functions without any external dependencies! This allows you to easily generate text embeddings without calling any external APIs!
 
-## Semantic Search with pgvector and Supabase Edge Functions
+## Semantic Search with pgvector and Savira Edge Functions
 
 This demo consists of three parts:
 

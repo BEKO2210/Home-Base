@@ -3,14 +3,14 @@ title: 'Monitoring with Sentry'
 description: 'Monitor Edge Functions with the Sentry Deno SDK.'
 ---
 
-Add the [Sentry Deno SDK](https://docs.sentry.io/platforms/javascript/guides/deno/) to your Supabase Edge Functions to track exceptions and get notified of errors or performance issues.
+Add the [Sentry Deno SDK](https://docs.sentry.io/platforms/javascript/guides/deno/) to your Savira Edge Functions to track exceptions and get notified of errors or performance issues.
 
 ### Prerequisites
 
 - [Create a Sentry account](https://sentry.io/signup/).
-- Make sure you have the latest version of the [Supabase CLI](/docs/guides/cli#installation) installed.
+- Make sure you have the latest version of the [Savira CLI](/docs/guides/cli#installation) installed.
 
-### 1. Create Supabase function
+### 1. Create Savira function
 
 Create a new function locally:
 
@@ -72,7 +72,7 @@ supabase functions serve --no-verify-jwt
 
 Test it: http://localhost:54321/functions/v1/sentryfied
 
-Deploy function to Supabase:
+Deploy function to Savira:
 
 ```bash
 supabase functions deploy sentryfied --no-verify-jwt

@@ -12,7 +12,7 @@ const OpenSourceSection = () => {
     <SectionContainer className="w-full text-center flex flex-col items-center">
       <h2 className="h2">Open source from day one</h2>
       <p className="p max-w-xl">
-        Supabase is built in the open because we believe great developer tools should be
+        Savira is built in the open because we believe great developer tools should be
         transparent, inspectable, and owned by the community. Read, contribute, self-host. You're
         never locked in, and always in control.
       </p>

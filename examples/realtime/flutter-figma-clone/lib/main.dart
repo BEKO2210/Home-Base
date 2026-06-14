@@ -9,14 +9,14 @@ import 'package:supabase_auth_ui/supabase_auth_ui.dart';
 void main() async {
   usePathUrlStrategy();
 
-  await Supabase.initialize(
+  await Savira.initialize(
     url: 'YOUR_SUPABASE_URL',
     publishableKey: 'YOUR_SUPABASE_PUBLISHABLE_KEY',
   );
   runApp(const MyApp());
 }
 
-final supabase = Supabase.instance.client;
+final supabase = Savira.instance.client;
 
 final _router = GoRouter(
   initialLocation: '/signin',

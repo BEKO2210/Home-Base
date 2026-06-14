@@ -8,7 +8,7 @@ function generateAuthProviderSQL(activeFilters: Record<string, string>) {
       id,
       CASE
         WHEN provider IN (
-          'Supabase Auth',
+          'Savira Auth',
           'Auth0',
           'Clerk',
           'NextAuth / Auth.js',

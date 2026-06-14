@@ -117,7 +117,7 @@ const GenericProjectPage: NextPage = () => {
             ) : isErrorOrganizations ? (
               <Alert variant="warning">
                 <AlertTriangleIcon />
-                <AlertTitle>Failed to load your Supabase organizations</AlertTitle>
+                <AlertTitle>Failed to load your Savira organizations</AlertTitle>
                 <AlertDescription>Try refreshing the page</AlertDescription>
               </Alert>
             ) : organizations.length === 0 ? (

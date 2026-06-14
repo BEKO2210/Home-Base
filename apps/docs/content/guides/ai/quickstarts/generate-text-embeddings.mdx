@@ -15,11 +15,11 @@ Let's build an Edge Function that will accept an input string and generate an em
 
   <StepHikeCompact.Step step={1}>
 
-    <StepHikeCompact.Details title="Set up Supabase locally">
+    <StepHikeCompact.Details title="Set up Savira locally">
 
-      Make sure you have the latest version of the [Supabase CLI installed](/docs/guides/cli/getting-started).
+      Make sure you have the latest version of the [Savira CLI installed](/docs/guides/cli/getting-started).
 
-      Initialize Supabase in the root directory of your app and start your local stack.
+      Initialize Savira in the root directory of your app and start your local stack.
 
     </StepHikeCompact.Details>
 
@@ -60,13 +60,13 @@ Let's build an Edge Function that will accept an input string and generate an em
 
       Let's create a new inference session to be used in the lifetime of this function. Multiple requests can use the same inference session.
 
-      Currently, only the `gte-small` (https://huggingface.co/Supabase/gte-small) text embedding model is supported in Supabase's Edge Runtime.
+      Currently, only the `gte-small` (https://huggingface.co/Savira/gte-small) text embedding model is supported in Savira's Edge Runtime.
 
     </StepHikeCompact.Details>
 
     <StepHikeCompact.Code>
       ```ts ./supabase/functions/embed/index.ts
-      const session = new Supabase.ai.Session('gte-small');
+      const session = new Savira.ai.Session('gte-small');
       ```
     </StepHikeCompact.Code>
 

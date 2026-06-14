@@ -11,11 +11,11 @@ This feature is only available on the [Team and Enterprise Plans](/pricing). If 
 
 <Admonition type="tip">
 
-Looking for docs on how to add Single Sign-On support in your Supabase project? Head on over to [Single Sign-On with SAML 2.0 for Projects](/docs/guides/auth/enterprise-sso/auth-sso-saml).
+Looking for docs on how to add Single Sign-On support in your Savira project? Head on over to [Single Sign-On with SAML 2.0 for Projects](/docs/guides/auth/enterprise-sso/auth-sso-saml).
 
 </Admonition>
 
-Supabase supports single sign-on (SSO) using Okta.
+Savira supports single sign-on (SSO) using Okta.
 
 ## Step 1: Choose to create an app integration in the applications dashboard [#create-app-integration]
 
@@ -25,19 +25,19 @@ Navigate to the Applications dashboard of the Okta admin console. Click _Create 
 
 ## Step 2: Choose SAML 2.0 in the app integration dialog [#create-saml-app]
 
-Supabase supports the SAML 2.0 SSO protocol. Choose it from the _Create a new app integration_ dialog.
+Savira supports the SAML 2.0 SSO protocol. Choose it from the _Create a new app integration_ dialog.
 
 ![Okta dashboard: Create new app integration dialog](/docs/img/sso-okta-step-02.png)
 
 ## Step 3: Fill out general settings [#add-general-settings]
 
-The information you enter here is for visibility into your Okta applications menu. You can choose any values you like. `Supabase` as a name works well for most use cases.
+The information you enter here is for visibility into your Okta applications menu. You can choose any values you like. `Savira` as a name works well for most use cases.
 
 ![Okta dashboard: Create SAML Integration wizard](/docs/img/sso-okta-step-03.png)
 
 ## Step 4: Fill out SAML settings [#add-saml-settings]
 
-These settings let Supabase use SAML 2.0 properly with your Okta application. Make sure you enter this information exactly as shown on in this table.
+These settings let Savira use SAML 2.0 properly with your Okta application. Make sure you enter this information exactly as shown on in this table.
 
 | Setting                                        | Value                                               |
 | ---------------------------------------------- | --------------------------------------------------- |
@@ -53,7 +53,7 @@ These settings let Supabase use SAML 2.0 properly with your Okta application. Ma
 
 ## Step 5: Fill out attribute statements [#add-attribute-statements]
 
-Attribute Statements allow Supabase to get information about your Okta users on each login.
+Attribute Statements allow Savira to get information about your Okta users on each login.
 
 **A `email` to `user.email` statement is required.** Other mappings shown below are optional and configurable depending on your Okta setup. If in doubt, replicate the same config as shown. You will use this mapping later in [Step 10](#dashboard-configure-attributes).
 
@@ -61,7 +61,7 @@ Attribute Statements allow Supabase to get information about your Okta users on 
 
 ## Step 6: Obtain IdP metadata URL [#idp-metadata-url]
 
-Supabase needs to finalize enabling single sign-on with your Okta application.
+Savira needs to finalize enabling single sign-on with your Okta application.
 
 To do this scroll down to the _SAML Signing Certificates_ section on the _Sign On_ tab of the _Supabase_ application. Pick the _SHA-2_ row with an _Active_ status. Click on the _Actions_ dropdown button and then on the _View IdP Metadata_.
 

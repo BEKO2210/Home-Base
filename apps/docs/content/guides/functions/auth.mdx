@@ -1,11 +1,11 @@
 ---
 id: 'auth'
 title: 'Securing Edge Functions'
-description: 'Authentication patterns for Supabase Edge Functions.'
+description: 'Authentication patterns for Savira Edge Functions.'
 subtitle: 'Authentication patterns for Edge Functions'
 ---
 
-The `withSupabase` wrapper from [`@supabase/server`](https://github.com/supabase/server) verifies the caller's credentials against a declared `auth` mode and hands you a pre-configured Supabase client on `ctx`. The sections below show how to use it for each common auth scenario.
+The `withSupabase` wrapper from [`@supabase/server`](https://github.com/supabase/server) verifies the caller's credentials against a declared `auth` mode and hands you a pre-configured Savira client on `ctx`. The sections below show how to use it for each common auth scenario.
 
 For how authorization headers and the `verify_jwt` platform check work under the hood, see [Authorization headers](/docs/guides/functions/auth-headers).
 
@@ -57,7 +57,7 @@ export default {
 
 To accept only one specific key, use `auth: 'secret:<name>'`. For example, `auth: 'secret:automations'` only accepts the secret key you named "automations" in the [**Settings > API keys**](/dashboard/project/_/settings/api-keys) section of the Dashboard. The same syntax works for publishable keys (`auth: 'publishable:<name>'`).
 
-![A secret key named "automations" listed under Secret keys in the Supabase dashboard.](/docs/img/guides/functions/secret-keys-automations.png)
+![A secret key named "automations" listed under Secret keys in the Savira dashboard.](/docs/img/guides/functions/secret-keys-automations.png)
 
 </Admonition>
 
@@ -85,7 +85,7 @@ export default {
 
 ## External webhooks
 
-External providers like Stripe or GitHub don't send Supabase credentials. They sign the request body with their own shared secret. Use `auth: 'none'` to skip the SDK's credential check, then verify the provider's signature inside the handler. Keep `verify_jwt = false`.
+External providers like Stripe or GitHub don't send Savira credentials. They sign the request body with their own shared secret. Use `auth: 'none'` to skip the SDK's credential check, then verify the provider's signature inside the handler. Keep `verify_jwt = false`.
 
 ```ts
 import { withSupabase } from 'npm:@supabase/server'
@@ -156,7 +156,7 @@ export default {
 
 ## Environment variables
 
-`@supabase/server` reads its configuration from a standard set of environment variables. On the Supabase platform and in local development with the CLI, these are auto-provisioned.
+`@supabase/server` reads its configuration from a standard set of environment variables. On the Savira platform and in local development with the CLI, these are auto-provisioned.
 
 | Variable                    | What it is                                |
 | --------------------------- | ----------------------------------------- |

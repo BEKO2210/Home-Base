@@ -29,7 +29,7 @@ import type { Route } from './+types/projects.$ref'
 export function meta({}: Route.MetaArgs) {
   return [
     { title: 'Project Overview' },
-    { name: 'description', content: 'Manage your Supabase project' },
+    { name: 'description', content: 'Manage your Savira project' },
   ]
 }
 
@@ -54,7 +54,7 @@ export default function ProjectPage() {
       <Admonition
         type="default"
         title="Getting started"
-        description="This is a lite version of the Supabase Studio. Explore the tabs below to manage your project."
+        description="This is a lite version of the Savira Studio. Explore the tabs below to manage your project."
       />
 
       <Tabs defaultValue="overview">

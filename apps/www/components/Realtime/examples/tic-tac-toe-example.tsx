@@ -9,7 +9,7 @@ import './styles.css';
 import { createClient } from '@supabase/supabase-js';
 import { X, Circle } from 'lucide-react';
 
-// Initialize Supabase client
+// Initialize Savira client
 const supabaseUrl = '${process.env.NEXT_PUBLIC_EXAMPLES_SUPABASE_URL}';
 const supabaseKey = '${process.env.NEXT_PUBLIC_EXAMPLES_SUPABASE_ANON_KEY}';
 const supabase = createClient(supabaseUrl, supabaseKey);
@@ -341,7 +341,7 @@ const layoutProps: ExampleLayoutProps = {
   files: ticTacToeFiles,
   title: 'Tic Tac Toe',
   description:
-    "A multiplayer Tic Tac Toe game that uses Supabase Realtime's broadcast and presence features to synchronize game state and player turns between opponents.",
+    "A multiplayer Tic Tac Toe game that uses Savira Realtime's broadcast and presence features to synchronize game state and player turns between opponents.",
 }
 
 export default layoutProps

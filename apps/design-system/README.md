@@ -1,6 +1,6 @@
-# Supabase Design System
+# Savira Design System
 
-Design resources for building consistent user experiences at Supabase.
+Design resources for building consistent user experiences at Savira.
 
 ## Getting started
 

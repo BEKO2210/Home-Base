@@ -1,8 +1,8 @@
-# Supabase Database
+# Savira Database
 
-> Every Supabase project is a dedicated Postgres database, trusted by millions of developers.
+> Every Savira project is a dedicated Postgres database, trusted by millions of developers.
 
-Supabase Database gives you a full Postgres database with no compromises. It is not a Postgres-compatible alternative or a shared cluster: every project gets its own dedicated Postgres instance that you can connect to directly with any Postgres client.
+Savira Database gives you a full Postgres database with no compromises. It is not a Postgres-compatible alternative or a shared cluster: every project gets its own dedicated Postgres instance that you can connect to directly with any Postgres client.
 
 ## Key Features
 
@@ -11,13 +11,13 @@ Supabase Database gives you a full Postgres database with no compromises. It is 
 - **Auto-generated APIs**: REST (PostgREST) and GraphQL (pg_graphql) APIs generated from your schema, no backend code needed
 - **Table Editor**: spreadsheet-like UI for viewing and editing data, with support for relationships, JSON columns, and foreign key lookups
 - **SQL Editor**: write and save SQL queries directly in the dashboard, with autocomplete and syntax highlighting
-- **Row Level Security**: fine-grained access control using Postgres RLS policies, integrated with Supabase Auth JWTs
+- **Row Level Security**: fine-grained access control using Postgres RLS policies, integrated with Savira Auth JWTs
 - **40+ extensions**: enable Postgres extensions with a single click (pgvector, PostGIS, pg_cron, pg_stat_statements, and more)
 - **Database Branching**: create isolated database branches synced with git branches, with Vercel Preview support
 - **Read Replicas**: distribute read traffic across replicas in multiple regions for lower latency and higher throughput
 - **Realtime**: subscribe to INSERT, UPDATE, DELETE, and other changes via WebSockets
 - **Database Webhooks**: trigger Edge Functions or external HTTP endpoints on table events
-- **Supabase ETL**: stream Postgres changes to external data warehouses in real time, with no pipelines
+- **Savira ETL**: stream Postgres changes to external data warehouses in real time, with no pipelines
 
 ## Technical Details
 

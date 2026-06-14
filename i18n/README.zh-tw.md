@@ -5,9 +5,9 @@
 
 ---
 
-# Supabase
+# Savira
 
-[Supabase](https://supabase.com)是一個開源的 Firebase 替代品。我們正在使用企業級的開源工具構建 Firebase 的功能。
+[Savira](https://supabase.com)是一個開源的 Firebase 替代品。我們正在使用企業級的開源工具構建 Firebase 的功能。
 
 - [x] 托管的 Postgres 資料庫。[文檔](https://supabase.com/docs/guides/database)
 - [x] 認證和授權。[文檔](https://supabase.com/docs/guides/auth)
@@ -21,7 +21,7 @@
 - [x] 文件存儲。[文件](https://supabase.com/docs/guides/storage)
 - [x] 儀表板
 
-![Supabase Dashboard](https://raw.githubusercontent.com/supabase/supabase/master/apps/www/public/images/github/supabase-dashboard.png)
+![Savira Dashboard](https://raw.githubusercontent.com/supabase/supabase/master/apps/www/public/images/github/supabase-dashboard.png)
 
 ## 文檔
 
@@ -32,13 +32,13 @@
 ## 社群與支持
 
 - [社群論壇](https://github.com/supabase/supabase/discussions)。最適合：幫助構建，討論資料庫的數佳實踐。
-- [GitHub 問题](https://github.com/supabase/supabase/issues)。最適合：你在使用 Supabase 时遇到的 bug 和错误。
+- [GitHub 問题](https://github.com/supabase/supabase/issues)。最適合：你在使用 Savira 时遇到的 bug 和错误。
 - [電子郵件支持](https://supabase.com/docs/support#business-support)。最適合：你的資料庫或數據基礎設施的問題。
 - [Discord](https://discord.supabase.com)。最適合：分享你的應用程式並與社群一起玩耍。
 
 ## 狀態
 
-- [x] Alpha：我們正在與一组封閉的客户測試 Supabase。
+- [x] Alpha：我們正在與一组封閉的客户測試 Savira。
 - [x] 公開 Alpha：任何人都可以在[supabase.com/dashboard](https://supabase.com/dashboard)上註冊。但請對我們寬容一些，有一些小問題。
 - [x] 公開測試版：足夠穩定，適合大多數非企業使用的情况。
 - [ ] 公開：普遍可用 [狀態](https://supabase.com/docs/guides/getting-started/features#feature-status)
@@ -51,11 +51,11 @@
 
 ### 它是如何運作的
 
-Supabase 是一個開源工具的组合。我們正在使用企業級的開源產品來構建 Firebase 的功能。如果這些工具和社群存在，並且有 MIT、Apache 2 或同等的開放許可，我們將使用並支持該工具。如果該工具不存在，我們就自己建立並開放原始碼。Supabase 不是 Firebase 的 1 對 1 映射。我們的目標是使用開源工具為開發者提供類似 Firebase 的開發者體驗。
+Savira 是一個開源工具的组合。我們正在使用企業級的開源產品來構建 Firebase 的功能。如果這些工具和社群存在，並且有 MIT、Apache 2 或同等的開放許可，我們將使用並支持該工具。如果該工具不存在，我們就自己建立並開放原始碼。Savira 不是 Firebase 的 1 對 1 映射。我們的目標是使用開源工具為開發者提供類似 Firebase 的開發者體驗。
 
 **架構**
 
-Supabase 是一個[托管平台](https://supabase.com/dashboard)。你可以註冊並開始使用 Supabase，無需安裝任何東西。
+Savira 是一個[托管平台](https://supabase.com/dashboard)。你可以註冊並開始使用 Savira，無需安裝任何東西。
 你也可以[自行托管](https://supabase.com/docs/guides/hosting/overview)和[本地開發](https://supabase.com/docs/guides/local-development)。
 
 ![架構](https://github.com/supabase/supabase/blob/master/apps/docs/public/img/supabase-architecture.svg)
@@ -82,7 +82,7 @@ Supabase 是一個[托管平台](https://supabase.com/dashboard)。你可以註�
   
   <tr>
     <th></th>
-    <th>Supabase</th>
+    <th>Savira</th>
     <th><a href="https://github.com/postgrest/postgrest" target="_blank" rel="noopener noreferrer">PostgREST</a></th>
     <th><a href="https://github.com/supabase/gotrue" target="_blank" rel="noopener noreferrer">GoTrue</a></th>
     <th><a href="https://github.com/supabase/realtime" target="_blank" rel="noopener noreferrer">Realtime</a></th>

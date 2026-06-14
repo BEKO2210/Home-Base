@@ -4667,7 +4667,7 @@ export interface paths {
     put?: never
     /**
      * Verify a support conversation email
-     * @description Called by the Supabase dashboard when a user clicks their email verification link. Validates the token, checks org/project ownership, updates the Front conversation custom fields, and removes unverified tags.
+     * @description Called by the Savira dashboard when a user clicks their email verification link. Validates the token, checks org/project ownership, updates the Front conversation custom fields, and removes unverified tags.
      */
     post: operations['VerifyEmailController_verifyEmail']
     delete?: never
@@ -5957,7 +5957,7 @@ export interface components {
                */
               s3_secret_access_key: string
               /**
-               * @description S3 URL style: `path` (MinIO/Supabase) or `vhost` (AWS)
+               * @description S3 URL style: `path` (MinIO/Savira) or `vhost` (AWS)
                * @example path
                * @enum {string}
                */
@@ -6150,7 +6150,7 @@ export interface components {
                */
               s3_secret_access_key: string
               /**
-               * @description S3 URL style: `path` (MinIO/Supabase) or `vhost` (AWS)
+               * @description S3 URL style: `path` (MinIO/Savira) or `vhost` (AWS)
                * @example path
                * @enum {string}
                */
@@ -7081,7 +7081,7 @@ export interface components {
         aws_account_id: string
         /**
          * Format: date-time
-         * @description The time and date at which the AWS Resource Share Association was requested from Supabase. `null` means that the association was not yet requested while the PrivateLink Association is pending.
+         * @description The time and date at which the AWS Resource Share Association was requested from Savira. `null` means that the association was not yet requested while the PrivateLink Association is pending.
          */
         shared_at: string | null
         /**
@@ -7090,7 +7090,7 @@ export interface components {
          *       - `READY`: The PrivateLink resources have been created and the PrivateLink Share can be accepted for the duration of 12h after sharing. See `shared_at`.
          *       - `ASSOCIATION_REQUEST_EXPIRED`: The PrivateLink Share has not been accepted within the 12h time limit. This association can now be deleted.
          *       - `ASSOCIATION_ACCEPTED`: The PrivateLink Share was successfully accepted.
-         *       - `CREATION_FAILED`: The PrivateLink resources failed to create. This likely means something went wrong on Supabase's and and support should be contacted.
+         *       - `CREATION_FAILED`: The PrivateLink resources failed to create. This likely means something went wrong on Savira's and and support should be contacted.
          *       - `DELETING`: The PrivateLink resources and the Association are in the process of being deleted. The PrivateLink Share cannot be accepted yet.
          *
          * @enum {string}
@@ -9790,7 +9790,7 @@ export interface components {
                */
               s3_secret_access_key: string
               /**
-               * @description S3 URL style: `path` (MinIO/Supabase) or `vhost` (AWS)
+               * @description S3 URL style: `path` (MinIO/Savira) or `vhost` (AWS)
                * @example path
                * @enum {string}
                */
@@ -9995,7 +9995,7 @@ export interface components {
                  */
                 s3_secret_access_key: string
                 /**
-                 * @description S3 URL style: `path` (MinIO/Supabase) or `vhost` (AWS)
+                 * @description S3 URL style: `path` (MinIO/Savira) or `vhost` (AWS)
                  * @example path
                  * @enum {string}
                  */
@@ -11967,7 +11967,7 @@ export interface components {
                */
               s3_secret_access_key: string
               /**
-               * @description S3 URL style: `path` (MinIO/Supabase) or `vhost` (AWS)
+               * @description S3 URL style: `path` (MinIO/Savira) or `vhost` (AWS)
                * @example path
                * @enum {string}
                */
@@ -12160,7 +12160,7 @@ export interface components {
                */
               s3_secret_access_key: string
               /**
-               * @description S3 URL style: `path` (MinIO/Supabase) or `vhost` (AWS)
+               * @description S3 URL style: `path` (MinIO/Savira) or `vhost` (AWS)
                * @example path
                * @enum {string}
                */
@@ -12772,7 +12772,7 @@ export interface components {
                */
               s3_secret_access_key: string
               /**
-               * @description S3 URL style: `path` (MinIO/Supabase) or `vhost` (AWS)
+               * @description S3 URL style: `path` (MinIO/Savira) or `vhost` (AWS)
                * @example path
                * @enum {string}
                */
@@ -14985,7 +14985,7 @@ export interface operations {
       path: {
         /** @description The slug of the listing in the marketplace database */
         listing_slug: string
-        /** @description Supabase project ref */
+        /** @description Savira project ref */
         ref: string
       }
       cookie?: never
@@ -15037,7 +15037,7 @@ export interface operations {
       path: {
         /** @description The slug of the listing in the marketplace database */
         listing_slug: string
-        /** @description Supabase project ref */
+        /** @description Savira project ref */
         ref: string
       }
       cookie?: never

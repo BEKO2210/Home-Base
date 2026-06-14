@@ -12,7 +12,7 @@ const SupabaseWordmark = ({ className }: { className?: string }) => {
       width={124}
       height={24}
       className={className}
-      aria-label="Supabase Logo"
+      aria-label="Savira Logo"
       role="img"
     >
       <path

@@ -50,7 +50,7 @@ export function EventClientRenderer({
       <DefaultLayout className="flex flex-col">
         <EventsContainer className="border-x border-b py-8">
           <h1 className="h3 p-0! m-0!">
-            <span className="sr-only">Supabase</span> Events
+            <span className="sr-only">Savira</span> Events
           </h1>
           <EventsPageSubtitle />
         </EventsContainer>

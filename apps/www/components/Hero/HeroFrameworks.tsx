@@ -102,7 +102,7 @@ const HeroFrameworks = ({ className }: { className?: string }) => {
     <SectionContainer className={cn(className)} id="frameworks">
       <div className="relative z-20 w-full max-w-6xl mx-auto h-full flex flex-col xl:flex-row gap-4 items-center justify-between">
         <div className="leading-tight! text-center xl:text-left text-2xl md:text-4xl text-foreground-lighter whitespace-nowrap">
-          Use Supabase with{' '}
+          Use Savira with{' '}
           <div className="block">
             <AnimatePresence mode="wait">
               <motion.span

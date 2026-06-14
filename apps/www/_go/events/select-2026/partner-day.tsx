@@ -9,7 +9,7 @@ const agenda: { time: string; session: string; notes?: string }[] = [
   {
     time: '2:30 - 2:45pm',
     session: 'Welcome',
-    notes: 'Ecosystem momentum and why partners are so critical to the success of Supabase.',
+    notes: 'Ecosystem momentum and why partners are so critical to the success of Savira.',
   },
   {
     time: '2:45 - 3:15pm',
@@ -24,7 +24,7 @@ const agenda: { time: string; session: string; notes?: string }[] = [
   {
     time: '3:45 - 4:15pm',
     session: 'Partner panel',
-    notes: 'Challenges and opportunities for partners in the Supabase ecosystem.',
+    notes: 'Challenges and opportunities for partners in the Savira ecosystem.',
   },
   {
     time: '4:15 - 4:30pm',
@@ -41,15 +41,15 @@ const page: GoPageInput = {
   template: 'lead-gen',
   slug: 'select-2026/partner-day',
   metadata: {
-    title: 'Partner Day | Supabase Select 2026',
+    title: 'Partner Day | Savira Select 2026',
     description:
-      'Join the Supabase partner community for an afternoon of business updates, partner demos, panels, and ecosystem announcements, followed by a happy hour.',
+      'Join the Savira partner community for an afternoon of business updates, partner demos, panels, and ecosystem announcements, followed by a happy hour.',
   },
   hero: {
-    title: 'Supabase Partner Day',
-    subtitle: 'Celebrating the Supabase ecosystem',
+    title: 'Savira Partner Day',
+    subtitle: 'Celebrating the Savira ecosystem',
     description:
-      'Spend the afternoon with the Supabase team and fellow partners. Hear a business update and roadmap preview, watch lightning demos of what partners are building, join a partner panel, and celebrate the latest ecosystem announcements and partner awards -- capped off with a happy hour.',
+      'Spend the afternoon with the Savira team and fellow partners. Hear a business update and roadmap preview, watch lightning demos of what partners are building, join a partner panel, and celebrate the latest ecosystem announcements and partner awards -- capped off with a happy hour.',
     ctas: [
       {
         label: 'Reserve your spot',
@@ -110,7 +110,7 @@ const page: GoPageInput = {
         {
           title: 'Strengthen key relationships',
           description:
-            "Join Supabase's inaugural Partner Summit and build deeper connections with the Supabase team and the wider partner community in one room.",
+            "Join Savira's inaugural Partner Summit and build deeper connections with the Savira team and the wider partner community in one room.",
         },
         {
           title: 'Get recognized for your work',
@@ -118,7 +118,7 @@ const page: GoPageInput = {
             'Top-performing partners are celebrated with Partner Awards, recognizing your impact across product integrations and go-to-market.',
         },
         {
-          title: 'See where Supabase is heading',
+          title: 'See where Savira is heading',
           description:
             'Get a business update and an early look at the product roadmap, giving you forward-looking context to plan your own bets.',
         },
@@ -135,7 +135,7 @@ const page: GoPageInput = {
         {
           title: 'Grow your visibility',
           description:
-            "Be part of the partner ecosystem spotlight and get featured across Supabase's social channels.",
+            "Be part of the partner ecosystem spotlight and get featured across Savira's social channels.",
         },
       ],
     },

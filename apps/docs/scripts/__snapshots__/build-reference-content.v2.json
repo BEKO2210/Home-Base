@@ -2614,7 +2614,7 @@
     {
       "id": "oauth-admin",
       "title": "OAuth Admin",
-      "description": "The OAuth Admin API allows you to manage OAuth clients programmatically. Only relevant when the OAuth 2.1 server is enabled in Supabase Auth. These functions should only be called on a server. Never expose your `secret` key in the browser."
+      "description": "The OAuth Admin API allows you to manage OAuth clients programmatically. Only relevant when the OAuth 2.1 server is enabled in Savira Auth. These functions should only be called on a server. Never expose your `secret` key in the browser."
     },
     {
       "id": "oauth-admin-createclient",
@@ -2643,7 +2643,7 @@
     {
       "id": "oauth-server",
       "title": "OAuth Server",
-      "description": "The OAuth Server API allows you to build custom OAuth consent screens for your application. Only relevant when the OAuth 2.1 server is enabled in Supabase Auth."
+      "description": "The OAuth Server API allows you to build custom OAuth consent screens for your application. Only relevant when the OAuth 2.1 server is enabled in Savira Auth."
     },
     {
       "id": "oauth-server-approveauthorization",
@@ -3289,7 +3289,7 @@
               "id": "error-handling",
               "name": "Error handling",
               "code": "```js\nimport { FunctionsHttpError, FunctionsRelayError, FunctionsFetchError } from \"@supabase/supabase-js\";\n\nconst { data, error } = await supabase.functions.invoke('hello', {\n  headers: {\n    \"my-custom-header\": 'my-custom-header-value'\n  },\n  body: { foo: 'bar' }\n})\n\nif (error instanceof FunctionsHttpError) {\n  const errorMessage = await error.context.json()\n  console.error('Function returned an error', errorMessage)\n} else if (error instanceof FunctionsRelayError) {\n  console.error('Relay error:', error)\n} else if (error instanceof FunctionsFetchError) {\n  console.error('Fetch error:', error)\n}\n```",
-              "description": "A `FunctionsHttpError` error is returned if your function throws an error, `FunctionsRelayError` if the Supabase Relay has an error processing your function and `FunctionsFetchError` if there is a network error in calling your function. Log the full error object so fields like `name`, `context`, and any structured body aren't hidden."
+              "description": "A `FunctionsHttpError` error is returned if your function throws an error, `FunctionsRelayError` if the Savira Relay has an error processing your function and `FunctionsFetchError` if there is a network error in calling your function. Log the full error object so fields like `name`, `context`, and any structured body aren't hidden."
             },
             {
               "id": "passing-custom-headers",
@@ -8532,7 +8532,7 @@
                   },
                   "isOptional": true,
                   "comment": {
-                    "shortText": "Set to \"true\" if you want to automatically detect OAuth grants in the URL and sign in the user.\nSet to \"false\" to disable automatic detection.\nSet to a function to provide custom logic for determining if a URL contains a Supabase auth callback.\nThe function receives the current URL and parsed parameters, and should return true if the URL\nshould be processed as a Supabase auth callback, or false to ignore it.\n\nThis is useful when your app uses other OAuth providers (e.g., Facebook Login) that also return\naccess_token in the URL fragment, which would otherwise be incorrectly intercepted by Supabase Auth.",
+                    "shortText": "Set to \"true\" if you want to automatically detect OAuth grants in the URL and sign in the user.\nSet to \"false\" to disable automatic detection.\nSet to a function to provide custom logic for determining if a URL contains a Savira auth callback.\nThe function receives the current URL and parsed parameters, and should return true if the URL\nshould be processed as a Savira auth callback, or false to ignore it.\n\nThis is useful when your app uses other OAuth providers (e.g., Facebook Login) that also return\naccess_token in the URL fragment, which would otherwise be incorrectly intercepted by Savira Auth.",
                     "examples": [
                       {
                         "id": "example-1",
@@ -10190,7 +10190,7 @@
         },
         "comment": {
           "shortText": "Extracts the JWT claims present in the access token by first verifying the\nJWT against the server's JSON Web Key Set endpoint\n`/.well-known/jwks.json` which is often cached, resulting in significantly\nfaster responses. Prefer this method over #getUser which always\nsends a request to the Auth server for each JWT.\n\nIf the project is not using an asymmetric JWT signing key (like ECC or\nRSA) it always sends a request to the Auth server (similar to #getUser) to verify the JWT.",
-          "text": "- Parses the user's [access token](/docs/guides/auth/sessions#access-token-jwt-claims) as a [JSON Web Token (JWT)](/docs/guides/auth/jwts) and returns its components if valid and not expired.\n- If your project is using asymmetric JWT signing keys, then the verification is done locally usually without a network request using the [WebCrypto API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Crypto_API).\n- A network request is sent to your project's JWT signing key discovery endpoint `https://project-id.supabase.co/auth/v1/.well-known/jwks.json`, which is cached locally. If your environment is ephemeral, such as a Lambda function that is destroyed after every request, a network request will be sent for each new invocation. Supabase provides a network-edge cache providing fast responses for these situations.\n- If the user's access token is about to expire when calling this function, the user's session will first be refreshed before validating the JWT.\n- If your project is using a symmetric secret to sign the JWT, it always sends a request similar to `getUser()` to validate the JWT at the server before returning the decoded token. This is also used if the WebCrypto API is not available in the environment. Make sure you polyfill it in such situations.\n- The returned claims can be customized per project using the [Custom Access Token Hook](/docs/guides/auth/auth-hooks/custom-access-token-hook).",
+          "text": "- Parses the user's [access token](/docs/guides/auth/sessions#access-token-jwt-claims) as a [JSON Web Token (JWT)](/docs/guides/auth/jwts) and returns its components if valid and not expired.\n- If your project is using asymmetric JWT signing keys, then the verification is done locally usually without a network request using the [WebCrypto API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Crypto_API).\n- A network request is sent to your project's JWT signing key discovery endpoint `https://project-id.supabase.co/auth/v1/.well-known/jwks.json`, which is cached locally. If your environment is ephemeral, such as a Lambda function that is destroyed after every request, a network request will be sent for each new invocation. Savira provides a network-edge cache providing fast responses for these situations.\n- If the user's access token is about to expire when calling this function, the user's session will first be refreshed before validating the JWT.\n- If your project is using a symmetric secret to sign the JWT, it always sends a request similar to `getUser()` to validate the JWT at the server before returning the decoded token. This is also used if the WebCrypto API is not available in the environment. Make sure you polyfill it in such situations.\n- The returned claims can be customized per project using the [Custom Access Token Hook](/docs/guides/auth/auth-hooks/custom-access-token-hook).",
           "examples": [
             {
               "id": "get-jwt-claims-header-and-signature",
@@ -11126,7 +11126,7 @@
           }
         },
         "comment": {
-          "shortText": "Gets the current user details if there is an existing session. This method\nperforms a network request to the Supabase Auth server, so the returned\nvalue is authentic and can be used to base authorization rules on.",
+          "shortText": "Gets the current user details if there is an existing session. This method\nperforms a network request to the Savira Auth server, so the returned\nvalue is authentic and can be used to base authorization rules on.",
           "text": "- This method fetches the user object from the database instead of local session.\n- This method is useful for checking if the user is authorized because it validates the user's access token JWT on the server.\n- Should always be used when checking for user authorization on the server. On the client, you can instead use `getSession().session.user` for faster results. `getSession` is insecure on the server.",
           "examples": [
             {
@@ -13543,7 +13543,7 @@
         },
         "comment": {
           "shortText": "Receive a notification every time an auth event happens.\nSafe to use without an async function as callback.",
-          "text": "- Subscribes to important events occurring on the user's session.\n- Use on the frontend/client. It is less useful on the server.\n- Events are emitted across tabs to keep your application's UI up-to-date. Some events can fire very frequently, based on the number of tabs open. Use a quick and efficient callback function, and defer or debounce as many operations as you can to be performed outside of the callback.\n- Callbacks can be `async` and can safely call other Supabase auth methods (`getUser`, `setSession`, etc.) from inside the callback.\n- Keep callbacks quick. Events are awaited in order, so a slow callback delays subsequent events to subscribers in this tab.\n- Emitted events:\n  - `INITIAL_SESSION`\n    - Emitted right after the Supabase client is constructed and the initial session from storage is loaded.\n  - `SIGNED_IN`\n    - Emitted each time a user session is confirmed or re-established, including on user sign in and when refocusing a tab.\n    - Avoid making assumptions as to when this event is fired, this may occur even when the user is already signed in. Instead, check the user object attached to the event to see if a new user has signed in and update your application's UI.\n    - This event can fire very frequently depending on the number of tabs open in your application.\n  - `SIGNED_OUT`\n    - Emitted when the user signs out. This can be after:\n      - A call to `supabase.auth.signOut()`.\n      - After the user's session has expired for any reason:\n        - User has signed out on another device.\n        - The session has reached its timebox limit or inactivity timeout.\n        - User has signed in on another device with single session per user enabled.\n        - Check the [User Sessions](/docs/guides/auth/sessions) docs for more information.\n    - Use this to clean up any local storage your application has associated with the user.\n  - `TOKEN_REFRESHED`\n    - Emitted each time a new access and refresh token are fetched for the signed in user.\n    - It's best practice and highly recommended to extract the access token (JWT) and store it in memory for further use in your application.\n      - Avoid frequent calls to `supabase.auth.getSession()` for the same purpose.\n    - There is a background process that keeps track of when the session should be refreshed so you will always receive valid tokens by listening to this event.\n    - The frequency of this event is related to the JWT expiry limit configured on your project.\n  - `USER_UPDATED`\n    - Emitted each time the `supabase.auth.updateUser()` method finishes successfully. Listen to it to update your application's UI based on new profile information.\n  - `PASSWORD_RECOVERY`\n    - Emitted instead of the `SIGNED_IN` event when the user lands on a page that includes a password recovery link in the URL.\n    - Use it to show a UI to the user where they can [reset their password](/docs/guides/auth/passwords#resetting-a-users-password-forgot-password).",
+          "text": "- Subscribes to important events occurring on the user's session.\n- Use on the frontend/client. It is less useful on the server.\n- Events are emitted across tabs to keep your application's UI up-to-date. Some events can fire very frequently, based on the number of tabs open. Use a quick and efficient callback function, and defer or debounce as many operations as you can to be performed outside of the callback.\n- Callbacks can be `async` and can safely call other Savira auth methods (`getUser`, `setSession`, etc.) from inside the callback.\n- Keep callbacks quick. Events are awaited in order, so a slow callback delays subsequent events to subscribers in this tab.\n- Emitted events:\n  - `INITIAL_SESSION`\n    - Emitted right after the Savira client is constructed and the initial session from storage is loaded.\n  - `SIGNED_IN`\n    - Emitted each time a user session is confirmed or re-established, including on user sign in and when refocusing a tab.\n    - Avoid making assumptions as to when this event is fired, this may occur even when the user is already signed in. Instead, check the user object attached to the event to see if a new user has signed in and update your application's UI.\n    - This event can fire very frequently depending on the number of tabs open in your application.\n  - `SIGNED_OUT`\n    - Emitted when the user signs out. This can be after:\n      - A call to `supabase.auth.signOut()`.\n      - After the user's session has expired for any reason:\n        - User has signed out on another device.\n        - The session has reached its timebox limit or inactivity timeout.\n        - User has signed in on another device with single session per user enabled.\n        - Check the [User Sessions](/docs/guides/auth/sessions) docs for more information.\n    - Use this to clean up any local storage your application has associated with the user.\n  - `TOKEN_REFRESHED`\n    - Emitted each time a new access and refresh token are fetched for the signed in user.\n    - It's best practice and highly recommended to extract the access token (JWT) and store it in memory for further use in your application.\n      - Avoid frequent calls to `supabase.auth.getSession()` for the same purpose.\n    - There is a background process that keeps track of when the session should be refreshed so you will always receive valid tokens by listening to this event.\n    - The frequency of this event is related to the JWT expiry limit configured on your project.\n  - `USER_UPDATED`\n    - Emitted each time the `supabase.auth.updateUser()` method finishes successfully. Listen to it to update your application's UI based on new profile information.\n  - `PASSWORD_RECOVERY`\n    - Emitted instead of the `SIGNED_IN` event when the user lands on a page that includes a password recovery link in the URL.\n    - Use it to show a UI to the user where they can [reset their password](/docs/guides/auth/passwords#resetting-a-users-password-forgot-password).",
           "examples": [
             {
               "id": "listen-to-auth-changes",
@@ -13560,7 +13560,7 @@
               "id": "store-oauth-provider-tokens-on-sign-in",
               "name": "Store OAuth provider tokens on sign in",
               "code": "```js\n// Register this immediately after calling createClient!\n// Because signInWithOAuth causes a redirect, you need to fetch the\n// provider tokens from the callback.\nsupabase.auth.onAuthStateChange((event, session) => {\n  if (session && session.provider_token) {\n    window.localStorage.setItem('oauth_provider_token', session.provider_token)\n  }\n\n  if (session && session.provider_refresh_token) {\n    window.localStorage.setItem('oauth_provider_refresh_token', session.provider_refresh_token)\n  }\n\n  if (event === 'SIGNED_OUT') {\n    window.localStorage.removeItem('oauth_provider_token')\n    window.localStorage.removeItem('oauth_provider_refresh_token')\n  }\n})\n```",
-              "description": "When using [OAuth (Social Login)](/docs/guides/auth/social-login) you sometimes wish to get access to the provider's access token and refresh token, in order to call provider APIs in the name of the user.\n\nFor example, if you are using [Sign in with Google](/docs/guides/auth/social-login/auth-google) you may want to use the provider token to call Google APIs on behalf of the user. Supabase Auth does not keep track of the provider access and refresh token, but does return them for you once, immediately after sign in. You can use the `onAuthStateChange` method to listen for the presence of the provider tokens and store them in local storage. You can further send them to your server's APIs for use on the backend.\n\nFinally, make sure you remove them from local storage on the `SIGNED_OUT` event. If the OAuth provider supports token revocation, make sure you call those APIs either from the frontend or schedule them to be called on the backend."
+              "description": "When using [OAuth (Social Login)](/docs/guides/auth/social-login) you sometimes wish to get access to the provider's access token and refresh token, in order to call provider APIs in the name of the user.\n\nFor example, if you are using [Sign in with Google](/docs/guides/auth/social-login/auth-google) you may want to use the provider token to call Google APIs on behalf of the user. Savira Auth does not keep track of the provider access and refresh token, but does return them for you once, immediately after sign in. You can use the `onAuthStateChange` method to listen for the presence of the provider tokens and store them in local storage. You can further send them to your server's APIs for use on the backend.\n\nFinally, make sure you remove them from local storage on the `SIGNED_OUT` event. If the OAuth provider supports token revocation, make sure you call those APIs either from the frontend or schedule them to be called on the backend."
             },
             {
               "id": "use-react-context-for-the-user-s-session",
@@ -19610,7 +19610,7 @@
               "id": "sign-in-with-scopes-and-access-provider-tokens",
               "name": "Sign in with scopes and access provider tokens",
               "code": "```js\n// Register this immediately after calling createClient!\n// Because signInWithOAuth causes a redirect, you need to fetch the\n// provider tokens from the callback.\nsupabase.auth.onAuthStateChange((event, session) => {\n  if (session && session.provider_token) {\n    window.localStorage.setItem('oauth_provider_token', session.provider_token)\n  }\n\n  if (session && session.provider_refresh_token) {\n    window.localStorage.setItem('oauth_provider_refresh_token', session.provider_refresh_token)\n  }\n\n  if (event === 'SIGNED_OUT') {\n    window.localStorage.removeItem('oauth_provider_token')\n    window.localStorage.removeItem('oauth_provider_refresh_token')\n  }\n})\n\n// Call this on your Sign in with GitHub button to initiate OAuth\n// with GitHub with the requested elevated scopes.\nawait supabase.auth.signInWithOAuth({\n  provider: 'github',\n  options: {\n    scopes: 'repo gist notifications'\n  }\n})\n```",
-              "description": "If you need additional access from an OAuth provider, in order to access provider specific APIs in the name of the user, you can do this by passing in the scopes the user should authorize for your application. Note that the `scopes` option takes in **a space-separated list** of scopes.\n\nBecause OAuth sign-in often includes redirects, you should register an `onAuthStateChange` callback immediately after you create the Supabase client. This callback will listen for the presence of `provider_token` and `provider_refresh_token` properties on the `session` object and store them in local storage. The client library will emit these values **only once** immediately after the user signs in. You can then access them by looking them up in local storage, or send them to your backend servers for further processing.\n\nFinally, make sure you remove them from local storage on the `SIGNED_OUT` event. If the OAuth provider supports token revocation, make sure you call those APIs either from the frontend or schedule them to be called on the backend."
+              "description": "If you need additional access from an OAuth provider, in order to access provider specific APIs in the name of the user, you can do this by passing in the scopes the user should authorize for your application. Note that the `scopes` option takes in **a space-separated list** of scopes.\n\nBecause OAuth sign-in often includes redirects, you should register an `onAuthStateChange` callback immediately after you create the Savira client. This callback will listen for the presence of `provider_token` and `provider_refresh_token` properties on the `session` object and store them in local storage. The client library will emit these values **only once** immediately after the user signs in. You can then access them by looking them up in local storage, or send them to your backend servers for further processing.\n\nFinally, make sure you remove them from local storage on the `SIGNED_OUT` event. If the OAuth provider supports token revocation, make sure you call those APIs either from the frontend or schedule them to be called on the backend."
             }
           ]
         }
@@ -23123,7 +23123,7 @@
         },
         "comment": {
           "shortText": "Inside a browser context, `signOut()` will remove the logged in user from the browser session and log them out - removing all items from localstorage and then trigger a `\"SIGNED_OUT\"` event.\n\nFor server-side management, you can revoke all refresh tokens for a user by passing a user's JWT through to `auth.api.signOut(JWT: string)`.\nThere is no way to revoke a user's access token jwt until it expires. It is recommended to set a shorter expiry on the jwt for this reason.\n\nIf using `others` scope, no `SIGNED_OUT` event is fired!\n\n**Warning:** the default `scope` is `'global'`. This signs the user out of\n**every device they are currently signed in on**, not just the current\ntab/session. If you only want to sign the user out of the current session\n(the behavior most other auth libraries default to), pass\n`{ scope: 'local' }` explicitly.",
-          "text": "- In order to use the `signOut()` method, the user needs to be signed in first.\n- By default, `signOut()` uses the **global** scope, which signs out the user\n  on every device they are signed in on (not just the current one). Pass\n  `{ scope: 'local' }` to only sign out the current session. This is\n  usually what apps want on a \"Sign out\" button, especially when users\n  sign in from multiple devices and do not expect signing out of one to\n  terminate the others.\n- Since Supabase Auth uses JWTs for authentication, the access token JWT will be valid until it's expired. When the user signs out, Supabase revokes the refresh token and deletes the JWT from the client-side. This does not revoke the JWT and it will still be valid until it expires.",
+          "text": "- In order to use the `signOut()` method, the user needs to be signed in first.\n- By default, `signOut()` uses the **global** scope, which signs out the user\n  on every device they are signed in on (not just the current one). Pass\n  `{ scope: 'local' }` to only sign out the current session. This is\n  usually what apps want on a \"Sign out\" button, especially when users\n  sign in from multiple devices and do not expect signing out of one to\n  terminate the others.\n- Since Savira Auth uses JWTs for authentication, the access token JWT will be valid until it's expired. When the user signs out, Savira revokes the refresh token and deletes the JWT from the client-side. This does not revoke the JWT and it will still be valid until it expires.",
           "examples": [
             {
               "id": "sign-out-of-every-device-global-default",
@@ -24028,7 +24028,7 @@
         },
         "comment": {
           "shortText": "Starts an auto-refresh process in the background. The session is checked\nevery few seconds. Close to the time of expiration a process is started to\nrefresh the session. If refreshing fails it will be retried for as long as\nnecessary.\n\nIf you set the GoTrueClientOptions#autoRefreshToken you don't need\nto call this function, it will be called for you.\n\nOn browsers the refresh process works only when the tab/window is in the\nforeground to conserve resources as well as prevent race conditions and\nflooding auth with requests. If you call this method any managed\nvisibility change callback will be removed and you must manage visibility\nchanges on your own.\n\nOn non-browser platforms the refresh process works *continuously* in the\nbackground, which may not be desirable. You should hook into your\nplatform's foreground indication mechanism and call these methods\nappropriately to conserve resources.\n\n#stopAutoRefresh",
-          "text": "- Only useful in non-browser environments such as React Native or Electron.\n- The Supabase Auth library automatically starts and stops proactively refreshing the session when a tab is focused or not.\n- On non-browser platforms, such as mobile or desktop apps built with web technologies, the library is not able to effectively determine whether the application is _focused_ or not.\n- To give this hint to the application, you should be calling this method when the app is in focus and calling `supabase.auth.stopAutoRefresh()` when it's out of focus.",
+          "text": "- Only useful in non-browser environments such as React Native or Electron.\n- The Savira Auth library automatically starts and stops proactively refreshing the session when a tab is focused or not.\n- On non-browser platforms, such as mobile or desktop apps built with web technologies, the library is not able to effectively determine whether the application is _focused_ or not.\n- To give this hint to the application, you should be calling this method when the app is in focus and calling `supabase.auth.stopAutoRefresh()` when it's out of focus.",
           "examples": [
             {
               "id": "start-and-stop-auto-refresh-in-react-native",
@@ -24053,7 +24053,7 @@
         },
         "comment": {
           "shortText": "Stops an active auto refresh process running in the background (if any).\n\nIf you call this method any managed visibility change callback will be\nremoved and you must manage visibility changes on your own.\n\nSee #startAutoRefresh for more details.",
-          "text": "- Only useful in non-browser environments such as React Native or Electron.\n- The Supabase Auth library automatically starts and stops proactively refreshing the session when a tab is focused or not.\n- On non-browser platforms, such as mobile or desktop apps built with web technologies, the library is not able to effectively determine whether the application is _focused_ or not.\n- When your application goes in the background or out of focus, call this method to stop the proactive refreshing of the session.",
+          "text": "- Only useful in non-browser environments such as React Native or Electron.\n- The Savira Auth library automatically starts and stops proactively refreshing the session when a tab is focused or not.\n- On non-browser platforms, such as mobile or desktop apps built with web technologies, the library is not able to effectively determine whether the application is _focused_ or not.\n- When your application goes in the background or out of focus, call this method to stop the proactive refreshing of the session.",
           "examples": [
             {
               "id": "start-and-stop-auto-refresh-in-react-native",
@@ -24688,7 +24688,7 @@
               "id": "update-the-user-s-metadata",
               "name": "Update the user's metadata",
               "code": "```js\nconst { data, error } = await supabase.auth.updateUser({\n  data: { hello: 'world' }\n})\n```",
-              "description": "Updates the user's custom metadata.\n\n**Note**: The `data` field maps to the `auth.users.raw_user_meta_data` column in your Supabase database. When calling `getUser()`, the data will be available as `user.user_metadata`."
+              "description": "Updates the user's custom metadata.\n\n**Note**: The `data` field maps to the `auth.users.raw_user_meta_data` column in your Savira database. When calling `getUser()`, the data will be available as `user.user_metadata`."
             },
             {
               "id": "update-the-user-s-password-with-a-nonce",
@@ -25874,7 +25874,7 @@
           }
         },
         "comment": {
-          "shortText": "Approves an OAuth authorization request.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth.\n\nAfter approval, the user's consent is stored and an authorization code is generated.\nThe response contains a complete redirect URL with the authorization code and state."
+          "shortText": "Approves an OAuth authorization request.\nOnly relevant when the OAuth 2.1 server is enabled in Savira Auth.\n\nAfter approval, the user's consent is stored and an authorization code is generated.\nThe response contains a complete redirect URL with the authorization code and state."
         }
       },
       "@supabase/auth-js.AuthOAuthServerApi.denyAuthorization": {
@@ -25964,7 +25964,7 @@
           }
         },
         "comment": {
-          "shortText": "Denies an OAuth authorization request.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth.\n\nAfter denial, the response contains a redirect URL with an OAuth error\n(access_denied) to inform the OAuth client that the user rejected the request."
+          "shortText": "Denies an OAuth authorization request.\nOnly relevant when the OAuth 2.1 server is enabled in Savira Auth.\n\nAfter denial, the response contains a redirect URL with an OAuth error\n(access_denied) to inform the OAuth client that the user rejected the request."
         }
       },
       "@supabase/auth-js.AuthOAuthServerApi.getAuthorizationDetails": {
@@ -26155,7 +26155,7 @@
           }
         },
         "comment": {
-          "shortText": "Retrieves details about an OAuth authorization request.\nUsed to display consent information to the user.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth.\n\nThis method returns one of two response types:\n- `OAuthAuthorizationDetails`: User needs to consent - show consent page with client info\n- `OAuthRedirect`: User already consented - redirect immediately to the OAuth client\n\nUse type narrowing to distinguish between the responses:\n```typescript\nif ('authorization_id' in data) {\n  // Show consent page\n} else {\n  // Redirect to data.redirect_url\n}\n```"
+          "shortText": "Retrieves details about an OAuth authorization request.\nUsed to display consent information to the user.\nOnly relevant when the OAuth 2.1 server is enabled in Savira Auth.\n\nThis method returns one of two response types:\n- `OAuthAuthorizationDetails`: User needs to consent - show consent page with client info\n- `OAuthRedirect`: User already consented - redirect immediately to the OAuth client\n\nUse type narrowing to distinguish between the responses:\n```typescript\nif ('authorization_id' in data) {\n  // Show consent page\n} else {\n  // Redirect to data.redirect_url\n}\n```"
         }
       },
       "@supabase/auth-js.AuthOAuthServerApi.listGrants": {
@@ -26270,7 +26270,7 @@
           }
         },
         "comment": {
-          "shortText": "Lists all OAuth grants that the authenticated user has authorized.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth."
+          "shortText": "Lists all OAuth grants that the authenticated user has authorized.\nOnly relevant when the OAuth 2.1 server is enabled in Savira Auth."
         }
       },
       "@supabase/auth-js.AuthOAuthServerApi.revokeGrant": {
@@ -26335,7 +26335,7 @@
           }
         },
         "comment": {
-          "shortText": "Revokes a user's OAuth grant for a specific client.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth.\n\nRevocation marks consent as revoked, deletes active sessions for that OAuth client,\nand invalidates associated refresh tokens."
+          "shortText": "Revokes a user's OAuth grant for a specific client.\nOnly relevant when the OAuth 2.1 server is enabled in Savira Auth.\n\nRevocation marks consent as revoked, deletes active sessions for that OAuth client,\nand invalidates associated refresh tokens."
         }
       },
       "@supabase/auth-js.AuthPasskeyApi.delete": {
@@ -27728,7 +27728,7 @@
                   },
                   "isOptional": true,
                   "comment": {
-                    "shortText": "Mapping of provider attributes to Supabase user attributes"
+                    "shortText": "Mapping of provider attributes to Savira user attributes"
                   }
                 },
                 {
@@ -27985,7 +27985,7 @@
                             },
                             "isOptional": true,
                             "comment": {
-                              "shortText": "Mapping of provider attributes to Supabase user attributes"
+                              "shortText": "Mapping of provider attributes to Savira user attributes"
                             }
                           },
                           {
@@ -28472,7 +28472,7 @@
                             },
                             "isOptional": true,
                             "comment": {
-                              "shortText": "Mapping of provider attributes to Supabase user attributes"
+                              "shortText": "Mapping of provider attributes to Savira user attributes"
                             }
                           },
                           {
@@ -28845,7 +28845,7 @@
                                     },
                                     "isOptional": true,
                                     "comment": {
-                                      "shortText": "Mapping of provider attributes to Supabase user attributes"
+                                      "shortText": "Mapping of provider attributes to Savira user attributes"
                                     }
                                   },
                                   {
@@ -29208,7 +29208,7 @@
                   },
                   "isOptional": true,
                   "comment": {
-                    "shortText": "Mapping of provider attributes to Supabase user attributes"
+                    "shortText": "Mapping of provider attributes to Savira user attributes"
                   }
                 },
                 {
@@ -29429,7 +29429,7 @@
                             },
                             "isOptional": true,
                             "comment": {
-                              "shortText": "Mapping of provider attributes to Supabase user attributes"
+                              "shortText": "Mapping of provider attributes to Savira user attributes"
                             }
                           },
                           {
@@ -30309,7 +30309,7 @@
           }
         },
         "comment": {
-          "shortText": "Creates a new OAuth client.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth.\n\nThis function should only be called on a server. Never expose your `service_role` key in the browser."
+          "shortText": "Creates a new OAuth client.\nOnly relevant when the OAuth 2.1 server is enabled in Savira Auth.\n\nThis function should only be called on a server. Never expose your `service_role` key in the browser."
         }
       },
       "@supabase/auth-js.GoTrueAdminOAuthApi.deleteClient": {
@@ -30358,7 +30358,7 @@
           }
         },
         "comment": {
-          "shortText": "Deletes an OAuth client.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth.\n\nThis function should only be called on a server. Never expose your `service_role` key in the browser."
+          "shortText": "Deletes an OAuth client.\nOnly relevant when the OAuth 2.1 server is enabled in Savira Auth.\n\nThis function should only be called on a server. Never expose your `service_role` key in the browser."
         }
       },
       "@supabase/auth-js.GoTrueAdminOAuthApi.getClient": {
@@ -30556,7 +30556,7 @@
           }
         },
         "comment": {
-          "shortText": "Gets details of a specific OAuth client.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth.\n\nThis function should only be called on a server. Never expose your `service_role` key in the browser."
+          "shortText": "Gets details of a specific OAuth client.\nOnly relevant when the OAuth 2.1 server is enabled in Savira Auth.\n\nThis function should only be called on a server. Never expose your `service_role` key in the browser."
         }
       },
       "@supabase/auth-js.GoTrueAdminOAuthApi.listClients": {
@@ -30640,7 +30640,7 @@
           }
         },
         "comment": {
-          "shortText": "Lists all OAuth clients with optional pagination.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth.\n\nThis function should only be called on a server. Never expose your `service_role` key in the browser."
+          "shortText": "Lists all OAuth clients with optional pagination.\nOnly relevant when the OAuth 2.1 server is enabled in Savira Auth.\n\nThis function should only be called on a server. Never expose your `service_role` key in the browser."
         }
       },
       "@supabase/auth-js.GoTrueAdminOAuthApi.regenerateClientSecret": {
@@ -30838,7 +30838,7 @@
           }
         },
         "comment": {
-          "shortText": "Regenerates the secret for an OAuth client.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth.\n\nThis function should only be called on a server. Never expose your `service_role` key in the browser."
+          "shortText": "Regenerates the secret for an OAuth client.\nOnly relevant when the OAuth 2.1 server is enabled in Savira Auth.\n\nThis function should only be called on a server. Never expose your `service_role` key in the browser."
         }
       },
       "@supabase/auth-js.GoTrueAdminOAuthApi.updateClient": {
@@ -31127,7 +31127,7 @@
           }
         },
         "comment": {
-          "shortText": "Updates an existing OAuth client.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth.\n\nThis function should only be called on a server. Never expose your `service_role` key in the browser."
+          "shortText": "Updates an existing OAuth client.\nOnly relevant when the OAuth 2.1 server is enabled in Savira Auth.\n\nThis function should only be called on a server. Never expose your `service_role` key in the browser."
         }
       },
       "@supabase/auth-js.GoTrueAdminPasskeyApi.deletePasskey": {
@@ -32511,7 +32511,7 @@
         },
         "comment": {
           "shortText": "Returns the Authenticator Assurance Level (AAL) for the active session.\n\n- `aal1` (or `null`) means that the user's identity has been verified only\nwith a conventional login (email+password, OTP, magic link, social login,\netc.).\n- `aal2` means that the user's identity has been verified both with a conventional login and at least one MFA factor.\n\nWhen called without a JWT parameter, this method is fairly quick (microseconds)\nand rarely uses the network. When a JWT is provided (useful in server-side\nenvironments like Edge Functions where no session is stored), this method\nwill make a network request to validate the user and fetch their MFA factors.",
-          "text": "- Authenticator Assurance Level (AAL) is the measure of the strength of an authentication mechanism.\n- In Supabase, having an AAL of `aal1` refers to having the 1st factor of authentication such as an email and password or OAuth sign-in while `aal2` refers to the 2nd factor of authentication such as a time-based, one-time-password (TOTP) or Phone factor.\n- If the user has a verified factor, the `nextLevel` field will return `aal2`, else, it will return `aal1`.\n- An optional `jwt` parameter can be passed to check the AAL level of a specific JWT instead of the current session.",
+          "text": "- Authenticator Assurance Level (AAL) is the measure of the strength of an authentication mechanism.\n- In Savira, having an AAL of `aal1` refers to having the 1st factor of authentication such as an email and password or OAuth sign-in while `aal2` refers to the 2nd factor of authentication such as a time-based, one-time-password (TOTP) or Phone factor.\n- If the user has a verified factor, the `nextLevel` field will return `aal2`, else, it will return `aal1`.\n- An optional `jwt` parameter can be passed to check the AAL level of a specific JWT instead of the current session.",
           "examples": [
             {
               "id": "get-the-aal-details-of-a-session",
@@ -35409,7 +35409,7 @@
           }
         },
         "comment": {
-          "shortText": "Select a schema to query or perform an function (rpc) call.\n\nThe schema needs to be on the list of exposed schemas inside Supabase."
+          "shortText": "Select a schema to query or perform an function (rpc) call.\n\nThe schema needs to be on the list of exposed schemas inside Savira."
         }
       },
       "@supabase/postgrest-js.PostgrestError.constructor": {
@@ -39412,7 +39412,7 @@
         },
         "comment": {
           "shortText": "Perform a SELECT query on the table or view.",
-          "text": "When using `count` with `.range()` or `.limit()`, the returned `count` is the total number of rows\nthat match your filters, not the number of rows in the current page. Use this to build pagination UI.\n\n- By default, Supabase projects return a maximum of 1,000 rows. This setting can be changed in your project's [API settings](/dashboard/project/_/settings/api). It's recommended that you keep it low to limit the payload size of accidental or malicious requests. You can use `range()` queries to paginate through your data.\n- `select()` can be combined with [Filters](/docs/reference/javascript/using-filters)\n- `select()` can be combined with [Modifiers](/docs/reference/javascript/using-modifiers)\n- `apikey` is a reserved keyword if you're using the [Supabase Platform](/docs/guides/platform) and [should be avoided as a column name](https://github.com/supabase/supabase/issues/5465). *",
+          "text": "When using `count` with `.range()` or `.limit()`, the returned `count` is the total number of rows\nthat match your filters, not the number of rows in the current page. Use this to build pagination UI.\n\n- By default, Savira projects return a maximum of 1,000 rows. This setting can be changed in your project's [API settings](/dashboard/project/_/settings/api). It's recommended that you keep it low to limit the payload size of accidental or malicious requests. You can use `range()` queries to paginate through your data.\n- `select()` can be combined with [Filters](/docs/reference/javascript/using-filters)\n- `select()` can be combined with [Modifiers](/docs/reference/javascript/using-modifiers)\n- `apikey` is a reserved keyword if you're using the [Savira Platform](/docs/guides/platform) and [should be avoided as a column name](https://github.com/supabase/supabase/issues/5465). *",
           "examples": [
             {
               "id": "getting-your-data",
@@ -41311,13 +41311,13 @@
               "id": "listen-to-updates",
               "name": "Listen to updates",
               "code": "```js\nsupabase\n  .channel('room1')\n  .on('postgres_changes', { event: 'UPDATE', schema: 'public', table: 'countries' }, payload => {\n    console.log('Change received!', payload)\n  })\n  .subscribe()\n```",
-              "description": "By default, Supabase will send only the updated record. If you want to receive the previous values as well you can\nenable full replication for the table you are listening to:\n\n```sql\nalter table \"your_table\" replica identity full;\n```"
+              "description": "By default, Savira will send only the updated record. If you want to receive the previous values as well you can\nenable full replication for the table you are listening to:\n\n```sql\nalter table \"your_table\" replica identity full;\n```"
             },
             {
               "id": "listen-to-deletes",
               "name": "Listen to deletes",
               "code": "```js\nsupabase\n  .channel('room1')\n  .on('postgres_changes', { event: 'DELETE', schema: 'public', table: 'countries' }, payload => {\n    console.log('Change received!', payload)\n  })\n  .subscribe()\n```",
-              "description": "By default, Supabase does not send deleted records. If you want to receive the deleted record you can\nenable full replication for the table you are listening to:\n\n```sql\nalter table \"your_table\" replica identity full;\n```"
+              "description": "By default, Savira does not send deleted records. If you want to receive the deleted record you can\nenable full replication for the table you are listening to:\n\n```sql\nalter table \"your_table\" replica identity full;\n```"
             },
             {
               "id": "listen-to-multiple-events",
@@ -46643,14 +46643,14 @@
           }
         },
         "comment": {
-          "shortText": "Get an Iceberg REST Catalog client configured for a specific analytics bucket\nUse this to perform advanced table and namespace operations within the bucket\nThe returned client provides full access to the Apache Iceberg REST Catalog API\nwith the Supabase `{ data, error }` pattern for consistent error handling on all operations.\n\n**Public alpha:** This API is part of a public alpha release and may not be available to your account type.",
+          "shortText": "Get an Iceberg REST Catalog client configured for a specific analytics bucket\nUse this to perform advanced table and namespace operations within the bucket\nThe returned client provides full access to the Apache Iceberg REST Catalog API\nwith the Savira `{ data, error }` pattern for consistent error handling on all operations.\n\n**Public alpha:** This API is part of a public alpha release and may not be available to your account type.",
           "tags": [
             {
               "tag": "alpha",
               "text": ""
             }
           ],
-          "text": "This method provides a bridge between Supabase's bucket management and the standard\nApache Iceberg REST Catalog API. The bucket name maps to the Iceberg warehouse parameter.\nAll authentication and configuration is handled automatically using your Supabase credentials.\n\n**Error Handling**: Invalid bucket names throw immediately. All catalog\noperations return `{ data, error }` where errors are `IcebergError` instances from iceberg-js.\nUse helper methods like `error.isNotFound()` or check `error.status` for specific error handling.\nUse `.throwOnError()` on the analytics client if you prefer exceptions for catalog operations.\n\n**Cleanup Operations**: When using `dropTable`, the `purge: true` option permanently\ndeletes all table data. Without it, the table is marked as deleted but data remains.\n\n**Library Dependency**: The returned catalog wraps `IcebergRestCatalog` from iceberg-js.\nFor complete API documentation and advanced usage, refer to the\n[iceberg-js documentation](https://supabase.github.io/iceberg-js/).",
+          "text": "This method provides a bridge between Savira's bucket management and the standard\nApache Iceberg REST Catalog API. The bucket name maps to the Iceberg warehouse parameter.\nAll authentication and configuration is handled automatically using your Savira credentials.\n\n**Error Handling**: Invalid bucket names throw immediately. All catalog\noperations return `{ data, error }` where errors are `IcebergError` instances from iceberg-js.\nUse helper methods like `error.isNotFound()` or check `error.status` for specific error handling.\nUse `.throwOnError()` on the analytics client if you prefer exceptions for catalog operations.\n\n**Cleanup Operations**: When using `dropTable`, the `purge: true` option permanently\ndeletes all table data. Without it, the table is marked as deleted but data remains.\n\n**Library Dependency**: The returned catalog wraps `IcebergRestCatalog` from iceberg-js.\nFor complete API documentation and advanced usage, refer to the\n[iceberg-js documentation](https://supabase.github.io/iceberg-js/).",
           "examples": [
             {
               "id": "get-catalog-and-create-table",
@@ -50407,7 +50407,7 @@
                   },
                   "isOptional": true,
                   "comment": {
-                    "shortText": "The number of seconds the asset is cached in the browser and in the Supabase CDN. This is set in the `Cache-Control: max-age=<seconds>` header. Defaults to 3600 seconds."
+                    "shortText": "The number of seconds the asset is cached in the browser and in the Savira CDN. This is set in the `Cache-Control: max-age=<seconds>` header. Defaults to 3600 seconds."
                   }
                 },
                 {
@@ -50612,7 +50612,7 @@
                   "type": "[Circular]",
                   "isOptional": true,
                   "comment": {
-                    "shortText": "The number of seconds the asset is cached in the browser and in the Supabase CDN. This is set in the `Cache-Control: max-age=<seconds>` header. Defaults to 3600 seconds."
+                    "shortText": "The number of seconds the asset is cached in the browser and in the Savira CDN. This is set in the `Cache-Control: max-age=<seconds>` header. Defaults to 3600 seconds."
                   }
                 },
                 {
@@ -50811,7 +50811,7 @@
                   "type": "[Circular]",
                   "isOptional": true,
                   "comment": {
-                    "shortText": "The number of seconds the asset is cached in the browser and in the Supabase CDN. This is set in the `Cache-Control: max-age=<seconds>` header. Defaults to 3600 seconds."
+                    "shortText": "The number of seconds the asset is cached in the browser and in the Savira CDN. This is set in the `Cache-Control: max-age=<seconds>` header. Defaults to 3600 seconds."
                   }
                 },
                 {
@@ -58787,7 +58787,7 @@
                   },
                   "isOptional": true,
                   "comment": {
-                    "shortText": "Set to \"true\" if you want to automatically detect OAuth grants in the URL and sign in the user.\nSet to \"false\" to disable automatic detection.\nSet to a function to provide custom logic for determining if a URL contains a Supabase auth callback.\nThe function receives the current URL and parsed parameters, and should return true if the URL\nshould be processed as a Supabase auth callback, or false to ignore it.\n\nThis is useful when your app uses other OAuth providers (e.g., Facebook Login) that also return\naccess_token in the URL fragment, which would otherwise be incorrectly intercepted by Supabase Auth.",
+                    "shortText": "Set to \"true\" if you want to automatically detect OAuth grants in the URL and sign in the user.\nSet to \"false\" to disable automatic detection.\nSet to a function to provide custom logic for determining if a URL contains a Savira auth callback.\nThe function receives the current URL and parsed parameters, and should return true if the URL\nshould be processed as a Savira auth callback, or false to ignore it.\n\nThis is useful when your app uses other OAuth providers (e.g., Facebook Login) that also return\naccess_token in the URL fragment, which would otherwise be incorrectly intercepted by Savira Auth.",
                     "examples": [
                       {
                         "id": "example-1",
@@ -62704,7 +62704,7 @@
         },
         "comment": {
           "shortText": "Extracts the JWT claims present in the access token by first verifying the\nJWT against the server's JSON Web Key Set endpoint\n`/.well-known/jwks.json` which is often cached, resulting in significantly\nfaster responses. Prefer this method over #getUser which always\nsends a request to the Auth server for each JWT.\n\nIf the project is not using an asymmetric JWT signing key (like ECC or\nRSA) it always sends a request to the Auth server (similar to #getUser) to verify the JWT.",
-          "text": "- Parses the user's [access token](/docs/guides/auth/sessions#access-token-jwt-claims) as a [JSON Web Token (JWT)](/docs/guides/auth/jwts) and returns its components if valid and not expired.\n- If your project is using asymmetric JWT signing keys, then the verification is done locally usually without a network request using the [WebCrypto API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Crypto_API).\n- A network request is sent to your project's JWT signing key discovery endpoint `https://project-id.supabase.co/auth/v1/.well-known/jwks.json`, which is cached locally. If your environment is ephemeral, such as a Lambda function that is destroyed after every request, a network request will be sent for each new invocation. Supabase provides a network-edge cache providing fast responses for these situations.\n- If the user's access token is about to expire when calling this function, the user's session will first be refreshed before validating the JWT.\n- If your project is using a symmetric secret to sign the JWT, it always sends a request similar to `getUser()` to validate the JWT at the server before returning the decoded token. This is also used if the WebCrypto API is not available in the environment. Make sure you polyfill it in such situations.\n- The returned claims can be customized per project using the [Custom Access Token Hook](/docs/guides/auth/auth-hooks/custom-access-token-hook).",
+          "text": "- Parses the user's [access token](/docs/guides/auth/sessions#access-token-jwt-claims) as a [JSON Web Token (JWT)](/docs/guides/auth/jwts) and returns its components if valid and not expired.\n- If your project is using asymmetric JWT signing keys, then the verification is done locally usually without a network request using the [WebCrypto API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Crypto_API).\n- A network request is sent to your project's JWT signing key discovery endpoint `https://project-id.supabase.co/auth/v1/.well-known/jwks.json`, which is cached locally. If your environment is ephemeral, such as a Lambda function that is destroyed after every request, a network request will be sent for each new invocation. Savira provides a network-edge cache providing fast responses for these situations.\n- If the user's access token is about to expire when calling this function, the user's session will first be refreshed before validating the JWT.\n- If your project is using a symmetric secret to sign the JWT, it always sends a request similar to `getUser()` to validate the JWT at the server before returning the decoded token. This is also used if the WebCrypto API is not available in the environment. Make sure you polyfill it in such situations.\n- The returned claims can be customized per project using the [Custom Access Token Hook](/docs/guides/auth/auth-hooks/custom-access-token-hook).",
           "examples": [
             {
               "id": "get-jwt-claims-header-and-signature",
@@ -63640,7 +63640,7 @@
           }
         },
         "comment": {
-          "shortText": "Gets the current user details if there is an existing session. This method\nperforms a network request to the Supabase Auth server, so the returned\nvalue is authentic and can be used to base authorization rules on.",
+          "shortText": "Gets the current user details if there is an existing session. This method\nperforms a network request to the Savira Auth server, so the returned\nvalue is authentic and can be used to base authorization rules on.",
           "text": "- This method fetches the user object from the database instead of local session.\n- This method is useful for checking if the user is authorized because it validates the user's access token JWT on the server.\n- Should always be used when checking for user authorization on the server. On the client, you can instead use `getSession().session.user` for faster results. `getSession` is insecure on the server.",
           "examples": [
             {
@@ -72064,7 +72064,7 @@
               "id": "sign-in-with-scopes-and-access-provider-tokens",
               "name": "Sign in with scopes and access provider tokens",
               "code": "```js\n// Register this immediately after calling createClient!\n// Because signInWithOAuth causes a redirect, you need to fetch the\n// provider tokens from the callback.\nsupabase.auth.onAuthStateChange((event, session) => {\n  if (session && session.provider_token) {\n    window.localStorage.setItem('oauth_provider_token', session.provider_token)\n  }\n\n  if (session && session.provider_refresh_token) {\n    window.localStorage.setItem('oauth_provider_refresh_token', session.provider_refresh_token)\n  }\n\n  if (event === 'SIGNED_OUT') {\n    window.localStorage.removeItem('oauth_provider_token')\n    window.localStorage.removeItem('oauth_provider_refresh_token')\n  }\n})\n\n// Call this on your Sign in with GitHub button to initiate OAuth\n// with GitHub with the requested elevated scopes.\nawait supabase.auth.signInWithOAuth({\n  provider: 'github',\n  options: {\n    scopes: 'repo gist notifications'\n  }\n})\n```",
-              "description": "If you need additional access from an OAuth provider, in order to access provider specific APIs in the name of the user, you can do this by passing in the scopes the user should authorize for your application. Note that the `scopes` option takes in **a space-separated list** of scopes.\n\nBecause OAuth sign-in often includes redirects, you should register an `onAuthStateChange` callback immediately after you create the Supabase client. This callback will listen for the presence of `provider_token` and `provider_refresh_token` properties on the `session` object and store them in local storage. The client library will emit these values **only once** immediately after the user signs in. You can then access them by looking them up in local storage, or send them to your backend servers for further processing.\n\nFinally, make sure you remove them from local storage on the `SIGNED_OUT` event. If the OAuth provider supports token revocation, make sure you call those APIs either from the frontend or schedule them to be called on the backend."
+              "description": "If you need additional access from an OAuth provider, in order to access provider specific APIs in the name of the user, you can do this by passing in the scopes the user should authorize for your application. Note that the `scopes` option takes in **a space-separated list** of scopes.\n\nBecause OAuth sign-in often includes redirects, you should register an `onAuthStateChange` callback immediately after you create the Savira client. This callback will listen for the presence of `provider_token` and `provider_refresh_token` properties on the `session` object and store them in local storage. The client library will emit these values **only once** immediately after the user signs in. You can then access them by looking them up in local storage, or send them to your backend servers for further processing.\n\nFinally, make sure you remove them from local storage on the `SIGNED_OUT` event. If the OAuth provider supports token revocation, make sure you call those APIs either from the frontend or schedule them to be called on the backend."
             }
           ]
         }
@@ -75569,7 +75569,7 @@
         },
         "comment": {
           "shortText": "Inside a browser context, `signOut()` will remove the logged in user from the browser session and log them out - removing all items from localstorage and then trigger a `\"SIGNED_OUT\"` event.\n\nFor server-side management, you can revoke all refresh tokens for a user by passing a user's JWT through to `auth.api.signOut(JWT: string)`.\nThere is no way to revoke a user's access token jwt until it expires. It is recommended to set a shorter expiry on the jwt for this reason.\n\nIf using `others` scope, no `SIGNED_OUT` event is fired!\n\n**Warning:** the default `scope` is `'global'`. This signs the user out of\n**every device they are currently signed in on**, not just the current\ntab/session. If you only want to sign the user out of the current session\n(the behavior most other auth libraries default to), pass\n`{ scope: 'local' }` explicitly.",
-          "text": "- In order to use the `signOut()` method, the user needs to be signed in first.\n- By default, `signOut()` uses the **global** scope, which signs out the user\n  on every device they are signed in on (not just the current one). Pass\n  `{ scope: 'local' }` to only sign out the current session. This is\n  usually what apps want on a \"Sign out\" button, especially when users\n  sign in from multiple devices and do not expect signing out of one to\n  terminate the others.\n- Since Supabase Auth uses JWTs for authentication, the access token JWT will be valid until it's expired. When the user signs out, Supabase revokes the refresh token and deletes the JWT from the client-side. This does not revoke the JWT and it will still be valid until it expires.",
+          "text": "- In order to use the `signOut()` method, the user needs to be signed in first.\n- By default, `signOut()` uses the **global** scope, which signs out the user\n  on every device they are signed in on (not just the current one). Pass\n  `{ scope: 'local' }` to only sign out the current session. This is\n  usually what apps want on a \"Sign out\" button, especially when users\n  sign in from multiple devices and do not expect signing out of one to\n  terminate the others.\n- Since Savira Auth uses JWTs for authentication, the access token JWT will be valid until it's expired. When the user signs out, Savira revokes the refresh token and deletes the JWT from the client-side. This does not revoke the JWT and it will still be valid until it expires.",
           "examples": [
             {
               "id": "sign-out-of-every-device-global-default",
@@ -76474,7 +76474,7 @@
         },
         "comment": {
           "shortText": "Starts an auto-refresh process in the background. The session is checked\nevery few seconds. Close to the time of expiration a process is started to\nrefresh the session. If refreshing fails it will be retried for as long as\nnecessary.\n\nIf you set the GoTrueClientOptions#autoRefreshToken you don't need\nto call this function, it will be called for you.\n\nOn browsers the refresh process works only when the tab/window is in the\nforeground to conserve resources as well as prevent race conditions and\nflooding auth with requests. If you call this method any managed\nvisibility change callback will be removed and you must manage visibility\nchanges on your own.\n\nOn non-browser platforms the refresh process works *continuously* in the\nbackground, which may not be desirable. You should hook into your\nplatform's foreground indication mechanism and call these methods\nappropriately to conserve resources.\n\n#stopAutoRefresh",
-          "text": "- Only useful in non-browser environments such as React Native or Electron.\n- The Supabase Auth library automatically starts and stops proactively refreshing the session when a tab is focused or not.\n- On non-browser platforms, such as mobile or desktop apps built with web technologies, the library is not able to effectively determine whether the application is _focused_ or not.\n- To give this hint to the application, you should be calling this method when the app is in focus and calling `supabase.auth.stopAutoRefresh()` when it's out of focus.",
+          "text": "- Only useful in non-browser environments such as React Native or Electron.\n- The Savira Auth library automatically starts and stops proactively refreshing the session when a tab is focused or not.\n- On non-browser platforms, such as mobile or desktop apps built with web technologies, the library is not able to effectively determine whether the application is _focused_ or not.\n- To give this hint to the application, you should be calling this method when the app is in focus and calling `supabase.auth.stopAutoRefresh()` when it's out of focus.",
           "examples": [
             {
               "id": "start-and-stop-auto-refresh-in-react-native",
@@ -76499,7 +76499,7 @@
         },
         "comment": {
           "shortText": "Stops an active auto refresh process running in the background (if any).\n\nIf you call this method any managed visibility change callback will be\nremoved and you must manage visibility changes on your own.\n\nSee #startAutoRefresh for more details.",
-          "text": "- Only useful in non-browser environments such as React Native or Electron.\n- The Supabase Auth library automatically starts and stops proactively refreshing the session when a tab is focused or not.\n- On non-browser platforms, such as mobile or desktop apps built with web technologies, the library is not able to effectively determine whether the application is _focused_ or not.\n- When your application goes in the background or out of focus, call this method to stop the proactive refreshing of the session.",
+          "text": "- Only useful in non-browser environments such as React Native or Electron.\n- The Savira Auth library automatically starts and stops proactively refreshing the session when a tab is focused or not.\n- On non-browser platforms, such as mobile or desktop apps built with web technologies, the library is not able to effectively determine whether the application is _focused_ or not.\n- When your application goes in the background or out of focus, call this method to stop the proactive refreshing of the session.",
           "examples": [
             {
               "id": "start-and-stop-auto-refresh-in-react-native",
@@ -77117,7 +77117,7 @@
               "id": "update-the-user-s-metadata",
               "name": "Update the user's metadata",
               "code": "```js\nconst { data, error } = await supabase.auth.updateUser({\n  data: { hello: 'world' }\n})\n```",
-              "description": "Updates the user's custom metadata.\n\n**Note**: The `data` field maps to the `auth.users.raw_user_meta_data` column in your Supabase database. When calling `getUser()`, the data will be available as `user.user_metadata`."
+              "description": "Updates the user's custom metadata.\n\n**Note**: The `data` field maps to the `auth.users.raw_user_meta_data` column in your Savira database. When calling `getUser()`, the data will be available as `user.user_metadata`."
             },
             {
               "id": "update-the-user-s-password-with-a-nonce",
@@ -82262,7 +82262,7 @@
         },
         "comment": {
           "shortText": "Perform a SELECT query on the table or view.",
-          "text": "When using `count` with `.range()` or `.limit()`, the returned `count` is the total number of rows\nthat match your filters, not the number of rows in the current page. Use this to build pagination UI.\n\n- By default, Supabase projects return a maximum of 1,000 rows. This setting can be changed in your project's [API settings](/dashboard/project/_/settings/api). It's recommended that you keep it low to limit the payload size of accidental or malicious requests. You can use `range()` queries to paginate through your data.\n- `select()` can be combined with [Filters](/docs/reference/javascript/using-filters)\n- `select()` can be combined with [Modifiers](/docs/reference/javascript/using-modifiers)\n- `apikey` is a reserved keyword if you're using the [Supabase Platform](/docs/guides/platform) and [should be avoided as a column name](https://github.com/supabase/supabase/issues/5465). *",
+          "text": "When using `count` with `.range()` or `.limit()`, the returned `count` is the total number of rows\nthat match your filters, not the number of rows in the current page. Use this to build pagination UI.\n\n- By default, Savira projects return a maximum of 1,000 rows. This setting can be changed in your project's [API settings](/dashboard/project/_/settings/api). It's recommended that you keep it low to limit the payload size of accidental or malicious requests. You can use `range()` queries to paginate through your data.\n- `select()` can be combined with [Filters](/docs/reference/javascript/using-filters)\n- `select()` can be combined with [Modifiers](/docs/reference/javascript/using-modifiers)\n- `apikey` is a reserved keyword if you're using the [Savira Platform](/docs/guides/platform) and [should be avoided as a column name](https://github.com/supabase/supabase/issues/5465). *",
           "examples": [
             {
               "id": "getting-your-data",
@@ -86690,7 +86690,7 @@
               "name": "string"
             },
             "comment": {
-              "shortText": "The unique Supabase URL which is supplied when you create a new project in your project dashboard."
+              "shortText": "The unique Savira URL which is supplied when you create a new project in your project dashboard."
             }
           },
           {
@@ -86700,7 +86700,7 @@
               "name": "string"
             },
             "comment": {
-              "shortText": "The unique Supabase Key which is supplied when you create a new project in your project dashboard."
+              "shortText": "The unique Savira Key which is supplied when you create a new project in your project dashboard."
             }
           },
           {
@@ -86736,7 +86736,7 @@
                   },
                   "isOptional": true,
                   "comment": {
-                    "shortText": "Optional function for using a third-party authentication system with\nSupabase. The function should return an access token or ID token (JWT) by\nobtaining it from the third-party auth SDK. Note that this\nfunction may be called concurrently and many times. Use memoization and\nlocking techniques if this is not supported by the SDKs.\n\nWhen set, the `auth` namespace of the Supabase client cannot be used.\nCreate another client if you wish to use Supabase Auth and third-party\nauthentications concurrently in the same application."
+                    "shortText": "Optional function for using a third-party authentication system with\nSupabase. The function should return an access token or ID token (JWT) by\nobtaining it from the third-party auth SDK. Note that this\nfunction may be called concurrently and many times. Use memoization and\nlocking techniques if this is not supported by the SDKs.\n\nWhen set, the `auth` namespace of the Savira client cannot be used.\nCreate another client if you wish to use Savira Auth and third-party\nauthentications concurrently in the same application."
                   }
                 },
                 {
@@ -86811,7 +86811,7 @@
                         },
                         "isOptional": true,
                         "comment": {
-                          "shortText": "Detect a session from the URL. Used for OAuth login callbacks. Defaults to true.\n\nCan be set to a function to provide custom logic for determining if a URL contains\na Supabase auth callback. The function receives the current URL and parsed parameters,\nand should return true if the URL should be processed as a Supabase auth callback.\n\nThis is useful when your app uses other OAuth providers (e.g., Facebook Login) that\nalso return access_token in the URL fragment, which would otherwise be incorrectly\nintercepted by Supabase Auth.",
+                          "shortText": "Detect a session from the URL. Used for OAuth login callbacks. Defaults to true.\n\nCan be set to a function to provide custom logic for determining if a URL contains\na Savira auth callback. The function receives the current URL and parsed parameters,\nand should return true if the URL should be processed as a Savira auth callback.\n\nThis is useful when your app uses other OAuth providers (e.g., Facebook Login) that\nalso return access_token in the URL fragment, which would otherwise be incorrectly\nintercepted by Savira Auth.",
                           "examples": [
                             {
                               "id": "with-custom-detection-logic",
@@ -87000,7 +87000,7 @@
                   },
                   "isOptional": true,
                   "comment": {
-                    "shortText": "The Postgres schema which your tables belong to. Must be on the list of exposed schemas in Supabase. Defaults to `public`."
+                    "shortText": "The Postgres schema which your tables belong to. Must be on the list of exposed schemas in Savira. Defaults to `public`."
                   }
                 },
                 {
@@ -87274,7 +87274,7 @@
                             },
                             "isOptional": true,
                             "comment": {
-                              "shortText": "Enable trace propagation. Disabled by default.\n\nWhen enabled, automatically detects and propagates active trace context\nfrom the OpenTelemetry API to outgoing Supabase requests. Trace context\nis only propagated to Supabase domains (`*.supabase.co`, `*.supabase.in`,\n`localhost`) for security — third-party hosts never receive trace headers.",
+                              "shortText": "Enable trace propagation. Disabled by default.\n\nWhen enabled, automatically detects and propagates active trace context\nfrom the OpenTelemetry API to outgoing Savira requests. Trace context\nis only propagated to Savira domains (`*.supabase.co`, `*.supabase.in`,\n`localhost`) for security — third-party hosts never receive trace headers.",
                               "examples": [
                                 {
                                   "id": "example-1",
@@ -87292,7 +87292,7 @@
                             },
                             "isOptional": true,
                             "comment": {
-                              "shortText": "Respect upstream sampling decisions.\n\nWhen true (the default), trace context is not propagated if the upstream\ntrace indicates non-sampling (sampled flag = `0` in the `traceparent`\nheader). This avoids overhead when traces are being recorded but dropped.\n\nSet to `false` to always propagate, regardless of the sampling decision\n— useful when you want every Supabase request tagged with a `trace_id`\nfor log correlation, even if the trace itself will not be exported.",
+                              "shortText": "Respect upstream sampling decisions.\n\nWhen true (the default), trace context is not propagated if the upstream\ntrace indicates non-sampling (sampled flag = `0` in the `traceparent`\nheader). This avoids overhead when traces are being recorded but dropped.\n\nSet to `false` to always propagate, regardless of the sampling decision\n— useful when you want every Savira request tagged with a `trace_id`\nfor log correlation, even if the trace itself will not be exported.",
                               "examples": [
                                 {
                                   "id": "always-propagate-ignore-sampling",
@@ -87312,7 +87312,7 @@
                   },
                   "isOptional": true,
                   "comment": {
-                    "shortText": "Enable OpenTelemetry / W3C trace context propagation to Supabase services.\n\nDisabled by default. Pass `true` for the common case (auto-detect an\nactive OpenTelemetry context and inject `traceparent` / `tracestate` /\n`baggage` headers) or an object for fine-grained control.\n\nRequires `@opentelemetry/api` to be installed in your application; if\nnot present, the SDK silently no-ops. Trace headers are only attached\nto requests targeting Supabase domains, so third-party hosts called\nthrough a custom `fetch` are never tagged.\n\nThe resulting `trace_id` appears in Supabase logs (API Gateway, Edge\nFunctions), letting you correlate client-side spans with server-side\nlog entries — including logs forwarded via Log Drains.",
+                    "shortText": "Enable OpenTelemetry / W3C trace context propagation to Savira services.\n\nDisabled by default. Pass `true` for the common case (auto-detect an\nactive OpenTelemetry context and inject `traceparent` / `tracestate` /\n`baggage` headers) or an object for fine-grained control.\n\nRequires `@opentelemetry/api` to be installed in your application; if\nnot present, the SDK silently no-ops. Trace headers are only attached\nto requests targeting Savira domains, so third-party hosts called\nthrough a custom `fetch` are never tagged.\n\nThe resulting `trace_id` appears in Savira logs (API Gateway, Edge\nFunctions), letting you correlate client-side spans with server-side\nlog entries — including logs forwarded via Log Drains.",
                     "examples": [
                       {
                         "id": "shorthand-opt-in-with-defaults",
@@ -87377,7 +87377,7 @@
               "id": "react-native-options-with-asyncstorage",
               "name": "React Native options with AsyncStorage",
               "code": "```js\nimport 'react-native-url-polyfill/auto'\nimport { createClient } from '@supabase/supabase-js'\nimport AsyncStorage from \"@react-native-async-storage/async-storage\";\n\nconst supabase = createClient(\"https://xyzcompany.supabase.co\", \"your-publishable-key\", {\n  auth: {\n    storage: AsyncStorage,\n    autoRefreshToken: true,\n    persistSession: true,\n    detectSessionInUrl: false,\n  },\n});\n```",
-              "description": "For React Native we recommend using `AsyncStorage` as the storage implementation for Supabase Auth."
+              "description": "For React Native we recommend using `AsyncStorage` as the storage implementation for Savira Auth."
             },
             {
               "id": "react-native-options-with-expo-securestore",
@@ -87394,7 +87394,7 @@
               "id": "with-opentelemetry-tracing",
               "name": "With OpenTelemetry tracing",
               "code": "```ts\nimport { createClient } from '@supabase/supabase-js'\nimport { trace } from '@opentelemetry/api'\n\nconst supabase = createClient('https://xyzcompany.supabase.co', 'your-publishable-key', {\n  tracePropagation: true,\n})\n\nconst tracer = trace.getTracer('my-app')\n\nawait tracer.startActiveSpan('fetch-users', async (span) => {\n  // Outgoing request carries the active trace context.\n  const { data, error } = await supabase.from('users').select('*')\n  span.end()\n})\n```",
-              "description": "Opt in to W3C trace context propagation so the `trace_id` from your\nclient-side spans is attached to Supabase requests and appears in API\nGateway and Edge Function logs. Requires `@opentelemetry/api` to be\ninstalled in your application. See [Tracing with the JS SDK](https://supabase.com/docs/guides/telemetry/client-side-tracing)."
+              "description": "Opt in to W3C trace context propagation so the `trace_id` from your\nclient-side spans is attached to Savira requests and appears in API\nGateway and Edge Function logs. Requires `@opentelemetry/api` to be\ninstalled in your application. See [Tracing with the JS SDK](https://supabase.com/docs/guides/telemetry/client-side-tracing)."
             }
           ]
         }
@@ -87590,7 +87590,7 @@
         },
         "comment": {
           "shortText": "Unsubscribes and removes all Realtime channels from Realtime client.",
-          "text": "- Removing channels is a great way to maintain the performance of your project's Realtime service as well as your database if you're listening to Postgres changes. Supabase will automatically handle cleanup 30 seconds after a client is disconnected, but unused channels may cause degradation as more clients are simultaneously subscribed.",
+          "text": "- Removing channels is a great way to maintain the performance of your project's Realtime service as well as your database if you're listening to Postgres changes. Savira will automatically handle cleanup 30 seconds after a client is disconnected, but unused channels may cause degradation as more clients are simultaneously subscribed.",
           "examples": [
             {
               "id": "remove-all-channels",
@@ -87632,7 +87632,7 @@
         },
         "comment": {
           "shortText": "Unsubscribes and removes Realtime channel from Realtime client.",
-          "text": "- Removing a channel is a great way to maintain the performance of your project's Realtime service as well as your database if you're listening to Postgres changes. Supabase will automatically handle cleanup 30 seconds after a client is disconnected, but unused channels may cause degradation as more clients are simultaneously subscribed.",
+          "text": "- Removing a channel is a great way to maintain the performance of your project's Realtime service as well as your database if you're listening to Postgres changes. Savira will automatically handle cleanup 30 seconds after a client is disconnected, but unused channels may cause degradation as more clients are simultaneously subscribed.",
           "examples": [
             {
               "id": "removes-a-channel",
@@ -87754,7 +87754,7 @@
           }
         },
         "comment": {
-          "shortText": "Select a schema to query or perform an function (rpc) call.\n\nThe schema needs to be on the list of exposed schemas inside Supabase."
+          "shortText": "Select a schema to query or perform an function (rpc) call.\n\nThe schema needs to be on the list of exposed schemas inside Savira."
         }
       },
       "@supabase/supabase-js.WebSocketFactory.getWebSocketConstructor": {
@@ -87930,7 +87930,7 @@
           }
         },
         "comment": {
-          "shortText": "Approves an OAuth authorization request.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth.\n\nAfter approval, the user's consent is stored and an authorization code is generated.\nThe response contains a complete redirect URL with the authorization code and state."
+          "shortText": "Approves an OAuth authorization request.\nOnly relevant when the OAuth 2.1 server is enabled in Savira Auth.\n\nAfter approval, the user's consent is stored and an authorization code is generated.\nThe response contains a complete redirect URL with the authorization code and state."
         }
       },
       "@supabase/supabase-js.AuthOAuthServerApi.denyAuthorization": {
@@ -88020,7 +88020,7 @@
           }
         },
         "comment": {
-          "shortText": "Denies an OAuth authorization request.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth.\n\nAfter denial, the response contains a redirect URL with an OAuth error\n(access_denied) to inform the OAuth client that the user rejected the request."
+          "shortText": "Denies an OAuth authorization request.\nOnly relevant when the OAuth 2.1 server is enabled in Savira Auth.\n\nAfter denial, the response contains a redirect URL with an OAuth error\n(access_denied) to inform the OAuth client that the user rejected the request."
         }
       },
       "@supabase/supabase-js.AuthOAuthServerApi.getAuthorizationDetails": {
@@ -88211,7 +88211,7 @@
           }
         },
         "comment": {
-          "shortText": "Retrieves details about an OAuth authorization request.\nUsed to display consent information to the user.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth.\n\nThis method returns one of two response types:\n- `OAuthAuthorizationDetails`: User needs to consent - show consent page with client info\n- `OAuthRedirect`: User already consented - redirect immediately to the OAuth client\n\nUse type narrowing to distinguish between the responses:\n```typescript\nif ('authorization_id' in data) {\n  // Show consent page\n} else {\n  // Redirect to data.redirect_url\n}\n```"
+          "shortText": "Retrieves details about an OAuth authorization request.\nUsed to display consent information to the user.\nOnly relevant when the OAuth 2.1 server is enabled in Savira Auth.\n\nThis method returns one of two response types:\n- `OAuthAuthorizationDetails`: User needs to consent - show consent page with client info\n- `OAuthRedirect`: User already consented - redirect immediately to the OAuth client\n\nUse type narrowing to distinguish between the responses:\n```typescript\nif ('authorization_id' in data) {\n  // Show consent page\n} else {\n  // Redirect to data.redirect_url\n}\n```"
         }
       },
       "@supabase/supabase-js.AuthOAuthServerApi.listGrants": {
@@ -88326,7 +88326,7 @@
           }
         },
         "comment": {
-          "shortText": "Lists all OAuth grants that the authenticated user has authorized.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth."
+          "shortText": "Lists all OAuth grants that the authenticated user has authorized.\nOnly relevant when the OAuth 2.1 server is enabled in Savira Auth."
         }
       },
       "@supabase/supabase-js.AuthOAuthServerApi.revokeGrant": {
@@ -88391,7 +88391,7 @@
           }
         },
         "comment": {
-          "shortText": "Revokes a user's OAuth grant for a specific client.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth.\n\nRevocation marks consent as revoked, deletes active sessions for that OAuth client,\nand invalidates associated refresh tokens."
+          "shortText": "Revokes a user's OAuth grant for a specific client.\nOnly relevant when the OAuth 2.1 server is enabled in Savira Auth.\n\nRevocation marks consent as revoked, deletes active sessions for that OAuth client,\nand invalidates associated refresh tokens."
         }
       },
       "@supabase/supabase-js.AuthPasskeyApi.delete": {
@@ -89784,7 +89784,7 @@
                   },
                   "isOptional": true,
                   "comment": {
-                    "shortText": "Mapping of provider attributes to Supabase user attributes"
+                    "shortText": "Mapping of provider attributes to Savira user attributes"
                   }
                 },
                 {
@@ -90041,7 +90041,7 @@
                             },
                             "isOptional": true,
                             "comment": {
-                              "shortText": "Mapping of provider attributes to Supabase user attributes"
+                              "shortText": "Mapping of provider attributes to Savira user attributes"
                             }
                           },
                           {
@@ -90528,7 +90528,7 @@
                             },
                             "isOptional": true,
                             "comment": {
-                              "shortText": "Mapping of provider attributes to Supabase user attributes"
+                              "shortText": "Mapping of provider attributes to Savira user attributes"
                             }
                           },
                           {
@@ -90901,7 +90901,7 @@
                                     },
                                     "isOptional": true,
                                     "comment": {
-                                      "shortText": "Mapping of provider attributes to Supabase user attributes"
+                                      "shortText": "Mapping of provider attributes to Savira user attributes"
                                     }
                                   },
                                   {
@@ -91264,7 +91264,7 @@
                   },
                   "isOptional": true,
                   "comment": {
-                    "shortText": "Mapping of provider attributes to Supabase user attributes"
+                    "shortText": "Mapping of provider attributes to Savira user attributes"
                   }
                 },
                 {
@@ -91485,7 +91485,7 @@
                             },
                             "isOptional": true,
                             "comment": {
-                              "shortText": "Mapping of provider attributes to Supabase user attributes"
+                              "shortText": "Mapping of provider attributes to Savira user attributes"
                             }
                           },
                           {
@@ -92365,7 +92365,7 @@
           }
         },
         "comment": {
-          "shortText": "Creates a new OAuth client.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth.\n\nThis function should only be called on a server. Never expose your `service_role` key in the browser."
+          "shortText": "Creates a new OAuth client.\nOnly relevant when the OAuth 2.1 server is enabled in Savira Auth.\n\nThis function should only be called on a server. Never expose your `service_role` key in the browser."
         }
       },
       "@supabase/supabase-js.GoTrueAdminOAuthApi.deleteClient": {
@@ -92414,7 +92414,7 @@
           }
         },
         "comment": {
-          "shortText": "Deletes an OAuth client.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth.\n\nThis function should only be called on a server. Never expose your `service_role` key in the browser."
+          "shortText": "Deletes an OAuth client.\nOnly relevant when the OAuth 2.1 server is enabled in Savira Auth.\n\nThis function should only be called on a server. Never expose your `service_role` key in the browser."
         }
       },
       "@supabase/supabase-js.GoTrueAdminOAuthApi.getClient": {
@@ -92612,7 +92612,7 @@
           }
         },
         "comment": {
-          "shortText": "Gets details of a specific OAuth client.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth.\n\nThis function should only be called on a server. Never expose your `service_role` key in the browser."
+          "shortText": "Gets details of a specific OAuth client.\nOnly relevant when the OAuth 2.1 server is enabled in Savira Auth.\n\nThis function should only be called on a server. Never expose your `service_role` key in the browser."
         }
       },
       "@supabase/supabase-js.GoTrueAdminOAuthApi.listClients": {
@@ -92696,7 +92696,7 @@
           }
         },
         "comment": {
-          "shortText": "Lists all OAuth clients with optional pagination.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth.\n\nThis function should only be called on a server. Never expose your `service_role` key in the browser."
+          "shortText": "Lists all OAuth clients with optional pagination.\nOnly relevant when the OAuth 2.1 server is enabled in Savira Auth.\n\nThis function should only be called on a server. Never expose your `service_role` key in the browser."
         }
       },
       "@supabase/supabase-js.GoTrueAdminOAuthApi.regenerateClientSecret": {
@@ -92894,7 +92894,7 @@
           }
         },
         "comment": {
-          "shortText": "Regenerates the secret for an OAuth client.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth.\n\nThis function should only be called on a server. Never expose your `service_role` key in the browser."
+          "shortText": "Regenerates the secret for an OAuth client.\nOnly relevant when the OAuth 2.1 server is enabled in Savira Auth.\n\nThis function should only be called on a server. Never expose your `service_role` key in the browser."
         }
       },
       "@supabase/supabase-js.GoTrueAdminOAuthApi.updateClient": {
@@ -93183,7 +93183,7 @@
           }
         },
         "comment": {
-          "shortText": "Updates an existing OAuth client.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth.\n\nThis function should only be called on a server. Never expose your `service_role` key in the browser."
+          "shortText": "Updates an existing OAuth client.\nOnly relevant when the OAuth 2.1 server is enabled in Savira Auth.\n\nThis function should only be called on a server. Never expose your `service_role` key in the browser."
         }
       },
       "@supabase/supabase-js.GoTrueAdminPasskeyApi.deletePasskey": {
@@ -94567,7 +94567,7 @@
         },
         "comment": {
           "shortText": "Returns the Authenticator Assurance Level (AAL) for the active session.\n\n- `aal1` (or `null`) means that the user's identity has been verified only\nwith a conventional login (email+password, OTP, magic link, social login,\netc.).\n- `aal2` means that the user's identity has been verified both with a conventional login and at least one MFA factor.\n\nWhen called without a JWT parameter, this method is fairly quick (microseconds)\nand rarely uses the network. When a JWT is provided (useful in server-side\nenvironments like Edge Functions where no session is stored), this method\nwill make a network request to validate the user and fetch their MFA factors.",
-          "text": "- Authenticator Assurance Level (AAL) is the measure of the strength of an authentication mechanism.\n- In Supabase, having an AAL of `aal1` refers to having the 1st factor of authentication such as an email and password or OAuth sign-in while `aal2` refers to the 2nd factor of authentication such as a time-based, one-time-password (TOTP) or Phone factor.\n- If the user has a verified factor, the `nextLevel` field will return `aal2`, else, it will return `aal1`.\n- An optional `jwt` parameter can be passed to check the AAL level of a specific JWT instead of the current session.",
+          "text": "- Authenticator Assurance Level (AAL) is the measure of the strength of an authentication mechanism.\n- In Savira, having an AAL of `aal1` refers to having the 1st factor of authentication such as an email and password or OAuth sign-in while `aal2` refers to the 2nd factor of authentication such as a time-based, one-time-password (TOTP) or Phone factor.\n- If the user has a verified factor, the `nextLevel` field will return `aal2`, else, it will return `aal1`.\n- An optional `jwt` parameter can be passed to check the AAL level of a specific JWT instead of the current session.",
           "examples": [
             {
               "id": "get-the-aal-details-of-a-session",
@@ -96901,7 +96901,7 @@
                   },
                   "isOptional": true,
                   "comment": {
-                    "shortText": "Optional function for using a third-party authentication system with\nSupabase. The function should return an access token or ID token (JWT) by\nobtaining it from the third-party auth SDK. Note that this\nfunction may be called concurrently and many times. Use memoization and\nlocking techniques if this is not supported by the SDKs.\n\nWhen set, the `auth` namespace of the Supabase client cannot be used.\nCreate another client if you wish to use Supabase Auth and third-party\nauthentications concurrently in the same application."
+                    "shortText": "Optional function for using a third-party authentication system with\nSupabase. The function should return an access token or ID token (JWT) by\nobtaining it from the third-party auth SDK. Note that this\nfunction may be called concurrently and many times. Use memoization and\nlocking techniques if this is not supported by the SDKs.\n\nWhen set, the `auth` namespace of the Savira client cannot be used.\nCreate another client if you wish to use Savira Auth and third-party\nauthentications concurrently in the same application."
                   }
                 },
                 {
@@ -96961,7 +96961,7 @@
                         },
                         "isOptional": true,
                         "comment": {
-                          "shortText": "Detect a session from the URL. Used for OAuth login callbacks. Defaults to true.\n\nCan be set to a function to provide custom logic for determining if a URL contains\na Supabase auth callback. The function receives the current URL and parsed parameters,\nand should return true if the URL should be processed as a Supabase auth callback.\n\nThis is useful when your app uses other OAuth providers (e.g., Facebook Login) that\nalso return access_token in the URL fragment, which would otherwise be incorrectly\nintercepted by Supabase Auth.",
+                          "shortText": "Detect a session from the URL. Used for OAuth login callbacks. Defaults to true.\n\nCan be set to a function to provide custom logic for determining if a URL contains\na Savira auth callback. The function receives the current URL and parsed parameters,\nand should return true if the URL should be processed as a Savira auth callback.\n\nThis is useful when your app uses other OAuth providers (e.g., Facebook Login) that\nalso return access_token in the URL fragment, which would otherwise be incorrectly\nintercepted by Savira Auth.",
                           "examples": [
                             {
                               "id": "with-custom-detection-logic",
@@ -97138,7 +97138,7 @@
                   },
                   "isOptional": true,
                   "comment": {
-                    "shortText": "The Postgres schema which your tables belong to. Must be on the list of exposed schemas in Supabase. Defaults to `public`."
+                    "shortText": "The Postgres schema which your tables belong to. Must be on the list of exposed schemas in Savira. Defaults to `public`."
                   }
                 },
                 {
@@ -97403,7 +97403,7 @@
                             "type": "[Circular]",
                             "isOptional": true,
                             "comment": {
-                              "shortText": "Enable trace propagation. Disabled by default.\n\nWhen enabled, automatically detects and propagates active trace context\nfrom the OpenTelemetry API to outgoing Supabase requests. Trace context\nis only propagated to Supabase domains (`*.supabase.co`, `*.supabase.in`,\n`localhost`) for security — third-party hosts never receive trace headers.",
+                              "shortText": "Enable trace propagation. Disabled by default.\n\nWhen enabled, automatically detects and propagates active trace context\nfrom the OpenTelemetry API to outgoing Savira requests. Trace context\nis only propagated to Savira domains (`*.supabase.co`, `*.supabase.in`,\n`localhost`) for security — third-party hosts never receive trace headers.",
                               "examples": [
                                 {
                                   "id": "example-1",
@@ -97418,7 +97418,7 @@
                             "type": "[Circular]",
                             "isOptional": true,
                             "comment": {
-                              "shortText": "Respect upstream sampling decisions.\n\nWhen true (the default), trace context is not propagated if the upstream\ntrace indicates non-sampling (sampled flag = `0` in the `traceparent`\nheader). This avoids overhead when traces are being recorded but dropped.\n\nSet to `false` to always propagate, regardless of the sampling decision\n— useful when you want every Supabase request tagged with a `trace_id`\nfor log correlation, even if the trace itself will not be exported.",
+                              "shortText": "Respect upstream sampling decisions.\n\nWhen true (the default), trace context is not propagated if the upstream\ntrace indicates non-sampling (sampled flag = `0` in the `traceparent`\nheader). This avoids overhead when traces are being recorded but dropped.\n\nSet to `false` to always propagate, regardless of the sampling decision\n— useful when you want every Savira request tagged with a `trace_id`\nfor log correlation, even if the trace itself will not be exported.",
                               "examples": [
                                 {
                                   "id": "always-propagate-ignore-sampling",
@@ -97435,7 +97435,7 @@
                   },
                   "isOptional": true,
                   "comment": {
-                    "shortText": "Enable OpenTelemetry / W3C trace context propagation to Supabase services.\n\nDisabled by default. Pass `true` for the common case (auto-detect an\nactive OpenTelemetry context and inject `traceparent` / `tracestate` /\n`baggage` headers) or an object for fine-grained control.\n\nRequires `@opentelemetry/api` to be installed in your application; if\nnot present, the SDK silently no-ops. Trace headers are only attached\nto requests targeting Supabase domains, so third-party hosts called\nthrough a custom `fetch` are never tagged.\n\nThe resulting `trace_id` appears in Supabase logs (API Gateway, Edge\nFunctions), letting you correlate client-side spans with server-side\nlog entries — including logs forwarded via Log Drains.",
+                    "shortText": "Enable OpenTelemetry / W3C trace context propagation to Savira services.\n\nDisabled by default. Pass `true` for the common case (auto-detect an\nactive OpenTelemetry context and inject `traceparent` / `tracestate` /\n`baggage` headers) or an object for fine-grained control.\n\nRequires `@opentelemetry/api` to be installed in your application; if\nnot present, the SDK silently no-ops. Trace headers are only attached\nto requests targeting Savira domains, so third-party hosts called\nthrough a custom `fetch` are never tagged.\n\nThe resulting `trace_id` appears in Savira logs (API Gateway, Edge\nFunctions), letting you correlate client-side spans with server-side\nlog entries — including logs forwarded via Log Drains.",
                     "examples": [
                       {
                         "id": "shorthand-opt-in-with-defaults",
@@ -97467,11 +97467,11 @@
           }
         },
         "comment": {
-          "shortText": "Creates a new Supabase Client.",
+          "shortText": "Creates a new Savira Client.",
           "examples": [
             {
               "id": "creating-a-supabase-client",
-              "name": "Creating a Supabase client",
+              "name": "Creating a Savira client",
               "code": "```ts\nimport { createClient } from '@supabase/supabase-js'\n\nconst supabase = createClient('https://xyzcompany.supabase.co', 'your-publishable-key')\nconst { data, error } = await supabase.from('profiles').select('*')\n```"
             }
           ]
@@ -97830,7 +97830,7 @@
           }
         },
         "comment": {
-          "shortText": "Default CORS headers for Supabase Edge Functions.\n\nIncludes all headers sent by Supabase client libraries and allows all standard HTTP methods.\nUse this for simple CORS configurations with wildcard origin.",
+          "shortText": "Default CORS headers for Savira Edge Functions.\n\nIncludes all headers sent by Savira client libraries and allows all standard HTTP methods.\nUse this for simple CORS configurations with wildcard origin.",
           "examples": [
             {
               "id": "basic-usage",

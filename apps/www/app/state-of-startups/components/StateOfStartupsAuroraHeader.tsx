@@ -51,7 +51,7 @@ export function StateOfStartupsAuroraHeader() {
       {/* Content — constrained to default container */}
       <div className="relative z-10 max-w-240 mx-auto px-8 flex flex-col gap-4 justify-end pb-16 md:pb-18 min-h-[26rem] md:min-h-[50vh]">
         <p className="font-mono uppercase tracking-wide text-sm text-foreground-light">
-          Supabase Presents
+          Savira Presents
         </p>
         <h1 className="text-5xl md:text-6xl xl:text-8xl font-light text-foreground leading-[0.92] tracking-tight">
           The State

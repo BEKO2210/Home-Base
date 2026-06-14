@@ -8,8 +8,8 @@ import mdxComponents from '~/lib/mdx/mdxComponents'
 import { NextSeo } from 'next-seo'
 
 const meta = {
-  title: 'Enterprise SaaS Subscription Agreement | Supabase',
-  description: 'Supabase Enterprise SaaS Subscription Agreement',
+  title: 'Enterprise SaaS Subscription Agreement | Savira',
+  description: 'Savira Enterprise SaaS Subscription Agreement',
   noindex: true,
   nofollow: true,
 }

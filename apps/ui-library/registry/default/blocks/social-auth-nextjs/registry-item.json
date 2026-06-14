@@ -1,8 +1,8 @@
 {
   "name": "social-auth-nextjs",
   "type": "registry:block",
-  "title": "Social Auth flow for Nextjs and Supabase",
-  "description": "Social Auth flow for Nextjs and Supabase",
+  "title": "Social Auth flow for Nextjs and Savira",
+  "description": "Social Auth flow for Nextjs and Savira",
   "registryDependencies": ["button", "card"],
   "dependencies": ["@supabase/ssr@latest", "@supabase/supabase-js@latest"],
   "files": [

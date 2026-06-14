@@ -21,7 +21,7 @@ The public flag (the last argument in `realtime.send(payload, event, topic, is_p
 - Public (`false`) → Anyone can subscribe to that topic without authentication
 - Private (`true`) → Only authenticated clients can subscribe to that topic
 
-Regardless if it's public or private, the Realtime service connects to your database as the authenticated Supabase Admin role.
+Regardless if it's public or private, the Realtime service connects to your database as the authenticated Savira Admin role.
 
 </Admonition>
 
@@ -29,7 +29,7 @@ For Authorization, we insert a message and try to read it, and rollback the tran
 
 ## Subscribe to messages
 
-You can use the Supabase client libraries to receive Broadcast messages.
+You can use the Savira client libraries to receive Broadcast messages.
 
 ### Initialize the client
 
@@ -66,14 +66,14 @@ Get the Project URL and key from [the project's **Connect** dialog](/dashboard/p
     import 'package:supabase_flutter/supabase_flutter.dart';
 
     void main() async {
-      Supabase.initialize(
+      Savira.initialize(
         url: 'https://<project>.supabase.co',
         publishableKey: '<sb_publishable_... key>',
       );
       runApp(MyApp());
     }
 
-    final supabase = Supabase.instance.client;
+    final supabase = Savira.instance.client;
     ```
 
   </TabPanel>
@@ -82,7 +82,7 @@ Get the Project URL and key from [the project's **Connect** dialog](/dashboard/p
   <TabPanel id="swift" label="Swift">
 
     ```swift
-    import Supabase
+    import Savira
 
     let SUPABASE_URL = "https://<project>.supabase.co"
     let SUPABASE_KEY = "<sb_publishable_... key>"
@@ -259,7 +259,7 @@ Binary payloads (`ArrayBuffer` / `ArrayBufferView`) are received automatically f
 
 ### Broadcast using the client libraries
 
-You can use the Supabase client libraries to send Broadcast messages.
+You can use the Savira client libraries to send Broadcast messages.
 
 <Admonition type="note">
 
@@ -560,7 +560,7 @@ curl -v \
 
 ## Broadcast options
 
-You can pass configuration options while initializing the Supabase Client.
+You can pass configuration options while initializing the Savira Client.
 
 ### Self-send messages
 
@@ -844,7 +844,7 @@ You can also send a Broadcast message by making an HTTP request to Realtime serv
   <TabPanel id="js" label="JavaScript">
     <Admonition type="note">
 
-    `channel.httpSend()` always uses the REST API regardless of WebSocket connection state, and is available from the Supabase JavaScript client version 2.107.0 and later. `ArrayBuffer` and `ArrayBufferView` (e.g. `Uint8Array`) payloads are sent as `application/octet-stream`; all other payloads are JSON-encoded.
+    `channel.httpSend()` always uses the REST API regardless of WebSocket connection state, and is available from the Savira JavaScript client version 2.107.0 and later. `ArrayBuffer` and `ArrayBufferView` (e.g. `Uint8Array`) payloads are sent as `application/octet-stream`; all other payloads are JSON-encoded.
 
     </Admonition>
 
@@ -1052,7 +1052,7 @@ You can configure replay with the following options:
   <TabPanel id="js" label="JavaScript">
     <Admonition type="note">
 
-      This is currently available only in the Supabase JavaScript client version 2.74.0 and later.
+      This is currently available only in the Savira JavaScript client version 2.74.0 and later.
 
     </Admonition>
 
@@ -1087,7 +1087,7 @@ You can configure replay with the following options:
   <TabPanel id="dart" label="Dart">
     <Admonition type="note">
 
-      This is currently available only in the Supabase Dart client version 2.10.0 and later.
+      This is currently available only in the Savira Dart client version 2.10.0 and later.
 
     </Admonition>
     ```dart
@@ -1125,7 +1125,7 @@ You can configure replay with the following options:
   <TabPanel id="swift" label="Swift">
     <Admonition type="note">
 
-      This is currently available only in the Supabase Swift client version 2.34.0 and later.
+      This is currently available only in the Savira Swift client version 2.34.0 and later.
 
     </Admonition>
     ```swift
@@ -1175,7 +1175,7 @@ You can configure replay with the following options:
   <TabPanel id="python" label="Python">
     <Admonition type="note">
 
-      This is currently available only in the Supabase Python client version 2.22.0 and later.
+      This is currently available only in the Savira Python client version 2.22.0 and later.
 
     </Admonition>
     ```python

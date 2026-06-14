@@ -71,7 +71,7 @@ const data: () => {
 
   return {
     metadata: {
-      metaTitle: 'Hosted Postgres | Supabase',
+      metaTitle: 'Hosted Postgres | Savira',
       metaDescription:
         'A managed Postgres database in seconds, free to start and just $25 a month in production. Plus a dashboard, backups, Point-in-Time Recovery, connection pooling, read replicas, and the full Postgres extension ecosystem.',
     },
@@ -117,7 +117,7 @@ const data: () => {
           <Logos showHeading={false} className="pb-0!" />
           <p className="text-center text-sm text-foreground-lighter">
             {companyStats.databasesManaged.text} databases created and{' '}
-            {companyStats.developersRegistered.text} developers on Supabase
+            {companyStats.developersRegistered.text} developers on Savira
           </p>
         </div>
       ),
@@ -127,7 +127,7 @@ const data: () => {
       label: '',
       heading: (
         <>
-          Why developers choose Supabase for{' '}
+          Why developers choose Savira for{' '}
           <span className="text-foreground">hosted Postgres</span>
         </>
       ),
@@ -172,7 +172,7 @@ const data: () => {
         </>
       ),
       subheading:
-        'Most hosted Postgres plans start cheap and stay just okay. Supabase is free to start and $25 a month for a production database, with no charges for reads or writes and no per-connection fees. Here is what is included at each tier.',
+        'Most hosted Postgres plans start cheap and stay just okay. Savira is free to start and $25 a month for a production database, with no charges for reads or writes and no per-connection fees. Here is what is included at each tier.',
       plans: [{ name: 'Free' }, { name: 'Pro', highlight: true }],
       rows: [
         { feature: 'Monthly price', values: ['$0', '$25'] },
@@ -376,7 +376,7 @@ const data: () => {
         </>
       ),
       subheading:
-        'Supabase is Postgres, so the ceiling is Postgres. Scale compute and storage independently, add replicas, and keep query times low whether you are handling a launch spike or steady growth. You will not outgrow it and need to start over somewhere else.',
+        'Savira is Postgres, so the ceiling is Postgres. Scale compute and storage independently, add replicas, and keep query times low whether you are handling a launch spike or steady growth. You will not outgrow it and need to start over somewhere else.',
       highlights: [
         {
           heading: companyStats.databasesManaged.label,
@@ -524,7 +524,7 @@ const data: () => {
       ),
       headingRight: (
         <>
-          Or, start with <span className="text-foreground">Supabase AI Prompts</span>{' '}
+          Or, start with <span className="text-foreground">Savira AI Prompts</span>{' '}
           <Sparkles size={24} className="inline text-foreground" />
         </>
       ),
@@ -539,9 +539,9 @@ const data: () => {
       aiPrompts: [
         {
           id: 'auth-setup',
-          title: 'Bootstrap Next.js app with Supabase Auth',
+          title: 'Bootstrap Next.js app with Savira Auth',
           description:
-            '## Overview of implementing Supabase Auth SSR\n1. Install @supabase/supabase-js and...',
+            '## Overview of implementing Savira Auth SSR\n1. Install @supabase/supabase-js and...',
           code: `1. Install @supabase/supabase-js and @supabase/ssr packages.
 2. Set up environment variables.
 3. Write two utility functions with \u0060createClient\u0060 functions to create a browser client and a server client.
@@ -553,9 +553,9 @@ const data: () => {
         },
         {
           id: 'edge-functions',
-          title: 'Writing Supabase Edge Functions',
+          title: 'Writing Savira Edge Functions',
           description:
-            "You're a Supabase Postgres expert in writing row level security policies. Your purpose is to generate...",
+            "You're a Savira Postgres expert in writing row level security policies. Your purpose is to generate...",
           code: `1. Try to use Web APIs and Deno's core APIs instead of external dependencies (eg: use fetch instead of Axios, use WebSockets API instead of node-ws)
 2. If you are reusing utility methods between Edge Functions, add them to 'supabase/functions/_shared' and import using a relative path. Do NOT have cross dependencies between Edge Functions.
 3. Do NOT use bare specifiers when importing dependecnies. If you need to use an external dependency, make sure it's prefixed with either 'npm:' or 'jsr:'.
@@ -567,8 +567,8 @@ const data: () => {
           id: 'declarative-db-schema',
           title: 'Declarative Database Schema',
           description:
-            "You're a Supabase Postgres expert in writing row level security policies. Your purpose is to generate...",
-          code: `Mandatory Instructions for Supabase Declarative Schema Management
+            "You're a Savira Postgres expert in writing row level security policies. Your purpose is to generate...",
+          code: `Mandatory Instructions for Savira Declarative Schema Management
 ## 1. **Exclusive Use of Declarative Schema**
 -**All database schema modifications must be defined within '.sql' files located in the 'supabase/schemas/' directory.`,
           language: 'markdown',
@@ -579,8 +579,8 @@ const data: () => {
           id: 'rls-policies',
           title: 'Create RLS policies',
           description:
-            "You're a Supabase Postgres expert in writing row level security policies. Your purpose is to generate...",
-          code: `You're a Supabase Postgres expert in writing row level security policies. Your purpose is to generate a policy with the constraints given by the user. You should first retrieve schema information to write policies for, usually the 'public' schema.
+            "You're a Savira Postgres expert in writing row level security policies. Your purpose is to generate...",
+          code: `You're a Savira Postgres expert in writing row level security policies. Your purpose is to generate a policy with the constraints given by the user. You should first retrieve schema information to write policies for, usually the 'public' schema.
 The output should use the following instructions:
 
 - The generated SQL must be valid SQL.`,
@@ -594,7 +594,7 @@ The output should use the following instructions:
       id: 'mcp',
       heading: (
         <div className="text-foreground-lighter">
-          Supabase works seamlessly with{' '}
+          Savira works seamlessly with{' '}
           <span className="text-foreground">your favorite AI code editor</span>
         </div>
       ),

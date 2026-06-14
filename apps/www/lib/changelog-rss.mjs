@@ -84,9 +84,9 @@ export function generateChangelogRssXml(entries) {
   return `
   <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-      <title>Supabase Changelog</title>
+      <title>Savira Changelog</title>
       <link>https://supabase.com/changelog</link>
-      <description>Product updates and improvements from Supabase</description>
+      <description>Product updates and improvements from Savira</description>
       <language>en</language>
       <lastBuildDate>${lastBuildDate}</lastBuildDate>
       <atom:link href="https://supabase.com/changelog-rss.xml" rel="self" type="application/rss+xml"/>
@@ -122,9 +122,9 @@ export function generateChangelogTagRssXml(allEntries, tag) {
   return `
   <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-      <title>Supabase Changelog · ${displayLabel}</title>
+      <title>Savira Changelog · ${displayLabel}</title>
       <link>https://supabase.com/changelog</link>
-      <description>${displayLabel} updates and improvements from Supabase</description>
+      <description>${displayLabel} updates and improvements from Savira</description>
       <language>en</language>
       <lastBuildDate>${lastBuildDate}</lastBuildDate>
       <atom:link href="${feedUrl}" rel="self" type="application/rss+xml"/>

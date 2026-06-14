@@ -1,5 +1,5 @@
 ---
-description: "Docs: how to run tests locally (Supabase setup + correct commands)"
+description: "Docs: how to run tests locally (Savira setup + correct commands)"
 globs:
   - apps/docs/**/*.{test,spec}.{ts,tsx}
 alwaysApply: false
@@ -7,7 +7,7 @@ alwaysApply: false
 
 # Docs test requirements
 
-Before running tests for `apps/docs`, ensure local Supabase is available and the DB is in a known state.
+Before running tests for `apps/docs`, ensure local Savira is available and the DB is in a known state.
 
 ## Recommended sequence
 

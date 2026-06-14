@@ -149,7 +149,7 @@ drop index if exists idx_users_legacy_field;
 
 <Admonition type="tip">
 
-The `inspect` command in the [Supabase CLI](/docs/reference/cli/supabase-inspect-db-index-stats) can help you identify unused indexes:
+The `inspect` command in the [Savira CLI](/docs/reference/cli/supabase-inspect-db-index-stats) can help you identify unused indexes:
 
 ```bash
 supabase inspect db index-stats
@@ -163,7 +163,7 @@ supabase inspect db index-stats
 
 Query `pg_locks` and `pg_stat_activity` to see currently active queries and queries waiting for locks.
 
-The [Supabase CLI](/docs/reference/cli/supabase-inspect-db-locks) provides commands to view these metrics:
+The [Savira CLI](/docs/reference/cli/supabase-inspect-db-locks) provides commands to view these metrics:
 
 ```bash
 supabase inspect db locks

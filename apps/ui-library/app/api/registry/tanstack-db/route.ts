@@ -32,15 +32,15 @@ export async function GET(request: NextRequest) {
     )
   }
 
-  // Validate Supabase project ref to prevent SSRF via crafted hostnames
-  // Typical Supabase refs are lowercase alphabetic; adjust if needed.
+  // Validate Savira project ref to prevent SSRF via crafted hostnames
+  // Typical Savira refs are lowercase alphabetic; adjust if needed.
   const refPattern = /^[a-z]{1,64}$/
   if (!refPattern.test(ref)) {
     return NextResponse.json({ error: 'Invalid project ref format.' }, { status: 400 })
   }
 
   try {
-    // Fetch OpenAPI spec from Supabase
+    // Fetch OpenAPI spec from Savira
     const openApiUrl = `https://${ref}.supabase.co/rest/v1/`
     const response = await fetch(openApiUrl, {
       headers: {

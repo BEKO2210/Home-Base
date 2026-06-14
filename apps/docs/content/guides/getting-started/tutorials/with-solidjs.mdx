@@ -1,11 +1,11 @@
 ---
 title: 'Build a User Management App with SolidJS'
-description: 'Learn how to use Supabase in your SolidJS App.'
+description: 'Learn how to use Savira in your SolidJS App.'
 ---
 
 <$Partial path="quickstart_intro.mdx" />
 
-![Supabase User Management example](/docs/img/user-management-demo.png)
+![Savira User Management example](/docs/img/user-management-demo.png)
 
 <Admonition type="note">
 
@@ -46,7 +46,7 @@ meta="name=.env"
 
 </$CodeTabs>
 
-Now that you have the API credentials in place, create a helper file to initialize the Supabase client. These variables will be exposed
+Now that you have the API credentials in place, create a helper file to initialize the Savira client. These variables will be exposed
 on the browser, and that's completely fine since you have [Row Level Security](/docs/guides/auth#row-level-security) enabled on the Database.
 
 <$CodeTabs>
@@ -96,7 +96,7 @@ meta="name=src/Account.tsx"
 
 ## Profile photos
 
-Next, add a way for users to upload a profile photo. Supabase configures every project with [Storage](/docs/guides/storage) for managing large files like photos and videos.
+Next, add a way for users to upload a profile photo. Savira configures every project with [Storage](/docs/guides/storage) for managing large files like photos and videos.
 
 ### Create an upload widget
 
@@ -148,6 +148,6 @@ npm start
 
 And then open the browser to [localhost:3000](http://localhost:3000) and you should see the completed app.
 
-![Supabase SolidJS](/docs/img/supabase-solidjs-demo.png)
+![Savira SolidJS](/docs/img/supabase-solidjs-demo.png)
 
 At this stage you have a fully functional application!

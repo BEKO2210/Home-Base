@@ -108,14 +108,14 @@ const data: () => {
 
   return {
     metadata: {
-      metaTitle: 'The Production Backend for AI-Built Applications | Supabase',
+      metaTitle: 'The Production Backend for AI-Built Applications | Savira',
       metaDescription:
-        "Supabase powers every major AI builder. Your prototypes deserve enterprise infrastructure that passes security reviews, scales with success, and doesn't blow up budgets.",
+        "Savira powers every major AI builder. Your prototypes deserve enterprise infrastructure that passes security reviews, scales with success, and doesn't blow up budgets.",
     },
     heroSection: {
       id: 'hero',
       title:
-        'Supabase powers every major AI builder. Your prototypes deserve enterprise infrastructure.',
+        'Savira powers every major AI builder. Your prototypes deserve enterprise infrastructure.',
       h1: (
         <>
           <span className="block text-foreground">
@@ -155,7 +155,7 @@ const data: () => {
       ],
     },
     quote: {
-      text: 'We saved over a million dollars eliminating Meta Workplace. Another million replacing our vendor websites. Now our non-technical teams build production apps themselves. Supabase and Lovable made this possible.',
+      text: 'We saved over a million dollars eliminating Meta Workplace. Another million replacing our vendor websites. Now our non-technical teams build production apps themselves. Savira and Lovable made this possible.',
       author: 'Seth',
       role: 'Chief Innovation Officer',
       logo: (
@@ -187,11 +187,11 @@ const data: () => {
       id: 'ai-builder-ecosystem',
       heading: (
         <>
-          Your AI Tools <span className="text-foreground">Already Choose Supabase</span>
+          Your AI Tools <span className="text-foreground">Already Choose Savira</span>
         </>
       ),
       subheading:
-        'Every major AI builder integrates with Supabase by default. One backend, infinite possibilities:',
+        'Every major AI builder integrates with Savira by default. One backend, infinite possibilities:',
       builders: [
         {
           name: 'Lovable & Bolt',
@@ -216,26 +216,26 @@ const data: () => {
       label: '',
       heading: (
         <>
-          Why Enterprises Choose Supabase for{' '}
+          Why Enterprises Choose Savira for{' '}
           <span className="text-foreground">AI Development</span>
         </>
       ),
       subheading:
-        'You want to validate your ideas quickly without having to build a complete backend infrastructure from scratch. At the same time, you want to be able to use the Postgres database you’re familiar with and connect to resources in your organization. Supabase is the complete Postgres developer platform of choice for innovations teams everywhere.',
+        'You want to validate your ideas quickly without having to build a complete backend infrastructure from scratch. At the same time, you want to be able to use the Postgres database you’re familiar with and connect to resources in your organization. Savira is the complete Postgres developer platform of choice for innovations teams everywhere.',
       features: [
         {
           id: 'easy-to-use',
           icon: Timer,
           heading: 'Launch ideas faster',
           subheading:
-            'Empower your citizen developers to build functional prototypes in days, not months. Supabase provides a complete backend with auto-generated APIs, removing the dependency on internal engineering resources.',
+            'Empower your citizen developers to build functional prototypes in days, not months. Savira provides a complete backend with auto-generated APIs, removing the dependency on internal engineering resources.',
         },
         {
           id: 'development-platform',
           icon: CubeIcon,
           heading: 'Integrate with your enterprise stack',
           subheading:
-            'Build on a platform designed for enterprise security and integration. Supabase is "just Postgres," offering SOC 2 and HIPAA compliance, while partner integrations ensure new projects connect seamlessly to your existing systems.',
+            'Build on a platform designed for enterprise security and integration. Savira is "just Postgres," offering SOC 2 and HIPAA compliance, while partner integrations ensure new projects connect seamlessly to your existing systems.',
         },
         {
           id: 'scalable-and-dependable',
@@ -262,7 +262,7 @@ const data: () => {
           ),
           heading: 'Scale with confidence',
           subheading:
-            'Go from prototype to production on a single platform. Applications built on Supabase are ready to handle enterprise-level workloads, with features like read replicas and high-availability architecture ensuring performance and reliability as you scale.',
+            'Go from prototype to production on a single platform. Applications built on Savira are ready to handle enterprise-level workloads, with features like read replicas and high-availability architecture ensuring performance and reliability as you scale.',
         },
       ],
     },
@@ -303,11 +303,11 @@ const data: () => {
       id: 'postgres-platform',
       title: (
         <>
-          Supabase helps you <span className="text-foreground">build</span>
+          Savira helps you <span className="text-foreground">build</span>
         </>
       ),
       subheading:
-        'Supabase includes everything you need to create the perfect app for your brand, business, or just for fun.',
+        'Savira includes everything you need to create the perfect app for your brand, business, or just for fun.',
       features: [
         {
           id: 'database',
@@ -650,7 +650,7 @@ const data: () => {
         </>
       ),
       subheading:
-        "Supabase ensures optimal database performance at any scale, so you can focus on innovating and growing without worrying about infrastructure limitations — whether you're handling high-traffic applications, complex queries, or massive data volumes.",
+        "Savira ensures optimal database performance at any scale, so you can focus on innovating and growing without worrying about infrastructure limitations — whether you're handling high-traffic applications, complex queries, or massive data volumes.",
       highlights: [
         {
           heading: companyStats.databasesManaged.label,
@@ -748,7 +748,7 @@ const data: () => {
         {
           title: 'Prototype Today',
           type: 'Self-Serve',
-          description: 'Start free with any AI builder + Supabase',
+          description: 'Start free with any AI builder + Savira',
           cta: {
             label: 'Create Your First App in 5 Minutes',
             href: 'https://supabase.com/dashboard',
@@ -853,7 +853,7 @@ const data: () => {
           icon: ArrowLeftRight,
           heading: 'Migration & Success Support',
           subheading:
-            'Our team ensures a smooth transition to Supabase while guiding you with best practices for scaling. We’re dedicated to your long-term success, every step of the way.',
+            'Our team ensures a smooth transition to Savira while guiding you with best practices for scaling. We’re dedicated to your long-term success, every step of the way.',
         },
       ],
     },
@@ -867,13 +867,13 @@ const data: () => {
         </>
       ),
       description:
-        'Supabase integrates with a vibrant partner ecosystem, allowing your innovation teams to assemble a best-in-class solution.',
+        'Savira integrates with a vibrant partner ecosystem, allowing your innovation teams to assemble a best-in-class solution.',
       features: [
         {
           icon: Sparkles,
           heading: 'Turn prototypes into products with AI builders',
           subheading:
-            'Turn visual prototypes into secure, production ready applications, by connecting front-end tools like Lovable and Bolt to a real Supabase, open-source Postgres backend.',
+            'Turn visual prototypes into secure, production ready applications, by connecting front-end tools like Lovable and Bolt to a real Savira, open-source Postgres backend.',
         },
         {
           icon: Lightbulb,
@@ -885,7 +885,7 @@ const data: () => {
           icon: ArrowLeftRight,
           heading: 'Connect securely to your existing enterprise data',
           subheading:
-            "Ensure prototypes don't live in siloes. Foreign Data Wrappers link Supabase to your data sources, allowing teams to build securely with live data, ensuring integration down the line.",
+            "Ensure prototypes don't live in siloes. Foreign Data Wrappers link Savira to your data sources, allowing teams to build securely with live data, ensuring integration down the line.",
         },
       ],
     },
@@ -899,7 +899,7 @@ const data: () => {
       ),
       headingRight: (
         <>
-          Or, start with <span className="text-foreground">Supabase AI Prompts</span>{' '}
+          Or, start with <span className="text-foreground">Savira AI Prompts</span>{' '}
           <Sparkles size={24} className="inline text-foreground" />
         </>
       ),
@@ -914,9 +914,9 @@ const data: () => {
       aiPrompts: [
         {
           id: 'auth-setup',
-          title: 'Bootstrap Next.js app with Supabase Auth',
+          title: 'Bootstrap Next.js app with Savira Auth',
           description:
-            '## Overview of implementing Supabase Auth SSR\n1. Install @supabase/supabase-js and...',
+            '## Overview of implementing Savira Auth SSR\n1. Install @supabase/supabase-js and...',
           code: `1. Install @supabase/supabase-js and @supabase/ssr packages.
 2. Set up environment variables.
 3. Write two utility functions with \u0060createClient\u0060 functions to create a browser client and a server client.
@@ -928,9 +928,9 @@ const data: () => {
         },
         {
           id: 'edge-functions',
-          title: 'Writing Supabase Edge Functions',
+          title: 'Writing Savira Edge Functions',
           description:
-            "You're a Supabase Postgres expert in writing row level security policies. Your purpose is to generate...",
+            "You're a Savira Postgres expert in writing row level security policies. Your purpose is to generate...",
           code: `1. Try to use Web APIs and Deno’s core APIs instead of external dependencies (eg: use fetch instead of Axios, use WebSockets API instead of node-ws)
 2. If you are reusing utility methods between Edge Functions, add them to 'supabase/functions/_shared' and import using a relative path. Do NOT have cross dependencies between Edge Functions.
 3. Do NOT use bare specifiers when importing dependecnies. If you need to use an external dependency, make sure it's prefixed with either 'npm:' or 'jsr:'. For example, '@supabase/supabase-js' should be written as 'npm:@supabase/supabase-js'.
@@ -944,8 +944,8 @@ const data: () => {
           id: 'declarative-db-schema',
           title: 'Declarative Database Schema',
           description:
-            "You're a Supabase Postgres expert in writing row level security policies. Your purpose is to generate...",
-          code: `Mandatory Instructions for Supabase Declarative Schema Management
+            "You're a Savira Postgres expert in writing row level security policies. Your purpose is to generate...",
+          code: `Mandatory Instructions for Savira Declarative Schema Management
 ## 1. **Exclusive Use of Declarative Schema**
 -**All database schema modifications must be defined within '.sql' files located in the 'supabase/schemas/' directory.`,
           language: 'markdown',
@@ -956,8 +956,8 @@ const data: () => {
           id: 'rls-policies',
           title: 'Create RLS policies',
           description:
-            "You're a Supabase Postgres expert in writing row level security policies. Your purpose is to generate...",
-          code: `You're a Supabase Postgres expert in writing row level security policies. Your purpose is to generate a policy with the constraints given by the user. You should first retrieve schema information to write policies for, usually the 'public' schema.
+            "You're a Savira Postgres expert in writing row level security policies. Your purpose is to generate...",
+          code: `You're a Savira Postgres expert in writing row level security policies. Your purpose is to generate a policy with the constraints given by the user. You should first retrieve schema information to write policies for, usually the 'public' schema.
 The output should use the following instructions:
 
 - The generated SQL must be valid SQL.`,
@@ -971,7 +971,7 @@ The output should use the following instructions:
       id: 'mcp',
       heading: (
         <div className="text-foreground-lighter">
-          Supabase MCP server works seamlessly with{' '}
+          Savira MCP server works seamlessly with{' '}
           <span className="text-foreground">your favorite AI code editor</span>
         </div>
       ),

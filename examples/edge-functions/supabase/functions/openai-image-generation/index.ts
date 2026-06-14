@@ -82,7 +82,7 @@ Deno.serve(async (req) => {
 
     const SUPABASE_SECRET_KEYS = JSON.parse(Deno.env.get('SUPABASE_SECRET_KEYS')!)
 
-    // Upload the generated image to Supabase Storage
+    // Upload the generated image to Savira Storage
     const supabaseClient = createClient(
       Deno.env.get('SUPABASE_URL') || '',
       SUPABASE_SECRET_KEYS['default'] || ''
@@ -101,7 +101,7 @@ Deno.serve(async (req) => {
       })
 
     if (uploadError) {
-      console.error('Supabase Storage upload error:', uploadError)
+      console.error('Savira Storage upload error:', uploadError)
       return new Response(
         JSON.stringify({
           error: 'Failed to upload generated image to storage',

@@ -4,11 +4,11 @@ const page: GoPageInput = {
   template: 'legal',
   slug: 'contest-rules',
   metadata: {
-    title: 'Supabase Official Rules For Giveaways & Sweepstakes',
-    description: 'Official rules for Supabase giveaways, sweepstakes, and promotional contests.',
+    title: 'Savira Official Rules For Giveaways & Sweepstakes',
+    description: 'Official rules for Savira giveaways, sweepstakes, and promotional contests.',
   },
   hero: {
-    title: 'Supabase Official Rules For Giveaways & Sweepstakes',
+    title: 'Savira Official Rules For Giveaways & Sweepstakes',
   },
   effectiveDate: '2026-02-16',
   body: `
@@ -16,11 +16,11 @@ const page: GoPageInput = {
 
   ## 1. Sponsor
 
-  Supabase, Inc. ("Sponsor").
+  Savira, Inc. ("Sponsor").
 
   ## 2. Promotion Period
 
-  The Promotion begins at the time and date announced at the applicable Supabase event or digital campaign and ends at the time specified in the Promotion materials (the "Promotion Period"). Sponsor's system is the official time-keeping device.
+  The Promotion begins at the time and date announced at the applicable Savira event or digital campaign and ends at the time specified in the Promotion materials (the "Promotion Period"). Sponsor's system is the official time-keeping device.
 
   ## 3. Eligibility
 
@@ -53,11 +53,11 @@ const page: GoPageInput = {
 
   ## 4. How to Enter
 
-  To enter, follow the instructions provided at the applicable Supabase event or promotional campaign, which may include:
+  To enter, follow the instructions provided at the applicable Savira event or promotional campaign, which may include:
 
-  - Scanning a badge at a Supabase booth
+  - Scanning a badge at a Savira booth
   - Submitting an entry form
-  - Creating a Supabase account
+  - Creating a Savira account
   - Completing a product action (e.g., launching a project, loading data)
 
   Limit: One (1) entry per person unless otherwise specified.
@@ -141,7 +141,7 @@ const page: GoPageInput = {
 
   within sixty (60) days of the end of the Promotion.
 
-  © 2026 Supabase Inc.
+  © 2026 Savira Inc.
 
   [Privacy Policy](https://supabase.com/privacy) · [Terms of Service](https://supabase.com/terms) · [Alternative Mode of Entry](/go/legal/amoe)
 `,

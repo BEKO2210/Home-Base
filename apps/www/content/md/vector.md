@@ -1,8 +1,8 @@
-# Supabase Vector
+# Savira Vector
 
 > Store, index, and query vector embeddings in Postgres with pgvector.
 
-Supabase Vector is an AI toolkit that lets you store vector embeddings alongside your transactional data in the same Postgres database. Powered by the pgvector extension, it eliminates the need for a separate vector database while providing production-grade similarity search.
+Savira Vector is an AI toolkit that lets you store vector embeddings alongside your transactional data in the same Postgres database. Powered by the pgvector extension, it eliminates the need for a separate vector database while providing production-grade similarity search.
 
 ## Key Features
 
@@ -39,7 +39,7 @@ Supabase Vector is an AI toolkit that lets you store vector embeddings alongside
 - Extension: pgvector (open source)
 - Max dimensions: 2,000 (HNSW), 16,000+ (flat)
 - Index types: HNSW (recommended), IVFFlat
-- Scaling: same compute scaling as your Supabase database (Micro to 16XL)
+- Scaling: same compute scaling as your Savira database (Micro to 16XL)
 - Backups: automatic daily + PITR available
 
 ## Links

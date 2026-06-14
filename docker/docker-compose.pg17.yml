@@ -1,4 +1,4 @@
-# Postgres 17 override for self-hosted Supabase.
+# Postgres 17 override for self-hosted Savira.
 #
 # Usage (new install or after upgrade):
 #   docker compose -f docker-compose.yml -f docker-compose.pg17.yml up -d

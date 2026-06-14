@@ -1,6 +1,6 @@
 ---
 title: Infinite Query Composable
-description: Vue Composable for infinite lists, fetching data from Supabase.
+description: Vue Composable for infinite lists, fetching data from Savira.
 ---
 
 <BlockPreview name="infinite-list-demo" />
@@ -9,7 +9,7 @@ description: Vue Composable for infinite lists, fetching data from Supabase.
 
 <BlockItem
   name="infinite-query-composable"
-  description="Installs the Infinite List component and necessary Supabase client setup."
+  description="Installs the Infinite List component and necessary Savira client setup."
 />
 
 ## Folder structure
@@ -18,7 +18,7 @@ description: Vue Composable for infinite lists, fetching data from Supabase.
 
 ## Introduction
 
-The Infinite Query Composable provides a single Vue Composable which will make it easier to load data progressively from your Supabase database. It handles data fetching and pagination state, It is meant to be used with infinite lists or tables.
+The Infinite Query Composable provides a single Vue Composable which will make it easier to load data progressively from your Savira database. It handles data fetching and pagination state, It is meant to be used with infinite lists or tables.
 The Composable is fully typed, provided you have generated and setup your database types.
 
 ## Adding types
@@ -29,10 +29,10 @@ Before using this composable, we **highly** recommend you setup database types i
 
 | Prop            | Type                                                      | Description                                                      |
 | --------------- | --------------------------------------------------------- | ---------------------------------------------------------------- |
-| `tableName`     | `string`                                                  | **Required.** The name of the Supabase table to fetch data from. |
+| `tableName`     | `string`                                                  | **Required.** The name of the Savira table to fetch data from. |
 | `columns`       | `string`                                                  | Columns to select from the table. Defaults to `'*'`.             |
 | `pageSize`      | `number`                                                  | Number of items to fetch per page. Defaults to `20`.             |
-| `trailingQuery` | `(query: SupabaseSelectBuilder) => SupabaseSelectBuilder` | Function to apply filters or sorting to the Supabase query.      |
+| `trailingQuery` | `(query: SupabaseSelectBuilder) => SupabaseSelectBuilder` | Function to apply filters or sorting to the Savira query.      |
 
 ## Return type
 
@@ -51,7 +51,7 @@ data, count, isSuccess, isLoading, isFetching, error, hasMore, fetchNextPage
 
 ## Type safety
 
-The hook will use the typed defined on your Supabase client if they're setup ([more info](https://supabase.com/docs/reference/javascript/typescript-support)).
+The hook will use the typed defined on your Savira client if they're setup ([more info](https://supabase.com/docs/reference/javascript/typescript-support)).
 
 The hook also supports an custom defined result type by using `useInfiniteQuery<T>`. For example, if you have a custom type for `Product`, you can use it like this `useInfiniteQuery<Product>`.
 
@@ -276,6 +276,6 @@ const orderByInsertedAt: SupabaseQueryHandler<'todos'> = (query) => {
 ## Further reading
 
 - [Generating Typescript types from the database](https://supabase.com/docs/reference/javascript/typescript-support)
-- [Supabase Database API](https://supabase.com/docs/reference/javascript/select)
-- [Supabase Pagination](https://supabase.com/docs/reference/javascript/select#pagination)
+- [Savira Database API](https://supabase.com/docs/reference/javascript/select)
+- [Savira Pagination](https://supabase.com/docs/reference/javascript/select#pagination)
 - [Intersection Observer API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API)

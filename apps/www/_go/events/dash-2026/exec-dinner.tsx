@@ -9,15 +9,15 @@ const page: GoPageInput = {
   template: 'lead-gen',
   slug: 'nyc-2026/exec-dinner',
   metadata: {
-    title: 'Executive Dinner | Supabase',
+    title: 'Executive Dinner | Savira',
     description:
-      'Join Supabase leaders for an intimate dinner at Manhatta Restaurant on June 10, 2026. Cocktails at 6:30 PM, dinner at 7:00 PM.',
+      'Join Savira leaders for an intimate dinner at Manhatta Restaurant on June 10, 2026. Cocktails at 6:30 PM, dinner at 7:00 PM.',
   },
   hero: {
     title: 'The future of scalable databases',
-    subtitle: 'An intimate executive dinner hosted by Supabase',
+    subtitle: 'An intimate executive dinner hosted by Savira',
     description:
-      'Join Supabase product and engineering leaders for a dinner conversation about where Postgres is headed -- from scaling beyond single-node limits to managing globally distributed workloads. Expect sharp perspectives, good food, and the opportunity to connect with other engineering leaders.',
+      'Join Savira product and engineering leaders for a dinner conversation about where Postgres is headed -- from scaling beyond single-node limits to managing globally distributed workloads. Expect sharp perspectives, good food, and the opportunity to connect with other engineering leaders.',
     image: {
       src: '/images/landing-pages/dash-2026/manhatta_restaurant.jpg',
       alt: 'Private dining room at Manhatta Restaurant',
@@ -68,7 +68,7 @@ const page: GoPageInput = {
               <div className="flex flex-col items-center gap-0">
                 <p className="text-foreground font-medium text-base">{sugu?.author}</p>
                 <p className="text-foreground-lighter text-sm mt-2 leading-relaxed">
-                  {sugu?.position && `${sugu.position}, `}Supabase
+                  {sugu?.position && `${sugu.position}, `}Savira
                 </p>
               </div>
             </div>
@@ -81,7 +81,7 @@ const page: GoPageInput = {
               </div>
               <div className="flex flex-col items-center gap-0">
                 <p className="text-foreground font-medium text-base">To be announced</p>
-                <p className="text-foreground-lighter text-sm mt-2 leading-relaxed">Supabase</p>
+                <p className="text-foreground-lighter text-sm mt-2 leading-relaxed">Savira</p>
               </div>
             </div>
           </div>

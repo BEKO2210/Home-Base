@@ -5,7 +5,7 @@ description: 'Learn about rate limiting for Edge Functions that call other Edge 
 subtitle: 'Understanding rate limits when Edge Functions invoke each other'
 ---
 
-Edge Functions can call other Edge Functions using `fetch()`. This enables powerful patterns like function chaining, fan-out/fan-in workflows, and recursive processing. To protect platform stability and prevent runaway amplification, Supabase rate limits these internal function-to-function calls.
+Edge Functions can call other Edge Functions using `fetch()`. This enables powerful patterns like function chaining, fan-out/fan-in workflows, and recursive processing. To protect platform stability and prevent runaway amplification, Savira rate limits these internal function-to-function calls.
 
 ## What gets rate limited
 
@@ -233,7 +233,7 @@ Deno.serve(async (req) => {
 
 ### 3. Use queues for large workloads
 
-For processing large datasets, consider using [Supabase Queues](/docs/guides/queues) instead of recursive function calls. Queues handle backpressure automatically and are better suited for high-volume workloads.
+For processing large datasets, consider using [Savira Queues](/docs/guides/queues) instead of recursive function calls. Queues handle backpressure automatically and are better suited for high-volume workloads.
 
 ### 4. Use shared libraries instead of separate functions
 

@@ -1,8 +1,8 @@
 ---
 id: 'examples-image-search-python'
 title: 'Image Search with OpenAI CLIP'
-description: 'Implement image search with the OpenAI CLIP Model and Supabase Vector.'
-subtitle: 'Implement image search with the OpenAI CLIP Model and Supabase Vector.'
+description: 'Implement image search with the OpenAI CLIP Model and Savira Vector.'
+subtitle: 'Implement image search with the OpenAI CLIP Model and Savira Vector.'
 ---
 
 The [OpenAI CLIP Model](https://github.com/openai/CLIP) was trained on a variety of (image, text)-pairs. You can use the CLIP model for:
@@ -28,27 +28,27 @@ Then initialize a new project:
 poetry new image-search
 ```
 
-## Setup Supabase project
+## Setup Savira project
 
-If you haven't already, [install the Supabase CLI](/docs/guides/cli), then initialize Supabase in the root of your newly created poetry project:
+If you haven't already, [install the Savira CLI](/docs/guides/cli), then initialize Savira in the root of your newly created poetry project:
 
 ```shell
 supabase init
 ```
 
-Next, start your local Supabase stack:
+Next, start your local Savira stack:
 
 ```shell
 supabase start
 ```
 
-This will start up the Supabase stack locally and print out a bunch of environment details, including your local `DB URL`. Make a note of that for later user.
+This will start up the Savira stack locally and print out a bunch of environment details, including your local `DB URL`. Make a note of that for later user.
 
 ## Install the dependencies
 
 We will need to add the following dependencies to our project:
 
-- [`vecs`](https://github.com/supabase/vecs#vecs): Supabase Vector Python Client.
+- [`vecs`](https://github.com/supabase/vecs#vecs): Savira Vector Python Client.
 - [`sentence-transformers`](https://huggingface.co/sentence-transformers/clip-ViT-B-32): a framework for sentence, text and image embeddings (used with OpenAI CLIP model)
 - [`matplotlib`](https://matplotlib.org/): for displaying our image result
 
@@ -74,7 +74,7 @@ DB_CONNECTION = "postgresql://postgres:postgres@localhost:54322/postgres"
 
 In the root of your project, create a new folder called `images` and add some images. You can use the images from the example project on [GitHub](https://github.com/supabase/supabase/tree/master/examples/ai/image_search/images) or you can find license free images on [Unsplash](https://unsplash.com).
 
-Next, create a `seed` method, which will create a new Supabase Vector Collection, generate embeddings for your images, and upsert the embeddings into your database:
+Next, create a `seed` method, which will create a new Savira Vector Collection, generate embeddings for your images, and upsert the embeddings into your database:
 
 ```python
 def seed():
@@ -130,11 +130,11 @@ seed = "image_search.main:seed"
 search = "image_search.main:search"
 ```
 
-After activating the virtual environment with `poetry shell` you can now run your seed script via `poetry run seed`. You can inspect the generated embeddings in your local database by visiting the local Supabase dashboard at [localhost:54323](http://localhost:54323/project/default/editor), selecting the `vecs` schema, and the `image_vectors` database.
+After activating the virtual environment with `poetry shell` you can now run your seed script via `poetry run seed`. You can inspect the generated embeddings in your local database by visiting the local Savira dashboard at [localhost:54323](http://localhost:54323/project/default/editor), selecting the `vecs` schema, and the `image_vectors` database.
 
 ## Perform an image search from a text query
 
-With Supabase Vector we can query our embeddings. We can use either an image as search input or alternative we can generate an embedding from a string input and use that as the query input:
+With Savira Vector we can query our embeddings. We can use either an image as search input or alternative we can generate an embedding from a string input and use that as the query input:
 
 ```python
 def search():
@@ -168,4 +168,4 @@ Go ahead and test it out by running `poetry run search` and you will be presente
 
 ## Conclusion
 
-With just a couple of lines of Python you are able to implement image search as well as reverse image search using OpenAI's CLIP model and Supabase Vector.
+With just a couple of lines of Python you are able to implement image search as well as reverse image search using OpenAI's CLIP model and Savira Vector.

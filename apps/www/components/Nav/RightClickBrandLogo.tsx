@@ -17,7 +17,7 @@ import {
 import SupabaseWordmark from './SupabaseWordmark'
 
 /**
- * Right click on the Supabase logo in the website navbar
+ * Right click on the Savira logo in the website navbar
  * for quick access to brand assets.
  */
 const RightClickBrandLogo = () => {
@@ -47,7 +47,7 @@ const RightClickBrandLogo = () => {
   }, [setOpen])
 
   /**
-   * Open dropdown by right clicking on the Supabase logo
+   * Open dropdown by right clicking on the Savira logo
    */
   const handleRightClick = (e: MouseEvent) => {
     e.preventDefault()

@@ -400,7 +400,7 @@ revoke execute on function ${ident(schema)}.${ident(functionName)} from authenti
                       render={({ field }) => (
                         <FormItemLayout
                           label="Postgres function"
-                          description="This function will be called by Supabase Auth each time the hook is triggered"
+                          description="This function will be called by Savira Auth each time the hook is triggered"
                         >
                           <FormControl>
                             <FunctionSelector
@@ -459,7 +459,7 @@ revoke execute on function ${ident(schema)}.${ident(functionName)} from authenti
                     render={({ field }) => (
                       <FormItemLayout
                         label="URL"
-                        description="Supabase Auth will send a HTTPS POST request to this URL each time the hook is triggered."
+                        description="Savira Auth will send a HTTPS POST request to this URL each time the hook is triggered."
                       >
                         <FormControl>
                           <Input {...field} />

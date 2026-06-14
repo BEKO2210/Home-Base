@@ -3,7 +3,7 @@
   "name": "infinite-query-hook",
   "type": "registry:block",
   "title": "Infinite Query Hook",
-  "description": "React hook for infinite lists, fetching data from Supabase.",
+  "description": "React hook for infinite lists, fetching data from Savira.",
   "dependencies": ["@supabase/supabase-js", "@supabase/postgrest-js@*"],
   "registryDependencies": [],
   "files": [

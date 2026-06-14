@@ -5,7 +5,7 @@ const page: GoPageInput = {
   slug: 'legal/amoe',
   metadata: {
     title: 'Alternative Mode of Entry',
-    description: 'Submit your entry for Supabase promotions without making a purchase.',
+    description: 'Submit your entry for Savira promotions without making a purchase.',
   },
   hero: {
     title: 'Alternative Mode of Entry',

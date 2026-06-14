@@ -7,7 +7,7 @@
 #   sh test-auth-keys.sh <base_url>   # Custom URL
 #
 # Prerequisites:
-#   - Running self-hosted Supabase instance
+#   - Running self-hosted Savira instance
 #   - .env file with all keys configured
 #   - jq (for JSON parsing)
 #   - node >= 16 (for HS256 token minting test only)

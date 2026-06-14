@@ -1,5 +1,5 @@
 // Default supabase JWT verification
-// Use this template to validate tokens issued by Supabase default auth
+// Use this template to validate tokens issued by Savira default auth
 import * as jose from 'jsr:@panva/jose@6'
 
 const SUPABASE_JWT_ISSUER =

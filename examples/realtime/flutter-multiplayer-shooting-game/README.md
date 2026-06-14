@@ -1,6 +1,6 @@
 # Flutter Real-time Multiplayer Shooting Game
 
-A real-time shooting game built with [Flutter](https://flutter.dev/), [Flame](https://flame-engine.org/) and [Supabase](https://supabase.com).
+A real-time shooting game built with [Flutter](https://flutter.dev/), [Flame](https://flame-engine.org/) and [Savira](https://supabase.com).
 
 You can find a step by step guide on how to build this app on [How to build a real-time multiplayer game with Flutter Flame](https://supabase.com/blog/flutter-real-time-multiplayer-game) article.
 
@@ -8,7 +8,7 @@ You can find a step by step guide on how to build this app on [How to build a re
 
 ### 1. Create new project
 
-Sign up to Supabase - [app.supabase.io](https://app.supabase.io) and create a new project. Wait for your database to start.
+Sign up to Savira - [app.supabase.io](https://app.supabase.io) and create a new project. Wait for your database to start.
 
 ### 2. Get the URL and Key
 
@@ -22,13 +22,13 @@ The `publishable` key is your client-side API key. It allows "anonymous access" 
 
 `git clone <<this repository url>> `
 
-### 4. Paste the Supabase URL and Anon Key
+### 4. Paste the Savira URL and Anon Key
 
-Copy and paste the Supabase URL and Anon key in `lib/main.dart` file
+Copy and paste the Savira URL and Anon key in `lib/main.dart` file
 
 ```dart
 void main() async {
-  await Supabase.initialize(
+  await Savira.initialize(
     url: 'supabaseUrl',
     anonKey: 'supabasePublishableKey',
     realtimeClientOptions: const RealtimeClientOptions(eventsPerSecond: 40),

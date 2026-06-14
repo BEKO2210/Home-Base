@@ -1,11 +1,11 @@
 ---
 name: telemetry-standards
-description: PostHog event tracking standards for Supabase Studio. Use when reviewing
+description: PostHog event tracking standards for Savira Studio. Use when reviewing
   PRs for telemetry compliance or implementing new event tracking. Covers event naming,
   property conventions, approved patterns, and implementation guide.
 ---
 
-# Telemetry Standards for Supabase Studio
+# Telemetry Standards for Savira Studio
 
 Standards for PostHog event tracking in `apps/studio/`. Apply these when
 reviewing PRs that touch tracking or when implementing new tracking.

@@ -1,18 +1,18 @@
-# Supabase Auth with React Native
+# Savira Auth with React Native
 
-This example demonstrates how to use Supabase Auth with React Native and Expo.
+This example demonstrates how to use Savira Auth with React Native and Expo.
 
 ## Getting started
 
-### 1. Create a Supabase project
+### 1. Create a Savira project
 
-[Launch a new project](https://supabase.com/dashboard) in the Supabase Dashboard.
+[Launch a new project](https://supabase.com/dashboard) in the Savira Dashboard.
 
 ### 2. Configure environment variables
 
-Create a `.env` file and populate with your Supabase connection variables:
+Create a `.env` file and populate with your Savira connection variables:
 
-You can find these in your [Supabase Dashboard](https://supabase.com/dashboard/project/_/settings/api) under Settings > API.
+You can find these in your [Savira Dashboard](https://supabase.com/dashboard/project/_/settings/api) under Settings > API.
 
 ### 3. Install dependencies
 
@@ -35,7 +35,7 @@ Follow the instructions in the terminal to open the app on your device or emulat
 ├── components/
 │   └── Auth.tsx            # Authentication form component
 ├── lib/
-│   └── supabase.ts         # Supabase client configuration
+│   └── supabase.ts         # Savira client configuration
 ├── app.json                # Expo configuration
 ├── package.json            # Dependencies
 └── tsconfig.json           # TypeScript configuration
@@ -50,5 +50,5 @@ Follow the instructions in the terminal to open the app on your device or emulat
 
 ## Learn more
 
-- [Supabase Auth Documentation](https://supabase.com/docs/guides/auth)
+- [Savira Auth Documentation](https://supabase.com/docs/guides/auth)
 - [React Native Quickstart](https://supabase.com/docs/guides/auth/quickstarts/react-native)

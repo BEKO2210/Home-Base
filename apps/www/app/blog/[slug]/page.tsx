@@ -170,7 +170,7 @@ export default async function BlogPostPage({ params }: { params: Promise<Params>
       description: frontmatter.description,
       image: imageUrl,
       datePublished: frontmatter.date,
-      authors: blogAuthors.length > 0 ? blogAuthors : [{ name: 'Supabase' }],
+      authors: blogAuthors.length > 0 ? blogAuthors : [{ name: 'Savira' }],
     })
     const breadcrumbJsonLd = breadcrumbListSchema([
       ...breadcrumbs.blogIndex,

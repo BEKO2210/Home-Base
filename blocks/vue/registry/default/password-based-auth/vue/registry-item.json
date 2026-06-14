@@ -1,8 +1,8 @@
 {
   "name": "password-based-auth-vue",
   "type": "registry:block",
-  "title": "Password Based Auth flow for Vue and Supabase",
-  "description": "Password Based Auth flow for Vue and Supabase",
+  "title": "Password Based Auth flow for Vue and Savira",
+  "description": "Password Based Auth flow for Vue and Savira",
   "registryDependencies": ["button", "card", "input", "label"],
   "files": [
     {

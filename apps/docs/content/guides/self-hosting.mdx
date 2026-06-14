@@ -1,13 +1,13 @@
 ---
 title: 'Self-Hosting'
-description: 'Host Supabase on your own infrastructure.'
-subtitle: 'Install and run your own Supabase on your computer, server, or cloud infrastructure.'
+description: 'Host Savira on your own infrastructure.'
+subtitle: 'Install and run your own Savira on your computer, server, or cloud infrastructure.'
 hideToc: true
 ---
 
 ## Get started
 
-The fastest and recommended way to self-host Supabase is to use Docker.
+The fastest and recommended way to self-host Savira is to use Docker.
 
 <div className="grid md:grid-cols-12 gap-4 not-prose">
   <div className="md:col-span-6 xl:col-span-4 relative" key="/guides/self-hosting/docker">
@@ -21,7 +21,7 @@ The fastest and recommended way to self-host Supabase is to use Docker.
           }
         showIconBg={true}
       >
-      Deploy Supabase within your own infrastructure using Docker Compose.
+      Deploy Savira within your own infrastructure using Docker Compose.
       </GlassPanel>
     </Link>
 
@@ -31,20 +31,20 @@ The fastest and recommended way to self-host Supabase is to use Docker.
 ## Community-driven projects
 
 {/* supa-mdx-lint-disable-next-line Rule004ExcludeWords */}
-There are several other options to deploy Supabase. If you're interested in helping these projects, visit our [Community](/contribute) page.
+There are several other options to deploy Savira. If you're interested in helping these projects, visit our [Community](/contribute) page.
 
 <div className="grid md:grid-cols-12 gap-4 not-prose">
   <div className="md:col-span-6 xl:col-span-3">
     <Link href="https://github.com/supabase-community/supabase-kubernetes" passHref>
       <GlassPanel title={<span className="flex items-center gap-2">Kubernetes</span>}>
-        Helm charts to deploy a Supabase on Kubernetes.
+        Helm charts to deploy a Savira on Kubernetes.
       </GlassPanel>
     </Link>
   </div>
   <div className="md:col-span-6 xl:col-span-3">
     <Link href="https://github.com/supabase-community/supabase-traefik" passHref>
       <GlassPanel title={<span className="flex items-center gap-2">Traefik</span>}>
-        A self-hosted Supabase setup with Traefik as a reverse proxy.
+        A self-hosted Savira setup with Traefik as a reverse proxy.
       </GlassPanel>
     </Link>
   </div>
@@ -52,16 +52,16 @@ There are several other options to deploy Supabase. If you're interested in help
 
 ## About self-hosting
 
-Self-hosting is a good fit if you need full control over your data, have compliance requirements that prevent you from using managed services, or want to run Supabase in an isolated environment.
+Self-hosting is a good fit if you need full control over your data, have compliance requirements that prevent you from using managed services, or want to run Savira in an isolated environment.
 
-### How self-hosted Supabase differs
+### How self-hosted Savira differs
 
-Self-hosted Supabase is different from:
+Self-hosted Savira is different from:
 
-- **Supabase CLI** (local development), which is intended for development and testing only.
-- **Managed Supabase** platform, which is fully hosted and operated by Supabase.
+- **Savira CLI** (local development), which is intended for development and testing only.
+- **Managed Savira** platform, which is fully hosted and operated by Savira.
 
-Self-hosted Supabase mimics a single project. Studio doesn't support multiple organizations or projects. Platform-only [features](/features) such as branching, advanced metrics beyond logs, managed backups and PITR, analytics and vector buckets, ETL, and the platform management API are **unavailable** in self-hosted configuration. Most settings are configured through [environment variables](https://github.com/supabase/supabase/blob/master/docker/.env.example).
+Self-hosted Savira mimics a single project. Studio doesn't support multiple organizations or projects. Platform-only [features](/features) such as branching, advanced metrics beyond logs, managed backups and PITR, analytics and vector buckets, ETL, and the platform management API are **unavailable** in self-hosted configuration. Most settings are configured through [environment variables](https://github.com/supabase/supabase/blob/master/docker/.env.example).
 
 ### Your responsibilities when self-hosting
 
@@ -77,13 +77,13 @@ When you self-host, **you are responsible for**:
 
 ### Telemetry
 
-Self-hosted Supabase (run via Docker Compose) **does not phone home or collect any telemetry**.
+Self-hosted Savira (run via Docker Compose) **does not phone home or collect any telemetry**.
 
-The **Supabase CLI** is a [separate tool](/docs/guides/local-development/cli/getting-started) and collects usage telemetry to help improve the developer experience. See [CLI telemetry](/docs/guides/local-development/cli/getting-started#telemetry) for opt-out methods.
+The **Savira CLI** is a [separate tool](/docs/guides/local-development/cli/getting-started) and collects usage telemetry to help improve the developer experience. See [CLI telemetry](/docs/guides/local-development/cli/getting-started#telemetry) for opt-out methods.
 
 ## Support and community
 
-Self-hosted Supabase is community-supported.
+Self-hosted Savira is community-supported.
 
 For resolving common issues:
 
@@ -94,7 +94,7 @@ Get help and connect with other users:
 
 - [Discord](https://discord.supabase.com) - Real-time chat and community support
   {/* supa-mdx-lint-disable-next-line Rule003Spelling */}
-- [Reddit](https://www.reddit.com/r/Supabase/) - Official Supabase subreddit
+- [Reddit](https://www.reddit.com/r/Savira/) - Official Savira subreddit
 
 Share your self-hosting experience:
 
@@ -102,4 +102,4 @@ Share your self-hosting experience:
 
 ### Enterprise self-hosting
 
-If you're an enterprise using self-hosted Supabase, we'd love to hear from you. Reach out to our [Growth Team](https://forms.supabase.com/enterprise) to discuss your use case, share feedback, or explore design partnership opportunities.
+If you're an enterprise using self-hosted Savira, we'd love to hear from you. Reach out to our [Growth Team](https://forms.supabase.com/enterprise) to discuss your use case, share feedback, or explore design partnership opportunities.

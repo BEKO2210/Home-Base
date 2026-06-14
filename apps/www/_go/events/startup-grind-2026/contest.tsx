@@ -6,15 +6,15 @@ const page: GoPageInput = {
   template: 'lead-gen',
   slug: 'startup-grind-2026/contest',
   metadata: {
-    title: 'Win an iPhone 17 Pro Max | Supabase at Startup Grind 2026',
+    title: 'Win an iPhone 17 Pro Max | Savira at Startup Grind 2026',
     description:
-      'Create a Supabase account and load data for a chance to win an iPhone 17 Pro Max. Startup Grind 2026.',
+      'Create a Savira account and load data for a chance to win an iPhone 17 Pro Max. Startup Grind 2026.',
   },
   hero: {
     title: 'Win an iPhone 17 Pro Max',
-    subtitle: 'Supabase at Startup Grind 2026',
+    subtitle: 'Savira at Startup Grind 2026',
     description:
-      'Great meeting you at Startup Grind. Supabase gives you Postgres with auth, storage, edge functions, and real-time -- everything you need to ship your product faster. Try it out and you could win an iPhone 17 Pro Max.',
+      'Great meeting you at Startup Grind. Savira gives you Postgres with auth, storage, edge functions, and real-time -- everything you need to ship your product faster. Try it out and you could win an iPhone 17 Pro Max.',
     image: {
       src: '/images/landing-pages/stripe-sessions/iphone17-pro-max.png',
       alt: 'Orange iPhone 17 Pro Max',
@@ -38,10 +38,10 @@ const page: GoPageInput = {
         <div className="flex flex-col items-center gap-6">
           <ol className="flex flex-col gap-4 text-foreground-light text-lg list-decimal list-inside">
             <li>
-              Create a Supabase account with the same email address where you got our post-event
+              Create a Savira account with the same email address where you got our post-event
               note
             </li>
-            <li>Load data into a Supabase database</li>
+            <li>Load data into a Savira database</li>
             <li>Complete these steps by Monday, May 11, 2026 at 12:00 PM PST</li>
           </ol>
           <Button asChild type="default" size="medium">

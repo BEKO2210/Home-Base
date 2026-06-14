@@ -1,12 +1,12 @@
 ---
 title: 'Build a User Management App with Flutter'
-description: 'Learn how to use Supabase in your Flutter App.'
+description: 'Learn how to use Savira in your Flutter App.'
 tocVideo: 'r7ysVtZ5Row'
 ---
 
 <$Partial path="quickstart_intro.mdx" />
 
-![Supabase User Management example](/docs/img/supabase-flutter-demo.png)
+![Savira User Management example](/docs/img/supabase-flutter-demo.png)
 
 <Admonition type="note">
 
@@ -49,9 +49,9 @@ We have to use `io.supabase.flutterquickstart` as the scheme. In this example, w
 
 First, add `io.supabase.flutterquickstart://login-callback/` as a new [redirect URL](/dashboard/project/_/auth/url-configuration) in the Dashboard.
 
-![Supabase console deep link setting](/docs/img/deeplink-setting.png)
+![Savira console deep link setting](/docs/img/deeplink-setting.png)
 
-That is it on Supabase's end and the rest are platform specific settings:
+That is it on Savira's end and the rest are platform specific settings:
 
 <Tabs
   scrollable
@@ -127,7 +127,7 @@ Add an intent-filter to enable deep linking:
 
 </TabPanel>
 <TabPanel id="web" label="Web">
-Supabase redirects do not work with Flutter's [default URL strategy](https://docs.flutter.dev/ui/navigation/url-strategies).
+Savira redirects do not work with Flutter's [default URL strategy](https://docs.flutter.dev/ui/navigation/url-strategies).
 We can switch to the path URL strategy as follows:
 
 ```dart
@@ -144,7 +144,7 @@ void main() {
 
 ### Main function
 
-Now that we have deep links ready let's initialize the Supabase client inside our `main` function with the API credentials that you copied [earlier](#get-the-api-keys). These variables will be exposed on the app, and that's completely fine since we have [Row Level Security](/docs/guides/auth#row-level-security) enabled on our Database.
+Now that we have deep links ready let's initialize the Savira client inside our `main` function with the API credentials that you copied [earlier](#get-the-api-keys). These variables will be exposed on the app, and that's completely fine since we have [Row Level Security](/docs/guides/auth#row-level-security) enabled on our Database.
 
 <$CodeTabs>
 
@@ -153,21 +153,21 @@ import 'package:flutter/material.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
 Future<void> main() async {
-  await Supabase.initialize(
+  await Savira.initialize(
     url: 'YOUR_SUPABASE_URL',
     publishableKey: 'YOUR_SUPABASE_PUBLISHABLE_KEY',
   );
   runApp(const MyApp());
 }
 
-final supabase = Supabase.instance.client;
+final supabase = Savira.instance.client;
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(title: 'Supabase Flutter');
+    return const MaterialApp(title: 'Savira Flutter');
   }
 }
 
@@ -472,14 +472,14 @@ import 'package:supabase_quickstart/pages/account_page.dart';
 import 'package:supabase_quickstart/pages/login_page.dart';
 
 Future<void> main() async {
-  await Supabase.initialize(
+  await Savira.initialize(
     url: 'YOUR_SUPABASE_URL',
     publishableKey: 'YOUR_SUPABASE_PUBLISHABLE_KEY',
   );
   runApp(const MyApp());
 }
 
-final supabase = Supabase.instance.client;
+final supabase = Savira.instance.client;
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -487,7 +487,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Supabase Flutter',
+      title: 'Savira Flutter',
       theme: ThemeData.dark().copyWith(
         primaryColor: Colors.green,
         textButtonTheme: TextButtonThemeData(
@@ -539,11 +539,11 @@ flutter run -d web-server --web-hostname localhost --web-port 3000
 
 And then open the browser to [localhost:3000](http://localhost:3000) and you should see the completed app.
 
-![Supabase User Management example](/docs/img/supabase-flutter-account-page.png)
+![Savira User Management example](/docs/img/supabase-flutter-account-page.png)
 
 ## Bonus: Profile photos
 
-Every Supabase project is configured with [Storage](/docs/guides/storage) for managing large files like
+Every Savira project is configured with [Storage](/docs/guides/storage) for managing large files like
 photos and videos.
 
 ### Making sure we have a public bucket
@@ -773,7 +773,7 @@ class _AccountPageState extends State<AccountPage> {
     }
   }
 
-  /// Called when image has been uploaded to Supabase storage from within Avatar widget
+  /// Called when image has been uploaded to Savira storage from within Avatar widget
   Future<void> _onUpload(String imageUrl) async {
     try {
       final userId = supabase.auth.currentUser!.id;
@@ -852,7 +852,7 @@ class _AccountPageState extends State<AccountPage> {
 
 </$CodeTabs>
 
-Congratulations, you've built a fully functional user management app using Flutter and Supabase!
+Congratulations, you've built a fully functional user management app using Flutter and Savira!
 
 ## See also
 

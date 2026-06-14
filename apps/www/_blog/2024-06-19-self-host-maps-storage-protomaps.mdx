@@ -1,6 +1,6 @@
 ---
-title: 'Self-host Maps with Protomaps and Supabase Storage'
-description: 'Host Protomaps PMTiles on Supabase Storage and render them with MapLibre GL.'
+title: 'Self-host Maps with Protomaps and Savira Storage'
+description: 'Host Protomaps PMTiles on Savira Storage and render them with MapLibre GL.'
 author: bdon,thor_schaeff
 imgSocial: protomaps_storage/protomaps_storage_og.png
 imgThumb: protomaps_storage/protomaps_storage_og.png
@@ -21,14 +21,14 @@ toc_depth: 3
 
 </Admonition>
 
-[Protomaps](https://protomaps.com/) is an open source map of the world, deployable as a single static file on [Supabase Storage](/storage).
+[Protomaps](https://protomaps.com/) is an open source map of the world, deployable as a single static file on [Savira Storage](/storage).
 
 In this tutorial, you will learn to
 
 - Use Protomaps to excract an area into a static PMTiles file.
-- Upload the PMTiles file to Supabase Storage.
+- Upload the PMTiles file to Savira Storage.
 - Use MapLibre to render the Map onto a Web Page.
-- Use Supabase Edge Functions to restrict File Access.
+- Use Savira Edge Functions to restrict File Access.
 
 ## Extract an area into a static PMTiles file
 
@@ -42,15 +42,15 @@ pmtiles extract https://build.protomaps.com/20240618.pmtiles my_area.pmtiles --b
 
 Note: make sure to update the date to the latest daily build!
 
-This will create a `my_area.pmtiles` file which you can upload to Supabase Storage.
+This will create a `my_area.pmtiles` file which you can upload to Savira Storage.
 
-## Upload the PMTiles file to Supabase Storage
+## Upload the PMTiles file to Savira Storage
 
-In your [Supabase Dashboard](https://supabase.com/dashboard/project/_/storage/buckets) navigate to `Storage` and click "New Bucket" and create a new public bucket called `public-maps`.
+In your [Savira Dashboard](https://supabase.com/dashboard/project/_/storage/buckets) navigate to `Storage` and click "New Bucket" and create a new public bucket called `public-maps`.
 
 Upload the `my_area.pmtiles` file created earlier to your public bucket. Once uploaded, click the file and tap "Get URL".
 
-Supabase Storage supports the required [HTTP Range Requests](https://developer.mozilla.org/en-US/docs/Web/HTTP/Range_requests) out of the box, allowing you to use the public storage URL directly from your maps client.
+Savira Storage supports the required [HTTP Range Requests](https://developer.mozilla.org/en-US/docs/Web/HTTP/Range_requests) out of the box, allowing you to use the public storage URL directly from your maps client.
 
 ## Use MapLibre to render the Map
 
@@ -92,7 +92,7 @@ This is a vanilla JS example which uses CDN releases of the libraries. You can v
       let protocol = new pmtiles.Protocol()
       maplibregl.addProtocol('pmtiles', protocol.tile)
 
-      // Load the Map tiles directly from Supabase Storage:
+      // Load the Map tiles directly from Savira Storage:
       const map = new maplibregl.Map({
         hash: true,
         container: 'map',
@@ -115,13 +115,13 @@ This is a vanilla JS example which uses CDN releases of the libraries. You can v
 </html>
 ```
 
-## Use Supabase Edge Functions to restrict Access
+## Use Savira Edge Functions to restrict Access
 
-A public Supabase Storage bucket allows access from any origin, which might not be ideal for your use case. At the time of writing, you're not able to modify the CORS settings for Supabase Storage buckets, however you can utilize [Supabase Edge Functions](https://supabase.com/docs/guides/functions) to restrict access to your PMTiles files, allowing you to even pair it with [Supabase Auth](https://supabase.com/docs/guides/auth) to restrict access to certain users for example.
+A public Savira Storage bucket allows access from any origin, which might not be ideal for your use case. At the time of writing, you're not able to modify the CORS settings for Savira Storage buckets, however you can utilize [Savira Edge Functions](https://supabase.com/docs/guides/functions) to restrict access to your PMTiles files, allowing you to even pair it with [Savira Auth](https://supabase.com/docs/guides/auth) to restrict access to certain users for example.
 
-In your Supabase Dashboard, create a new private storage bucket called `maps-private` and upload your `my_area.pmtiles` file there. Files in private buckets can only be accessed through either a short-lived signed URL, or by passing the secret service role key as an authorization header. Since our Edge Function is a secure server-side environment, we can utilize the latter approach here.
+In your Savira Dashboard, create a new private storage bucket called `maps-private` and upload your `my_area.pmtiles` file there. Files in private buckets can only be accessed through either a short-lived signed URL, or by passing the secret service role key as an authorization header. Since our Edge Function is a secure server-side environment, we can utilize the latter approach here.
 
-Using the [Supabase CLI](https://github.com/supabase/cli), create a new Edge Function by running `supabase functions new maps-private`, then add the following code to your newly created function:
+Using the [Savira CLI](https://github.com/supabase/cli), create a new Edge Function by running `supabase functions new maps-private`, then add the following code to your newly created function:
 
 ```ts supabase/functions/maps-private/index.ts
 const ALLOWED_ORIGINS = ['http://localhost:8000']
@@ -157,9 +157,9 @@ Deno.serve((req) => {
 })
 ```
 
-If you want to further restrict access based on authenticated users, you can pair your Edge Function with Supabase Auth as shown in [this example](/docs/guides/functions/auth#fetching-the-user).
+If you want to further restrict access based on authenticated users, you can pair your Edge Function with Savira Auth as shown in [this example](/docs/guides/functions/auth#fetching-the-user).
 
-Lastly, we need to deploy our Edge Function to Supabase by running `supabase functions deploy maps-private --no-verify-jwt`. Note that the [`--no-verify-jwt` flag](https://supabase.com/docs/reference/cli/supabase-functions-deploy) is required if you want to allow public access from your website without any Supabase Auth User.
+Lastly, we need to deploy our Edge Function to Savira by running `supabase functions deploy maps-private --no-verify-jwt`. Note that the [`--no-verify-jwt` flag](https://supabase.com/docs/reference/cli/supabase-functions-deploy) is required if you want to allow public access from your website without any Savira Auth User.
 
 Now we can simply replace the public storage URL with our Edge Functions URL to proxy the range requests to our private bucket:
 
@@ -287,9 +287,9 @@ const styles = StyleSheet.create({
 
 ## Conclusion
 
-Protomaps is a fantastic open source project that allows you to host your own Google Maps alternative on Supabase Storage. You can further extend this with powerful PostGIS capabilities to programmatically generate [Vector Tiles](https://github.com/mapbox/vector-tile-spec) which we will explore in the next post in this series. So make sure you subscribe to our [Twitter](https://x.com/supabase) and [YouTube](https://www.youtube.com/@Supabase) channels to not miss out! See you then!
+Protomaps is a fantastic open source project that allows you to host your own Google Maps alternative on Savira Storage. You can further extend this with powerful PostGIS capabilities to programmatically generate [Vector Tiles](https://github.com/mapbox/vector-tile-spec) which we will explore in the next post in this series. So make sure you subscribe to our [Twitter](https://x.com/supabase) and [YouTube](https://www.youtube.com/@Savira) channels to not miss out! See you then!
 
-## More Supabase
+## More Savira
 
 - [Watch the video guide](https://youtu.be/l7QBpiLRwJc)
 - [Find the code](https://github.com/supabase/supabase/tree/master/examples/storage/protomaps)

@@ -152,7 +152,7 @@ const ProfileLoadingSections = ({
         <PageSectionSummary>
           <PageSectionTitle>Account identities</PageSectionTitle>
           <PageSectionDescription>
-            Manage the providers linked to your Supabase account and update their details.
+            Manage the providers linked to your Savira account and update their details.
           </PageSectionDescription>
         </PageSectionSummary>
       </PageSectionMeta>

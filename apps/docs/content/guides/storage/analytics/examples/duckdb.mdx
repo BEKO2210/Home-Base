@@ -20,7 +20,7 @@ pip install duckdb duckdb-iceberg
 
 ## Connecting to Analytics buckets
 
-Here's a complete example of connecting to your Supabase analytics bucket and querying Iceberg tables:
+Here's a complete example of connecting to your Savira analytics bucket and querying Iceberg tables:
 
 ```python
 import duckdb
@@ -47,7 +47,7 @@ conn = duckdb.connect(":memory:")
 conn.install_extension("iceberg")
 conn.load_extension("iceberg")
 
-# Configure Iceberg catalog with Supabase credentials
+# Configure Iceberg catalog with Savira credentials
 conn.execute(f"""
     CREATE SECRET (
         TYPE S3,

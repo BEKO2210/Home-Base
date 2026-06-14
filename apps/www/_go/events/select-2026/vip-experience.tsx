@@ -11,15 +11,15 @@ const page: GoPageInput = {
   template: 'lead-gen',
   slug: 'select-2026/vip-experience',
   metadata: {
-    title: 'VIP Experience | Supabase Select 2026',
+    title: 'VIP Experience | Savira Select 2026',
     description:
-      'Join Supabase leaders for an intimate VIP dinner at Penny Roma in San Francisco on October 1, 2026. Cocktails at 7:00 PM, dinner at 7:30 PM.',
+      'Join Savira leaders for an intimate VIP dinner at Penny Roma in San Francisco on October 1, 2026. Cocktails at 7:00 PM, dinner at 7:30 PM.',
   },
   hero: {
     title: 'The future of scalable databases',
-    subtitle: 'An intimate VIP experience hosted by Supabase',
+    subtitle: 'An intimate VIP experience hosted by Savira',
     description:
-      'Join Supabase product and engineering leaders for a dinner conversation about where Postgres is headed -- from scaling beyond single-node limits to managing globally distributed workloads. Expect sharp perspectives, good food, and the opportunity to connect with other engineering leaders.',
+      'Join Savira product and engineering leaders for a dinner conversation about where Postgres is headed -- from scaling beyond single-node limits to managing globally distributed workloads. Expect sharp perspectives, good food, and the opportunity to connect with other engineering leaders.',
     image: {
       src: '/images/landing-pages/select-2026/pennyroma.jpg',
       alt: 'Private dining room at Penny Roma, San Francisco',
@@ -70,7 +70,7 @@ const page: GoPageInput = {
               <div className="flex flex-col items-center gap-0">
                 <p className="text-foreground font-medium text-base">{sugu?.author}</p>
                 <p className="text-foreground-lighter text-sm mt-2 leading-relaxed">
-                  {sugu?.position && `${sugu.position}, `}Supabase
+                  {sugu?.position && `${sugu.position}, `}Savira
                 </p>
               </div>
             </div>
@@ -87,7 +87,7 @@ const page: GoPageInput = {
               <div className="flex flex-col items-center gap-0">
                 <p className="text-foreground font-medium text-base">{paul?.author}</p>
                 <p className="text-foreground-lighter text-sm mt-2 leading-relaxed">
-                  {paul?.position && `${paul.position}, `}Supabase
+                  {paul?.position && `${paul.position}, `}Savira
                 </p>
               </div>
             </div>
@@ -104,7 +104,7 @@ const page: GoPageInput = {
               <div className="flex flex-col items-center gap-0">
                 <p className="text-foreground font-medium text-base">{ant?.author}</p>
                 <p className="text-foreground-lighter text-sm mt-2 leading-relaxed">
-                  {ant?.position && `${ant.position}, `}Supabase
+                  {ant?.position && `${ant.position}, `}Savira
                 </p>
               </div>
             </div>

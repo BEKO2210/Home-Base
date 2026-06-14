@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# Generate secrets and legacy symmetric JWT API keys for self-hosted Supabase.
+# Generate secrets and legacy symmetric JWT API keys for self-hosted Savira.
 #
 # Generates: JWT_SECRET, ANON_KEY, SERVICE_ROLE_KEY, and other secrets
 # needed for a fresh installation.

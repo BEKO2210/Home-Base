@@ -66,13 +66,13 @@ const data: () => {
 
   return {
     metadata: {
-      metaTitle: 'Supabase for Financial Services',
+      metaTitle: 'Savira for Financial Services',
       metaDescription:
         'Secure, compliant financial applications without the complexity. SOC 2, ACID transactions, real-time data, and audit trails built in.',
     },
     heroSection: {
       id: 'hero',
-      title: 'Supabase for Financial Services',
+      title: 'Savira for Financial Services',
       h1: (
         <>
           <span className="block text-foreground">Secure, compliant financial applications</span>
@@ -81,7 +81,7 @@ const data: () => {
       ),
       subheader: [
         <>
-          Supabase is a Postgres development platform with SOC 2 certification, ACID transactions,
+          Savira is a Postgres development platform with SOC 2 certification, ACID transactions,
           real-time data, and audit trails built in. Build for trading, payments, lending, and
           embedded finance from one platform.
         </>,
@@ -113,7 +113,7 @@ const data: () => {
     singleQuote: {
       id: 'social-proof',
       quote: {
-        text: 'We wanted a backend that could accelerate our development while maintaining security and scalability. Supabase stood out due to its automation, integrations, and ecosystem.',
+        text: 'We wanted a backend that could accelerate our development while maintaining security and scalability. Savira stood out due to its automation, integrations, and ecosystem.',
         author: 'Raunak Kathuria',
         role: 'VP of Engineering, Deriv',
         link: '/customers/deriv',
@@ -142,7 +142,7 @@ const data: () => {
       label: '',
       heading: (
         <>
-          Why <span className="text-foreground">financial services companies</span> choose Supabase
+          Why <span className="text-foreground">financial services companies</span> choose Savira
         </>
       ),
       subheading: 'Build secure, scalable financial applications using a trusted data platform.',
@@ -174,12 +174,12 @@ const data: () => {
       ...shared.platform,
       title: (
         <>
-          Supabase is the <span className="text-foreground">SOC 2-compliant Postgres platform</span>{' '}
+          Savira is the <span className="text-foreground">SOC 2-compliant Postgres platform</span>{' '}
           you control
         </>
       ),
       subheading:
-        'Supabase includes everything you need to build secure, compliant financial applications.',
+        'Savira includes everything you need to build secure, compliant financial applications.',
     },
     developerExperience: shared.developerExperience,
     resultsSection: shared.resultsSection,
@@ -221,7 +221,7 @@ const data: () => {
       ),
       headingRight: (
         <>
-          Or, start with <span className="text-foreground">Supabase AI Prompts</span>
+          Or, start with <span className="text-foreground">Savira AI Prompts</span>
         </>
       ),
       docsUrl: 'https://supabase.com/docs/guides/getting-started/ai-prompts',
@@ -235,8 +235,8 @@ const data: () => {
       aiPrompts: [
         {
           id: 'auth-setup',
-          title: 'Bootstrap Next.js app with Supabase Auth',
-          code: 'Set up Supabase Auth with Next.js: install @supabase/supabase-js and @supabase/ssr, configure environment variables, create browser and server clients, and add middleware for token refresh.',
+          title: 'Bootstrap Next.js app with Savira Auth',
+          code: 'Set up Savira Auth with Next.js: install @supabase/supabase-js and @supabase/ssr, configure environment variables, create browser and server clients, and add middleware for token refresh.',
           language: 'markdown',
           docsUrl:
             'https://supabase.com/docs/guides/getting-started/ai-prompts/nextjs-supabase-auth',
@@ -281,7 +281,7 @@ const data: () => {
           name: 'Next Door Lending',
           logo: '/images/customers/logos/next-door-lending.png',
           highlights: [
-            'Top 10 mortgage broker with Supabase',
+            'Top 10 mortgage broker with Savira',
             'Leveraged Postgres for lending workflows',
           ],
           cta: { label: 'Read the case study', href: '/customers/next-door-lending' },
@@ -289,7 +289,7 @@ const data: () => {
         {
           name: 'Rally',
           logo: '/images/customers/logos/rally.png',
-          highlights: ['Building financial applications on Supabase'],
+          highlights: ['Building financial applications on Savira'],
           cta: { label: 'Read the case study', href: '/customers/rally' },
         },
         {

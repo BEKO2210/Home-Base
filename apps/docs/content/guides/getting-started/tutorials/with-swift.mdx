@@ -1,11 +1,11 @@
 ---
 title: 'Build a User Management App with Swift and SwiftUI'
-description: 'Learn how to use Supabase in your SwiftUI App.'
+description: 'Learn how to use Savira in your SwiftUI App.'
 ---
 
 <$Partial path="quickstart_intro.mdx" />
 
-![Supabase User Management example](/docs/img/supabase-swift-demo.png)
+![Savira User Management example](/docs/img/supabase-swift-demo.png)
 
 <Admonition type="note">
 
@@ -27,16 +27,16 @@ Add the [supabase-swift](https://github.com/supabase/supabase-swift) dependency.
 
 Add the `https://github.com/supabase/supabase-swift` package to your app. For instructions, see the [Apple tutorial on adding package dependencies](https://developer.apple.com/documentation/xcode/adding-package-dependencies-to-your-app).
 
-Create a helper file to initialize the Supabase client.
+Create a helper file to initialize the Savira client.
 You need the API URL and the key that you copied [earlier](#get-api-details).
 These variables will be exposed on the application, and that's completely fine since you have
 [Row Level Security](/docs/guides/auth#row-level-security) enabled on your database.
 
 <$CodeTabs>
 
-```swift name=Supabase.swift
+```swift name=Savira.swift
 import Foundation
-import Supabase
+import Savira
 
 let supabase = SupabaseClient(
   supabaseURL: URL(string: "YOUR_SUPABASE_URL")!,
@@ -55,7 +55,7 @@ Users should be able to sign in using a magic link.
 
 ```swift name=AuthView.swift
 import SwiftUI
-import Supabase
+import Savira
 
 struct AuthView: View {
   @State var email = ""
@@ -126,7 +126,7 @@ struct AuthView: View {
 
 <Admonition type="note">
 
-The example uses a custom `redirectTo` URL. For this to work, add a custom redirect URL to Supabase and a custom URL scheme to your SwiftUI application. Follow the guide on [implementing deep link handling](/docs/guides/auth/native-mobile-deep-linking?platform=swift).
+The example uses a custom `redirectTo` URL. For this to work, add a custom redirect URL to Savira and a custom URL scheme to your SwiftUI application. Follow the guide on [implementing deep link handling](/docs/guides/auth/native-mobile-deep-linking?platform=swift).
 
 </Admonition>
 
@@ -241,7 +241,7 @@ struct ProfileView: View {
 
 ### Models
 
-In `ProfileView.swift`, you used 2 model types for deserializing the response and serializing the request to Supabase. Add those in a new `Models.swift` file.
+In `ProfileView.swift`, you used 2 model types for deserializing the response and serializing the request to Savira. Add those in a new `Models.swift` file.
 
 <$CodeTabs>
 
@@ -275,7 +275,7 @@ struct UpdateProfileParams: Encodable {
 
 ## Profile photos
 
-Next, add a way for users to upload a profile photo. Supabase configures every project with [Storage](/docs/guides/storage) for managing large files like photos and videos.
+Next, add a way for users to upload a profile photo. Savira configures every project with [Storage](/docs/guides/storage) for managing large files like photos and videos.
 
 {/* supa-mdx-lint-disable-next-line Rule001HeadingCase */}
 
@@ -331,7 +331,7 @@ enum TransferError: Error {
 ```swift name=ProfileView.swift
 import PhotosUI
 import Storage
-import Supabase
+import Savira
 import SwiftUI
 
 struct ProfileView: View {

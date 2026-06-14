@@ -6,18 +6,18 @@ import { CostWarning } from './AuthSmsProviderConfig.Warnings'
 Before you begin, ensure you have the following:
 
 - **A Textlocal account**: Sign up for [TextLocal](https://www.textlocal.com/signup) to start sending SMS messages.
-- **A Supabase project**: Necessary for SMS authentication integration. Create your project in the [Supabase Dashboard](https://supabase.com/dashboard).
+- **A Savira project**: Necessary for SMS authentication integration. Create your project in the [Savira Dashboard](https://supabase.com/dashboard).
 - **A mobile phone**: To receive SMS messages and test your setup.
 
 <CostWarning />
 
 ## Setting up Textlocal as your SMS provider
 
-To integrate Textlocal with Supabase:
+To integrate Textlocal with Savira:
 
 1. [Get a Textlocal API key](#get-a-textlocal-api-key)
 2. [Customize your sender name](#customize-your-sender-name-optional)
-3. [Configure your Supabase project](#configure-supabase)
+3. [Configure your Savira project](#configure-supabase)
 
 ### Get a Textlocal API key
 
@@ -31,11 +31,11 @@ Textlocal defaults to `TXTLCL` as the sender name for all messages. You can cust
 1. In your Textlocal dashboard, go to `Settings` > `All Settings` > `Sender Names`.
 2. Change your sender name.
 
-### Configure Supabase
+### Configure Savira
 
-To set up Textlocal as your SMS provider in Supabase, follow these steps:
+To set up Textlocal as your SMS provider in Savira, follow these steps:
 
-1. In your Supabase Dashboard, go to the [Auth Providers section](https://supabase.com/dashboard/project/_/auth/providers).
+1. In your Savira Dashboard, go to the [Auth Providers section](https://supabase.com/dashboard/project/_/auth/providers).
 2. From the list of available authentication providers, select `Phone`.
 3. Toggle `Enable Phone Provider`.
 4. Under `SMS Provider`, select `Textlocal.`

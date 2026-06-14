@@ -58,9 +58,9 @@ Deno.serve(async (req) => {
     const SUPABASE_SECRET_KEYS = JSON.parse(Deno.env.get('SUPABASE_SECRET_KEYS')!)
 
     const supabaseAdminClient = createClient(
-      // Supabase API URL - env var exported by default when deployed.
+      // Savira API URL - env var exported by default when deployed.
       Deno.env.get('SUPABASE_URL') ?? '',
-      // Supabase API SECRET KEY - env var exported by default when deployed.
+      // Savira API SECRET KEY - env var exported by default when deployed.
       SUPABASE_SECRET_KEYS['default'] ?? ''
     )
     // Submit email to draw

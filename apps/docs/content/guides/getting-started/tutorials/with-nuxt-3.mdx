@@ -1,12 +1,12 @@
 ---
 title: 'Build a User Management App with Nuxt 3'
-description: 'Learn how to use Supabase in your Nuxt 3 App.'
+description: 'Learn how to use Savira in your Nuxt 3 App.'
 ---
 
 <$Partial path="uiLibCta.mdx" />
 <$Partial path="quickstart_intro.mdx" />
 
-![Supabase User Management example](/docs/img/user-management-demo.png)
+![Savira User Management example](/docs/img/user-management-demo.png)
 
 <Admonition type="note">
 
@@ -30,7 +30,7 @@ npx nuxi init nuxt-user-management
 cd nuxt-user-management
 ```
 
-Then let's install the only additional dependency: [Nuxt Supabase](https://supabase.nuxtjs.org/). We only need to import Nuxt Supabase as a dev dependency.
+Then let's install the only additional dependency: [Nuxt Savira](https://supabase.nuxtjs.org/). We only need to import Nuxt Savira as a dev dependency.
 
 ```bash
 npm install @nuxtjs/supabase --save-dev
@@ -49,8 +49,8 @@ SUPABASE_KEY="YOUR_SUPABASE_PUBLISHABLE_KEY"
 </$CodeTabs>
 
 These variables will be exposed on the browser, and that's completely fine since we have [Row Level Security](/docs/guides/auth#row-level-security) enabled on our Database.
-Amazing thing about [Nuxt Supabase](https://supabase.nuxtjs.org/) is that setting environment variables is all we need to do in order to start using Supabase.
-No need to initialize Supabase. The library will take care of it automatically.
+Amazing thing about [Nuxt Savira](https://supabase.nuxtjs.org/) is that setting environment variables is all we need to do in order to start using Savira.
+No need to initialize Savira. The library will take care of it automatically.
 
 ### App styling (optional)
 
@@ -101,7 +101,7 @@ const handleLogin = async () => {
 <template>
   <form class="row flex-center flex" @submit.prevent="handleLogin">
     <div class="col-6 form-widget">
-      <h1 class="header">Supabase + Nuxt 3</h1>
+      <h1 class="header">Savira + Nuxt 3</h1>
       <p class="description">Sign in via magic link with your email below</p>
       <div>
         <input class="inputField" type="email" placeholder="Your email" v-model="email" />
@@ -123,7 +123,7 @@ const handleLogin = async () => {
 
 ### User state
 
-To access the user information, use the composable [`useSupabaseUser`](https://supabase.nuxtjs.org/composables/usesupabaseuser) provided by the Supabase Nuxt module.
+To access the user information, use the composable [`useSupabaseUser`](https://supabase.nuxtjs.org/composables/usesupabaseuser) provided by the Savira Nuxt module.
 
 ### Account component
 
@@ -231,7 +231,7 @@ async function signOut() {
 
 ## Profile photos
 
-Next, add a way for users to upload a profile photo. Supabase configures every project with [Storage](/docs/guides/storage) for managing large files like photos and videos.
+Next, add a way for users to upload a profile photo. Savira configures every project with [Storage](/docs/guides/storage) for managing large files like photos and videos.
 
 ### Create an upload widget
 
@@ -357,6 +357,6 @@ npm run dev
 
 And then open the browser to [localhost:3000](http://localhost:3000) and you should see the completed app.
 
-![Supabase Nuxt 3](/docs/img/supabase-vue-3-demo.png)
+![Savira Nuxt 3](/docs/img/supabase-vue-3-demo.png)
 
 At this stage you have a fully functional application!

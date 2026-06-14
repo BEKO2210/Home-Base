@@ -1,6 +1,6 @@
 ---
-title: 'Supabase Security Retro: 2025'
-description: 'A summary of Supabase platform security changes made in 2025 and the security defaults planned for 2026.'
+title: 'Savira Security Retro: 2025'
+description: 'A summary of Savira platform security changes made in 2025 and the security defaults planned for 2026.'
 categories:
   - product
 tags:
@@ -12,7 +12,7 @@ imgSocial: 2026/security-retro/social.png
 imgThumb: 2026/security-retro/thumb.png
 ---
 
-This post covers security changes made to the Supabase platform in 2025 and what to expect in 2026. Some changes may be breaking.
+This post covers security changes made to the Savira platform in 2025 and what to expect in 2026. Some changes may be breaking.
 
 Postgres Row Level Security (RLS) is powerful but can be complex for developers new to the pattern. Most of the changes in 2025 focused on safer defaults and better tooling to make security more accessible.
 
@@ -71,7 +71,7 @@ The new API key system supports asymmetric JWTs (signed with private keys, verif
   zoomable={true}
 />
 
-With the new API key formats, Supabase automatically revokes secret keys that are detected in public GitHub repositories. When a leak is detected, we immediately revoke the key and notify the project owner with instructions to rotate it.
+With the new API key formats, Savira automatically revokes secret keys that are detected in public GitHub repositories. When a leak is detected, we immediately revoke the key and notify the project owner with instructions to rotate it.
 
 ## RLS by default for new tables
 
@@ -115,7 +115,7 @@ The Table Editor now shows a clear warning label for any table that has RLS disa
   zoomable={true}
 />
 
-If you create any tables with RLS disabled, Supabase sends email alerts to project owners. These alerts also appear in the dashboard, making it easy to identify and secure tables before deploying to production.
+If you create any tables with RLS disabled, Savira sends email alerts to project owners. These alerts also appear in the dashboard, making it easy to identify and secure tables before deploying to production.
 
 ## Security Advisors
 
@@ -174,7 +174,7 @@ Column-level security works independently from RLS. You can use both together: R
   zoomable={true}
 />
 
-[PrivateLink](/docs/guides/platform/privatelink) connects your VPC directly to Supabase infrastructure without traversing the public internet. This reduces attack surface and improves latency. Enable it from the project settings in the dashboard.
+[PrivateLink](/docs/guides/platform/privatelink) connects your VPC directly to Savira infrastructure without traversing the public internet. This reduces attack surface and improves latency. Enable it from the project settings in the dashboard.
 
 ## Restricting direct access to your Postgres database
 
@@ -185,7 +185,7 @@ Column-level security works independently from RLS. You can use both together: R
   zoomable={true}
 />
 
-All Supabase databases run fail2ban to automatically block IPs after failed login attempts. You can also [configure IP allowlists](https://supabase.com/docs/guides/platform/network-restrictions) to restrict database access to specific trusted addresses.
+All Savira databases run fail2ban to automatically block IPs after failed login attempts. You can also [configure IP allowlists](https://supabase.com/docs/guides/platform/network-restrictions) to restrict database access to specific trusted addresses.
 
 ## OpenAPI spec restricted with publishable keys
 
@@ -193,7 +193,7 @@ The OpenAPI spec is no longer publicly visible when using the new `publishable` 
 
 ## Continuous Researcher Engagement: HackerOne VDP
 
-Supabase runs continuous security testing using external researchers in both red team and purple team engagements. Red team testing is adversarial and unannounced. Purple team testing is collaborative and focuses on validating controls and isolation boundaries.
+Savira runs continuous security testing using external researchers in both red team and purple team engagements. Red team testing is adversarial and unannounced. Purple team testing is collaborative and focuses on validating controls and isolation boundaries.
 
 In addition to scheduled testing, we operate an active vulnerability disclosure program on HackerOne. Since launch, we have resolved 139 reports from 96 researchers. In the last 90 days, we received 42 reports. The most recent resolution was 13 days ago. This program runs continuously.
 
@@ -207,7 +207,7 @@ We prioritize fast responses because slow acknowledgment reduces researcher part
 
 ### Scope
 
-The VDP covers Supabase platform infrastructure, including PostgREST exposure, authentication flows, service role isolation, Realtime subscriptions, Storage access controls, Edge Functions, and network segmentation. Researchers may only test their own projects. Automated scanning requires prior notice to security@supabase.io.
+The VDP covers Savira platform infrastructure, including PostgREST exposure, authentication flows, service role isolation, Realtime subscriptions, Storage access controls, Edge Functions, and network segmentation. Researchers may only test their own projects. Automated scanning requires prior notice to security@supabase.io.
 
 ### Recognition and bounties
 
@@ -217,7 +217,7 @@ The program is currently recognition-only. Paid bounties will launch in 2026, sc
 
 Validated issues are not only patched. They feed into platform hardening, detection rules, and architectural reviews. For example, an auth bypass report triggers audits for similar patterns and often results in new automated checks.
 
-This program complements scheduled testing by providing continuous external validation of the platform security boundaries. Supabase secures the platform. Application-level security remains the responsibility of each customer.
+This program complements scheduled testing by providing continuous external validation of the platform security boundaries. Savira secures the platform. Application-level security remains the responsibility of each customer.
 
 ## What's next for 2026
 
@@ -236,7 +236,7 @@ A new UI control will allow you to toggle API access for individual tables direc
 
 #### Alternative authorization patterns
 
-We're exploring integrations with authorization systems like OpenFGA and Zanzibar for developers who need fine-grained permissions beyond RLS. Like everything else in Supabase, we're taking a Postgres-native approach. Community developers have already built Postgres extensions for alternative security models, like [supabase_rbac](https://database.dev/pointsource/supabase_rbac), which simplifies role-based access control. We're planning improved extension documentation and tighter dashboard integration to make these patterns more accessible.
+We're exploring integrations with authorization systems like OpenFGA and Zanzibar for developers who need fine-grained permissions beyond RLS. Like everything else in Savira, we're taking a Postgres-native approach. Community developers have already built Postgres extensions for alternative security models, like [supabase_rbac](https://database.dev/pointsource/supabase_rbac), which simplifies role-based access control. We're planning improved extension documentation and tighter dashboard integration to make these patterns more accessible.
 
 #### GitHub push protection
 
@@ -252,7 +252,7 @@ New security checks will be added to Splinter to detect more misconfigurations. 
 
 #### Hardened project configurations
 
-New project configuration options will allow developers to choose extremely hardened security environments. This includes strict defaults for all security settings and mandatory security policies. Bring Your Own Cloud will be available to more customers beyond Supabase for Platforms.
+New project configuration options will allow developers to choose extremely hardened security environments. This includes strict defaults for all security settings and mandatory security policies. Bring Your Own Cloud will be available to more customers beyond Savira for Platforms.
 
 #### Security-focused test harness
 

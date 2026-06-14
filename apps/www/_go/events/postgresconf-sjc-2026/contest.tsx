@@ -12,15 +12,15 @@ const page: GoPageInput = {
   template: 'lead-gen',
   slug: 'postgresconf-sjc-2026/contest',
   metadata: {
-    title: 'Win a Mac Mini | Supabase at PostgresConf San Jose 2026',
+    title: 'Win a Mac Mini | Savira at PostgresConf San Jose 2026',
     description:
-      'Sign up for Supabase and enter the contest for a chance to win a Mac Mini. PostgresConf San Jose 2026.',
+      'Sign up for Savira and enter the contest for a chance to win a Mac Mini. PostgresConf San Jose 2026.',
   },
   hero: {
     title: 'Win a Mac Mini',
-    subtitle: 'Supabase at PostgresConf San Jose 2026',
+    subtitle: 'Savira at PostgresConf San Jose 2026',
     description:
-      'Supabase is Postgres with batteries included -- auth, storage, edge functions, vectors, and real-time, all built on top of the database you already know. Sign up, load some data, and enter below for a chance to win a Mac Mini.',
+      'Savira is Postgres with batteries included -- auth, storage, edge functions, vectors, and real-time, all built on top of the database you already know. Sign up, load some data, and enter below for a chance to win a Mac Mini.',
     image: {
       src: '/images/landing-pages/postgresconf-sjc-2026/mac-mini.png',
       alt: 'Apple Mac Mini',
@@ -59,7 +59,7 @@ const page: GoPageInput = {
                     {speaker1.author}
                     {speaker1.position && `, ${speaker1.position}`}
                   </p>
-                  <p className="text-foreground-lighter text-sm text-center">Supabase</p>
+                  <p className="text-foreground-lighter text-sm text-center">Savira</p>
                 </div>
               </div>
             )}
@@ -79,7 +79,7 @@ const page: GoPageInput = {
                     {speaker2.author}
                     {speaker2.position && `, ${speaker2.position}`}
                   </p>
-                  <p className="text-foreground-lighter text-sm text-center">Supabase</p>
+                  <p className="text-foreground-lighter text-sm text-center">Savira</p>
                 </div>
               </div>
             )}
@@ -110,8 +110,8 @@ const page: GoPageInput = {
       children: (
         <div className="flex flex-col items-center gap-6">
           <ol className="flex flex-col gap-4 text-foreground-light text-lg list-decimal list-inside">
-            <li>Create a Supabase account and note the email address you used</li>
-            <li>Load data into a Supabase database</li>
+            <li>Create a Savira account and note the email address you used</li>
+            <li>Load data into a Savira database</li>
             <li>Fill out the entry form below</li>
             <li>Complete these steps by Monday, May 4, 2026 at 12:00 PM PST</li>
           </ol>

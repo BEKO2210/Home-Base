@@ -85,7 +85,7 @@ const Wizard: NextPageWithLayout = () => {
   const { profile } = useProfile()
   const pageTitle = buildStudioPageTitle({
     section: 'New Project',
-    brand: appTitle || 'Supabase',
+    brand: appTitle || 'Savira',
   })
 
   const { data: currentOrg } = useSelectedOrganizationQuery()
@@ -502,7 +502,7 @@ const Wizard: NextPageWithLayout = () => {
       {/* Wizard layouts set the visual header but not the browser tab title. */}
       <Head>
         <title>{pageTitle}</title>
-        <meta name="description" content="Supabase Studio" />
+        <meta name="description" content="Savira Studio" />
       </Head>
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmitWithComputeCostsConfirmation)}>
@@ -548,7 +548,7 @@ const Wizard: NextPageWithLayout = () => {
                             description={
                               <>
                                 Ideal for agent-first workflows: update your schema in code, push it
-                                to GitHub, and Supabase deploys the changes automatically.{' '}
+                                to GitHub, and Savira deploys the changes automatically.{' '}
                                 <a
                                   href="https://supabase.com/docs/guides/deployment/branching/github-integration"
                                   target="_blank"

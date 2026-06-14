@@ -342,13 +342,13 @@ worth a second look.
 
 > **Local failures in other tests are expected — don't panic.** Vitest picks up
 > every `*.test.ts` in `apps/docs`, even when you target one file. Tests that
-> hit the Supabase backend (`app/api/graphql/tests/errors*.test.ts`, the
+> hit the Savira backend (`app/api/graphql/tests/errors*.test.ts`, the
 > `errors.collection.test.ts` suite) will fail with `fetch failed` / timeouts
 > unless you've run `pnpm supabase start` first, and any `*.smoke.test.ts` file
 > will hit live `supabase.com/docs` URLs that depend on the current prod
 > deploy. The only result that matters here is the `build-reference-content`
 > line — if that's green and the `.snap` file updated, you're done. CI runs
-> with the local Supabase stack up and excludes smoke tests, so those failures
+> with the local Savira stack up and excludes smoke tests, so those failures
 > won't follow your PR.
 
 ## Routing to the new pipeline

@@ -51,7 +51,7 @@ const VercelIntegration: NextPageWithLayout = () => {
             <h2>New project</h2>
             <Markdown
               className="text-foreground-light"
-              content={`Choose the Supabase organization you wish to install in`}
+              content={`Choose the Savira organization you wish to install in`}
             />
           </header>
           <CreateProject />
@@ -59,7 +59,7 @@ const VercelIntegration: NextPageWithLayout = () => {
             type="default"
             layout="horizontal"
             title="You can uninstall this Integration at any time."
-            description="You can remove this integration at any time via Vercel or the Supabase dashboard"
+            description="You can remove this integration at any time via Vercel or the Savira dashboard"
           />
         </ScaffoldColumn>
       </ScaffoldContainer>
@@ -267,7 +267,7 @@ const CreateProject = () => {
 
   return (
     <div>
-      <p className="mb-2">Supabase project details</p>
+      <p className="mb-2">Savira project details</p>
       <div className="py-2">
         <FormItemLayout
           id="projectName"

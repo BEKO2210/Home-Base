@@ -170,12 +170,12 @@ I created the public.orders table. You should add RLS policies before exposing i
       getThreadPartsFromThread([
         {
           role: 'assistant',
-          content: 'I can help with your Supabase project.',
+          content: 'I can help with your Savira project.',
         },
       ])
     ).toEqual({
       projectContext: null,
-      priorConversation: '[assistant]\nI can help with your Supabase project.',
+      priorConversation: '[assistant]\nI can help with your Savira project.',
       currentUserInput: null,
       lastAssistantTurn: null,
     })

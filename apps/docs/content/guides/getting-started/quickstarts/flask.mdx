@@ -1,6 +1,6 @@
 ---
-title: 'Use Supabase with Python'
-subtitle: 'Learn how to create a Supabase project, add some sample data to your database, and query the data from a Python app.'
+title: 'Use Savira with Python'
+subtitle: 'Learn how to create a Savira project, add some sample data to your database, and query the data from a Python app.'
 breadcrumb: 'Framework Quickstarts'
 hideToc: true
 ---
@@ -34,9 +34,9 @@ hideToc: true
   </StepHikeCompact.Step>
 
   <StepHikeCompact.Step step={3}>
-    <StepHikeCompact.Details title="Install Flask and the Supabase client library">
+    <StepHikeCompact.Details title="Install Flask and the Savira client library">
 
-    The fastest way to get started is to use Flask for the web framework and the `supabase-py` client library which provides a convenient interface for working with Supabase from a Python app.
+    The fastest way to get started is to use Flask for the web framework and the `supabase-py` client library which provides a convenient interface for working with Savira from a Python app.
 
     Install both packages using pip.
 
@@ -55,7 +55,7 @@ hideToc: true
   <StepHikeCompact.Step step={4}>
     <StepHikeCompact.Details title="Create Environment Variables file">
 
-    Create a `.env` file in your project root and populate it with your Supabase connection variables:
+    Create a `.env` file in your project root and populate it with your Savira connection variables:
 
     <ProjectConfigVariables variable="url" />
     <ProjectConfigVariables variable="publishable" />
@@ -89,7 +89,7 @@ hideToc: true
     pip install python-dotenv
     ```
 
-    Create an `app.py` file and add a route that fetches data from your `instruments` table using the Supabase client.
+    Create an `app.py` file and add a route that fetches data from your `instruments` table using the Savira client.
 
     </StepHikeCompact.Details>
     <StepHikeCompact.Code>

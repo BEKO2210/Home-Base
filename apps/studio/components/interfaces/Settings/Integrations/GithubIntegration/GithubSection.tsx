@@ -43,7 +43,7 @@ export const GitHubSection = () => {
           <PageSectionSummary>
             <PageSectionTitle>GitHub Integration</PageSectionTitle>
             <PageSectionDescription>
-              Connect any of your GitHub repositories to a project. Supabase applies database
+              Connect any of your GitHub repositories to a project. Savira applies database
               changes when you merge into your production branch. If branching is enabled, each pull
               request gets its own preview database.
             </PageSectionDescription>

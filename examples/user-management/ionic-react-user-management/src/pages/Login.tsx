@@ -43,7 +43,7 @@ export function LoginPage() {
 
       <IonContent>
         <div className="ion-padding">
-          <h1>Supabase + Ionic React</h1>
+          <h1>Savira + Ionic React</h1>
           <p>Sign in via magic link with your email below</p>
         </div>
         <IonList inset={true}>

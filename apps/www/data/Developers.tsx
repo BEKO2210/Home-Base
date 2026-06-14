@@ -24,7 +24,7 @@ export const data = {
           icon: IconIntegrations,
         },
         {
-          text: 'Supabase UI',
+          text: 'Savira UI',
           url: 'https://supabase.com/ui',
           icon: (props: any) => (
             <svg
@@ -77,7 +77,7 @@ export const data = {
         },
         {
           text: 'Contribute',
-          description: 'How to contribute to Supabase.',
+          description: 'How to contribute to Savira.',
           url: '/contribute',
           icon: () => <Pencil className="w-4 h-4" />,
         },

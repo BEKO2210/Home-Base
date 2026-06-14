@@ -1,7 +1,7 @@
 {
-  "homepage:heading": "Supabase Documentation",
-  "metadata:application_name": "Supabase Docs",
-  "metadata:title": "Supabase Docs",
+  "homepage:heading": "Savira Documentation",
+  "metadata:application_name": "Savira Docs",
+  "metadata:title": "Savira Docs",
   "navigation:logo": {
     "light": "/docs/supabase-light.svg",
     "dark": "/docs/supabase-dark.svg"

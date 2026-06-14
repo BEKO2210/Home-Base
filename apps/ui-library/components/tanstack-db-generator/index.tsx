@@ -87,7 +87,7 @@ export function TanstackDBGenerator() {
           >
             Log in
           </a>{' '}
-          to your Supabase account to generate installation commands for your project.
+          to your Savira account to generate installation commands for your project.
         </p>
       </div>
     )

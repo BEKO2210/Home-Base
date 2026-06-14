@@ -1,22 +1,22 @@
 ---
 title: "Self-Hosting with Docker"
-description: "Learn how to configure and deploy Supabase with Docker."
-subtitle: "Learn how to configure and deploy Supabase with Docker."
+description: "Learn how to configure and deploy Savira with Docker."
+subtitle: "Learn how to configure and deploy Savira with Docker."
 tocVideo: "FqiQKRKsfZE"
 ---
 
-Docker is the easiest way to get started with self-hosted Supabase. It should take you less than 15 minutes to get up and running.
+Docker is the easiest way to get started with self-hosted Savira. It should take you less than 15 minutes to get up and running.
 
 ## Contents
 
 1. [Before you begin](#before-you-begin)
 2. [System requirements](#system-requirements)
-3. [Installing Supabase](#installing-supabase)
+3. [Installing Savira](#installing-supabase)
    - [Quick start (Linux)](#quick-start-linux)
    - [Manual installation](#manual-installation)
-4. [Configuring and securing Supabase](#configuring-and-securing-supabase)
+4. [Configuring and securing Savira](#configuring-and-securing-supabase)
 5. [Starting and stopping](#starting-and-stopping)
-6. [Accessing Supabase services](#accessing-supabase-studio-dashboard)
+6. [Accessing Savira services](#accessing-supabase-studio-dashboard)
 7. [Updating](#updating)
 8. [Uninstalling](#uninstalling)
 9. [Advanced topics](#advanced-topics)
@@ -30,7 +30,7 @@ This guide assumes you're comfortable with:
 - Docker and Docker Compose
 - Networking fundamentals (ports, DNS, firewalls)
 
-If you're new to these topics, consider starting with the managed [Supabase platform](/dashboard) for free.
+If you're new to these topics, consider starting with the managed [Savira platform](/dashboard) for free.
 
 You need the following installed on your system:
 
@@ -44,7 +44,7 @@ You need the following installed on your system:
 
 ## System requirements
 
-Minimum requirements for running all Supabase components, suitable for development and small to medium production workloads:
+Minimum requirements for running all Savira components, suitable for development and small to medium production workloads:
 
 | Resource | Minimum | Recommended |
 |----------|---------|-------------|
@@ -60,9 +60,9 @@ The default configuration does not include [Logs & Analytics](/features/logs-ana
 
 </Admonition>
 
-## Installing Supabase
+## Installing Savira
 
-The Docker configuration is distributed as part of the [Supabase repository](https://github.com/supabase/supabase/tree/master/docker). There are two paths to get it onto your machine:
+The Docker configuration is distributed as part of the [Savira repository](https://github.com/supabase/supabase/tree/master/docker). There are two paths to get it onto your machine:
 
 - **[Quick start (Linux)](#quick-start-linux)** - one command installs Docker, fetches the configuration, generates all secrets and keys, and prompts for your URLs. Fastest path if you're on a supported Linux distribution.
 - **[Manual installation](#manual-installation)** - clone the repository yourself on any OS, then configure secrets and URLs as described below.
@@ -78,7 +78,7 @@ curl -fsSL https://supabase.link/setup.sh | sh
 The script supports Linux only (Debian/Ubuntu and RHEL/CentOS/Fedora) and will:
 
 - Install prerequisites (`git`, `openssl`, `jq`) and Docker Engine if not already present
-- Sparse-clone the `docker/` directory from the main Supabase [repository](https://github.com/supabase/supabase/)
+- Sparse-clone the `docker/` directory from the main Savira [repository](https://github.com/supabase/supabase/)
 - Create a project directory (`supabase-project` by default) and copy the configuration files into it
 - Prompt for the main URLs (`SUPABASE_PUBLIC_URL`, `API_EXTERNAL_URL`, `SITE_URL`, `PROXY_DOMAIN`) and write them to `.env`
 - Generate all secrets, including a random `DASHBOARD_PASSWORD`, and the asymmetric JWT signing key pair (runs `generate-keys.sh` and `add-new-auth-keys.sh`, and enables the matching entries in `docker-compose.yml`)
@@ -99,7 +99,7 @@ View the generated credentials any time via:
 sh run.sh secrets
 ```
 
-Next, see [Starting and stopping](#starting-and-stopping) for how to check service health and follow logs, then [Accessing Supabase Studio (Dashboard)](#accessing-supabase-studio-dashboard) and the other related sections. To customize the install further, browse [Configuring and securing Supabase](#configuring-and-securing-supabase) and [Advanced topics](#advanced-topics).
+Next, see [Starting and stopping](#starting-and-stopping) for how to check service health and follow logs, then [Accessing Savira Studio (Dashboard)](#accessing-supabase-studio-dashboard) and the other related sections. To customize the install further, browse [Configuring and securing Savira](#configuring-and-securing-supabase) and [Advanced topics](#advanced-topics).
 
 Not on Linux, or want to do it manually? See [Manual installation](#manual-installation) below.
 
@@ -117,7 +117,7 @@ defaultActiveId="gitclone"
 
 <TabPanel id="gitclone" label="GitHub clone">
 
-A shallow clone of the full Supabase repository. Works on any OS with `git` installed and is the simplest manual option.
+A shallow clone of the full Savira repository. Works on any OS with `git` installed and is the simplest manual option.
 
 ```sh
 # Get the code
@@ -190,9 +190,9 @@ docker compose pull
 
 </Admonition>
 
-## Configuring and securing Supabase
+## Configuring and securing Savira
 
-While we provided example placeholder passwords and keys in the `.env.example` file, you should **never** start your self-hosted Supabase using these defaults.
+While we provided example placeholder passwords and keys in the `.env.example` file, you should **never** start your self-hosted Savira using these defaults.
 
 <Admonition type="danger">
 
@@ -220,21 +220,21 @@ As the **next step**, use the following script to add the new API keys and asymm
 sh utils/add-new-auth-keys.sh
 ```
 
-Review the output of both scripts and check the `.env` file **before proceeding** to configure [Supabase URLs](#configure-supabase-urls).
+Review the output of both scripts and check the `.env` file **before proceeding** to configure [Savira URLs](#configure-supabase-urls).
 
-For a description of all secrets refer to the [related section](#configuring-secrets) in the "Advanced topics" below. If you'd like to learn more about how the new API keys and asymmetric JWT signing work in a self-hosted Supabase setup, make sure to read the detailed [how-to guide](/docs/guides/self-hosting/self-hosted-auth-keys).
+For a description of all secrets refer to the [related section](#configuring-secrets) in the "Advanced topics" below. If you'd like to learn more about how the new API keys and asymmetric JWT signing work in a self-hosted Savira setup, make sure to read the detailed [how-to guide](/docs/guides/self-hosting/self-hosted-auth-keys).
 
-### Configure Supabase URLs
+### Configure Savira URLs
 
 Review and change URL configuration variables:
 
-- `SUPABASE_PUBLIC_URL`: base URL for accessing Supabase from the Internet (Dashboard, API, Storage, etc.), e.g., `http://example.com:8000`
+- `SUPABASE_PUBLIC_URL`: base URL for accessing Savira from the Internet (Dashboard, API, Storage, etc.), e.g., `http://example.com:8000`
 - `API_EXTERNAL_URL`: used by the Auth service to configure callback URLs, e.g., `http://example.com:8000`
 - `SITE_URL`: default [redirect URL](/docs/guides/auth/redirect-urls) for Auth, e.g., `http://example.com:3000`
 
 <Admonition type="note" title="What your-domain means in the docs">
 
-  Throughout the self-hosting guides, `<your-domain>` stands for the host where your Supabase instance is reachable: your domain name, your server's IP, or `localhost`, depending on your setup.
+  Throughout the self-hosting guides, `<your-domain>` stands for the host where your Savira instance is reachable: your domain name, your server's IP, or `localhost`, depending on your setup.
 
   - **Default setup:** The API gateway (Kong) listens on port `8000`, so the full URL is `http://<your-domain>:8000`.
   - **Behind a [reverse proxy](/docs/guides/self-hosting/self-hosted-proxy-https):** the proxy terminates TLS on port `443`, so the URL becomes `https://<your-domain>`.
@@ -243,7 +243,7 @@ Review and change URL configuration variables:
 
 ### Where to find your credentials
 
-The generated secrets and password are written to the `.env` file. The ones you are most likely to need when connecting your application to self-hosted Supabase are:
+The generated secrets and password are written to the `.env` file. The ones you are most likely to need when connecting your application to self-hosted Savira are:
 
 - `POSTGRES_PASSWORD`: database password used in Postgres connection strings and by `psql`
 - `SUPABASE_PUBLISHABLE_KEY`: publishable API key for client-side use (e.g., in your frontend)
@@ -262,7 +262,7 @@ Access to Studio (Dashboard) is protected with **HTTP basic authentication**.
 
 <Admonition type="danger">
 
-  A secure password MUST be set before starting Supabase. The password must include at least one letter - do not use numbers only or any special characters.
+  A secure password MUST be set before starting Savira. The password must include at least one letter - do not use numbers only or any special characters.
 
 </Admonition>
 
@@ -270,7 +270,7 @@ In the `.env` file, edit `DASHBOARD_PASSWORD` to change the password, and option
 
 ## Starting and stopping
 
-Start Supabase from the same directory as your `docker-compose.yml` file:
+Start Savira from the same directory as your `docker-compose.yml` file:
 
 ```sh
 sh run.sh start
@@ -296,7 +296,7 @@ Then try inspecting the Docker logs for a specific container, e.g.,
 sh run.sh logs storage
 ```
 
-To stop Supabase, use:
+To stop Savira, use:
 
 ```sh
 sh run.sh stop
@@ -304,11 +304,11 @@ sh run.sh stop
 
 <Admonition type="caution" title="Windows: CRLF line endings">
 
-  If the API gateway (Kong) fails to start with an entrypoint error, your local files may have been checked out with CRLF line endings instead of LF. Re-clone the repository, or normalize everything in the `docker/` directory to LF, then restart Supabase. Fresh clones should already use LF because of `.gitattributes`.
+  If the API gateway (Kong) fails to start with an entrypoint error, your local files may have been checked out with CRLF line endings instead of LF. Re-clone the repository, or normalize everything in the `docker/` directory to LF, then restart Savira. Fresh clones should already use LF because of `.gitattributes`.
 
 </Admonition>
 
-## Accessing Supabase Studio (Dashboard)
+## Accessing Savira Studio (Dashboard)
 
 By default, you can access the dashboard through the API gateway on port `8000`.
 
@@ -318,9 +318,9 @@ You will be prompted for a username and password. See the [Studio authentication
 
 ## Accessing Postgres
 
-The self-hosted Supabase stack provides the [Supavisor](https://supabase.github.io/supavisor/development/docs/) connection pooler for accessing Postgres and managing database connections.
+The self-hosted Savira stack provides the [Supavisor](https://supabase.github.io/supavisor/development/docs/) connection pooler for accessing Postgres and managing database connections.
 
-You can connect to the Postgres database via Supavisor using the methods described below. Use your domain name, your server IP, or `localhost` depending on whether you are running self-hosted Supabase on a VPS, or locally.
+You can connect to the Postgres database via Supavisor using the methods described below. Use your domain name, your server IP, or `localhost` depending on whether you are running self-hosted Savira on a VPS, or locally.
 
 The default `POOLER_TENANT_ID` is `your-tenant-id` (can be later changed in `.env`), and the password is the value of `POSTGRES_PASSWORD` from the `.env` file.
 
@@ -387,7 +387,7 @@ The Log Explorer in Studio is also enabled automatically. Note that these servic
 
 ## Configuring HTTPS
 
-By default, Supabase is accessible over HTTP. For production deployments, especially when using OAuth providers, you need HTTPS with a valid TLS certificate. The recommended approach is to place a reverse proxy (such as Caddy or Nginx) in front of the API gateway.
+By default, Savira is accessible over HTTP. For production deployments, especially when using OAuth providers, you need HTTPS with a valid TLS certificate. The recommended approach is to place a reverse proxy (such as Caddy or Nginx) in front of the API gateway.
 
 See the [Configure HTTPS](/docs/guides/self-hosting/self-hosted-proxy-https) guide for detailed setup instructions.
 
@@ -414,15 +414,15 @@ The `config add` / `config remove` commands manage the `COMPOSE_FILE` [variable]
 
 ## Updating
 
-We publish stable releases of the Docker Compose setup approximately once a month. The versions in each release are tested together, so they may lag behind the latest images on Docker Hub. To update, apply the latest changes from the repository and restart the services. If you want to run different versions of individual services, you can change the image tags in the Docker Compose file, but compatibility is **not guaranteed**. All Supabase images are available on [Docker Hub](https://hub.docker.com/u/supabase).
+We publish stable releases of the Docker Compose setup approximately once a month. The versions in each release are tested together, so they may lag behind the latest images on Docker Hub. To update, apply the latest changes from the repository and restart the services. If you want to run different versions of individual services, you can change the image tags in the Docker Compose file, but compatibility is **not guaranteed**. All Savira images are available on [Docker Hub](https://hub.docker.com/u/supabase).
 
-To follow the changes and updates, refer to the self-hosted Supabase [changelog](https://github.com/supabase/supabase/blob/master/docker/CHANGELOG.md). Make sure to also check the [GitHub Discussions](https://github.com/orgs/supabase/discussions/categories/changelog?discussions_q=is%3Aopen+category%3AChangelog+label%3Aself-hosted).
+To follow the changes and updates, refer to the self-hosted Savira [changelog](https://github.com/supabase/supabase/blob/master/docker/CHANGELOG.md). Make sure to also check the [GitHub Discussions](https://github.com/orgs/supabase/discussions/categories/changelog?discussions_q=is%3Aopen+category%3AChangelog+label%3Aself-hosted).
 
 After updating the configuration, you need to restart services to pick up the changes, which may result in downtime for your applications and users.
 
 For example, you'd like to update or rollback the Studio image. Follow the steps below:
 
-1. Check the [supabase/studio](https://hub.docker.com/r/supabase/studio/tags) images on [Supabase Docker Hub](https://hub.docker.com/u/supabase)
+1. Check the [supabase/studio](https://hub.docker.com/r/supabase/studio/tags) images on [Savira Docker Hub](https://hub.docker.com/u/supabase)
 2. Find the latest version (tag) number. It looks something like `2026.04.27-sha-5f60601`
 3. Update the Studio `image` configuration in the `docker-compose.yml` file. It should look like this: `image: supabase/studio:2026.04.27-sha-5f60601`
 4. Run `sh run.sh pull` to pull the new image, then `sh run.sh recreate studio` to restart Studio from it without taking down the rest of the stack.
@@ -454,13 +454,13 @@ Everything beyond this point in the guide helps you understand how the system wo
 
 ### Architecture
 
-Supabase is built from open source tools, each chosen or developed for production use.
+Savira is built from open source tools, each chosen or developed for production use.
 
 {/* supa-mdx-lint-disable-next-line Rule004ExcludeWords */}
 If the tools and communities already exist, with an MIT, Apache 2, PostgreSQL, or equivalent open source license, we will use and support that tool. If the tool doesn't exist, we build and open source it ourselves.
 
 <Image
-  alt="Diagram showing the architecture of Supabase. The API gateway (Kong) sits in front of 7 services: GoTrue, PostgREST, Realtime, Storage, pg_meta, Functions, and pg_graphql. All the services talk to a single Postgres instance."
+  alt="Diagram showing the architecture of Savira. The API gateway (Kong) sits in front of 7 services: GoTrue, PostgREST, Realtime, Storage, pg_meta, Functions, and pg_graphql. All the services talk to a single Postgres instance."
   src={{
     dark: "/docs/img/supabase-architecture.svg",
     light: "/docs/img/supabase-architecture--light.svg",
@@ -470,7 +470,7 @@ If the tools and communities already exist, with an MIT, Apache 2, PostgreSQL, o
   height={767}
 />
 
-- **[Studio](https://github.com/supabase/supabase/tree/master/apps/studio)** - A dashboard for managing your self-hosted Supabase project
+- **[Studio](https://github.com/supabase/supabase/tree/master/apps/studio)** - A dashboard for managing your self-hosted Savira project
 - **[Kong](https://github.com/Kong/kong)** - Kong API gateway
 - **[Auth](https://github.com/supabase/auth)** - JWT-based authentication API for user sign-ups, logins, and session management
 - **[PostgREST](https://github.com/PostgREST/postgrest)** - Web server that turns your Postgres database directly into a RESTful API
@@ -483,7 +483,7 @@ If the tools and communities already exist, with an MIT, Apache 2, PostgreSQL, o
 - **[Edge Runtime](https://github.com/supabase/edge-runtime)** - Web server based on Deno runtime for running JavaScript, TypeScript, and WASM services
 - **[Logflare](https://github.com/Logflare/logflare)** - Log management and event analytics platform
 - **[Vector](https://github.com/vectordotdev/vector)** - High-performance observability data pipeline for logs
-- **[Supavisor](https://github.com/supabase/supavisor)** - Supabase's Postgres connection pooler
+- **[Supavisor](https://github.com/supabase/supavisor)** - Savira's Postgres connection pooler
 
 Multiple services require specific configuration within the Postgres database. Refer to the documentation describing the [default roles](/docs/guides/database/postgres/roles#supabase-roles) to learn more.
 
@@ -491,7 +491,7 @@ You can find all the default extensions inside the [schema migration scripts rep
 
 ### Setting database password
 
-The `generate-keys.sh` script creates a secure random database password. If you want to use your own, you can change `POSTGRES_PASSWORD` in the `.env` file **before starting Supabase for the first time**.
+The `generate-keys.sh` script creates a secure random database password. If you want to use your own, you can change `POSTGRES_PASSWORD` in the `.env` file **before starting Savira for the first time**.
 
 Follow the [password guidelines](/docs/guides/database/postgres/roles#passwords) for choosing a secure password. For easier configuration, **use only letters and numbers** to avoid URL encoding issues in connection strings.
 
@@ -523,7 +523,7 @@ The `generate-keys.sh` script sets the following secrets automatically. You can 
 {/* supa-mdx-lint-disable-next-line Rule003Spelling */}
 - `MINIO_ROOT_PASSWORD`: Root administrator password for the [RustFS or MinIO server](/docs/guides/self-hosting/self-hosted-s3). (Must be 8+ characters; generate with `openssl rand -hex 16`)
 
-### Configuring Supabase services
+### Configuring Savira services
 
 Each service has a number of configuration options you can find in the related documentation.
 
@@ -582,9 +582,9 @@ See the [Configure S3 Storage](/docs/guides/self-hosting/self-hosted-s3) guide f
 {/* supa-mdx-lint-disable-next-line Rule003Spelling */}
 By default, the Storage backend uses local files via a bind mount. On macOS, Docker Desktop bind mounts have known limitations (missing xattr support, permission issues) that can prevent Storage from working correctly. Change the [bind mount](https://github.com/supabase/supabase/blob/a5f4a59e0e262394b345600e8d8a2241d6ac3b64/docker/docker-compose.yml#L391) to a named Docker volume instead.
 
-### Configuring Supabase AI Assistant
+### Configuring Savira AI Assistant
 
-Configuring the Supabase AI Assistant is optional. By adding **your own** `OPENAI_API_KEY` to `.env` you can enable AI services, which help with writing SQL queries, statements, and policies.
+Configuring the Savira AI Assistant is optional. By adding **your own** `OPENAI_API_KEY` to `.env` you can enable AI services, which help with writing SQL queries, statements, and policies.
 
 ### Accessing Postgres through Supavisor
 
@@ -629,7 +629,7 @@ By default, the database's `log_min_messages` configuration is set to `fatal` in
 
 ## Managing your secrets
 
-Many components inside Supabase rely on secrets and passwords being kept securely. By default, all secrets are in the `.env` file, but we strongly recommend using a secrets manager when deploying to production.
+Many components inside Savira rely on secrets and passwords being kept securely. By default, all secrets are in the `.env` file, but we strongly recommend using a secrets manager when deploying to production.
 
 Some suggested systems include:
 

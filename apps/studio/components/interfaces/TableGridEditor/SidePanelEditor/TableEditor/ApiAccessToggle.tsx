@@ -322,7 +322,7 @@ export const ApiAccessToggle = ({
           <div>
             <h5>Data API Access</h5>
             <p className="text-sm text-foreground-lighter">
-              Allow this table to be queried via Supabase client libraries or the API directly
+              Allow this table to be queried via Savira client libraries or the API directly
             </p>
           </div>
           {isNewRecord ? (

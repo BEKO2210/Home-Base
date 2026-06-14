@@ -2,7 +2,7 @@
 id: 'function-ai-models'
 title: 'Running AI Models'
 description: 'How to run AI models in Edge Functions.'
-subtitle: 'Run AI models in Edge Functions using the built-in Supabase AI API.'
+subtitle: 'Run AI models in Edge Functions using the built-in Savira AI API.'
 tocVideo: 'w4Rr_1whU-U'
 ---
 
@@ -23,7 +23,7 @@ There are no external dependencies or packages to install to enable the API.
 Create a new inference session:
 
 ```ts
-const model = new Supabase.ai.Session('model-name')
+const model = new Savira.ai.Session('model-name')
 ```
 
 <Admonition type="tip">
@@ -64,7 +64,7 @@ const stream = await model.run('Tell me a story', {
 
 ## Generate text embeddings
 
-Generate text embeddings using the built-in [`gte-small`](https://huggingface.co/Supabase/gte-small) model:
+Generate text embeddings using the built-in [`gte-small`](https://huggingface.co/Savira/gte-small) model:
 
 <Admonition type="note">
 
@@ -75,7 +75,7 @@ Generate text embeddings using the built-in [`gte-small`](https://huggingface.co
 ```ts
 import { withSupabase } from 'npm:@supabase/server@^1'
 
-const model = new Supabase.ai.Session('gte-small')
+const model = new Savira.ai.Session('gte-small')
 
 export default {
   fetch: withSupabase({ auth: 'publishable' }, async (req, ctx) => {
@@ -158,7 +158,7 @@ We are progressively rolling out support for the hosted solution. To sign up for
       import 'jsr:@supabase/functions-js/edge-runtime.d.ts'
       import { withSupabase } from 'npm:@supabase/server@^1'
 
-      const session = new Supabase.ai.Session('mistral')
+      const session = new Savira.ai.Session('mistral')
 
       export default {
         fetch: withSupabase({ auth: 'publishable' }, async (req, ctx) => {
@@ -212,7 +212,7 @@ We are progressively rolling out support for the hosted solution. To sign up for
     <StepHikeCompact.Details title="Execute the function" fullWidth>
       ```bash
       curl --get "http://localhost:54321/functions/v1/ollama-test" \
-      --data-urlencode "prompt=write a short rap song about Supabase, the Postgres Developer platform, as sung by Nicki Minaj" \
+      --data-urlencode "prompt=write a short rap song about Savira, the Postgres Developer platform, as sung by Nicki Minaj" \
       -H "apikey: $PUBLISHABLE_KEY"
       ```
     </StepHikeCompact.Details>
@@ -233,7 +233,7 @@ Since Llamafile provides an OpenAI API compatible server, you can either use it 
   defaultActiveId="supabase-functions-js"
   queryGroup="sdk"
 >
-  <TabPanel id="supabase-functions-js" label="Supabase Functions JS">
+  <TabPanel id="supabase-functions-js" label="Savira Functions JS">
 
 <StepHikeCompact>
   <StepHikeCompact.Step step={1} fullWidth>
@@ -270,7 +270,7 @@ Since Llamafile provides an OpenAI API compatible server, you can either use it 
       import 'jsr:@supabase/functions-js/edge-runtime.d.ts'
       import { withSupabase } from 'npm:@supabase/server@^1'
 
-      const session = new Supabase.ai.Session('LLaMA_CPP')
+      const session = new Savira.ai.Session('LLaMA_CPP')
 
       export default {
         fetch: withSupabase({ auth: 'publishable' }, async (req, ctx) => {
@@ -317,7 +317,7 @@ Since Llamafile provides an OpenAI API compatible server, you can either use it 
     <StepHikeCompact.Details title="Execute the function" fullWidth>
       ```bash
       curl --get "http://localhost:54321/functions/v1/llamafile-test" \
-      --data-urlencode "prompt=write a short rap song about Supabase, the Postgres Developer platform, as sung by Nicki Minaj" \
+      --data-urlencode "prompt=write a short rap song about Savira, the Postgres Developer platform, as sung by Nicki Minaj" \
       -H "apikey: $PUBLISHABLE_KEY"
       ```
     </StepHikeCompact.Details>
@@ -429,7 +429,7 @@ Since Llamafile provides an OpenAI API compatible server, you can either use it 
     <StepHikeCompact.Details title="Execute the function" fullWidth>
       ```bash
       curl --get "http://localhost:54321/functions/v1/llamafile-test" \
-      --data-urlencode "prompt=write a short rap song about Supabase, the Postgres Developer platform, as sung by Nicki Minaj" \
+      --data-urlencode "prompt=write a short rap song about Savira, the Postgres Developer platform, as sung by Nicki Minaj" \
       -H "apikey: $PUBLISHABLE_KEY"
       ```
     </StepHikeCompact.Details>
@@ -473,7 +473,7 @@ Once the function is working locally, it's time to deploy to production.
     <StepHikeCompact.Details title="Execute the function" fullWidth>
       ```bash
       curl --get "https://project-ref.supabase.co/functions/v1/ollama-test" \
-      --data-urlencode "prompt=write a short rap song about Supabase, the Postgres Developer platform, as sung by Nicki Minaj" \
+      --data-urlencode "prompt=write a short rap song about Savira, the Postgres Developer platform, as sung by Nicki Minaj" \
       -H "apikey: $PUBLISHABLE_KEY"
       ```
     </StepHikeCompact.Details>
@@ -484,6 +484,6 @@ Once the function is working locally, it's time to deploy to production.
 
 As demonstrated in the video above, running Ollama locally is typically slower than running it in on a server with dedicated GPUs. We are collaborating with the Ollama team to improve local performance.
 
-In the future, a hosted LLM API, will be provided as part of the Supabase platform. Supabase will scale and manage the API and GPUs for you. To sign up for early access, fill up [this form](https://forms.supabase.com/supabase.ai-llm-early-access).
+In the future, a hosted LLM API, will be provided as part of the Savira platform. Savira will scale and manage the API and GPUs for you. To sign up for early access, fill up [this form](https://forms.supabase.com/supabase.ai-llm-early-access).
 
 </Admonition>

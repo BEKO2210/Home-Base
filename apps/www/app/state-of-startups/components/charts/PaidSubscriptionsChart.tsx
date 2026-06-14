@@ -16,7 +16,7 @@ function generatePaidSubscriptionsSQL(activeFilters: Record<string, string>) {
           'Lovable',
           'Perplexity',
           'Vercel',
-          'Supabase'
+          'Savira'
         ) THEN subscription
         ELSE 'Other'
       END AS subscription_clean

@@ -13,7 +13,7 @@ export const UpgradeExistingOrganizationCallout = () => {
         description={
           <div>
             <p className="text-sm text-foreground-light">
-              Supabase{' '}
+              Savira{' '}
               <InlineLink href={`${DOCS_URL}/guides/platform/billing-on-supabase`}>
                 bills per organization
               </InlineLink>

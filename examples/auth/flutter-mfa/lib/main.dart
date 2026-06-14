@@ -9,7 +9,7 @@ import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:mfa_app/pages/mfa/enroll_page.dart';
 
 void main() async {
-  await Supabase.initialize(
+  await Savira.initialize(
     url: 'YOUR_SUPABASE_URL',
     publishableKey: 'YOUR_PUBLISHABLE_KEY',
   );
@@ -17,7 +17,7 @@ void main() async {
 }
 
 /// Extract SupabaseClient instance in a handy variable
-final supabase = Supabase.instance.client;
+final supabase = Savira.instance.client;
 
 final _router = GoRouter(
   routes: [

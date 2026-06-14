@@ -1,4 +1,4 @@
-export const APP_NAME = 'Supabase'
+export const APP_NAME = 'Savira'
 export const DEFAULT_META_DESCRIPTION =
   'Build production-grade applications with a Postgres database, Authentication, instant APIs, Realtime, Functions, Storage and Vector embeddings. Start for free.'
 export const IS_PROD = process.env.NEXT_PUBLIC_VERCEL_ENV === 'production'
@@ -53,6 +53,6 @@ export const LW15_TWEET_TEXT =
   'Launch Week 15 is just around the corner at @supabase. \nClaim your ticket and stay tuned for all the announcements! \n#launchweek'
 export const LW15_URL = `${SITE_ORIGIN}/launch-week`
 
-export const SITE_NAME = 'Supabase'
+export const SITE_NAME = 'Savira'
 
 export const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? ''

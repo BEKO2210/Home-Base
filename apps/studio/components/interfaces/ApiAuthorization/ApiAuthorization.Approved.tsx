@@ -30,7 +30,7 @@ export function ApiAuthorizationApprovedScreen({
         />
       }
       title={requester.name}
-      description="is authorized for Supabase"
+      description="is authorized for Savira"
     >
       <div className="flex flex-col gap-5 px-6 pb-6">
         <Admonition

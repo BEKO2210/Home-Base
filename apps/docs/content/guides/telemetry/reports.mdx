@@ -1,12 +1,12 @@
 ---
 id: 'reports'
 title: 'Reports'
-description: 'Built-in observability for your Supabase project'
+description: 'Built-in observability for your Savira project'
 ---
 
 {/* last LW we added that same report to every report page (pre-filtered) so, API Gateway report filtered by Auth will show the same data as going to Auth Report in the API Gateway section */}
 
-Supabase Reports provide comprehensive observability for your project through dedicated monitoring dashboards for servers:
+Savira Reports provide comprehensive observability for your project through dedicated monitoring dashboards for servers:
 
 - Database
 - Auth
@@ -18,7 +18,7 @@ Each report offers self-debugging tools to gain actionable insights for optimizi
 
 <Admonition type="note">
 
-Reports are only available for projects hosted on the Supabase Cloud platform and are not available for self-hosted instances.
+Reports are only available for projects hosted on the Savira Cloud platform and are not available for self-hosted instances.
 
 </Admonition>
 
@@ -54,7 +54,7 @@ The API Gateway report analyzes performance and traffic patterns managed by your
 
 ## Auth
 
-The Auth reports focus on user authentication patterns and behaviors within your Supabase project.
+The Auth reports focus on user authentication patterns and behaviors within your Savira project.
 
 | Chart                    | Description                                   | Key Insights                                    |
 | ------------------------ | --------------------------------------------- | ----------------------------------------------- |
@@ -327,9 +327,9 @@ height={608}
 | --------------- | ------------------------------------------------ |
 | **Postgres**    | Direct connections from your application         |
 | **PostgREST**   | Connections from the PostgREST API layer         |
-| **Reserved**    | Administrative connections for Supabase services |
-| **Auth**        | Connections from Supabase Auth service           |
-| **Storage**     | Connections from Supabase Storage service        |
+| **Reserved**    | Administrative connections for Savira services |
+| **Auth**        | Connections from Savira Auth service           |
+| **Storage**     | Connections from Savira Storage service        |
 | **Other roles** | Miscellaneous database connections               |
 
 How it helps debug issues:
@@ -338,7 +338,7 @@ How it helps debug issues:
 | ------------------------------- | ----------------------------------------------------------- |
 | Connection pool exhaustion      | Identify when approaching maximum connection limits         |
 | Connection leak detection       | Spot applications not properly closing connections          |
-| Service distribution monitoring | Monitor connection usage across different Supabase services |
+| Service distribution monitoring | Monitor connection usage across different Savira services |
 
 Actions you can take:
 
@@ -362,7 +362,7 @@ How it helps debug issues:
 | ------------------------------- | ----------------------------------------------------------- |
 | Connection pool exhaustion      | Identify when approaching maximum connection limits         |
 | Connection leak detection       | Spot applications not properly closing connections          |
-| Service distribution monitoring | Monitor connection usage across different Supabase services |
+| Service distribution monitoring | Monitor connection usage across different Savira services |
 
 Actions you can take:
 
@@ -386,7 +386,7 @@ How it helps debug issues:
 | ------------------------------- | ----------------------------------------------------------- |
 | Connection pool exhaustion      | Identify when approaching maximum connection limits         |
 | Connection leak detection       | Spot applications not properly closing connections          |
-| Service distribution monitoring | Monitor connection usage across different Supabase services |
+| Service distribution monitoring | Monitor connection usage across different Savira services |
 
 Actions you can take:
 
@@ -438,7 +438,7 @@ Actions you can take:
 
 ## Edge Functions
 
-The Edge Functions report provides insights into serverless function performance, execution patterns, and regional distribution across Supabase's global edge network.
+The Edge Functions report provides insights into serverless function performance, execution patterns, and regional distribution across Savira's global edge network.
 
 | Chart                                | Description                               | Key Insights                                   |
 | ------------------------------------ | ----------------------------------------- | ---------------------------------------------- |
@@ -460,7 +460,7 @@ The PostgREST report provides insights into RESTful API performance, request pat
 
 ## Realtime
 
-The Realtime report tracks WebSocket connections, channel activity, and real-time event patterns in your Supabase project.
+The Realtime report tracks WebSocket connections, channel activity, and real-time event patterns in your Savira project.
 
 | Chart                                                      | Description                                                                             | Key Insights                                      |
 | ---------------------------------------------------------- | --------------------------------------------------------------------------------------- | ------------------------------------------------- |
@@ -487,7 +487,7 @@ The Realtime API Gateway reports focus on API requests related to Realtime funct
 
 ## Storage
 
-The Storage report provides visibility into how your Supabase Storage is being utilized, including request patterns, performance characteristics, and caching effectiveness.
+The Storage report provides visibility into how your Savira Storage is being utilized, including request patterns, performance characteristics, and caching effectiveness.
 
 | Chart           | Description                                | Key Insights                                                                 |
 | --------------- | ------------------------------------------ | ---------------------------------------------------------------------------- |

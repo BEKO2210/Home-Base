@@ -226,7 +226,7 @@ The responses can be observed with the following query:
 select * from net._http_response;
 ```
 
-The data can also be observed in the `net` schema with the [Supabase Dashboard's SQL Editor](/dashboard/project/_/editor)
+The data can also be observed in the `net` schema with the [Savira Dashboard's SQL Editor](/dashboard/project/_/editor)
 
 ## Debugging requests
 
@@ -278,7 +278,7 @@ begin
             body := row_data_var
         ) as request_id;
 
-    -- Optionally Log row data or other data for inspection in Supabase Dashboard's Postgres Logs
+    -- Optionally Log row data or other data for inspection in Savira Dashboard's Postgres Logs
     raise log 'Logging an entire row as JSON (%)', row_data_var;
 
     -- return row data to inspect
@@ -311,7 +311,7 @@ order by "created" desc;
 
 <Admonition type="note" title="Must be on pg_net v0.12.0 or above to reconfigure ">
 
-Supabase supports reconfiguring pg*net starting from v0.12.0+. For the latest release, initiate a Postgres upgrade in the [Infrastructure Settings](/dashboard/project/*/settings/infrastructure).
+Savira supports reconfiguring pg*net starting from v0.12.0+. For the latest release, initiate a Postgres upgrade in the [Infrastructure Settings](/dashboard/project/*/settings/infrastructure).
 
 </Admonition>
 
@@ -350,9 +350,9 @@ select net.worker_restart();
 
 ## Examples
 
-### Invoke a Supabase Edge Function
+### Invoke a Savira Edge Function
 
-Make a POST request to a Supabase Edge Function with auth header and JSON body payload:
+Make a POST request to a Savira Edge Function with auth header and JSON body payload:
 
 ```sql
 select

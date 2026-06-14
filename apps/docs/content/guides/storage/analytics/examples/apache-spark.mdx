@@ -22,12 +22,12 @@ For detailed Spark setup instructions, see the [Apache Spark documentation](http
 
 ## Basic setup
 
-Here's a complete example showing how to configure Spark with your Supabase analytics bucket:
+Here's a complete example showing how to configure Spark with your Savira analytics bucket:
 
 ```python
 from pyspark.sql import SparkSession
 
-# Configuration - Update with your Supabase credentials
+# Configuration - Update with your Savira credentials
 PROJECT_REF = "your-project-ref"
 WAREHOUSE = "your-analytics-bucket-name"
 SERVICE_KEY = "your-service-key"
@@ -37,7 +37,7 @@ S3_ACCESS_KEY = "your-access-key"
 S3_SECRET_KEY = "your-secret-key"
 S3_REGION = "us-east-1"
 
-# Construct Supabase endpoints
+# Construct Savira endpoints
 S3_ENDPOINT = f"https://{PROJECT_REF}.supabase.co/storage/v1/s3"
 CATALOG_URI = f"https://{PROJECT_REF}.supabase.co/storage/v1/iceberg"
 

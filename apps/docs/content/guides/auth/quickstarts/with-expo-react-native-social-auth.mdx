@@ -1,14 +1,14 @@
 ---
 title: 'Build a Social Auth App with Expo React Native'
-description: 'Learn how to implement social authentication in an app with Expo React Native and Supabase Database and Auth functionality.'
+description: 'Learn how to implement social authentication in an app with Expo React Native and Savira Database and Auth functionality.'
 ---
 
 This tutorial demonstrates how to build a React Native app with [Expo](https://expo.dev) that implements social authentication. The app showcases a complete authentication flow with protected navigation using:
 
-- [Supabase Database](/docs/guides/database) - a Postgres database for storing your user data with [Row Level Security](/docs/guides/auth#row-level-security) to ensure data is protected and users can only access their own information.
-- [Supabase Auth](/docs/guides/auth) - enables users to log in through social authentication providers (Apple and Google).
+- [Savira Database](/docs/guides/database) - a Postgres database for storing your user data with [Row Level Security](/docs/guides/auth#row-level-security) to ensure data is protected and users can only access their own information.
+- [Savira Auth](/docs/guides/auth) - enables users to log in through social authentication providers (Apple and Google).
 
-![Supabase Social Auth example](/docs/img/supabase-expo-social-auth-login.png)
+![Savira Social Auth example](/docs/img/supabase-expo-social-auth-login.png)
 
 <Admonition type="note">
 
@@ -43,7 +43,7 @@ Install the additional dependencies:
 npx expo install @supabase/supabase-js @react-native-async-storage/async-storage expo-secure-store expo-splash-screen
 ```
 
-Now, create a helper file to initialize the Supabase client for both web and React Native platforms using platform-specific [storage adapters](https://docs.expo.dev/develop/user-interface/store-data/): [Expo SecureStore](https://docs.expo.dev/develop/user-interface/store-data/#secure-storage) for mobile and [AsyncStorage](https://docs.expo.dev/develop/user-interface/store-data/#async-storage) for web.
+Now, create a helper file to initialize the Savira client for both web and React Native platforms using platform-specific [storage adapters](https://docs.expo.dev/develop/user-interface/store-data/): [Expo SecureStore](https://docs.expo.dev/develop/user-interface/store-data/#secure-storage) for mobile and [AsyncStorage](https://docs.expo.dev/develop/user-interface/store-data/#async-storage) for web.
 
 <Tabs
   scrollable
@@ -85,7 +85,7 @@ Now, create a helper file to initialize the Supabase client for both web and Rea
 ### Set up environment variables
 
 You need the API URL and the `publishable` key copied [earlier](#get-the-api-keys).
-These variables are safe to expose in your Expo app since Supabase has [Row Level Security](/docs/guides/database/postgres/row-level-security) enabled on your database.
+These variables are safe to expose in your Expo app since Savira has [Row Level Security](/docs/guides/database/postgres/row-level-security) enabled on your database.
 
 Create a `.env` file containing these variables:
 
@@ -181,7 +181,7 @@ Verify that the app works as expected. The splash screen displays while fetching
 
 <Admonition type="note">
 
-By default Supabase Auth requires email verification before a session is created for the user. To support email verification you need to [implement deep link handling](/docs/guides/auth/native-mobile-deep-linking?platform=react-native)!
+By default Savira Auth requires email verification before a session is created for the user. To support email verification you need to [implement deep link handling](/docs/guides/auth/native-mobile-deep-linking?platform=react-native)!
 
 While testing, you can disable email confirmation in your [project's email auth provider settings](/dashboard/project/_/auth/providers).
 
@@ -189,7 +189,7 @@ While testing, you can disable email confirmation in your [project's email auth 
 
 ## Integrate social authentication
 
-Now integrate social authentication with Supabase Auth, starting with Apple authentication.
+Now integrate social authentication with Savira Auth, starting with Apple authentication.
 If you only need to implement Google authentication, you can skip to the [Google authentication](#google-authentication) section.
 
 ### Apple authentication
@@ -235,9 +235,9 @@ To enable Apple sign-up on Android and Web, you also need to register the tunnel
 npx expo start --tunnel
 ```
 
-And add it to the **Redirect URLs** field in [your Supabase dashboard Authentication configuration](/dashboard/project/_/auth/url-configuration).
+And add it to the **Redirect URLs** field in [your Savira dashboard Authentication configuration](/dashboard/project/_/auth/url-configuration).
 
-For more information, follow the [Supabase Login with Apple](/docs/guides/auth/social-login/auth-apple) guide.
+For more information, follow the [Savira Login with Apple](/docs/guides/auth/social-login/auth-apple) guide.
 
 </Admonition>
 
@@ -495,7 +495,7 @@ For Google authentication, you can choose between the following options:
 
 - [GN Google Sign In Premium](https://react-native-google-signin.github.io/docs/install#sponsor-only-version) - that supports iOS, Android, and Web by using the latest Google's One Tap sign-in (but [it requires a subscription](https://universal-sign-in.com/))
 - [@react-oauth/google](https://github.com/MomenSherif/react-oauth#googlelogin) - that supports Web (so it's not a good option for mobile, but it works)
-- Relying on the [`signInWithOAuth`](/docs/reference/javascript/auth-signinwithoauth) function of the Supabase Auth - that also supports iOS, Android and Web (useful also to manage any other OAuth provider)
+- Relying on the [`signInWithOAuth`](/docs/reference/javascript/auth-signinwithoauth) function of the Savira Auth - that also supports iOS, Android and Web (useful also to manage any other OAuth provider)
 
 <Admonition type="note">
 
@@ -545,7 +545,7 @@ EXPO_PUBLIC_GOOGLE_AUTH_WEB_CLIENT_ID="YOUR_GOOGLE_AUTH_WEB_CLIENT_ID"
 
     You should see the login screen with the Google authentication button.
 
-    ![Supabase Social Auth example](/docs/img/supabase-expo-social-auth-tabs.png)
+    ![Savira Social Auth example](/docs/img/supabase-expo-social-auth-tabs.png)
 
   </TabPanel>
   <TabPanel id="web" label="Web">

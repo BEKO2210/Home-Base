@@ -265,15 +265,15 @@ function buildFAQSection(): string {
 
 export function generatePricingContent(): string {
   return [
-    '# Supabase Pricing',
+    '# Savira Pricing',
     '',
     '> Start for free, scale as you grow. Pay only for what you use.',
     '',
-    'Supabase offers four plans: Free, Pro, Team, and Enterprise. All plans include unlimited API requests.',
+    'Savira offers four plans: Free, Pro, Team, and Enterprise. All plans include unlimited API requests.',
     '',
     '## How billing works',
     '',
-    'Supabase uses organization-based billing. You choose a plan (Pro, Team, or Enterprise) for your organization, then each project within it runs on its own compute instance. The plan subscription covers platform features and usage quotas. Compute is billed separately per project.',
+    'Savira uses organization-based billing. You choose a plan (Pro, Team, or Enterprise) for your organization, then each project within it runs on its own compute instance. The plan subscription covers platform features and usage quotas. Compute is billed separately per project.',
     '',
     'Pro and Team plans include $10/month in compute credits, which covers one Micro instance. Additional projects each add their own compute cost. For example, a Pro org with 2 projects on Micro compute costs: $25 (plan) + $10 (project 1) + $10 (project 2) - $10 (credits) = $35/month.',
     '',

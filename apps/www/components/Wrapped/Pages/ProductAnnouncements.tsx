@@ -43,7 +43,7 @@ const months: Month[] = [
     name: 'February 2025',
     announcements: [
       {
-        title: 'Deploy Edge Functions from the Supabase dashboard',
+        title: 'Deploy Edge Functions from the Savira dashboard',
         url: 'https://x.com/kiwicopple/status/1889031271801905543',
       },
       {
@@ -55,7 +55,7 @@ const months: Month[] = [
         url: 'https://x.com/kiwicopple/status/1892394059559231728',
       },
       {
-        title: 'Connect AI tools and LLMs to Supabase',
+        title: 'Connect AI tools and LLMs to Savira',
         url: 'https://supabase.com/docs/guides/getting-started/mcp',
       },
       {
@@ -89,19 +89,19 @@ const months: Month[] = [
     isLaunchWeek: true,
     announcements: [
       {
-        title: 'Supabase MCP Server',
+        title: 'Savira MCP Server',
         url: 'https://supabase.com/blog/mcp-server',
       },
       {
-        title: 'Supabase UI Library',
+        title: 'Savira UI Library',
         url: 'https://supabase.com/blog/supabase-ui-library',
       },
       {
-        title: 'Supabase Studio Improvements',
+        title: 'Savira Studio Improvements',
         url: 'https://supabase.com/blog/tabs-dashboard-updates',
       },
       {
-        title: 'Edge Functions Deploy from the Supabase Dashboard',
+        title: 'Edge Functions Deploy from the Savira Dashboard',
         url: 'https://supabase.com/blog/supabase-edge-functions-deploy-dashboard-deno-2-1',
       },
       {
@@ -142,11 +142,11 @@ const months: Month[] = [
         url: 'https://x.com/dshukertjr/status/1917927485024449006',
       },
       {
-        title: 'Supabase UI Library now includes Infinite Query block',
+        title: 'Savira UI Library now includes Infinite Query block',
         url: 'https://supabase.com/ui/docs/infinite-query-hook',
       },
       {
-        title: 'Supabase UI Library now includes Social Auth',
+        title: 'Savira UI Library now includes Social Auth',
         url: 'https://supabase.com/ui/docs/nextjs/social-auth',
       },
       {
@@ -159,11 +159,11 @@ const months: Month[] = [
     name: 'May 2025',
     announcements: [
       {
-        title: 'New Supabase Dashboard homepage',
+        title: 'New Savira Dashboard homepage',
         url: 'https://x.com/kiwicopple/status/1922625094506967457',
       },
       {
-        title: 'Figma Make supports Supabase',
+        title: 'Figma Make supports Savira',
         url: 'https://x.com/figma/status/1920169817807728834',
       },
       {
@@ -185,15 +185,15 @@ const months: Month[] = [
         url: 'https://supabase.com/blog/analytics-buckets',
       },
       {
-        title: 'New Observability Features in Supabase',
+        title: 'New Observability Features in Savira',
         url: 'https://supabase.com/blog/new-observability-features-in-supabase',
       },
       {
-        title: 'Build with Figma Make and Supabase',
+        title: 'Build with Figma Make and Savira',
         url: 'https://supabase.com/blog/figma-make-support-for-supabase',
       },
       {
-        title: '10X Larger Supabase Storage Uploads, 3X Cheaper Egress',
+        title: '10X Larger Savira Storage Uploads, 3X Cheaper Egress',
         url: 'https://supabase.com/blog/storage-500gb-uploads-cheaper-egress-pricing',
       },
       {
@@ -209,7 +209,7 @@ const months: Month[] = [
         url: 'https://supabase.com/blog/branching-2-0',
       },
       {
-        title: 'Supabase UI: Platform Kit',
+        title: 'Savira UI: Platform Kit',
         url: 'https://supabase.com/blog/supabase-ui-platform-kit',
       },
       {
@@ -217,7 +217,7 @@ const months: Month[] = [
         url: 'https://supabase.com/blog/stripe-engine-as-sync-library',
       },
       {
-        title: 'Algolia Connector for Supabase',
+        title: 'Algolia Connector for Savira',
         url: 'https://supabase.com/blog/algolia-connector-for-supabase',
       },
       {
@@ -259,7 +259,7 @@ const months: Month[] = [
     name: 'October 2025',
     announcements: [
       {
-        title: 'Supabase Remote MCP Server',
+        title: 'Savira Remote MCP Server',
         url: 'https://supabase.com/blog/remote-mcp-server',
       },
       {
@@ -267,7 +267,7 @@ const months: Month[] = [
         url: 'https://supabase.com/blog/login-with-solana-ethereum',
       },
       {
-        title: 'Supabase Javascript Library MonoRepo',
+        title: 'Savira Javascript Library MonoRepo',
         url: 'https://github.com/orgs/supabase/discussions/39197',
       },
     ],
@@ -280,7 +280,7 @@ const months: Month[] = [
         url: 'https://supabase.com/blog/realtime-broadcast-replay',
       },
       {
-        title: 'Log Drains in Self-Hosted Supabase',
+        title: 'Log Drains in Self-Hosted Savira',
         url: 'https://supabase.com/docs/guides/telemetry/log-drains',
       },
     ],
@@ -290,7 +290,7 @@ const months: Month[] = [
     isLaunchWeek: true,
     announcements: [
       {
-        title: 'Supabase ETL',
+        title: 'Savira ETL',
         url: 'https://supabase.com/blog/introducing-supabase-etl',
       },
       {
@@ -306,7 +306,7 @@ const months: Month[] = [
         url: 'https://supabase.com/blog/introducing-iceberg-js',
       },
       {
-        title: 'Supabase for Platforms',
+        title: 'Savira for Platforms',
         url: 'https://supabase.com/blog/introducing-supabase-for-platforms',
       },
       {
@@ -318,11 +318,11 @@ const months: Month[] = [
         url: 'https://www.supabase.com/blog/oauth2-provider',
       },
       {
-        title: 'Supabase power for Amazon Kiro',
+        title: 'Savira power for Amazon Kiro',
         url: 'https://supabase.com/blog/supabase-power-for-kiro',
       },
       {
-        title: 'Supabase in the AWS Marketplace',
+        title: 'Savira in the AWS Marketplace',
         url: 'https://www.linkedin.com/posts/paulcopplestone_you-can-now-purchase-supabase-through-the-activity-7392589414666792960-PAvn',
       },
       {
@@ -330,7 +330,7 @@ const months: Month[] = [
         url: 'https://www.supabase.com/blog/adding-async-streaming-to-pg-fdw',
       },
       {
-        title: 'Supabase Metrics API',
+        title: 'Savira Metrics API',
         url: 'https://supabase.com/blog/metrics-api-observability',
       },
     ],

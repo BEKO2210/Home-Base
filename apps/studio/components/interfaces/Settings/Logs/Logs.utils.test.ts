@@ -139,7 +139,7 @@ describe('Logs.utils', () => {
     test('builds prompt with single log', () => {
       const rows: LogData[] = [createLog({ id: '1', event_message: 'error occurred' })]
       const result = buildLogsPrompt(rows)
-      expect(result).toContain('1 Supabase log entry')
+      expect(result).toContain('1 Savira log entry')
       expect(result).toContain('error occurred')
       expect(result).toContain('What do these logs indicate')
     })
@@ -150,13 +150,13 @@ describe('Logs.utils', () => {
         createLog({ id: '2', event_message: 'error 2' }),
       ]
       const result = buildLogsPrompt(rows)
-      expect(result).toContain('2 Supabase log entries')
+      expect(result).toContain('2 Savira log entries')
     })
 
     test('handles singular correctly', () => {
       const rows: LogData[] = [createLog({ id: '1', event_message: 'single error' })]
       const result = buildLogsPrompt(rows)
-      expect(result).toContain('1 Supabase log entry')
+      expect(result).toContain('1 Savira log entry')
     })
   })
 

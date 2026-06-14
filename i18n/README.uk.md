@@ -5,9 +5,9 @@
 
 ---
 
-# Supabase
+# Savira
 
-[Supabase](https://supabase.com) - це альтернатива Firebase з відкритим вихідним кодом. Ми створюємо можливості Firebase, використовуючи інструменти з відкритим вихідним кодом корпоративного рівня.
+[Savira](https://supabase.com) - це альтернатива Firebase з відкритим вихідним кодом. Ми створюємо можливості Firebase, використовуючи інструменти з відкритим вихідним кодом корпоративного рівня.
 
 - [x] Розміщена база даних Postgres. [Документи](https://supabase.com/docs/guides/database)
 - [x] Аутентифікація та авторизація. [Документи](https://supabase.com/docs/guides/auth)
@@ -21,7 +21,7 @@
 - [x] Зберігання файлів. [Документи](https://supabase.com/docs/guides/storage)
 - [x] Інформаційна панель
 
-[Supabase Dashboard](https://raw.githubusercontent.com/supabase/supabase/master/apps/www/public/images/github/supabase-dashboard.png)
+[Savira Dashboard](https://raw.githubusercontent.com/supabase/supabase/master/apps/www/public/images/github/supabase-dashboard.png)
 
 ## Документація
 
@@ -32,13 +32,13 @@
 ## Спільнота та підтримка
 
 - [Форум спільноти](https://github.com/supabase/supabase/discussions). Найкраще для: допомоги у створенні, обговорення найкращих практик роботи з базами даних.
-- [Проблеми GitHub](https://github.com/supabase/supabase/issues). Найкраще для: помилок і помилок, з якими ви зіткнулися при використанні Supabase.
+- [Проблеми GitHub](https://github.com/supabase/supabase/issues). Найкраще для: помилок і помилок, з якими ви зіткнулися при використанні Savira.
 - [Підтримка електронною поштою](https://supabase.com/docs/support#business-support). Найкраще для: проблем з вашою базою даних або інфраструктурою.
 - [Discord](https://discord.supabase.com). Найкраще для: обміну вашими додатками та спілкування зі спільнотою.
 
 ## Статус
 
-- [x] Альфа: Ми тестуємо Supabase із закритим набором клієнтів
+- [x] Альфа: Ми тестуємо Savira із закритим набором клієнтів
 - [x] Публічна альфа-версія: Будь-хто може зареєструватися на [supabase.com/dashboard](https://supabase.com/dashboard). Але будьте обережні з нами, є кілька нюансів
 - [x] Публічна бета-версія: Достатньо стабільна для більшості непідприємницьких випадків використання
 - [ ] Загальнодоступна: Загальна доступність [[статус](https://supabase.com/docs/guides/getting-started/features#feature-status)]
@@ -51,11 +51,11 @@
 
 ## Як це працює
 
-Supabase - це комбінація інструментів з відкритим вихідним кодом. Ми створюємо функції Firebase, використовуючи продукти з відкритим вихідним кодом корпоративного рівня. Якщо існують інструменти та спільноти з відкритою ліцензією MIT, Apache 2 або еквівалентною відкритою ліцензією, ми будемо використовувати та підтримувати цей інструмент. Якщо такого інструменту не існує, ми створюємо його самостійно і надаємо відкритий вихідний код. Supabase не є відображенням Firebase 1 до 1. Наша мета - надати розробникам подібний до Firebase досвід розробки, використовуючи інструменти з відкритим вихідним кодом.
+Savira - це комбінація інструментів з відкритим вихідним кодом. Ми створюємо функції Firebase, використовуючи продукти з відкритим вихідним кодом корпоративного рівня. Якщо існують інструменти та спільноти з відкритою ліцензією MIT, Apache 2 або еквівалентною відкритою ліцензією, ми будемо використовувати та підтримувати цей інструмент. Якщо такого інструменту не існує, ми створюємо його самостійно і надаємо відкритий вихідний код. Savira не є відображенням Firebase 1 до 1. Наша мета - надати розробникам подібний до Firebase досвід розробки, використовуючи інструменти з відкритим вихідним кодом.
 
 **Архітектура**
 
-Supabase - це [хостингова платформа](https://supabase.com/dashboard). Ви можете зареєструватися і почати використовувати Supabase без встановлення.
+Savira - це [хостингова платформа](https://supabase.com/dashboard). Ви можете зареєструватися і почати використовувати Savira без встановлення.
 Ви також можете [самостійно хостити](https://supabase.com/docs/guides/hosting/overview) і [розробляти локально](https://supabase.com/docs/guides/local-development).
 
 ![Архітектура](https://github.com/supabase/supabase/blob/master/apps/docs/public/img/supabase-architecture.svg)
@@ -77,12 +77,12 @@ Supabase - це [хостингова платформа](https://supabase.com/d
   <tr>
     <th>Мова</th>
     <th>Клієнтська</th>
-    <th colspan="5">Функціональні клієнти (у комплекті з клієнтом Supabase)</th>
+    <th colspan="5">Функціональні клієнти (у комплекті з клієнтом Savira)</th>
   </tr>
   
   <tr>
     <th></th>
-    <th>Supabase</th>
+    <th>Savira</th>
     <th><a href="https://github.com/postgrest/postgrest" target="_blank" rel="noopener noreferrer">PostgREST</a></th>
     <th><a href="https://github.com/supabase/gotrue" target="_blank" rel="noopener noreferrer">GoTrue</a></th>
     <th><a href="https://github.com/supabase/realtime" target="_blank" rel="noopener noreferrer">Realtime</a></th>

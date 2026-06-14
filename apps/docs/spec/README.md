@@ -1,4 +1,4 @@
-# Supabase Specs
+# Savira Specs
 
 These spec files are used to generate the [reference documentation](https://supabase.com/docs/reference/cli/introduction).
 

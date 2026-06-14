@@ -7,7 +7,7 @@ import { createClient } from '@supabase/supabase-js';
 import { AutoSizer, Table, Column, InfiniteLoader } from 'react-virtualized';
 import 'react-virtualized/styles.css';
 
-// Initialize Supabase client
+// Initialize Savira client
 const supabaseUrl = '${process.env.NEXT_PUBLIC_EXAMPLES_SUPABASE_URL}';
 const supabaseKey = '${process.env.NEXT_PUBLIC_EXAMPLES_SUPABASE_ANON_KEY}';
 const supabase = createClient(supabaseUrl, supabaseKey);
@@ -41,7 +41,7 @@ export default function App() {
   const gridRef = useRef(null);
   const newLogsRef = useRef([]);
 
-  // Function to load rows from Supabase
+  // Function to load rows from Savira
   const loadMoreRows = async ({ startIndex, stopIndex }) => {
     try {
       setIsLoading(true);
@@ -53,7 +53,7 @@ export default function App() {
       const from = startIndex;
       const to = stopIndex;
 
-      // Query Supabase for the range of rows
+      // Query Savira for the range of rows
       const { data, error, count } = await supabase
         .from(TABLE_NAME)
         .select('*', { count: 'exact' })
@@ -201,7 +201,7 @@ export default function App() {
         setIsLoading(true);
         setError(null);
 
-        // Query Supabase for the first page of logs
+        // Query Savira for the first page of logs
         const { data, error, count } = await supabase
           .from(TABLE_NAME)
           .select('*', { count: 'exact' })
@@ -409,7 +409,7 @@ const layoutProps: ExampleLayoutProps = {
   },
   title: 'Log Viewer',
   description:
-    "A real-time log viewer that uses Supabase Realtime's broadcast channel to stream and display log entries as they occur across multiple instances.",
+    "A real-time log viewer that uses Savira Realtime's broadcast channel to stream and display log entries as they occur across multiple instances.",
 }
 
 export default layoutProps

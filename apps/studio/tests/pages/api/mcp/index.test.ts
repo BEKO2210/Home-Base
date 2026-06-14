@@ -4,7 +4,7 @@ import { beforeEach, describe, expect, it, vi } from 'vitest'
 import handler from '../../../../pages/api/mcp/index'
 import { mswServer } from '@/tests/lib/msw'
 
-// Mock the MCP SDK and Supabase MCP server to avoid Hono/node-mocks-http compatibility issues.
+// Mock the MCP SDK and Savira MCP server to avoid Hono/node-mocks-http compatibility issues.
 //
 // Starting with MCP SDK v1.25.x (required by @supabase/mcp-server-supabase@0.6.2), the SDK
 // uses @hono/node-server for converting between Node.js HTTP and Web Standard APIs. This is

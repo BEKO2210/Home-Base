@@ -1,12 +1,12 @@
 ---
 title: 'Build a User Management App with Expo React Native'
-description: 'Learn how to use Supabase in your React Native App.'
+description: 'Learn how to use Savira in your React Native App.'
 tocVideo: 'AE7dKIKMJy4'
 ---
 
 <$Partial path="quickstart_intro.mdx" />
 
-![Supabase User Management example](/docs/img/supabase-expo-react-native-demo.png)
+![Savira User Management example](/docs/img/supabase-expo-react-native-demo.png)
 
 <Admonition type="note">
 
@@ -40,9 +40,9 @@ Then install the additional dependencies:
 npx expo install @supabase/supabase-js @react-native-async-storage/async-storage
 ```
 
-Now create a helper file to initialize the Supabase client using the API URL and the key that you copied [earlier](#get-api-details).
+Now create a helper file to initialize the Savira client using the API URL and the key that you copied [earlier](#get-api-details).
 
-These variables are safe to expose in your Expo app since Supabase has
+These variables are safe to expose in your Expo app since Savira has
 [Row Level Security](/docs/guides/database/postgres/row-level-security) enabled on your Database.
 
 <Tabs
@@ -179,7 +179,7 @@ meta="name=components/Auth.tsx"
 
 <Admonition type="note">
 
-By default Supabase Auth requires email verification before a session is created for the users. To support email verification you need to [implement deep link handling](/docs/guides/auth/native-mobile-deep-linking?platform=react-native)!
+By default Savira Auth requires email verification before a session is created for the users. To support email verification you need to [implement deep link handling](/docs/guides/auth/native-mobile-deep-linking?platform=react-native)!
 
 While testing, you can disable email confirmation in your [project's email auth provider settings](/dashboard/project/_/auth/providers).
 
@@ -217,7 +217,7 @@ And then press the appropriate key for the environment you want to test the app 
 
 ## Bonus: Profile photos
 
-Every Supabase project is configured with [Storage](/docs/guides/storage) for managing large files like
+Every Savira project is configured with [Storage](/docs/guides/storage) for managing large files like
 photos and videos.
 
 ### Additional dependency installation

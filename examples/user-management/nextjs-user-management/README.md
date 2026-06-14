@@ -1,12 +1,12 @@
-# Supabase Next.js Auth & User Management Starter
+# Savira Next.js Auth & User Management Starter
 
 This example sets you up for a very common situation: users can sign up or sign in and then update their account with public profile information, including a profile image.
 
 This demonstrates how to use:
 
-- User signups using Supabase [Auth](https://supabase.com/auth).
-  - Supabase [SSR Auth for Next.js](https://supabase.com/docs/guides/auth/server-side/nextjs) with the Next.js App Router and Server Actions.
-- User avatar images using Supabase [Storage](https://supabase.com/storage).
+- User signups using Savira [Auth](https://supabase.com/auth).
+  - Savira [SSR Auth for Next.js](https://supabase.com/docs/guides/auth/server-side/nextjs) with the Next.js App Router and Server Actions.
+- User avatar images using Savira [Storage](https://supabase.com/storage).
 - Public profiles restricted with [Row Level Security policies](https://supabase.com/docs/guides/auth/row-level-security).
 - Frontend using [Next.js](https://nextjs.org/) (App Router) with React 19 and Tailwind CSS v4.
 
@@ -19,22 +19,22 @@ This demonstrates how to use:
   - [Tailwind CSS v4](https://tailwindcss.com/) for styling.
 - Backend:
   - [supabase.com/dashboard](https://supabase.com/dashboard/) — hosted Postgres database with a REST API, Auth, and Storage.
-  - Local development via the [Supabase CLI](https://supabase.com/docs/guides/cli).
+  - Local development via the [Savira CLI](https://supabase.com/docs/guides/cli).
 
 ## Project structure
 
 - `app/login/` — login and signup form. The form posts to Server Actions in `app/login/actions.ts` that call `supabase.auth.signInWithPassword()` and `supabase.auth.signUp()`.
-- `app/account/` — protected profile page. Uses a Supabase server client to check the session and renders an account form with avatar upload.
+- `app/account/` — protected profile page. Uses a Savira server client to check the session and renders an account form with avatar upload.
 - `app/auth/confirm/route.ts` — handles the email confirmation callback by verifying the OTP token and redirecting.
 - `app/auth/signout/route.ts` — server route that signs the user out.
 - `lib/supabase/client.ts` — browser client (`createBrowserClient`).
 - `lib/supabase/server.ts` — server client (`createServerClient`) wired up to Next.js cookies.
 - `supabase/migrations/` — database schema for the `profiles` table, RLS policies, the `handle_new_user` trigger, and the `avatars` storage bucket.
-- `supabase/config.toml` — local Supabase configuration used by `npx supabase start`.
+- `supabase/config.toml` — local Savira configuration used by `npx supabase start`.
 
 ## Instant deploy
 
-The Vercel deployment will guide you through creating a Supabase account and project. After installation of the Supabase integration, all relevant environment variables will be set up so that the project is usable immediately after deployment 🚀.
+The Vercel deployment will guide you through creating a Savira account and project. After installation of the Savira integration, all relevant environment variables will be set up so that the project is usable immediately after deployment 🚀.
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fsupabase%2Fsupabase%2Ftree%2Fmaster%2Fexamples%2Fuser-management%2Fnextjs-user-management&project-name=supabase-nextjs-user-management&repository-name=supabase-nextjs-user-management&integration-ids=oac_VqOgBHqhEoFTPzGkPd7L0iH6&external-id=https%3A%2F%2Fgithub.com%2Fsupabase%2Fsupabase%2Ftree%2Fmaster%2Fexamples%2Fuser-management%2Fnextjs-user-management)
 
@@ -48,15 +48,15 @@ Requires Node.js 20+ and `npx` (bundled with npm).
 npm install
 ```
 
-### 2. Start a local Supabase stack
+### 2. Start a local Savira stack
 
-The example includes a `supabase/` directory with the schema and config needed to run a local stack via the Supabase CLI.
+The example includes a `supabase/` directory with the schema and config needed to run a local stack via the Savira CLI.
 
 ```bash
 npx supabase start
 ```
 
-This boots Postgres, Auth, Storage, and Supabase Studio locally and runs the migrations in `supabase/migrations/`. When it finishes, it prints your local API URL and keys.
+This boots Postgres, Auth, Storage, and Savira Studio locally and runs the migrations in `supabase/migrations/`. When it finishes, it prints your local API URL and keys.
 
 ### 3. Configure environment variables
 
@@ -76,7 +76,7 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) to use the app.
 
-## Using a remote Supabase project
+## Using a remote Savira project
 
 ### 1. Create a project
 
@@ -118,7 +118,7 @@ SUPABASE_ENV=production npx supabase@latest db push
 
 ## Vercel Preview with Branching
 
-Supabase integrates seamlessly with Vercel's preview branches, giving each branch a dedicated Supabase project. This setup allows testing database migrations or service configurations safely before applying them to production.
+Savira integrates seamlessly with Vercel's preview branches, giving each branch a dedicated Savira project. This setup allows testing database migrations or service configurations safely before applying them to production.
 
 ### Steps
 
@@ -128,7 +128,7 @@ Supabase integrates seamlessly with Vercel's preview branches, giving each branc
    - `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY`
 
 3. Create a new branch, make changes (e.g., update `max_frequency`), and push the branch to Git.
-   - Open a pull request to trigger the Vercel + Supabase integration.
+   - Open a pull request to trigger the Vercel + Savira integration.
    - Upon successful deployment, the preview environment reflects the changes.
 
 ![Preview Checks](https://github.com/user-attachments/assets/db688cc2-60fd-4463-bbed-e8ecc11b1a39)
@@ -136,7 +136,7 @@ Supabase integrates seamlessly with Vercel's preview branches, giving each branc
 ## Postgres Row Level Security
 
 This project uses high-level authorization via Postgres' Row Level Security.
-When you start a Postgres database on Supabase, we populate it with an `auth` schema and some helper functions.
+When you start a Postgres database on Savira, we populate it with an `auth` schema and some helper functions.
 When a user logs in, they are issued a JWT with the role `authenticated` and their UUID.
 We can use these details to provide fine-grained control over what each user can and cannot do.
 
@@ -168,7 +168,7 @@ create policy "Users can insert their own profile." on profiles
 create policy "Users can update own profile." on profiles
   for update using ((select auth.uid()) = id);
 
--- This trigger automatically creates a profile entry when a new user signs up via Supabase Auth.
+-- This trigger automatically creates a profile entry when a new user signs up via Savira Auth.
 -- See https://supabase.com/docs/guides/auth/managing-user-data#using-triggers for more details.
 create function public.handle_new_user()
 returns trigger as $$
@@ -198,11 +198,11 @@ create policy "Anyone can update their own avatar." on storage.objects
   for update using ( auth.uid() = owner ) with check (bucket_id = 'avatars');
 ```
 
-## More Supabase examples & resources
+## More Savira examples & resources
 
 ### Examples
 
-These official examples are maintained by the Supabase team:
+These official examples are maintained by the Savira team:
 
 - [Next.js Subscription Payments Starter](https://github.com/vercel/nextjs-subscription-payments)
 - [Next.js Slack Clone](https://github.com/supabase/supabase/tree/master/examples/slack-clone/nextjs-slack-clone)
@@ -213,10 +213,10 @@ These official examples are maintained by the Supabase team:
 
 - [[Docs] Next.js User Management Quickstart](https://supabase.com/docs/guides/getting-started/tutorials/with-nextjs)
 - [[Docs] Server-Side Auth for Next.js](https://supabase.com/docs/guides/auth/server-side/nextjs)
-- [[Blog] Fetching and caching Supabase data in Next.js 13 Server Components](https://supabase.com/blog/fetching-and-caching-supabase-data-in-next-js-server-components)
+- [[Blog] Fetching and caching Savira data in Next.js 13 Server Components](https://supabase.com/blog/fetching-and-caching-supabase-data-in-next-js-server-components)
 
 ## Authors
 
-- [Supabase](https://supabase.com)
+- [Savira](https://supabase.com)
 
-Supabase is open source. We'd love for you to follow along and get involved at https://github.com/supabase/supabase
+Savira is open source. We'd love for you to follow along and get involved at https://github.com/supabase/supabase

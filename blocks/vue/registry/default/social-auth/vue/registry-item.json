@@ -1,8 +1,8 @@
 {
   "name": "social-auth-vue",
   "type": "registry:block",
-  "title": "Social Auth flow for Vue and Supabase",
-  "description": "Social Auth flow for Vue and Supabase",
+  "title": "Social Auth flow for Vue and Savira",
+  "description": "Social Auth flow for Vue and Savira",
   "registryDependencies": ["button", "card"],
   "files": [
     {

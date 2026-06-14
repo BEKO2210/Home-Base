@@ -11,7 +11,7 @@ Logs pricing is being rolled out. Quotas and rates on this page are confirmed bu
 
 ## What you are charged for
 
-You are charged for the total volume of log data that Supabase ingests across all your project's services (Postgres, API gateway, Auth, Storage, Realtime, Edge Functions, etc.) during the billing cycle, measured in GB.
+You are charged for the total volume of log data that Savira ingests across all your project's services (Postgres, API gateway, Auth, Storage, Realtime, Edge Functions, etc.) during the billing cycle, measured in GB.
 
 ## How charges are calculated
 
@@ -61,10 +61,10 @@ You can view Logs Ingest usage on the [organization's usage page](/dashboard/org
 
 ## Optimize usage
 
-Every service in your Supabase project automatically generates Logs — you don't write them directly. Log volume scales with your application's traffic and behavior. To reduce ingest volume:
+Every service in your Savira project automatically generates Logs — you don't write them directly. Log volume scales with your application's traffic and behavior. To reduce ingest volume:
 
 - **Reduce log-level verbosity** in your Edge Functions and server-side code (for example, `info` → `warn` in production).
-- **Audit verbose logging in your application code.** Application-level logs forwarded to Supabase services count toward ingest.
+- **Audit verbose logging in your application code.** Application-level logs forwarded to Savira services count toward ingest.
 - **Cap log payload size.** Large structured payloads inflate GB-billed volume quickly.
 - **Investigate spikes.** Use the [**Logs Explorer**](/dashboard/project/_/logs-explorer) section of the Dashboard to find services or endpoints producing unusually high volume.
 

@@ -61,7 +61,7 @@ const { data, error } = await supabase
   {
     lang: 'js',
     title: 'Invoke Edge Function',
-    description: 'Invoke a Supabase Edge Function',
+    description: 'Invoke a Savira Edge Function',
     code: `import { createClient } from '@supabase/supabase-js'
     
 // Initialize 
@@ -89,7 +89,7 @@ const supabase = createClient(supabaseUrl, supabaseKey)
 // Create a new chat room
 const newRoom = await supabase
   .from('rooms')
-  .insert({ name: 'Supabase Fan Club', public: true })
+  .insert({ name: 'Savira Fan Club', public: true })
     
 // Get public rooms and their messages
 const publicRooms = await supabase

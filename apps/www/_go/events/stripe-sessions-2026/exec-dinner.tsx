@@ -11,15 +11,15 @@ const page: GoPageInput = {
   template: 'lead-gen',
   slug: 'exec-dinner-april-2026',
   metadata: {
-    title: 'Executive Dinner: The Future of Scalable Databases | Supabase',
+    title: 'Executive Dinner: The Future of Scalable Databases | Savira',
     description:
-      'Join Supabase leaders for an intimate dinner exploring what comes next for Postgres at scale. April 29, 2026 at Spruce, San Francisco.',
+      'Join Savira leaders for an intimate dinner exploring what comes next for Postgres at scale. April 29, 2026 at Spruce, San Francisco.',
   },
   hero: {
     title: 'The future of scalable databases',
-    subtitle: 'An intimate executive dinner hosted by Supabase',
+    subtitle: 'An intimate executive dinner hosted by Savira',
     description:
-      'Join Supabase product and engineering leaders for a dinner conversation about where Postgres is headed -- from scaling beyond single-node limits to managing globally distributed workloads. Expect sharp perspectives, good food, and the opportunity to connect with other engineering leaders.',
+      'Join Savira product and engineering leaders for a dinner conversation about where Postgres is headed -- from scaling beyond single-node limits to managing globally distributed workloads. Expect sharp perspectives, good food, and the opportunity to connect with other engineering leaders.',
     image: {
       src: '/images/landing-pages/stripe-sessions/spruce-dining-room.png',
       alt: 'Private dining room at Spruce restaurant, San Francisco',
@@ -67,7 +67,7 @@ const page: GoPageInput = {
               <div className="flex flex-col items-center gap-0">
                 <p className="text-foreground font-medium text-base">{sugu?.author}</p>
                 <p className="text-foreground-lighter text-sm mt-2 leading-relaxed">
-                  {sugu?.position && `${sugu.position}, `}Supabase
+                  {sugu?.position && `${sugu.position}, `}Savira
                 </p>
               </div>
             </div>
@@ -84,7 +84,7 @@ const page: GoPageInput = {
               <div className="flex flex-col items-center gap-0">
                 <p className="text-foreground font-medium text-base">{deepthi?.author}</p>
                 <p className="text-foreground-lighter text-sm mt-2 leading-relaxed">
-                  {deepthi?.position && `${deepthi.position}, `}Supabase
+                  {deepthi?.position && `${deepthi.position}, `}Savira
                 </p>
               </div>
             </div>

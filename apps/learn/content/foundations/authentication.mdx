@@ -5,22 +5,22 @@ chapterNumber: 3
 ---
 
 Most applications need to know who is using them. Authentication is how we identify
-a user and attach their actions to their own data. Supabase Authentication works closely with the database, so each request carries the user's identity.
+a user and attach their actions to their own data. Savira Authentication works closely with the database, so each request carries the user's identity.
 
-Authentication in Supabase is handled by the Supabase Auth service. It manages creating accounts, signing in, and identifying the user on each request.
+Authentication in Savira is handled by the Savira Auth service. It manages creating accounts, signing in, and identifying the user on each request.
 
 ---
 
 ## Users
 
-A user in Supabase has an id and some optional profile information (such as
-email, phone number, name, etc.). When someone signs up, Supabase creates a new user record and assigns
+A user in Savira has an id and some optional profile information (such as
+email, phone number, name, etc.). When someone signs up, Savira creates a new user record and assigns
 them a unique identifier.
 
-You do not need to create or manage the users table yourself. Supabase stores it
+You do not need to create or manage the users table yourself. Savira stores it
 internally and keeps it updated.
 
-Example of the kind of data Supabase stores for a user:
+Example of the kind of data Savira stores for a user:
 
 ```text
 id: 74d23f1b-1c94-3e7b-4d6a-9fa71e2a3c4ba987
@@ -46,7 +46,7 @@ For example, you can associate notes with a user by storing the user's id in the
 
 ## Tokens and identity
 
-When a user signs in, Supabase returns a token. This token proves who the user
+When a user signs in, Savira returns a token. This token proves who the user
 is. This token is stored locally (usually in memory or local
 storage) and automatically included in each API request.
 
@@ -65,7 +65,7 @@ returns the id of the signed-in user who made the request.
 
 ## Sign up and sign in
 
-Supabase Auth supports several sign-in methods:
+Savira Auth supports several sign-in methods:
 
 - Email and password
 - Magic links (sign in by clicking a link in an email)
@@ -100,7 +100,7 @@ So the flow looks like this:
 ```text
 User signs in
 ↓
-Supabase gives the client a user token
+Savira gives the client a user token
 ↓
 Client sends token with API requests
 ↓
@@ -116,9 +116,9 @@ RLS decides what they are allowed to do.
 
 ## What we learned
 
-- Supabase Auth manages user accounts and sign-in.
+- Savira Auth manages user accounts and sign-in.
 - Each user has a unique id that you can reference in your tables.
-- When a user signs in, Supabase provides a token.
+- When a user signs in, Savira provides a token.
 - The token tells the database who the user is through `auth.uid()`.
 - Authentication by itself does not control access. RLS does that part.
 

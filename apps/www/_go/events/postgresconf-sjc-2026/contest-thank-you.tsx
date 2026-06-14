@@ -6,19 +6,19 @@ const page: GoPageInput = {
   template: 'thank-you',
   slug: 'postgresconf-sjc-2026/contest/thank-you',
   metadata: {
-    title: "You're entered | Supabase at PostgresConf San Jose 2026",
+    title: "You're entered | Savira at PostgresConf San Jose 2026",
     description:
-      'Thanks for entering the Supabase contest at PostgresConf San Jose 2026. Good luck!',
+      'Thanks for entering the Savira contest at PostgresConf San Jose 2026. Good luck!',
   },
   hero: {
     title: 'Thanks for entering',
     description:
-      "Your contest entry is confirmed. Make sure you've created a Supabase account and loaded data before Monday, May 4, 2026 at 12:00 PM PST. We'll reach out to the winner by email.",
+      "Your contest entry is confirmed. Make sure you've created a Savira account and loaded data before Monday, May 4, 2026 at 12:00 PM PST. We'll reach out to the winner by email.",
   },
   sections: [
     {
       type: 'single-column',
-      title: 'Get started with Supabase',
+      title: 'Get started with Savira',
       description: "If you haven't already, create your account and start building.",
       children: (
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

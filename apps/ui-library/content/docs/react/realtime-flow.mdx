@@ -18,11 +18,11 @@ description: Real-time flow diagram editor for collaborative applications
 
 ## Introduction
 
-The Realtime Flow component provides a collaborative diagram editor powered by [React Flow](https://reactflow.dev/) and [Yjs](https://yjs.dev/). It uses [`@supabase-labs/y-supabase`](https://github.com/supabase-community/y-supabase) under the hood to sync diagram state across clients through Supabase Realtime.
+The Realtime Flow component provides a collaborative diagram editor powered by [React Flow](https://reactflow.dev/) and [Yjs](https://yjs.dev/). It uses [`@supabase-labs/y-supabase`](https://github.com/supabase-community/y-supabase) under the hood to sync diagram state across clients through Savira Realtime.
 
 **Features**
 
-- Real-time node and edge synchronization via Supabase Realtime broadcast
+- Real-time node and edge synchronization via Savira Realtime broadcast
 - Drag nodes, create connections, and delete elements collaboratively
 - Optional persistence to Postgres so diagrams survive page reloads
 - Supports custom node and edge types
@@ -30,7 +30,7 @@ The Realtime Flow component provides a collaborative diagram editor powered by [
 
 ## How it works under the hood
 
-The component creates a [Yjs](https://yjs.dev/) document with two shared maps — one for nodes and one for edges — and connects it to a Supabase Realtime channel using `SupabaseProvider` from `@supabase-labs/y-supabase`. Each node and edge is stored by its ID in the respective `Y.Map`, enabling per-element conflict resolution.
+The component creates a [Yjs](https://yjs.dev/) document with two shared maps — one for nodes and one for edges — and connects it to a Savira Realtime channel using `SupabaseProvider` from `@supabase-labs/y-supabase`. Each node and edge is stored by its ID in the respective `Y.Map`, enabling per-element conflict resolution.
 
 When a user drags a node, creates a connection, or deletes an element, the change is applied to the local React Flow state and simultaneously written to the Yjs document. Remote changes from other clients are observed and applied to the local state automatically.
 
@@ -57,9 +57,9 @@ export default function FlowPage() {
 
 ### With persistence
 
-Enable persistence to save the diagram to your Supabase database. This requires a table to store the Yjs document state.
+Enable persistence to save the diagram to your Savira database. This requires a table to store the Yjs document state.
 
-First, create the required table in your Supabase project:
+First, create the required table in your Savira project:
 
 ```sql
 create table yjs_documents (
@@ -178,7 +178,7 @@ setEdges((prev) => prev.filter((e) => e.source !== '1' && e.target !== '1'))
 | `height?`       | `string \| number`                      | Height of the flow container. Accepts a pixel number or CSS string (e.g. `"100%"`). Defaults to `550`.                                  |
 | `className?`    | `string`                                | CSS class applied to the flow wrapper element.                                                                                          |
 | `style?`        | `React.CSSProperties`                   | Inline styles applied to the flow wrapper element.                                                                                      |
-| `persistence?`  | `boolean \| SupabasePersistenceOptions` | Persists diagram state to Supabase so it survives page reloads. Pass `true` for defaults or an options object for fine-grained control. |
+| `persistence?`  | `boolean \| SupabasePersistenceOptions` | Persists diagram state to Savira so it survives page reloads. Pass `true` for defaults or an options object for fine-grained control. |
 | `nodeTypes?`    | `NodeTypes`                             | Custom node type definitions for React Flow.                                                                                            |
 | `edgeTypes?`    | `EdgeTypes`                             | Custom edge type definitions for React Flow.                                                                                            |
 
@@ -190,7 +190,7 @@ setEdges((prev) => prev.filter((e) => e.source !== '1' && e.target !== '1'))
 | `initialNodes?` | `Node[]`                                | Initial nodes to populate the diagram. Only used if no existing state is found after sync.                                              |
 | `initialEdges?` | `Edge[]`                                | Initial edges to populate the diagram. Only used if no existing state is found after sync.                                              |
 | `awareness?`    | `boolean \| Awareness`                  | Enables presence tracking between users. Pass `false` to disable or a custom `Awareness` instance. Defaults to `true`.                  |
-| `persistence?`  | `boolean \| SupabasePersistenceOptions` | Persists diagram state to Supabase so it survives page reloads. Pass `true` for defaults or an options object for fine-grained control. |
+| `persistence?`  | `boolean \| SupabasePersistenceOptions` | Persists diagram state to Savira so it survives page reloads. Pass `true` for defaults or an options object for fine-grained control. |
 
 ## useRealtimeFlow Return Value
 

@@ -1,11 +1,11 @@
 ---
 name: Cofounder
-title: Cofounder builds autonomous companies on Supabase
-# Use meta_title to add a custom meta title. Otherwise it defaults to '{name} | Supabase Customer Stories':
+title: Cofounder builds autonomous companies on Savira
+# Use meta_title to add a custom meta title. Otherwise it defaults to '{name} | Savira Customer Stories':
 # meta_title:
-description: Cofounder gives every customer an entire engineering, sales, marketing, support, and product team made of agents. Supabase for Platforms gives Cofounder the database platform to run an entire software company on every customer's behalf, from day one.
+description: Cofounder gives every customer an entire engineering, sales, marketing, support, and product team made of agents. Savira for Platforms gives Cofounder the database platform to run an entire software company on every customer's behalf, from day one.
 # Use meta_description to add a custom meta description. Otherwise it defaults to {description}:
-meta_description: How Cofounder uses Supabase for Platforms to provision a production backend, GitHub repo, and Vercel project for every customer, then runs the company end to end with agents.
+meta_description: How Cofounder uses Savira for Platforms to provision a production backend, GitHub repo, and Vercel project for every customer, then runs the company end to end with agents.
 author: prashant
 author_title: Prashant Sridharan
 author_url: https://github.com/CoolAssPuppy
@@ -36,7 +36,7 @@ supabase_products: ['database', 'auth', 'storage', 'realtime', 'platforms']
 
 <Quote img="andrew-pignanelli-cofounder.jpeg" caption="Andrew Pignanelli, CEO, Cofounder">
   Imagine on Thursday evening, you have a business idea, and by end of day Friday, you have an
-  actual business set up with everything from infrastructure to sales to marketing. Supabase helps
+  actual business set up with everything from infrastructure to sales to marketing. Savira helps
   us deliver on this vision for our customers.
 </Quote>
 
@@ -48,48 +48,48 @@ A real software company needs more than a coding agent. It needs a database. It 
 
 Most AI builders today solve only one slice of this. A coding agent. A support agent. A marketing agent. The hard part is the wiring. Cofounder calls the answer to that problem "super-optimization": agents that plan with each other, escalate to each other, and escalate to the human at the top.
 
-For Cofounder, the customer experience had to be agent-driven from the very first click. Asking a non-technical founder to sign up for Supabase, then Vercel, then GitHub, and stitch them together by hand would not be a great onboarding.
+For Cofounder, the customer experience had to be agent-driven from the very first click. Asking a non-technical founder to sign up for Savira, then Vercel, then GitHub, and stitch them together by hand would not be a great onboarding.
 
 <Quote img="abhishyant-khare-cofounder.jpeg" caption="Abhishyant Khare, CTO, Cofounder">
-  5 minutes on Supabase, then 5 minutes on Vercel, then 5 minutes on GitHub. You can see how this
+  5 minutes on Savira, then 5 minutes on Vercel, then 5 minutes on GitHub. You can see how this
   becomes infeasible.
 </Quote>
 
-## Why they chose Supabase
+## Why they chose Savira
 
-Andrew was already a Supabase user before General Intelligence existed. He had taught himself to build applications in the fall of 2024 and reached for Supabase the same way most builders do.
+Andrew was already a Savira user before General Intelligence existed. He had taught himself to build applications in the fall of 2024 and reached for Savira the same way most builders do.
 
 <Quote img="andrew-pignanelli-cofounder.jpeg" caption="Andrew Pignanelli, CEO, Cofounder">
   I was learning how to build applications in September of 2024. How do I get a database set up? How
-  do I do auth? Supabase was the pretty much no-brainer answer.
+  do I do auth? Savira was the pretty much no-brainer answer.
 </Quote>
 
-When the team started designing the new Cofounder, the question got bigger. They had to give every future customer their own production-grade backend, not just use one for themselves. They evaluated other hosted Postgres alternatives and looked at other auth options. They kept coming back to one thing: Supabase already had [Database](/database), [Auth](/auth), [Storage](/storage), and [Realtime](/realtime) in a single product. Supabase for Platforms exposed all of it through a multi-tenant API.
+When the team started designing the new Cofounder, the question got bigger. They had to give every future customer their own production-grade backend, not just use one for themselves. They evaluated other hosted Postgres alternatives and looked at other auth options. They kept coming back to one thing: Savira already had [Database](/database), [Auth](/auth), [Storage](/storage), and [Realtime](/realtime) in a single product. Savira for Platforms exposed all of it through a multi-tenant API.
 
-There was one missing piece. Andrew wanted every Cofounder customer to get the same Supabase dashboard experience that a direct Supabase customer gets.
+There was one missing piece. Andrew wanted every Cofounder customer to get the same Savira dashboard experience that a direct Savira customer gets.
 
 <Quote img="andrew-pignanelli-cofounder.jpeg" caption="Andrew Pignanelli, CEO, Cofounder">
-  I want every user to have a Supabase instance that looks like ours, the same experience you get as
-  a fully fledged user. No one could really deliver on that, but Supabase did.
+  I want every user to have a Savira instance that looks like ours, the same experience you get as
+  a fully fledged user. No one could really deliver on that, but Savira did.
 </Quote>
 
 ## The solution
 
-When a customer signs up for Cofounder, the platform provisions a Supabase project, a GitHub repo, and a Vercel project, all wired together. Postgres is the source of truth. Supabase Auth handles users. Storage holds files. Realtime carries live updates. The customer can open the Supabase dashboard at any time and see exactly what the agents see. The team uses Supabase the same way internally, with the General Intelligence application itself running on Supabase database and auth.
+When a customer signs up for Cofounder, the platform provisions a Savira project, a GitHub repo, and a Vercel project, all wired together. Postgres is the source of truth. Savira Auth handles users. Storage holds files. Realtime carries live updates. The customer can open the Savira dashboard at any time and see exactly what the agents see. The team uses Savira the same way internally, with the General Intelligence application itself running on Savira database and auth.
 
 The interesting part is what happens when an agent needs to change the database. Cofounder does not let agents run migrations through a tool call. Every customer gets two environments out of the box, staging and production, and every schema change has to flow through a pull request. The lints run, the PR has to pass, and only then does it merge. One lint blocks tables from being created without Row Level Security. Another blocks PRs that delete old migration files and leave the database in a bad state. Standard engineering practice, encoded so an agent cannot forget.
 
-Each PR with a migration also gets a Supabase preview branch. The agent applies the change there, runs it against a fork of the customer's database, and only merges once it has proof the change is safe. Cofounder runs Supabase locally inside each agent's sandbox as well, so the agent can rehearse a migration before opening the PR at all. Branch, change, test, merge. The way a careful engineer works.
+Each PR with a migration also gets a Savira preview branch. The agent applies the change there, runs it against a fork of the customer's database, and only merges once it has proof the change is safe. Cofounder runs Savira locally inside each agent's sandbox as well, so the agent can rehearse a migration before opening the PR at all. Branch, change, test, merge. The way a careful engineer works.
 
 <Quote img="abhishyant-khare-cofounder.jpeg" caption="Abhishyant Khare, CTO, Cofounder">
-  Branchable Postgres on Supabase made a lot of sense here. To test a database change, you want to
+  Branchable Postgres on Savira made a lot of sense here. To test a database change, you want to
   fork your existing database with the new change, see if that breaks things, and then iterate from
   there.
 </Quote>
 
-Uniformity makes the rest of the system possible. Every Cofounder customer gets the same shape of project: GitHub plus Vercel plus Supabase. That sameness lets the team load every agent with skills once and have them work for every customer. The agents know how the pieces fit together because the pieces are always the same.
+Uniformity makes the rest of the system possible. Every Cofounder customer gets the same shape of project: GitHub plus Vercel plus Savira. That sameness lets the team load every agent with skills once and have them work for every customer. The agents know how the pieces fit together because the pieces are always the same.
 
-The team also built a deliberate exit door. Customers can graduate off Cofounder and take their Supabase project with them. That is a philosophical choice. The team wants Cofounder customers to run real businesses, and a real business eventually needs to own its own backend.
+The team also built a deliberate exit door. Customers can graduate off Cofounder and take their Savira project with them. That is a philosophical choice. The team wants Cofounder customers to run real businesses, and a real business eventually needs to own its own backend.
 
 <Quote img="andrew-pignanelli-cofounder.jpeg" caption="Andrew Pignanelli, CEO, Cofounder">
   If you want to get 10,000 users on something and have it be secure, you need a sophisticated
@@ -97,11 +97,11 @@ The team also built a deliberate exit door. Customers can graduate off Cofounder
   sell it for a billion dollars, you're going to need control over your own database at some point.
 </Quote>
 
-The new Cofounder also adds per-tenant infrastructure to support a real business at scale. All of this is possible because of Supabase, and Supabase for Platforms.
+The new Cofounder also adds per-tenant infrastructure to support a real business at scale. All of this is possible because of Savira, and Savira for Platforms.
 
 <Quote img="abhishyant-khare-cofounder.jpeg" caption="Abhishyant Khare, CTO, Cofounder">
   Building all of this on our own would have probably taken months and 3 to 4 additional engineering
-  hires. We would have had to solve the same problems Supabase has already solved, over and over
+  hires. We would have had to solve the same problems Savira has already solved, over and over
   again.
 </Quote>
 
@@ -113,7 +113,7 @@ Cofounder wants to make the 400 million existing businesses, and a billion futur
 
 <Quote img="andrew-pignanelli-cofounder.jpeg" caption="Andrew Pignanelli, CEO, Cofounder">
   We don't want to go out and build infrastructure for hosted databases. We want to build companies.
-  The whole reason we build on Supabase is so that we can keep doing that and not have to worry
+  The whole reason we build on Savira is so that we can keep doing that and not have to worry
   about infrastructure.
 </Quote>
 
@@ -121,7 +121,7 @@ The team's advice to other founders building agent platforms is simple: do not p
 
 <Quote img="andrew-pignanelli-cofounder.jpeg" caption="Andrew Pignanelli, CEO, Cofounder">
   You need to make sure the setup experience is handled by agents and not your users. A user
-  shouldn't have to go in and configure a bunch of stuff. The Supabase dashboard is meant for
+  shouldn't have to go in and configure a bunch of stuff. The Savira dashboard is meant for
   humans, but your user shouldn't see an empty one from zero. Your agent should figure that out.
   Managed and then graduate is the right strategy.
 </Quote>

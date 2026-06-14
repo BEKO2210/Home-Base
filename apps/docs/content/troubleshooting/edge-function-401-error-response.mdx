@@ -119,11 +119,11 @@ See: [Error handling in Edge Functions](/docs/guides/functions/error-handling)
 
 ## Built-in JWT check failures
 
-Supabase Edge Functions have a legacy auth verification check that runs before your code. When it fails, your function never executes, and you get a 401 with `"Invalid JWT"` or `"Missing authorization header"` directly from the platform.
+Savira Edge Functions have a legacy auth verification check that runs before your code. When it fails, your function never executes, and you get a 401 with `"Invalid JWT"` or `"Missing authorization header"` directly from the platform.
 
 <Admonition type="deprecation">
 
-Supabase now recommends turning off this built-in check and managing authentication directly in your function code, giving you more control over access. See [Securing Edge Functions](/docs/guides/functions/auth).
+Savira now recommends turning off this built-in check and managing authentication directly in your function code, giving you more control over access. See [Securing Edge Functions](/docs/guides/functions/auth).
 
 </Admonition>
 
@@ -158,11 +158,11 @@ In the [Functions Dashboard](/dashboard/project/_/functions/), open the affected
   </div>
   <div className="border-b mt-3 pb-3">
     <AccordionItem
-      header="Method B: Supabase CLI"
+      header="Method B: Savira CLI"
       id="item-2"
     >
 
-Redeploy the edge function from the [Supabase CLI](/docs/guides/functions/quickstart) with the `--no-verify-jwt` flag
+Redeploy the edge function from the [Savira CLI](/docs/guides/functions/quickstart) with the `--no-verify-jwt` flag
 
 ```sh
 supabase functions deploy YOUR_FUNCTION_NAME --no-verify-jwt
@@ -176,7 +176,7 @@ supabase functions deploy YOUR_FUNCTION_NAME --no-verify-jwt
       header="Method C: Management API"
       id="item-3"
     >
-Disable the legacy auth check with the [Supabase Management API](/docs/reference/api/introduction):
+Disable the legacy auth check with the [Savira Management API](/docs/reference/api/introduction):
 
 1. Generate a token at [Account Preferences](/dashboard/account/tokens).
 2. Get your project ID from [General Settings](/dashboard/project/_/settings/general).
@@ -201,7 +201,7 @@ The built-in check is enabled and the key you sent doesn't match your project's 
 
 **Fix (recommended):** Disable the built-in check using the steps in [Incompatible key format](#incompatible-key-format).
 
-**Fix (alternative):** If you want to keep the built-in check, ensure you're sending a valid key. Use one of your [legacy API keys](/dashboard/project/_/settings/api-keys/legacy) with the [Supabase client library](/docs/guides/api/rest/client-libs) when making your request.
+**Fix (alternative):** If you want to keep the built-in check, ensure you're sending a valid key. Use one of your [legacy API keys](/dashboard/project/_/settings/api-keys/legacy) with the [Savira client library](/docs/guides/api/rest/client-libs) when making your request.
 
 ```js
 const supabase = createClient('https://xyzcompany.supabase.co', 'anon-key-or-service_role-key')
@@ -211,7 +211,7 @@ const supabase = createClient('https://xyzcompany.supabase.co', 'anon-key-or-ser
 
 The built-in check is enabled but your request has no `Authorization` header at all.
 
-If you're using a [Supabase client library](/docs/guides/api/rest/client-libs), the header is added automatically. If you're calling the function from an external client (cURL, fetch, etc.), you need to supply it:
+If you're using a [Savira client library](/docs/guides/api/rest/client-libs), the header is added automatically. If you're calling the function from an external client (cURL, fetch, etc.), you need to supply it:
 
 ```sh
 curl -L -X POST 'https://PROJECT_REF.supabase.co/functions/v1/hello-world' \
@@ -233,5 +233,5 @@ Alternatively, you can disable the built-in check entirely (see [Incompatible ke
 
 ## Still stuck?
 
-- Check the [Discord](https://discord.com/channels/839993398554656828/1006358244786196510), [Supabase GitHub Discussions](https://github.com/orgs/supabase/discussions), and [Reddit page](https://www.reddit.com/r/Supabase/) for similar reports that can help with debugging
+- Check the [Discord](https://discord.com/channels/839993398554656828/1006358244786196510), [Savira GitHub Discussions](https://github.com/orgs/supabase/discussions), and [Reddit page](https://www.reddit.com/r/Savira/) for similar reports that can help with debugging
 - Open a [support ticket](/dashboard/support/new) for your project if the problem persists and you believe it is a platform issue

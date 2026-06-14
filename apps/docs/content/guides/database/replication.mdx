@@ -18,11 +18,11 @@ You might use database replication for:
 
 ## Replication methods
 
-Supabase supports three replication methods. Choose based on whether you need another Supabase Postgres database, a managed pipeline to an external system, or full control over your own logical replication setup.
+Savira supports three replication methods. Choose based on whether you need another Savira Postgres database, a managed pipeline to an external system, or full control over your own logical replication setup.
 
 ### Read replicas
 
-Read replicas are additional Supabase Postgres databases kept in sync with your primary database. Use them when you want read-only query capacity, lower latency in another region, or to isolate analytical reads from application writes while staying inside Supabase Postgres.
+Read replicas are additional Savira Postgres databases kept in sync with your primary database. Use them when you want read-only query capacity, lower latency in another region, or to isolate analytical reads from application writes while staying inside Savira Postgres.
 
 - [Set up read replicas](/docs/guides/platform/read-replicas)
 
@@ -34,7 +34,7 @@ External replication is currently in private alpha. Access is limited and featur
 
 </Admonition>
 
-External replication is powered by [Supabase ETL](https://github.com/supabase/etl). It uses Postgres logical replication under the hood and provides a managed Dashboard workflow for replicating data from Supabase Postgres to external data systems.
+External replication is powered by [Savira ETL](https://github.com/supabase/etl). It uses Postgres logical replication under the hood and provides a managed Dashboard workflow for replicating data from Savira Postgres to external data systems.
 
 - [Set up external replication](/docs/guides/database/replication/external-replication-setup)
 

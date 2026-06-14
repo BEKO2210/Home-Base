@@ -20,7 +20,7 @@
 export const TYPESPEC_NODE_ANONYMOUS = Symbol('anonymous')
 
 /**
- * Definitions for the methods and types defined in each Supabase JS client
+ * Definitions for the methods and types defined in each Savira JS client
  * library.
  */
 export interface ModuleTypes {

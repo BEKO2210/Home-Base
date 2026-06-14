@@ -1162,7 +1162,7 @@ describe('SupportFormPage', () => {
     renderSupportFormPage()
 
     await waitFor(() => {
-      expect(screen.getByText('Try Supabase Assistant')).toBeInTheDocument()
+      expect(screen.getByText('Try Savira Assistant')).toBeInTheDocument()
     })
   })
 
@@ -1806,7 +1806,7 @@ describe('SupportFormPage', () => {
     expect(dashboardLogToggle).not.toBeChecked()
 
     await fillField(getSummaryField(screen), 'Cannot access my account')
-    await fillField(getMessageField(screen), 'I need help accessing my Supabase account')
+    await fillField(getMessageField(screen), 'I need help accessing my Savira account')
 
     await userEvent.click(getSubmitButton(screen))
 
@@ -1828,7 +1828,7 @@ describe('SupportFormPage', () => {
       browserInformation: 'Chrome',
       dashboardStudioVersion: mockStudioVersion,
     })
-    expect(payload.message).toBe('I need help accessing my Supabase account')
+    expect(payload.message).toBe('I need help accessing my Savira account')
 
     await waitFor(() => {
       expect(screen.getByRole('heading', { name: /support request sent/i })).toBeInTheDocument()

@@ -8,7 +8,7 @@ import { CodeBlock } from 'ui-patterns/CodeBlock'
 import { Heading } from 'ui/src/components/CustomHTMLElements'
 
 const meta = {
-  title: 'Supabase CLI config',
+  title: 'Savira CLI config',
 }
 
 const generateMetadata = genGuideMeta(() => ({

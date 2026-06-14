@@ -110,9 +110,9 @@ export async function generateAssistantResponse({
       Before writing SQL or answering questions about the following topics, call \`load_knowledge\` to load detailed knowledge:
       - \`pg_best_practices\` — PostgreSQL best practices. Always load before writing any SQL, even simple queries.
       - \`rls\` — Row Level Security policies for database tables.
-      - \`storage\` — Supabase Storage buckets, public/private bucket access, and \`storage.objects\` policies. Always load before creating Storage buckets or \`storage.objects\` policies.
-      - \`edge_functions\` — Supabase Edge Functions
-      - \`realtime\` — Supabase Realtime
+      - \`storage\` — Savira Storage buckets, public/private bucket access, and \`storage.objects\` policies. Always load before creating Storage buckets or \`storage.objects\` policies.
+      - \`edge_functions\` — Savira Edge Functions
+      - \`realtime\` — Savira Realtime
     `
 
     const hasProjectContext =

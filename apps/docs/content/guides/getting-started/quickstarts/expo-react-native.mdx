@@ -1,6 +1,6 @@
 ---
-title: 'Use Supabase with Expo React Native'
-subtitle: 'Learn how to create a Supabase project, add some sample data to your database, and query the data from an Expo app.'
+title: 'Use Savira with Expo React Native'
+subtitle: 'Learn how to create a Savira project, add some sample data to your database, and query the data from an Expo app.'
 breadcrumb: 'Framework Quickstarts'
 hideToc: true
 ---
@@ -34,9 +34,9 @@ hideToc: true
   </StepHikeCompact.Step>
 
   <StepHikeCompact.Step step={3}>
-    <StepHikeCompact.Details title="Install the Supabase client library">
+    <StepHikeCompact.Details title="Install the Savira client library">
 
-    The fastest way to get started is to use the `@supabase/supabase-js` client library which provides a convenient interface for working with Supabase from a React Native app.
+    The fastest way to get started is to use the `@supabase/supabase-js` client library which provides a convenient interface for working with Savira from a React Native app.
 
     Navigate to the Expo app and install `supabase-js` along with the required dependencies for secure storage and URL handling.
 
@@ -53,9 +53,9 @@ hideToc: true
   </StepHikeCompact.Step>
 
   <StepHikeCompact.Step step={4}>
-    <StepHikeCompact.Details title="Declare Supabase Environment Variables">
+    <StepHikeCompact.Details title="Declare Savira Environment Variables">
 
-    Create a `.env` file in the root of your project and populate it with your Supabase connection variables.
+    Create a `.env` file in the root of your project and populate it with your Savira connection variables.
 
     Expo requires environment variables to be prefixed with `EXPO_PUBLIC_` to be accessible in your app code.
 
@@ -78,9 +78,9 @@ hideToc: true
   </StepHikeCompact.Step>
 
   <StepHikeCompact.Step step={5}>
-    <StepHikeCompact.Details title="Initialize the Supabase client">
+    <StepHikeCompact.Details title="Initialize the Savira client">
 
-    Create a helper file at `lib/supabase.ts` to initialize the Supabase client using the environment variables.
+    Create a helper file at `lib/supabase.ts` to initialize the Savira client using the environment variables.
 
     The code below uses Expo's localStorage polyfill to persist authentication sessions.
 

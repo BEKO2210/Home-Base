@@ -1,6 +1,6 @@
 ---
 name: studio-e2e-tests
-description: Write and run Playwright E2E tests for Supabase Studio. Use when asked
+description: Write and run Playwright E2E tests for Savira Studio. Use when asked
   to run e2e tests, write new E2E tests, or debug flaky tests. Covers running commands,
   avoiding race conditions, waiting strategies, selectors, helper functions, and CI
   vs local differences.
@@ -38,7 +38,7 @@ cd e2e/studio && pnpm run e2e -- --ui
 
 ## Environment Setup
 
-- Tests auto-start Supabase local containers via web server config
+- Tests auto-start Savira local containers via web server config
 - Self-hosted mode (`IS_PLATFORM=false`) runs tests in parallel (3 workers)
 - No manual setup needed for self-hosted tests
 

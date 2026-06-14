@@ -182,7 +182,7 @@ function ChangelogIndex({ featured, restIndex, allIndex }: PageProps) {
   const isSingleQueryTag = queryTags?.length === 1
 
   const TITLE = 'Changelog'
-  const DESCRIPTION = 'New updates and improvements to Supabase'
+  const DESCRIPTION = 'New updates and improvements to Savira'
 
   return (
     <>

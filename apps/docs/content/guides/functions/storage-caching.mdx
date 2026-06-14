@@ -1,11 +1,11 @@
 ---
 id: 'storage-caching'
-title: 'Integrating with Supabase Storage'
-description: 'Integrate Edge Functions with Supabase Storage.'
+title: 'Integrating with Savira Storage'
+description: 'Integrate Edge Functions with Savira Storage.'
 tocVideo: 'wW6L52v9Ldo'
 ---
 
-Edge Functions work seamlessly with [Supabase Storage](/docs/guides/storage). This allows you to:
+Edge Functions work seamlessly with [Savira Storage](/docs/guides/storage). This allows you to:
 
 - Upload generated content directly from your functions
 - Implement cache-first patterns for better performance
@@ -15,7 +15,7 @@ Edge Functions work seamlessly with [Supabase Storage](/docs/guides/storage). Th
 
 ## Basic file operations
 
-Use the Supabase client to upload files directly from your Edge Functions. You'll need the secret key for server-side storage operations:
+Use the Savira client to upload files directly from your Edge Functions. You'll need the secret key for server-side storage operations:
 
 ```typescript
 import { createClient } from 'npm:@supabase/supabase-js@2'

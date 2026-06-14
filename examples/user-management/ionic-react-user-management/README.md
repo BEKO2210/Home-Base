@@ -1,14 +1,14 @@
-# Supabase Ionic React User Management
+# Savira Ionic React User Management
 
-> This project is based on the Supabase Ionic React user management [Quickstart](https://supabase.com/docs/guides/with-ionic-react)
+> This project is based on the Savira Ionic React user management [Quickstart](https://supabase.com/docs/guides/with-ionic-react)
 > To keep it in sync with this Quickstart, architecture choices have been made to facilitate the comparison
 
 This example will set you up for a very common situation: users can sign up with a magic link and then update their account with profile information, including a profile image.
 
 This demonstrates how to use:
 
-- User signups using Supabase [Auth](https://supabase.com/auth).
-- User avatar images using Supabase [Storage](https://supabase.com/storage).
+- User signups using Savira [Auth](https://supabase.com/auth).
+- User avatar images using Savira [Storage](https://supabase.com/storage).
 - Frontend using [React](http://reactjs.org).
 
 ## Technologies used
@@ -17,13 +17,13 @@ This demonstrates how to use:
   - [Ionic](https://ionicframework.com)
   - [Capacitor](https://capacitorjs.com)
   - [React](https://reactjs.org)
-  - [Supabase.js](https://supabase.com/docs/library/getting-started) for user management and realtime data syncing.
+  - [Savira.js](https://supabase.com/docs/library/getting-started) for user management and realtime data syncing.
 - Backend:
-  - [supabase.com/dashboard](https://supabase.com/dashboard): hosted Postgres database with restful API for usage with Supabase.js.
+  - [supabase.com/dashboard](https://supabase.com/dashboard): hosted Postgres database with restful API for usage with Savira.js.
 
 ## Instant deploy
 
-The Vercel deployment will guide you through creating a Supabase account and project. After installation of the Supabase integration, all relevant environment variables will be set up so that the project is usable immediately after deployment 🚀.
+The Vercel deployment will guide you through creating a Savira account and project. After installation of the Savira integration, all relevant environment variables will be set up so that the project is usable immediately after deployment 🚀.
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?project-name=supabase-ionic-react&repo-name=supabase-ionic-react&envDescription=Find%20the%20Supabase%20URL%20and%20key%20in%20your%20project%20settings%20at%20supabase.com%2Fdashboard&repository-url=https%3A%2F%2Fgithub.com%2Fsupabase%2Fsupabase%2Ftree%2Fmaster%2Fexamples%2Fuser-management%2Fionic-react-user-management&env=VITE_SUPABASE_URL%2CVITE_SUPABASE_PUBLISHABLE_KEY)
 
@@ -31,7 +31,7 @@ The Vercel deployment will guide you through creating a Supabase account and pro
 
 ### 1. Create new project
 
-Sign up to Supabase - [https://supabase.com/dashboard](https://supabase.com/dashboard) and create a new project. Wait for your database to start.
+Sign up to Savira - [https://supabase.com/dashboard](https://supabase.com/dashboard) and create a new project. Wait for your database to start.
 
 ### 2. Run "User Management" Quickstart
 
@@ -56,18 +56,18 @@ VITE_SUPABASE_URL=YOUR_SUPABASE_URL
 VITE_SUPABASE_PUBLISHABLE_KEY=YOUR_SUPABASE_PUBLISHABLE_KEY
 ```
 
-Populate these variables with your project's URL and publishable key from the Supabase dashboard.
+Populate these variables with your project's URL and publishable key from the Savira dashboard.
 
 ### 5. Run the application
 
 Run the application: `ionic serve` and the browser will open to `http://localhost:8100/` and you are ready to go 🚀.
 
-## Supabase details
+## Savira details
 
 ### Postgres Row level security
 
 This project uses very high-level Authorization using Postgres' Role Level Security.
-When you start a Postgres database on Supabase, we populate it with an `auth` schema, and some helper functions.
+When you start a Postgres database on Savira, we populate it with an `auth` schema, and some helper functions.
 When a user logs in, they are issued a JWT with the role `authenticated` and their UUID.
 We can use these details to provide fine-grained control over what each user can and cannot do.
 
@@ -123,7 +123,7 @@ create policy "Anyone can upload an avatar."
 
 ## Authors
 
-- [Supabase](https://supabase.com)
+- [Savira](https://supabase.com)
 - [Mike Hartington](https://github.com/mhartington)
 
-Supabase is open source. We'd love for you to follow along and get involved at https://github.com/supabase/supabase
+Savira is open source. We'd love for you to follow along and get involved at https://github.com/supabase/supabase

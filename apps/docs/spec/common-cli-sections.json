@@ -31,13 +31,13 @@
       },
       {
         "id": "supabase-login",
-        "title": "Log in to a Supabase account",
+        "title": "Log in to a Savira account",
         "slug": "supabase-login",
         "type": "cli-command"
       },
       {
         "id": "supabase-link",
-        "title": "Link to a Supabase project",
+        "title": "Link to a Savira project",
         "slug": "supabase-link",
         "type": "cli-command"
       },
@@ -223,7 +223,7 @@
     "items": [
       {
         "id": "supabase-seed",
-        "title": "Seed a Supabase project",
+        "title": "Seed a Savira project",
         "slug": "supabase-seed",
         "type": "cli-command"
       },
@@ -819,7 +819,7 @@
     "items": [
       {
         "id": "supabase-snippets",
-        "title": "Manage Supabase SQL snippets",
+        "title": "Manage Savira SQL snippets",
         "slug": "supabase-snippets",
         "type": "cli-command"
       },
@@ -843,7 +843,7 @@
     "items": [
       {
         "id": "supabase-services",
-        "title": "Show versions of all Supabase services",
+        "title": "Show versions of all Savira services",
         "slug": "supabase-services",
         "type": "cli-command"
       }

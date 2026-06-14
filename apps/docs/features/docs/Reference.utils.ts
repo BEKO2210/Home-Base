@@ -157,8 +157,8 @@ export async function generateReferenceMetadata(
     })
 
     return {
-      title: `${displayName} API Reference | ${metadataTitle || 'Supabase'}`,
-      description: `API reference for the ${displayName} Supabase SDK`,
+      title: `${displayName} API Reference | ${metadataTitle || 'Savira'}`,
+      description: `API reference for the ${displayName} Savira SDK`,
       ...(slug.length > 0
         ? {
             alternates: {
@@ -174,17 +174,17 @@ export async function generateReferenceMetadata(
     }
   } else if (isCliReference) {
     return {
-      title: 'CLI Reference | Supabase Docs',
-      description: 'CLI reference for the Supabase CLI',
+      title: 'CLI Reference | Savira Docs',
+      description: 'CLI reference for the Savira CLI',
     }
   } else if (isApiReference) {
     return {
-      title: 'Management API Reference | Supabase Docs',
-      description: 'Management API reference for the Supabase API',
+      title: 'Management API Reference | Savira Docs',
+      description: 'Management API reference for the Savira API',
     }
   } else if (isSelfHostingReference) {
     return {
-      title: 'Self-Hosting | Supabase Docs',
+      title: 'Self-Hosting | Savira Docs',
     }
   } else {
     return {}

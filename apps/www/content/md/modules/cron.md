@@ -1,8 +1,8 @@
-# Supabase Cron
+# Savira Cron
 
 > Schedule and manage recurring jobs directly in Postgres with pg_cron.
 
-Supabase Cron is a Postgres module that uses the pg_cron extension to schedule and manage recurring jobs. Define schedules with standard cron syntax or natural language, and run jobs that call database functions, Edge Functions, or remote webhooks.
+Savira Cron is a Postgres module that uses the pg_cron extension to schedule and manage recurring jobs. Define schedules with standard cron syntax or natural language, and run jobs that call database functions, Edge Functions, or remote webhooks.
 
 ## Key Features
 
@@ -10,7 +10,7 @@ Supabase Cron is a Postgres module that uses the pg_cron extension to schedule a
 - **Cron syntax and natural language**: use familiar cron expressions or plain English to define intervals
 - **Sub-minute scheduling**: run jobs as frequently as every 1-59 seconds
 - **Real-time monitoring**: track and debug scheduled jobs with built-in observability tools
-- **Extensible**: trigger database functions, Supabase Edge Functions, or HTTP webhooks
+- **Extensible**: trigger database functions, Savira Edge Functions, or HTTP webhooks
 - **Dashboard management**: create, edit, and monitor jobs through an intuitive UI
 - **SQL-based**: manage jobs using simple SQL commands, track changes with Postgres migrations
 - **100% open source**: built on pg_cron, a trusted community-driven extension

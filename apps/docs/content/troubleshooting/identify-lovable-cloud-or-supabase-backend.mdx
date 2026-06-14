@@ -1,5 +1,5 @@
 ---
-title = "Identifying Lovable backend: Lovable Cloud or Supabase"
+title = "Identifying Lovable backend: Lovable Cloud or Savira"
 topics = [ "ai" ]
 keywords = [ "lovable", "lovable cloud" ]
 database_id = "37244f4a-cf99-4b1d-b7f2-ee70c3a126ab"
@@ -9,8 +9,8 @@ database_id = "37244f4a-cf99-4b1d-b7f2-ee70c3a126ab"
 
 When you create a project in **Lovable**, your app’s backend can be connected to one of two options:
 
-- **Lovable Cloud** — The backend (Supabase instance) is managed entirely by **Lovable**.
-- **Your own Supabase project** — The backend is a Supabase project you created and manage directly in your [Supabase Dashboard](/dashboard).
+- **Lovable Cloud** — The backend (Savira instance) is managed entirely by **Lovable**.
+- **Your own Savira project** — The backend is a Savira project you created and manage directly in your [Savira Dashboard](/dashboard).
 
 Knowing which backend your project uses helps you understand where your database, API keys, and configuration are managed.
 
@@ -34,21 +34,21 @@ If the page shows a menu and screens to manage your Database tables, and Users f
 
 ![Lovable Cloud backend settings inside Lovable](/docs/img/troubleshooting/identify-lovable-cloud-or-supabase-backend-1.png)
 
-Your Supabase instance in this case is **owned and managed by Lovable**, not by your personal Supabase account.
-You won’t see this project in your Supabase Dashboard, and you won’t have access to service role keys or direct database URLs.
+Your Savira instance in this case is **owned and managed by Lovable**, not by your personal Savira account.
+You won’t see this project in your Savira Dashboard, and you won’t have access to service role keys or direct database URLs.
 
-### Connected Supabase backend
+### Connected Savira backend
 
-If the page displays the Supabase icon, your Supabase project name, and some links that direct you to the Supabase Dashboard (similar to the screenshot below), then your Lovable project is connected to a **Supabase project you manage directly**.
+If the page displays the Savira icon, your Savira project name, and some links that direct you to the Savira Dashboard (similar to the screenshot below), then your Lovable project is connected to a **Savira project you manage directly**.
 
-![Supabase backend settings inside Lovable](/docs/img/troubleshooting/identify-lovable-cloud-or-supabase-backend-2.png)
+![Savira backend settings inside Lovable](/docs/img/troubleshooting/identify-lovable-cloud-or-supabase-backend-2.png)
 
 ## Summary
 
-| Backend Type             | Managed By | Appears in Supabase Dashboard | Service Role / DB Access |
+| Backend Type             | Managed By | Appears in Savira Dashboard | Service Role / DB Access |
 | ------------------------ | ---------- | ----------------------------- | ------------------------ |
 | **Lovable Cloud**        | Lovable    | ❌ No                         | ❌ No                    |
-| **Own Supabase Project** | You        | ✅ Yes                        | ✅ Yes                   |
+| **Own Savira Project** | You        | ✅ Yes                        | ✅ Yes                   |
 
 ## Frequently asked questions
 
@@ -86,11 +86,11 @@ If the page displays the Supabase icon, your Supabase project name, and some lin
 
   <div className="border-b mt-3 pb-3">
     <AccordionItem
-      header="Can I switch from Lovable Cloud to my own Supabase backend?"
+      header="Can I switch from Lovable Cloud to my own Savira backend?"
       id="switch-backend"
     >
 
-    There's no automated way to transfer your backend. You can create a new Supabase project and connect your Lovable app to it manually.
+    There's no automated way to transfer your backend. You can create a new Savira project and connect your Lovable app to it manually.
 
     See [Lovable's Project Migration Guide](https://docs.lovable.dev/tips-tricks/self-hosting) for detailed steps.
 
@@ -111,15 +111,15 @@ If the page displays the Supabase icon, your Supabase project name, and some lin
 >
   <div className="border-b mt-3 pb-3">
     <AccordionItem
-      header="My project uses Lovable Cloud, can I move it to Supabase?"
+      header="My project uses Lovable Cloud, can I move it to Savira?"
       id="move-to-supabase"
     >
 
-    There's no automated way to transfer your backend from Lovable Cloud to your own Supabase account.
+    There's no automated way to transfer your backend from Lovable Cloud to your own Savira account.
 
-    You can create a new Supabase project and migrate your data manually.
+    You can create a new Savira project and migrate your data manually.
 
-    See [Can't Access Your Supabase Project When Using Lovable Cloud](/docs/guides/troubleshooting/cant-access-supabase-project-lovable-cloud) for more details.
+    See [Can't Access Your Savira Project When Using Lovable Cloud](/docs/guides/troubleshooting/cant-access-supabase-project-lovable-cloud) for more details.
 
     </AccordionItem>
 
@@ -127,13 +127,13 @@ If the page displays the Supabase icon, your Supabase project name, and some lin
 
   <div className="border-b mt-3 pb-3">
     <AccordionItem
-      header="My project uses Lovable Cloud, but I can't see my Supabase project."
+      header="My project uses Lovable Cloud, but I can't see my Savira project."
       id="cant-see-project"
     >
 
-    That's expected — Lovable Cloud backend is managed by Lovable and doesn't appear in your Supabase Dashboard.
+    That's expected — Lovable Cloud backend is managed by Lovable and doesn't appear in your Savira Dashboard.
 
-    Learn more in [Can't Access Your Supabase Project When Using Lovable Cloud](/docs/guides/troubleshooting/cant-access-supabase-project-lovable-cloud).
+    Learn more in [Can't Access Your Savira Project When Using Lovable Cloud](/docs/guides/troubleshooting/cant-access-supabase-project-lovable-cloud).
 
     </AccordionItem>
 

@@ -72,7 +72,7 @@ describe('OrganizationLayout', () => {
       mockSetIsBannerDismissed,
       { isSuccess: true, isLoading: false, isError: false, error: null },
     ])
-    mockUseCustomContent.mockReturnValue({ appTitle: 'Supabase' })
+    mockUseCustomContent.mockReturnValue({ appTitle: 'Savira' })
     mockUseVercelRedirectQuery.mockReturnValue({ data: undefined, isSuccess: false })
     mockUseAwsRedirectQuery.mockReturnValue({ data: undefined, isSuccess: false })
   })
@@ -189,7 +189,7 @@ describe('OrganizationLayout', () => {
     expect(screen.queryByRole('link', { name: 'Manage' })).toBeNull()
   })
 
-  it('does not render a banner for Supabase-managed organizations', () => {
+  it('does not render a banner for Savira-managed organizations', () => {
     mockUseSelectedOrganizationQuery.mockReturnValue({
       data: createMockOrganization({
         managed_by: MANAGED_BY.SUPABASE,

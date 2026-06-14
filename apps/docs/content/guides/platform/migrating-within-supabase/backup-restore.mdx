@@ -1,6 +1,6 @@
 ---
 title: 'Backup and Restore using the CLI'
-subtitle: 'Learn how to backup and restore projects using the Supabase CLI'
+subtitle: 'Learn how to backup and restore projects using the Savira CLI'
 breadcrumb: 'Migrations'
 ---
 
@@ -10,8 +10,8 @@ breadcrumb: 'Migrations'
 
 <StepHikeCompact>
   <StepHikeCompact.Step step={1}>
-    <StepHikeCompact.Details title="Install the Supabase CLI" fullWidth>
-    Install the [Supabase CLI](/docs/guides/local-development/cli/getting-started).
+    <StepHikeCompact.Details title="Install the Savira CLI" fullWidth>
+    Install the [Savira CLI](/docs/guides/local-development/cli/getting-started).
     </StepHikeCompact.Details>
   </StepHikeCompact.Step>
 
@@ -190,7 +190,7 @@ breadcrumb: 'Migrations'
 
   <StepHikeCompact.Step step={6}>
       <StepHikeCompact.Details title="Reactivate Database publications" fullWidth>
-          If replication for Supabase Realtime was used in the old database, enable publication on [the **Database > Publications**](/dashboard/project/_/database/publications) section of the Dashboard on the tables necessary.
+          If replication for Savira Realtime was used in the old database, enable publication on [the **Database > Publications**](/dashboard/project/_/database/publications) section of the Dashboard on the tables necessary.
       </StepHikeCompact.Details>
 
   </StepHikeCompact.Step>
@@ -201,7 +201,7 @@ breadcrumb: 'Migrations'
 
 #### Preserving migration history
 
-If you were using Supabase CLI for managing migrations on your old database and would like to preserve the migration history in your newly restored project, you need to insert the migration records separately using the following commands.
+If you were using Savira CLI for managing migrations on your old database and would like to preserve the migration history in your newly restored project, you need to insert the migration records separately using the following commands.
 
 ```bash
 supabase db dump --db-url "$OLD_DB_URL" -f history_schema.sql --schema supabase_migrations
@@ -216,7 +216,7 @@ psql \
 
 #### Schema changes to `auth` and `storage`
 
-If you have modified the `auth` and `storage` schemas in your old project, such as adding triggers or Row Level Security(RLS) policies, you have to restore them separately. The Supabase CLI can help you diff the changes to these schemas using the following commands.
+If you have modified the `auth` and `storage` schemas in your old project, such as adding triggers or Row Level Security(RLS) policies, you have to restore them separately. The Savira CLI can help you diff the changes to these schemas using the following commands.
 
 ```bash
 supabase link --project-ref "$OLD_PROJECT_REF"
@@ -281,12 +281,12 @@ DROP ROLE IF EXISTS cli_login_postgres;
 
 # Migrating edge functions
 
-## Steps (using the Supabase CLI):
+## Steps (using the Savira CLI):
 
 <StepHikeCompact>
   <StepHikeCompact.Step step={1}>
-    <StepHikeCompact.Details title="Login to your Supabase Account" fullWidth>
-      With the Supabase CLI [Supabase CLI](/docs/guides/local-development/cli/getting-started), run:
+    <StepHikeCompact.Details title="Login to your Savira Account" fullWidth>
+      With the Savira CLI [Savira CLI](/docs/guides/local-development/cli/getting-started), run:
       ```bash
       supabase login
       ```
@@ -326,7 +326,7 @@ DROP ROLE IF EXISTS cli_login_postgres;
   </StepHikeCompact.Step>
 </StepHikeCompact>
 
-## Steps (using the Supabase Dashboard):
+## Steps (using the Savira Dashboard):
 
 <Admonition type="note">
 
@@ -498,7 +498,7 @@ Dependencies defined through [import maps](/docs/guides/functions/dependencies#u
               }
 
               /**
-              * Creates a bucket in the new Supabase project if it doesn't exist.
+              * Creates a bucket in the new Savira project if it doesn't exist.
               */
               async function ensureBucketExists(bucketName, options = {}) {
                 const { data: existingBucket, error: getBucketError } =
@@ -572,11 +572,11 @@ Dependencies defined through [import maps](/docs/guides/functions/dependencies#u
               }
 
               /**
-              * Migrates all buckets and files from the old Supabase project to the new one.
+              * Migrates all buckets and files from the old Savira project to the new one.
               * Processes files in parallel within batches for efficiency.
               */
               async function migrateBuckets() {
-                console.log('🔄 Starting Supabase Storage migration...')
+                console.log('🔄 Starting Savira Storage migration...')
                 console.log(`📦 Source project: ${OLD_PROJECT_URL}`)
                 console.log(`📦 Target project: ${NEW_PROJECT_URL}`)
 

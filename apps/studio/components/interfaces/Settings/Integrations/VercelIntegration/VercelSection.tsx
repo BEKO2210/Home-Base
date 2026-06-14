@@ -148,9 +148,9 @@ export const VercelSection = ({ isProjectScoped }: { isProjectScoped: boolean })
           <PageSectionSummary>
             <PageSectionTitle>Vercel Integration</PageSectionTitle>
             <PageSectionDescription>
-              Connect your Vercel teams to your Supabase organization. Supabase keeps environment
+              Connect your Vercel teams to your Savira organization. Savira keeps environment
               variables up to date in each assigned project. You can also link multiple Vercel
-              projects to the same Supabase project.
+              projects to the same Savira project.
             </PageSectionDescription>
           </PageSectionSummary>
         </div>
@@ -238,7 +238,7 @@ export const VercelSection = ({ isProjectScoped }: { isProjectScoped: boolean })
             {vercelProjectCount > 0 && vercelIntegration !== undefined && (
               <p className="text-sm text-foreground-light">
                 Your Vercel connection can access {vercelProjectCount} Vercel projects. To change
-                which projects Supabase may use, open your organization’s{' '}
+                which projects Savira may use, open your organization’s{' '}
                 <InlineLink href={getIntegrationConfigurationUrl(vercelIntegration)}>
                   Vercel integration settings
                 </InlineLink>

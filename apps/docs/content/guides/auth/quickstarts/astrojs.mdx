@@ -1,6 +1,6 @@
 ---
-title: 'Use Supabase Auth with Astro'
-subtitle: 'Learn how to configure Supabase Auth for Astro with server-side rendering.'
+title: 'Use Savira Auth with Astro'
+subtitle: 'Learn how to configure Savira Auth for Astro with server-side rendering.'
 breadcrumb: 'Auth Quickstarts'
 hideToc: true
 ---
@@ -8,9 +8,9 @@ hideToc: true
 <StepHikeCompact>
 
   <StepHikeCompact.Step step={1}>
-    <StepHikeCompact.Details title="Create a new Supabase project">
+    <StepHikeCompact.Details title="Create a new Savira project">
 
-    Head over to [database.new](https://database.new) and create a new Supabase project.
+    Head over to [database.new](https://database.new) and create a new Savira project.
 
     Your new database has a table for storing your users. You can see that this table is currently empty by running some SQL in the [SQL Editor](/dashboard/project/_/sql/new).
 
@@ -48,7 +48,7 @@ hideToc: true
   </StepHikeCompact.Step>
 
   <StepHikeCompact.Step step={3}>
-    <StepHikeCompact.Details title="Install Supabase libraries and Node adapter">
+    <StepHikeCompact.Details title="Install Savira libraries and Node adapter">
 
     Install the `@supabase/supabase-js` client library, `@supabase/ssr` for server-side auth, and the `@astrojs/node` adapter to enable server-side rendering.
 
@@ -90,9 +90,9 @@ hideToc: true
   </StepHikeCompact.Step>
 
   <StepHikeCompact.Step step={5}>
-    <StepHikeCompact.Details title="Declare Supabase Environment Variables">
+    <StepHikeCompact.Details title="Declare Savira Environment Variables">
 
-    Create a `.env.local` file and populate with your Supabase connection variables:
+    Create a `.env.local` file and populate with your Savira connection variables:
 
     <ProjectConfigVariables variable="url" />
     <ProjectConfigVariables variable="publishable" />
@@ -113,9 +113,9 @@ hideToc: true
   </StepHikeCompact.Step>
 
   <StepHikeCompact.Step step={6}>
-    <StepHikeCompact.Details title="Create a Supabase client helper">
+    <StepHikeCompact.Details title="Create a Savira client helper">
 
-    Create a utility file to initialize the Supabase client with SSR support:
+    Create a utility file to initialize the Savira client with SSR support:
 
     </StepHikeCompact.Details>
 
@@ -283,9 +283,9 @@ hideToc: true
   <StepHikeCompact.Step step={8}>
     <StepHikeCompact.Details title="Customize email template">
 
-    Before users can confirm their email, update the Supabase email template to send the token hash to your callback URL.
+    Before users can confirm their email, update the Savira email template to send the token hash to your callback URL.
 
-    In your [Supabase project dashboard](/dashboard/project/_/auth/templates):
+    In your [Savira project dashboard](/dashboard/project/_/auth/templates):
     - Go to **Auth** > **Email Templates**
     - Select the **Confirm signup** template
     - Change `{{ .ConfirmationURL }}` to `{{ .SiteURL }}/auth/callback?token_hash={{ .TokenHash }}&type=email`.
@@ -306,7 +306,7 @@ hideToc: true
   <StepHikeCompact.Step step={9}>
     <StepHikeCompact.Details title="Create an auth callback page">
 
-    Create a new file at `src/pages/auth/callback.astro` to handle the email confirmation callback. Extract the token from the URL and verify it with Supabase:
+    Create a new file at `src/pages/auth/callback.astro` to handle the email confirmation callback. Extract the token from the URL and verify it with Savira:
 
     </StepHikeCompact.Details>
 
@@ -659,4 +659,4 @@ hideToc: true
 
 ## Learn more
 
-- [Supabase Auth docs](/docs/guides/auth#authentication) for more Supabase authentication methods
+- [Savira Auth docs](/docs/guides/auth#authentication) for more Savira authentication methods

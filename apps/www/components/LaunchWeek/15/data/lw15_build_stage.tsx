@@ -22,7 +22,7 @@ export interface BuildDayLink {
 
 export const days: BuildDay[] = [
   {
-    title: 'Supabase UI: Platform Kit',
+    title: 'Savira UI: Platform Kit',
     id: 'platform-kit',
     is_shipped: true,
     links: [
@@ -34,7 +34,7 @@ export const days: BuildDay[] = [
     ],
   },
   {
-    title: 'Create a Supabase backend using Figma Make',
+    title: 'Create a Savira backend using Figma Make',
     id: 'figma',
     is_shipped: true,
     links: [
@@ -70,7 +70,7 @@ export const days: BuildDay[] = [
     ],
   },
   {
-    title: 'Algolia Connector for Supabase',
+    title: 'Algolia Connector for Savira',
     id: 'algolia-connector',
     is_shipped: true,
     links: [

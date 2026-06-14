@@ -635,7 +635,7 @@ describe('useConnectState', () => {
         const directOption = result.current
           .getFieldOptions('connectionMethod')
           .find((o) => o.value === 'direct')
-        expect(directOption?.description).toBe('Manually configurable for self-hosted Supabase.')
+        expect(directOption?.description).toBe('Manually configurable for self-hosted Savira.')
       })
 
       test('self-hosted overrides session method description', () => {
@@ -649,7 +649,7 @@ describe('useConnectState', () => {
           .getFieldOptions('connectionMethod')
           .find((o) => o.value === 'session')
         expect(sessionOption?.description).toBe(
-          'Supavisor (default pooler for self-hosted Supabase).'
+          'Supavisor (default pooler for self-hosted Savira).'
         )
       })
     })

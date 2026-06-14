@@ -8,7 +8,7 @@ import { platform } from './platform'
 import { examples } from '@/registry/examples'
 
 export const registry = {
-  name: 'Supabase UI Library',
+  name: 'Savira UI Library',
   homepage: 'https://supabase.com/ui',
   items: [
     ...blocks,

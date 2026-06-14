@@ -1,6 +1,6 @@
 ---
-title: 'Using React Query with Next.js App Router and Supabase Cache Helpers'
-description: Learn how to use React Query in Next.js Client & Server Components for data fetching with Supabase.
+title: 'Using React Query with Next.js App Router and Savira Cache Helpers'
+description: Learn how to use React Query in Next.js Client & Server Components for data fetching with Savira.
 categories:
   - engineering
 tags:
@@ -29,19 +29,19 @@ If you prefer video guides, we've got a three-part video series for you!
 
 If you learn better by just jumping into a demo application, you can find one in our [examples on GitHub](https://github.com/supabase/supabase/tree/master/examples/caching/with-react-query-nextjs-14).
 
-Note: this blogpost is inspired by Giancarlo's original blogpost on using [React Query with Supabase in Remix.io](https://makerkit.dev/blog/saas/supabase-react-query)!
+Note: this blogpost is inspired by Giancarlo's original blogpost on using [React Query with Savira in Remix.io](https://makerkit.dev/blog/saas/supabase-react-query)!
 
 ## Prerequisites
 
-This article assumes that your have some basic kowledge of building React applications with Next.js. No prior knowledge of React Query or Supabase is required.
+This article assumes that your have some basic kowledge of building React applications with Next.js. No prior knowledge of React Query or Savira is required.
 
 We will use the following tools
 
 - [Next.js](https://nextjs.org/) - we used `14.0.3`
 - [TanStack React Query](https://tanstack.com/query/latest) - we used `5.12.2`
-- [Supabase SSR helpers](/docs/guides/auth/server-side/creating-a-client) - we used `0.0.10`
-- [Supabase Cache Helpers](https://github.com/psteinroe/supabase-cache-helpers) - we used `@supabase-cache-helpers/postgrest-react-query` version `1.3.0`
-- Supabase - create your account [here](https://database.new/) if you do not have one
+- [Savira SSR helpers](/docs/guides/auth/server-side/creating-a-client) - we used `0.0.10`
+- [Savira Cache Helpers](https://github.com/psteinroe/supabase-cache-helpers) - we used `@supabase-cache-helpers/postgrest-react-query` version `1.3.0`
+- Savira - create your account [here](https://database.new/) if you do not have one
 - IDE of your choosing
 
 ### Install the required dependencies
@@ -109,7 +109,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
 ### Creating your Database schema and generating TypeScript types
 
-For this example, we'll use a simple countries table where we store the id and name of countries. In your [Supabase Dashboard SQL editor](/dashboard/project/_/sql/new) create the countries table and add some values:
+For this example, we'll use a simple countries table where we store the id and name of countries. In your [Savira Dashboard SQL editor](/dashboard/project/_/sql/new) create the countries table and add some values:
 
 ```sql
 create table countries (
@@ -125,7 +125,7 @@ values
   (3, 'Singapore');
 ```
 
-Once you've created your schema, you can use the [Supabase CLI](/docs/guides/api/rest/generating-types) to automatically generate TypeScript types for you:
+Once you've created your schema, you can use the [Savira CLI](/docs/guides/api/rest/generating-types) to automatically generate TypeScript types for you:
 
 ```bash
 supabase login
@@ -138,9 +138,9 @@ These generated types will allow us to get typed data returned from React Query.
 
 ### Creating supabase-js clients for client and server components
 
-To help you utilize the full power of supabase-js, including [Supabase Auth](/auth) and [Row Level Security (RLS)](/docs/guides/auth/row-level-security) policies, we provide the [Supabase SSR helper library](/docs/guides/auth/server-side/creating-a-client) that allows you to conveniently create both browser Supabase clients for client components and server Supabase clients for server components.
+To help you utilize the full power of supabase-js, including [Savira Auth](/auth) and [Row Level Security (RLS)](/docs/guides/auth/row-level-security) policies, we provide the [Savira SSR helper library](/docs/guides/auth/server-side/creating-a-client) that allows you to conveniently create both browser Savira clients for client components and server Savira clients for server components.
 
-Further reading: [detailed documentation for Supabase SSR in Next.js](/docs/guides/auth/server-side/creating-a-client?framework=nextjs)
+Further reading: [detailed documentation for Savira SSR in Next.js](/docs/guides/auth/server-side/creating-a-client?framework=nextjs)
 
 #### Create a TypedSupabaseClient type
 
@@ -153,7 +153,7 @@ import type { Database } from '@/utils/database.types'
 export type TypedSupabaseClient = SupabaseClient<Database>
 ```
 
-#### Creating a Browser Supabase Client
+#### Creating a Browser Savira Client
 
 ```ts utils/supabase-browser.ts
 import { createBrowserClient } from '@supabase/ssr'
@@ -183,7 +183,7 @@ function useSupabaseBrowser() {
 export default useSupabaseBrowser
 ```
 
-#### Creating a Server Supabase Client
+#### Creating a Server Savira Client
 
 ```ts utils/supabase-server.ts
 import { createServerClient } from '@supabase/ssr'
@@ -207,9 +207,9 @@ export default function useSupabaseServer(cookieStore: ReturnType<typeof cookies
 
 Now we've got everything in place to get started fetching and caching data with React Query!
 
-### Automate query key management with the Supabase Cache Helpers
+### Automate query key management with the Savira Cache Helpers
 
-React Query manages query caching based on [query keys](https://tanstack.com/query/v4/docs/react/guides/query-keys). Needing to manage query keys is somewhat burdensome, luckily this is where the [Supabase Cache Helpers](https://github.com/psteinroe/supabase-cache-helpers) come into play.
+React Query manages query caching based on [query keys](https://tanstack.com/query/v4/docs/react/guides/query-keys). Needing to manage query keys is somewhat burdensome, luckily this is where the [Savira Cache Helpers](https://github.com/psteinroe/supabase-cache-helpers) come into play.
 
 Initially built during the [Launch Week 5 Hackathon](/blog/launch-week-5-hackathon-winners#best-overall-project) by [Philipp Steinrötter](https://twitter.com/psteinroe), it has become a full blown open source project that automatically generates cache keys from your supabase-js queries, amongst [many other awesome features](https://github.com/psteinroe/supabase-cache-helpers?tab=readme-ov-file#features)!
 
@@ -235,7 +235,7 @@ export function getCountryById(client: TypedSupabaseClient, countryId: number) {
 }
 ```
 
-This is a simple query function that takes in either the browser or the server Supabase client and the id of a country, and returns a supabase-js query.
+This is a simple query function that takes in either the browser or the server Savira client and the id of a country, and returns a supabase-js query.
 
 ### Fetch data server side
 
@@ -293,7 +293,7 @@ Since our query has them same generated cache key, React Query knows that the da
 
 ### Fetch data client side
 
-Of course you can still combine this with fetching data client side. React Query will check if a given query was pre-fetched server side, but if it wasn't it will then go ahead and fetch the data client side side using the browser Supabase client:
+Of course you can still combine this with fetching data client side. React Query will check if a given query was pre-fetched server side, but if it wasn't it will then go ahead and fetch the data client side side using the browser Savira client:
 
 ```tsx app/countries/[id]/page.tsx
 'use client'
@@ -324,7 +324,7 @@ export default function CountryPage({ params }: { params: { id: number } }) {
 
 ## Conclusion
 
-React Query and the Supabase Cache Helpers are fantastic tools to help you manage data fetching and caching in your Next.js applications.
+React Query and the Savira Cache Helpers are fantastic tools to help you manage data fetching and caching in your Next.js applications.
 
 Using React Query with Server Components makes most sense if:
 
@@ -334,8 +334,8 @@ Using React Query with Server Components makes most sense if:
 
 It's hard to give general advice on when it makes sense to pair React Query with Server Components and not. If you are just starting out with a new Server Components app, we suggest you start out with any tools for data fetching your framework provides you with and avoid bringing in React Query until you actually need it. This might be never, and that's fine, as always: use the right tool for the job!
 
-## More Next.js and Supabase resources
+## More Next.js and Savira resources
 
-- [Supabase is now compatible with Next.js 14](/blog/supabase-is-now-compatible-with-nextjs-14)
-- [Next.js with Supabase YouTube Playlist](https://youtube.com/playlist?list=PL5S4mPUpp4OtwG-qCxm8gA_hjaBq0OPdz&feature=shared)
+- [Savira is now compatible with Next.js 14](/blog/supabase-is-now-compatible-with-nextjs-14)
+- [Next.js with Savira YouTube Playlist](https://youtube.com/playlist?list=PL5S4mPUpp4OtwG-qCxm8gA_hjaBq0OPdz&feature=shared)
 - [Next.js Subscription Payments starter](https://github.com/vercel/nextjs-subscription-payments)

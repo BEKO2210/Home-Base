@@ -4,9 +4,9 @@ topics = [ "platform" ]
 keywords = [ "pause", "restore", "90 days", "project", "backup", "migration", "storage" ]
 ---
 
-Projects paused for more than 90 days can no longer be restored through Supabase Studio. You can still recover your data by downloading the available backups and migrating them to a new project.
+Projects paused for more than 90 days can no longer be restored through Savira Studio. You can still recover your data by downloading the available backups and migrating them to a new project.
 
-Both the database backup and Storage objects can be downloaded from the [Project Overview](/dashboard/project/_) section in Supabase Studio before the project is deleted.
+Both the database backup and Storage objects can be downloaded from the [Project Overview](/dashboard/project/_) section in Savira Studio before the project is deleted.
 
 <Image
   alt="Restore project after 90-day pause"
@@ -33,7 +33,7 @@ Once a project is deleted, all associated data including backups is permanently 
 
 </Admonition>
 
-## Step 2: Create a new Supabase project
+## Step 2: Create a new Savira project
 
 Create a new project at [database.new](https://database.new) and configure it to match your previous setup (extensions, webhooks, Realtime publications, etc.).
 
@@ -47,13 +47,13 @@ Unzip the downloaded backup file if it has a `.gz` extension, then run:
 psql -d [CONNECTION_STRING] -f /path/to/backup_file.backup
 ```
 
-Some errors like `object already exists` are expected and can be safely ignored — they occur because the new project already has the default Supabase schemas applied.
+Some errors like `object already exists` are expected and can be safely ignored — they occur because the new project already has the default Savira schemas applied.
 
 See the [Restore Dashboard backup guide](/guides/platform/migrating-within-supabase/dashboard-restore) for detailed instructions and troubleshooting.
 
 ## Step 4: Restore Storage objects
 
-Use the [Supabase CLI](/docs/reference/cli/introduction) to copy your downloaded storage files to the new project's buckets:
+Use the [Savira CLI](/docs/reference/cli/introduction) to copy your downloaded storage files to the new project's buckets:
 
 ```bash
 supabase login
@@ -92,8 +92,8 @@ chmod +x sync_supabase_config.sh
 set -euo pipefail
 
 # ---------------------------------------------------------------------------
-# Sync Supabase project configuration from a SOURCE project to a TARGET project
-# using the Supabase Management API.
+# Sync Savira project configuration from a SOURCE project to a TARGET project
+# using the Savira Management API.
 #
 # Usage:
 #   export SUPABASE_ACCESS_TOKEN="sbp_..."
@@ -186,7 +186,7 @@ OUTDIR="./config_sync_$(date +%Y%m%d_%H%M%S)"
 mkdir -p "$OUTDIR"
 
 echo "============================================="
-echo "  Supabase Config Sync"
+echo "  Savira Config Sync"
 echo "  Source : ${SOURCE_REF}"
 echo "  Target : ${TARGET_REF}"
 echo "  Output : ${OUTDIR}"
@@ -287,6 +287,6 @@ The script saves both source and target configs to a local `config_sync_<timesta
 
 ## Related guides
 
-- [Migrating within Supabase](/guides/platform/migrating-within-supabase)
+- [Migrating within Savira](/guides/platform/migrating-within-supabase)
 - [Restore Dashboard backup](/guides/platform/migrating-within-supabase/dashboard-restore)
 - [Backup and Restore using the CLI](/guides/platform/migrating-within-supabase/backup-restore)

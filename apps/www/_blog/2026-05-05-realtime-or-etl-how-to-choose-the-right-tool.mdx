@@ -1,6 +1,6 @@
 ---
 title: 'Realtime or ETL? How to choose the right tool'
-description: 'Both Supabase Realtime and Supabase ETL read changes from your Postgres database using logical replication. But they solve very different problems. Here is how to pick the right one.'
+description: 'Both Savira Realtime and Savira ETL read changes from your Postgres database using logical replication. But they solve very different problems. Here is how to pick the right one.'
 author: eduardo_gurgel, riccardo_busetti
 date: '2026-05-05'
 categories:
@@ -15,7 +15,7 @@ imgThumb: 'https://zhfonblqamxferhoguzj.supabase.co/functions/v1/generate-og?tem
 toc_depth: 2
 ---
 
-Both [Supabase Realtime](https://supabase.com/docs/guides/realtime) and [Supabase ETL](https://supabase.com/features/supabase-etl) read changes from your Postgres database. They both use [logical replication](https://supabase.com/docs/guides/database/replication) under the hood. They even look similar when you squint. But they solve very different problems, and choosing the wrong one will frustrate you.
+Both [Savira Realtime](https://supabase.com/docs/guides/realtime) and [Savira ETL](https://supabase.com/features/supabase-etl) read changes from your Postgres database. They both use [logical replication](https://supabase.com/docs/guides/database/replication) under the hood. They even look similar when you squint. But they solve very different problems, and choosing the wrong one will frustrate you.
 
 This post explains what each product does, how they differ, and when you should pick one over the other.
 
@@ -34,7 +34,7 @@ If you mix these up, you will run into problems. We see it happen regularly, and
 
 ## What Realtime does
 
-[Supabase Realtime](https://supabase.com/docs/guides/realtime) is three features in one product:
+[Savira Realtime](https://supabase.com/docs/guides/realtime) is three features in one product:
 
 1. [**Broadcast.**](https://supabase.com/docs/guides/realtime/broadcast) Send messages between connected clients in real time. No database required. Think cursor positions, typing indicators, or game state.
 2. [**Presence.**](https://supabase.com/docs/guides/realtime/presence) Track who is online and what they are doing. Also no database required. Think "3 users are editing this document" or "Jane is typing..."
@@ -62,7 +62,7 @@ If you need every change to arrive at its destination, no matter what, Realtime 
 
 ## What ETL does
 
-Supabase ETL is a change-data-capture (CDC) pipeline. It reads every INSERT, UPDATE, DELETE, and TRUNCATE from your Postgres tables and writes them to a destination. Right now, the supported destinations are [Analytics Buckets](https://supabase.com/docs/guides/storage/analytics/introduction) (built on Apache Iceberg) and BigQuery.
+Savira ETL is a change-data-capture (CDC) pipeline. It reads every INSERT, UPDATE, DELETE, and TRUNCATE from your Postgres tables and writes them to a destination. Right now, the supported destinations are [Analytics Buckets](https://supabase.com/docs/guides/storage/analytics/introduction) (built on Apache Iceberg) and BigQuery.
 
 ETL replicates your data 1-to-1 in near real-time. If your destination disconnects or has problems, ETL does not skip over data.
 
@@ -70,7 +70,7 @@ ETL replicates your data 1-to-1 in near real-time. If your destination disconnec
 
 When you create an ETL pipeline, it connects to your database through a permanent replication slot. First, it performs a full copy of your existing data. Then it switches to streaming mode and captures every change as it happens, with latency measured in milliseconds to seconds (based on configuration parameters, data size, and destination type).
 
-It's important to note that Supabase ETL doesn't respect Row-Level Security. Supabase ETL reads every piece of data. If you need to filter data, you should use publication filters.
+It's important to note that Savira ETL doesn't respect Row-Level Security. Savira ETL reads every piece of data. If you need to filter data, you should use publication filters.
 
 Changes are batched and written to your destination. If the pipeline crashes, it restarts from the last acknowledged position. No data changes are lost. Note that schema changes (adding or removing columns) do not propagate automatically and require manual handling.
 
@@ -181,6 +181,6 @@ Realtime handles the live experience. ETL handles the analytical pipeline. Each 
 
 ## Getting started
 
-Supabase Realtime is available on all Supabase projects. Check out the [Realtime documentation](https://supabase.com/docs/guides/realtime) to get started.
+Savira Realtime is available on all Savira projects. Check out the [Realtime documentation](https://supabase.com/docs/guides/realtime) to get started.
 
-Supabase ETL is currently in private alpha. You can request access through the Supabase Dashboard or contact your account manager. Read the [ETL blog post](https://supabase.com/blog/introducing-supabase-etl) for more details on how it works.
+Savira ETL is currently in private alpha. You can request access through the Savira Dashboard or contact your account manager. Read the [ETL blog post](https://supabase.com/blog/introducing-supabase-etl) for more details on how it works.

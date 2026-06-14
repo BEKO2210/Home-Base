@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# Bootstrap a self-hosted Supabase project on Linux (Debian/Ubuntu or RHEL/CentOS/Fedora).
+# Bootstrap a self-hosted Savira project on Linux (Debian/Ubuntu or RHEL/CentOS/Fedora).
 #
 # What it does:
 #   1. Installs prerequisites: git, openssl, jq, ca-certificates
@@ -253,7 +253,7 @@ fi
 # A clone has docker-compose.yml + utils/ but only .env.example;
 # a set-up project also has a real .env.
 if [ -f .env ] && [ -f docker-compose.yml ] && [ -d utils ]; then
-    log "Already in a Supabase project directory; skipping bootstrap."
+    log "Already in a Savira project directory; skipping bootstrap."
     exit 0
 fi
 

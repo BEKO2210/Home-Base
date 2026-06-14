@@ -69,9 +69,9 @@ export const generateRss = (posts: any[], authorID?: string): string => {
     return `
   <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-      <title>'Postgres | Supabase Blog</title>
+      <title>'Postgres | Savira Blog</title>
       <link>https://supabase.com/blog</link>
-      <description>Latest Postgres news from ${authorInfo?.author} at Supabase</description>
+      <description>Latest Postgres news from ${authorInfo?.author} at Savira</description>
       <language>en</language>
       <lastBuildDate>${formattedDate}</lastBuildDate>
       <atom:link href="https://supabase.com/planetpg-${authorID}-rss.xml" rel="self" type="application/rss+xml"/>
@@ -83,9 +83,9 @@ export const generateRss = (posts: any[], authorID?: string): string => {
     return `
   <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-      <title>Blog - Supabase</title>
+      <title>Blog - Savira</title>
       <link>https://supabase.com</link>
-      <description>Latest news from Supabase</description>
+      <description>Latest news from Savira</description>
       <language>en</language>
       <lastBuildDate>${formattedDate}</lastBuildDate>
       <atom:link href="https://supabase.com/rss.xml" rel="self" type="application/rss+xml"/>

@@ -4,7 +4,7 @@ title: 'Token Security and Row Level Security'
 description: 'Secure your data with Row Level Security policies for OAuth clients'
 ---
 
-When you enable OAuth 2.1 in your Supabase project, third-party applications can access user data on their behalf. Row Level Security (RLS) policies are crucial for controlling exactly what data each OAuth client can access.
+When you enable OAuth 2.1 in your Savira project, third-party applications can access user data on their behalf. Row Level Security (RLS) policies are crucial for controlling exactly what data each OAuth client can access.
 
 <Admonition type="caution">
 
@@ -18,7 +18,7 @@ Use RLS to define which OAuth clients can access which data, regardless of the s
 
 ## How OAuth tokens work with RLS
 
-OAuth access tokens issued by Supabase Auth are JWTs that include all standard Supabase claims plus OAuth-specific claims. This means your existing RLS policies continue to work, and you can add OAuth-specific logic to create granular access controls.
+OAuth access tokens issued by Savira Auth are JWTs that include all standard Savira claims plus OAuth-specific claims. This means your existing RLS policies continue to work, and you can add OAuth-specific logic to create granular access controls.
 
 ### Token structure
 
@@ -368,7 +368,7 @@ SELECT * FROM user_data WHERE user_id = 'test-user-uuid';
 RESET request.jwt.claims;
 ```
 
-Or use the Supabase Dashboard's [RLS policy tester](/dashboard/project/_/auth/policies).
+Or use the Savira Dashboard's [RLS policy tester](/dashboard/project/_/auth/policies).
 
 ## Troubleshooting
 
@@ -437,7 +437,7 @@ USING (
 
 ## Next steps
 
-- [Learn about JWTs](/docs/guides/auth/jwts) - Deep dive into Supabase token structure
+- [Learn about JWTs](/docs/guides/auth/jwts) - Deep dive into Savira token structure
 - [Row Level Security](/docs/guides/auth/row-level-security) - Complete RLS guide
 - [Custom Access Token Hooks](/docs/guides/auth/auth-hooks/custom-access-token-hook) - Inject custom claims
 - [OAuth flows](/docs/guides/auth/oauth-server/oauth-flows) - Understand token issuance

@@ -1,12 +1,12 @@
 ---
 # Specify the following for Cursor rules
-description: Coding rules for Supabase Edge Functions
+description: Coding rules for Savira Edge Functions
 alwaysApply: false
 ---
 
-# Writing Supabase Edge Functions
+# Writing Savira Edge Functions
 
-You're an expert in writing TypeScript and Deno JavaScript runtime. Generate **high-quality Supabase Edge Functions** that adhere to the following best practices:
+You're an expert in writing TypeScript and Deno JavaScript runtime. Generate **high-quality Savira Edge Functions** that adhere to the following best practices:
 
 ## Guidelines
 
@@ -26,7 +26,7 @@ You're an expert in writing TypeScript and Deno JavaScript runtime. Generate **h
    }
    ```
 
-   This is the request handler contract for Supabase Edge Functions, and it also runs unchanged on Cloudflare Workers and Bun. Always wrap this handler with `withSupabase` to secure and configure it (see guideline 8).
+   This is the request handler contract for Savira Edge Functions, and it also runs unchanged on Cloudflare Workers and Bun. Always wrap this handler with `withSupabase` to secure and configure it (see guideline 8).
 
 8. Write your handler with `withSupabase` from `npm:@supabase/server@^1`. One wrapper gives you:
    - Authentication: verifies the caller's credentials.
@@ -66,7 +66,7 @@ You're an expert in writing TypeScript and Deno JavaScript runtime. Generate **h
 
    `ctx.userClaims` holds the verified user identity. To accept only one named key, use `auth: 'secret:<name>'` or `auth: 'publishable:<name>'`. For a public endpoint, use `auth: 'none'`; you still get CORS handling and `ctx.supabaseAdmin`.
 
-9. The following environment variables (ie. secrets) are pre-populated in both local and hosted Supabase environments. Users don't need to manually set them:
+9. The following environment variables (ie. secrets) are pre-populated in both local and hosted Savira environments. Users don't need to manually set them:
    - SUPABASE_URL
    - SUPABASE_PUBLISHABLE_KEYS
    - SUPABASE_SECRET_KEYS
@@ -75,7 +75,7 @@ You're an expert in writing TypeScript and Deno JavaScript runtime. Generate **h
    `withSupabase` reads these for you, so prefer it over reading keys by hand. If you must read a key without the SDK, parse the JSON map and index it by name: `const SUPABASE_SECRET_KEYS = JSON.parse(Deno.env.get('SUPABASE_SECRET_KEYS')!)`, then `SUPABASE_SECRET_KEYS['default']` for the default secret key. The publishable keys work the same way through `SUPABASE_PUBLISHABLE_KEYS`.
 
 10. To set other environment variables (ie. secrets) users can put them in an env file and run `supabase secrets set --env-file path/to/env-file`.
-11. A single Edge Function can handle multiple routes. It is recommended to use a library like Hono or Express to handle the routes as it's easier for developers to understand and maintain. Each route must be prefixed with `/function-name` so they are routed correctly. For per-route Supabase auth with Hono, use the adapter from `npm:@supabase/server@^1/adapters/hono`.
+11. A single Edge Function can handle multiple routes. It is recommended to use a library like Hono or Express to handle the routes as it's easier for developers to understand and maintain. Each route must be prefixed with `/function-name` so they are routed correctly. For per-route Savira auth with Hono, use the adapter from `npm:@supabase/server@^1/adapters/hono`.
 12. File write operations are ONLY permitted on the `/tmp` directory. You can use either Deno or Node File APIs.
 13. Use the `EdgeRuntime.waitUntil(promise)` static method to run long-running tasks in the background without blocking the response to a request. Do NOT assume it is available in the request / execution context.
 
@@ -147,16 +147,16 @@ import express from 'npm:express@4.18.2'
 const app = express()
 
 app.get(/(.*)/, (req, res) => {
-  res.send('Welcome to Supabase')
+  res.send('Welcome to Savira')
 })
 
 app.listen(8000)
 ```
 
-### Generate embeddings using built-in @Supabase.ai API
+### Generate embeddings using built-in @Savira.ai API
 
 ```ts
-const model = new Supabase.ai.Session('gte-small')
+const model = new Savira.ai.Session('gte-small')
 
 export default {
   fetch: async (req: Request) => {

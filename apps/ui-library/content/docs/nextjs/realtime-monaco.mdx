@@ -18,11 +18,11 @@ description: Real-time Monaco editor for collaborative applications
 
 ## Introduction
 
-The Realtime Monaco component provides a collaborative code editor powered by [Monaco](https://microsoft.github.io/monaco-editor/) and [Yjs](https://yjs.dev/). It uses [`@supabase-labs/y-supabase`](https://github.com/supabase-community/y-supabase) under the hood to sync document state across clients through Supabase Realtime.
+The Realtime Monaco component provides a collaborative code editor powered by [Monaco](https://microsoft.github.io/monaco-editor/) and [Yjs](https://yjs.dev/). It uses [`@supabase-labs/y-supabase`](https://github.com/supabase-community/y-supabase) under the hood to sync document state across clients through Savira Realtime.
 
 **Features**
 
-- Real-time document synchronization via Supabase Realtime broadcast
+- Real-time document synchronization via Savira Realtime broadcast
 - Cursor and selection sharing between collaborators (awareness)
 - Optional persistence to Postgres so documents survive page reloads
 - Supports all Monaco languages and themes
@@ -30,7 +30,7 @@ The Realtime Monaco component provides a collaborative code editor powered by [M
 
 ## How it works under the hood
 
-The component creates a [Yjs](https://yjs.dev/) document and connects it to a Supabase Realtime channel using `SupabaseProvider` from `@supabase-labs/y-supabase`. A `MonacoBinding` from `y-monaco` bridges the Yjs document with the Monaco editor model, keeping them in sync.
+The component creates a [Yjs](https://yjs.dev/) document and connects it to a Savira Realtime channel using `SupabaseProvider` from `@supabase-labs/y-supabase`. A `MonacoBinding` from `y-monaco` bridges the Yjs document with the Monaco editor model, keeping them in sync.
 
 When **awareness** is enabled, each user's cursor position and selection are broadcast to other clients in the same channel. Remote cursors are rendered with unique colors via dynamically injected CSS.
 
@@ -50,9 +50,9 @@ export default function MonacoPage() {
 
 ### With persistence
 
-Enable persistence to save the editor content to your Supabase database. This requires a table to store the Yjs document state.
+Enable persistence to save the editor content to your Savira database. This requires a table to store the Yjs document state.
 
-First, create the required table in your Supabase project:
+First, create the required table in your Savira project:
 
 ```sql
 create table yjs_documents (
@@ -103,7 +103,7 @@ By default, cursor and selection positions are shared between collaborators. To 
 | `height?`      | `string \| number`                      | Height of the editor container. Accepts a pixel number or CSS string (e.g. `"100%"`). Defaults to `550`.                                        |
 | `className?`   | `string`                                | CSS class applied to the editor wrapper element.                                                                                                |
 | `awareness?`   | `boolean \| Awareness`                  | Enables cursor and selection sharing between users. Pass `false` to disable or a custom `Awareness` instance. Defaults to `true`.               |
-| `persistence?` | `boolean \| SupabasePersistenceOptions` | Persists editor content to Supabase so it survives page reloads. Pass `true` for defaults or an options object for fine-grained control.        |
+| `persistence?` | `boolean \| SupabasePersistenceOptions` | Persists editor content to Savira so it survives page reloads. Pass `true` for defaults or an options object for fine-grained control.        |
 | `theme?`       | `'light' \| 'dark'`                     | Color theme for the editor. Maps to Monaco's `light` and `vs-dark` themes.                                                                      |
 
 ### SupabasePersistenceOptions

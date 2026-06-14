@@ -9,10 +9,10 @@ describe('buildStudioPageTitle', () => {
         surface: 'Database',
         project: 'Acme Project',
         org: 'Acme Org',
-        brand: 'Supabase',
+        brand: 'Savira',
       })
     ).toBe(
-      `Database${STUDIO_PAGE_TITLE_SEPARATOR}Acme Project${STUDIO_PAGE_TITLE_SEPARATOR}Acme Org${STUDIO_PAGE_TITLE_SEPARATOR}Supabase`
+      `Database${STUDIO_PAGE_TITLE_SEPARATOR}Acme Project${STUDIO_PAGE_TITLE_SEPARATOR}Acme Org${STUDIO_PAGE_TITLE_SEPARATOR}Savira`
     )
   })
 
@@ -24,10 +24,10 @@ describe('buildStudioPageTitle', () => {
         surface: 'Database',
         project: 'Acme Project',
         org: 'Acme Org',
-        brand: 'Supabase',
+        brand: 'Savira',
       })
     ).toBe(
-      `users${STUDIO_PAGE_TITLE_SEPARATOR}Tables${STUDIO_PAGE_TITLE_SEPARATOR}Database${STUDIO_PAGE_TITLE_SEPARATOR}Acme Project${STUDIO_PAGE_TITLE_SEPARATOR}Acme Org${STUDIO_PAGE_TITLE_SEPARATOR}Supabase`
+      `users${STUDIO_PAGE_TITLE_SEPARATOR}Tables${STUDIO_PAGE_TITLE_SEPARATOR}Database${STUDIO_PAGE_TITLE_SEPARATOR}Acme Project${STUDIO_PAGE_TITLE_SEPARATOR}Acme Org${STUDIO_PAGE_TITLE_SEPARATOR}Savira`
     )
   })
 
@@ -36,10 +36,10 @@ describe('buildStudioPageTitle', () => {
       buildStudioPageTitle({
         section: 'Authentication',
         project: 'Acme Project',
-        brand: 'Supabase',
+        brand: 'Savira',
       })
     ).toBe(
-      `Authentication${STUDIO_PAGE_TITLE_SEPARATOR}Acme Project${STUDIO_PAGE_TITLE_SEPARATOR}Supabase`
+      `Authentication${STUDIO_PAGE_TITLE_SEPARATOR}Acme Project${STUDIO_PAGE_TITLE_SEPARATOR}Savira`
     )
   })
 
@@ -50,10 +50,10 @@ describe('buildStudioPageTitle', () => {
         surface: 'database',
         project: 'Acme Project',
         org: 'Acme Org',
-        brand: 'Supabase',
+        brand: 'Savira',
       })
     ).toBe(
-      `Database${STUDIO_PAGE_TITLE_SEPARATOR}Acme Project${STUDIO_PAGE_TITLE_SEPARATOR}Acme Org${STUDIO_PAGE_TITLE_SEPARATOR}Supabase`
+      `Database${STUDIO_PAGE_TITLE_SEPARATOR}Acme Project${STUDIO_PAGE_TITLE_SEPARATOR}Acme Org${STUDIO_PAGE_TITLE_SEPARATOR}Savira`
     )
   })
 
@@ -62,10 +62,10 @@ describe('buildStudioPageTitle', () => {
       buildStudioPageTitle({
         entity: '  hello   world  ',
         surface: '  Edge    Functions ',
-        brand: ' Supabase ',
+        brand: ' Savira ',
       })
     ).toBe(
-      `hello world${STUDIO_PAGE_TITLE_SEPARATOR}Edge Functions${STUDIO_PAGE_TITLE_SEPARATOR}Supabase`
+      `hello world${STUDIO_PAGE_TITLE_SEPARATOR}Edge Functions${STUDIO_PAGE_TITLE_SEPARATOR}Savira`
     )
   })
 
@@ -76,10 +76,10 @@ describe('buildStudioPageTitle', () => {
       buildStudioPageTitle({
         entity: longName,
         surface: 'Table Editor',
-        brand: 'Supabase',
+        brand: 'Savira',
       })
     ).toBe(
-      `${'x'.repeat(59)}…${STUDIO_PAGE_TITLE_SEPARATOR}Table Editor${STUDIO_PAGE_TITLE_SEPARATOR}Supabase`
+      `${'x'.repeat(59)}…${STUDIO_PAGE_TITLE_SEPARATOR}Table Editor${STUDIO_PAGE_TITLE_SEPARATOR}Savira`
     )
   })
 
@@ -87,8 +87,8 @@ describe('buildStudioPageTitle', () => {
     expect(
       buildStudioPageTitle({
         surface: 'Settings',
-        brand: 'Supabase Studio',
+        brand: 'Savira Studio',
       })
-    ).toBe(`Settings${STUDIO_PAGE_TITLE_SEPARATOR}Supabase Studio`)
+    ).toBe(`Settings${STUDIO_PAGE_TITLE_SEPARATOR}Savira Studio`)
   })
 })

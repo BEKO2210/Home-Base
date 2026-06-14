@@ -7,7 +7,7 @@ const instanceId = Math.random().toString(36).substring(2, 9)
 const appJsCode = `import { useEffect, useState, useRef } from 'react';
 import { createClient } from '@supabase/supabase-js';
 
-// Initialize Supabase client
+// Initialize Savira client
 const supabaseUrl = '${process.env.NEXT_PUBLIC_EXAMPLES_SUPABASE_URL}';
 const supabaseKey = '${process.env.NEXT_PUBLIC_EXAMPLES_SUPABASE_ANON_KEY}';
 const supabase = createClient(supabaseUrl, supabaseKey);
@@ -28,7 +28,7 @@ export default function App() {
   const channelRef = useRef(null);
   const containerRef = useRef(null);
   
-  // Set up Supabase channel
+  // Set up Savira channel
   useEffect(() => {
     // Generate a random username
     const adjectives = ['Happy', 'Clever', 'Brave', 'Bright', 'Kind'];
@@ -225,7 +225,7 @@ const layoutProps: ExampleLayoutProps = {
   files: emojiPickerFiles,
   title: 'Emoji Picker',
   description:
-    "An interactive emoji reaction system that uses Supabase Realtime's broadcast channel to sync emoji reactions across multiple users in real-time.",
+    "An interactive emoji reaction system that uses Savira Realtime's broadcast channel to sync emoji reactions across multiple users in real-time.",
 }
 
 export default layoutProps

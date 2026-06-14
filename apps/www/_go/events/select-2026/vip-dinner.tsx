@@ -15,15 +15,15 @@ const page: GoPageInput = {
   template: 'lead-gen',
   slug: 'select-2026/vip-dinner',
   metadata: {
-    title: 'VIP Dinner | Supabase Select 2026',
+    title: 'VIP Dinner | Savira Select 2026',
     description:
-      'Join Supabase leaders for an intimate dinner at Flour + Water in San Francisco on October 1, 2026. Cocktails at 7:00 PM, dinner at 7:30 PM.',
+      'Join Savira leaders for an intimate dinner at Flour + Water in San Francisco on October 1, 2026. Cocktails at 7:00 PM, dinner at 7:30 PM.',
   },
   hero: {
     title: 'The future of scalable databases',
-    subtitle: 'An intimate VIP dinner hosted by Supabase',
+    subtitle: 'An intimate VIP dinner hosted by Savira',
     description:
-      'Join Supabase product and engineering leaders for a dinner conversation about where Postgres is headed -- from scaling beyond single-node limits to managing globally distributed workloads. Expect sharp perspectives, good food, and the opportunity to connect with other engineering leaders.',
+      'Join Savira product and engineering leaders for a dinner conversation about where Postgres is headed -- from scaling beyond single-node limits to managing globally distributed workloads. Expect sharp perspectives, good food, and the opportunity to connect with other engineering leaders.',
     image: {
       src: '/images/landing-pages/select-2026/flourwater.jpg',
       alt: 'Private dining room at Flour + Water, San Francisco',
@@ -83,7 +83,7 @@ const page: GoPageInput = {
                 <div className="flex flex-col items-center gap-0">
                   <p className="text-foreground font-medium text-base">{host?.author}</p>
                   <p className="text-foreground-lighter text-sm mt-2 leading-relaxed">
-                    {host?.position && `${host.position}, `}Supabase
+                    {host?.position && `${host.position}, `}Savira
                   </p>
                 </div>
               </div>

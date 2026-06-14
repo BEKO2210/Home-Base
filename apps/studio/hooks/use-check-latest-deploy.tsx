@@ -50,7 +50,7 @@ export function useCheckLatestDeploy() {
           ? 'unknown time'
           : dayjs(commit.commitTime).format('YYYY-MM-DD HH:mm:ss Z')
       console.log(
-        `Supabase Studio is running commit ${commit.commitSha} deployed at ${commitTime}.`
+        `Savira Studio is running commit ${commit.commitSha} deployed at ${commitTime}.`
       )
       commitLoggedRef.current = true
     }

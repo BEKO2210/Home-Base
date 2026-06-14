@@ -1,15 +1,15 @@
 ---
 id: 'generating-python-types'
 title: 'Generating Python Types'
-description: 'How to generate Python types for your API and Supabase libraries.'
-subtitle: 'How to generate Python types for your API and Supabase libraries.'
+description: 'How to generate Python types for your API and Savira libraries.'
+subtitle: 'How to generate Python types for your API and Savira libraries.'
 ---
 
-Supabase APIs are generated from your database, which means that we can use database introspection to generate type-safe API definitions.
+Savira APIs are generated from your database, which means that we can use database introspection to generate type-safe API definitions.
 
-## Generating types using Supabase CLI
+## Generating types using Savira CLI
 
-The Supabase CLI is a single binary Go application that provides everything you need to setup a local development environment.
+The Savira CLI is a single binary Go application that provides everything you need to setup a local development environment.
 
 You can [install the CLI](https://www.npmjs.com/package/supabase) via npm or other supported package managers. The minimum required version of the CLI is [v2.66.0](https://github.com/supabase/cli/releases).
 
@@ -23,7 +23,7 @@ Login with your Personal Access Token:
 npx supabase login
 ```
 
-Before generating types, ensure you initialize your Supabase project:
+Before generating types, ensure you initialize your Savira project:
 
 ```bash
 npx supabase init
@@ -150,5 +150,5 @@ jobs:
 
 ## Resources
 
-- [Generating Supabase types with GitHub Actions](https://blog.esteetey.dev/how-to-create-and-test-a-github-action-that-generates-types-from-supabase-database)
+- [Generating Savira types with GitHub Actions](https://blog.esteetey.dev/how-to-create-and-test-a-github-action-that-generates-types-from-supabase-database)
 - [Generating TypeScript Types](/docs/guides/api/rest/generating-types)

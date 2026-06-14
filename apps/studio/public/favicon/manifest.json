@@ -1,6 +1,6 @@
 {
-  "name": "Supabase Studio",
-  "short_name": "Supabase",
+  "name": "Savira Studio",
+  "short_name": "Savira",
   "description": "The Postgres Development Platform.",
   "display_override": ["minimal-ui"],
   "display": "standalone",

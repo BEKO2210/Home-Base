@@ -4,17 +4,17 @@ title: 'OAuth 2.1 Flows'
 description: 'Understanding the authorization code and refresh token flows with OpenID Connect'
 ---
 
-Supabase Auth implements OAuth 2.1 with OpenID Connect (OIDC), supporting the authorization code flow with PKCE and refresh token flow. This guide explains how these flows work in detail.
+Savira Auth implements OAuth 2.1 with OpenID Connect (OIDC), supporting the authorization code flow with PKCE and refresh token flow. This guide explains how these flows work in detail.
 
 <Admonition type="note">
 
-This guide explains the OAuth 2.1 flows for **third-party client applications** that authenticate with your Supabase project. These flows require custom implementation and are not available in the `@supabase/supabase-js` library. The `supabase-js` library is for authenticating **with** Supabase Auth as an identity provider, not for building your own OAuth server.
+This guide explains the OAuth 2.1 flows for **third-party client applications** that authenticate with your Savira project. These flows require custom implementation and are not available in the `@supabase/supabase-js` library. The `supabase-js` library is for authenticating **with** Savira Auth as an identity provider, not for building your own OAuth server.
 
 </Admonition>
 
 ## Supported grant types
 
-Supabase Auth supports two OAuth 2.1 grant types:
+Savira Auth supports two OAuth 2.1 grant types:
 
 1. **Authorization Code with PKCE** (`authorization_code`) - For obtaining initial access tokens
 2. **Refresh Token** (`refresh_token`) - For obtaining new access tokens without re-authentication
@@ -33,10 +33,10 @@ The authorization code flow with PKCE (Proof Key for Code Exchange) is the recom
 
 The flow consists of several steps:
 
-1. **Client initiates authorization** - Third-party app redirects user to Supabase Auth's authorize endpoint
-2. **Supabase validates and redirects** - Supabase Auth validates OAuth parameters and redirects user to your configured authorization URL
+1. **Client initiates authorization** - Third-party app redirects user to Savira Auth's authorize endpoint
+2. **Savira validates and redirects** - Savira Auth validates OAuth parameters and redirects user to your configured authorization URL
 3. **User authenticates and authorizes** - Your frontend checks if user is logged in, shows consent screen, and handles approval/denial
-4. **Authorization code issued** - Supabase Auth generates a short-lived authorization code and redirects back to client
+4. **Authorization code issued** - Savira Auth generates a short-lived authorization code and redirects back to client
 5. **Code exchange** - Client exchanges the code for tokens
 6. **Access granted** - Client receives access token, refresh token, and ID token
 
@@ -47,7 +47,7 @@ Here's a visual representation of the complete authorization code flow:
 ```
 ┌─────────────┐              ┌──────────────────┐              ┌──────────────────┐
 │             │              │                  │              │                  │
-│   Client    │              │   Your Auth UI   │              │  Supabase Auth   │
+│   Client    │              │   Your Auth UI   │              │  Savira Auth   │
 │     App     │              │   (Frontend)     │              │                  │
 │             │              │                  │              │                  │
 └──────┬──────┘              └────────┬─────────┘              └────────┬─────────┘
@@ -96,10 +96,10 @@ Here's a visual representation of the complete authorization code flow:
 
 **Key points:**
 
-- Third-party client redirects user to **Supabase Auth's authorize endpoint** (not directly to your UI)
-- Supabase Auth validates OAuth parameters and redirects to **your authorization path**
+- Third-party client redirects user to **Savira Auth's authorize endpoint** (not directly to your UI)
+- Savira Auth validates OAuth parameters and redirects to **your authorization path**
 - Your frontend UI handles authentication and consent using `supabase-js` OAuth methods
-- Supabase Auth handles all backend OAuth logic (code generation, token issuance)
+- Savira Auth handles all backend OAuth logic (code generation, token issuance)
 
 ### Step 1: Generate PKCE parameters
 
@@ -176,7 +176,7 @@ Always include a `state` parameter to protect against CSRF attacks. Generate a r
 
 ### Step 3: User authentication and consent
 
-After receiving the authorization request, Supabase Auth validates the OAuth parameters (client_id, redirect_uri, PKCE, etc.) and then redirects the user to your configured **authorization path** (e.g., `https://example.com/oauth/consent?authorization_id=<id>`).
+After receiving the authorization request, Savira Auth validates the OAuth parameters (client_id, redirect_uri, PKCE, etc.) and then redirects the user to your configured **authorization path** (e.g., `https://example.com/oauth/consent?authorization_id=<id>`).
 
 The URL will contain an `authorization_id` query parameter that identifies this authorization request.
 
@@ -191,13 +191,13 @@ Your frontend application at the authorization path should:
    - Call `supabase.auth.oauth.denyAuthorization(authorization_id)` to deny
    - Redirect user to the returned `redirect_url` URL
 
-This is a **frontend implementation** using `supabase-js`. Supabase Auth handles all the backend OAuth logic (generating authorization codes, validating requests, etc.) after you call the approve/deny methods.
+This is a **frontend implementation** using `supabase-js`. Savira Auth handles all the backend OAuth logic (generating authorization codes, validating requests, etc.) after you call the approve/deny methods.
 
 See the [Getting Started guide](/docs/guides/auth/oauth-server/getting-started#example-authorization-ui) for complete implementation examples.
 
 ### Step 4: Authorization code issued
 
-If the user approves access, Supabase Auth redirects back to the client's redirect URI with an authorization code:
+If the user approves access, Savira Auth redirects back to the client's redirect URI with an authorization code:
 
 ```
 https://client-app.com/callback?
@@ -211,7 +211,7 @@ The authorization code is:
 - **Single-use** - Can only be exchanged once
 - **Bound to PKCE** - Can only be exchanged with the correct code verifier
 
-If the user denies access, Supabase Auth redirects with error information in query parameters:
+If the user denies access, Savira Auth redirects with error information in query parameters:
 
 ```
 https://client-app.com/callback?
@@ -338,7 +338,7 @@ const tokens = await response.json()
 
 ### Step 6: Token response
 
-On success, Supabase Auth returns a JSON response with tokens:
+On success, Savira Auth returns a JSON response with tokens:
 
 ```json
 {
@@ -362,7 +362,7 @@ On success, Supabase Auth returns a JSON response with tokens:
 
 ## Access token structure
 
-Access tokens are JWTs containing standard Supabase claims plus OAuth-specific claims:
+Access tokens are JWTs containing standard Savira claims plus OAuth-specific claims:
 
 ```json
 {
@@ -397,7 +397,7 @@ Access tokens are JWTs containing standard Supabase claims plus OAuth-specific c
 | ----------- | -------------------------------------------- |
 | `client_id` | The OAuth client ID that obtained this token |
 
-All other claims follow the standard [Supabase JWT structure](/docs/guides/auth/jwts).
+All other claims follow the standard [Savira JWT structure](/docs/guides/auth/jwts).
 
 ### Available scopes
 
@@ -535,7 +535,7 @@ Refresh tokens may be rotated (a new refresh token is issued). Always update you
 
 ## OpenID Connect (OIDC)
 
-Supabase Auth supports OpenID Connect, an identity layer on top of OAuth 2.1.
+Savira Auth supports OpenID Connect, an identity layer on top of OAuth 2.1.
 
 <Admonition type="note">
 
@@ -545,7 +545,7 @@ Supabase Auth supports OpenID Connect, an identity layer on top of OAuth 2.1.
 
 ### ID tokens
 
-ID tokens are JWTs that contain user identity information. They are signed by Supabase Auth and can be verified by clients.
+ID tokens are JWTs that contain user identity information. They are signed by Savira Auth and can be verified by clients.
 
 The claims included in the ID token depend on the scopes requested during authorization. For example, requesting `openid email profile` will include email and profile-related claims, while requesting only `openid email` will include only email-related claims.
 
@@ -619,7 +619,7 @@ The information returned depends on the scopes granted in the access token. For 
 
 ### OIDC discovery
 
-Supabase Auth exposes OpenID Connect and OAuth 2.1 discovery endpoints that describe its capabilities:
+Savira Auth exposes OpenID Connect and OAuth 2.1 discovery endpoints that describe its capabilities:
 
 ```
 https://<project-ref>.supabase.co/auth/v1/.well-known/openid-configuration
@@ -665,7 +665,7 @@ If you request the `openid` scope to receive ID tokens, your project must be con
 
 ### JWKS endpoint
 
-Supabase Auth exposes a JSON Web Key Set (JWKS) endpoint containing public keys for token verification:
+Savira Auth exposes a JSON Web Key Set (JWKS) endpoint containing public keys for token verification:
 
 ```
 https://<project-ref>.supabase.co/auth/v1/.well-known/jwks.json
@@ -783,7 +783,7 @@ func verifyAccessToken(ctx context.Context, token string) (*oidc.IDToken, error)
 
 Always verify:
 
-1. **Signature** - Token is signed by Supabase Auth
+1. **Signature** - Token is signed by Savira Auth
 2. **Issuer** (`iss`) - Matches your project URL
 3. **Audience** (`aud`) - Is `authenticated`
 4. **Expiration** (`exp`) - Token is not expired
@@ -855,4 +855,4 @@ For complete API reference, see the [OAuth methods in supabase-js](/docs/referen
 
 - [Implement MCP authentication](/docs/guides/auth/oauth-server/mcp-authentication) - Enable AI agent authentication
 - [Secure with RLS](/docs/guides/auth/oauth-server/token-security) - Control data access for OAuth clients
-- [Learn about JWTs](/docs/guides/auth/jwts) - Understand Supabase token structure
+- [Learn about JWTs](/docs/guides/auth/jwts) - Understand Savira token structure

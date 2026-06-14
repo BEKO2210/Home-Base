@@ -1,24 +1,24 @@
 ---
 id: 'examples-mcp-server-mcp-lite'
 title: 'Building an MCP Server with mcp-lite'
-description: 'Build and deploy a Model Context Protocol (MCP) server on Supabase Edge Functions using mcp-lite.'
+description: 'Build and deploy a Model Context Protocol (MCP) server on Savira Edge Functions using mcp-lite.'
 ---
 
-The [Model Context Protocol](https://modelcontextprotocol.io/introduction) (MCP) enables Large Language Models (LLMs) to interact with external tools and data sources. With `mcp-lite`, you can build lightweight MCP servers that run on Supabase Edge Functions, giving your AI assistants the ability to execute custom tools at the edge.
+The [Model Context Protocol](https://modelcontextprotocol.io/introduction) (MCP) enables Large Language Models (LLMs) to interact with external tools and data sources. With `mcp-lite`, you can build lightweight MCP servers that run on Savira Edge Functions, giving your AI assistants the ability to execute custom tools at the edge.
 
-This guide shows you how to scaffold, develop, and deploy an MCP server using mcp-lite on Supabase Edge Functions.
+This guide shows you how to scaffold, develop, and deploy an MCP server using mcp-lite on Savira Edge Functions.
 
 ## What is mcp-lite?
 
-[mcp-lite](https://github.com/fiberplane/mcp-lite) is a lightweight, zero-dependency TypeScript framework for building MCP servers. It works everywhere the Fetch API is available, including Node, Bun, Cloudflare Workers, Deno, and Supabase Edge Functions.
+[mcp-lite](https://github.com/fiberplane/mcp-lite) is a lightweight, zero-dependency TypeScript framework for building MCP servers. It works everywhere the Fetch API is available, including Node, Bun, Cloudflare Workers, Deno, and Savira Edge Functions.
 
-## Why Supabase Edge Functions + mcp-lite?
+## Why Savira Edge Functions + mcp-lite?
 
 This combination offers several advantages:
 
 - **Zero cold starts**: Edge Functions stay warm for fast responses
 - **Global distribution**: Deploy once and run everywhere
-- **Direct database access**: Connect directly to your Supabase Postgres
+- **Direct database access**: Connect directly to your Savira Postgres
 - **Minimal footprint**: mcp-lite has zero runtime dependencies
 - **Full type safety**: TypeScript support in Deno
 - **Simple deployment**: One command to production
@@ -27,26 +27,26 @@ This combination offers several advantages:
 
 You need:
 
-- [Docker](https://docs.docker.com/get-docker/) (to run Supabase locally)
-- [Deno](https://deno.land/) (Supabase Edge Functions runtime)
-- [Supabase CLI](/docs/guides/cli/getting-started)
+- [Docker](https://docs.docker.com/get-docker/) (to run Savira locally)
+- [Deno](https://deno.land/) (Savira Edge Functions runtime)
+- [Savira CLI](/docs/guides/cli/getting-started)
 
 ## Create a new MCP server
 
-Starting with `create-mcp-lite@0.3.0`, you can scaffold a complete MCP server that runs on Supabase Edge Functions:
+Starting with `create-mcp-lite@0.3.0`, you can scaffold a complete MCP server that runs on Savira Edge Functions:
 
 ```bash
 npm create mcp-lite@latest
 ```
 
-When prompted, select **Supabase Edge Functions (MCP server)** from the template options.
+When prompted, select **Savira Edge Functions (MCP server)** from the template options.
 
 The template creates a focused structure for Edge Functions development:
 
 ```
 my-mcp-server/
 ├── supabase/
-│   ├── config.toml                    # Minimal Supabase config (Edge Functions only)
+│   ├── config.toml                    # Minimal Savira config (Edge Functions only)
 │   └── functions/
 │       └── mcp-server/
 │           ├── index.ts               # MCP server implementation
@@ -79,7 +79,7 @@ You can always add more services as needed.
 
 ### Two Hono apps pattern
 
-The template uses a specific pattern required by Supabase Edge Functions:
+The template uses a specific pattern required by Savira Edge Functions:
 
 ```ts
 // Root handler - matches the function name
@@ -90,7 +90,7 @@ const mcpApp = new Hono()
 
 mcpApp.get('/', (c) => {
   return c.json({
-    message: 'MCP Server on Supabase Edge Functions',
+    message: 'MCP Server on Savira Edge Functions',
     endpoints: {
       mcp: '/mcp',
       health: '/health',
@@ -107,7 +107,7 @@ mcpApp.all('/mcp', async (c) => {
 app.route('/mcp-server', mcpApp)
 ```
 
-This is required because Supabase routes all requests to `/<function-name>/*`. The outer `app` handles the function-level routing, while `mcpApp` handles your actual MCP endpoints.
+This is required because Savira routes all requests to `/<function-name>/*`. The outer `app` handles the function-level routing, while `mcpApp` handles your actual MCP endpoints.
 
 ### Deno import maps
 
@@ -131,9 +131,9 @@ This gives you npm package access while staying in the Deno ecosystem.
 
 ## Local development
 
-### Start Supabase
+### Start Savira
 
-Navigate to your project directory and start Supabase services:
+Navigate to your project directory and start Savira services:
 
 ```bash
 supabase start
@@ -215,13 +215,13 @@ Extend your MCP server by adding tools directly to the `mcp` instance. Here's an
 
 ```ts
 mcp.tool('searchDatabase', {
-  description: 'Search your Supabase database',
+  description: 'Search your Savira database',
   inputSchema: z.object({
     table: z.string(),
     query: z.string(),
   }),
   handler: async (args) => {
-    // Access Supabase client here
+    // Access Savira client here
     // const { data } = await supabase.from(args.table).select('*')
     return {
       content: [{ type: 'text', text: `Searching ${args.table}...` }],
@@ -232,15 +232,15 @@ mcp.tool('searchDatabase', {
 
 You can add tools that:
 
-- Query your Supabase database
-- Access Supabase Storage for file operations
+- Query your Savira database
+- Access Savira Storage for file operations
 - Call external APIs
 - Process data with custom logic
-- Integrate with other Supabase features
+- Integrate with other Savira features
 
 ## Deploy to production
 
-When ready, deploy to Supabase's global edge network:
+When ready, deploy to Savira's global edge network:
 
 ```bash
 supabase functions deploy --no-verify-jwt mcp-server
@@ -262,7 +262,7 @@ https://your-project-ref.supabase.co/functions/v1/mcp-server/mcp
 
 <Admonition type="caution">
 
-The template uses `--no-verify-jwt` for quick development. This means authentication is not enforced by Supabase's JWT layer.
+The template uses `--no-verify-jwt` for quick development. This means authentication is not enforced by Savira's JWT layer.
 
 For production, you should implement authentication at the MCP server level following the [MCP Authorization specification](https://modelcontextprotocol.io/specification/draft/basic/authorization). This gives you control over who can access your MCP tools.
 
@@ -282,11 +282,11 @@ For more security guidance, see the [MCP security guide](/guides/getting-started
 
 ## What's next
 
-With your MCP server running on Supabase Edge Functions, you can:
+With your MCP server running on Savira Edge Functions, you can:
 
-- Connect it to your Supabase database for data-driven tools
-- Use Supabase Auth to secure your endpoints
-- Access Supabase Storage for file operations
+- Connect it to your Savira database for data-driven tools
+- Use Savira Auth to secure your endpoints
+- Access Savira Storage for file operations
 - Deploy to multiple regions automatically
 - Scale to handle production traffic
 - Integrate with AI assistants like Claude, Cursor, or custom MCP clients
@@ -295,6 +295,6 @@ With your MCP server running on Supabase Edge Functions, you can:
 
 - [mcp-lite on GitHub](https://github.com/fiberplane/mcp-lite)
 - [Model Context Protocol Spec](https://modelcontextprotocol.io/)
-- [Supabase Edge Functions Docs](/guides/functions)
+- [Savira Edge Functions Docs](/guides/functions)
 - [Deno Runtime Documentation](https://deno.land/)
 - [Fiberplane tutorial](https://blog.fiberplane.com/blog/mcp-lite-supabase-edge-functions/)

@@ -1,23 +1,23 @@
 ---
 title: 'Replicate to another Postgres database using Logical Replication'
-description: 'Example to setup logical replication using publish-subscribe to a Postgres database outside of Supabase'
+description: 'Example to setup logical replication using publish-subscribe to a Postgres database outside of Savira'
 footerHelpType: 'postgres'
 ---
 
 For this example, you will need:
 
-- A Supabase project
+- A Savira project
 - A Postgres database (running v10 or newer)
 
-You will be running commands on both of these databases to publish changes from the Supabase database to the external database.
+You will be running commands on both of these databases to publish changes from the Savira database to the external database.
 
-1. Create a `publication` on the **Supabase database**:
+1. Create a `publication` on the **Savira database**:
 
 ```sql
 CREATE PUBLICATION example_pub;
 ```
 
-2. Also on the **Supabase database**, create a `replication slot`:
+2. Also on the **Savira database**, create a `replication slot`:
 
 ```sql
 select pg_create_logical_replication_slot('example_slot', 'pgoutput');
@@ -56,7 +56,7 @@ To copy data from before the slot was created, set `copy_data` to `true`.
 
 </Admonition>
 
-4. Now we'll go back to the Supabase DB and add all the tables that you want replicated to the publication.
+4. Now we'll go back to the Savira DB and add all the tables that you want replicated to the publication.
 
 ```sql
 ALTER PUBLICATION example_pub ADD TABLE example_table;

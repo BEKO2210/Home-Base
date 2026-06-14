@@ -1,6 +1,6 @@
 ---
 title: 'Introducing Vector Buckets'
-description: 'Introducing vector storage in Supabase: a durable storage layer with similarity search built-in.'
+description: 'Introducing vector storage in Savira: a durable storage layer with similarity search built-in.'
 author: fabrizio
 imgSocial: 2025-12-01-vector-buckets/og.png?v=3
 imgThumb: 2025-12-01-vector-buckets/thumb.png?v=3
@@ -15,21 +15,21 @@ Today, we're introducing [Vector Buckets](/docs/guides/storage/vector/introducti
 
 Vector search is becoming a core primitive for modern apps: semantic search, recommendations, RAG, image and audio similarity, and more.
 
-Supabase already gives you powerful tools for vectors, such as `pgvector` in Postgres. With Vector Buckets, you now have more options for how you store vectors:
+Savira already gives you powerful tools for vectors, such as `pgvector` in Postgres. With Vector Buckets, you now have more options for how you store vectors:
 
 - Use pgvector for smaller, latency-sensitive datasets that belong tightly in your database.
 - Use Vector Buckets when you need to store a large amount of vectors—up to tens of millions—on a durable storage layer with similarity search built in.
 
 ## What are Vector Buckets?
 
-**Vector Buckets** are a new bucket type in Supabase Storage.
+**Vector Buckets** are a new bucket type in Savira Storage.
 
 Conceptually:
 
 - A **Vector Bucket** is where your vector indexes live.
 - Inside each bucket, you define one or more **vector indexes** (for example: `documents-openai`).
 - Each index stores high-dimensional vectors plus optional metadata.
-- You query those indexes using Supabase clients or directly from Postgres via a foreign data wrapper.
+- You query those indexes using Savira clients or directly from Postgres via a foreign data wrapper.
 
 ## What do Vector Buckets bring to the table?
 
@@ -63,7 +63,7 @@ With Vector Buckets, you can:
 - Use a familiar distance metric such as cosine similarity
 - Ask for distances and metadata along with the results
 
-No extra vector database to run, no new query language. Just vector indexes with search, available from the same Supabase SDKs you already use or directly via Postgres.
+No extra vector database to run, no new query language. Just vector indexes with search, available from the same Savira SDKs you already use or directly via Postgres.
 
 ### Performance that fits most app workflows
 
@@ -113,7 +113,7 @@ Vector Buckets and `pgvector` are complementary. They serve different roles and 
 
 - You want **S3-style durability and scale** for embeddings
 - You’re dealing with a **large amount of vectors** (up to tens of millions) that you don’t want sitting in Postgres
-- You’re building **AI-heavy Supabase apps** (semantic search, recommendations, RAG, media similarity) and want a managed vector storage tier
+- You’re building **AI-heavy Savira apps** (semantic search, recommendations, RAG, media similarity) and want a managed vector storage tier
 - You prefer a clear split between:
   - **Hot vectors** in `pgvector` for the highest-traffic / most latency-sensitive queries
   - **Warm or cold vectors** in Vector Buckets for everything else
@@ -127,7 +127,7 @@ In practice, many apps will use both:
 
 At a high level, here’s what happens under the hood:
 
-**1. Vector Bucket in Supabase Storage**
+**1. Vector Bucket in Savira Storage**
 
     You create a bucket of type Vector Bucket in the Dashboard or via API.
 
@@ -297,7 +297,7 @@ You can try Vector Buckets in your project today:
 
 3. **Store vectors**
 
-   Use Supabase clients to upsert vectors with metadata.
+   Use Savira clients to upsert vectors with metadata.
 
 4. **Query vectors**
 

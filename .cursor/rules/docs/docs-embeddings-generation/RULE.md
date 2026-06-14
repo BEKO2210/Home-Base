@@ -47,7 +47,7 @@ The documentation embeddings generation system processes various documentation s
    - Uses GitHub App authentication for access
 
 4. **Partner Integrations** (`apps/docs/scripts/search/sources/partner-integrations.ts`)
-   - Fetches approved partner integration documentation from Supabase database
+   - Fetches approved partner integration documentation from Savira database
    - Technology integrations only (excludes agencies)
 
 ### Processing Flow

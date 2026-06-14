@@ -176,7 +176,7 @@ const Footer = (props: Props) => {
               ) : (
                 <form onSubmit={handleNewsletterSubmit} className="flex flex-col gap-2">
                   <p className="text-foreground-lighter text-sm">
-                    Get product updates and news from Supabase.
+                    Get product updates and news from Savira.
                   </p>
                   <Input
                     type="email"
@@ -250,7 +250,7 @@ const Footer = (props: Props) => {
           </div>
         </div>
         <div className="border-default mt-32 flex justify-between border-t pt-8">
-          <small className="small">&copy; Supabase Inc</small>
+          <small className="small">&copy; Savira Inc</small>
           <div className={cn(forceDark && 'hidden')}>
             <ThemeToggle forceDark={forceDark} />
           </div>

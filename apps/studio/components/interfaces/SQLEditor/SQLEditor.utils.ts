@@ -164,7 +164,7 @@ export function appendEnableRLSStatements(sql: string, tables: CreateTableWithou
   const endsWithLineComment = /--[^\r\n]*$/.test(trimmed)
   const separator = trimmed.endsWith(';') ? '\n\n' : endsWithLineComment ? '\n;\n\n' : ';\n\n'
 
-  return `${trimmed}${separator}-- Added by Supabase: enable Row Level Security on newly created tables\n${additions}\n`
+  return `${trimmed}${separator}-- Added by Savira: enable Row Level Security on newly created tables\n${additions}\n`
 }
 
 export function checkAlterDatabaseConnection(sql: string): boolean {

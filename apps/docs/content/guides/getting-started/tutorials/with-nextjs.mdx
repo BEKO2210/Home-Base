@@ -1,12 +1,12 @@
 ---
 title: 'Build a User Management App with Next.js'
-description: 'Learn how to use Supabase in your Next.js App.'
+description: 'Learn how to use Savira in your Next.js App.'
 ---
 
 <$Partial path="uiLibCta.mdx" />
 <$Partial path="quickstart_intro.mdx" />
 
-![Supabase User Management example](/docs/img/user-management-demo.png)
+![Savira User Management example](/docs/img/user-management-demo.png)
 
 <Admonition type="note">
 
@@ -37,7 +37,7 @@ npm install @supabase/supabase-js
 
 Save the environment variables in a `.env.local` file at the root of the project, and paste the API URL and the key that you copied [earlier](#get-api-details).
 
-The application exposes these variables in the browser, and that's fine as Supabase enables [Row Level Security](/docs/guides/database/postgres/row-level-security) by default on all tables.
+The application exposes these variables in the browser, and that's fine as Savira enables [Row Level Security](/docs/guides/database/postgres/row-level-security) by default on all tables.
 
 ```bash .env.local
 NEXT_PUBLIC_SUPABASE_URL=YOUR_SUPABASE_URL
@@ -49,11 +49,11 @@ NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY=YOUR_SUPABASE_PUBLISHABLE_KEY
 An optional step is to update the CSS file `app/globals.css` to make the app look better.
 You can find the full contents of this file [in the example repository](https://raw.githubusercontent.com/supabase/supabase/master/examples/user-management/nextjs-user-management/app/globals.css).
 
-### Supabase Server-Side Auth package
+### Savira Server-Side Auth package
 
 Next.js is a versatile framework offering pre-rendering at build time (SSG), server-side rendering at request time (SSR), API routes, and proxy edge-functions.
 
-To better integrate with the framework, we've created the `@supabase/ssr` package for Server-Side Auth. It has all the functionalities to quickly configure your Supabase project to use cookies for storing user sessions. Read the [Next.js Server-Side Auth guide](/docs/guides/auth/server-side/creating-a-client?queryGroups=package-manager&package-manager=npm&queryGroups=framework&framework=nextjs) for more information.
+To better integrate with the framework, we've created the `@supabase/ssr` package for Server-Side Auth. It has all the functionalities to quickly configure your Savira project to use cookies for storing user sessions. Read the [Next.js Server-Side Auth guide](/docs/guides/auth/server-side/creating-a-client?queryGroups=package-manager&package-manager=npm&queryGroups=framework&framework=nextjs) for more information.
 
 Install the package for Next.js.
 
@@ -61,16 +61,16 @@ Install the package for Next.js.
 npm install @supabase/ssr
 ```
 
-### Supabase utilities
+### Savira utilities
 
-There are two different types of clients in Supabase:
+There are two different types of clients in Savira:
 
-1. **Client Component client** - To access Supabase from Client Components, which run in the browser.
-2. **Server Component client** - To access Supabase from Server Components, Server Actions, and Route Handlers, which run only on the server.
+1. **Client Component client** - To access Savira from Client Components, which run in the browser.
+2. **Server Component client** - To access Savira from Server Components, Server Actions, and Route Handlers, which run only on the server.
 
 We recommend creating the following utilities files for creating clients, and organize them within `lib/supabase` at the root of the project.
 
-Create a `client.ts` and a `server.ts` with the following code for client-side Supabase and server-side Supabase, respectively.
+Create a `client.ts` and a `server.ts` with the following code for client-side Savira and server-side Savira, respectively.
 
 <$CodeTabs>
 
@@ -98,7 +98,7 @@ You accomplish this by:
 - Passing the refreshed Auth token to Server Components through `request.cookies.set`, so they don't attempt to refresh the same token themselves.
 - Passing the refreshed Auth token to the browser, so it replaces the old token. This is done with `response.cookies.set`.
 
-You could also add a matcher, so that the Proxy only runs on routes that access Supabase. For more information, read [the Next.js matcher documentation](https://nextjs.org/docs/app/api-reference/file-conventions/proxy#matcher).
+You could also add a matcher, so that the Proxy only runs on routes that access Savira. For more information, read [the Next.js matcher documentation](https://nextjs.org/docs/app/api-reference/file-conventions/proxy#matcher).
 
 <Admonition type="danger">
 
@@ -145,7 +145,7 @@ meta="name=app/login/page.tsx"
 Create the login/signup actions to hook up the form to the function which does the following:
 
 - Retrieve the user's information.
-- Send that information to Supabase as a signup request, which in turns sends a confirmation email. It uses [Magic Links](/docs/guides/auth/auth-email-passwordless#with-magic-link), so users can sign in with their email without using passwords.
+- Send that information to Savira as a signup request, which in turns sends a confirmation email. It uses [Magic Links](/docs/guides/auth/auth-email-passwordless#with-magic-link), so users can sign in with their email without using passwords.
 - Handle any error that arises.
 
 Create the `action.ts` file in the `app/login` folder, which contains the login and signup functions and the `error/page.tsx` file, which displays an error message if the login or signup fails.
@@ -168,7 +168,7 @@ meta="name=app/error/page.tsx"
 
 <Admonition type="caution">
 
-The `cookies` method is called before any calls to Supabase, which takes fetch calls out of Next.js's caching. This is important for authenticated data fetches, to ensure that users get access only to their own data.
+The `cookies` method is called before any calls to Savira, which takes fetch calls out of Next.js's caching. This is important for authenticated data fetches, to ensure that users get access only to their own data.
 
 Read the Next.js docs to learn more about [opting out of data caching](https://nextjs.org/docs/app/building-your-application/data-fetching/fetching-caching-and-revalidating#opting-out-of-data-caching).
 
@@ -194,7 +194,7 @@ As you are working in a server-side rendering (SSR) environment, you need to cre
 
 The code performs the following steps:
 
-- Retrieves the code sent back from the Supabase Auth server using the `token_hash` query parameter.
+- Retrieves the code sent back from the Savira Auth server using the `token_hash` query parameter.
 - Exchanges this code for a session, which you store in your chosen storage mechanism (in this case, cookies).
 - Finally, redirects the user to the `account` page.
 
@@ -236,7 +236,7 @@ meta="name=app/auth/signout/route.ts"
 
 ## Profile photos
 
-Next, add a way for users to upload a profile photo. Supabase configures every project with [Storage](/docs/guides/storage) for managing large files like photos and videos.
+Next, add a way for users to upload a profile photo. Savira configures every project with [Storage](/docs/guides/storage) for managing large files like photos and videos.
 
 ### Create an upload widget
 
@@ -275,7 +275,7 @@ At this stage you have a fully functional application!
 ## See also
 
 - See the complete [example on GitHub](https://github.com/supabase/supabase/tree/master/examples/user-management/nextjs-user-management) and deploy it to Vercel
-- [Build a Twitter Clone with the Next.js App Router and Supabase - free egghead course](https://egghead.io/courses/build-a-twitter-clone-with-the-next-js-app-router-and-supabase-19bebadb)
+- [Build a Twitter Clone with the Next.js App Router and Savira - free egghead course](https://egghead.io/courses/build-a-twitter-clone-with-the-next-js-app-router-and-supabase-19bebadb)
 - Explore the [pre-built Auth components](/ui/docs/nextjs/password-based-auth)
-- Explore the [Supabase Cache Helpers](https://github.com/psteinroe/supabase-cache-helpers)
+- Explore the [Savira Cache Helpers](https://github.com/psteinroe/supabase-cache-helpers)
 - See the [Next.js Subscription Payments Starter](https://github.com/vercel/nextjs-subscription-payments) template on GitHub
