@@ -10,7 +10,7 @@ const LW14Summary = () => {
     <div
       style={{
         fontFamily:
-          "SuisseIntl-Book, custom-font, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif",
+          "custom-font, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif",
       }}
       className="w-full border bg-alternative flex flex-col rounded-sm text-foreground-lighter mt-12 overflow-hidden"
     >

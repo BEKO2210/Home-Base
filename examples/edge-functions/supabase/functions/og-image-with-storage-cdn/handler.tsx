@@ -10,7 +10,7 @@ const SUPA_CHECKMARK = `${STORAGE_URL}/supaverified.png`
 const SUPA_CHECKMARK_GOLD = `${STORAGE_URL}/supaverified_gold.png?v=3`
 
 // Load custom font
-const FONT_URL = `${STORAGE_URL}/CircularStd-Book.otf`
+const FONT_URL = 'https://cdn.jsdelivr.net/fontsource/fonts/inter@latest/latin-400-normal.ttf'
 const font = fetch(new URL(FONT_URL, import.meta.url)).then((res) => res.arrayBuffer())
 
 export async function handler(req: Request) {

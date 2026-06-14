@@ -13,7 +13,7 @@ const corsHeaders = {
 // Load custom fonts
 const FONT_URLS = {
   CIRCULAR:
-    'https://xguihxuzqibwxjnimxev.supabase.co/storage/v1/object/public/fonts/CircularStd-Book.otf',
+    'https://cdn.jsdelivr.net/fontsource/fonts/inter@latest/latin-400-normal.ttf',
   MONO: 'https://xguihxuzqibwxjnimxev.supabase.co/storage/v1/object/public/fonts/SourceCodePro-Regular.ttf',
 }
 const FONT_CIRCULAR = fetch(new URL(FONT_URLS['CIRCULAR'], import.meta.url)).then((res) =>

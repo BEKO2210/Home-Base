@@ -18,7 +18,7 @@ const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL
 const STORAGE_URL = `${SUPABASE_URL}/storage/v1/object/public/images/launch-week/lw15`
 // Load custom fonts
 const FONT_URLS = {
-  SANS: 'https://xguihxuzqibwxjnimxev.supabase.co/storage/v1/object/public/fonts/CircularStd-Book.otf',
+  SANS: 'https://cdn.jsdelivr.net/fontsource/fonts/inter@latest/latin-400-normal.ttf',
 }
 
 const LW_TABLE = 'tickets'
